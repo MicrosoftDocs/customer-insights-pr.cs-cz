@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Funkce přehledů cílové skupiny v Dynamics 365 Customer Insights
+summary: Ingestujte, sjednoďte a uspořádejte zákaznická data z více zdrojů. Vytvářejte a spravujte profily zákazníků a segmentaci v reálném čase. Integrujte zákaznická data s jinými systémy, abyste s nimi mohli nakládat ještě více způsoby.
+metadata:
+  title: Dokumentace k přehledům cílové skupiny
+  description: Centrum nápovědy s klíčovými odkazy pro přehledy cílové skupiny.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4405387"
+landingContent:
+- title: O přehledech cílové skupiny
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Přehled produktu
+      url: overview.md
+    - text: Nové a aktualizované funkce
+      url: whats-new-audience-insights.md
+    - text: Komunitní web
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Ingestace zdrojů dat
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Přidat zdroje dat
+      url: data-sources.md
+    - text: Přírůstková aktualizace
+      url: incremental-refresh-data-sources.md
+    - text: Informace o entitách
+      url: entities.md
+- title: Sjednocení dat
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Mapovat
+      url: map-entities.md
+    - text: Shoda barev
+      url: match-entities.md
+    - text: Sloučení
+      url: merge-entities.md
+- title: Upřesnění profilů zákazníků
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurace vztahů
+      url: relationships.md
+    - text: Uvedení aktivit zákazníka
+      url: activities.md
+    - text: Přineste si vlastní modely strojového učení
+      url: custom-models.md
+- title: Export údajů o uživateli
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Nastavení cílů exportu
+      url: export-destinations.md
+    - text: Karty zákazníka v aplikacích Dynamics 365
+      url: customer-card-add-in.md
+    - text: Konektor pro Power BI
+      url: export-power-bi.md
+- title: Správa aplikace
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurace systému
+      url: system.md
+    - text: Definování uživatelských oprávnění
+      url: permissions.md
+    - text: Správa více prostředí
+      url: manage-environments.md

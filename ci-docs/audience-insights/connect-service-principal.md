@@ -1,0 +1,114 @@
+---
+title: Připojení k účtu Azure Data Lake Storage Gen2 s instančním objektem
+description: Použití instančního objektu Azure přehledů cílové skupiny pro připojení k vlastnímu datovému jezeru při jeho připojení k přehledům cílové skupiny.
+ms.date: 11/24/2020
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
+manager: shellyha
+ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4644080"
+---
+# <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a><span data-ttu-id="007a8-103">Připojení k účtu Azure Data Lake Storage Gen2 s instančním objektem Azure pro přehledy cílové skupiny</span><span class="sxs-lookup"><span data-stu-id="007a8-103">Connect to an Azure Data Lake Storage Gen2 account with an Azure service principal for audience insights</span></span>
+
+<span data-ttu-id="007a8-104">Automatizované nástroje, které používají služby Azure, by vždy měly mít omezená oprávnění.</span><span class="sxs-lookup"><span data-stu-id="007a8-104">Automated tools that use Azure services should always have restricted permissions.</span></span> <span data-ttu-id="007a8-105">Místo toho, aby se aplikace přihlašovaly jako plně privilegovaný uživatel, Azure nabízí instanční objekty.</span><span class="sxs-lookup"><span data-stu-id="007a8-105">Instead of having applications sign in as a fully privileged user, Azure offers service principals.</span></span> <span data-ttu-id="007a8-106">Čtěte dále a dozvíte se, jak propojit přehledy cílové skupiny s účtem Azure Data Lake Storage Gen2 pomocí instančního objektu Azure namísto klíčů účtu úložiště.</span><span class="sxs-lookup"><span data-stu-id="007a8-106">Read on to learn how to connect audience insights with an Azure Data Lake Storage Gen2 account using an Azure service principal instead of storage account keys.</span></span> 
+
+<span data-ttu-id="007a8-107">Instanční objekt můžete použít pro bezpečné [přidání nebo úpravu složky Common Data Model jako zdroje dat](connect-common-data-model.md) nebo [vytvoření nového nebo aktualizaci stávajícího prostředí](manage-environments.md#create-an-environment-in-an-existing-organization).</span><span class="sxs-lookup"><span data-stu-id="007a8-107">You can use the service principal to securely [add or edit a Common Data Model folder as a data source](connect-common-data-model.md) or [create a new or update an existing environment](manage-environments.md#create-an-environment-in-an-existing-organization).</span></span>
+
+<span data-ttu-id="007a8-108">K vytvoření instančního objektu potřebujete oprávnění správce pro vaše předplatné Azure.</span><span class="sxs-lookup"><span data-stu-id="007a8-108">You need admin permissions for your Azure subscription to create the service principal.</span></span>
+
+## <a name="create-azure-service-principal-for-audience-insights"></a><span data-ttu-id="007a8-109">Vytvoření instančního objektu Azure pro přehledy cílové skupiny</span><span class="sxs-lookup"><span data-stu-id="007a8-109">Create Azure service principal for audience insights</span></span>
+
+<span data-ttu-id="007a8-110">Před vytvořením nového instančního objektu pro přehledy cílové skupiny zkontrolujte, zda ve vaší organizaci již existuje.</span><span class="sxs-lookup"><span data-stu-id="007a8-110">Before creating a new service principal for audience insights, check if it already exists in your organization.</span></span>
+
+### <a name="look-for-an-existing-service-principal"></a><span data-ttu-id="007a8-111">Vyhledání existujícího instančního objektu</span><span class="sxs-lookup"><span data-stu-id="007a8-111">Look for an existing service principal</span></span>
+
+1. <span data-ttu-id="007a8-112">Přejděte na [portál pro správu Azure](https://portal.azure.com) a přihlaste se do své organizace.</span><span class="sxs-lookup"><span data-stu-id="007a8-112">Go to the [Azure admin portal](https://portal.azure.com) and sign in to your organization.</span></span>
+
+2. <span data-ttu-id="007a8-113">Vyberte **Azure Active Directory** ze služeb Azure.</span><span class="sxs-lookup"><span data-stu-id="007a8-113">Select **Azure Active Directory** from the Azure services.</span></span>
+
+3. <span data-ttu-id="007a8-114">Pod **Spravovat** vyberte **Podnikové aplikace**.</span><span class="sxs-lookup"><span data-stu-id="007a8-114">Under **Manage**, select **Enterprise Applications**.</span></span>
+
+4. <span data-ttu-id="007a8-115">Vyhledejte ID aplikace první strany pro přehledy cílové skupiny `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nebo název `Dynamics 365 AI for Customer Insights`.</span><span class="sxs-lookup"><span data-stu-id="007a8-115">Search for the audience insights first party application ID `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` or the name `Dynamics 365 AI for Customer Insights`.</span></span>
+
+5. <span data-ttu-id="007a8-116">Pokud najdete odpovídající záznam, znamená to, že instanční objekt pro přehledy cílové skupiny existuje.</span><span class="sxs-lookup"><span data-stu-id="007a8-116">If you find a matching record, it means that the service principal for audience insights exists.</span></span> <span data-ttu-id="007a8-117">Nemusíte jej znovu vytvářet.</span><span class="sxs-lookup"><span data-stu-id="007a8-117">You don't need to create it again.</span></span>
+   
+   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Screenshot zobrazující existující instanční objekt.":::
+   
+6. <span data-ttu-id="007a8-119">Pokud nejsou vráceny žádné výsledky, vytvořte nový instanční objekt.</span><span class="sxs-lookup"><span data-stu-id="007a8-119">If no results are returned, create a new service principal.</span></span>
+
+### <a name="create-a-new-service-principal"></a><span data-ttu-id="007a8-120">Vytvoření nového instančního objektu</span><span class="sxs-lookup"><span data-stu-id="007a8-120">Create a new service principal</span></span>
+
+1. <span data-ttu-id="007a8-121">Nainstalujte si nejnovější verzi **Azure Active Directory PowerShell for Graph**.</span><span class="sxs-lookup"><span data-stu-id="007a8-121">Install the latest version of the **Azure Active Directory PowerShell for Graph**.</span></span> <span data-ttu-id="007a8-122">Další informace viz [Instalace Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).</span><span class="sxs-lookup"><span data-stu-id="007a8-122">For more information, see [Install Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).</span></span>
+   - <span data-ttu-id="007a8-123">Na počítači vyberte klávesu Windows na klávesnici a vyhledejte **Windows PowerShell** a **Spustit jako správce**.</span><span class="sxs-lookup"><span data-stu-id="007a8-123">On your PC, select the Windows key on your keyboard and search for **Windows PowerShell** and **Run as Administrator**.</span></span>
+   
+   - <span data-ttu-id="007a8-124">V okně PowerShell, které se otevře, zadejte `Install-Module AzureAD`.</span><span class="sxs-lookup"><span data-stu-id="007a8-124">In the PowerShell window that opens, enter `Install-Module AzureAD`.</span></span>
+
+2. <span data-ttu-id="007a8-125">Vytvořte instanční objekt pro přehledy cílové skupiny pomocí modulu Azure AD PowerShell.</span><span class="sxs-lookup"><span data-stu-id="007a8-125">Create the  service principal for audience insights with the Azure AD PowerShell Module.</span></span>
+   - <span data-ttu-id="007a8-126">V okně PowerShell, zadejte `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`.</span><span class="sxs-lookup"><span data-stu-id="007a8-126">In the PowerShell window, enter `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`.</span></span> <span data-ttu-id="007a8-127">Místo ID vašeho klienta zadejte ID klienta, ve kterém chcete vytvořit instanční objekt.</span><span class="sxs-lookup"><span data-stu-id="007a8-127">Replace “your tenant ID” with the actual ID of your tenant where you want to create the service principal.</span></span> <span data-ttu-id="007a8-128">Parametr názvu prostředí `AzureEnvironmentName` je volitelný.</span><span class="sxs-lookup"><span data-stu-id="007a8-128">The environment name parameter `AzureEnvironmentName` is optional.</span></span>
+  
+   - <span data-ttu-id="007a8-129">Zadejte `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`.</span><span class="sxs-lookup"><span data-stu-id="007a8-129">Enter `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`.</span></span> <span data-ttu-id="007a8-130">Tento příkaz vytvoří instanční objekt pro přehledy cílové skupiny u vybraného klienta.</span><span class="sxs-lookup"><span data-stu-id="007a8-130">This command creates the service principal for audience insights on the selected tenant.</span></span>  
+
+## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a><span data-ttu-id="007a8-131">Udělení oprávnění instančnímu objektu pro přístup k účtu úložiště</span><span class="sxs-lookup"><span data-stu-id="007a8-131">Grant permissions to the service principal to access the storage account</span></span>
+
+<span data-ttu-id="007a8-132">Přejděte na portál Azure a udělte oprávnění instančnímu objektu pro účet úložiště, který chcete použít v přehledech cílové skupiny.</span><span class="sxs-lookup"><span data-stu-id="007a8-132">Go to the Azure portal to grant permissions to the service principal for the storage account you want to use in audience insights.</span></span>
+
+1. <span data-ttu-id="007a8-133">Přejděte na [portál pro správu Azure](https://portal.azure.com) a přihlaste se do své organizace.</span><span class="sxs-lookup"><span data-stu-id="007a8-133">Go to the [Azure admin portal](https://portal.azure.com) and sign in to your organization.</span></span>
+
+1. <span data-ttu-id="007a8-134">Otevřete účet úložiště, ke kterému má mít přístup instanční objekt pro přehledy cílové skupiny.</span><span class="sxs-lookup"><span data-stu-id="007a8-134">Open the storage account you want the service principal for audience insights to have access to.</span></span>
+
+1. <span data-ttu-id="007a8-135">Vyberte **Řízení přístupu (IAM)** z navigačního podokna a vyberte **Přidat** > **Přidat přiřazení role**.</span><span class="sxs-lookup"><span data-stu-id="007a8-135">Select **Access control (IAM)** from the navigation pane and select **Add** > **Add role assignment**.</span></span>
+   
+   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Screenshot portálu Azure při výběru přiřazení rolí.":::
+   
+1. <span data-ttu-id="007a8-137">V podokně **Přidání přiřazení role** nastavte následující vlastnosti:</span><span class="sxs-lookup"><span data-stu-id="007a8-137">In the **Add role assignment** pane, set the following properties:</span></span>
+   - <span data-ttu-id="007a8-138">Role: *Přispěvatel dat objektů blob úložiště*</span><span class="sxs-lookup"><span data-stu-id="007a8-138">Role: *Storage Blob Data Contributor*</span></span>
+   - <span data-ttu-id="007a8-139">Přiřaďte přístup pro: *Uživatel, skupina nebo instanční objekt*</span><span class="sxs-lookup"><span data-stu-id="007a8-139">Assign access to: *User, group, or service principal*</span></span>
+   - <span data-ttu-id="007a8-140">Vyberte: *Dynamics 365 AI for Customer Insights* (dále jen [instanční objekt, který jste vytvořili](#create-a-new-service-principal))</span><span class="sxs-lookup"><span data-stu-id="007a8-140">Select: *Dynamics 365 AI for Customer Insights* (the [service principal you created](#create-a-new-service-principal))</span></span>
+
+1.  <span data-ttu-id="007a8-141">Zvolte **Uložit**.</span><span class="sxs-lookup"><span data-stu-id="007a8-141">Select **Save**.</span></span>
+
+<span data-ttu-id="007a8-142">Změny se mohou projevit až za 15 minut.</span><span class="sxs-lookup"><span data-stu-id="007a8-142">It can take up to 15 minutes to propagate the changes.</span></span>
+
+## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a><span data-ttu-id="007a8-143">Zadejte ID prostředku Azure nebo podrobnosti předplatného Azure v příloze účtu úložiště k přehledům cílové skupiny.</span><span class="sxs-lookup"><span data-stu-id="007a8-143">Enter the Azure Resource ID or the Azure Subscription details in the storage account attachment to Audience Insights.</span></span>
+
+<span data-ttu-id="007a8-144">Připojte účet úložiště Azure Data Lake v přehledech cílové skupiny, abyste mohli [ukládat výstupní data](manage-environments.md) nebo jej [použít jako zdroj dat](connect-common-data-service-lake.md).</span><span class="sxs-lookup"><span data-stu-id="007a8-144">Attach an Azure Data Lake storage account in audience insights to [store output data](manage-environments.md) or [use it as a data source](connect-common-data-service-lake.md).</span></span> <span data-ttu-id="007a8-145">Možnost Azure Data Lake vám umožní vybrat si mezi přístupem založeným na prostředcích nebo na základě předplatného.</span><span class="sxs-lookup"><span data-stu-id="007a8-145">Choosing the Azure Data Lake option lets you choose between a resource-based or a subscription-based based approach.</span></span>
+
+<span data-ttu-id="007a8-146">Podle níže uvedených kroků poskytněte požadované informace o vybraném přístupu.</span><span class="sxs-lookup"><span data-stu-id="007a8-146">Follow the below steps to provide the required information on the selected approach.</span></span>
+
+### <a name="resounce-based-storage-account-connection"></a><span data-ttu-id="007a8-147">Připojení k účtu úložiště založené na prostředcích</span><span class="sxs-lookup"><span data-stu-id="007a8-147">Resounce-based storage account connection</span></span>
+
+1. <span data-ttu-id="007a8-148">Přejděte na [portál pro správu Azure](https://portal.azure.com), přihlaste se k předplatnému a otevřete účet úložiště.</span><span class="sxs-lookup"><span data-stu-id="007a8-148">Go to the [Azure admin portal](https://portal.azure.com), sign in to your subscription and open the storage account.</span></span>
+
+1. <span data-ttu-id="007a8-149">Přejděte na **Nastavení** > **Vlastnosti** v navigačním podokně.</span><span class="sxs-lookup"><span data-stu-id="007a8-149">Go to **Settings** > **Properties** on navigation pane.</span></span>
+
+1. <span data-ttu-id="007a8-150">Zkopírujte hodnotu ID prostředku účtu úložiště.</span><span class="sxs-lookup"><span data-stu-id="007a8-150">Copy the storage account resource ID value.</span></span>
+
+   :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Kopírování ID prostředku účtu úložiště.":::
+
+1. <span data-ttu-id="007a8-152">V přehledech cílové skupiny vložte ID prostředku do pole prostředku zobrazeného na obrazovce připojení účtu úložiště.</span><span class="sxs-lookup"><span data-stu-id="007a8-152">In audience insights, insert the resource ID in the resource field displayed in the storage account connection screen.</span></span>
+
+   :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Zadání informací o ID prostředku účtu úložiště.":::   
+   
+1. <span data-ttu-id="007a8-154">Pokračujte zbývajícími kroky v přehledech cílové skupiny pro připojení účtu úložiště.</span><span class="sxs-lookup"><span data-stu-id="007a8-154">Continue with the remaining steps in audience insights to attach the storage account.</span></span>
+
+### <a name="subscription-based-storage-account-connection"></a><span data-ttu-id="007a8-155">Připojení k účtu úložiště založené na předplatném</span><span class="sxs-lookup"><span data-stu-id="007a8-155">Subscription-based storage account connection</span></span>
+
+1. <span data-ttu-id="007a8-156">Přejděte na [portál pro správu Azure](https://portal.azure.com), přihlaste se k předplatnému a otevřete účet úložiště.</span><span class="sxs-lookup"><span data-stu-id="007a8-156">Go to the [Azure admin portal](https://portal.azure.com), sign in to your subscription and open the storage account.</span></span>
+
+1. <span data-ttu-id="007a8-157">Přejděte na **Nastavení** > **Vlastnosti** v navigačním podokně.</span><span class="sxs-lookup"><span data-stu-id="007a8-157">Go to **Settings** > **Properties** on navigation pane.</span></span>
+
+1. <span data-ttu-id="007a8-158">Zkontrolujte **Předplatné**, **Skupinu prostředků** a **Název** účtu úložiště a ujistěte se, že v přehledech cílové skupiny vyberete správné hodnoty.</span><span class="sxs-lookup"><span data-stu-id="007a8-158">Review the **Subscription**, **Resource group**, and the **Name** of the storage account to make sure you select the right values in audience insights.</span></span>
+
+1. <span data-ttu-id="007a8-159">V přehledech cílové skupiny vyberte hodnoty pro odpovídající pole při připojování účtu úložiště.</span><span class="sxs-lookup"><span data-stu-id="007a8-159">In audience insights, choose the values or for the corresponding fields when attaching the storage account.</span></span>
+
+   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Zadání informací o ID prostředku účtu úložiště.":::
+   
+1. <span data-ttu-id="007a8-161">Pokračujte zbývajícími kroky v přehledech cílové skupiny pro připojení účtu úložiště.</span><span class="sxs-lookup"><span data-stu-id="007a8-161">Continue with the remaining steps in audience insights to attach the storage account.</span></span>
