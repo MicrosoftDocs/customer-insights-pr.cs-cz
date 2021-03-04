@@ -1,20 +1,20 @@
 ---
 title: Tvorba a správa prostředí
 description: Zjistěte, jak se zaregistrovat do služby a jak spravovat prostředí.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644125"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270104"
 ---
 # <a name="manage-environments"></a>Správa prostředí
 
@@ -46,9 +46,9 @@ Nové prostředí lze vytvořit dvěma způsoby. Můžete specifikovat zcela nov
 
 Vytvoření prostředí:
 
-1. Vyberte symbol **Nastavení** v záhlaví aplikace.
+1. Vyberte nástroj pro výběr **prostředí** v záhlaví aplikace.
 
-1. Vyberte **Nové prostředí**.
+1. Vyberte **Nové**.
 
    > [!div class="mx-imgBorder"]
    > ![Nastavení prostředí](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Vytvoření prostředí:
 
    - Pro možnost Azure Data Lake Storage Gen2 si můžete vybrat mezi ověřováním založeném na prostředku nebo na předplatném. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Název **kontejneru** nelze změnit a je „customerinsights“.
    
-   - Pokud chcete použít [predikce](predictions.md), zadejte adresu URL instance Common Data Service v poli **Adresa serveru** v části **Použití predikcí**.
+   - Pokud chcete použít [predikce](predictions.md) nebo nakonfigurovat sdílení dat s aplikacemi a řešeními založenými na Microsoft Dataverse, zadejte adresu URL prostředí Microsoft Dataverse pod **Konfigurace sdílení dat pomocí Microsoft Dataverse a povolení dalších funkcí**. Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights se službou Data Lake spravovanou Microsoft Dataverse.
+
+     > [!NOTE]
+     > - Sdílení dat se službou Data Lake spravovanou Microsoft Dataverse aktuálně není podporováno, když uložíte všechna data do svého vlastního úložiště Azure Data Lake Storage.
+     > - [Predikce chybějících hodnot v entitě](predictions.md) není momentálně podporováno, když povolíte sdílení dat se službou Data Lake spravovanou Microsoft Dataverse.
+
+     > [!div class="mx-imgBorder"]
+     > ![Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Když spustíte procesy, jako je ingestace dat nebo vytvoření segmentu, vytvoří se odpovídající složky v účtu úložiště, který jste zadali výše. Datové soubory a soubory model.json budou vytvořeny a přidány do příslušných podsložek na základě spuštěného procesu.
 
@@ -86,7 +93,7 @@ Vytvoření prostředí:
 Následující nastavení konfigurace se zkopírují:
 
 - Konfigurace funkcí
-- Přijaté / importované zdroje dat
+- Ingestované/importované zdroje dat
 - Konfigurace sjednocení dat (mapa, shoda, sloučení)
 - Segmenty
 - Míry
@@ -120,11 +127,11 @@ Po dokončení sjednocení dat přejděte na **Míry** a **Segmenty**, které ta
 
 Můžete upravit některé podrobnosti existujících prostředí.
 
-1. Přejděte na **Správa** > **Systém** > **O aplikaci**.
+1.  Vyberte nástroj pro výběr **prostředí** v záhlaví aplikace.
 
-2. Vyberte položku **Upravit**.
+2.  Vyberte ikonu **Upravit**.
 
-3. Můžete aktualizovat **zobrazované jméno** prostředí, ale nemůžete změnit **Oblast** nebo **Typ**.
+3. V poli **Upravit prostředí** můžete změnit **zobrazovaný název** prostředí, ale nemůžete změnit **Oblast** nebo **Typ**.
 
 4. Pokud je prostředí nakonfigurováno pro ukládání dat v úložišti Azure Data Lake Storage Gen2, můžete aktualizovat **Klíč účtu**. Nemůžete však změnit **Název účtu** nebo název **Kontejneru**.
 
@@ -132,19 +139,27 @@ Můžete upravit některé podrobnosti existujících prostředí.
 
 ## <a name="reset-an-existing-environment"></a>Obnovení existujícího prostředí
 
-Pokud chcete odstranit všechny konfigurace a odebrat ingegstovaná data, můžete obnovit prostředí do prázdného stavu.
+Pokud jste správce a chcete odstranit všechny konfigurace a odebrat ingegstovaná data, můžete obnovit prostředí do prázdného stavu.
 
-1.  Přejděte na **Správa** > **Systém** > **O aplikaci**.
+1.  Vyberte nástroj pro výběr **prostředí** v záhlaví aplikace. 
 
-2.  Vyberte **Obnovit**. 
+2.  Vyberte prostředí, které chcete obnovit, a vyberte tři tečky **...**. 
 
-3.  Chcete-li potvrdit odstranění, zadejte název prostředí a vyberte **Obnovit**.
+3. Vyberte volbu **Obnovit**. 
+
+4.  Chcete-li potvrdit odstranění, zadejte název prostředí a vyberte **Obnovit**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Odstranění existujícího prostředí (pouze pro správce)
+
+Jako správce můžete odstranit prostředí, které spravujete.
+
+1.  Vyberte nástroj pro výběr **prostředí** v záhlaví aplikace.
+
+2.  Vyberte prostředí, které chcete obnovit, a vyberte tři tečky **...**. 
+
+3. Vyberte volbu **Odstranit**. 
+
+4.  Chcete-li odstranění potvrdit, zadejte název prostředí a vyberte **Odstranit**.
 
 
-## <a name="delete-an-existing-environment"></a>Odstranění existujícího prostředí
-
-1. Přejděte na **Správa** > **Systém** > **O aplikaci**.
-
-1. Vyberte **Odstranit**.
-
-1. Chcete-li odstranění potvrdit, zadejte název prostředí a vyberte **Odstranit**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

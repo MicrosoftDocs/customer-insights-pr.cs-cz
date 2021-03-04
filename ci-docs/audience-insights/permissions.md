@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7de78c0ef71ec5b83870d396de36a7dcabbd14e5
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: f7fcecdea8dc49666dd5c45bf4109c205993f326
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689212"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268402"
 ---
 # <a name="user-permissions"></a>Uživatelská oprávnění
 
@@ -74,3 +74,6 @@ V přehledech cílové skupiny přejděte na **Správce** > **Oprávnění**, kd
 - Role jsou určeny ve sloupci **Role**.
 - Výběrem některého nadpisu sloupce seřadíte výsledky podle hodnoty daného sloupce.
 - Pomocí **vyhledávacího** pole v horní části stránky vyhledejte konkrétní uživatele.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

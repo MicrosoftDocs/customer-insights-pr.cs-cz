@@ -3,26 +3,34 @@ title: Přehled produktu
 author: m-hartmann
 description: Mějte přehled o řešení Dynamics 365 Customer Insights a jeho funkcích.
 ms.author: mhart
-ms.date: 10/16/2020
+ms.date: 02/16/2021
 ms.service: customer-insights
-ms.topic: conceptual
-ms.openlocfilehash: e0b46652a087f9d16d9f2f5c6e955761be8da208
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.topic: overview
+ms.manager: shellyha
+ms.openlocfilehash: 815220b7dd2fcd4df31c0cff8f6b55eb3a055669
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405405"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5476941"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Přehled produktu Dynamics 365 Customer Insights
 
-Dynamics 365 Customer Insights je součástí platformy zákaznických dat (CDP) společnosti Microsoft, která pomáhá přizpůsobit zákaznické prostředí. Sjednoťte zákaznická data napříč celou řadou zdrojů a mějte údaje o zákaznících v jednom místě. 
+Dynamics 365 Customer Insights je součástí platformy zákaznických dat (CDP) společnosti Microsoft, která pomáhá přizpůsobit zákaznické prostředí. Funkce platformy poskytují informace o tom, kdo jsou vaši zákazníci a jak s vaší platformou interagují. Sjednoťte zákaznická data napříč několika zdroji a mějte údaje o zákaznících v jednom místě.
 
-Proměňte se v organizaci zaměřenou na zákazníka, kde odborníci v oblasti marketingu, prodeje a služeb mají informace, které potřebují k přizpůsobení zákaznických prostředí. Lépe rozumějte svým zákazníkům. Propojte data z různých transakčních, behaviorálních a observačních zdrojů a vytvořte kompletní pohled na zákazníka. Rychleji zobrazujte výsledky díky platformě CDP navržené tak, aby poskytovala informace, dle kterých lze jednat. 
 
-Využijte dodávané přehledy pomocí šablon pro rychlý start. Rychle vytvářejte, testujte a nasazujte vlastní modely AI/ML pomocí analytických řešení v potřebném měřítku. Aktivací přehledů v reálném čase řiďte prováděné akce. Udržujte plnou kontrolu nad svými zákaznickými daty, abyste zajistili nejvyšší úroveň správy dat a dodržování předpisů. 
+- [Přehledy cílových skupin](audience-insights/overview.md) vám pomohou transformovat vaše podnikání na organizaci zaměřenou na zákazníka. Profesionálové v oblasti marketingu, prodeje a služeb mají přehled, který potřebují k přizpůsobení prostředí na míru. Propojte data z transakčních, behaviorálních a pozorovacích zdrojů a mějte kompletní přehled o zákazníkovi. Rychleji zobrazujte výsledky díky platformě CDP navržené tak, aby poskytovala informace, dle kterých lze jednat. 
 
-Existují dvě hlavní funkce: 
-
-- [Přehledy pro cílovou skupinu](audience-insights/overview.md)
-- [Přehledy zapojení (Preview)](engagement-insights/index.yml)
+- [Přehledy o zapojení zákazníků (Preview)](engagement-insights/index.yml) umožňují interaktivně porozumět tomu, jak vaši zákazníci používají vaše služby a produkty – jednotlivě i holisticky – na webech, mobilních aplikacích a souvisejících produktech. Zkombinujte behaviorální analýzu s transakčními, demografickými, průzkumovými a dalšími datovými typy z řešení Microsoft Dynamics 365 Customer Insights. Udržujte plnou kontrolu nad svými zákaznickými daty, abyste zajistili nejvyšší úroveň správy dat a dodržování předpisů.
  
+## <a name="choose-a-capability"></a>Zvolte funkci
+
+:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Stránka s přehledy o zákaznících vám umožňuje přejít na přehledy cílové skupiny nebo přehledy o zapojení zákazníků.":::
+
+Volba funkce
+
+1. V navigačním podokně volbou **Všechny aplikace** otevřete okno **Vyberte svůj fokus**.
+1. Tlačítkem **Přejít** přejděte na funkci dle vaší preference.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

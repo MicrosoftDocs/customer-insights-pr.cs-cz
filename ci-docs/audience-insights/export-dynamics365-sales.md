@@ -1,20 +1,20 @@
 ---
 title: Export dat Customer Insights do Dynamics 365 Sales
 description: Naučte se, jak nakonfigurovat připojení k Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643810"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269000"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Konektor pro Dynamics 365 Sales (preview)
 
@@ -24,7 +24,10 @@ Aplikace Dynamics 365 Sales umožňuje na základě zákaznických dat vytváře
 
 ## <a name="prerequisite"></a>Požadavek
 
-Záznamy kontaktů [z Dynamics 365 Sales ingestované pomocí Common Data Service](connect-power-query.md).
+1. Než budete moci exportovat segment z Customer Insights do aplikace Sales, musí se v Dynamics 365 Sales nacházet záznamy kontaktu. Přečtěte si, jak ingestovat kontakty v [Dynamics 365 Sales pomocí Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > Export segmentů z přehledů cílové skupiny do aplikace Sales nevytvoří nové záznamy kontaktů v instancích aplikace Sales. Záznamy kontaktů z aplikace Sales musí být zpracovány v přehledech cílové skupiny a použity jako zdroj dat. Než je možné segmenty exportovat, rovněž je třeba záznamy kontaktů zahrnout do sjednocené entity zákazníka, aby bylo možné mapovat ID zákazníků na ID kontaktů.
 
 ## <a name="configure-the-connector-for-sales"></a>Nakonfigurujte konektor pro Sales
 
@@ -49,3 +52,6 @@ Záznamy kontaktů [z Dynamics 365 Sales ingestované pomocí Common Data Servic
 ## <a name="export-the-data"></a>Export dat
 
 Můžete [exportovat data na vyžádání](export-destinations.md). Export bude spuštěn také s každou [plánovanou aktualizací](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

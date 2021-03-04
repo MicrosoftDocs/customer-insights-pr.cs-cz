@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653972"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269828"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Průvodce ukázkami (Preview) predikce úbytku předplatných
 
@@ -46,10 +46,9 @@ Projděte si články [o příjmu (ingestaci) dat](data-sources.md) a [importu z
    - **DateOfBirth**: Datum
    - **CreatedOn**: Datum/čas/pásmo
 
-   [!div class="mx-imgBorder"]
-   ![Transformace pole DateOfBirth na Date](media/ecommerce-dob-date.PNG "Transformace data narození na datum")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformace data narození na datum.":::
 
-1. V poli „Název“ v pravém podokně přejmenujte svůj zdroj dat z **Query** na **eCommerceContacts**.
+1. V poli **Název** v pravém podokně přejmenujte svůj zdroj dat z **Query** na **eCommerceContacts**.
 
 1. Uložte zdroj dat.
 
@@ -67,7 +66,7 @@ Projděte si články [o příjmu (ingestaci) dat](data-sources.md) a [importu z
    - **RewardsPoints**: Celé číslo
    - **CreatedOn**: Datum/čas
 
-1. V poli „Název“ v pravém podokně přejmenujte svůj zdroj dat z **Query** na **loyCustomers**.
+1. V poli **Název** v pravém podokně přejmenujte svůj zdroj dat z **Query** na **loyCustomers**.
 
 1. Uložte zdroj dat.
 
@@ -90,7 +89,7 @@ Projděte si články [o příjmu (ingestaci) dat](data-sources.md) a [importu z
    - **Is_auto_renew**: True/false (Pravda/nepravda)
    - **RecurringFrequencyInMonths**: Celé číslo
 
-1. V poli „Název“ v pravém podokně přejmenujte svůj zdroj dat z **Query** na **SubscriptionHistory**.
+1. V poli **Název** v pravém podokně přejmenujte svůj zdroj dat z **Query** na **SubscriptionHistory**.
 
 1. Uložte zdroj dat.
 
@@ -230,3 +229,6 @@ Můžete vytvořit nový segment na základě entity vytvořené modelem.
 Nyní máte segment, který se dynamicky aktualizuje a který identifikuje zákazníky s vysokým rizikem odchodu pro toto podnikání s předplatným.
 
 Další informace najdete v tématu o [vytváření a správě segmentů](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

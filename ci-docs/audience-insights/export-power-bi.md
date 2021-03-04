@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405356"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477080"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor pro Power BI (preview)
 
@@ -31,7 +31,7 @@ Vytvářejte vizualizace svých dat pomocí Power BI Desktop. Vytvářejte dalš
 
 1. Vyberte **Zobrazit více** vyhledejte **Dynamics 365 Customer Insights**
 
-1. Vyberte výsledek a vyberte **Připojit**.
+1. Vyberte **Připojit**.
 
 1. **Přihláste se** se stejným účtem organizace, který používáte pro Customer Insights a vyberte **Připojit**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Konektor Customer Insights pro Power BI je navržen pro práci s datovými sadam
 ### <a name="work-with-a-subset-of-data"></a>Práce s podmnožinou dat
 
 Zvažte práci s podmnožinou vašich dat. Můžete například vytvořit [segmenty](segments.md) místo exportování všech záznamů zákazníka do Power BI.
+
+## <a name="troubleshooting"></a>Řešení problému
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Prostředí Customer Insights se nezobrazuje v Power BI
+
+Prostředí, která mají více než jeden [vztah](relationships.md) definovaný mezi dvěma identickými entitami v přehledech cílové skupiny nebudou dostupné v konektoru Power BI.
+
+Duplikované vztahy můžete identifikovat a odstranit.
+
+1. V přehledech cílové skupiny přejděte na **Data** > **Vztahy** pro prostředí, ve kterém chybí Power BI.
+2. Identifikujte duplicitní vztahy:
+   - Zkontrolujte, zda je mezi stejnými dvěma entitami definován více než jeden vztah.
+   - Zkontrolujte, zda existuje vztah vytvořený mezi dvěma entitami, které jsou obě zahrnuty do procesu sjednocení. Mezi všemi entitami zahrnutými do procesu sjednocení je definován implicitní vztah.
+3. Odstraňte veškeré identifikované duplicitní vztahy.
+
+Po odstranění duplicitních vztahů zkuste znovu nakonfigurovat konektor Power BI. Prostředí by mělo být ihned k dispozici.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

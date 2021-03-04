@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689167"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270272"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Příjem dat v reálném čase (náhled)
 
@@ -83,6 +83,7 @@ Podrobnosti o tomto rozhraní API, včetně parametrů a odpovědí, najdete v s
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Využití v reálném čase pomocí telemetrie
 
-Získejte přehled o objemu požadavků na rozhraní API v reálném čase a informace o problémech, se kterými se systém může setkat. [K telemetrii v reálném čase](system.md#api-usage-tab) můžete přejít cestou **Správce** > **Systém** > **Využití rozhraní API**. V tabulce **Operace** obsahují řádky pro operace API, které používají metody v reálném čase, tlačítko pro zobrazení využití rozhraní API v reálném čase. Tlačítko je znázorněno symbolem dalekohledu. Výběrem tohoto tlačítka otevřete postranní panel obsahující podrobnosti o využití rozhraní API v reálném čase v aktuálním prostředí.
+Získejte přehled o objemu požadavků na rozhraní API v reálném čase a informace o problémech, se kterými se systém může setkat. Můžete [přistupovat k telemetrii v reálném čase](system.md#api-usage-tab). 
 
-V nástroji pro výběr **Seskupit podle** vyberte, jak nejlépe znázornit vaše interakce v reálném čase na časové ose od posledních 24 hodin do posledních 30 dnů. Data lze seskupit podle metody rozhraní API, kvalifikovaného názvu entity (přijaté entity), autora (zdroj události), výsledku (úspěch nebo selhání) nebo kódů chyb. Data jsou k dispozici jako graf historie a jako tabulka.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

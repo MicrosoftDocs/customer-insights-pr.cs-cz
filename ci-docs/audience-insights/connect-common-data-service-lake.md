@@ -4,17 +4,17 @@ description: Importovat data ze spravovaného datového jezera Common Data Servi
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643390"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267804"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Připojte se k datům ve spravovaném datovém jezeru Common Data Service
 
@@ -34,7 +34,10 @@ Data uložená v online službách, například Azure Data Lake Storage, mohou b
 
 3. Vyberte **Připojit se k Common Data Service** a vyberte **Další**.
 
-4. Zadejte **Název** zdroje dat vyberte **Další**.
+4. Zadejte **Název** zdroje dat vyberte **Další**. Pokyny pro tvoření názvů: 
+   - Začněte písmenem.
+   - Používejte pouze písmena a číslice. Nejsou povoleny speciální znaky a mezery.
+   - Název musí mít 3 až 64 znaků.
 
 5. Vyplňte pole **Adresa serveru** pro svou organizaci Common Data Service a vyberte **Přihlásit se**.
 
@@ -65,3 +68,6 @@ Pokud se chcete připojit k jiné instanci Common Data Service, [vytvořte nový
 3. V seznamu vyberte volbu **Upravit**.
 
 4. Vyberte další entity z dostupného seznamu entit a vyberte **Uložit**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

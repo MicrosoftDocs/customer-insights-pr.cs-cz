@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405375"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267760"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Připojte se k Power Query zdroji dat
 
@@ -28,7 +28,10 @@ Power Query nabízí širokou sadu konektorů pro příjem dat. Většina z těc
 
 1. Vyberte metodu **Import dat** a vyberte **Další**.
 
-1. Uveďte **Název** pro zdroj dat a vyberte **Další** k vytvoření zdroje dat.
+1. Uveďte **Název** pro zdroj dat a vyberte **Další** k vytvoření zdroje dat. Pokyny pro tvoření názvů: 
+   - Začněte písmenem.
+   - Používejte pouze písmena a číslice. Nejsou povoleny speciální znaky a mezery.
+   - Název musí mít 3 až 64 znaků.
 
 1. Vyberte jeden z [dostupných konektorů](#available-power-query-data-sources). V tomto příkladu vybereme konektor **Text / CSV**.
 
@@ -77,3 +80,6 @@ Konektory se zaškrtnutím ve sloupci **Customer Insights (toky dat)** slouží 
 3. Aplikujte své změny a transformace v dialogovém okně **Power Query - Upravit dotazy**, jak je popsáno v sekci [Vytvořte nový zdroj dat](#create-a-new-data-source).
 
 4. Vyberte **Uložit** po dokončení úprav a uložte změny v Power Query.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

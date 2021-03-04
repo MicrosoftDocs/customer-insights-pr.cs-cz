@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f276a73feca52023391ad92fbc84359921b85328
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ed9aa09fba938606611c6ce86c2b250c5e19c606
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405382"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268678"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žádosti o práva subjektu údajů (DSR) v rámci GDPR
 
@@ -75,3 +75,6 @@ Správce klienta může exportovat údaje pomocí následujícího postupu:
 1. Pošlete e-mail na adresu D365CI@microsoft.com a určete e-mailovou adresu uživatele v žádosti. Tým Customer Insights zašle e-mail na zaregistrovanou e-mailovou adresu klienta s žádostí o potvrzení exportu dat.
 2. Potvrďte potvrzení pro export dat pro požadovaného uživatele.
 3. Exportovaná data obdržíte prostřednictvím e-mailové adresy správce klienta.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

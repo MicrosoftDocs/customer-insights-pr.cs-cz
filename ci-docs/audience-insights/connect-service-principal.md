@@ -1,20 +1,20 @@
 ---
 title: Připojení k účtu Azure Data Lake Storage Gen2 s instančním objektem
 description: Použití instančního objektu Azure přehledů cílové skupiny pro připojení k vlastnímu datovému jezeru při jeho připojení k přehledům cílové skupiny.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644080"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267714"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Připojení k účtu Azure Data Lake Storage Gen2 s instančním objektem Azure pro přehledy cílové skupiny
 
@@ -22,7 +22,9 @@ Automatizované nástroje, které používají služby Azure, by vždy měly mí
 
 Instanční objekt můžete použít pro bezpečné [přidání nebo úpravu složky Common Data Model jako zdroje dat](connect-common-data-model.md) nebo [vytvoření nového nebo aktualizaci stávajícího prostředí](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-K vytvoření instančního objektu potřebujete oprávnění správce pro vaše předplatné Azure.
+> [!IMPORTANT]
+> - Účet úložiště Azure Data Lake Gen2, který chce použít instanční objekt, musí mít [povolenu funkci Hierarchický prostor názvů (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - K vytvoření instančního objektu potřebujete oprávnění správce pro vaše předplatné Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Vytvoření instančního objektu Azure pro přehledy cílové skupiny
 
@@ -83,7 +85,7 @@ Připojte účet úložiště Azure Data Lake v přehledech cílové skupiny, ab
 
 Podle níže uvedených kroků poskytněte požadované informace o vybraném přístupu.
 
-### <a name="resounce-based-storage-account-connection"></a>Připojení k účtu úložiště založené na prostředcích
+### <a name="resource-based-storage-account-connection"></a>Připojení k účtu úložiště založené na prostředcích
 
 1. Přejděte na [portál pro správu Azure](https://portal.azure.com), přihlaste se k předplatnému a otevřete účet úložiště.
 
@@ -108,7 +110,8 @@ Podle níže uvedených kroků poskytněte požadované informace o vybraném p�
 1. Zkontrolujte **Předplatné**, **Skupinu prostředků** a **Název** účtu úložiště a ujistěte se, že v přehledech cílové skupiny vyberete správné hodnoty.
 
 1. V přehledech cílové skupiny vyberte hodnoty pro odpovídající pole při připojování účtu úložiště.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Zadání informací o ID prostředku účtu úložiště.":::
    
 1. Pokračujte zbývajícími kroky v přehledech cílové skupiny pro připojení účtu úložiště.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

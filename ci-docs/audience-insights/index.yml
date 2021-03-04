@@ -6,16 +6,16 @@ metadata:
   description: Centrum nápovědy s klíčovými odkazy pro přehledy cílové skupiny.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4405387"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745713"
 landingContent:
 - title: O přehledech cílové skupiny
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Komunitní web
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Ingestace zdrojů dat
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Přidat zdroje dat
-      url: data-sources.md
-    - text: Přírůstková aktualizace
-      url: incremental-refresh-data-sources.md
-    - text: Informace o entitách
-      url: entities.md
 - title: Sjednocení dat
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Mapovat
-      url: map-entities.md
-    - text: Shoda barev
-      url: match-entities.md
-    - text: Sloučení
-      url: merge-entities.md
-- title: Upřesnění profilů zákazníků
+    - text: Přehled zdrojů dat
+      url: data-sources.md
+    - text: Přehled sjednocení
+      url: data-unification.md
+    - text: Informace o entitách
+      url: entities.md
+- title: Rozšíření a upřesnění dat
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Rozšíření profilů zákazníků
+      url: enrichment-hub.md
     - text: Konfigurace vztahů
       url: relationships.md
     - text: Uvedení aktivit zákazníka
       url: activities.md
-    - text: Přineste si vlastní modely strojového učení
-      url: custom-models.md
+- title: Získat přehledy
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vytvoření segmentů
+      url: segments.md
+    - text: Vytvoření měr
+      url: measures.md
+    - text: Úplná data s predikcemi
+      url: predictions.md
 - title: Export údajů o uživateli
   linkLists:
   - linkListType: how-to-guide

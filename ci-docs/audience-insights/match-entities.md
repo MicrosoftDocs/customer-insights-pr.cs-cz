@@ -4,17 +4,17 @@ description: Spárováním entit můžete vytvořit sjednocené profily zákazn�
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405392"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267470"
 ---
 # <a name="match-entities"></a>Párování entit
 
@@ -22,7 +22,7 @@ Po dokončení fáze mapování jste připraveni spárovat své entity. Fáze p�
 
 ## <a name="specify-the-match-order"></a>Určení pořadí párování
 
-Přejděte do **Sjednotit** > **Párování** a vyberte **Nastavit pořadí** pro zahájení fáze párování.
+Přejděte na **Data** > **Sjednocení** > **Párování** a pro zahájení fáze párování vyberte **Nastavit pořadí**.
 
 Každé párování sjednotí dvě nebo více entit do jedné entity, přičemž přetrvává každý jedinečný záznam zákazníka. V následujícím příkladu jsme vybrali tři entity: **ContactCSV: TestData** jako **Primární** entitu, **WebAccountCSV: TestData** jako **Entita 2** a **CallRecordSmall: TestData** jako **Entita 3**. Diagram nad výběry ukazuje, jak bude provedeno pořadí párování.
 
@@ -136,7 +136,7 @@ Po identifikaci záznamu se zrušenou duplicitou bude tento záznam použit v pr
 
 1. Spuštění procesu párování nyní seskupuje záznamy na základě podmínek definovaných v pravidlech zrušení duplicity. Po seskupení záznamů se zásada sloučení použije k identifikaci vítězného záznamu.
 
-1. Tento vítězný záznam je poté předán k párování mezi entitami.
+1. Tento vítězný záznam je poté předán k párování mezi entitami spolu s nevítěznými záznamy (například alternativní ID), aby se zlepšila kvalita párování.
 
 1. Jakákoli vlastní pravidla párování definovaná pro „vždy párovat“ nebo „nikdy nepárovat“ jsou nadřazená zrušení duplicit. Pokud pravidlo zrušení duplicit identifikuje shodné záznamy a vlastní pravidlo párování je nastaveno tak, aby tyto záznamy nikdy napárovalo, nebudou tyto dva záznamy porovnány.
 
@@ -157,6 +157,17 @@ Výsledkem prvního procesu párování je vytvoření sjednocené hlavní entit
 
 > [!TIP]
 > Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies). Můžete vybrat stav procesu a zobrazit podrobnosti o průběhu celé úlohy. Po výběru **Zobrazit podrobnosti** pro jeden z úkolů úlohy najdete další informace: čas zpracování, datum posledního zpracování a všechny chyby a varování spojené s úkolem.
+
+## <a name="deduplication-output-as-an-entity"></a>Výstup odebraných duplicit jako entita
+Kromě sjednocené hlavní entity vytvořené jako součást párování mezi entitami generuje proces odstranění duplicit také novou entitu pro každou entitu z pořadí párování kvůli identifikaci záznamů s odstraněnými duplicitami. Tyto entity lze nalézt spolu s **ConflationMatchPairs:CustomerInsights** v sekci **Systém** na stránce **Entity** s názvem **Deduplication_Datasource_Entity**.
+
+Entita výstupu odstraněných duplicit obsahuje následující informace:
+- ID/klíče
+  - Pole primárního klíče a pole s alternativními ID. Pole alternativních ID se skládá ze všech alternativních ID identifikovaných pro záznam.
+  - Pole Deduplication_GroupId zobrazuje skupinu nebo cluster identifikované v rámci entity, které seskupují všechny podobné záznamy na základě zadaných polí odstraněných duplicit. Používá se pro účely systémového zpracování. Pokud nejsou zadána žádná pravidla pro ruční odstranění duplicit a platí systémově definovaná pravidla pro odstranění duplicit, možná toto pole v entitě výstupu odstraněných duplicit nenajdete.
+  - Deduplication_WinnerId: Toto pole obsahuje vítězné ID z identifikovaných skupin nebo clusterů. Pokud je hodnota Deduplication_WinnerId stejná jako hodnota primárního klíče záznamu, znamená to, že záznam je vítězným záznamem.
+- Pole použitá k definování pravidel odstranění duplicit.
+- Pole Pravidlo a Skóre označují, která z pravidel pro odstranění duplicit byla použita a které skóre bylo vráceno algoritmem pro párování.
 
 ## <a name="review-and-validate-your-matches"></a>Kontrola a ověření shody
 
@@ -200,6 +211,11 @@ Zvyšte kvalitu změnou konfigurace některých parametrů shody:
   > [!div class="mx-imgBorder"]
   > ![Duplikovat roli](media/configure-data-duplicate-rule.png "Duplikovat roli")
 
+- **Deaktivujte pravidlo** pro zachování pravidla shody a vyloučení z procesu párování.
+
+  > [!div class="mx-imgBorder"]
+  > ![Deaktivovat pravidlo](media/configure-data-deactivate-rule.png "Deaktivovat pravidlo")
+
 - **Upravtepravidla** výběrem symbolu **Úpravy**. Můžete provést následující změny:
 
   - Změna atributů pro podmínku: Vyberte nové atributy v rámci určitého řádku podmínky.
@@ -229,6 +245,8 @@ Můžete určit podmínky, za kterých by se určité záznamy měly vždy shodo
     - Klíč entity 2: 34567
 
    Stejný soubor šablony může určit vlastní záznamy shody z více entit.
+   
+   Pokud chcete zadat vlastní párování pro odstranění duplicit v entitě, zadejte stejnou entitu jako Entita 1 a Entita 2 a nastavte různé hodnoty primárního klíče.
 
 5. Po přidání všech přepsání, které chcete použít, uložte soubor šablony.
 
@@ -250,3 +268,6 @@ Můžete určit podmínky, za kterých by se určité záznamy měly vždy shodo
 ## <a name="next-step"></a>Další krok
 
 Po dokončení procesu shody pro alespoň jednu dvojici shody můžete vyřešit možné rozpory v datech procházením tématu [**Sloučení**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

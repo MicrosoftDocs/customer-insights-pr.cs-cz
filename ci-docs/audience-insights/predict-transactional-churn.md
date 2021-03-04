@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644395"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268310"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predikce úbytku transakcí (Preview)
 
@@ -96,6 +96,8 @@ Predikce úbytku transakcí pomáhá předvídat, zda si zákazník v daném ča
 1. Volitelně vyberte **Přidat data** pro **Aktivity zákazníka**. Vyberte entitu, která poskytuje informace o aktivitě zákazníka, jak je popsáno v předpokladech.
 
 1. Namapujte sémantická pole na atributy v rámci entity aktivity zákazníka a vyberte **Další**. Pro popis polí se podívejte na [předpoklady](#prerequisites).
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Mapování polí zákazníků pro transakční data.":::
 
 1. Vyberte typ aktivity, který odpovídá typu aktivity zákazníka, kterou konfigurujete. Vyberte **Vytvořit nový** a vyberte dostupný typ aktivity nebo vytvořte nový typ.
 
@@ -185,3 +187,6 @@ Odstraněním predikce odstraníte také jeho výstupní entitu.
 1. Vyberte svislé tři tečky vedle predikce, kterou chcete odstranit.
 
 1. Vyberte **Odstranit**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

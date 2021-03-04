@@ -1,7 +1,7 @@
 ---
 title: Konfigurace systému v přehledech cílové skupiny
 description: Další informace o nastavení systému ve funkci přehledů cílové skupiny v Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405395"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267332"
 ---
 # <a name="system-configuration"></a>konfigurace systému,
 
-Stránka **Systém** obsahuje čtyři karty: **Stav**, **Plán**, **O produktu** a **Obecné**.
+Stránka **Systém** obsahuje následující karty:
+- [Stav](#status-tab)
+- [Naplánovat](#schedule-tab)
+- [Využití rozhraní API](#api-usage-tab)
+- [O produktu](#about-tab)
+- [Obecná](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Systémová stránka](media/system-tabs.png "Systémová stránka")
 
 ## <a name="status-tab"></a>Karta stavu
 
-Karta **Stav** umožňuje sledovat průběh přijímání dat, exportování dat a několik důležitých procesů produktu. Zkontrolujte informace na této kartě pro zajištění úplnosti aktivních procesů.
+Karta **Stav** umožňuje sledovat průběh příjmu dat, exportu dat a několik dalších důležitých procesů produktu. Zkontrolujte informace na této kartě pro zajištění úplnosti aktivních procesů.
 
-Tato karta obsahuje stavové tabulky pro **Zdroje dat**, **Systémové procesy** a **Přípravu dat**. Každá tabulka sleduje **Název** úlohy a její odpovídající entity, **Stav** jejího posledního běhu a kdy proběhla **Poslední aktualizace**.
+Tato karta obsahuje tabulky se stavem a informacemi o zpracování pro různé procesy. Každá tabulka sleduje **Název** úlohy a její odpovídající entity, **Stav** jejího posledního běhu a kdy proběhla **Poslední aktualizace**.
 
 Podrobnosti o posledních několika bězích úlohy zobrazíte výběrem jejího názvu.
 
@@ -40,7 +45,7 @@ Existuje šest typů stavů pro úkoly. Následující typy stavu se také zobra
 - **Přeskočeno:** Úloha byla přeskočena. Jeden nebo více následných procesů, na kterých tato úloha závisí, selhávají nebo jsou přeskočeny.
 - **Selhání:** Zpracování úlohy se nezdařilo.
 - **Zrušeno:** Zpracování bylo uživatelem zrušeno před dokončením.
-- **Ve frontě:** Zpracování je ve frontě a začne, jakmile budou dokončeny všechny následné úkoly. Další informace naleznete v [Zásadách aktualizace](#refresh-policies).
+- **Ve frontě:** Zpracování je ve frontě a začne po dokončení všech předcházejících úkolů. Další informace naleznete v [Zásadách aktualizace](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Zásady aktualizace
 
@@ -89,4 +94,17 @@ Vyberte **Uložit** a potvrďte tak svůj výběr.
 
 ## <a name="api-usage-tab"></a>Karta využití rozhraní API
 
-Najděte podrobnosti o využití rozhraní API v reálném čase a podívejte se, které události se v daném časovém období odehrály. Další informace viz [Příjem dat v reálném čase](real-time-data-ingestion.md).
+Vyhledejte podrobnosti o použití rozhraní API v reálném čase a podívejte se, které události se udály v daném časovém rámci. Časový rámec vyberete v rozevírací nabídce **Vyberte časový rámec**. 
+
+Část **Využití rozhraní API** obsahuje tři sekce: 
+- **Volání rozhraní API** – graf, který vizualizuje agregovaný počet volání do rozhraní API ve vybraném časovém rámci.
+
+- **Přenos dat** – graf, který zobrazuje množství dat, která byla přenesena prostřednictvím rozhraní API ve vybraném časovém rámci.
+
+-  **Operace** – tabulka s řádky pro každou dostupnou operaci rozhraní API a podrobnostmi o využití operací. Výběrem názvu operace můžete přejít na [reference k rozhraním API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operace, které používají [příjem dat v reálném čase](real-time-data-ingestion.md), obsahují tlačítko se symbolem dalekohledu pro zobrazení využití rozhraní API v reálném čase. Výběrem tohoto tlačítka otevřete postranní panel obsahující podrobnosti o využití rozhraní API v reálném čase v aktuálním prostředí.   
+   Pomocí pole **Seskupit podle** v podokně **Využití rozhraní API v reálném čase** vyberte, jak nejlépe prezentovat své interakce v reálném čase. Data lze seskupit podle metody rozhraní API, kvalifikovaného názvu entity (přijaté entity), autora (zdroj události), výsledku (úspěch nebo selhání) nebo kódů chyb. Data jsou k dispozici jako graf historie a jako tabulka.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

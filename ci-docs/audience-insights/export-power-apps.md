@@ -1,20 +1,20 @@
 ---
 title: Konektor pro Power Apps
 description: Propojení aplikací Power Apps a Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405353"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268908"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Konektor Microsoft Power Apps (preview)
 
@@ -31,7 +31,7 @@ V dokumentaci Power Apps najdete, jak [přidat datové připojení k aplikaci](h
 Po přidání Customer Insights jako datového připojení si můžete v systému vybrat následující entity v Power Apps:
 
 - Zákazník: chcete-li použít data z [jednotného profilu zákazníka](customer-profiles.md).
-- Jednotná aktivita zákazníka: zobrazení [časové osy aktivity](activities.md) v aplikaci.
+- UnifiedActivity: zobrazení [časové osy aktivity](activities.md) v aplikaci.
 
 ## <a name="limitations"></a>Omezení
 
@@ -72,3 +72,6 @@ Například přidáte profily zákazníků do [ovládacího prvku galerie](https
 1. Chcete-li zobrazit jednotnou časovou osu pro zákazníka, přidejte element Galerie a přidejte vlastnost Položky: **Filtr('SjednocenáAktivita', CustomerId = {Customer_Id})**
 
     Příklad: Filtr('SjednocenáAktivita', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

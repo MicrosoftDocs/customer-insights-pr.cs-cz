@@ -1,20 +1,20 @@
 ---
 title: Rozšíření profilů zákazníků pomocí Microsoft Graphu
 description: Použijte proprietární data z Microsoft Graph k obohacení svých zákaznických údajů o značky a zájmové afinity.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405363"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269322"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte si zákaznické profily značkami a zájmovými skupinami (preview)
 
@@ -35,16 +35,21 @@ Data z vyhledávání online z programu Microsoft Graph používáme k vyhledán
 
 [Další informace o Microsoft Graphu](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Skóre a spolehlivost náklonnosti
+## <a name="affinity-level-and-score"></a>Úroveň a skóre afinity
 
-**Skóre náklonnosti** se počítá na 100 bodové stupnici, přičemž 100 představuje segment, který má nejvyšší náklonnost ke značce nebo zájmu.
+U každého rozšířeného zákaznického profilu poskytujeme dvě související hodnoty -–úroveň afinity a skóre afinity. Tyto hodnoty vám pomohou určit, jak silná je afinita k demografickému segmentu daného profilu, ke značce nebo zájmu ve srovnání s jinými demografickými segmenty.
 
-**Spolehlivost afinitx** se také počítá na 100 bodové stupnici. Označuje úroveň spolehlivosti systému, že segment má afinitu ke značce nebo zájmu. Úroveň spolehlivosti závisí na velikosti segmentu a rozlišovací schopnosti segmentu. Velikost segmentu je určena množstvím dat, která máme pro daný segment. Rozlišovací schopnost segmentu je určena počtem atributů (věk, pohlaví, poloha), které jsou v profilu k dispozici.
+*Úroveň afinity* se skládá ze čtyř úrovní a *skóre afinity* se počítá na 100bodové stupnici, která se mapuje na úrovně afinity.
 
-Pro vaši datovou sadu nenormalizujeme skóre. V důsledku toho možná neuvidíte všechny možné hodnoty skóre náklonnosti pro svou datovou sadu. Například nemusí existovat žádný obohacený profil zákazníka s afinitním skóre 100 ve vašich datech. To je možné, pokud v demografickém segmentu neexistují zákazníci, kteří zaznamenali 100 pro danou značku nebo zájem.
 
-> [!TIP]
-> Při [vytváření segmentů](segments.md) pomocí skóre náklonnosti zkontrolujte rozdělení skóre náklonnosti pro vaši datovou sadu, než se rozhodnete pro příslušné prahové hodnoty skóre. Například skóre náklonnosti 10 lze považovat za významné v datové sadě, která má nejvyšší skóre náklonnosti pouze 25 pro danou značku nebo zájem.
+|Úroveň afinity |Skóre příbuznosti  |
+|---------|---------|
+|Velmi vysoká     | 85–100       |
+|vysokou     | 70–84        |
+|střední     | 35–69        |
+|nízkou     | 1–34        |
+
+V závislosti na granularitě, kterou chcete pro měření afinity, můžete použít buď úroveň nebo skóre afinity. Skóre afinity vám dává přesnější kontrolu.
 
 ## <a name="supported-countriesregions"></a>Podporované země/oblasti
 
@@ -54,17 +59,13 @@ Chcete-li vybrat zemi, otevřete **Rozšíření značek** nebo **Rozšíření 
 
 ### <a name="implications-related-to-country-selection"></a>Důsledky výběru země
 
-- Když [zvolíte vlastní značky](#define-your-brands-or-interests), poskytneme návrhy na základě vybrané země/oblasti.
+- Při [výběru vlastních značek](#define-your-brands-or-interests) systém poskytne návrhy na základě vybrané země nebo oblasti.
 
-- Při [výběru odvětví](#define-your-brands-or-interests) identifikujeme nejrelevantnější značky nebo zájmy na základě vybrané země / regionu.
+- Při [výběru odvětví](#define-your-brands-or-interests) se vám zobrazí nejrelevantnější značky nebo zájmy na základě vybrané země nebo oblasti.
 
-- Když [mapujete svá pole](#map-your-fields), pokud pole Země/oblast není mapována, použijeme data Microsoft Graphu z vybrané země/oblasti k rozšíření vašich profilů zákazníků. Tento výběr použijeme také k rozšíření vašich profilů zákazníků, které nemají k dispozici údaje o zemi/oblasti.
-
-- Když [rozšíříte profily](#refresh-enrichment), rozšíření všechny profily zákazníků, pro které máme k dispozici data Microsoft Graphu pro vybrané značky a zájmy, včetně profilů, které se nenacházejí ve vybrané zemi/oblasti. Pokud jste například vybrali Německo, rozšíříme profily umístěné ve Spojených státech, pokud máme k dispozici data Microsoft Graphu pro vybrané značky a zájmy v USA.
+- Při [rozšiřování profilů](#refresh-enrichment) dojde k rozšíření profilů zákazníků, pro které získáme údaje o vybraných značkách a zájmech. Včetně profilů, které nejsou ve vybrané zemi nebo oblasti. Pokud jste například vybrali Německo, rozšíříme profily umístěné ve Spojených státech, pokud máme k dispozici data Microsoft Graphu pro vybrané značky a zájmy v USA.
 
 ## <a name="configure-enrichment"></a>Konfigurace rozšíření
-
-Konfigurace rozšíření značek nebo zájmů se skládá ze dvou kroků:
 
 ### <a name="define-your-brands-or-interests"></a>Uveďte své značky nebo zájmy
 
@@ -75,9 +76,19 @@ Vyberte jednu z následujících možností:
 
 Chcete-li přidat značku nebo zájem, zadejte je do vstupní oblasti a získejte návrhy na základě odpovídajících podmínek. Pokud neuvedeme značku nebo zájem, který hledáte, pošlete nám zpětnou vazbu pomocí odkazu **Navrhnout**.
 
+### <a name="review-enrichment-preferences"></a>Kontrola předvoleb rozšíření
+
+Zkontrolujte své výchozí předvolby rozšíření a podle potřeby je aktualizujte.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Screenshot okna předvoleb rozšíření.":::
+
+### <a name="select-entity-to-enrich"></a>Vyberte entitu, kterou chcete rozšířit.
+
+Vyberte **Rozšířená entita** a zvolte datovou sadu, kterou chcete rozšířit o firemní data z Microsoft Graph. Můžete vybrat entitu Zákazník k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
+
 ### <a name="map-your-fields"></a>Mapování polí
 
-Mapujte pole z vaší sjednocené zákaznické entity na alespoň dva atributy a definujte demografický segment, který chcete použít k obohacení vašich zákaznických dat. Volbou **Upravit** definujete mapování polí a když máte hotovo, vyberte **Použít**. Vyberte **Uložit** pro dokončení mapování pole.
+Namapujte pole z vaší sjednocené entity zákazníka a definujte demografický segment, který má systém použít k rozšíření vašich zákaznických dat. Namapujte zemi/oblast a alespoň atributy Datum narození nebo Pohlaví. Kromě toho je nutné namapovat alespoň jedno z měst (a kraj) nebo PSČ. Volbou **Upravit** definujete mapování polí a když máte hotovo, vyberte **Použít**. Vyberte **Uložit** pro dokončení mapování pole.
 
 Jsou podporovány následující formáty a hodnoty, hodnoty nerozlišují velká a malá písmena:
 
@@ -120,3 +131,6 @@ Náklonnost ke značkám a zájmům lze zobrazit také na jednotlivých kartác
 ## <a name="next-steps"></a>Další kroky
 
 Stavte na svých obohacených zákaznických údajích. Vytvářejte [segmenty](segments.md), [míry](measures.md) a dokonce [exportujte data](export-destinations.md), abyste svým zákazníkům dopřáli osobní zážitek.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Rozšíření od třetí strany HERE Technologies
 description: Obecné informace o rozšíření od třetí strany HERE Technologies.
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668670"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269506"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Rozšíření profilů zákazníků od HERE Technologies (Preview)
 
@@ -43,7 +43,11 @@ Chcete-li nakonfigurovat rozšíření společnosti HERE Technologies, musíte s
 
 1. Potvrďte oba vstupy výběrem **Připojit k HERE**.
 
-1. Vyberte **Přidat data** a zvolte, zda chcete mapovat pole na primární nebo sekundární adresu. Můžete zadat mapování polí pro obě adresy (například adresu domácnosti a adresu firmy) a profily pro obě adresy rozšířit samostatně. Vyberte **Další**.
+1.  Vyberte **Přidat data** a zvolte **sadu zákaznických dat**, kterou chcete rozšířit o údaje o poloze od společnosti HERE Technologies. Můžete vybrat entitu **Zákazník** k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Screenshot výběru sady zákaznických dat.":::
+
+1. Zvolte, zda chcete mapovat pole na primární nebo sekundární adresu. Můžete zadat mapování polí pro obě adresy (například adresu domácnosti a adresu firmy) a profily pro obě adresy rozšířit samostatně. Vyberte **Další**.
 
 1. Definujte, která pole z vašich sjednocených profilů se mají použít k vyhledání odpovídajících dat umístění od HERE Technologies. Pole **Ulice 1** a **Poštovní směrovací číslo** jsou povinná pro vybranou primární a/nebo sekundární adresu. Pro vyšší přesnost shody lze přidat více polí.
 
@@ -68,3 +72,6 @@ Stavte na svých obohacených zákaznických údajích. Vytvářejte [segmenty](
 
 Když povolíte Dynamics 365 Customer Insights přenos dat společnosti HERE Technologies, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že společnost HERE Technologies splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
 Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

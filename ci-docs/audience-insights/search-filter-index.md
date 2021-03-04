@@ -1,7 +1,7 @@
 ---
 title: Hledání a filtrování profilů zákazníků
 description: Rychle vyhledejte informace o sjednocených profilech zákazníků a filtrujte zadané atributy.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405398"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270058"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profily zákazníků: Prohledávání a filtrování indexu
 
@@ -28,14 +28,6 @@ Výsledkem sjednocení údajů o zákaznících je entita profilu zákazníka, k
 Pokud poprvé definujete prohledatelné atributy jako správce, musíte nejprve definovat indexovaná pole. Doporučujeme, abyste si vybrali všechny atributy, podle kterých mohou uživatelé na internetu vyhledávat a filtrovat zákazníky na stránce **Zákazníci**. Můžete určit pouze atributy, které existují v entitě profilu zákazníka, kterou jste vytvořili během procesu sjednocení dat.
 
 1. Otevřete stránku **Zákazníci** a vyberte **Index hledání a filtrování**.
-
-> [!NOTE]
-> Vytváříme výchozí konfiguraci indexu vyhledávání pro dostupné atributy v entitě zákazníka z následujících sémantických typů definovaných na stránce Mapování.
-> - Křestní jméno, příjmení, prostřední jméno, celé jméno osoby
-> - Název organizace
-> - E-mailová adresa
-> - Telefonní číslo
-> - Informace o umístění
 
 2. Volbou **+ Přidat** určete indexovaná pole.
 
@@ -65,3 +57,10 @@ Nabídka **Filtr** na stránce **Zákazníci** může zahrnovat různý počet �
 2. Výběrem možnosti **Uložit** se vaše změny uplatní.
 
 3. Vyberte **Spustit**, jakmile budete připraveni použít svá nastavení.
+
+## <a name="next-steps"></a>Další kroky
+
+Přejděte na stránku **Zákazníci** pro vyhledání profilů zákazníků nebo pomocí indexovaného pole zobrazte podmnožinu všech profilů zákazníků.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

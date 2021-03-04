@@ -1,7 +1,7 @@
 ---
 title: Instalace a konfigurace doplňku karty zákazníka
 description: Instalace a konfigurace doplňku karty zákazníka pro Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644035"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268036"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplněk karty zákazníka (preview)
 
@@ -28,7 +28,7 @@ Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dyna
 - Profily zákazníků [ingestované z aplikace Dynamics 365 pomocí Common Data Service](connect-power-query.md).
 - Uživatelé doplňku karty zákazníka musí být [přidáni jako uživatelé](permissions.md) v přehledech cílové skupiny.
 - [Konfigurované možnosti vyhledávání a filtrování](search-filter-index.md).
-- Ovládací prvek demografických údajů: V jednotném profilu zákazníka jsou k dispozici demografická pole, například věk nebo pohlaví.
+- Ovládací prvek demografických údajů: V jednotném profilu zákazníka jsou k dispozici demografická pole (například věk nebo pohlaví).
 - Kontrola rozšíření: Vyžaduje aktivní [rozšíření](enrichment-hub.md) aplikované na profily zákazníků.
 - Ovládací prvek analytických nástrojů: Vyžaduje data generovaná pomocí Azure Machine Learning ([predikce](predictions.md) nebo [vlastní modely](custom-models.md))
 - Ovládací prvek měr: Vyžaduje [konfigurované míry](measures.md).
@@ -92,10 +92,26 @@ Instalace řešení do vašeho prostředí může nějakou dobu trvat.
 
 1. V dialogovém okně **Vlastnosti pole** zrušte zaškrtnutí políčka **Zobrazit popisek ve formuláři**.
 
-1. Vyberte možnost **Web** pro ovládací prvekl. Pro ovládací prvek Rozšíření vyberte typ rozšíření, který chcete zobrazit, konfigurací pole **enrichmentType**. Pro každý druh rozšíření musíte přidat samostatnou kontrolu rozšíření.
+1. Vyberte možnost **Web** pro ovládací prvekl. Pro ovládací prvek Rozšíření vyberte typ rozšíření, který chcete zobrazit, konfigurací pole **enrichmentType**. Pro každý typ rozšíření přidejte samostatný ovládací prvek rozšíření.
 
 1. Vyberte **Uložit** a **Publikovat**, chcete-li zveřejnit aktualizovaný kontaktní formulář.
 
 1. Přejděte na publikovaný kontaktní formulář. Uvidíte nově přidaný ovládací prvek. Možná se budete muset přihlásit při prvním použití.
 
 1. Chcete-li přizpůsobit, co se má zobrazit na vlastním ovládacím prvku, vyberte tlačítko Upravit v pravém horním rohu.
+
+## <a name="upgrade-customer-card-add-in"></a>Upgrade doplňku karty zákazníka
+Doplněk karty zákazníka se neupgraduje automaticky. Chcete-li upgradovat na nejnovější verzi, postupujte podle tohoto postupu v aplikaci Dynamics 365, která má nainstalovaný doplněk.
+
+1. V aplikaci Dynamics 365 přejděte na **Nastavení** > **Vlastní nastavení** a vyberte **Řešení**.
+
+1. V tabulce doplňků vyhledejte **CustomerInsightsCustomerCard** a vyberte řádek.
+
+1. Na panelu akcí vyberte **Nainstalovat upgrade řešení**.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Upgrade řešení v oblasti Vlastní nastavení aplikací Dynamics 365":::
+
+1. Po spuštění procesu upgradu se zobrazí indikátor načítání, dokud se upgrade nedokončí. Pokud není k dispozici žádná novější verze, zobrazí se při upgradu chybová zpráva.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

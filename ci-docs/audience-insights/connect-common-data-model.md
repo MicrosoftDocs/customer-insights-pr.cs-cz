@@ -4,17 +4,17 @@ description: Práce s daty Common Data Model pomocí Azure Data Lake Storage.
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643450"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267852"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Připojení ke složce Common Data Model prostřednictvím účtu Azure Data Lake
 
@@ -38,17 +38,25 @@ Tento článek poskytuje informace, jak ingestovat data ze složky Common Data M
 
 1. Vyberte **Přidat zdroj dat**.
 
-1. Vyberte **Připojit se ke složce modelu Common Data Model**, zadejte **Název** pro zdroj dat a vyberte **Další**.
+1. Vyberte **Připojit se ke složce modelu Common Data Model**, zadejte **Název** pro zdroj dat a vyberte **Další**. Pokyny pro tvoření názvů: 
+   - Začněte písmenem.
+   - Používejte pouze písmena a číslice. Nejsou povoleny speciální znaky a mezery.
+   - Název musí mít 3 až 64 znaků.
 
 1. Můžete si vybrat mezi použitím možnosti založené na prostředku a možnosti založené na předplatném ověřování. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Zadejte informace o **Kontejneru** a vyberte **Další**.
    > [!div class="mx-imgBorder"]
-   > ![Dialogové okno pro zadání podrobností o připojení pro Azure Data Lake](media/enter-new-storage-details.png)
-
-1. V dialogovém okně **Vybrat složku modelu Common Data Model** vyberte soubor model.json, ze kterého chcete importovat data, a vyberte **Další**.
+   > ![Dialogové okno pro zadání nových podrobností o připojení pro Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Žádný soubor model.json přidružený k jinému zdroj dat v prostředí se v seznamu nezobrazí.
+   > Abyste se mohli připojit a vytvořit zdroj dat, potřebujete jednu z následujících rolí pro kontejner nebo výše uvedený účet úložiště:
+   >  - Čtenář dat objektů blob úložiště
+   >  - Vlastník dat objektů blob úložiště
+   >  - Přispěvatel dat objektů blob úložiště
 
-1. Ve vybraném souboru model.json získáte seznam dostupných entit. Můžete zkontrolovat seznam dostupných entit, vybrat z něho a vybrat **Uložit**. Všechny vybrané entity budou ingestovány z nového zdroje dat.
+1. V dialogovém okně **Vybrat složku modelu Common Data Model** vyberte soubor model.json nebo manifest.json, ze kterého chcete importovat data, a vyberte **Další**.
+   > [!NOTE]
+   > Soubor model.json ani manifest.json přidružený k jinému zdroj dat v prostředí se v seznamu nezobrazí.
+
+1. Ve vybraném souboru model.json nebo manifest.json získáte seznam dostupných entit. Můžete zkontrolovat seznam dostupných entit, vybrat z něho a vybrat **Uložit**. Všechny vybrané entity budou ingestovány z nového zdroje dat.
    > [!div class="mx-imgBorder"]
    > ![Dialogové okno zobrazující seznam entit ze souboru model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Tento článek poskytuje informace, jak ingestovat data ze složky Common Data M
 9. Po uložení vašich výběrů se otevře stránka **Zdroje dat**. Nyní byste měli vidět připojení ke složce Common Data Model jako zdroj dat.
 
 > [!NOTE]
-> Soubor model.json lze přidružit pouze k jednomu zdroji dat ve stejném prostředí. Stejný soubor model.json však lze použít pro zdroje dat ve více prostředích.
+> Soubor model.json nebo manifest.json lze přidružit pouze k jednomu zdroji dat ve stejném prostředí. Stejný soubor model.json nebo manifest.json však lze použít pro zdroje dat ve více prostředích.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Úprava zdroje dat složky Common Data Model
 
-Můžete aktualizovat přístupový klíč pro účet úložiště obsahující složku Common Data Model. Můžete také změnit soubor model.json. Pokud se chcete připojit k jinému kontejneru účtu úložiště nebo změnit název účtu, [vytvořte nové připojení zdroje dat](#connect-to-a-common-data-model-folder).
+Můžete aktualizovat přístupový klíč pro účet úložiště obsahující složku Common Data Model. Můžete také změnit soubor model.json nebo manifest.json. Pokud se chcete připojit k jinému kontejneru účtu úložiště nebo změnit název účtu, [vytvořte nové připojení zdroje dat](#connect-to-a-common-data-model-folder).
 
 1. V přehledech cílové skupiny přejděte na **Data** > **Zdroje dat**.
 
@@ -77,13 +85,24 @@ Můžete aktualizovat přístupový klíč pro účet úložiště obsahující 
 
 5. Volitelně můžete provést aktualizaci z připojení klíče účtu do připojení založeného na prostředcích nebo předplatném. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Nemůžete změnit informace o **kontejneru** při aktualizaci připojení.
    > [!div class="mx-imgBorder"]
-   > ![Dialogové okno pro zadání podrobností o připojení pro Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Volitelně vyberte jiný soubor model.json s jinou sadou entit z kontejneru.
+   > ![Dialogové okno pro zadání podrobností o připojení k existujícímu účtu úložiště Azure Data Lake](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Abyste se mohli připojit a vytvořit zdroj dat, potřebujete jednu z následujících rolí pro kontejner nebo výše uvedený účet úložiště:
+   >  - Čtenář dat objektů blob úložiště
+   >  - Vlastník dat objektů blob úložiště
+   >  - Přispěvatel dat objektů blob úložiště
+
+
+6. Volitelně vyberte z kontejneru jiný soubor model.json nebo manifest.json s jinou sadou entit.
 
 7. Volitelně můžete vybrat další entity, které chcete ingestovat. Pokud již neexistují žádné závislosti, můžete také odebrat všechny již vybrané entity.
 
    > [!IMPORTANT]
-   > Pokud existují závislosti na existujícím souboru model.json a sadě entit, zobrazí se chybová zpráva a nemůžete vybrat jiný soubor model.json. Před změnou souboru model.json odeberte tyto závislosti nebo vytvořte nový zdroj dat se souborem model.json, který chcete použít, abyste se vyhnuli odstranění závislostí.
+   > Pokud existují závislosti na existujícím souboru model.json nebo manifest.json a sadě entit, zobrazí se chybová zpráva a nelze vybrat jiný soubor model.json nebo manifest.json. Odeberte tyto závislosti před změnou souboru model.json nebo manifest.json nebo vytvořte nový zdroj dat se souborem model.json nebo manifest.json, který chcete použít, abyste nemuseli závislosti odebrat.
 
 8. Volitelně můžete vybrat další atributy nebo entity a povolit profilování dat, nebo deaktivovat již vybrané.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

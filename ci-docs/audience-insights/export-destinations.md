@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643855"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477125"
 ---
-# <a name="export-destinations-preview"></a>Cíle exportu (verze Preview)
+# <a name="export-destinations-preview-overview"></a>Přehled cílů exportu (Preview)
 
 Stránka **Cíle exportu** zobrazuje všechna umístění, která jste nastavili pro export dat. Můžete také přidat nové cíle pro export. Kromě toho zobrazuje možnosti exportu, které jsou aktuálně k dispozici. Získejte rychlý přehled, popis a zjistěte, co můžete dělat s každou možností rozšíření. Exportujte sjednocené profily, míry a segmenty do podporovaných aplikací relevantních pro vaši firmu.
 
@@ -27,10 +27,13 @@ Přejděte na **Správce** > **Cíle exportu**, kde najdete následující možn
 - [Konektor Power Automate](export-power-automate.md)
 - [Konektor Power Apps](export-power-apps.md)
 - [Konektor Power BI](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure Blob Storage](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [Konektor LiveRamp &reg;](export-liveramp.md)
 - [Bot pro Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Chcete-li odebrat cíl exportu, začněte na hlavní stránce **Cíle exportu**.
 2. V rozevírací nabídce vyberte možnost **Odebrat**.
 
 3. Potvrďte odebrání výběrem **Odstranit** na potvrzovací obrazovce.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

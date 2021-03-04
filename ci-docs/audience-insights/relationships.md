@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405397"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269863"
 ---
 # <a name="relationships-between-entities"></a>Vztahy mezi entitami
 
@@ -28,8 +28,8 @@ Během procesů párování a sloučení jsou systémové vztahy vytvořeny na p
 > ![Vytváření vztahu](media/relationships-entities-merge.png "Vytváření vztahu")
 
 - **Vztah *CustomerToContact*** byl vytvořen mezi entitou Zákazník a entitou Kontakt. Entita zákazníka získá klíčové pole **Contact_contactId**, které se vztahuje ke klíčovému poli entity Kontakt **contactId**.
-- **Vztah _CustomerToAccount_** byl vytvořen mezi entitou Zákazník a entitou Obchodní vztah. Entita zákazníka získá klíčové pole **Account_accountId**, které se vztahuje ke klíčovému poli entity Obchodní vztah **accountId**.
-- **Vztah _CustomerToWebAccount_** byl vytvořen mezi entitou Zákazník a entitou WebAccount. Entita zákazníka získá klíčové pole **WebAccount_webaccountId**, které se vztahuje ke klíčovému poli entity WebAccount **webaccountId**.
+- **Vztah *CustomerToAccount*** byl vytvořen mezi entitou Zákazník a entitou Obchodní vztah. Entita zákazníka získá klíčové pole **Account_accountId**, které se vztahuje ke klíčovému poli entity Obchodní vztah **accountId**.
+- **Vztah *CustomerToWebAccount*** byl vytvořen mezi entitou Zákazník a entitou WebAccount. Entita zákazníka získá klíčové pole **WebAccount_webaccountId**, které se vztahuje ke klíčovému poli entity WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Vytvoření vztahu
 
@@ -69,3 +69,6 @@ Definujte vlastní vztahy na stránce **Vztahy**. Každý vztah se skládá z en
 ## <a name="next-step"></a>Další krok
 
 Systém a vlastní vztahy se používají k vytvoření segmentů založených na více zdrojích dat, které již nejsou prosíceny. Další informace najdete v tématu [Segmenty](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

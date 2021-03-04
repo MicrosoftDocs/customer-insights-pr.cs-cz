@@ -1,20 +1,20 @@
 ---
 title: Konektor Power Automate | Microsoft Docs
 description: Vytvářejte toky v Microsoft Power Automate z Dynamics 365 Customer Insights.
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4405351"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268816"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (preview)
 
@@ -22,7 +22,7 @@ Služba Power Automate podporuje automatické spouštění vybraných událostí
 
 ## <a name="power-automate-triggers"></a>Triggery Power Automate
 
-K automatizaci opakujících se úkolů, jako jsou oznámení nebo pokročilejší akce, můžete použít různé triggery, které vám umožní vytvářet toky. 
+Pomocí triggerů můžete vytvářet cloudové toky a automatizovat opakující se úlohy, jako jsou oznámení nebo pokročilé akce. 
 
 - Spustí se, když selže aktualizace zdroje dat. 
 - Spustí se, když uspěje aktualizace zdroje dat.
@@ -36,14 +36,20 @@ K automatizaci opakujících se úkolů, jako jsou oznámení nebo pokročilejš
 ## <a name="power-automate-actions"></a>Akce Power Automate
 Konektor Power Automate poskytuje jiné akce než dostupné triggery. Další informace naleznete v dokumentaci [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Vytvoření toku Power Automate v přehledech cílové skupiny
+## <a name="create-a-power-automate-flow"></a>Vytvoření toku Power Automate
 
-1. V přehledech cílové skupiny přejděte na **Správa** > **Systém**.
+1. V přehledech cílové skupiny přejděte na **Správa** > **Cíle exportu**.
 
-1. Na stránce **Systém** vyberte kartu **Stav**.
+1. Na dlaždici **Power Automate** vyberte **Nastavit**.
 
-1. V sekci **Zdroje dat** vyberte **Toky** a vyberte **Vytvořte tok** z rozevíracího seznamu.
-   > [!div class="mx-imgBorder"]
-   > ![Konektor Power Automate zobrazující Vytvořit akci toku](media/power-automate-connector-create-flow.png "Konektor Power Automate zobrazující akci Vytvořit toku")
+1. V Power Automate se otevře konektor Customer Insights (Preview). **Přihlaste se** k Power Automate.
 
-1. V Power Automate vyberte jeden z dostupných spouštěčů a vytvořte si preferovaný tok. Pokud vytváříte svůj první tok, musíte se nejprve autentizovat pomocí konektoru Power Automate.
+1. Vyberte jeden z dostupných triggerů a do nového toku přidejte další kroky. Další informace viz [Vytvoření cloudového toku v Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+
+Příklady použití toků: 
+- Odeslání zprávy do kanálu Microsoft Teams, pokud selže aktualizace zdroje dat. 
+- Odeslání e-mailu vlastníkům dat po překročení prahové hodnoty v segmentu.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

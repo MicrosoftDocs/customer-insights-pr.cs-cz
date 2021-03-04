@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667221"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267424"
 ---
 # <a name="customer-activities"></a>Aktivity zákazníka
 
@@ -44,13 +44,13 @@ Vaše zdroje dat zahrnují entity s transakčními a aktivními daty z více zdr
 
 1. V sekci **Nastavit vztah** nakonfigurujte podrobnosti tak, aby se údaje o vaší činnosti připojily k odpovídajícímu zákazníkovi.
 
-   > [!div class="mx-imgBorder"]
-   > ![Definování vztahů entit](media/activities-entities-define.png "Definování vztahů entit")
-
     - **Pole entity aktivity**: Vyberte pole v entitě aktivity, které bude použito k navázání vztahu s jinou entitou.
     - **Entita zákazníka**: Vyberte odpovídající zdrojovou entitu zákazníka, se kterou bude vaše entita aktivity ve vztahu. Můžete se vztahovat pouze k těm zdrojovým zákaznickým entitám, které se používají v procesu sjednocení dat.
     - **Pole entity zákazníka**: Toto pole zobrazuje primární klíč zdrojové zákaznické entity vybraný v procesu mapování. Toto pole primárního klíče ve zdrojové entitě zákazníka se používá k navázání vztahu s entitou aktivity.
     - **Název**: Pokud již existuje vztah mezi touto entitou aktivity a vybranou zdrojovou entitou zákazníka, bude název vztahu v režimu jen pro čtení. Pokud takový vztah neexistuje, bude vytvořen nový vztah se zde uvedeným názvem.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Definování vztahů entit](media/activities-entities-define.png "Definování vztahů entit")
 
 1. Výběrem možnosti **Uložit** se vaše změny uplatní.
 
@@ -82,3 +82,6 @@ Vaše zdroje dat zahrnují entity s transakčními a aktivními daty z více zdr
 3. Vybrání ikony **Odstranit**.
 
 4. Odstranění potvrďte.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

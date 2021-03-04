@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643945"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269690"
 ---
-# <a name="overview-about-data-sources"></a>Přehled o zdrojích dat
+# <a name="data-sources-overview"></a>Přehled zdrojů dat
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -47,9 +47,9 @@ Uvidíte název každého přijatého zdroje dat, jeho stav a poslední čas, kd
 |Úspěch   |Zdroj dat byl úspěšně ingestován, pokud je v sloupci **Aktualizováno** uveden čas.
 |Nezahájeno   |Zdroj dat zatím nemá žádná ingestovaná data nebo je stále v režimu konceptu.         |
 |Probíhá aktualizace    |Probíhá příjem dat. Tuto operaci můžete zrušit výběrem **Přestat obnovovat** v sloupci **Akce**. Zastavením aktualizace zdroje dat se vrátíte do posledního stavu obnovy.       |
-|Nepovedlo se.     |Při přijímání dat došlo k chybám.         |
+|Nezdařilo se     |Při přijímání dat došlo k chybám.         |
 
-Volbou **Aktualizovat stav** zkontrolujte další podrobnosti o stavu aktualizace, včetně podrobností o chybách a následných aktualizacích procesu.
+Vyberte hodnotu ve sloupci **Stav** ve zdroji dat, chcete-li znát další podrobnosti. V podokně **Podrobnosti o průběhu** rozbalte **Zdroje dat**. Volbou **Zobrazit podrobnosti** zobrazíte další informace o stavu aktualizace, včetně podrobností o chybách a následných aktualizacích procesu.
 
 Načtení dat může chvíli trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce **Entity**. Další informace najdete v tématu [Entity](entities.md).
 
@@ -76,3 +76,6 @@ Chcete-li aktualizovat zdroj dat na vyžádání, postupujte takto:
 2. Vyberte vertikální tři tečky vedle zdroje dat, který chcete odebrat, a vyberte **Odstranit** z rozbalovací nabídky.
 
 3. Odstranění potvrďte.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

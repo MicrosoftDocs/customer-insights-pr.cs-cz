@@ -1,20 +1,20 @@
 ---
 title: Rozšíření od třetí strany Experian
 description: Obecné informace o rozšíření od třetí strany Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668798"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269552"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obohaťte profily zákazníků o demografické údaje ze služby Experian (náhled)
 
@@ -41,7 +41,9 @@ Pro konfiguraci Experianu je třeba splnit následující předpoklady:
 
 ## <a name="map-your-fields"></a>Mapování polí
 
-1. Vyberte **Přidat data** a vyberte klíčové identifikátory z **Jméno a adresa**, **E-mail** nebo **Telefon** k odeslání do Experian k vyřešení identity.
+1.  Vyberte **Přidat data** a zvolte **sadu zákaznických dat**, kterou chcete rozšířit o demografické údaje od společnosti Experian. Můžete vybrat entitu **Zákazník** k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
+
+1. Vyberte identifikátory klíčů z polí **Jméno a adresa**, **E-mail** nebo **Telefon** pro odeslání společnosti Experian k rozpoznání identity.
 
    > [!TIP]
    > Další klíčové atributy identifikátoru odeslané do Experian pravděpodobně přinesou vyšší míru shody.
@@ -52,8 +54,8 @@ Pro konfiguraci Experianu je třeba splnit následující předpoklady:
 
 1.  Vyberte **Uložit** pro dokončení mapování pole.
 
-   > [!div class="mx-imgBorder"]
-   > ![Mapování polí Experian](media/experian-field-mapping.png "Mapování polí Experian")
+    > [!div class="mx-imgBorder"]
+    > ![Mapování polí Experian](media/experian-field-mapping.png "Mapování polí Experian")
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
@@ -71,3 +73,6 @@ Stavte na svých obohacených zákaznických údajích. Vytvářejte [segmenty](
 
 Když povolíte Dynamics 365 Customer Insights přenos dat společnosti Experian, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že společnost Experian splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
 Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
