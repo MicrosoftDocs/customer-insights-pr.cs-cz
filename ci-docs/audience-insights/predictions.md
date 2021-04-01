@@ -5,16 +5,16 @@ ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268264"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595893"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Doplňte své dílčí údaje pomocí predikcí
 
@@ -31,7 +31,7 @@ Předpovědi vám umožňují snadno vytvářet předpovídané hodnoty, které 
 
 Než bude vaše organizace moci používat funkci předpovědí, musí být splněny následující předpoklady:
 
-1. Vaše organizace má instanci [vytvořenou v Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) a je ve stejné organizaci jako Customer Insights.
+1. Vaše organizace má instanci [vytvořenou v Common Data Service](/ai-builder/build-model#prerequisites) a je ve stejné organizaci jako Customer Insights.
 
 2. Vaše prostředí je připojeno k vaší instanci Common Data Service.
 
@@ -120,7 +120,7 @@ Po vytvoření predikce můžete model v mátroji AI Builder přizpůsobit a zv�
 
 4. Vyberte **Přizpůsobit v nástroji AI Builder**.
 
-5. Aktualizujte svůj model v nástroji AI Builder. [Další informace o správě modelů v nástroji AI Builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Aktualizujte svůj model v nástroji AI Builder. [Další informace o správě modelů v nástroji AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Příští spuštění vaší predikce použije aktualizovaný model, který jste vytvořili.
 

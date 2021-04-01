@@ -2,25 +2,25 @@
 title: Schéma entit Customer Insights v definici Common Data Model
 description: Práce s entitami v Common Data Model.
 ms.date: 04/17/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269276"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596353"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémata entit v Common Data Model
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[Common Data Model](https://docs.microsoft.com/common-data-model/) je deklarativní specifikace a definice standardních entit, která představuje běžně používané koncepce a aktivity v různých obchodních a produktivních aplikacích. Tento model se rozšiřuje také na pozorovací a analytická data. Common Data Model poskytuje jasně definované, modulární a rozšiřitelné obchodní entity (například Účet, Obchodní jednotka, Případ, Kontakt, Zájemce, Příležitost a Produkt) a také interakce a vztahy mezi dodavateli, pracovníky a zákazníky, například aktivity a smlouvy o úrovni služeb. Kdokoli může stavět a rozšiřovat definice Common Data Model, aby zahrnul další podnikatelské nápady.
+[Common Data Model](/common-data-model/) je deklarativní specifikace a definice standardních entit, která představuje běžně používané koncepce a aktivity v různých obchodních a produktivních aplikacích. Tento model se rozšiřuje také na pozorovací a analytická data. Common Data Model poskytuje jasně definované, modulární a rozšiřitelné obchodní entity (například Účet, Obchodní jednotka, Případ, Kontakt, Zájemce, Příležitost a Produkt) a také interakce a vztahy mezi dodavateli, pracovníky a zákazníky, například aktivity a smlouvy o úrovni služeb. Kdokoli může stavět a rozšiřovat definice Common Data Model, aby zahrnul další podnikatelské nápady.
 
 Tento sdílený datový model umožňuje aplikacím a datovým integrátorům snadnější spolupráci tím, že poskytuje jednotnou definici dat. Common Data Model zahrnuje bohatý systém metadat se standardními entitami, vztahy, hierarchiemi, zvláštnostmi a další. Pochází z aplikací Dynamics 365 a jeho veřejný zdrojový kód je k dispozici na GitHubu s více než 260 standardními entitami. Rozsáhlý systém interních a externích partnerů přispívá koncepty Common Data Model pro jednotlivá odvětví.
 
@@ -32,13 +32,13 @@ Pro vytvoření 360stupňového pohledu na zákazníka a zpřístupnění model�
 
 | Entita | Popis |
 |---------|---------|
-|[CustomerActivity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Aktivita prováděná uživatelem, která má pro podnik pozorovací hodnotu. |
-|[CustomerProfile](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Osoba nebo organizace, která buď vykonávala obchodní aktivity, nebo k nim má potenciál. |
-|[MeasureDefinition](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definice ukazatelů KPI rozdělených podle žádných nebo více dimenzí (např. Měsíční aktivní uživatelé, Celkové výdaje podle zákazníka, Průměrné náklady na získání zákazníka) |
-|[Segment](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Definuje skupinu členů se společnými rysy. |
-|[SegmentMembership](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Členové pro daný segment. |
+|[CustomerActivity](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Aktivita prováděná uživatelem, která má pro podnik pozorovací hodnotu. |
+|[CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Osoba nebo organizace, která buď vykonávala obchodní aktivity, nebo k nim má potenciál. |
+|[MeasureDefinition](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definice ukazatelů KPI rozdělených podle žádných nebo více dimenzí (např. Měsíční aktivní uživatelé, Celkové výdaje podle zákazníka, Průměrné náklady na získání zákazníka) |
+|[Segment](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Definuje skupinu členů se společnými rysy. |
+|[SegmentMembership](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Členové pro daný segment. |
 
-Další informace naleznete v dokumentaci [Schémata entit Customer Insights v definici Common Data Model](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
+Další informace naleznete v dokumentaci [Schémata entit Customer Insights v definici Common Data Model](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Zobrazení entit pomocí navigátoru entit Common Data Model
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267714"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596491"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Připojení k účtu Azure Data Lake Storage Gen2 s instančním objektem Azure pro přehledy cílové skupiny
 
@@ -23,7 +23,7 @@ Automatizované nástroje, které používají služby Azure, by vždy měly mí
 Instanční objekt můžete použít pro bezpečné [přidání nebo úpravu složky Common Data Model jako zdroje dat](connect-common-data-model.md) nebo [vytvoření nového nebo aktualizaci stávajícího prostředí](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Účet úložiště Azure Data Lake Gen2, který chce použít instanční objekt, musí mít [povolenu funkci Hierarchický prostor názvů (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Účet úložiště Azure Data Lake Gen2, který chce použít instanční objekt, musí mít [povolenu funkci Hierarchický prostor názvů (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
 > - K vytvoření instančního objektu potřebujete oprávnění správce pro vaše předplatné Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Vytvoření instančního objektu Azure pro přehledy cílové skupiny
@@ -48,7 +48,7 @@ Před vytvořením nového instančního objektu pro přehledy cílové skupiny 
 
 ### <a name="create-a-new-service-principal"></a>Vytvoření nového instančního objektu
 
-1. Nainstalujte si nejnovější verzi **Azure Active Directory PowerShell for Graph**. Další informace viz [Instalace Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Nainstalujte si nejnovější verzi **Azure Active Directory PowerShell for Graph**. Další informace viz [Instalace Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
    - Na počítači vyberte klávesu Windows na klávesnici a vyhledejte **Windows PowerShell** a **Spustit jako správce**.
    
    - V okně PowerShell, které se otevře, zadejte `Install-Module AzureAD`.

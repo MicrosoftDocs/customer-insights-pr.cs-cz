@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270196"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598331"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Použití modelů založených na Azure Machine Learning Studio (classic)
 
@@ -37,7 +37,7 @@ V prvním kroku musíme vytvořit pracovní prostor a otevřít Machine Learning
 
 1. Vyhledejte **Pracovní prostor Machine Learning Studio** a vyberte **Vytvořit**.
 
-1. Zadejte požadované údaje pro [vytvoření pracovního prostoru](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Zvolte **Cenová úroveň plánu webové služby** na základě množství dat, které plánujete importovat. Pro nejlepší výkon vyberte **Umístění**, které je pro vás geograficky nejbližší.
+1. Zadejte požadované údaje pro [vytvoření pracovního prostoru](/azure/machine-learning/studio/create-workspace). Zvolte **Cenová úroveň plánu webové služby** na základě množství dat, které plánujete importovat. Pro nejlepší výkon vyberte **Umístění**, které je pro vás geograficky nejbližší.
 
 1. Po vytvoření prostředku se zobrazí řídicí panel pracovního prostoru Machine Learning Studio. Vyberte **Spustit Machine Learning Studio**.
 
@@ -65,7 +65,7 @@ Nyní můžete vytvořit nový experiment nebo importovat existující šablonu 
 
    ![Nastavení prediktivní webové služby](media/predictive-webservice-control.png)
 
-1. Jakmile je experiment prediktivní webové služby úspěšný, můžete jej nasadit pro automatické plánování. Chcete-li, aby webová služba fungovala s Customer Insights, zvolte **Nasadit webovou službu** > **Nasadit webovou službu [nová] Preview**. [Další informace o nasazení webové služby](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Jakmile je experiment prediktivní webové služby úspěšný, můžete jej nasadit pro automatické plánování. Chcete-li, aby webová služba fungovala s Customer Insights, zvolte **Nasadit webovou službu** > **Nasadit webovou službu [nová] Preview**. [Další informace o nasazení webové služby](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Nasazení prediktivní webové služby](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Následující obrázek ukazuje cvičení modelu a kanál vyhodnocení v Azure M
 
 ![Model úbytku v Azure Machine Learning Studio](media/azure-machine-learning-model.png)
 
-Také používáme techniku zvanou **Důležitost funkce permutace**, což je důležitý aspekt optimalizace modelu. Integrované modely mají malý až žádný přehled o dopadu na jakékoli konkrétní funkce konečné predikce. Kalkulačka důležitosti funkce používá vlastní algoritmus pro výpočet vlivu jednotlivých prvků na výsledek konkrétního modelu. Důležitost funkce je normalizována mezi +1 a -1. Negativní vliv znamená, že odpovídající funkce má kontraintuitivní vliv na výsledek a měla by být z modelu odstraněna. Pozitivní vliv naznačuje, že funkce výrazně přispívá k predikci. Tyto hodnoty nejsou korelačními koeficienty, protože se jedná o odlišné metriky. Další informace viz [Důležitost funkce permutace](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Také používáme techniku zvanou **Důležitost funkce permutace**, což je důležitý aspekt optimalizace modelu. Integrované modely mají malý až žádný přehled o dopadu na jakékoli konkrétní funkce konečné predikce. Kalkulačka důležitosti funkce používá vlastní algoritmus pro výpočet vlivu jednotlivých prvků na výsledek konkrétního modelu. Důležitost funkce je normalizována mezi +1 a -1. Negativní vliv znamená, že odpovídající funkce má kontraintuitivní vliv na výsledek a měla by být z modelu odstraněna. Pozitivní vliv naznačuje, že funkce výrazně přispívá k predikci. Tyto hodnoty nejsou korelačními koeficienty, protože se jedná o odlišné metriky. Další informace viz [Důležitost funkce permutace](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Celý [experiment úbytku je k dispozici v Azure AI Gallery](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Celý [experiment s doporučením produktu je přístupný v Azure AI Gallery.](
 
 ## <a name="integrate-custom-models"></a>Integrace vlastních modelů
 
-Chcete-li tyto predikce použít v Customer Insights, musíte **exportovat** predikce spolu s ID zákazníků. [Exportujte je do stejného umístění úložiště Azure Blob](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs), do kterého exportujete zdrojová data. Prediktivní webová služba může být naplánována tak, aby pracovala pravidelně a aktualizovala bodování.
+Chcete-li tyto predikce použít v Customer Insights, musíte **exportovat** predikce spolu s ID zákazníků. [Exportujte je do stejného umístění úložiště Azure Blob](/azure/storage/common/storage-import-export-data-from-blobs), do kterého exportujete zdrojová data. Prediktivní webová služba může být naplánována tak, aby pracovala pravidelně a aktualizovala bodování.
 
 Data generovaná vlastním modelem lze použít k dalšímu rozšíření vašich zákaznických dat. Další informace viz [Vlastní modely strojového učení](custom-models.md).
 

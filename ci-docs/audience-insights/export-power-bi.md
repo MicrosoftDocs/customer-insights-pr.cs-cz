@@ -2,19 +2,19 @@
 title: Konektor pro Power BI
 description: Zjistěte, jak používat konektor Dynamics 365 Customer Insights v Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477080"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596031"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor pro Power BI (preview)
 
@@ -23,7 +23,7 @@ Vytvářejte vizualizace svých dat pomocí Power BI Desktop. Vytvářejte dalš
 ## <a name="prerequisites"></a>Požadavky
 
 - Máte sjednocené profily zákazníků.
-- Nejnovější verze [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je v počítači nainstalována. [Další informace o aplikaci Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop)
+- Nejnovější verze [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je instalován v počítači. [Další informace o aplikaci Power BI Desktop](/power-bi/desktop-what-is-desktop)
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konfigurace konektorupro Power BI
 
@@ -47,7 +47,7 @@ Vytvářejte vizualizace svých dat pomocí Power BI Desktop. Vytvářejte dalš
 
 ## <a name="large-data-sets"></a>Velké datové sady
 
-Konektor Customer Insights pro Power BI je navržen pro práci s datovými sadami, které obsahují až 1 milion profilů zákazníků. Import větších souborů dat může fungovat, ale trvá to dlouho. Proces by navíc mohl běžet do časového limitu z důvodu omezení Power BI. Další informace viz [Power BI: Doporučení pro velké soubory dat](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Konektor Customer Insights pro Power BI je navržen pro práci s datovými sadami, které obsahují až 1 milion profilů zákazníků. Import větších souborů dat může fungovat, ale trvá to dlouho. Proces by navíc mohl běžet do časového limitu z důvodu omezení Power BI. Další informace viz [Power BI: Doporučení pro velké soubory dat](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Práce s podmnožinou dat
 
@@ -70,4 +70,3 @@ Duplikované vztahy můžete identifikovat a odstranit.
 Po odstranění duplicitních vztahů zkuste znovu nakonfigurovat konektor Power BI. Prostředí by mělo být ihned k dispozici.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

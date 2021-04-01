@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267898"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597411"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Použití modelů založených na Azure Machine Learning
 
@@ -29,9 +29,9 @@ Sjednocená data v Dynamics 365 Customer Insights jsou zdrojem pro vytváření 
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Nastavení pracovního prostoru Azure Machine Learning
 
-1. V části zabývající se [vytvořením pracovního prostoru Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) najdete různé možnosti vytvoření pracovního prostoru. Pro nejlepší výkon vytvořte pracovní prostor v oblasti Azure, která je geograficky nejblíže vašemu prostředí Customer Insights.
+1. V části zabývající se [vytvořením pracovního prostoru Azure Machine Learning](/azure/machine-learning/concept-workspace#-create-a-workspace) najdete různé možnosti vytvoření pracovního prostoru. Pro nejlepší výkon vytvořte pracovní prostor v oblasti Azure, která je geograficky nejblíže vašemu prostředí Customer Insights.
 
-1. Ke svému pracovnímu prostoru přistupujte prostřednictvím [Azure Machine Learning Studio](https://ml.azure.com/). Existuje několik [způsobů interakce](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) s vaším pracovním prostorem.
+1. Ke svému pracovnímu prostoru přistupujte prostřednictvím [Azure Machine Learning Studio](https://ml.azure.com/). Existuje několik [způsobů interakce](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) s vaším pracovním prostorem.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Práce s návrhářem Azure Machine Learning
 
@@ -39,13 +39,13 @@ Návrhář Azure Machine Learning poskytuje vizuální plátno, kam můžete př
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Práce s Azure Machine Learning SDK
 
-Datoví vědci a vývojáři AI používají [Azure Machine Learning SDK](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) k vytvoření pracovních postupů strojového učení. V současné době nelze modely vytrénované pomocí SDK integrovat přímo s Customer Insights. Pro integraci s Customer Insights je vyžadován dávkový odvozovací kanál, který tento model spotřebovává.
+Datoví vědci a vývojáři AI používají [Azure Machine Learning SDK](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) k vytvoření pracovních postupů strojového učení. V současné době nelze modely vytrénované pomocí SDK integrovat přímo s Customer Insights. Pro integraci s Customer Insights je vyžadován dávkový odvozovací kanál, který tento model spotřebovává.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Požadavky na dávkový kanál pro integraci s Customer Insights
 
 ### <a name="dataset-configuration"></a>Konfigurace datové sady
 
-Musíte vytvořit datové sady pro použití dat entit z Customer Insights ve vašem dávkovém odvozovacím kanálu. Tyto datové sady je třeba zaregistrovat v pracovním prostoru. V současné době podporujeme pouze [tabulkové datové sady](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) ve formátu CSV. Datové sady, které odpovídají datům entity, je třeba parametrizovat jako parametr kanálu.
+Musíte vytvořit datové sady pro použití dat entit z Customer Insights ve vašem dávkovém odvozovacím kanálu. Tyto datové sady je třeba zaregistrovat v pracovním prostoru. V současné době podporujeme pouze [tabulkové datové sady](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) ve formátu CSV. Datové sady, které odpovídají datům entity, je třeba parametrizovat jako parametr kanálu.
    
 * Parametry datové sady v návrháři
    
@@ -76,7 +76,7 @@ Musíte vytvořit datové sady pro použití dat entit z Customer Insights ve va
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Import dat kanálu do Customer Insights
 
-* Návrhář poskytuje [modul exportu dat](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data), který umožňuje export výstupu kanálu do úložiště Azure. V současné době musí modul používat typ úložiště dat **Azure Blob Storage** a parametrizovat **Úložiště dat** a relativní **Cestu**. Customer Insights přepíše oba tyto parametry během provádění kanálu datovým úložištěm a cestou, která je pro produkt přístupná.
+* Návrhář poskytuje [modul exportu dat](/azure/machine-learning/algorithm-module-reference/export-data), který umožňuje export výstupu kanálu do úložiště Azure. V současné době musí modul používat typ úložiště dat **Azure Blob Storage** a parametrizovat **Úložiště dat** a relativní **Cestu**. Customer Insights přepíše oba tyto parametry během provádění kanálu datovým úložištěm a cestou, která je pro produkt přístupná.
    > [!div class="mx-imgBorder"]
    > ![Konfigurace modulu exportu dat](media/intelligence-designer-importdata.png "Konfigurace modulu exportu dat")
    

@@ -1,7 +1,7 @@
 ---
 title: Nové a připravované funkce
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270424"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598423"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-S radostí představujeme naše nejnovější aktualizace! Tento článek shrnuje funkce Public Preview, rozšíření obecné dostupnosti a aktualizace funkcí. Chcete-li zobrazit dlouhodobé plány funkcí, projděte si [plány vydávání Dynamics 365 a Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+S radostí představujeme naše nejnovější aktualizace! Tento článek shrnuje funkce Public Preview, rozšíření obecné dostupnosti a aktualizace funkcí. Chcete-li zobrazit dlouhodobé plány funkcí, projděte si [plány vydávání Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
 Můžete se také podívat na následující video a dozvědět se více o plánovaných funkcích za posledních šest měsíců.
 
@@ -30,6 +30,40 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Aktualizace z února 2021
+
+Aktualizace v únoru 2021 zahrnují několik funkcí, vylepšení výkonu a opravy chyb.
+
+#### <a name="extensibility"></a>Rozšiřitelnost
+
+- **Exportovat segmenty do aplikace AdRoll**
+
+  Cíle exportu jsme rozšířili o službu AdRoll. Nyní můžete exportovat segmenty z Customer Insights do cílových skupin AdRoll a použít je jako základ pro vaši reklamu. Další informace viz [Konektor pro AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmenty
+ 
+- **Vytvoření duplicitního segmentu**
+  
+  Chcete-li vytvořit nový segment na základě existujícího, můžete nyní duplikovat segment a upravit jej tak, abyste jej dále upřesnili. 
+
+- **Přidání dalších atributů do segmentu**
+
+  Nyní můžete do výstupu segmentu přidat atributy, i když nejsou součástí profilu zákazníka. Například můžete do segmentu přidat ID předplatného, i když je součástí entity předplatného, která má vztah M:1 s entitou zákazníka. Pokud atribut patří k entitě provázané s entitou zákazníka, můžete nyní tyto atributy zahrnout.  
+
+#### <a name="predictions"></a>Předpovědi
+
+- **Vytvoření prediktivního doporučení produktů**
+
+  Pochopení, co zákazníci chtějí nakupovat, je jedním z prvních kroků potřebných ke zlepšení obchodních výnosů a budování loajality zákazníků prostřednictvím personalizace a zapojení. Doporučování produktů, které zákazníka nezajímají, může vytvořit stěnu mezi zákazníkem a vaším podnikem a v konečném důsledku omezit celkové potenciální výnosy a zážitek zákazníka. 
+
+  Pomocí vlastních dat nyní můžete vytvářet predikce, jaké produkty si vaši zákazníci pravděpodobně v budoucnu koupí. Další informace viz [Predikce doporučení produktů](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>správa systému,
+
+- **Kopírování prostředí podporuje více typů zdrojů dat**
+
+  Správci mohou kopírovat konfigurace prostředí do nového prostředí ve stejné organizaci. Tato funkce rozšiřuje funkci kopírování prostředí pro případy, kdy jsou použity zdroje dat založené na datovém jezeře Common Data Service nebo složce Common Data Model.
 
 ## <a name="january-2021-updates"></a>Aktualizace z ledna 2021
 
