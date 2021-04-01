@@ -1,19 +1,20 @@
 ---
 title: Vlastní modely strojové učení | Microsoft Docs
 description: Práce s vlastními modely z řešení Azure Machine Learning v aplikaci Dynamics 365 Customer Insights.
-ms.date: 11/19/2020
-ms.reviewer: zacook
-ms.service: dynamics-365-ai
+ms.date: 03/22/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
+ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267226"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "5700660"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastní modely strojového učení
 
@@ -21,13 +22,18 @@ ms.locfileid: "5267226"
 
 ## <a name="responsible-ai"></a>Zodpovědná AI
 
-Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obchodní schopnosti a zdroje příjmů. Důrazně doporučujeme, abyste vyvážili hodnotu své predikce s dopadem, který má, a možnými opatřeními proti předpojatosti zavedenými z etických důvodů. Další informace, jak společnost Microsoft [přistupuje k zodpovědné AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Můžete se také dozvědět o [technikách a procesech pro zodpovědné strojové učení](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml) specifické pro Azure Machine Learning.
+Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obchodní schopnosti a zdroje příjmů. Důrazně doporučujeme, abyste vyvážili hodnotu své predikce s dopadem, který má, a možnými opatřeními proti předpojatosti zavedenými z etických důvodů. Další informace, jak společnost Microsoft [přistupuje k zodpovědné AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Můžete se také dozvědět o [technikách a procesech pro zodpovědné strojové učení](/azure/machine-learning/concept-responsible-ml) specifické pro Azure Machine Learning.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- V současné době tato funkce podporuje webové služby publikované prostřednictvím [Machine Learning Studio (classic)](https://studio.azureml.net) a [dávkových kanálů Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines).
+- V současné době tato funkce podporuje webové služby publikované prostřednictvím [Machine Learning Studio (classic)](https://studio.azureml.net) a [dávkových kanálů Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
 
-- Abyste mohli používat tuto funkci, potřebujete účet úložiště Azure Data Lake Gen2 přidružený k vaší instanci Azure Studio. Další informace viz [Vytvoření účtu úložiště Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+- Abyste mohli používat tuto funkci, potřebujete účet úložiště Azure Data Lake Gen2 přidružený k vaší instanci Azure Studio. Další informace viz [Vytvoření účtu úložiště Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+
+- Pro pracovní prostory Azure Machine Learning s kanály potřebujete oprávnění vlastníka nebo správce přístupu uživatelů k pracovnímu prostoru Azure Machine Learning.
+
+   > [!NOTE]
+   > Data se přenášejí mezi vašimi instancemi Customer Insights a vybranými webovými službami nebo kanály Azure v pracovním postupu. Když přenášíte data do služby Azure, ujistěte se, že je služba nakonfigurovaná tak, aby zpracovávala data způsobem a umístěním nezbytným pro splnění jakýchkoli právních nebo regulačních požadavků na tato data pro vaši organizaci.
 
 ## <a name="add-a-new-workflow"></a>Přidání nového pracovního postupu
 
@@ -45,8 +51,8 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
 1. Vyberte **Pracovní prostory** přidružené k vaší webové službě. Jsou zde uvedeny dvě sekce, jedna pro Azure Machine Learning v1 (Machine Learning Studio (classic)) a Azure Machine Learning v2 (Azure Machine Learning). Pokud si nejste jisti, který pracovní prostor je ten pravý pro vaši webovou službu Machine Learning Studio (classic), vyberte **Žádný**.
 
 1. Zvolte webovou službu Machine Learning Studio (classic) nebo kanál Azure Machine Learning v rozevíracím seznamu **Webová služba obsahující váš model**. Pak vyberte **Další**.
-   - Další informace o [publikování webové služby v Machine Learning Studio (classic)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Další informace o [publikování kanálu v Azure Machine Learning pomocí návrháře](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) nebo [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Váš kanál musí být publikován pod [koncovým bodem kanálu](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Další informace o [publikování webové služby v Machine Learning Studio (classic)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
+   - Další informace o [publikování kanálu v Azure Machine Learning pomocí návrháře](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) nebo [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Váš kanál musí být publikován pod [koncovým bodem kanálu](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Pro každou položku **Vstup webové služby** vyberte odpovídající **entitu** z přehledů cílové skupiny a vyberte **Další**.
    > [!NOTE]
@@ -54,7 +60,7 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
 
    > [!div class="mx-imgBorder"]
    > ![Konfigurace pracovního postupu](media/intelligence-screen2-updated.png "Konfigurace pracovního postupu")
-   
+
 1. V kroku **Výstupní parametry modelu** nastavte následující vlastnosti:
    - Machine Learning Studio (classic)
       1. Zadejte **Název entity** výstupu, kam mají směřovat výstupní výsledky webové služby.
@@ -62,12 +68,12 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
       1. Zadejte **Název entity** výstupu, kam mají směřovat výstupní výsledky kanálu.
       1. Vyberte **Název parametru úložiště výstupních dat** vašeho dávkového kanálu z rozbalovací nabídky.
       1. Vyberte **Název parametru výstupní cesty** vašeho dávkového kanálu z rozbalovací nabídky.
-      
+
       > [!div class="mx-imgBorder"]
       > ![Podokno výstupních parametrů modelu](media/intelligence-screen3-outputparameters.png "Podokno výstupních parametrů modelu")
 
 1. Vyberte odpovídající atribut z rozevíracího seznamu **ID zákazníka ve výsledcích**, který identifikuje zákazníky, a vyberte **Uložit**.
-   
+
    > [!div class="mx-imgBorder"]
    > ![Propojení výsledků v podokně údajů o zákaznících](media/intelligence-screen4-relatetocustomer.png "Propojení výsledků v podokně údajů o zákaznících")
 
@@ -95,7 +101,7 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
       1. Vyberte **Název parametru výstupní cesty** pro váš testovací kanál.
 
 1. Vyberte odpovídající atribut z rozevíracího seznamu **ID zákazníka ve výsledcích**, který identifikuje zákazníky, a vyberte **Uložit**.
-   Musíte vybrat atribut z výstupu odvození s hodnotami podobnými sloupci ID zákazníka entity Zákazník. Pokud takový sloupec chybí v datové sadě, vyberte atribut, který jednoznačně identifikuje řádek.
+   Vyberte atribut z výstupu odvození s hodnotami podobnými sloupci ID zákazníka entity Zákazník. Pokud takový sloupec chybí v datové sadě, vyberte atribut, který jednoznačně identifikuje řádek.
 
 ## <a name="run-a-workflow"></a>Spuštění pracovního postupu
 
@@ -113,5 +119,28 @@ Váš pracovní postup se také spustí automaticky s každou plánovanou aktual
 
 Váš pracovní postup bude odstraněn. [Entita](entities.md), která byla vytvořena, když jste vytvořili pracovní postup, přetrvává, a lze ji zobrazit na stránce **Entity**.
 
+## <a name="results"></a>Výsledky
+
+Výsledky z pracovního postupu jsou uloženy v entitě nakonfigurované během fáze Výstupní parametry modelu. K těmto datům máte přístup ze [stránky entit](entities.md) nebo [přes API](apis.md).
+
+### <a name="api-access"></a>Přístup přes API
+
+Aby dotaz OData získal data z entity vlastního modelu, použijte následující formát:
+
+`https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
+
+1. Místo `<your instance id>` zadejte ID prostředí Customer Insights, které najdete v adresním řádku svého prohlížeče při přístupu k Customer Insights.
+
+1. Místo `<custom model output entity>` zadejte název entity, který jste zadali během kroku Výstupní parametry modelu při konfiguraci vlastního modelu.
+
+1. Místo `<guid value>` zadejte ID zákazníka, pro kterého chcete získat přístup k záznamu. Toto ID obvykle najdete na [stránce s profily zákazníků](customer-profiles.md) v poli CustomerID.
+
+## <a name="frequently-asked-questions"></a>Nejčastější dotazy
+
+- Proč nevidím svůj kanál při nastavování pracovního postupu vlastního modelu?    
+  Tento problém je často způsoben problémem s konfigurací v kanálu. Musí být [nakonfigurován vstupní parametr](azure-machine-learning-experiments.md#dataset-configuration) a [ výstupní datové úložiště a parametry cesty](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights).
+
+- Co znamená chyba „Nepodařilo se uložit pracovní postup analytických nástrojů“?    
+  Tato chybová zpráva se uživatelům obvykle zobrazí, pokud v pracovním prostoru nemají oprávnění vlastníka nebo správce přístupu uživatelů. Uživatel potřebuje vyšší úroveň oprávnění, aby umožnil Customer Insights zpracovat pracovní postup jako službu, místo aby používal přihlašovací údaje uživatele pro další spuštění pracovního postupu.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

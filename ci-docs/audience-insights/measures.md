@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269920"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654724"
 ---
 # <a name="define-and-manage-measures"></a>Definujte a spravujte opatření
 
@@ -72,8 +72,8 @@ Tato sekce vás provede vytvořením nové míry od nuly. Můžete vytvořit mí
    1. Volbou **Upravit dimenze** přidáte atributy dat, podle kterých chcete seskupit hodnoty měr. Například město nebo pohlaví. Ve výchozím nastavení je vybrána dimenze *CustomerID* k vytvoření *měr na úrovni zákazníka*. Pokud chcete vytvořit *míry na úrovni podniku*, můžete odebrat výchozí míru.
    1. Volbou **Hotovo** přidáte dimenze do míry.
 
-1. Pokud mezi datovou entitou, kterou jste mapovali, a entitou zákazníka existuje více cest, musíte zvolit jednu z identifikovaných [cesty vztahů mezi entitami](relationships.md). Výsledné míry se mohou lišit v závislosti na vybrané cestě.
-   1. Vyberte **Předvolby dat** a vyberte cestu entity, která by měla být použita k identifikaci vaší míry.
+1. Pokud mezi datovou entitou, kterou jste mapovali, a entitou *Zákazník* existuje více cest, musíte zvolit jednu z identifikovaných [cest vztahů mezi entitami](relationships.md). Výsledné míry se mohou lišit v závislosti na vybrané cestě. 
+   1. Vyberte **Předvolby dat** a vyberte cestu entity, která by měla být použita k identifikaci vaší míry. Pokud existuje pouze jedna cesta k entitě *Zákazník*, tento ovládací prvek se nezobrazí.
    1. Volbou **Hotovo** použijete svůj výběr. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Umožňuje vybrat cestu entitu pro tuto míru.":::

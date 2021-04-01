@@ -2,19 +2,19 @@
 title: Přijímání a omezení dat v reálném čase
 description: Obecné informace o funkcích v reálném čase v přehledech cílové skupiny.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270272"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598561"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Příjem dat v reálném čase (náhled)
 
@@ -54,7 +54,7 @@ Rozhraní API v reálném čase umožňuje publikovat novou aktivitu ze zdrojov�
 
 K rozhraní API v reálném čase se můžete připojit dvěma způsoby:
 
-- [nepřímo](#connect-via-the-dynamics-365-customer-insights-connector), pomocí konektoru [Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/)
+- [nepřímo](#connect-via-the-dynamics-365-customer-insights-connector), pomocí konektoru [Dynamics 365 Customer Insights](/connectors/customerinsights/)
 - [přímo](#connect-directly-to-the-real-time-api), s kódem
 
 Oba způsoby mají společné následující předpoklady:
@@ -66,13 +66,13 @@ Oba způsoby mají společné následující předpoklady:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Připojení přes konektor Dynamics 365 Customer Insights
 
-Rozhraní API v reálném čase může ingestovat data z vyhrazeného konektoru Power Platform, konektoru [Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/), bez nutnosti zapisovat a nasazovat kód.    
-Konektor může provádět stejné akce v reálném čase jako API. Pro prémiové konektory potřebujete platnou licenci. Další informace získáte v části [Nejčastější dotazy k licencování Power Apps a Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+Rozhraní API v reálném čase může ingestovat data z vyhrazeného konektoru Power Platform, konektoru [Dynamics 365 Customer Insights](/connectors/customerinsights/), bez nutnosti zapisovat a nasazovat kód.    
+Konektor může provádět stejné akce v reálném čase jako API. Pro prémiové konektory potřebujete platnou licenci. Další informace získáte v části [Nejčastější dotazy k licencování Power Apps a Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps a/nebo Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps a/nebo Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-Podrobnosti o vytváření toků viz [dokumentace Power Automate](https://docs.microsoft.com/power-automate/).
+Podrobnosti o vytváření toků viz [dokumentace Power Automate](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Připojení se přímo k rozhraní API v reálném čase
 
