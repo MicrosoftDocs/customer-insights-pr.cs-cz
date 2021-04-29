@@ -1,7 +1,7 @@
 ---
-title: Cíle exportu
-description: Exportujte data a spravujte cíle exportu.
-ms.date: 07/21/2020
+title: Export dat ze služby Customer Insights
+description: Spravujte exporty ke sdílení dat.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596077"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896135"
 ---
-# <a name="export-destinations-preview-overview"></a><span data-ttu-id="63163-103">Přehled cílů exportu (Preview)</span><span class="sxs-lookup"><span data-stu-id="63163-103">Export destinations (preview) overview</span></span>
+# <a name="exports-preview-overview"></a><span data-ttu-id="2285c-103">Přehled exportů (Preview)</span><span class="sxs-lookup"><span data-stu-id="2285c-103">Exports (preview) overview</span></span>
 
-<span data-ttu-id="63163-104">Stránka **Cíle exportu** zobrazuje všechna umístění, která jste nastavili pro export dat.</span><span class="sxs-lookup"><span data-stu-id="63163-104">The **Export destinations** page shows you all locations you've set up to export data to.</span></span> <span data-ttu-id="63163-105">Můžete také přidat nové cíle pro export.</span><span class="sxs-lookup"><span data-stu-id="63163-105">You can also add new destinations for export.</span></span> <span data-ttu-id="63163-106">Kromě toho zobrazuje možnosti exportu, které jsou aktuálně k dispozici.</span><span class="sxs-lookup"><span data-stu-id="63163-106">Additionally, it shows export currently available options.</span></span> <span data-ttu-id="63163-107">Získejte rychlý přehled, popis a zjistěte, co můžete dělat s každou možností rozšíření.</span><span class="sxs-lookup"><span data-stu-id="63163-107">Get a quick overview, description, and find out what you can do with each extensibility option.</span></span> <span data-ttu-id="63163-108">Exportujte sjednocené profily, míry a segmenty do podporovaných aplikací relevantních pro vaši firmu.</span><span class="sxs-lookup"><span data-stu-id="63163-108">Export unified profiles, measures, and segments to supported apps relevant for your business.</span></span>
+<span data-ttu-id="2285c-104">Stránka **Export** zobrazuje všechny nakonfigurované exporty.</span><span class="sxs-lookup"><span data-stu-id="2285c-104">The **Exports** page shows you all configured exports.</span></span> <span data-ttu-id="2285c-105">Exporty sdílejí konkrétní data s různými aplikacemi.</span><span class="sxs-lookup"><span data-stu-id="2285c-105">Exports share specific data with various applications.</span></span> <span data-ttu-id="2285c-106">Mohou zahrnovat zákaznické profily nebo entity, schémata a podrobnosti mapování.</span><span class="sxs-lookup"><span data-stu-id="2285c-106">They can include customer profiles or entities, schemas, and mapping details.</span></span> <span data-ttu-id="2285c-107">Každý export vyžaduje [připojení, které nastavil správce, ke správě ověřování a přístupu](connections.md).</span><span class="sxs-lookup"><span data-stu-id="2285c-107">Each export requires a [connection, set up by an administrator, to manage authentication and access](connections.md).</span></span>
 
-<span data-ttu-id="63163-109">Přejděte na **Správce** > **Cíle exportu**, kde najdete následující možnosti rozšiřitelnosti:</span><span class="sxs-lookup"><span data-stu-id="63163-109">Go to **Admin** > **Export destinations** to find the following extensibility options:</span></span>
+> [!NOTE]
+> <span data-ttu-id="2285c-108">Do března 2021 exporty vytvářely propojení k odpovídající službě automaticky.</span><span class="sxs-lookup"><span data-stu-id="2285c-108">Until March 2021, exports created a connection to the corresponding service automatically.</span></span> <span data-ttu-id="2285c-109">Export nyní vyžaduje [propojení, vytvořené a sdílené správcem](connections.md), než je budete moci vytvořit.</span><span class="sxs-lookup"><span data-stu-id="2285c-109">Exports now require a [connection, created and shared by an administrator](connections.md) before you can create them.</span></span>
 
-- [<span data-ttu-id="63163-110">Adobe Campaign Standard</span><span class="sxs-lookup"><span data-stu-id="63163-110">Adobe Campaign Standard</span></span>](export-adobe-campaign-standard.md)
-- [<span data-ttu-id="63163-111">Adobe Experience Platform</span><span class="sxs-lookup"><span data-stu-id="63163-111">Adobe Experience Platform</span></span>](export-adobe-experience-platform.md)
-- [<span data-ttu-id="63163-112">AdRoll</span><span class="sxs-lookup"><span data-stu-id="63163-112">AdRoll</span></span>](export-adroll.md)
-- [<span data-ttu-id="63163-113">Autopilot</span><span class="sxs-lookup"><span data-stu-id="63163-113">Autopilot</span></span>](export-autopilot.md)
-- [<span data-ttu-id="63163-114">Azure Blob Storage</span><span class="sxs-lookup"><span data-stu-id="63163-114">Azure Blob Storage</span></span>](export-azure-blob-storage.md)
-- [<span data-ttu-id="63163-115">Azure Data Lake Storage Gen2</span><span class="sxs-lookup"><span data-stu-id="63163-115">Azure Data Lake Storage Gen2</span></span>](export-azure-data-lake-storage-gen2.md)
-- [<span data-ttu-id="63163-116">Bot pro Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="63163-116">Bot for Microsoft Teams</span></span>](export-teams-bot.md)
-- [<span data-ttu-id="63163-117">Rozhraní API pro Customer Insights</span><span class="sxs-lookup"><span data-stu-id="63163-117">Customer Insights API</span></span>](apis.md)
-- [<span data-ttu-id="63163-118">DotDigital</span><span class="sxs-lookup"><span data-stu-id="63163-118">DotDigital</span></span>](export-dotdigital.md)
-- [<span data-ttu-id="63163-119">Dynamics 365 Customer Service (doplněk karty zákazníka)</span><span class="sxs-lookup"><span data-stu-id="63163-119">Dynamics 365 Customer Service (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="63163-120">Dynamics 365 Marketing</span><span class="sxs-lookup"><span data-stu-id="63163-120">Dynamics 365 Marketing</span></span>](export-dynamics365-marketing.md)
-- [<span data-ttu-id="63163-121">Dynamics 365 Sales</span><span class="sxs-lookup"><span data-stu-id="63163-121">Dynamics 365 Sales</span></span>](export-dynamics365-sales.md)
-- [<span data-ttu-id="63163-122">Centrum prodeje Dynamics 365 (doplnění karty zákazníka)</span><span class="sxs-lookup"><span data-stu-id="63163-122">Dynamics 365 Sales Hub (Customer Card Add-in)</span></span>](customer-card-add-in.md)
-- [<span data-ttu-id="63163-123">Správce reklam Facebook</span><span class="sxs-lookup"><span data-stu-id="63163-123">Facebook Ads Manager</span></span>](export-facebook.md)
-- [<span data-ttu-id="63163-124">Google Ads</span><span class="sxs-lookup"><span data-stu-id="63163-124">Google Ads</span></span>](export-google-ads.md)
-- [<span data-ttu-id="63163-125">LiveRamp&reg;</span><span class="sxs-lookup"><span data-stu-id="63163-125">LiveRamp&reg;</span></span>](export-liveramp.md)
-- [<span data-ttu-id="63163-126">Mailchimp</span><span class="sxs-lookup"><span data-stu-id="63163-126">Mailchimp</span></span>](export-mailchimp.md)
-- [<span data-ttu-id="63163-127">Marketo</span><span class="sxs-lookup"><span data-stu-id="63163-127">Marketo</span></span>](export-marketo.md)
-- [<span data-ttu-id="63163-128">Power Automate</span><span class="sxs-lookup"><span data-stu-id="63163-128">Power Automate</span></span>](export-power-automate.md)
-- [<span data-ttu-id="63163-129">Power Apps</span><span class="sxs-lookup"><span data-stu-id="63163-129">Power Apps</span></span>](export-power-apps.md)
-- [<span data-ttu-id="63163-130">Power BI</span><span class="sxs-lookup"><span data-stu-id="63163-130">Power BI</span></span>](export-power-bi.md)
-- [<span data-ttu-id="63163-131">SendGrid</span><span class="sxs-lookup"><span data-stu-id="63163-131">SendGrid</span></span>](export-sendgrid.md)
-- [<span data-ttu-id="63163-132">SFTP</span><span class="sxs-lookup"><span data-stu-id="63163-132">SFTP</span></span>](export-sftp.md)
+<span data-ttu-id="2285c-110">Jděte na **Data** > **Exporty** pro zobrazení stránky exportů.</span><span class="sxs-lookup"><span data-stu-id="2285c-110">Go to **Data** > **Exports** to view the exports page.</span></span> <span data-ttu-id="2285c-111">Všechny uživatelské role mají přístup k zobrazení nakonfigurovaných exportů.</span><span class="sxs-lookup"><span data-stu-id="2285c-111">All user roles have access to view configured exports.</span></span> <span data-ttu-id="2285c-112">Pomocí vyhledávacího pole na panelu příkazů můžete najít exporty podle jejich názvu, názvu připojení nebo typu připojení.</span><span class="sxs-lookup"><span data-stu-id="2285c-112">Use of the search field in the command bar to find exports by their name, connection name, or connection type.</span></span>
 
-## <a name="add-a-new-export-destination"></a><span data-ttu-id="63163-133">Přidání nového cíle exportu</span><span class="sxs-lookup"><span data-stu-id="63163-133">Add a new export destination</span></span>
+## <a name="set-up-a-new-export"></a><span data-ttu-id="2285c-113">Nastavení nového exportu</span><span class="sxs-lookup"><span data-stu-id="2285c-113">Set up a new export</span></span>
 
-<span data-ttu-id="63163-134">Chcete-li přidat cíle exportu, musíte mít [oprávnění správce](permissions.md).</span><span class="sxs-lookup"><span data-stu-id="63163-134">To add export destinations, you have [administrator permissions](permissions.md).</span></span> <span data-ttu-id="63163-135">Pokud exportujete do služeb společnosti Microsoft, předpokládáme, že obě služby jsou ve stejné organizaci.</span><span class="sxs-lookup"><span data-stu-id="63163-135">If you export to Microsoft services, we assume both services are in the same organization.</span></span>
+<span data-ttu-id="2285c-114">Chcete-li nastavit nebo upravit export, musíte mít k dispozici propojení.</span><span class="sxs-lookup"><span data-stu-id="2285c-114">To set up or edit an export, you need to have connections available to you.</span></span> <span data-ttu-id="2285c-115">Propojení závisí na vaší [roli uživatele](permissions.md):</span><span class="sxs-lookup"><span data-stu-id="2285c-115">Connections depend on your [user role](permissions.md):</span></span>
+- <span data-ttu-id="2285c-116">Správci mají přístup ke všem propojením.</span><span class="sxs-lookup"><span data-stu-id="2285c-116">Administrators have access to all connections.</span></span> <span data-ttu-id="2285c-117">Mohou také vytvářet nová propojení při nastavování exportu.</span><span class="sxs-lookup"><span data-stu-id="2285c-117">They can also create new connections when setting up an export.</span></span>
+- <span data-ttu-id="2285c-118">Přispěvatelé mohou mít přístup ke konkrétním propojením.</span><span class="sxs-lookup"><span data-stu-id="2285c-118">Contributors can have access to specific connections.</span></span> <span data-ttu-id="2285c-119">Závisí na správcích, kteří konfigurují a sdílejí propojení.</span><span class="sxs-lookup"><span data-stu-id="2285c-119">They depend on administrators to configure and share connections.</span></span> <span data-ttu-id="2285c-120">Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="2285c-120">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
+- <span data-ttu-id="2285c-121">Diváci mohou prohlížet pouze existující exporty, ale nemohou je vytvářet.</span><span class="sxs-lookup"><span data-stu-id="2285c-121">Viewers can only view existing exports but not create them.</span></span>
 
-1. <span data-ttu-id="63163-136">Přejděte na **Správce** > **Cíle exportu**.</span><span class="sxs-lookup"><span data-stu-id="63163-136">Go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="2285c-122">Přejděte na **Data** > **Exporty**.</span><span class="sxs-lookup"><span data-stu-id="2285c-122">Go to **Data** > **Exports**.</span></span>
 
-1. <span data-ttu-id="63163-137">Přepněte na kartu **Moje cíle exportu**.</span><span class="sxs-lookup"><span data-stu-id="63163-137">Switch to the **My export destinations** tab.</span></span>
+1. <span data-ttu-id="2285c-123">Pokud chcete vytvořit nový cíl exportu, vyberte **Přidat export**.</span><span class="sxs-lookup"><span data-stu-id="2285c-123">Select **Add export** to create a new export destination.</span></span>
 
-1. <span data-ttu-id="63163-138">Vyberte **Přidat cíl**, chcete-li vytvořit nový cíl exportu.</span><span class="sxs-lookup"><span data-stu-id="63163-138">Select **Add destination** to create a new export destination.</span></span>
+1. <span data-ttu-id="2285c-124">V podokně **Nastavit export** vyberte, které propojení chcete použít.</span><span class="sxs-lookup"><span data-stu-id="2285c-124">In the **Set up export** pane, select which connection to use.</span></span> <span data-ttu-id="2285c-125">[Propojení](connections.md) jsou spravována správci.</span><span class="sxs-lookup"><span data-stu-id="2285c-125">[Connections](connections.md) are managed by administrators.</span></span> 
 
-1. <span data-ttu-id="63163-139">V podokně **Přidat cíl** vyberte **Typ** cíle exportu v rozevíracím seznamu.</span><span class="sxs-lookup"><span data-stu-id="63163-139">In the **Add destination** pane, select the **Type** of export destination in the drop-down.</span></span>
+1. <span data-ttu-id="2285c-126">Zadejte požadované podrobnosti a výběrem **Uložit** vytvořte export.</span><span class="sxs-lookup"><span data-stu-id="2285c-126">Provide the required details and select **Save** to create the export.</span></span>
 
-1. <span data-ttu-id="63163-140">Zadejte požadované podrobnosti a vyberte **Další** pro vytvoření cílle exportu.</span><span class="sxs-lookup"><span data-stu-id="63163-140">Provide the required details and select **Next** to create the export destination.</span></span>
+### <a name="edit-an-export"></a><span data-ttu-id="2285c-127">Úprava exportu</span><span class="sxs-lookup"><span data-stu-id="2285c-127">Edit an export</span></span>
 
-<span data-ttu-id="63163-141">Můžete také vybrat **Založit** na dlaždici na kartě **Objevit**.</span><span class="sxs-lookup"><span data-stu-id="63163-141">You can also select **Set up** on a tile on the **Discover** tab.</span></span>
+1. <span data-ttu-id="2285c-128">Vyberte vertikální tři tečky pro cíl exportu, který chcete upravit.</span><span class="sxs-lookup"><span data-stu-id="2285c-128">Select the vertical ellipsis for the export destination you want to edit.</span></span>
 
-## <a name="view-export-destinations"></a><span data-ttu-id="63163-142">Zobrazit cíle exportu</span><span class="sxs-lookup"><span data-stu-id="63163-142">View Export destinations</span></span>
+1. <span data-ttu-id="2285c-129">V rozevírací nabídce vyberte možnost **Upravit**.</span><span class="sxs-lookup"><span data-stu-id="2285c-129">Select **Edit** from the drop-down menu.</span></span>
 
-<span data-ttu-id="63163-143">Po vytvoření exportních cílů je najdete v tabulce na kartě **Moje cíle exportu**. Tato tabulka má tři sloupce:</span><span class="sxs-lookup"><span data-stu-id="63163-143">After creating export destinations, you'll find them in a table on the **My export destinations** tab. This table has three columns:</span></span>
+1. <span data-ttu-id="2285c-130">Změňte hodnoty, které chcete aktualizovat, a vyberte **Uložit**.</span><span class="sxs-lookup"><span data-stu-id="2285c-130">Change the values you want to update and select **Save**.</span></span>
 
-- <span data-ttu-id="63163-144">**Zobrazovaný název**: Název, který jste zadali při vytváření cíle.</span><span class="sxs-lookup"><span data-stu-id="63163-144">**Display name**: The name you entered when creating the destination.</span></span>
-- <span data-ttu-id="63163-145">**Typ**: Typ cíle exportu, který jste nastavili při vytváření cíle.</span><span class="sxs-lookup"><span data-stu-id="63163-145">**Type**: The export destination type you set when creating the destination.</span></span>
-- <span data-ttu-id="63163-146">**Vytvořeno**: Datum vytvoření cíle.</span><span class="sxs-lookup"><span data-stu-id="63163-146">**Created**: The date you created the destination.</span></span>
+## <a name="view-exports-and-export-details"></a><span data-ttu-id="2285c-131">Zobrazení exportů a podrobností exportu</span><span class="sxs-lookup"><span data-stu-id="2285c-131">View Exports and export details</span></span>
 
-## <a name="edit-an-export-destination"></a><span data-ttu-id="63163-147">Úprava cíle exportu</span><span class="sxs-lookup"><span data-stu-id="63163-147">Edit an export destination</span></span>
+<span data-ttu-id="2285c-132">Po vytvoření jsou cíle exportu uvedeny v části **Data** > **Exporty**.</span><span class="sxs-lookup"><span data-stu-id="2285c-132">After creating export destinations, they are listed on **Data** > **Exports**.</span></span> <span data-ttu-id="2285c-133">Všichni uživatelé mohou vidět, která data jsou sdílena, a jejich nejnovější stav.</span><span class="sxs-lookup"><span data-stu-id="2285c-133">All users can see which data is shared and its latest status.</span></span>
 
-1. <span data-ttu-id="63163-148">Vyberte vertikální tři tečky pro cíl exportu, který chcete upravit.</span><span class="sxs-lookup"><span data-stu-id="63163-148">Select the vertical ellipsis for the Export destination you want to edit.</span></span>
+1. <span data-ttu-id="2285c-134">Přejděte na **Data** > **Exporty**.</span><span class="sxs-lookup"><span data-stu-id="2285c-134">Go to **Data** > **Exports**.</span></span>
 
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="63163-149">![Vertikální tři tečky](media/export-destinations-page-ellipsis.png "Vertikální tři tečky")</span><span class="sxs-lookup"><span data-stu-id="63163-149">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+1. <span data-ttu-id="2285c-135">Uživatelé bez oprávnění k úpravám mohou vybrat **Zobrazit** místo **Upravit** k zobrazení podrobností o exportu.</span><span class="sxs-lookup"><span data-stu-id="2285c-135">Users without edit permissions select **View** instead of **Edit** see the export details.</span></span>
 
-1. <span data-ttu-id="63163-150">V rozevírací nabídce vyberte **Upravit**.</span><span class="sxs-lookup"><span data-stu-id="63163-150">Select **Edit** from the dropdown menu.</span></span>
+1. <span data-ttu-id="2285c-136">Toto boční podokno zobrazuje nastavení tohoto exportu.</span><span class="sxs-lookup"><span data-stu-id="2285c-136">This side pane shows the set up of this export.</span></span> <span data-ttu-id="2285c-137">Bez oprávnění k úpravám nemůžete hodnoty měnit.</span><span class="sxs-lookup"><span data-stu-id="2285c-137">Without edit permissions, you can't change values.</span></span> <span data-ttu-id="2285c-138">Vyberte **Zavřít** pro návrat na stránku exportu.</span><span class="sxs-lookup"><span data-stu-id="2285c-138">Select **Close** to return to the exports page.</span></span>
 
-1. <span data-ttu-id="63163-151">Změňte hodnoty, které vyžadují aktualizaci, a vyberte **Uložit**.</span><span class="sxs-lookup"><span data-stu-id="63163-151">Change the values that require update and select **Save**.</span></span>
+## <a name="run-exports-on-demand"></a><span data-ttu-id="2285c-139">Spuštění exportů na vyžádání</span><span class="sxs-lookup"><span data-stu-id="2285c-139">Run exports on demand</span></span>
 
-## <a name="export-data-on-demand"></a><span data-ttu-id="63163-152">Export dat na vyžádání</span><span class="sxs-lookup"><span data-stu-id="63163-152">Export data on demand</span></span>
+<span data-ttu-id="2285c-140">Po konfiguraci exportu bude spuštěn s každým [plánovaným obnovením](system.md#schedule-tab), pokud má funkční připojení.</span><span class="sxs-lookup"><span data-stu-id="2285c-140">After configuring an export, it will run with every [scheduled refresh](system.md#schedule-tab) as long as it has a working connection.</span></span>
 
-<span data-ttu-id="63163-153">Po konfiguraci konektoru pro cíl exportu bude export probíhat při každé [naplánované aktualizaci](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="63163-153">After configuring a connector for an export destination, exports will run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="2285c-141">Chcete-li exportovat data bez čekání na plánované obnovení, přejděte na **Data** > **Exporty**.</span><span class="sxs-lookup"><span data-stu-id="2285c-141">To export data without waiting for a scheduled refresh, go to **Data** > **Exports**.</span></span> <span data-ttu-id="2285c-142">K dispozici jsou dvě možnosti:</span><span class="sxs-lookup"><span data-stu-id="2285c-142">You have two options:</span></span>
 
-<span data-ttu-id="63163-154">Chcete-li exportovat data bez čekání na naplánované obnovení, přejděte na kartu **Moje cíle exportu** na **Správce** > **Exportovat cíle**.</span><span class="sxs-lookup"><span data-stu-id="63163-154">To export data without waiting for a scheduled refresh, go the **My export destinations** tab on **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="2285c-143">Chcete-li spustit všechny exporty, vyberte **Spustit vše** na panelu příkazů.</span><span class="sxs-lookup"><span data-stu-id="2285c-143">To run all exports, select **Run all** in the command bar.</span></span> 
+- <span data-ttu-id="2285c-144">Chcete-li spustit jeden export, vyberte tři tečky (...) u položky seznamu a poté vyberte **Spustit**.</span><span class="sxs-lookup"><span data-stu-id="2285c-144">To run a single export, select the ellipsis (...) on a list item and then choose **Run**.</span></span>
 
-> [!div class="mx-imgBorder"]
-> <span data-ttu-id="63163-155">![Vertikální tři tečky](media/export-destinations-page-ellipsis.png "Vertikální tři tečky")</span><span class="sxs-lookup"><span data-stu-id="63163-155">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
+## <a name="remove-an-export"></a><span data-ttu-id="2285c-145">Odebrání exportu</span><span class="sxs-lookup"><span data-stu-id="2285c-145">Remove an Export</span></span>
 
-- <span data-ttu-id="63163-156">Vyberte **Exportovat** nad seznamem, chcete-li spustit export do všech exportních cílů současně.</span><span class="sxs-lookup"><span data-stu-id="63163-156">Select **Export** above the list to run the export to all export destinations simultaneously.</span></span>
-- <span data-ttu-id="63163-157">Vyberte tři tečky (...) za položkou seznamu a poté vyberte možnost **Exportovat** a spusťte export pro jeden cíl exportu.</span><span class="sxs-lookup"><span data-stu-id="63163-157">Select the ellipsis (...) after a list item and then choose the **Export** option to run the export for a single export destination.</span></span>
+1. <span data-ttu-id="2285c-146">Přejděte na **Data** > **Exporty**.</span><span class="sxs-lookup"><span data-stu-id="2285c-146">Go to **Data** > **Exports**.</span></span>
 
-## <a name="remove-an-export-destination"></a><span data-ttu-id="63163-158">Odebrání cíle exportu</span><span class="sxs-lookup"><span data-stu-id="63163-158">Remove an Export destination</span></span>
+1. <span data-ttu-id="2285c-147">Vyberte vertikální tři tečky pro export, který chcete odebrat.</span><span class="sxs-lookup"><span data-stu-id="2285c-147">Select the vertical ellipsis for the Export you want to remove.</span></span>
 
-<span data-ttu-id="63163-159">Chcete-li odebrat cíl exportu, začněte na hlavní stránce **Cíle exportu**.</span><span class="sxs-lookup"><span data-stu-id="63163-159">To remove an Export destination, start from the main **Export destinations** page.</span></span>
+1. <span data-ttu-id="2285c-148">V rozevírací nabídce vyberte možnost **Odebrat**.</span><span class="sxs-lookup"><span data-stu-id="2285c-148">Select **Remove** from the dropdown menu.</span></span>
 
-1. <span data-ttu-id="63163-160">Vyberte vertikální tři tečky pro cíl exportu, který chcete odebrat.</span><span class="sxs-lookup"><span data-stu-id="63163-160">Select the vertical ellipsis for the Export destination you want to remove.</span></span>
-
-   > [!div class="mx-imgBorder"]
-   > <span data-ttu-id="63163-161">![Vertikální tři tečky](media/export-destinations-page-ellipsis.png "Vertikální tři tečky")</span><span class="sxs-lookup"><span data-stu-id="63163-161">![Vertical ellipsis](media/export-destinations-page-ellipsis.png "Vertical ellipsis")</span></span>
-
-2. <span data-ttu-id="63163-162">V rozevírací nabídce vyberte možnost **Odebrat**.</span><span class="sxs-lookup"><span data-stu-id="63163-162">Select **Remove** from the dropdown menu.</span></span>
-
-3. <span data-ttu-id="63163-163">Potvrďte odebrání výběrem **Odstranit** na potvrzovací obrazovce.</span><span class="sxs-lookup"><span data-stu-id="63163-163">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
+1. <span data-ttu-id="2285c-149">Potvrďte odebrání výběrem **Odstranit** na potvrzovací obrazovce.</span><span class="sxs-lookup"><span data-stu-id="2285c-149">Confirm the removal by selecting **Remove** on the confirmation screen.</span></span>
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

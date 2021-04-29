@@ -1,7 +1,7 @@
 ---
 title: Export dat Customer Insights do hostitelů SFTP
-description: Naučte se, jak nakonfigurovat připojení k hostiteli SFTP.
-ms.date: 01/27/2021
+description: Zjistěte, jak nakonfigurovat propojení a exportovat je do umístění SFTP.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,61 +9,70 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9ec14fafa8f99e34b95349371298082e166535d0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96c6026aded315008439740646827ca910cead90
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598377"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760411"
 ---
-# <a name="connector-for-sftp-preview"></a><span data-ttu-id="de3e3-103">Konektor pro SFTP (preview)</span><span class="sxs-lookup"><span data-stu-id="de3e3-103">Connector for SFTP (preview)</span></span>
+# <a name="export-segment-lists-and-other-data-to-sftp-preview"></a><span data-ttu-id="df60a-103">Export seznamů segmentů a dalších dat do SFTP (náhled)</span><span class="sxs-lookup"><span data-stu-id="df60a-103">Export segment lists and other data to SFTP (preview)</span></span>
 
-<span data-ttu-id="de3e3-104">Konektor SFTP umožňuje bezpečně exportovat vaše zákaznická data, která pak můžete používat v aplikacích třetích stran, do hostitele SFTP (Secure File Transfer Protocol).</span><span class="sxs-lookup"><span data-stu-id="de3e3-104">Use your customer data in third-party applications by exporting them to a Secure File Transfer Protocol (SFTP) host.</span></span>
+<span data-ttu-id="df60a-104">Využijte svá zákaznická data v aplikacích třetích stran a exportujte je do umístění Secure File Transfer Protocol (SFTP).</span><span class="sxs-lookup"><span data-stu-id="df60a-104">Use your customer data in third-party applications by exporting them to a Secure File Transfer Protocol (SFTP) location.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="de3e3-105">Požadavky</span><span class="sxs-lookup"><span data-stu-id="de3e3-105">Prerequisites</span></span>
+## <a name="prerequisites-for-connection"></a><span data-ttu-id="df60a-105">Předpoklady pro připojení</span><span class="sxs-lookup"><span data-stu-id="df60a-105">Prerequisites for connection</span></span>
 
-- <span data-ttu-id="de3e3-106">Dostupnost hostitele SFTP a odpovídajících pověření.</span><span class="sxs-lookup"><span data-stu-id="de3e3-106">Availability of an SFTP host and corresponding credentials.</span></span>
+- <span data-ttu-id="df60a-106">Dostupnost hostitele SFTP a odpovídajících pověření.</span><span class="sxs-lookup"><span data-stu-id="df60a-106">Availability of an SFTP host and corresponding credentials.</span></span>
 
-## <a name="connect-to-sftp"></a><span data-ttu-id="de3e3-107">Připojit k SFTP</span><span class="sxs-lookup"><span data-stu-id="de3e3-107">Connect to SFTP</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="df60a-107">Známá omezení</span><span class="sxs-lookup"><span data-stu-id="df60a-107">Known limitations</span></span>
 
-1. <span data-ttu-id="de3e3-108">Přejděte na **Správce** > **Cíle exportu**.</span><span class="sxs-lookup"><span data-stu-id="de3e3-108">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="df60a-108">Běh exportu závisí na výkonu vašeho systému.</span><span class="sxs-lookup"><span data-stu-id="df60a-108">The runtime of an export depends on your system performance.</span></span> <span data-ttu-id="df60a-109">Jako minimální konfiguraci vašeho serveru doporučujeme dvě jádra CPU a 1 GB paměti.</span><span class="sxs-lookup"><span data-stu-id="df60a-109">We recommend two CPU cores and 1 Gb of memory as minimal configuration of your server.</span></span> 
+- <span data-ttu-id="df60a-110">Export entit s až 100 miliony zákaznických profilů může trvat 90 minut při použití doporučené minimální konfigurace dvou jader CPU a 1 GB paměti.</span><span class="sxs-lookup"><span data-stu-id="df60a-110">Exporting entities with up to 100 million customer profiles can take 90 minutes when using the recommended minimal configuration of two CPU cores and 1 Gb of memory.</span></span> 
 
-1. <span data-ttu-id="de3e3-109">V **SFTP** vyberte **Založit**</span><span class="sxs-lookup"><span data-stu-id="de3e3-109">Under **SFTP**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-sftp"></a><span data-ttu-id="df60a-111">Nastavení propojení k SFTP</span><span class="sxs-lookup"><span data-stu-id="df60a-111">Set up connection to SFTP</span></span>
 
-1. <span data-ttu-id="de3e3-110">Zadejte rozpoznatelný název cíle do pole **Zobrazovaný název**.</span><span class="sxs-lookup"><span data-stu-id="de3e3-110">Give your destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="df60a-112">Přejděte na **Správce** > **Propojení**.</span><span class="sxs-lookup"><span data-stu-id="df60a-112">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="de3e3-111">Zadejte **Uživatelské jméno**, **Heslo**, **Název hostitele** a **Složku pro export** pro váš účet SFTP.</span><span class="sxs-lookup"><span data-stu-id="de3e3-111">Provide a **Username**, **Password**, **Hostname**, and **Export folder** for your SFTP account.</span></span>
+1. <span data-ttu-id="df60a-113">Vyberte **Přidat připojení** a zvolte **SFTP** pro konfiguraci připojení.</span><span class="sxs-lookup"><span data-stu-id="df60a-113">Select **Add connection** and choose **SFTP** to configure the connection.</span></span>
 
-1. <span data-ttu-id="de3e3-112">Vyberte **Ověřit** pro otestování připojení.</span><span class="sxs-lookup"><span data-stu-id="de3e3-112">Select **Verify** to test the connection.</span></span>
+1. <span data-ttu-id="df60a-114">Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**.</span><span class="sxs-lookup"><span data-stu-id="df60a-114">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="df60a-115">Název a typ propojení popisují toto propojení.</span><span class="sxs-lookup"><span data-stu-id="df60a-115">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="df60a-116">Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.</span><span class="sxs-lookup"><span data-stu-id="df60a-116">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="de3e3-113">Po úspěšném ověření zvolte, zda chcete exportovat svá data **sbalená** nebo **rozbalená** a vyberte **oddělovač polí** pro exportované soubory.</span><span class="sxs-lookup"><span data-stu-id="de3e3-113">After successful verification, choose if you want to export your data **Gzipped** or **Unzipped**, and select the **field delimiter** for the exported files.</span></span>
+1. <span data-ttu-id="df60a-117">Zvolte, kdo může toto připojení používat.</span><span class="sxs-lookup"><span data-stu-id="df60a-117">Choose who can use this connection.</span></span> <span data-ttu-id="df60a-118">Pokud neprovedete žádnou akci, výchozí bude Aministrátoři.</span><span class="sxs-lookup"><span data-stu-id="df60a-118">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="df60a-119">Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="df60a-119">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="de3e3-114">Vyberte **Souhlasím** pro potvrzení **Ochrany osobních údajů a dodržování předpisů**.</span><span class="sxs-lookup"><span data-stu-id="de3e3-114">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="df60a-120">Zadejte **Uživatelské jméno**, **Heslo**, **Název hostitele** a **Složku pro export** pro váš účet SFTP.</span><span class="sxs-lookup"><span data-stu-id="df60a-120">Provide a **Username**, **Password**, **Hostname**, and **Export folder** for your SFTP account.</span></span>
 
-1. <span data-ttu-id="de3e3-115">Vyberte **Další** pro spuštění konfigurace exportu.</span><span class="sxs-lookup"><span data-stu-id="de3e3-115">Select **Next** to start configuring the export.</span></span>
+1. <span data-ttu-id="df60a-121">Vyberte **Ověřit** pro otestování připojení.</span><span class="sxs-lookup"><span data-stu-id="df60a-121">Select **Verify** to test the connection.</span></span>
 
-## <a name="configure-the-export"></a><span data-ttu-id="de3e3-116">Konfigurace exportu</span><span class="sxs-lookup"><span data-stu-id="de3e3-116">Configure the export</span></span>
+1. <span data-ttu-id="df60a-122">Vyberte, zda chcete exportovat data **komprimovaná jako gzip** nebo **rozbalená** a vyberte **oddělovač polí** pro exportované soubory.</span><span class="sxs-lookup"><span data-stu-id="df60a-122">Choose if you want to export your data **Gzipped** or **Unzipped** and the **field delimiter** for the exported files.</span></span>
 
-1. <span data-ttu-id="de3e3-117">Vyberte entity, například segmenty, které chcete exportovat.</span><span class="sxs-lookup"><span data-stu-id="de3e3-117">Select the entities, for example segments, you want to export.</span></span>
+1. <span data-ttu-id="df60a-123">Vyberte **Souhlasím** pro potvrzení **Ochrany osobních údajů a dodržování předpisů**.</span><span class="sxs-lookup"><span data-stu-id="df60a-123">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+
+1. <span data-ttu-id="df60a-124">Dokončete propojení výběrem možnosti **Uložit**.</span><span class="sxs-lookup"><span data-stu-id="df60a-124">Select **Save** to complete the connection.</span></span>
+
+## <a name="configure-an-export"></a><span data-ttu-id="df60a-125">Konfigurace exportu</span><span class="sxs-lookup"><span data-stu-id="df60a-125">Configure an export</span></span>
+
+<span data-ttu-id="df60a-126">Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu.</span><span class="sxs-lookup"><span data-stu-id="df60a-126">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="df60a-127">Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="df60a-127">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
+
+1. <span data-ttu-id="df60a-128">Přejděte na **Data** > **Exporty**.</span><span class="sxs-lookup"><span data-stu-id="df60a-128">Go to **Data** > **Exports**.</span></span>
+
+1. <span data-ttu-id="df60a-129">Pokud chcete vytvořit nový export, vyberte **Přidat cíl**.</span><span class="sxs-lookup"><span data-stu-id="df60a-129">To create a new export, select **Add destination**.</span></span>
+
+1. <span data-ttu-id="df60a-130">V poli **propojení pro export** vyberte propojení v části SFTP.</span><span class="sxs-lookup"><span data-stu-id="df60a-130">In the **Connection for export** field, choose a connection from the SFTP section.</span></span> <span data-ttu-id="df60a-131">Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.</span><span class="sxs-lookup"><span data-stu-id="df60a-131">If you don't see this section name, there are no connections of this type available to you.</span></span>
+
+1. <span data-ttu-id="df60a-132">Vyberte entity, například segmenty, které chcete exportovat.</span><span class="sxs-lookup"><span data-stu-id="df60a-132">Select the entities, for example segments, you want to export.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="de3e3-118">Každá vybraná entita bude mít při exportu až pět výstupních souborů.</span><span class="sxs-lookup"><span data-stu-id="de3e3-118">Each selected entity will be up to five output files when exported.</span></span> 
+   > <span data-ttu-id="df60a-133">Každá vybraná entita bude při exportu rozdělena až na pět výstupních souborů.</span><span class="sxs-lookup"><span data-stu-id="df60a-133">Each selected entity will be split up into up to five output files when exported.</span></span> 
 
-1. <span data-ttu-id="de3e3-119">Zvolte **Uložit**.</span><span class="sxs-lookup"><span data-stu-id="de3e3-119">Select **Save**.</span></span>
+1. <span data-ttu-id="df60a-134">Zvolte **Uložit**.</span><span class="sxs-lookup"><span data-stu-id="df60a-134">Select **Save**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="de3e3-120">Export dat</span><span class="sxs-lookup"><span data-stu-id="de3e3-120">Export the data</span></span>
+<span data-ttu-id="df60a-135">Uložení exportu nespustí export okamžitě.</span><span class="sxs-lookup"><span data-stu-id="df60a-135">Saving an export doesn't run the export immediately.</span></span>
 
-<span data-ttu-id="de3e3-121">Můžete [exportovat data na vyžádání](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="de3e3-121">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="de3e3-122">Export bude spuštěn také s každou [plánovanou aktualizací](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="de3e3-122">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="df60a-136">Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="df60a-136">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="df60a-137">Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="df60a-137">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
 
-## <a name="known-limitations"></a><span data-ttu-id="de3e3-123">Známá omezení</span><span class="sxs-lookup"><span data-stu-id="de3e3-123">Known limitations</span></span>
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="df60a-138">Ochrana osobních údajů a dodržování předpisů</span><span class="sxs-lookup"><span data-stu-id="df60a-138">Data privacy and compliance</span></span>
 
-- <span data-ttu-id="de3e3-124">Běh exportu závisí na výkonu vašeho systému.</span><span class="sxs-lookup"><span data-stu-id="de3e3-124">The runtime of an export depends on your system performance.</span></span> <span data-ttu-id="de3e3-125">Jako minimální konfiguraci vašeho serveru doporučujeme dvě jádra CPU a 1 GB paměti.</span><span class="sxs-lookup"><span data-stu-id="de3e3-125">We recommend two CPU cores and 1 Gb of memory as minimal configuration of your server.</span></span> 
-- <span data-ttu-id="de3e3-126">Export entit s až 100 miliony zákaznických profilů může trvat 90 minut při použití doporučené minimální konfigurace dvou jader CPU a 1 GB paměti.</span><span class="sxs-lookup"><span data-stu-id="de3e3-126">Exporting entities with up to 100 million customer profiles can take 90 minutes when using the recommended minimal configuration of two CPU cores and 1 Gb of memory.</span></span> 
-
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="de3e3-127">Ochrana osobních údajů a dodržování předpisů</span><span class="sxs-lookup"><span data-stu-id="de3e3-127">Data privacy and compliance</span></span>
-
-<span data-ttu-id="de3e3-128">Když povolíte Dynamics 365 Customer Insights přenos dat prostřednictvím protokolu SFTP, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje.</span><span class="sxs-lookup"><span data-stu-id="de3e3-128">When you enable Dynamics 365 Customer Insights to transmit data via SFTP, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="de3e3-129">Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že cíl exportu splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení.</span><span class="sxs-lookup"><span data-stu-id="de3e3-129">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that the export destination meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="de3e3-130">Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="de3e3-130">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
-<span data-ttu-id="de3e3-131">Tuto funkci cíle exportu může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="de3e3-131">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
-
+<span data-ttu-id="df60a-139">Když povolíte Dynamics 365 Customer Insights přenos dat prostřednictvím protokolu SFTP, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje.</span><span class="sxs-lookup"><span data-stu-id="df60a-139">When you enable Dynamics 365 Customer Insights to transmit data via SFTP, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="df60a-140">Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že cíl exportu splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení.</span><span class="sxs-lookup"><span data-stu-id="df60a-140">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that the export destination meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="df60a-141">Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="df60a-141">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+<span data-ttu-id="df60a-142">Tuto funkci cíle exportu může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="df60a-142">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
