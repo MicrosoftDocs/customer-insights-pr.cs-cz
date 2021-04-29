@@ -1,7 +1,7 @@
 ---
 title: Export dat Customer Insights do služby SendGrid
-description: Naučte se, jak nakonfigurovat připojení ke službě SendGrid.
-ms.date: 12/08/2020
+description: Zjistěte, jak nakonfigurovat propojení a exportovat je do SendGrid.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,57 +9,23 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 1a1f679fa42d47d524ebfdd6e931ae2822565f77
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a4c64cf77c682e07f3d0759c43355336b5806fc8
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597273"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759757"
 ---
-# <a name="connector-for-sendgrid-preview"></a>Konektor pro službu SendGrid (Preview)
+# <a name="export-segments-to-sendgrid-preview"></a>Export segmentů do SendGrid (náhled)
 
 Exportujte segmenty sjednocených profilů zákazníků do seznamů kontaktů SendGrid a použijte je pro kampaně a e-mailový marketing ve službě SendGrid. 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites-for-a-connection"></a>Předpoklady pro připojení
 
 -   Máte [účet SendGrid](https://sendgrid.com/) a odpovídající přihlašovací údaje správce.
 -   Služba SendGrid obsahuje seznamy kontaktů a odpovídající ID. Další informace viz [SendGrid – Správa kontaktů](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
 -   V přehledech cílové skupiny máte [konfigurované segmenty](segments.md).
 -   Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
-
-## <a name="connect-to-sendgrid"></a>Připojení k SendGrid
-
-1. Přejděte na **Správce** > **Cíle exportu**.
-
-1. Pod **SendGrid** vyberte **Nastavení**.
-
-1. Zadejte rozpoznatelný název cíle exportu do pole **Zobrazovaný název**.
-
-   :::image type="content" source="media/export-sendgrid.PNG" alt-text="Podokno konfigurace exportu SendGrid.":::
-
-1. Zadejte **klíč rozhraní API SendGrid** [Klíč rozhraní API SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
-
-1. Zadejte své **[ID seznamu SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
-
-1. Vyberte **Souhlasím** pro potvrzení **Ochrany osobních údajů a dodržování předpisů**.
-
-1. Volbou **Připojit** inicializujte připojení ke službě SendGrid.
-
-1. Vyberte **Přidat sebe jako exportujícího uživatele** a zadejte přihlašovací údaje k Customer Insights.
-
-1. Vyberte **Další** pro konfiguraci exportu.
-
-## <a name="configure-the-connector"></a>Konfigurace konektoru
-
-1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Stejné kroky opakujte pro další volitelná pole, například **Křestní jméno**, **Příjmení**, **Země/oblast**, **Stát**, **Město** a **PSČ**.
-
-1. Vyberte segmenty, které chcete exportovat. Velice **doporučujeme neexportovat více než 100 000 profilů zákazníků** do služby SendGrid. 
-
-1. Zvolte **Uložit**.
-
-## <a name="export-the-data"></a>Export dat
-
-Můžete [exportovat data na vyžádání](export-destinations.md). Export bude spuštěn také s každou [plánovanou aktualizací](system.md#schedule-tab).
 
 ## <a name="known-limitations"></a>Známá omezení
 
@@ -67,6 +33,48 @@ Můžete [exportovat data na vyžádání](export-destinations.md). Export bude 
 - Export do služby SendGrid je omezen na segmenty.
 - Export až 100 000 profilů do služby SendGrid může trvat až několik hodin. 
 - Počet profilů, které můžete exportovat do služby SendGrid, závisí a je omezen na vaší smlouvě se službou SendGrid.
+
+## <a name="set-up-connection-to-sendgrid"></a>Nastavení propojení se SendGrid
+
+1. Přejděte na **Správce** > **Propojení**.
+
+1. Vyberte **Přidat připojení** a zvolte **SendGrid** pro konfiguraci připojení.
+
+1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
+
+1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Zadejte **klíč rozhraní API SendGrid** [Klíč rozhraní API SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
+
+1. Vyberte **Souhlasím** pro potvrzení **Ochrany osobních údajů a dodržování předpisů**.
+
+1. Volbou **Připojit** inicializujte připojení ke službě SendGrid.
+
+1. Vyberte **Přidat sebe jako exportujícího uživatele** a zadejte přihlašovací údaje k Customer Insights.
+
+1. Dokončete propojení výběrem možnosti **Uložit**.
+
+## <a name="configure-an-export"></a>Konfigurace exportu
+
+Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
+
+1. Přejděte na **Data** > **Exporty**.
+
+1. Pokud chcete vytvořit nový export, vyberte **Přidat cíl**.
+
+1. V poli **Propojení pro export** vyberte propojení v části SendGrid. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
+
+1. Zadejte své **[ID seznamu SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
+
+1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Stejné kroky opakujte pro další volitelná pole, například **Křestní jméno**, **Příjmení**, **Země/oblast**, **Stát**, **Město** a **PSČ**.
+
+1. Vyberte segmenty, které chcete exportovat. Velice **doporučujeme neexportovat více než 100 000 profilů zákazníků** do služby SendGrid. 
+
+1. Zvolte **Uložit**.
+
+Uložení exportu nespustí export okamžitě.
+
+Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
 

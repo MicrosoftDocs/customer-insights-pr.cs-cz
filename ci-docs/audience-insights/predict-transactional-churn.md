@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597181"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906848"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predikce úbytku transakcí (Preview)
 
@@ -46,6 +46,14 @@ Predikce úbytku transakcí pomáhá předvídat, zda si zákazník v daném ča
         - **Časové razítko:** Datum a čas události identifikovaný primárním klíčem.
         - **Událot:** Název události, kterou chcete použít. Například pole s názvem „UserAction“ v obchodě s potravinami může být kupón použitý zákazníkem.
         - **Podrobnosti:** Podrobné informace o akci. Například pole s názvem „CouponValue“ v obchodě s potravinami může být hodnota měny kupónu.
+- Navrhované vlastnosti dat:
+    - Dostatečná historická data: Data transakce alespoň pro dvojnásobek vybraného časového okna. Nejlépe dva až tři roky předplacených dat. 
+    - Vícenásobné nákupy na zákazníka: Ideálně alespoň dvě transakce na zákazníka.
+    - Počet zákazníků: Nejméně 10 zákaznických profilů, nejlépe více než 1 000 jedinečných zákazníků. Model selže s méně než 10 zákazníky a nedostatečnými historickými daty.
+    - Úplnost údajů: Méně než 20% chybějících hodnot v datovém poli poskytnuté entity.
+
+> [!NOTE]
+> U firmy s vysokou frekvencí nákupu zákazníků (každých několik týdnů) se doporučuje zvolit kratší okno predikce a definici úbytku. Pro nízkou frekvenci nákupů (každých několik měsíců nebo jednou ročně) zvolte delší okno predikce a definici úbytku.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Vytvoření predikce úbytku transakcí
 
@@ -129,7 +137,9 @@ Predikce úbytku transakcí pomáhá předvídat, zda si zákazník v daném ča
 1. Vyberte předpověď, kterou chcete zkontrolovat.
    - **Název predikce:** Název predikce poskytnutý při jeho vytvoření.
    - **Typ predikce:** Typ modelu použitého pro predikci
-   - **Výstupní entita:** Název entity pro uložení výstupu predikce. Můžete najít entitu s tímto názvem v umístění **Data** > **Entity**.
+   - **Výstupní entita:** Název entity pro uložení výstupu predikce. Můžete najít entitu s tímto názvem v umístění **Data** > **Entity**.    
+     Ve výstupní entitě *ChurnScore* je předpokládaná pravděpodobnost odchodu zákazníků a *IsChurn* je binární štítek založený na *ChurnScore* s prahovou hodnotou 0,5. Výchozí prahová hodnota nemusí ve vašem scénáři fungovat. [Vytvořte nový segment](segments.md#create-a-new-segment) s vaší preferovanou prahovou hodnotou.
+     Ne všichni zákazníci jsou nutně aktivní zákazníci. Někteří z nich možná dlouho neměli žádnou aktivitu a jsou považováni za ty, u nichž došlo k úbytku, již na základě vaší definice úbytku. Předvídání rizika úbytku pro zákazníky, jejichž úbytek již nastal, nejsou užitečná, protože nejsou cílová skupina zájmu.
    - **Predikované pole:** Toto pole je vyplněno pouze pro některé typy predikcí a nepoužívá se v predikci odchodu zákazníků.
    - **Stav:** Stav spuštění predikce.
         - **Ve frontě:** Predikce čeká na spuštění dalších procesů.

@@ -1,7 +1,7 @@
 ---
 title: Rozšíření pomocí vlastního importu SFTP
 description: Obecné informace o rozšíření pomocí vlastního importu SFTP.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595847"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896273"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Rozšíření profilů zákazníků o vlastní data (Preview)
 
-Vlastní import prostřednictvím protokolu SFTP (Secure File Transfer Protocol) umožňuje importovat data, která nemusí projít procesem sjednocení dat. Je to flexibilní, bezpečný a snadný způsob, jak přenést svá data. Vlastní import SFTP lze použít v kombinaci s [exportem SFTP](export-sftp.md), který vám umožní exportovat data profilu zákazníka, která jsou potřebná pro rozšíření. Data lze poté zpracovat, rozšířit a vlastní import SFTP lze použít k přenesení rozšířených dat zpět do přehledů cílové skupiny v Dynamics 365 Customer Insights.
+Vlastní import protokolu SFTP (Secure File Transfer Protocol) umožňuje importovat data, která nemusí projít procesem sjednocení dat. Je to flexibilní, bezpečný a snadný způsob, jak přenést svá data. Vlastní import SFTP lze použít v kombinaci s [exportem SFTP](export-sftp.md), který vám umožní exportovat data profilu zákazníka, která jsou potřebná pro rozšíření. Data lze poté zpracovat, rozšířit a vlastní import SFTP lze použít k přenesení rozšířených dat zpět do přehledů cílové skupiny v Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Požadavky
 
 Chcete-li nakonfigurovat vlastní import SFTP, musíte splnit následující předpoklady:
 
-- Máte přihlašovací údaje uživatele (uživatelské jméno a heslo) pro umístění SFTP, odkud budou importována data.
-- Máte adresu URL a číslo portu (obvykle 22) pro hostitele STFP.
-- Máte název souboru a umístění souboru, který se má importovat na hostitele SFTP.
-- Existuje soubor *model.json*, který určuje schéma pro data, která mají být importována. Tento soubor musí být ve stejném adresáři jako soubor, který chcete importovat.
-- Máte oprávnění pro [správu](permissions.md#administrator).
+- Máte název souboru a umístění (cestu) souboru, který se má importovat do hostitele SFTP.
+- Tady je soubor *model.json*, který určuje [schéma Common Data Model](/common-data-model/) pro data k importu. Tento soubor musí být ve stejném adresáři jako soubor, který chcete importovat.
+- Správce již nakonfiguroval připojení SFTP *nebo* máte oprávnění [správce](permissions.md#administrator). Budete potřebovat přihlašovací údaje uživatele, adresu URL a číslo portu pro umístění SFTP, ze kterého chcete importovat data.
 
-## <a name="configuration"></a>Konfigurace
+
+## <a name="configure-the-import"></a>Konfigurace importu
 
 1. Přejděte na **Data** > **Obohacení** a vyberte kartu **Objevit**.
 
-1. V **dlaždici vlastního importu SFTP** vyberte **Rozšířit moje data**.
+1. V **dlaždici Vlastní import SFTP** vyberte **Rozšířit moje údaje** a pak vyberte **Začínáme**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Dlaždice vlastního importu SFTP](media/SFTP_Custom_Import_tile.png "Dlaždice vlastního importu SFTP")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Dlaždice vlastního importu SFTP":::
 
-1. Vyberte **Začít** a zadejte přihlašovací údaje a adresu serveru SFTP. Například sftp://mysftpserver.com:22.
+1. V rozevíracím seznamu vyberte [propojení](connections.md). Pokud není k dispozici propojení , kontaktujte správce. Pokud jste správce, můžete vytvořit připojení výběrem možnosti **Přidat připojení** a volbou **Vlastní import SFTP** z rozevíracího seznamu.
 
-1. Zadejte název souboru, který obsahuje data, a cestu k souboru na serveru SFTP, pokud není v kořenové složce.
+1. Vybrané připojení potvrďte výběrem **Propojit s Custom Import**.
 
-1. Potvrďte všechny vstupy volbou **Připojit k vlastnímu importu**.
+1.  Vyberte **Další** a zadejte **název souboru** a **cestu** datového souboru, který chcete importovat.
 
-   > [!div class="mx-imgBorder"]
-   > ![Informační rámeček s konfigurací vlastního importu SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Informační rámeček s konfigurací vlastního importu SFTP")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot při zadávání datového umístění.":::
+
+1. Vyberte **Další** a zadejte název rozšíření a název výstupní entity. 
+
+1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfigurace připojení pro vlastní import SFTP 
+
+Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci rozšíření vyberte **Přidat připojení** *nebo* přejděte na **Správce** > **Připojení** a v dlaždici Vlastní import vyberte **Nastavit**.
+
+1. Do pole **Zobrazované jméno** zadejte jméno.
+
+1. Zadejte platné uživatelské jméno, heslo a adresu URL hostitele pro server STFP, na kterém se nacházejí importovaná data.
+
+1. Projděte si a poskytněte svůj souhlas s **Ochranou osobních údajů a dodržování předpisů** výběrem zaškrtávacího políčka **Souhlasím**.
+
+1. Vyberte **Ověřit** k ověření konfigurace.
+
+1. Po dokončení ověřování lze připojení uložit kliknutím na **Uložit**.
+
+> [!div class="mx-imgBorder"]
+   > ![Stránka konfigurace připojení pro Experian](media/enrichment-SFTP-connection.png "Stránka konfigurace připojení pro Experian")
+
 
 ## <a name="defining-field-mappings"></a>Definování mapování polí 
 
@@ -105,8 +124,5 @@ Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobném
 ## <a name="next-steps"></a>Další kroky
 
 Stavte na svých obohacených zákaznických údajích. Vytvořte [segmenty](segments.md), [míry](measures.md) a [exportujte data](export-destinations.md) pro zajištění prostředí na míru zákazníkům.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595648"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906894"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikce odchodu předplatitelů (Preview)
 
@@ -49,6 +49,12 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
         - **Časové razítko:** Datum a čas události identifikovaný primárním klíčem.
         - **Událot:** Název události, kterou chcete použít. Například pole nazvané „AkceUživatele“ ve streamovací službě může mít hodnotu „Zobrazeno“.
         - **Podrobnosti:** Podrobné informace o akci. Například pole nazvané „NázevPořadu“ ve streamovací službě může mít hodnotu videa shlédnutého uživatelem.
+- Navrhované vlastnosti dat:
+    - Dostatečná historická data: Data předplatného alespoň pro dvojnásobek vybraného časového okna. Nejlépe dva až tři roky předplacených dat.
+    - Stav předplatného: Data zahrnují aktivní a neaktivní předplatné pro každého zákazníka, takže na každé číslo zákazníka je více záznamů.
+    - Počet zákazníků: Nejméně 10 zákaznických profilů, nejlépe více než 1 000 jedinečných zákazníků. Model selže s méně než 10 zákazníky a nedostatečnými historickými daty.
+    - Úplnost údajů: Méně než 20% chybějících hodnot v datovém poli poskytnuté entity.
+   
    > [!NOTE]
    > Budete potřebovat alespoň dva záznamy o aktivitách pro 50 % zákazníků, pro které chcete vypočítat jejich možný odchod.
 
@@ -67,7 +73,7 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
 ### <a name="define-customer-churn"></a>Definujte ztracené zákazníky
 
 1. Zadejte počet dní pro **Dny od ukončení předplatného**, po jejichž uplynutí vaše firma považuje zákazníka za odchozího. Toto období je obvykle přizpůsobeno obchodním činnostem, jako jsou nabídky nebo jiné marketingové činnosti, které se snaží zabránit ztrátě zákazníka.
-1. Zadejte hodnotu pro **Počet dní predikce odlivu zákazníků**, čímž nastavíte okno pro predikci odlivu zákazníků. Například predikujte rizika odlivu zákazníků během následujících 90 dnů, abyste mohli přizpůsobit svůj marketing pro jejich udržení. Predikce rizika odlivu zákazníků na delší nebo kratší období může znesnadnit zohlednění faktorů ve vašem profilu rizik odlivu zákazníků, ale to velmi závisí na vašich konkrétních obchodních požadavcích. Pokračujte kliknutím na tlačítko **Další**.
+1. Zadejte hodnotu pro **Počet dní predikce odlivu zákazníků**, čímž nastavíte okno pro predikci odlivu zákazníků. Například predikujte rizika odlivu zákazníků během následujících 90 dnů, abyste mohli přizpůsobit svůj marketing pro jejich udržení. Předvídání rizika odchodu zákazníků na delší nebo kratší období může ztížit řešení faktorů ve vašem profilu rizika odchodu zákazníků, v závislosti na vašich konkrétních obchodních požadavcích. Pokračujte kliknutím na tlačítko **Další**.
    >[!TIP]
    > Kdykoli můžete použít volbu **Uložit a zavřít**, kterou uložíte predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
 
@@ -113,7 +119,8 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
 1. Vyberte předpověď, kterou chcete zkontrolovat.
    - **Název predikce:** Název predikce zadaný při jejím vytvoření.
    - **Typ predikce:** Typ modelu použitého pro predikci.
-   - **Výstupní entita:** Název entity pro uložení výstupu predikce. Můžete najít entitu s tímto názvem v umístění **Data** > **Entity**.
+   - **Výstupní entita:** Název entity pro uložení výstupu predikce. Můžete najít entitu s tímto názvem v umístění **Data** > **Entity**.    
+     Ve výstupní entitě *ChurnScore* je předpokládaná pravděpodobnost odchodu zákazníků a *IsChurn* je binární štítek založený na *ChurnScore* s prahovou hodnotou 0,5. Výchozí prahová hodnota nemusí ve vašem scénáři fungovat. [Vytvořte nový segment](segments.md#create-a-new-segment) s vaší preferovanou prahovou hodnotou.
    - **Predikované pole:** Toto pole je vyplněno pouze u některých typů predikcí a nepoužívá se při predikci odchodu předplatitelů.
    - **Stav:** Aktuální stav běhu predikce.
         - **Ve frontě:** Predikce aktuálně čeká na spuštění dalších procesů.

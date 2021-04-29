@@ -1,7 +1,7 @@
 ---
 title: Export dat Customer Insights do Azure Data Lake Storage Gen2
 description: Naučte se konfigurovat připojení k Azure Data Lake Storage Gen2.
-ms.date: 02/04/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,47 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596629"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760043"
 ---
-# <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Konektor pro Azure Data Lake Storage Gen2 (Preview)
+# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Nastavení propojení řešení s aplikacemi Azure Data Lake Storage Gen2 (preview)
 
-Uchovávejte svá data Customer Insights ve službě Azure Data Lake Storage Gen2 nebo ji použijte k jejich přenosu do jiných aplikací.
+1. Přejděte na **Správce** > **Propojení**.
 
-## <a name="configure-the-connector-for-azure-data-lake-storage-gen2"></a>Konfigurace konektoru pro Azure Data Lake Storage Gen2
+1. Vyberte **Přidat připojení** a zvolte **Azure Data Lake Gen 2** pro konfiguraci připojení.
 
-1. V přehledech cílové skupiny přejděte na **Správa** > **Cíle exportu**.
+1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
 
-1. Pod **Azure Data Lake Storage Gen2** vyberte **Nastavení**.
-
-1. Zadejte rozpoznatelný název cíle do pole **Zobrazovaný název**.
+1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Zadejte **Název účtu**, **Klíč účtu** a **Kontejner** pro své úložiště Azure Data Lake Storage Gen2.
     - Chcete-li vědět, jak vytvořit účet úložiště pro použití se službou Azure Data Lake Storage Gen2, projděte si téma [Vytvoření účtu úložiště](/azure/storage/blobs/create-data-lake-storage-account). 
-    - Další informace, jak vyhledat název účtu úložiště Azure Data Lake Gen2 a klíč účtu, najdete v článku [Správa nastavení účtu úložiště v Azure Portal](/azure/storage/common/storage-account-manage).
+    - Další informace o názvu účtu úložiště Azure Data Lake Gen2 a klíči účtu najdete v tématu [Správa nastavení účtu úložiště na webu Azure Portal](/azure/storage/common/storage-account-manage).
 
-1. Vyberte **Další**.
+1. Dokončete propojení výběrem možnosti **Uložit**. 
+
+## <a name="configure-an-export"></a>Konfigurace exportu
+
+Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
+
+1. Přejděte na **Data** > **Exporty**.
+
+1. Pokud chcete vytvořit nový export, vyberte **Přidat export**.
+
+1. V poli **propojení pro export** vyberte propojení v části **Azure Data Lake**. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
 
 1. Zaškrtněte políčko vedle každé entity, kterou chcete exportovat do tohoto cíle.
 
 1. Zvolte **Uložit**.
 
-## <a name="export-the-data"></a>Export dat
+Uložení exportu nespustí export okamžitě.
 
-Můžete [exportovat data na vyžádání](export-destinations.md#export-data-on-demand). Export bude spuštěn také s každou [plánovanou aktualizací](system.md#schedule-tab).
+Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
+
+Exportovaná data jsou uložena v kontejneru úložiště Azure Data Lake Gen 2, který jste nakonfigurovali. 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

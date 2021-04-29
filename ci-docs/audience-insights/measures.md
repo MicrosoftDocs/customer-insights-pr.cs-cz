@@ -1,7 +1,7 @@
 ---
 title: Vytváření a správa měr
 description: Definujte míry, které budou analyzovat a reflektovat výkon vašeho podnikání.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654724"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887932"
 ---
 # <a name="define-and-manage-measures"></a>Definujte a spravujte opatření
 
-Míry vám pomohou lépe pochopit chování zákazníků a obchodní výkonnost načtením příslušných hodnot ze [sjednocených profilů](data-unification.md). Například firma chce vidět *celkové výdaje na zákazníka*, aby porozuměla historii nákupů jednotlivých zákazníků. Nebo změřit *celkový prodej společnosti*, aby porozuměla agregovaným výnosům v celém podniku.  
+Míry vám pomohou lépe porozumět chování zákazníků a výkonnosti podniku. Zaměřují se na relevantní hodnoty ze [sjednocených profilů](data-unification.md). Například firma chce vidět *celkové výdaje na zákazníka* pro pochopení historie nebo míry nákupu jednotlivých zákazníků nebo míry *celkový prodej společnosti* pro pochopení agregovaných výnosů v celé firmě.  
 
 Míry jsou vytvářeny pomocí nástroje pro tvorbu měr, což je platforma pro dotazování dat s různými operátory a možnostmi jednoduchého mapování. Umožňuje filtrovat data, seskupovat výsledky, detekovat [cesty vztahů mezi entitami](relationships.md) a zobrazovat náhledy výstupu.
 
 Pomocí nástroje pro tvorbu měr můžete plánovat obchodní aktivity dotazováním zákaznických dat a extrahováním přehledů. Například vytvoření míry *celkové výdaje na zákazníka* a *celková návratnost na zákazníka* pomáhá identifikovat skupinu zákazníků s vysokými výdaji, ale s vysokou návratností. [Vytvořením segmentu](segments.md) můžete řídit nejvhodnější akce, které se mají následně provést. 
 
-## <a name="create-a-measure"></a>Vytvořit nové opatření
+## <a name="build-your-own-measure-from-scratch"></a>Vytvoření vlastní míry od začátku
 
 Tato sekce vás provede vytvořením nové míry od nuly. Můžete vytvořit míru s datovými atributy z datových entit, které mají nastavený vztah pro připojení k entitě zákazníka. 
 
 1. V přehledech cílové skupiny přejděte na **Míry**.
 
-1. Vyberte **Nové**.
+1. Vyberte **Nový** a zvolte **Vytvořit vlastní**.
 
 1. Vyberte **Upravit jméno** a zadejte **Název** míry. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Tato sekce vás provede vytvořením nové míry od nuly. Můžete vytvořit mí
    1. Volbou **Upravit dimenze** přidáte atributy dat, podle kterých chcete seskupit hodnoty měr. Například město nebo pohlaví. Ve výchozím nastavení je vybrána dimenze *CustomerID* k vytvoření *měr na úrovni zákazníka*. Pokud chcete vytvořit *míry na úrovni podniku*, můžete odebrat výchozí míru.
    1. Volbou **Hotovo** přidáte dimenze do míry.
 
+1. Pokud jsou ve vašich datech hodnoty, které potřebujete nahradit celým číslem, nahraďte například hodnotu *null* hodnotou *0*, vyberte **Pravidla**. Nakonfigurujte pravidlo a ujistěte se, že jako náhradu zvolíte pouze celá čísla.
+
 1. Pokud mezi datovou entitou, kterou jste mapovali, a entitou *Zákazník* existuje více cest, musíte zvolit jednu z identifikovaných [cest vztahů mezi entitami](relationships.md). Výsledné míry se mohou lišit v závislosti na vybrané cestě. 
    1. Vyberte **Předvolby dat** a vyberte cestu entity, která by měla být použita k identifikaci vaší míry. Pokud existuje pouze jedna cesta k entitě *Zákazník*, tento ovládací prvek se nezobrazí.
    1. Volbou **Hotovo** použijete svůj výběr. 
@@ -88,9 +90,57 @@ Tato sekce vás provede vytvořením nové míry od nuly. Můžete vytvořit mí
 
 1. Jděte na **Míry** pro zobrazení nově vytvořené míry v seznamu.
 
+## <a name="use-a-template-to-build-a-measure"></a>Vytvoření míry pomocí šablony
+
+K jejich vytváření můžete použít předdefinované šablony běžně používaných měr. Podrobné popisy šablon a průvodce vám pomohou s efektivním vytvořením míry. Šablony vycházejí z mapovaných dat entity *Sjednocená aktivita*. Ujistěte se tedy, že jste nakonfigurovali [aktivity zákazníků](activities.md) před vytvořením míry ze šablony.
+
+Dostupné šablony měr: 
+- Průměrná hodnota transakce
+- Celková hodnota transakce
+- Průměrné denní výnosy
+- Průměrné roční výnosy
+- Počet transakcí
+- Získané věrnostní body
+- Uplatněné věrnostní body
+- Zůstatek věrnostních bodů
+- Životnost aktivního zákazníka
+- Doba trvání věrnostního členství
+- Čas od posledního nákupu
+
+Následující postup popisuje kroky k vytvoření nové míry pomocí šablony.
+
+1. V přehledech cílové skupiny přejděte na **Míry**.
+
+1. Vyberte **Nová** a vyberte **Zvolit šablonu**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Screenshot rozevírací nabídky při vytváření nové míry se zvýrazněním šablony.":::
+
+1. Najděte šablonu, která vyhovuje vašim potřebám, a vyberte **Zvolit šablonu**.
+
+1. Zkontrolujte požadovaná data a vyberte **Začít**, pokud máte všechna data na místě.
+
+1. V podokně **Upravit jméno** nastavte název míry a výstupní entitu. 
+
+1. Vyberte **Hotovo**.
+
+1. V části **Nastavit časové období** definujte časový rámec dat, která se mají použít. Vyberte, zda chcete, aby nová míra pokrývala celou datovou sadu, výběrem možnosti **Pořád**. Nebo zda chcete, aby se míra zaměřovala na **Specifické časové období**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Screenshot zobrazující část časového období při konfiguraci míry ze šablony.":::
+
+1. V další části vyberte **Přidat data** pro výběr aktivit a namapování příslušných dat z entity *Sjednocená aktivita*.
+
+    1. Krok 1 ze 2: V části **Typ aktivity** vyberte typ entity, kterou chcete použít. Pro **Aktivity** vyberte entity, které chcete mapovat.
+    1. Krok 2 ze 2: Vyberte atribut z entity *Sjednocená aktivita* pro komponentu požadovanou vzorcem. Například pro průměrnou hodnotu transakce je to atribut představující hodnotu transakce. Pro **Časové razítko aktivity** vyberte atribut z entity Unified Activity, která představuje datum a čas aktivity.
+   
+1. Jakmile je mapování dat úspěšné, můžete vidět stav jako **Kompletní** a název mapovaných aktivit a atributů.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Screenshot z dokončené konfigurace šablony míry.":::
+
+1. Nyní můžete vybrat **Spustit** k výpočtu výsledků míry. Chcete-li to upřesnit později, vyberte **Uložit koncept**.
+
 ## <a name="manage-your-measures"></a>Správa opatření
 
-Po [vytvoření míry](#create-a-measure) se na stránce **Míry** zobrazí seznam měr.
+Seznam měr naleznete na stránce **Míry**.
 
 Najdete informace o typu, tvůrci, datu vytvoření, statusu a stavu míry. Když vyberete míru ze seznamu, můžete zobrazit náhled výstupu a stáhnout soubor .CSV.
 

@@ -1,7 +1,7 @@
 ---
 title: Správa uživatelských oprávnění
 description: Informace o oprávněních a rolích uživatele.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595694"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760365"
 ---
 # <a name="user-permissions"></a>Uživatelská oprávnění
 
@@ -31,7 +31,7 @@ Existují tři typy rolí:
 - Zobrazte a prozkoumejte stránku **Rozšíření**.
 - Prozkoumejte a exportujte entity pomocí stránky **Entity**.
 - Zobrazení stavu systémových procesů pomocí stránky **Systém**.
-- Export segmentů ze stránky **Segmenty**.
+- Zobrazte exporty na stránce **Exporty**.
 - Instalace a použití řídicího panelu **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Přispěvatel
@@ -43,6 +43,7 @@ Existují tři typy rolí:
 - Vytváření segmentů pomocí stránky **Segmenty**.
 - Vytvořte opatření na stránce **Opatření**.
 - Správa konfigurace a rozšíření zákaznických profilů ze stránky **Rozšíření** (pouze pro rozšíření první strany).
+- Spravujte a vytvářejte exporty na základě propojení sdílených s přispěvateli. [Další informace o tom, jak správci umožňují přispěvatelům používat propojení pro exporty](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Správce
 
@@ -50,8 +51,9 @@ Existují tři typy rolí:
 - Změna nastavení na stránce **Systém**, včetně pracovního jazyka a plánů aktualizace systémových procesů.
 - Zobrazení a přidání oprávnění pomocí stránky **Oprávnění**.
 - Nastavení definic vyhledávání a filtrů pro stránku Zákazníci pomocí stránky **Index hledání a filtrování** (přístupné prostřednictvím stránky **Zákazníci**).
-- Definujte cíle segmentu Dynamics 365 Sales pomocí stránky **Cíle exportu**.
+- Spravujte propojení a povolte je pro další uživatelské role na stránce **Propojení**.
 - Správa konfigurace a rozšíření zákaznických profilů ze stránky **Rozšíření** (pro všechna rozšíření).
+- Exporty spravujte a vytvářejte na stránce **Exporty**.
 - Nainstalujte a použijte **Doplněk zákaznické karty**.
 - Přidání a použiti **konektoru Power Apps**.
 - Povolení využití [rozhraní API aplikace Customer Insights](apis.md).

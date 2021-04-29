@@ -1,7 +1,7 @@
 ---
 title: Použití zdrojů dat pro ingestaci dat
 description: Naučte se, jak importovat data z různých zdrojů.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595939"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887886"
 ---
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
@@ -32,8 +32,15 @@ Zdroj dat můžete přidat třemi hlavními způsoby:
 - [Ze složky modelu Common Data Model](connect-common-data-model.md)
 - [Z vlastního jezera Common Data Service](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Data z místních datových zdrojů zatím nemůžete přidat.
+## <a name="add-data-from-on-premises-data-sources"></a>Přidání dat z místních zdrojů dat
+
+Příjem dat z místní zdrojů dat v cílové skupině Insights je podporován na základě toků dat Power Platform. Toky dat lze povolit v nástroji Customer Insights [poskytnutím adresy URL prostředí Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) při nastavování prostředí.
+
+Zdroje dat, které se vytvoří po přidružení prostředí Dataverse k nástroji Customer Insights, budou používat [toky dat Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) ve výchozím stavu. Datové toky podporují místní propojení pomocí datových bran. Odeberte a znovu vytvořte zdroje dat, které existovaly před přidružením prostředí Dataverse k místním bránám dat.
+
+Datové brány z existujícího prostředí Power BI nebo Power Apps bude viditelné a můžete jej znovu použít ve službě Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy pro přechod do prostředí Power Platform, kde můžete prohlížet a konfigurovat místní brány dat.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Screenshot stránky zdrojů dat zobrazující odkazy směřující na prostředí Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Zkontrolujte přijatá data
 
@@ -65,7 +72,7 @@ Chcete-li aktualizovat zdroj dat na vyžádání, postupujte takto:
 
 2. Vyberte svislé tři tečky vedle zdroje dat, který chcete aktualizovat, a vyberte **Aktualizovat** z rozevíracího seznamu.
 
-3. Zdroj dat je nyní spuštěn pro ruční aktualizaci. Aktualizací zdroje dat aktualizujete jak schéma entity, tak i data pro všechny entity zadané ve zdroji dat.
+3. Zdroj dat je nyní spuštěn pro ruční aktualizaci. Aktualizací zdroj dat aktualizujete schéma entity i data pro všechny entity uvedené ve zdroji dat.
 
 4. Vyberte **Zastavit aktualizaci**, pokud chcete zrušit existující aktualizaci a zdroj dat se vrátí do svého posledního stavu aktualizace.
 

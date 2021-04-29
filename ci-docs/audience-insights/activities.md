@@ -1,7 +1,7 @@
 ---
 title: Aktivity zákazníka
 description: Definování aktivit zákazníků a jejich zobrazení na časové ose zákazníků.
-ms.date: 10/13/2020
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,79 +9,88 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: fbfa9d7e00859cc80c24b98bd2dc806f1fda7803
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
+ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596721"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "5866399"
 ---
 # <a name="customer-activities"></a>Aktivity zákazníka
 
-Zkombinujte aktivity zákazníků z [různých zdrojů dat](data-sources.md) v Dynamics 365 Customer Insights a vytvořte časovou osu zákazníků se seznamem aktivit v chronologickém pořadí. Časovou osu můžete zahrnout do aplikací pro zapojení zákazníků v Dynamics 365 prostřednictvím [doplňku karty zákazníka](customer-card-add-in.md) nebo v řídicím panelu Power BI.
+Zkombinujte aktivity zákazníků z [různých zdrojů dat](data-sources.md) v Dynamics 365 Customer Insights k vytvoření časové osy, která chronologicky uvádí aktivity. Zahrňte časovou osu do aplikací Dynamics 365 pomocí řešení [Doplněk Zákaznická karta](customer-card-add-in.md) nebo v řídicím panelu Power BI.
 
 ## <a name="define-an-activity"></a>Definování aktivity
 
-Vaše zdroje dat zahrnují entity s transakčními a aktivními daty z více zdrojů dat. Identifikujte tyto entity a vyberte aktivity, které chcete zobrazit na časové ose zákazníka. Vyberte entitu, která zahrnuje vaši cílovou aktivitu nebo aktivity.
+Vaše zdroje dat mohou zahrnovat entity s transakčními a aktivními daty z více zdrojů dat. Identifikujte tyto entity a vyberte aktivity, které chcete zobrazit na časové ose zákazníka. Vyberte entitu, která zahrnuje vaši cílovou aktivitu nebo aktivity.
+
+> [!NOTE]
+> Entita musí mít alespoň jeden atribut typu **Datum**, aby byla součástí na časové osy zákazníka a nelze přidávat entity bez pole **Datum**. Ovládací prvek **Přidat aktivitu** není povolen, pokud není taková entita nalezena.
 
 1. V přehledech cílové skupiny přejděte na **Data** > **Aktivity**.
 
-1. Vyberte **Přidat aktivitu**.
+1. Výběrem možnosti **Přidat aktivitu** spusťte řízené prostředí pro proces nastavení aktivity.
 
-   > [!NOTE]
-   > Entita musí mít alespoň jeden atribut typu **Datum**, aby byla součástí na časové osy zákazníka a nelze přidávat entity bez pole **Datum**. Ovládací prvek **Přidat aktivitu** není povolen, pokud není taková entita nalezena.
+1. V kroku **Data aktivity** nastavte hodnoty pro následující pole:
 
-1. V podokně **Přidat aktivitu** nastavte hodnoty pro následující pole:
-
+   - **Název aktivity**: Vyberte název své aktivity.
    - **Entita**: Vyberte entitu, která obsahuje údaje o transakcích nebo aktivitách.
    - **Primární klíč**: Vyberte pole, které jedinečně identifikuje záznam. Nemělo by obsahovat žádné duplicitní hodnoty, prázdné hodnoty nebo chybějící hodnoty.
-   - **Časové razítko**: Vyberte pole, které představuje čas zahájení vaší aktivity.
-   - **Událost**: Vyberte pole, které je událostí pro aktivitu.
-   - **Webová adresa**: Vyberte pole představující adresu URL s dalšími informacemi o této aktivitě. Například transakční systém, který tuto aktivitu využívá. Tato adresa URL může být libovolné pole zdroje dat, nebo může být vytvořeno jako nové pole pomocí transformace Power Query. Tato data URL budou uložena v entitě Sjednocená aktivita, která může být spotřebována jako navazující pomocí API.
-   - **Podrobnosti**: Volitelně vyberte pole, které se přidá pro další podrobnosti.
-   - **Ikona**: Volitelně vyberte ikonu představující tuto aktivitu.
-   - **Typ aktivity**: Definujte odkaz na typ aktivity v Common Data Model, který nejlépe popisuje sémantickou definici aktivity.
 
-1. V sekci **Nastavit vztah** nakonfigurujte podrobnosti tak, aby se údaje o vaší činnosti připojily k odpovídajícímu zákazníkovi.
+   :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Nastavte data aktivity s názvem, entitou a primárním klíčem.":::
 
-    - **Pole entity aktivity**: Vyberte pole v entitě aktivity, které bude použito k navázání vztahu s jinou entitou.
-    - **Entita zákazníka**: Vyberte odpovídající zdrojovou entitu zákazníka, se kterou bude vaše entita aktivity ve vztahu. Můžete se vztahovat pouze k těm zdrojovým zákaznickým entitám, které se používají v procesu sjednocení dat.
-    - **Pole entity zákazníka**: Toto pole zobrazuje primární klíč zdrojové zákaznické entity vybraný v procesu mapování. Toto pole primárního klíče ve zdrojové entitě zákazníka se používá k navázání vztahu s entitou aktivity.
-    - **Název**: Pokud již existuje vztah mezi touto entitou aktivity a vybranou zdrojovou entitou zákazníka, bude název vztahu v režimu jen pro čtení. Pokud takový vztah neexistuje, bude vytvořen nový vztah se zde uvedeným názvem.
+1. Vyberte **Další** pro přechod k dalšímu kroku.
+
+1. V kroku **Vztah** nakonfigurujte podrobnosti pro propojení dat o aktivitě s odpovídajícím zákazníkem. Tento krok vizualizuje spojení mezi entitami.  
+
+   - **První**: Cizí pole ve vaší entitě aktivity, které se použije k navázání vztahu s jinou entitou.
+   - **Druhý**: Odpovídající entita zdrojového zákazníka, se kterou bude vaše entita aktivity ve vztahu. Můžete ji přidružit pouze ke zdrojovým entitám zákazníků, které se používají v procesu sjednocení dat.
+   - **Třetí**: Pokud vztah mezi touto entitou aktivity a vybranou entitou zdrojového zákazníka již existuje, název vztahu bude v režimu jen pro čtení. Pokud takový vztah neexistuje, vytvoří se nový vztah se jménem, které uvedete v tomto poli.
+
+   :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definujte vztah entity.":::
+
+1. Vyberte **Další** pro přechod k dalšímu kroku. 
+
+1. V kroku **Sjednocení aktivity** vyberte událost aktivity a čas zahájení aktivity. 
+   - **Povinná pole**
+      1. **Aktivita události**: Pole, které je událostí pro tuto aktivitu
+      2. **Časové razítko**: Pole, které představuje čas zahájení vaší aktivity.
+
+   - **Nepovinná pole**
+      1. **Další podrobnosti**: Pole s příslušnými informacemi pro tuto aktivitu.
+      2. **Ikona**: Ikona, která nejlépe představuje tento typ aktivity.
+      3. **Webová adresa**: Pole obsahující adresu URL s informacemi o této aktivitě. Například transakční systém, který tuto aktivitu využívá. Tato adresa URL může být libovolné pole zdroje dat, nebo může být vytvořeno jako nové pole pomocí transformace Power Query. Data URL budou uložena v entitě *Sjednocená aktivita*, kterou lze následně spotřebovat pomocí [API](apis.md).
    
-   > [!div class="mx-imgBorder"]
-   > ![Definování vztahů entit](media/activities-entities-define.png "Definování vztahů entit")
+   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Zadejte údaje o aktivitě zákazníka v entitě Unified Activity.":::
 
-1. Výběrem možnosti **Uložit** se vaše změny uplatní.
+1. Volbou **Další** přejdete na další krok. Můžete vybrat **Dokončit a zkontrolovat** pro uložení aktivity nyní s typem aktivity nastaveným na **Jiný**. 
 
-1. Na stránce **Aktivity** vyberte možnost **Spustit**.
+1. V kroku **Typ aktivity** vyberte typ aktivity a volitelně vyberte, zda chcete sémanticky mapovat některé typy aktivit pro použití v jiných oblastech Customer Insights. V současné době lze typy aktivity *Předplatné* & *SalesOrderLine* sémanticky mapovat po souhlasu s mapováním polí. Pokud typ aktivity není pro novou aktivitu relevantní, můžete si vybrat *Jiný* nebo *Vytvořit nový* pro vlastní typ aktivity.
+
+1. Volbou **Další** přejdete na další krok. 
+
+1. V kroku **Kontrola** ověřte výběr. Vrátíte se k některému z předchozích kroků a v případě potřeby informace aktualizujete.
+
+   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Zkontrolujte aktivitu v zadaných polích.":::
+   
+1. Vyberte **Uložit aktivitu** pro použití změn a vyberte **Hotovo** pro návrat na **Data** > **Aktivity**. Zde vidíte, které aktivity jsou nastaveny tak, aby se zobrazovaly na časové ose. 
+
+1. Na stránce **Aktivity** vyberte **Spustit** ke zpracování aktivity. 
 
 > [!TIP]
 > Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies). Můžete vybrat stav procesu a zobrazit podrobnosti o průběhu celé úlohy. Po výběru **Zobrazit podrobnosti** pro jeden z úkolů úlohy najdete další informace: čas zpracování, datum posledního zpracování a všechny chyby a varování spojené s úkolem.
 
-## <a name="edit-an-activity"></a>Úprava aktivity
 
-1. V přehledech cílové skupiny přejděte na **Data** > **Aktivity**.
+## <a name="manage-existing-activities"></a>Správa existujících aktivit
 
-2. Vyberte entitu aktivity, kterou chcete upravit, a vyberte **Upravit**. Nebo se můžete pohybovat nad řádkem entity a vybrat ikonu **Upravit**.
+Na stránce **Data** > **Aktivity** můžete zobrazit všechny uložené aktivity a spravovat je. Každá aktivita je reprezentována řádkem, který také obsahuje podrobnosti o zdroji, entitě a typu aktivity.
 
-3. Klikněte na ikonu **Upravit**.
+Následující akce jsou k dispozici, když vyberete aktivitu. 
 
-4. V podokně **Upravit aktivitu** aktualizujte hodnoty a vyberte **Uložit**.
+- **Upravit**: Otevře nastavení aktivity v kroku kontroly. Z tohoto kroku můžete změnit některou nebo celou aktuální konfiguraci. Po změně konfigurace vyberte **Uložit aktivitu** a poté vyberte **Spustit** ke zpracování změn.
 
-5. Na stránce **Aktivity** vyberte možnost **Spustit**.
+- **Přejmenovat**: Otevře dialogové okno, kde zadáte jiný název vybrané aktivity. Výběrem možnosti **Uložit** se vaše změny uplatní.
 
-## <a name="delete-an-activity"></a>Odstranění aktivity
-
-1. V přehledech cílové skupiny přejděte na **Data** > **Aktivity**.
-
-2. Vyberte entitu aktivity, kterou chcete odebrat, a vyberte **Odstranit**. Nebo se můžete pohybovat nad řádkem entity a vybrat ikonu **Odstranit**. Kromě toho můžete vybrat více entit aktivity, které chcete odstranit najednou.
-   > [!div class="mx-imgBorder"]
-   > ![Upravit nebo odstranit vztahy mezi entitami](media/activities-entities-edit-delete.png "Upravit nebo odstranit vztahy mezi entitami")
-
-3. Vybrání ikony **Odstranit**.
-
-4. Odstranění potvrďte.
-
+- **Vymazat**: Otevře dialogové okno s potvrzením odstranění vybrané aktivity. Můžete také odstranit více než jednu aktivitu najednou tak, že vyberete aktivity a poté vyberete ikonu odstranění. Vyberte **Odstranit** pro potvrzení odstranění.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

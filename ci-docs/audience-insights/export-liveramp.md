@@ -1,7 +1,7 @@
 ---
 title: 'Konektor LiveRamp '
-description: Naučte se, jak exportovat data do služby LiveRamp.
-ms.date: 12/02/2020
+description: Zjistěte, jak nakonfigurovat propojení a exportovat je do LiveRamp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597549"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760319"
 ---
-# <a name="liverampreg-connector-preview"></a>konektor LiveRamp&reg; (preview)
+# <a name="export-segments-to-liverampreg-preview"></a>Export segmentů do LiveRamp&reg; (náhled)
 
-Aktivujte data v LiveRamp a propojte se s více než 500 platformami napříč digitálními, sociálními a televizními ekosystémy. Pracujte s vašimi daty v LiveRampu na cílení, potlačení a personalizaci reklamních kampaní.
+Aktivujte data na LiveRamp a spojte se s více než 500 platformami v digitálních, sociálních a televizních zařízeních. Pracujte s vašimi daty v LiveRampu na cílení, potlačení a personalizaci reklamních kampaní.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites-for-a-connection"></a>Předpoklady pro připojení
 
 - K použití tohoto konektoru potřebujete předplatné LiveRamp.
 - Chcete-li získat předplatné, [kontaktujte LiveRamp](https://liveramp.com/contact/) přímo. [Další informace o LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Připojte se k LiveRampu
+## <a name="set-up-connection-to-liveramp"></a>Nastavení propojení s LiveRamp
 
-1. V přehledech cílové skupiny přejděte na **Správa** > **Cíle exportu**.
+1. Přejděte na **Správce** > **Propojení**.
 
-1. V dlaždici **LiveRamp** vyberte **Nastavení**.
+1. Vyberte **Přidat připojení** a zvolte **LiveRamp** pro konfiguraci připojení.
 
-1. Zadejte rozpoznatelný název cíle do pole **Zobrazovaný název**.
+1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
+
+1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Zadejte **Uživatelské jméno** a **Heslo** pro váš účet LiveRamp Secure FTP (SFTP).
 Tato pověření se mohou lišit od vašich pověření LiveRamp Onboarding.
@@ -40,15 +42,25 @@ Tato pověření se mohou lišit od vašich pověření LiveRamp Onboarding.
 
 1. Po úspěšném ověření poskytněte svůj souhlas s **Ochranou osobních údajů a dodržování předpisů** výběrem zaškrtávacího políčka **Souhlasím**.
 
-1. Vyberte **Další** pro nastavení konektoru LiveRamp.
+1. Dokončete propojení výběrem možnosti **Uložit**.
 
-## <a name="configure-the-connector"></a>Konfigurace konektoru
+## <a name="configure-an-export"></a>Konfigurace exportu
+
+Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
+
+1. Přejděte na **Data** > **Exporty**.
+
+1. Pokud chcete vytvořit nový export, vyberte **Přidat cíl**.
+
+1. V poli **propojení pro export** vyberte propojení v části LiveRamp. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
 
 1. V poli **Vyberte svůj identifikátor klíče** vyberte **E-mail**, **Jméno a adresa** nebo **Telefon**, který chcete poslat do LiveRampu pro rozlišení identity.
+   > [!div class="mx-imgBorder"]
+   > ![Konektor LiveRamp s mapováním atributů](media/export-liveramp-segments.png "Konektor LiveRamp s mapováním atributů")
 
 1. Mapujte odpovídající atributy z unifikované entity zákazníka na vybraný identifikátor klíče.
 
-1. Vyberte **Přidat atribut**, chcete-li mapovat další atributy k odeslání na LiveRamp.
+1. Vyberte **Přidat atribut** k mapování více atributů pro odeslání na LiveRamp.
 
    > [!TIP]
    > Odesláním dalších atributů identifikátoru klíče na server LiveRamp pravděpodobně dosáhnete vyšší míry shody.
@@ -57,13 +69,10 @@ Tato pověření se mohou lišit od vašich pověření LiveRamp Onboarding.
 
 1. Zvolte **Uložit**.
 
-> [!div class="mx-imgBorder"]
-> ![Konektor LiveRamp s mapováním atributů](media/export-liveramp-segments.png "Konektor LiveRamp s mapováním atributů")
+Uložení exportu nespustí export okamžitě.
 
-## <a name="export-the-data"></a>Export dat
+Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
 
-Export bude zahájen brzy, jakmile budou splněny všechny předpoklady pro export. Export bude spuštěn také s každou [plánovanou aktualizací](system.md#schedule-tab).
-Po úspěšném dokončení exportu se můžete přihlásit k LiveRamp Onboarding a aktivovat a distribuovat svá data.
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
 

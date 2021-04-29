@@ -1,7 +1,7 @@
 ---
 title: Nové a připravované funkce
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598423"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896227"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598423"
 
 S radostí představujeme naše nejnovější aktualizace! Tento článek shrnuje funkce Public Preview, rozšíření obecné dostupnosti a aktualizace funkcí. Chcete-li zobrazit dlouhodobé plány funkcí, projděte si [plány vydávání Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
-Můžete se také podívat na následující video a dozvědět se více o plánovaných funkcích za posledních šest měsíců.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat funkcemi dříve než ostatní. Pokud není uvedeno jinak, nemusíte podnikat žádné kroky a my automaticky aktualizujeme aplikaci bez prostojů.
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Aktualizace z března 2021
+
+Aktualizace v březnu 2021 zahrnují několik funkcí, upgrady výkonu a opravy chyb.
+
+### <a name="activities"></a>Aktivity
+
+- **Průvodce činností a sémantické typy** Vylepšili jsme a aktualizovali prostředí mapování aktivit, abychom vás mohli provést a zjednodušit vytváření mapování aktivit. V tomto novém prostředí získají uživatelé řízené prostředí, které jim pomůže dokončit každý krok procesu. V kroku mapování aktivity si uživatel kromě výběru z mnoha typů aktivit může zvolit sémantické mapování dat *Předplatné* a / nebo *SalesOrderLine* na standardní schémata odvětví, která lze použít pro následnou spotřebu.    
+  Další informace najdete v tématu [Aktivity zákazníka](activities.md).
+
+### <a name="data-ingestion"></a>Příjem dat
+
+- **Připojení k místním zdrojům dat pomocí datových toků a bran Power Platform** S potěšením oznamujeme náhled datových toků a místního připojení Power Platform pomocí bran v Customer Insights s přidruženým prostředím Power Platform nebo Dataverse. Jakékoli nové zdroje dat vytvořené v prostředí Customer Insights s propojeným prostředím Dataverse ve výchozím nastavení přejde na datové toky Power Platform přinášející místní datové připojení a bohatou sadu konektorů a transformačních schopností.
+
+### <a name="extensibility"></a>Rozšiřitelnost
+
+- **Exporty organizované v propojeních a exportech** Změnili jsme název stránky **Exportovat cíle** na **Propojení** a přidali samostatnou stránku pro **Export**. V rámci této aktualizace převedeme existující export do dvojic propojení a export pomocí tohoto propojení. Správci nyní mají jasnější údaje o odchozích datech na serveru stránky **Propojení**. Všechny uživatelské role mají přístup na stránku **Exporty**, ale pouze správci mohou povolit přispěvatelům upravovat konkrétní exporty se sdílenými propojeními.     
+  Další informace viz [Přehled propojení](connections.md) a [Přehled exportů](export-destinations.md).
+
+- **Export segmentů do služby Campaign Monitor** Naše cíle exportu jsme rozšířili o Campaign Monitor. Nyní můžete exportovat segmenty ze služby Customer Insights do seznamů služby Campaign Monitor a použít je jako základ pro vaše marketingové kampaně.    
+   Další informace naleznete v článku [Export dat do služby Campaign Monitor](export-campaign-monitor.md).
+
+- **Export segmentů do služby Constant Contact** Naše cíle exportu jsme rozšířili o Constant Contact. Nyní můžete exportovat segmenty ze služby Customer Insights do seznamů služby Constant Contact a použít je jako základ pro vaše marketingové kampaně.   
+   Další informace naleznete v článku [Export dat do služby Constant Contact](export-constant-contact.md).
+
+- **Export segmentů do služby RollWorks** Naše cíle exportu jsme rozšířili o RollWorks. Nyní můžete exportovat segmenty ze služby Customer Insights cílové skupině RollWorks a použít je jako základ pro vaši B2B reklamu.    
+   Další informace naleznete v článku [Export dat do služby RollWorks](export-rollworks.md).
+
+- **Export segmentů do služby Snapchat** Naše cíle exportu jsme rozšířili o Snapchat. Nyní můžete exportovat segmenty ze služby Customer Insights cílové skupině Snapchat a použít je jako základ pro vaši reklamu.     
+   Další informace naleznete v článku [Export dat do služby Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Předpovědi
+
+- **V prediktivních doporučeních produktů používat filtry produktů** V našem modelu doporučení produktu jsme přidali možnost používat filtry produktů. Nyní můžete vytvořit predikci, která používá pouze podmnožinu vašich produktů.    
+   Další informace viz [Konfigurace filtrů produktů](predict-product-recommendation.md#configure-product-filters).
+
+- **Vytvořit segmenty z modelových predikcí** Přidali jsme rychlý způsob vytváření segmentů pomocí výsledků modelu predikce. Na stránce s výsledky modelu můžete snadno vytvořit nový segment výběrem nové volby **Vytvořit segment**.    
+  Další informace viz [Vytvoření segmentu na základě modelu predikce](prediction-based-segment.md).
+
+- **Vysvětlení doporučení produktu** Přidali jsme informace vysvětlující klíčové faktory naučené modelem AI pro generování doporučení produktů a míru, do jaké tyto faktory přispívají k doporučením produktu. Tyto informace se přidají na obrazovku s výsledky modelu.    
+   Další informace viz [Kontrola stavu a výsledků predikce](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Aktualizace z února 2021
 
@@ -107,7 +144,7 @@ Aktualizace v prosinci 2020 zahrnují několik funkcí, upgrady výkonu a opravy
 
   Navíc jsme přidali nové možnosti konfigurace, abyste měli více možností při rozšiřování zákaznických profilů. 
 
-  Další informace viz [Rozšíření profilů zákazníků afinitami značky a zájmů](enrichment-microsoft-graph.md)
+  Další informace viz [Rozšíření profilů zákazníků afinitami značky a zájmů](enrichment-microsoft.md)
 
 - **Určete, které profily chcete rozšířit**
 
@@ -309,8 +346,8 @@ Aktualizace ze srpna 2020 zahrnují několik funkcí, upgrady výkonu a opravy c
 
 - **Rozšíření afinit k zájmům jsou k dispozici na více trzích**
 
-  Rozšiřujeme dostupnost rozšíření afinit k zájmům mimo USA na pět dalších trhů: Kanada, Austrálie, Velká Británie, Francie a Německo. S tímto rozšířením můžete rozšířit svá zákaznická data o další zájmy vztahující se na tyto trhy. Rovněž obohatíme profily vašich zákazníků na těchto trzích, použitím místních patentovaných dat z aplikace Microsoft Graph.
-  Další informace viz [Obohacení profilů zákazníků afinitami značky a zájmů](enrichment-microsoft-graph.md)
+  Rozšiřujeme dostupnost rozšíření afinit k zájmům mimo USA na pět dalších trhů: Kanada, Austrálie, Velká Británie, Francie a Německo. S tímto rozšířením můžete rozšířit svá zákaznická data o další zájmy vztahující se na tyto trhy. Rozšíříme také vaše zákaznické profily, které se nacházejí na těchto trzích, pomocí místních vlastnických dat od společnosti Microsoft.
+  Další informace viz [Obohacení profilů zákazníků afinitami značky a zájmů](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Aktualizace z července 2020
@@ -330,8 +367,8 @@ Aktualizace v červenci 2020 zahrnují několik funkcí, vylepšení výkonu a o
 
 - **Rozšíření afinit ke značkám jsou k dispozici na více trzích**
 
-  Rozšiřujeme dostupnost rozšíření afinit ke značkám mimo USA na pět dalších trhů: Kanada, Austrálie, Velká Británie, Francie a Německo. Tímto rozšířením můžete na těchto trzích obohatit své zákaznické údaje o místní značky. Rovněž obohatíme profily vašich zákazníků na těchto trzích, použitím místních patentovaných dat z aplikace Microsoft Graph.
-  Další informace viz [Obohacení profilů zákazníků afinitami značky a zájmů](enrichment-microsoft-graph.md)
+  Rozšiřujeme dostupnost rozšíření afinit ke značkám mimo USA na pět dalších trhů: Kanada, Austrálie, Velká Británie, Francie a Německo. Tímto rozšířením můžete na těchto trzích obohatit své zákaznické údaje o místní značky. Rozšíříme také vaše zákaznické profily, které se nacházejí na těchto trzích, pomocí místních vlastnických dat od společnosti Microsoft.
+  Další informace viz [Obohacení profilů zákazníků afinitami značky a zájmů](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Aktualizace z června 2020
 
@@ -355,7 +392,7 @@ Aktualizace v červnu 2020 zahrnují několik funkcí, vylepšení výkonu a opr
 - **Samostatné rozšíření o značku a zájmovou afinitu**
 
   Afinity značky a zájmů jsou nyní k dispozici ve dvou nezávislých rozšířeních. Oddělená rozšíření poskytují flexibilitu při konfiguraci a správě individuálně v závislosti na vašich obchodních požadavcích nebo potřebách.    
-  Další informace viz [Rozšíření profilů zákazníků afinitami značky a zájmů](enrichment-microsoft-graph.md)
+  Další informace viz [Rozšíření profilů zákazníků afinitami značky a zájmů](enrichment-microsoft.md)
 
 #### <a name="extensibility"></a>Rozšiřitelnost
 

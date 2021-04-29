@@ -1,7 +1,7 @@
 ---
 title: Rozšíření sjednocených profilů zákazníka
 description: Využijte možnosti rozšíření svých zákaznických dat.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597687"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895997"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
@@ -27,8 +27,8 @@ K vytváření nebo úpravě rozšíření musíte mít oprávnění přispěvat
 
 Na kartě **Zjistit** najdete následující rozšíření:
 
-- [Značky](enrichment-microsoft-graph.md) poskytované produktem Microsoft Graph
-- [Zájmy](enrichment-microsoft-graph.md) poskytované produktem Microsoft Graph
+- [Značky](enrichment-microsoft.md) poskytované společností Microsoft
+- [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft
 - [Údaje o společnosti](enrichment-leadspace.md) poskytované společností Leadspace
 - [Demografická data](enrichment-experian.md) poskytované společností Experian
 - [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies
@@ -40,7 +40,7 @@ Na kartě **Moje rozšíření** se můžete podívat na rozšíření, která j
 
 Přejděte do oblasti **Moje rozšíření**, kde se nacházejí všechna konfigurovaná rozšíření. Každé rozšíření je uvedeno jako jeden jako řádek, který obsahuje další informace o rozšíření.
 
-Výběrem rozšíření zobrazíte dostupné možnosti. Alternativně můžete vybrat tři tečky (...) u položky seznamu a zobrazit možnosti.
+Výběrem rozšíření zobrazíte dostupné možnosti. Můžete také vybrat tři tečky (...) na položce seznamu a zobrazit možnosti.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Možnosti správy rozšíření v seznamu rozšíření":::
 
@@ -52,5 +52,12 @@ Výběrem rozšíření zobrazíte dostupné možnosti. Alternativně můžete v
 
 Výběrem ze seznamu můžete spustit nebo deaktivovat více rozšíření najednou. Možnosti zobrazení a úpravy nejsou k dispozici jako hromadná akce a fungují vždy jen pro jedno rozšíření.
 
+## <a name="enrichments-and-connections"></a>Rozšíření a propojení 
+
+Rozšíření třetích stran se konfigurují pomocí [připojení](connections.md), které správce nastaví pomocí pověření a poskytne souhlas s datovými přenosy. propojení mohou správci a přispěvatelé použít ke konfiguraci rozšíření.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Více rozšíření stejného typu
+
+Entita, kterou chcete rozšířit, je zadána během konfigurace rozšíření, což vám umožní rozšířit pouze podmnožinu vašich profilů. Můžete například rozšířit data pouze pro konkrétní segment. Můžete nakonfigurovat několik rozšíření stejného typu a znovu použít stejné propojení . Některá rozšíření budou mít rozšíření počtu obohacení stejného typu, které lze vytvořit. Limity a současné použití lze zobrazit na stránce **Rozšíření**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

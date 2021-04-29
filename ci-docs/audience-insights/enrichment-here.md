@@ -1,7 +1,7 @@
 ---
 title: Rozšíření od třetí strany HERE Technologies
 description: Obecné informace o rozšíření od třetí strany HERE Technologies.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597733"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896043"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Rozšíření profilů zákazníků od HERE Technologies (Preview)
 
@@ -26,35 +26,54 @@ Chcete-li nakonfigurovat rozšíření společnosti HERE Technologies, musíte s
 
 - Musíte mít aktivní předplatné HERE Technologies. Chcete-li získat předplatné, můžete se [registrovat zde](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) nebo [kontaktujte HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) přímo. [Zjistěte více o HERE Technologies Location Enrichment.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Máte klíč rozhraní API pro HERE Technologies.
+- Zde je k dispozici [propojení](connections.md) HERE *nebo* máte oprávnění [správce](permissions.md#administrator) a klíč API HERE Technologies.
 
-- Máte oprávnění pro [správu](permissions.md#administrator).
+## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
 
-## <a name="configuration"></a>Konfigurace
+1. Přejděte na **Data** > **Rozšíření**. 
 
-1. Přejděte na **Data** > **Rozšíření**.
-
-1. Vyberte **Rozšířit moje data** na dlaždici HERE Technologies.
+1. Vyberte **Rozšířit moje data** v dlaždici HERE Technologies a vyberte **Začít**.
 
    > [!div class="mx-imgBorder"]
    > ![Dlaždice HERE Technologies](media/HERE-tile.png "Dlaždice HERE Technologies")
 
-1. Zadejte aktivní **klíč rozhraní API pro HERE Technologies**. Projděte si a poskytněte svůj souhlas s **Ochranou osobních údajů a dodržování předpisů** výběrem zaškrtávacího políčka **Souhlasím**. 
+1. V rozevíracím seznamu vyberte [propojení](connections.md). Pokud není k dispozici propojení, kontaktujte správce. Pokud jste správce, můžete vytvořit propojení výběrem možnosti **Přidat propojení**. V rozevírací nabídce zvolte **HERE Technologies**. 
 
-1. Potvrďte oba vstupy výběrem **Připojit k HERE**.
+1. Výběr připojení potvrďte výběrem **Připojit k HERE Technologies**.
 
-1.  Vyberte **Přidat data** a zvolte **sadu zákaznických dat**, kterou chcete rozšířit o údaje o poloze od společnosti HERE Technologies. Můžete vybrat entitu **Zákazník** k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
+1.  Vyberte **Další** a zvolte **datovou sadu zákazníka**, kterou chcete rozšířit o údaje o poloze od společnosti HERE Technologies. Můžete vybrat entitu **Zákazník** k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Screenshot výběru sady zákaznických dat.":::
 
-1. Zvolte, zda chcete mapovat pole na primární nebo sekundární adresu. Můžete zadat mapování polí pro obě adresy (například adresu domácnosti a adresu firmy) a profily pro obě adresy rozšířit samostatně. Vyberte **Další**.
+1. Zvolte, zda chcete mapovat pole na primární nebo sekundární adresu. Můžete určit mapování polí pro obě adresy a profily pro obě adresy obohatit samostatně. Například pokud existuje adresa domů a do zaměstnání. Vyberte **Další**.
 
 1. Definujte, která pole z vašich sjednocených profilů se mají použít k vyhledání odpovídajících dat umístění od HERE Technologies. Pole **Ulice 1** a **Poštovní směrovací číslo** jsou povinná pro vybranou primární a/nebo sekundární adresu. Pro vyšší přesnost shody lze přidat více polí.
 
    > [!div class="mx-imgBorder"]
    > ![Stránka konfigurace rozšíření od HERE Technologies](media/enrichment-HERE-configuration.png "Stránka konfigurace rozšíření od HERE Technologies")
 
-1. Vyberte **Použít** k dokončení mapování polí.
+1. Výběrem možnosti **Další** dokončete mapování polí.
+
+1. Zadejte jméno rozšíření. 
+
+1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
+
+## <a name="configure-the-connection-for-here-technologies"></a>Konfigurace propojení pro HERE technologies 
+
+Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci rozšíření vyberte **Přidat připojení** *nebo* přejděte na **Správce** > **Připojení** a v dlaždici HERE Technologies vyberte **Nastavit**.
+
+1. Do pole **Zobrazované jméno** zadejte jméno.
+
+1. Zadejte platný klíč API společnosti HERE Technologies.
+
+1. Projděte si a poskytněte svůj souhlas s **Ochranou osobních údajů a dodržování předpisů** výběrem zaškrtávacího políčka **Souhlasím**.
+
+1. Vyberte **Ověřit** k ověření konfigurace.
+
+1. Po dokončení ověření vyberte **Uložit**.
+
+> [!div class="mx-imgBorder"]
+   > ![Stránka konfigurace připojení pro HERE Technologies](media/enrichment-HERE-connection.png "Stránka konfigurace připojení pro HERE Technologies")
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 

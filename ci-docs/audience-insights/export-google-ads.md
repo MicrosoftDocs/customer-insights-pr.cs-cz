@@ -1,67 +1,35 @@
 ---
 title: Export dat Customer Insights do služby Google Ads
-description: Naučte se, jak nakonfigurovat připojení ke službě Google Ads.
-ms.date: 11/18/2020
-ms.reviewer: mhart
+description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Google Ads.
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6d9a25af3913e755cccec745c532b35aef3cccf9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f4c094e486577d00d8c0c64e8527829820b335f6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598239"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759685"
 ---
-# <a name="connector-for-google-ads-preview"></a>Konektor pro Google Ads (Preview)
+# <a name="export-segments-to-google-ads-preview"></a>Export segmentů do Google Ads (náhled)
 
 Exportujte segmenty sjednocených profilů zákazníků do seznamu cílových skupin Google Ads a použijte je k inzerci ve službách Google Search, Gmail, YouTube a Google Display Network. 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites-for-connection"></a>Předpoklady pro připojení
 
 -   Máte [účet Google Ads](https://ads.google.com/) a odpovídající přihlašovací údaje správce.
+-   Máte [schválený token vývojáře Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
+-   Splňujete požadavky [Zásad pro vlastní seznamy zákazníků](https://support.google.com/adspolicy/answer/6299717)
+-   Splňujete požadavky [velikosti remarketingového seznamu](https://support.google.com/google-ads/answer/7558048) 
+
 -   Google Ads obsahuje cílové skupiny a odpovídající ID. Další informace viz [Cílové skupiny Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Máte [konfigurované segmenty](segments.md)
 -   Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu, křestní jméno a příjmení
-
-## <a name="connect-to-google-ads"></a>Připojit ke Google Ads
-
-1. Přejděte na **Správce** > **Cíle exportu**.
-
-1. Pod **Google Ads** vyberte **Nastavení**.
-
-1. Zadejte rozpoznatelný název cíle exportu do pole **Zobrazovaný název**.
-
-1. Zadejte své **[ID zákazníka Google Ads](https://support.google.com/google-ads/answer/1704344)**.
-
-1. Zadete svůj **[token vývojáře schválený službou Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
-
-1. Vyberte **Souhlasím** pro potvrzení **Ochrany osobních údajů a dodržování předpisů**.
-
-1. Zadejte své **[ID cílové skupiny Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** a volbou **Připojit** inicializujte připojení k Google Ads.
-
-1. Vyberte **Ověření pomocí Google Ads** a zadejte své přihlašovací údaje k Google Ads.
-
-1. Vyberte **Přidat sebe jako exportujícího uživatele** a zadejte přihlašovací údaje k Customer Insights.
-
-   :::image type="content" source="media/export-segments-googleads.PNG" alt-text="Screenshot exportu pro připojení Google Ads":::
-
-1. Vyberte **Další** pro konfiguraci exportu.
-
-## <a name="configure-the-connector"></a>Konfigurace konektoru
-
-1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Stejné kroky opakujte pro pole **Křestní jméno** a **Příjmení**.
-
-1. Vyberte segmenty, které chcete exportovat. Do Google Ads můžete exportovat celkem až 1 milion zákaznických profilů.
-
-1. Zvolte **Uložit**.
-
-## <a name="export-the-data"></a>Export dat
-
-Můžete [exportovat data na vyžádání](export-destinations.md). Export bude spuštěn také s každou [plánovanou aktualizací](system.md#schedule-tab). V Google Ads nyní najdete své segmenty v části [Cílové skupiny Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en/).
 
 ## <a name="known-limitations"></a>Známá omezení
 
@@ -69,6 +37,48 @@ Můžete [exportovat data na vyžádání](export-destinations.md). Export bude 
 - Export do služby Google Ads je omezen na segmenty.
 - Export segmentů s celkem 1 milionem profilů může z důvodu omezení na straně poskytovatele trvat až 5 minut. 
 - Spárování v Google Ads může trvat až 48 hodin.
+
+## <a name="set-up-connection-to-google-ads"></a>Nastavení propojení ke Google Ads
+
+1. Přejděte na **Správce** > **Propojení**.
+
+1. Vyberte **Přidat připojení** a zvolte **Google Ads** pro konfiguraci připojení.
+
+1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
+
+1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Zadejte své **[ID zákazníka Google Ads](https://support.google.com/google-ads/answer/1704344)**.
+
+1. Zadete svůj **[token vývojáře schválený službou Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
+
+1. Vyberte **Souhlasím** pro potvrzení **Ochrany osobních údajů a dodržování předpisů**.
+
+1. Vyberte **Ověření pomocí Google Ads** a zadejte své přihlašovací údaje k Google Ads.
+
+1. Vyberte **Přidat sebe jako exportujícího uživatele** a zadejte přihlašovací údaje k Customer Insights.
+
+1. Dokončete propojení výběrem možnosti **Uložit**. 
+
+## <a name="configure-an-export"></a>Konfigurace exportu
+
+Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
+
+1. Přejděte na **Data** > **Exporty**.
+
+1. Pokud chcete vytvořit nový export, vyberte **Přidat cíl**.
+
+1. V poli **propojení pro export** vyberte propojení v části Google Ads. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
+
+1. Zadejte své **[ID cílové skupiny Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** a volbou **Připojit** inicializujte připojení k Google Ads.
+
+1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Stejné kroky opakujte pro pole **Křestní jméno** a **Příjmení**.
+
+1. Vyberte segmenty, které chcete exportovat. Do Google Ads můžete exportovat celkem až 1 milion zákaznických profilů.
+
+Uložení exportu nespustí export okamžitě.
+
+Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
 

@@ -1,7 +1,7 @@
 ---
-title: Export dat Customer Insights do úložiště Azure Blob
-description: Naučte se, jak nakonfigurovat připojení k úložišti Azure Blob.
-ms.date: 09/18/2020
+title: Export dat Customer Insights do služby Azure Blob Storage
+description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Blob Storage.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,45 +9,57 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0986ee5caf5fa079994ca584fb2c4d9294ddb80b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 294feff2f77c3756fbadb36c90aab430454f5967
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596169"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760181"
 ---
-# <a name="connector-for-azure-blob-storage-preview"></a>Konektor pro úložiště Azure Blob (náhled)
+# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Export seznamu segmentů a dalších dat do služby Azure Blob Storage (náhled)
 
-Uchovávejte svá data Customer Insights v úložišti Azure Blob nebo jej použijte k přenosu dat do jiných aplikací.
+Uložte si data Customer Insights do služby Azure Blob Storage nebo je použijte k přenosu dat do jiných aplikací.
 
-## <a name="configure-the-connector-for-azure-blob-storage"></a>Konfigurace konektoru pro úložiště Azure Blob
+## <a name="set-up-the-connection-to-blob-storage"></a>Nastavení propojení s Blob Storage
 
-1. V přehledech cílové skupiny přejděte na **Správa** > **Cíle exportu**.
+1. Přejděte na **Správce** > **Propojení**.
 
-1. V **Azure Blob Storage** vyberte **Založit**.
+1. Vyberte **Přidat připojení** a zvolte **Azure Blob Storage** pro konfiguraci připojení.
 
-1. Vložte **Název účtu**, **Klíč účtu** a **Kontejner** pro váš účet úložiště Azure Blob.
-    - Další informace o tom, jak najít název účtu úložiště Azure Blob a klíč účtu, viz [Správa nastavení účtu úložiště v portálu Azure](/azure/storage/common/storage-account-manage).
+1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
+
+1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Zadejte **jméno obchodního vztahu**, **klíč obchodního vztahu** a **kontejner** pro účet Blob Storage.
+    - Další informace o vyhledání účtu Blob Storage a klíči účtu najdete v tématu [Správa nastavení účtu úložiště na webu Azure Portal](/azure/storage/common/storage-account-manage).
     - Informace o tom, jak vytvořit kontejner, viz [Vytvoření kontejneru](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Zadejte rozpoznatelný název cíle do pole **Zobrazovaný název**.
+1. Dokončete propojení výběrem možnosti **Uložit**. 
 
-1. Vyberte **Další**.
+## <a name="configure-an-export"></a>Konfigurace exportu
+
+Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
+
+1. Přejděte na **Data** > **Exporty**.
+
+1. Pokud chcete vytvořit nový export, vyberte **Přidat cíl**.
+
+1. V poli **propojení pro export** vyberte propojení z části Azure Blob Storage. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
 
 1. Zaškrtněte políčko vedle každé entity, kterou chcete exportovat do tohoto cíle.
 
 1. Zvolte **Uložit**.
 
-Exportovaná data jsou uložena v konfiguračním úložném kontejneru Azure Blob. Ve vašem kontejneru se automaticky vytvoří následující cesty ke složkám:
+Uložení exportu nespustí export okamžitě.
+
+Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab).     
+Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
+
+Exportovaná data jsou uložena v kontejneru úložiště Blob Storage, který jste nakonfigurovali. Ve vašem kontejneru se automaticky vytvoří následující cesty ke složkám:
 
 - Pro zdrojové entity a entity generované systémem: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
   - Příklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Soubor model.json pro exportované entity se nachází na úrovni %ExportDestinationName%.
+- Model.json pro exportované entity bude mít úroveň %ExportDestinationName%
   - Příklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
-
-## <a name="export-the-data"></a>Export dat
-
-Můžete [exportovat data na vyžádání](export-destinations.md#export-data-on-demand). Export bude spuštěn také s každou [plánovanou aktualizací](system.md#schedule-tab).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
