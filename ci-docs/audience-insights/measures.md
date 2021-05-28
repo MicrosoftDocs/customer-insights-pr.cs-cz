@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887932"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049242"
 ---
 # <a name="define-and-manage-measures"></a>Definujte a spravujte opatření
 
@@ -34,7 +34,7 @@ Tato sekce vás provede vytvořením nové míry od nuly. Můžete vytvořit mí
 
 1. Vyberte **Upravit jméno** a zadejte **Název** míry. 
    > [!NOTE]
-   > Pokud má vaše nová konfigurace míry pouze dvě pole, například CustomerID a jeden výpočet, bude výstup přidán jako nový sloupec do entity generované systémem s názvem Customer_Measure. Hodnotu míry uvidíte ve sjednoceném profilu zákazníka. Další míry vygenerují vlastní entity.
+   > Pokud má vaše nová konfigurace míry pouze dvě pole, například CustomerID a jeden výpočet, výstup bude přidán jako nový sloupec do entity generované systémem s názvem Customer_Measure. Hodnotu míry uvidíte ve sjednoceném profilu zákazníka. Další míry vygenerují vlastní entity.
 
 1. V oblasti konfigurace vyberte agregační funkci z rozevírací nabídky **Vyberte funkci**. Agregační funkce zahrnují: 
    - **Sum**

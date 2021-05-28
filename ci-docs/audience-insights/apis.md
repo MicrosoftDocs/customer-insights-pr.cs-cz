@@ -1,7 +1,7 @@
 ---
 title: Práce s API
 description: Použití rozhraní API a přehled o souvisejících omezeních.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873654"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016584"
 ---
 # <a name="work-with-customer-insights-apis"></a>Práce s rozhraními API v Customer Insights
 
@@ -90,19 +90,13 @@ Informace o používání rozhraní API našich klientských knihoven najdete v 
 
 1. V registraci aplikace v portálu Azure přejděte na **Oprávnění rozhraní API**.
 
-1. Vyberte **Přidat oprávnění** a vyberte **Customer Insights** v postranním panelu.
+1. Vyberte **Přidat oprávnění**. 
+
+1. Vyberte kartu **API, která moje organizace používá** a v seznamu vyberte **Dynamics 365 AI pro Customer Insights**. 
 
 1. Pro **Typ oprávnění** vyberte **Oprávnění aplikací** a vyberte oprávnění **CustomerInsights.Api.All**.
 
 1. Vyberte **Přidat oprávnění**.
-
-1. Chcete-li udělit souhlas správce s tímto oprávněním aplikace, musíte přidat instanční objekt.
-
-   1. Nainstalujte modul Azure Active Directory (AD) PowerShell: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Připojte se k účtu AD: `Connect-AzureAD -TenantId <your tenant id>`. ID vašeho klienta najdete v části **Přehled** > **Azure Active Directory**.
-   1. Spuštěním následujícího příkazu přidejte instanční objekt Azure AD: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` Parametr AppId se týká aplikace API Customer Insights.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Ukázkový instanční objekt":::
 
 1. Přejděte zpět na **Oprávnění rozhraní API** pro registraci vaší aplikace.
 

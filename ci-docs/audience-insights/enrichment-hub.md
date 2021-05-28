@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895997"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954479"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
@@ -29,6 +29,7 @@ Na kartě **Zjistit** najdete následující rozšíření:
 
 - [Značky](enrichment-microsoft.md) poskytované společností Microsoft
 - [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft
+- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft
 - [Údaje o společnosti](enrichment-leadspace.md) poskytované společností Leadspace
 - [Demografická data](enrichment-experian.md) poskytované společností Experian
 - [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887886"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085522"
 ---
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
@@ -36,11 +36,9 @@ Zdroj dat můžete přidat třemi hlavními způsoby:
 
 Příjem dat z místní zdrojů dat v cílové skupině Insights je podporován na základě toků dat Power Platform. Toky dat lze povolit v nástroji Customer Insights [poskytnutím adresy URL prostředí Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) při nastavování prostředí.
 
-Zdroje dat, které se vytvoří po přidružení prostředí Dataverse k nástroji Customer Insights, budou používat [toky dat Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) ve výchozím stavu. Datové toky podporují místní propojení pomocí datových bran. Odeberte a znovu vytvořte zdroje dat, které existovaly před přidružením prostředí Dataverse k místním bránám dat.
+Zdroje dat, které se vytvoří po přidružení prostředí Dataverse k nástroji Customer Insights, budou používat [toky dat Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) ve výchozím stavu. Datové toky podporují místní připojení pomocí datové brány. Odeberte a znovu vytvořte zdroje dat, které existovaly před přidružením prostředí Dataverse k [použití místních bran dat](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Datové brány z existujícího prostředí Power BI nebo Power Apps bude viditelné a můžete jej znovu použít ve službě Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy pro přechod do prostředí Power Platform, kde můžete prohlížet a konfigurovat místní brány dat.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Screenshot stránky zdrojů dat zobrazující odkazy směřující na prostředí Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Zkontrolujte přijatá data
 

@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597917"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976080"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (preview)
 
@@ -27,7 +27,7 @@ Pomocí triggerů můžete vytvářet cloudové toky a automatizovat opakující
 - Spustí se, když selže aktualizace zdroje dat. 
 - Spustí se, když uspěje aktualizace zdroje dat.
 - Spustí se, když je v segmentu překročena prahová hodnota. Trigger je omezen na překročení nad prahovou hodnotu.
-- Spustí se, když je v obchodní míře překročena prahová hodnota. Trigger je omezen na překročení nad prahovou hodnotu.
+- Spustí se, když je v obchodní míře překročena prahová hodnota. Jsou podporovány pouze firemní míry bez dimenze. Trigger je omezen na překročení nad prahovou hodnotu.
 - Spustí se, když je dokončena úplná aktualizace (zdroje dat, segmenty, míry, ...).
 - Spustí se, když je dokončena aktualizace procesu sjednocení (mapování, spárování, sloučení).
 

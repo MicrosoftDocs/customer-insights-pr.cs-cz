@@ -1,7 +1,7 @@
 ---
-title: Vytvořit a spravovat segmenty
-description: Vytvořte segmenty zákazníků a seskupte je podle různých atributů.
-ms.date: 03/02/2021
+title: Segmenty v přehledech cílové skupiny
+description: Vytvořte přehled segmentů a způsob jejich vytváření a správy.
+ms.date: 05/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,79 +9,42 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
+ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597043"
+ms.lasthandoff: 05/14/2021
+ms.locfileid: "6034004"
 ---
-# <a name="create-and-manage-segments"></a>Vytvořit a spravovat segmenty
+# <a name="segments-overview"></a>Přehled segmentů
 
 Segmenty umožňují seskupit zákazníky na základě demografických, transakčních nebo behaviorálních atributů. Segmenty můžete použít k cílení propagačních kampaní, prodejních aktivit a akcí podpory zákazníků k dosažení vašich obchodních cílů.
 
-Můžete definovat složité filtry kolem entity Profil zákazníka a souvisejících entit. Každý segment po zpracování vytvoří sadu záznamů o zákaznících, které můžete exportovat a se kterými můžete provádět akce. Použijí se některé [servisní limity](service-limits.md).
-
-Pokud není uvedeno jinak, všechny segmenty jsou **Dynamické segmenty**, které se obnovují podle opakujícího se plánu.
-
-Následující příklad ukazuje funkci segmentace. Definovali jsme segment pro zákazníky, kteří si za posledních 90 dní objednali zboží alespoň za $500 *a* kteří se účastnili volání služby zákazníkům, které bylo eskalováno.
-
-> [!div class="mx-imgBorder"]
-> ![Více skupin](media/segmentation-group1-2.png "Více skupin")
+Profily zákazníků, které odpovídají filtrům definice segmentu, se označují jako *prvky* segmentu. Použijí se některé [servisní limity](service-limits.md).
 
 ## <a name="create-a-new-segment"></a>Vytvořit nový segment
 
-Segmenty jsou spravovány na stránce **Segmenty**.
+Existuje několik způsobů, jak vytvořit nový segment: 
 
-1. V přehledech cílové skupiny přejděte na stránku **Segmenty**.
+- Složitý segment s nástrojem pro vytváření segmentů: [Prázdný segment](segment-builder.md#create-a-new-segment)
+- Jednoduché segmenty s jedním operátorem: [Rychlý segment](segment-builder.md#quick-segments)
+- Způsob vyhledání podobných zákazníků pomocí technologie AI: [Podobní zákazníci](find-similar-customer-segments.md)
+- Návrhy využívající AI založené na mírách nebo atributech: [Navrhované segmenty ke zlepšení měr](suggested-segments.md)
+- Návrhy založené na činnostech: [Navrhované segmenty na základě aktivity zákazníků](suggested-segments-activity.md)
 
-1. Vybrat **Nový** > **Prázdný segmeny**.
+## <a name="get-insights-on-existing-segments"></a>Získejte přehled o stávajících segmentech
 
-1. V podokně **Nový segment** zvolte typ segmentu a zadejte **Název**.
+Objevte další informace o svých stávajících segmentech pomocí [přehledů segmentů](segment-insights.md). Zjistěte, co odlišuje dva segmenty nebo co mají společné.
 
-   Volitelně zadejte zobrazované jméno a popis, který pomáhá identifikovat segment.
+## <a name="find-similar-customers"></a>Najít podobné zákazníky
 
-1. Vyberte **Další**, chcete-li se dostat na stránku **Tvůrce segmentu**, kde definujete skupinu. Skupina je sada zákazníků.
-
-1. Zvolte entitu, která obsahuje atribut, který chcete zahrnout do segmentace.
-
-1. Vyberte atribut, podle kterého chcete segmentovat. Tento atribut může mít jeden ze čtyř typů hodnot: číselný, řetězec, datum nebo logický.
-
-1. Zvolte operátor a hodnotu vybraného atributu.
-
-   > [!div class="mx-imgBorder"]
-   > ![Vlastní filtr skupin](media/customer-group-numbers.png "Filtr skupin zákazníků")
-
-   |Počet |definice  |
-   |---------|---------|
-   |1     |Entity          |
-   |2     |Atribut          |
-   |3    |Operátor         |
-   |4    |Hodnota         |
-
-8. Pokud je entita propojena se sjednocenou entitou zákazníka prostřednictvím [Vztahů](relationships.md), musíte definovat cestu vztahu k vytvoření platného segmentu. Přidávejte entity z cesty vztahu, dokud nevyberete entitu **Zákazník: CustomerInsights** z rozevíracího seznamu. Pak zvolte **Všechny záznamy** pro každou podmínku.
-
-   > [!div class="mx-imgBorder"]
-   > ![Cesta vztahů při vytváření segmentů](media/segments-multiple-relationships.png "Cesta vztahů při vytváření segmentů")
-
-1. Ve výchozím nastavení segmenty generují výstupní entitu, která obsahuje všechny atributy profilů zákazníků, které odpovídají definovaným filtrům. Pokud je segment založen na jiných entitách než *Zákazník*, můžete do výstupní entity přidat další atributy z těchto entit. Volbou **Atributy projektu** zvolte atributy, které budou připojeny k výstupní entitě.  
-
-   
-   Příklad: Segment je založen na entitě, která obsahuje údaje o aktivitě zákazníka, která je provázána s entitou *Zákazník*. Segment vyhledá všechny zákazníky, kteří volali na technickou podporu za posledních 60 dní. Můžete se rozhodnout připojit délku hovoru a počet hovorů ke všem odpovídajícím záznamům zákazníků ve výstupní entitě. Tyto informace mohou být užitečné k zaslání e-mailu s užitečnými odkazy na články online nápovědy a často kladené dotazy zákazníkům, kteří často volali.
-
-1. Výběrem možnosti **Uložit** uložte segment. Pokud budou všechny požadavky ověřeny, bude váš segment uložen a zpracován. V opačném případě bude uložen jako koncept.
-
-1. Volbou **Zpět na segmenty** přejdete zpět na stránku **Segmenty**.
+Najděte zákazníky, kteří jsou podobní členům vybraného segmentu, pomocí umělé inteligence. Další informace naleznete v článku [Podobní zákazníci](find-similar-customer-segments.md).
 
 ## <a name="manage-existing-segments"></a>Správa existujících segmentů
 
-Na stránce **Segmenty** můžete zobrazit všechny uložené segmenty a spravovat je.
+Jděte na stránku **segmenty**, kde můžete zobrazit všechny uložené segmenty a spravovat je.
 
 Každý segment je reprezentován řádkem, která obsahuje další informace o segmentu.
-
-Segmenty ve sloupci můžete třídit výběrem záhlaví sloupce.
-
-Použijte pole **Vyhledávání** v pravém horním rohu a filtrujte segmenty.
 
 > [!div class="mx-imgBorder"]
 > ![Možnosti správy existujícího segmentu](media/segments-selected-segment.png "Možnosti správy existujícího segmentu")
@@ -106,71 +69,6 @@ Můžete aktualizovat všechny segmenty najednou výběrem **Aktualizovat vše**
 > [!TIP]
 > Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies). Můžete vybrat stav procesu a zobrazit podrobnosti o průběhu celé úlohy. Po výběru **Zobrazit podrobnosti** pro jeden z úkolů úlohy najdete další informace: čas zpracování, datum posledního zpracování a všechny chyby a varování spojené s úkolem.
 
-## <a name="download-and-export-segments"></a>Stahujte a exportujte segmenty
-
-Můžete si stáhnout své segmenty do souboru CSV nebo je exportovat do Dynamics 365 Sales.
-
-### <a name="download-segments-to-a-csv-file"></a>Stáhněte segmenty do souboru CSV
-
-1. V přehledech cílové skupiny přejděte na stránku **Segmenty**.
-
-2. Vyberte tři tečky v dlaždici konkrétního segmentu.
-
-3. Vyberte **Stáhnout jako CSV** z rozevíracího seznamu akcí.
-
-### <a name="export-segments-to-dynamics-365-sales"></a>Exportovat segmenty do aplikace Dynamics 365 Sales
-
-Před exportem segmentů do Dynamics 365 Sales musí administrátor [vytvořit cíl exportu](export-destinations.md) pro Dynamics 365 Sales.
-
-1. V přehledech cílové skupiny přejděte na stránku **Segmenty**.
-
-2. Vyberte tři tečky v dlaždici konkrétního segmentu.
-
-3. Vyberte **Přidat do** z rozevíracího seznamu akcí a vyberte cílové místo exportu, do kterého chcete data odeslat.
-
-## <a name="draft-mode-for-segments"></a>Režim konceptu pro segmenty
-
-Pokud nejsou splněny všechny požadavky na zpracování segmentu, můžete segment uložit jako koncept a získat k němu přístup ze stránky **Segmenty**.
-
-Bude uložen jako neaktivní segment a nelze jej aktivovat, dokud nebude platný.
-
-## <a name="add-more-conditions-to-a-group"></a>Přidání dalších podmínek do skupiny
-
-Chcete-li do skupiny přidat další podmínky, můžete použít dva logické operátory:
-
-- Operátor **AND**: Obě podmínky musí být splněny v rámci procesu segmentace. Tato možnost je nejužitečnější při definování podmínek mezi různými entitami.
-
-- Operátor **OR**: Buď je třeba splnit jednu z podmínek v rámci procesu segmentace. Tato možnost je nejužitečnější při definování více podmínek pro stejnou entitu.
-
-   > [!div class="mx-imgBorder"]
-   > ![Operátor OR, u kterého je třeba splnit obě podmínky](media/segmentation-either-condition.png "Operátor OR, u kterého je třeba splnit obě podmínky")
-
-V současné době je možné vnořit operátor **OR** do operátoru **AND**, ale ne naopak.
-
-## <a name="combine-multiple-groups"></a>Zkombinování více skupin
-
-Každá skupina produkuje specifický soubor zákazníků. Tyto skupiny můžete zkombinovat a zahrnout zákazníky potřebné pro váš obchodní případ.
-
-1. V přehledech cílové skupiny přejděte na stránku **Segmenty** a vyberte segment.
-
-2. Vyberte **Přidat skupinu**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Skupina zákazníků přidat skupinu](media/customer-group-add-group.png "Skupina zákazníků přidat skupinu")
-
-3. Vyberte jeden z následujících operátorů sady: **Sjednocení**, **Průnik** nebo **Kromě**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Skupina zákazníků přidat sjednocení](media/customer-group-union.png "Skupina zákazníků přidat sjednocení")
-
-   Vyberte operátor sady, abyste mohli definovat novou skupinu. Uložením různých skupin určíte, jaká data se uchovají:
-
-   - **Sjednocení** sjednotí dvě skupiny.
-
-   - **Průnik** překrývá dvě skupiny. Pouze data, která *jsou společná* pro obě skupiny, zůstanou zachována ve sjednocené skupině.
-
-   - **Výjimka** kombinuje dvě skupiny. Pouze data ve skupině A, která *nejsou společná* s daty ve skupině B, zůstanou zachována.
-
 ## <a name="view-processing-history-and-segment-members"></a>Zobrazit historii zpracování a členy segmentu
 
 Konsolidovaná data o segmentu můžete zobrazit kontrolou jeho podrobností.
@@ -191,43 +89,4 @@ Spodní část obsahuje seznam členů segmentu.
 >
 >Seznam je náhledem odpovídajících členů segmentu a zobrazuje prvních 100 záznamů segmentu, takže jej můžete rychle vyhodnotit a v případě potřeby zkontrolovat jeho definice. Chcete-li zobrazit všechny odpovídající záznamy, je třeba [segment exportovat](export-destinations.md).
 
-## <a name="quick-segments"></a>Rychlé segmenty
-
-Kromě nástroje pro vytváření segmentů existuje další cesta k vytváření segmentů. Rychlé segmenty vám umožňují rychle a snadno vytvářet jednoduché segmenty s jediným operátorem.
-
-1. Na stránce **Segmenty** vyberte **Nový** > **Rychle vytvořte z**.
-
-   - Vyberte možnost **Profily**, chcete-li vytvořit segment založený na sjednocené entitě Zákazník.
-   - Vyberte možnost **Opatření**, chcete-li vytvořit segment kolem každého typu atributu zákazníka, které jste dříve vytvořili na stránce **Opatření**.
-   - Vyberte možnost **Analytické nástroje**, chcete-li sestavit segment kolem jedné z výstupních entit, které jste vygenerovali pomocí funkcí **Predikce** nebo **Vlastní modely**.
-
-2. V dialogovém okně **Nový rychlý segment** vyberte atribut z rozbalovací nabídky **Pole**.
-
-3. Systém vám poskytne další přehledy, které vám pomohou vytvořit lepší segmenty vašich zákazníků.
-   - Pro kategorická pole zobrazíme 10 nejlepších zákazníků. Vyberte **Hodnotu** a zvolte **Hodnotit**.
-
-   - U číselného atributu systém zobrazí, jaká hodnota atributu spadá pod percentil každého zákazníka. Zvolte **Operátor** a **Hodnotu** a pak vyberte **Zkontrolovat**.
-
-4. Systém vám poskytne **Odhadovanou velikost segmentu**. Můžete zvolit, zda chcete vygenerovat segment, který jste definovali, nebo jej nejprve znovu navštívit, abyste získali jinou velikost segmentu.
-
-    > [!div class="mx-imgBorder"]
-    > ![Název a odhad pro rychlý segment](media/quick-segment-name.png "Název a odhad pro rychlý segment")
-
-5. Zadejte **Název** svého sgmentu. Volitelně zadejte **Zobrazovaný název**.
-
-6. Výběrem možnosti **Uložit** vytvořte segment.
-
-7. Po dokončení zpracování segmentu jej můžete zobrazit jako jakýkoli jiný segment, který jste vytvořili.
-
-Pro následující scénáře doporučujeme používat tvůrce segmentů spíše než doporučené funkce segmentů:
-
-- Vytváření segmentů s filtry v kategorických polích, kde se operátor liší od operátoru **Je**
-- Vytváření segmentů s filtry na číselných polích, kde je operátor jiný, než **Mezi**, **Větší než** a **Méně než**
-- Vytváření segmentů s filtry v polích typu data
-
-## <a name="next-steps"></a>Další kroky
-
-[Exportujtesegment](export-destinations.md) a prozkoumejte [Kartu zákazníka](customer-card-add-in.md) a [Konektory](export-power-bi.md), abyste získali přehled o úrovni zákazníka.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../includes/footer-banner.md)] 

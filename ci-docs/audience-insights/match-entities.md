@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595556"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085614"
 ---
 # <a name="match-entities"></a>Párování entit
 
@@ -103,6 +103,18 @@ Pravidla párování jsou sady podmínek. Pro párování entit podle podmínek 
 
 > [!NOTE]
 > Na pořadí pravidel záleží. Algoritmus párování se pokouší párovat na základě vašeho prvního pravidla a pokračuje k druhému pravidlu, pouze pokud nebyly identifikovány žádné shody s prvním pravidlem.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Změna pořadí entit v pravidlech shody
+
+Můžete změnit pořadí entit pro pravidla shody a změnit tak pořadí, ve kterém jsou zpracovávány. Pravidla, která jsou v rozporu kvůli změněnému pořadí, budou odstraněna. Odebraná pravidla musíte znovu vytvořit s aktualizovanou konfigurací.
+
+1. Jděte na **Data** > **Sjednotit** > **Shoda** a vyberte **Upravit**.
+
+1. V podokně **Upravit pravidlo** vyberte ovládací prvek **Přesunout nahoru/dolů** nebo přetáhněte entity pro změnu jejich pořadí.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Možnosti změnit pořadí, ve kterém jsou entity objednávky zpracovány ve fázi shody.":::
+
+1. Pravidlo uložte kliknutím na tlačítko **Hotovo**.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definování zrušení duplicit v entitě párování
 
