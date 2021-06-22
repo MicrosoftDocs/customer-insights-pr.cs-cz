@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906894"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095640"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikce odchodu předplatitelů (Preview)
 
@@ -147,30 +147,9 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
        > [!div class="mx-imgBorder"]
        > ![Seznam zobrazující vlivné faktory a jejich význam při predikci výsledných odchodů](media/subscription-churn-influentialfactors.PNG "Seznam zobrazující vlivné faktory a jejich význam při predikci výsledných odchodů")
 
-## <a name="fix-a-failed-prediction"></a>Oprava neúspěšné predikce
+## <a name="manage-predictions"></a>Správa predikcí
 
-1. Jděte na kartu **Moje predikce** v umístění **Analytické nástroje** > **Predikce**.
-1. Vyberte predikci, pro kterou chcete zobrazit protokoly chyb, a vyberte **Protokoly**.
-   > [!div class="mx-imgBorder"]
-   > ![Zobrazení řádku nabídek pro výsledky, včetně tlačítek Zavřít, Upravit model a Protokoly](media/subscription-churn-logsbutton.PNG "Zobrazení řádku nabídek pro výsledky, včetně tlačítek Zavřít, Upravit model a Protokoly")
-1. Zkontrolujte všechny chyby. Existuje několik typů chyb, které mohou nastat a které popisují, jaký stav chybu způsobil. Například chyba, že není dostatek dat k přesné predikci, je obvykle vyřešena načtením dalších dat.
-
-## <a name="refresh-a-prediction"></a>Aktualizace předpovědi
-
-Předpovědi se automaticky aktualizují podle stejného [plánu aktualizace dat](system.md#schedule-tab), jaký je konfigurován v nastavení.
-
-1. Jděte na kartu **Moje predikce** v umístění **Analytické nástroje** > **Predikce**.
-1. Vyberte svislé tři tečky vedle predikce, kterou chcete aktualizovat.
-1. Vyberte **Aktualizovat**.
-
-## <a name="delete-a-prediction"></a>Odstranění predikce
-
-1. Jděte na kartu **Moje predikce** v umístění **Analytické nástroje** > **Predikce**.
-1. Vyberte svislé tři tečky vedle predikce, kterou chcete odstranit.
-1. Vyberte **Odstranit**.
-
-> [!NOTE]
-> Odstraňování predikce odebere jeho výstupní entitu.
+Predikce můžete optimalizovat, odstraňovat jejich problémy, aktualizovat nebo odstranit. Projděte si sestavu použitelnosti vstupních dat a zjistěte v ní, jak zajistit, aby predikce byla rychlejší a spolehlivější. Další informace naleznete v tématu [Správa predikcí](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

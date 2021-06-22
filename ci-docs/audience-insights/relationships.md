@@ -1,74 +1,110 @@
 ---
 title: Vztahy mezi entitami a cesty k entitám
 description: Vytvářejte a spravujte vztahy mezi entitami z více zdrojů dat.
-ms.date: 04/14/2020
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: mukeshpo
-ms.author: mukeshpo
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: c25bfcb8e2a8223498dd1a5e8cfb3712a40ab85e
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595204"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171156"
 ---
 # <a name="relationships-between-entities"></a>Vztahy mezi entitami
 
-Vztahy vám pomůžou propojit entity a generovat graf dat, když entity sdílejí společný identifikátor (cizí klíč), na který lze odkazovat z jedné entity do druhé. Připojené entity umožňují definovat segmenty a míry na základě více zdrojů dat.
+Vztahy propojují entity a definují graf dat, když entity sdílejí společný identifikátor (cizí klíč). Na tento cizí klíč lze odkazovat z jedné entity do druhé. Propojené entity umožňují definovat segmenty a míry na základě více zdrojů dat.
 
-Existují dva typy vztahů. Neupravitelné systémové vztahy, které jsou vytvořeny automaticky, a vlastní vztahy vytvořené a nakonfigurované uživateli.
+Existují tři typy vztahů: 
+- Neupravitelné systémové vztahy, vytvořené systémem jako součást procesu sjednocení dat
+- Neupravitelné zděděné vztahy, které se vytvářejí automaticky během přijímání zdrojů dat 
+- Upravitelné vlastní vztahy, vytvořené a konfigurované uživateli
 
-Během procesů párování a sloučení jsou systémové vztahy vytvořeny na pozadí na základě inteligentního párování. Tyto vztahy pomáhají propojit záznamy profilu zákazníka se záznamy jiných odpovídajících entit. Následující diagram znázorňuje vytvoření tří systémových vztahů, když je entita zákazníka spárována s dalšími entitami k vytvoření konečné entity profilu zákazníka.
+## <a name="non-editable-system-relationships"></a>Neupravitelné systémové vztahy
 
-> [!div class="mx-imgBorder"]
-> ![Vytváření vztahu](media/relationships-entities-merge.png "Vytváření vztahu")
+Během sjednocení dat se automaticky vytvářejí systémové vztahy na základě inteligentního párování. Tyto vztahy pomáhají propojit záznamy profilu zákazníka s odpovídajícími záznamy. Následující diagram ilustruje vytvoření tří systémových vztahů. Entita zákazníka je spárována s jinými entitami za účelem vytvoření sjednocené entity *Zákazník*.
 
-- **Vztah *CustomerToContact*** byl vytvořen mezi entitou Zákazník a entitou Kontakt. Entita zákazníka získá klíčové pole **Contact_contactId**, které se vztahuje ke klíčovému poli entity Kontakt **contactId**.
-- **Vztah *CustomerToAccount*** byl vytvořen mezi entitou Zákazník a entitou Obchodní vztah. Entita zákazníka získá klíčové pole **Account_accountId**, které se vztahuje ke klíčovému poli entity Obchodní vztah **accountId**.
-- **Vztah *CustomerToWebAccount*** byl vytvořen mezi entitou Zákazník a entitou WebAccount. Entita zákazníka získá klíčové pole **WebAccount_webaccountId**, které se vztahuje ke klíčovému poli entity WebAccount **webaccountId**.
+:::image type="content" source="media/relationships-entities-merge.png" alt-text="Diagram s cestami vztahů pro entitu zákazníka se třemi vztahy 1:N.":::
 
-## <a name="create-a-relationship"></a>Vytvoření vztahu
+- **Vztah *CustomerToContact*** byl vytvořen mezi entitou *Zákazník* a entitou *Kontakt*. Entita *Zákazník* získá klíčové pole **Contact_contactID**, které se vztahuje ke klíčovému poli **contactID** entity *Kontakt*.
+- **Vztah *CustomerToAccount*** byl vytvořen mezi entitou *Zákazník* a entitou *Obchodní vztah*. Entita *Zákazník* získá klíčové pole **Account_accountID**, které se vztahuje ke klíčovému poli **accountID** entity *Obchodní vztah*.
+- **Vztah *CustomerToWebAccount*** byl vytvořen mezi entitou *Zákazník* a entitou *WebAccount*. Entita *Zákazník* získá klíčové pole **WebAccount_webaccountID**, které se vztahuje ke klíčovému poli **webaccountID** entity *WebAccount*.
 
-Definujte vlastní vztahy na stránce **Vztahy**. Každý vztah se skládá z entity Zdroj (entity, která drží cizí klíč) a entity Cíl (entity, na kterou cizí klíč zdrojové entity odkazuje).
+## <a name="non-editable-inherited-relationships"></a>Neupravitelné zděděné vztahy
+
+Během procesu přijímání dat systém hledá ve zdrojích dat existující vztahy. Pokud neexistuje žádný vztah, systém ho automaticky vytvoří. Tyto vztahy se také používají v následných procesech.
+
+## <a name="create-a-custom-relationship"></a>Vytvoření vlastního vztahu
+
+Vztah se skládá ze *zdrojové entity* obsahující cizí klíč a *cílové entity* na kterou cizí klíč zdrojové entity ukazuje. 
 
 1. V přehledech cílové skupiny přejděte na **Data** > **Vztahy**.
 
 2. Vyberte **Nový vztah**.
 
-3. V podokně **Přidat vztah** zadejte následující informace:
+3. V podokně **Nový vztah** zadejte následující informace:
 
-   > [!div class="mx-imgBorder"]
-   > ![Zadat podrobnosti vztahu](media/relationships-add.png "Zadat podrobnosti vztahu")
+   :::image type="content" source="media/relationship-add.png" alt-text="Boční podokno Nový vztah s prázdnými vstupními poli.":::
 
-   - **Název vztahu**: Název, který odráží účel vztahu (například **AccountWebLogs**).
+   - **Název vztahu**: Název, který vyjadřuje účel vztahu. Příklad: CustomerToSupportCase (vztah mezi zákazníkem a případem podpory).
    - **Popis**: Popis vztahu.
-   - **Zdrojová entita**: Vyberte entitu, která se používá jako zdroj ve vztahu (například WebLog).
-   - **Kardinalita**: Vyberte kardinalitu záznamů zdrojové entity. Například "mnoho" znamená, že více záznamů Weblog souvisí s jedním webovým účtem.
-   - **Pole zdrojového klíče**: Představuje pole cizího klíče ve zdrojové entitě. WebLog má například cizí klíčové pole **accountId**.
-   - **Cílová entita**: Vyberte entitu, která se používá jako cíl ve vztahu (například WebAccount).
-   - **Cílová kardinalita**: Vyberte kardinalitu záznamů cílové entity. Například "jedna" znamená, že více záznamů Weblog souvisí s jedním webovým účtem.
-   - **Cílové klíčové pole**: Toto pole představuje klíčové pole cílové entity. WebAccount má například klíčové pole **accountId**.
+   - **Zdrojová entita**: Entita, která se ve vztahu používá jako zdroj. Příklad: SupportCase (případ podpory).
+   - **Cílová entita**: Entita, která se ve vztahu používá jako cíl. Příklad: Customer (zákazník).
+   - **Kardinalita zdroje**: Určete kardinalitu zdrojové entity. Kardinalita popisuje počet možných prvků v sadě. Vždy je ve vztahu ke kardinalitě cíle. Můžete si vybrat hodnotu **Jeden** nebo **Mnoho**. Podporovány jsou pouze vztahy N:1 a 1:1.  
+     - Vztah mnoha k jednomu jinému: Více zdrojových záznamů se může vztahovat k jednomu cílovému záznamu. Příklad: Několik případů podpory od jednoho zákazníka.
+     - Vztah jednoho k jednomu jinému: Jeden záznam zdroje se vztahuje k jednomu cílovému záznamu. Příklad: Jedno věrnostní ID pro jednoho zákazníka.
 
-> [!NOTE]
-> Podporovány jsou pouze vztahy N:1 a 1:1. Vztahy N:N lze vytvořit pomocí dvou vztahů N:1 a entity propojení (entita, která se používá k připojení zdrojové entity a cílové entity).
+     > [!NOTE]
+     > Vztahy „mnoho k mnoha jiným“ lze vytvořit pomocí dvou vztahů „mnoho k jednomu“ a propojovací entity, která spojuje zdrojovou entitu a cílovou entitu.
 
-## <a name="delete-a-relationship"></a>Odstranit vztah
+   - **Cílová kardinalita**: Vyberte kardinalitu záznamů cílové entity. 
+   - **Pole zdrojového klíče**: Pole cizího klíče ve zdrojové entitě. Příklad: SupportCase může použít CaseID jako pole cizího klíče.
+   - **Pole cílového klíče**: Klíčové pole cílové entity. Příklad: Customer může použít klíčové pole **CustomerID**.
 
-1. V přehledech cílové skupiny přejděte na **Data** > **Vztahy**.
+4. Výběrem položky **Uložit** vytvoříte vlastní vztah.
 
-2. Zaškrtněte políčka u všech vztahů, které chcete odstranit.
+## <a name="view-relationships"></a>Zobrazení vztahů
 
-3. Vyberte **Odstranit** v horní části tabulky **Vztahy**.
+Stránka Vztahy uvádí seznam všech vztahů, které byly vytvořeny. Každý řádek představuje vztah, který zahrnuje také podrobnosti o zdrojové entitě, cílové entitě a kardinalitě. 
 
-4. Odstranění potvrďte.
+:::image type="content" source="media/relationships-list.png" alt-text="Seznam vztahů a možnosti na panelu akcí na stránce Vztahy.":::
+
+Tato stránka nabízí sadu možností pro stávající a nové vztahy: 
+- **Nový vztah**: [Vytvoření vlastního vztahu](#create-a-custom-relationship).
+- **Vizualizér** :[Prozkoumejte vizualizér vztahů](#explore-the-relationship-visualizer) a zobrazte si síťový diagram stávajících vztahů a jejich kardinalitu.
+- **Filtrovat podle**: Vyberte typ vztahů, které se mají zobrazit v seznamu.
+- **Vyhledat vztahy**: U vlastností vztahů použijte textové vyhledávání.
+
+### <a name="explore-the-relationship-visualizer"></a>Prohlídka vizualizéru vztahů
+
+Vizualizér vztahů zobrazuje si síťový diagram stávajících vztahů mezi propojenými entitami a jejich kardinalitu.
+
+Chcete-li si zobrazení přizpůsobit, můžete změnit polohu polí jejich přetažením na plátně.
+
+:::image type="content" source="media/relationship-visualizer.png" alt-text="Snímek síťového diagramu vizualizátoru vztahů s propojením mezi souvisejícími entitami.":::
+
+Dostupné možnosti: 
+- **Exportovat jako obrázek**: Uloží aktuální zobrazení jako obrazový soubor.
+- **Změnit na vodorovné/svislé rozložení**: Změňte zarovnání entit a vztahů.
+- **Upravit**: Aktualizujte vlastnosti vlastních vztahů v podokně úprav a uložte změny.
+
+## <a name="manage-existing-relationships"></a>Správa existujících vztahů 
+
+Na stránce Vztahy je každý vztah reprezentován řádkem. 
+
+Vyberte vztah a zvolte jednu z následujících možností: 
+ 
+- **Upravit**: Aktualizujte vlastnosti vlastních vztahů v podokně úprav a uložte změny.
+- **Odstranit**: Odstranění vlastních vztahů.
+- **Zobrazit** : Zobrazení systémem vytvořených a zděděných vztahů. 
 
 ## <a name="next-step"></a>Další krok
 
-Systém a vlastní vztahy se používají k vytvoření segmentů založených na více zdrojích dat, které již nejsou prosíceny. Další informace najdete v tématu [Segmenty](segments.md).
-
+Systémové a vlastní vztahy se používají k [vytvoření segmentů](segments.md) založených na více zdrojích dat, které již nejsou izolovány.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Tvorba a správa prostředí
 description: Zjistěte, jak se zaregistrovat do služby a jak spravovat prostředí.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887978"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259091"
 ---
 # <a name="manage-environments"></a>Správa prostředí
 
@@ -76,9 +76,9 @@ Vytvoření prostředí:
    > Podporujeme pouze účty úložiště Azure Data Lake Gen2 ze stejné oblasti Azure, kterou jste vybrali při vytváření prostředí.
    > Podporujeme pouze účty úložišť Azure Data Lake Gen2 s podporou hierarchického prostoru názvů (HNS).
 
-   - Pro možnost Azure Data Lake Storage Gen2 si můžete vybrat mezi ověřováním založeném na prostředku nebo na předplatném. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Název **kontejneru** nelze změnit a je „customerinsights“.
+   - Pro možnost Azure Data Lake Storage Gen2 si můžete vybrat mezi ověřováním založeném na prostředku nebo na předplatném. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Název **Kontejner** nelze změnit a bude mít hodnotu `customerinsights`.
    
-   - Pokud chcete použít [predikce](predictions.md), konfigurovat sdílení dat s aplikacemi a řešeními založenými na Microsoft Dataverse, nebo povolit příjem dat z místní zdrojů dat, uveďte adresu URL prostředí Microsoft Dataverse v části **Konfigurace sdílení dat s Microsoft Dataverse a povolení dalších funkcí**. Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights se službou Data Lake spravovanou Microsoft Dataverse.
+   - Pokud chcete použít [predikce](predictions.md), konfigurovat sdílení dat s Microsoft Dataverse, nebo povolit příjem dat z místních zdrojů dat, uveďte adresu URL prostředí Microsoft Dataverse v části **Konfigurace sdílení dat s Microsoft Dataverse a povolení dalších funkcí**. Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights se službou Data Lake spravovanou Microsoft Dataverse.
 
      > [!NOTE]
      > - Sdílení dat se službou Data Lake spravovanou Microsoft Dataverse aktuálně není podporováno, když uložíte všechna data do svého vlastního úložiště Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Vytvoření prostředí:
      > [!div class="mx-imgBorder"]
      > ![Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Když spustíte procesy, jako je ingestace dat nebo vytvoření segmentu, vytvoří se odpovídající složky v účtu úložiště, který jste zadali výše. Datové soubory a soubory model.json budou vytvořeny a přidány do příslušných podsložek na základě spuštěného procesu.
+   Když spustíte procesy, jako je ingestace dat nebo vytvoření segmentu, vytvoří se odpovídající složky v účtu úložiště, který jste zadali výše. Datové soubory a soubory model.json budou vytvořeny a přidány do složek na základě názvu procesu.
 
    Pokud vytvoříte více prostředí Customer Insights a zvolíte uložení výstupních entit z těchto prostředí do svého účtu úložiště, vytvoří se pro každé prostředí samostatné složky s ci_<environmentid> v kontejneru.
 
@@ -146,7 +146,7 @@ Můžete upravit některé podrobnosti existujících prostředí.
    > - Sdílení dat se službou Data Lake spravovanou Microsoft Dataverse aktuálně není podporováno, když uložíte všechna data do svého vlastního úložiště Azure Data Lake Storage.
    > - [Predikce chybějících hodnot v entitě](predictions.md) momentálně není podporována, pokud povolíte sdílení dat se spravovanou službou Data Lake Microsoft Dataverse.
 
-   Jakmile povolíte sdílení dat s Microsoft Dataverse, spustí se jednorázová úplná aktualizace vašich zdrojů dat a dalších procesů. Pokud procesy aktuálně běží a jsou ve frontě, neuvidíte možnost povolit sdílení dat s Microsoft Dataverse. Můžete počkat, až se tyto procesy dokončí, nebo je zrušit, abyste povolili sdílení dat. 
+   Až povolíte sdílení dat s Microsoft Dataverse, spustí se jednorázová úplná aktualizace vašich zdrojů dat a dalších procesů. Pokud procesy aktuálně běží, neuvidíte možnost povolit sdílení dat s Microsoft Dataverse. Chcete-li povolit sdílení dat, počkejte, až se tyto procesy dokončí, nebo je zrušte. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse.":::
    

@@ -1,7 +1,7 @@
 ---
 title: Rozšíření profilů zákazníků daty od společnosti Microsoft
 description: Použijte vlastnická data od společnosti Microsoft k rozšíření svých zákaznických dat o afinitu ke značce a zájmem.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064883"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245699"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte si zákaznické profily značkami a zájmovými skupinami (preview)
 
@@ -69,12 +69,10 @@ Asistované prostředí vám pomůže s konfigurací obohacení.
 
 ### <a name="define-your-brands-or-interests"></a>Uveďte své značky nebo zájmy
 
-Vyberte jednu z následujících možností:
+Vyberte až pět značek nebo zájmů pomocí jedné nebo obou z těchto možností:
 
-- **Odvětví**: Systém identifikuje top značky nebo zájmy relevantní pro váš obor a obohacuje o ně vaše zákaznická data.
-- **Vyberte vlastní**: Ze seznamu značek nebo zájmů, které jsou pro vaši organizaci nejvhodnější, vyberte až pět položek.
-
-Chcete-li přidat značku nebo zájem, zadejte je do vstupní oblasti a získejte návrhy na základě odpovídajících podmínek. Pokud neuvedeme značku nebo zájem, který hledáte, pošlete nám zpětnou vazbu pomocí odkazu **Navrhnout**.
+- **Odvětví** : Vyberte své odvětví z rozevíracího seznamu a poté vyberte své nejlepší značky nebo zájmy pro toto odvětví.
+- **Zvolte své vlastní** : Zadejte značku nebo zájem, který je relevantní pro vaši organizaci, a poté vyberte z odpovídajících návrhů. Pokud neuvedeme značku nebo zájem, který hledáte, pošlete nám zpětnou vazbu pomocí odkazu **Navrhnout**.
 
 ### <a name="review-enrichment-preferences"></a>Kontrola předvoleb rozšíření
 

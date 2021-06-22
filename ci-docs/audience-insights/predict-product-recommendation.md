@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906756"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095548"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predikce doporučení produktů (Preview)
 
@@ -125,7 +125,7 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
 
    :::image type="content" source="media/product-filters-sidepane.png" alt-text="Postranní podokno zobrazující atributy v entitě katalogu produktů, které chcete vybrat pro filtry produktů.":::
 
-1. Vyberte, zda chcete použít produktový filtr nebo spojky **and** nebo **or** pro logickou kombinaci vašeho výběru atributů z katalogu produktů.
+1. Vyberte, zda má produktový filtr použít konektory **and** pro logickou kombinaci vašeho výběru atributů z katalogu produktů.
    
    :::image type="content" source="media/product-filters-sample.png" alt-text="Ukázková konfigurace produktových filtrů kombinovaná s logickými spojkami AND.":::
 
@@ -205,33 +205,9 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
        > [!div class="mx-imgBorder"]
        > ![Seznam zobrazující návrhy s vysokou spolehlivostí pro vybranou sadu jednotlivých zákazníků](media/product-recommendation-highconfidence.PNG "Seznam zobrazující návrhy s vysokou spolehlivostí pro vybranou sadu jednotlivých zákazníků")
 
-## <a name="fix-a-failed-prediction"></a>Oprava neúspěšné predikce
+## <a name="manage-predictions"></a>Správa predikcí
 
-1. Jděte na kartu **Moje predikce** v umístění **Analytické nástroje** > **Predikce**.
-
-1. Vyberte predikci, pro kterou chcete zobrazit protokoly chyb, a vyberte **Protokoly**.
-
-1. Zkontrolujte všechny chyby. Existuje několik typů chyb, které mohou nastat a které popisují, jaký stav chybu způsobil. Například chyba, že není dostatek dat k přesné predikci, je obvykle vyřešena načtením dalších dat do Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Aktualizace předpovědi
-
-Predikce se automaticky aktualizují podle stejného [plánu aktualizace dat](system.md#schedule-tab), jaký je konfigurován v nastavení.
-
-1. Jděte na kartu **Moje predikce** v umístění **Analytické nástroje** > **Predikce**.
-
-1. Vyberte svislé tři tečky vedle predikce, kterou chcete aktualizovat.
-
-1. Vyberte **Aktualizovat**.
-
-## <a name="delete-a-prediction"></a>Odstranění predikce
-
-Odstraněním predikce odstraníte také jeho výstupní entitu.
-
-1. Jděte na kartu **Moje predikce** v umístění **Analytické nástroje** > **Predikce**.
-
-1. Vyberte svislé tři tečky vedle predikce, kterou chcete odstranit.
-
-1. Vyberte **Odstranit**.
+Predikce můžete optimalizovat, odstraňovat jejich problémy, aktualizovat nebo odstranit. Projděte si sestavu použitelnosti vstupních dat a zjistěte v ní, jak zajistit, aby predikce byla rychlejší a spolehlivější. Další informace naleznete v tématu [Správa predikcí](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

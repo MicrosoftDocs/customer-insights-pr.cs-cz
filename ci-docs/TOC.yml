@@ -96,30 +96,40 @@
           href: audience-insights/measures.md
     - name: Předpovědi
       items:
-        - name: Doplnění dat pomocí predikcí hodnot
-          href: audience-insights/predictions.md
-        - name: Předpovídejte ukončení předplatného
-          href: audience-insights/predict-subscription-churn.md
-        - name: Průvodce ukázkami predikce úbytku předplatných
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Predikce úbytku transakcí
-          href: audience-insights/predict-transactional-churn.md
-        - name: Průvodce ukázkami predikce úbytku transakcí
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Predikce hodnoty životnosti zákazníka (CLV)
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Predikce doporučení produktů
-          href: audience-insights/predict-product-recommendation.md
-        - name: Průvodce ukázkami predikce doporučení produktů
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Predikce data s pomocí umělé inteligence
+          items:
+            - name: Přehled prediktivních modelů
+              href: audience-insights/predictions-overview.md
+            - name: Predikce hodnoty životnosti zákazníka (CLV)
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Predikce doporučení produktů
+              href: audience-insights/predict-product-recommendation.md
+            - name: Předpovídejte ukončení předplatného
+              href: audience-insights/predict-subscription-churn.md
+            - name: Predikce úbytku transakcí
+              href: audience-insights/predict-transactional-churn.md
+            - name: Používání vlastních modelů z Azure Machine Learning
+              href: audience-insights/custom-models.md
+            - name: Vyplnění částečně chybějících dat
+              href: audience-insights/predictions.md
+        - name: Ukázkoví průvodci
+          items:
+            - name: Ukázkový průvodce pro predikci CLV
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Průvodce ukázkami predikce úbytku předplatných
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: Průvodce ukázkami predikce úbytku transakcí
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Průvodce ukázkami predikce doporučení produktů
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Experimenty s Azure Machine Learning
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Experimenty v Azure Machine Learning Studio
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Správa predikcí
+          href: audience-insights/manage-predictions.md
         - name: Vytvoření segmentů na základě predikcí
           href: audience-insights/prediction-based-segment.md
-        - name: Implementace vlastních modelů strojového učení
-          href: audience-insights/custom-models.md
-        - name: Experimenty s Azure Machine Learning
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Experimenty v Azure Machine Learning Studio
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Možnosti exportu
       items:
         - name: Exporty
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: LinkedIn Ads
+              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: Mailchimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
+            - name: Microsoft Advertising
+              href: audience-insights/export-microsoft-advertising.md
+            - name: Omnisend
+              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
             - name: SendGrid
@@ -200,6 +216,8 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Kontrola schémat entit v Common Data Model
           href: audience-insights/entity-schemas.md
+        - name: Data Customer Insights v Dataverse
+          href: audience-insights/customer-insights-dataverse.md
         - name: "Práce s\_API"
           href: audience-insights/apis.md
         - name: Referenční informace o rozhraních API
@@ -240,6 +258,12 @@
           href: engagement-insights/custom-reports.md
         - name: Vytváření sestav sjednocených profilů
           href: engagement-insights/profile-reports.md
+        - name: Zobrazení a vytvoření dimenzí
+          href: engagement-insights/dimensions.md
+        - name: Zobrazení a vytvoření metrik
+          href: engagement-insights/metrics.md
+        - name: Zobrazení a vytvoření segmentů
+          href: engagement-insights/segments.md
     - name: Analýza cesty
       items:
         - name: Vytvoření a správa trychtýřových sestav

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954571"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095502"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Hodnota životnosti zákazníka (CLV) (Preview)
 
@@ -149,7 +149,6 @@ Data odrážející klíčové interakce se zákazníky (jako je web, služby z�
 
 1. Vyberte **Další**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Zkontrolujte a spusťte konfiguraci modelu
 
 1. V kroku **Kontrola podrobností modelu** ověřte konfiguraci predikce. Výběrem možnosti **Upravit** pod zobrazenou hodnotou se můžete vrátit do libovolné části konfigurace predikce. Krok konfigurace můžete vybrat také z ukazatele průběhu.
@@ -170,11 +169,10 @@ Data odrážející klíčové interakce se zákazníky (jako je web, služby z�
 - **Stav**: Stav spuštění predikce.
     - **Ve frontě**: Predikce čeká na dokončení dalších procesů.
     - **Aktualizace**: Predikce právě běží, aby vytvářela výsledky, které budou přenášeny do výstupní entity.
-    - **Selhání**: Spuštění predikce selhalo. [Podívejte se do protokolů](#troubleshoot-a-failed-prediction) pro další podrobnosti.
+    - **Selhání**: Spuštění predikce selhalo. [Podívejte se do protokolů](manage-predictions.md#troubleshoot-a-failed-prediction) pro další podrobnosti.
     - **Úspěch**: Predikce byla úspěšná. Vyberte **Zobrazení** pod svislými elipsami, abyste zkontrolovali výsledky predikce.
 - **Upraveno**: Datum, kdy byla konfigurace predikce změněna.
 - **Poslední aktualizace**: Datum, kdy predikce aktualizovala výsledky ve výstupní entitě.
-
 
 ### <a name="review-prediction-results"></a>Kontrola výsledků predikce
 
@@ -216,28 +214,8 @@ Na stránce výsledků jsou tři primární sekce s daty.
 
 - **Nejvlivnější faktory**: Při vytváření CLV na základě vstupních dat poskytnutých modelu AI se zvažují různé faktory predikce. Každý z faktorů má svou důležitost vypočítanou pro agregované predikce, které model vytváří. Tyto faktory můžete použít k ověření výsledků predikce. Tyto faktory také poskytují lepší přehled o nejvlivnějších faktorech, které přispěly k predikci CLV u všech vašich zákazníků.
 
-## <a name="refresh-a-prediction"></a>Aktualizace předpovědi
+## <a name="manage-predictions"></a>Správa predikcí
 
-Predikce se automaticky aktualizují podle stejného [plánu aktualizace dat](system.md#schedule-tab), jaký je konfigurován v nastavení. Můžete je také aktualizovat ručně.
-
-1. Přejděte na **Analytické nástroje** > **Predikce** a vyberte kartu **Moje predikce**.
-2. Vyberte svislé tři tečky vedle predikce, kterou chcete aktualizovat.
-3. Vyberte **Aktualizovat**.
-
-## <a name="delete-a-prediction"></a>Odstranění predikce
-
-Odstraněním predikce odstraníte také jeho výstupní entitu.
-
-1. Přejděte na **Analytické nástroje** > **Predikce** a vyberte kartu **Moje predikce**.
-2. Vyberte svislé tři tečky vedle predikce, kterou chcete odstranit.
-3. Vyberte **Odstranit**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Řešení potíží se selháním predikce
-
-1. Přejděte na **Analytické nástroje** > **Predikce** a vyberte kartu **Moje predikce**.
-2. Vyberte svislé tři tečky vedle predikce, u které chcete zobrazit protokoly chyb.
-3. Vyberte **Protokoly**.
-4. Zkontrolujte všechny chyby. Existuje několik typů chyb, které mohou nastat a které popisují, jaký stav chybu způsobil. Například chyba, že není dostatek dat k přesné predikci, je obvykle vyřešena načtením dalších dat do přehledů cílových skupin.
-
+Predikce můžete optimalizovat, odstraňovat jejich problémy, aktualizovat nebo odstranit. Projděte si sestavu použitelnosti vstupních dat a zjistěte v ní, jak zajistit, aby predikce byla rychlejší a spolehlivější. Další informace naleznete v tématu [Správa predikcí](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
