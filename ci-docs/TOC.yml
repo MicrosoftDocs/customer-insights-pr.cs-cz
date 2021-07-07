@@ -72,7 +72,7 @@
           href: audience-insights/enrichment-here.md
         - name: Rozšíření o Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Rozšíření o Experian
+        - name: Obohacení pomocí Experian
           href: audience-insights/enrichment-experian.md
         - name: Rozšíření pomocí vlastního importu SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -136,6 +136,8 @@
           items:
             - name: Přehled exportů
               href: audience-insights/export-destinations.md
+            - name: Aktivní kampaň
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -238,17 +244,17 @@
       items:
         - name: Začínáme
           href: engagement-insights/get-started.md
-        - name: Vytvoření pracovního prostoru
+        - name: Vytvořit pracovní prostor
           href: engagement-insights/create-workspace.md
-        - name: Vybavení vašeho webu
-          href: engagement-insights/instrument-website.md
+        - name: Zachytávání události z webů a mobilních aplikací
+          href: engagement-insights/developer-resources.md
         - name: Koncepty a terminologie
           href: engagement-insights/glossary.md
     - name: Akce
       items:
         - name: Vytváření a úpravy událostí
           href: engagement-insights/refined-events.md
-        - name: Export událostí
+        - name: Exportovat události
           href: engagement-insights/export-events.md
     - name: Zprávy
       items:
@@ -272,10 +278,18 @@
       items:
         - name: Přehled materiálů pro vývojáře
           href: engagement-insights/developer-resources.md
-        - name: Kurz webového rozhraní SDK
+        - name: Kurz webové SDK
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Ukázka webového rozhraní SDK
           href: engagement-insights/websdk-sample.md
+        - name: Kurz Android SDK
+          href: engagement-insights/get-started-android.md
+        - name: Ukázka Android SDK
+          href: engagement-insights/androidsdk-sample.md
+        - name: Kurz pro iOS SDK
+          href: engagement-insights/get-started-ios.md
+        - name: Ukázka sady iOS SDK
+          href: engagement-insights/iossdk-sample.md
     - name: Správa
       items:
         - name: Role a oprávnění
