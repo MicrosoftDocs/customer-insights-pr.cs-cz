@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049242"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304781"
 ---
 # <a name="define-and-manage-measures"></a>Definujte a spravujte opatření
 
-Míry vám pomohou lépe porozumět chování zákazníků a výkonnosti podniku. Zaměřují se na relevantní hodnoty ze [sjednocených profilů](data-unification.md). Například firma chce vidět *celkové výdaje na zákazníka* pro pochopení historie nebo míry nákupu jednotlivých zákazníků nebo míry *celkový prodej společnosti* pro pochopení agregovaných výnosů v celé firmě.  
+Míry vám pomohou lépe porozumět chování zákazníků a výkonnosti podniku. Zaměřují se na relevantní hodnoty ze [sjednocených profilů](data-unification.md). Například firma chce vidět *celkové výdaje na zákazníka*, aby rozuměla historii nebo míře nákupu jednotlivého zákazníka nebo změřila *celkový prodej společnosti*, aby porozuměla agregovaným výnosům v celém podniku.  
 
 Míry jsou vytvářeny pomocí nástroje pro tvorbu měr, což je platforma pro dotazování dat s různými operátory a možnostmi jednoduchého mapování. Umožňuje filtrovat data, seskupovat výsledky, detekovat [cesty vztahů mezi entitami](relationships.md) a zobrazovat náhledy výstupu.
 
@@ -36,7 +36,7 @@ Tato sekce vás provede vytvořením nové míry od nuly. Můžete vytvořit mí
    > [!NOTE]
    > Pokud má vaše nová konfigurace míry pouze dvě pole, například CustomerID a jeden výpočet, výstup bude přidán jako nový sloupec do entity generované systémem s názvem Customer_Measure. Hodnotu míry uvidíte ve sjednoceném profilu zákazníka. Další míry vygenerují vlastní entity.
 
-1. V oblasti konfigurace vyberte agregační funkci z rozevírací nabídky **Vyberte funkci**. Agregační funkce zahrnují: 
+1. V oblasti konfigurace vyberte funkci agregace z rozevírací nabídky **Vybrat funkci**. Agregační funkce zahrnují: 
    - **Sum**
    - **Průměr**
    - **Počet**
@@ -64,17 +64,19 @@ Tato sekce vás provede vytvořením nové míry od nuly. Můžete vytvořit mí
 
 1. Chcete-li přidat filtry, vyberte možnost **Filtr** v konfigurační oblasti. 
   
-   1. V sekci **Přidat atribut** v podokně **Filtry** vyberte atribut, který chcete použít k vytvoření filtrů.
+   1. V části **Přidat atribut** podokna **Filtry** vyberte atribut, který chcete použít k vytvoření filtrů.
    1. Nastavte operátory filtru tak, aby definovaly filtr pro každý vybraný atribut.
    1. Volbou **Použít** přidáte filtry do míry.
 
 1. Chcete-li přidat dimenze, vyberte možnost **Dimenze** v konfigurační oblasti. Dimenze se v entitě výstupu míry zobrazí jako sloupce.
+ 
    1. Volbou **Upravit dimenze** přidáte atributy dat, podle kterých chcete seskupit hodnoty měr. Například město nebo pohlaví. Ve výchozím nastavení je vybrána dimenze *CustomerID* k vytvoření *měr na úrovni zákazníka*. Pokud chcete vytvořit *míry na úrovni podniku*, můžete odebrat výchozí míru.
    1. Volbou **Hotovo** přidáte dimenze do míry.
 
 1. Pokud jsou ve vašich datech hodnoty, které potřebujete nahradit celým číslem, nahraďte například hodnotu *null* hodnotou *0*, vyberte **Pravidla**. Nakonfigurujte pravidlo a ujistěte se, že jako náhradu zvolíte pouze celá čísla.
 
 1. Pokud mezi datovou entitou, kterou jste mapovali, a entitou *Zákazník* existuje více cest, musíte zvolit jednu z identifikovaných [cest vztahů mezi entitami](relationships.md). Výsledné míry se mohou lišit v závislosti na vybrané cestě. 
+   
    1. Vyberte **Předvolby dat** a vyberte cestu entity, která by měla být použita k identifikaci vaší míry. Pokud existuje pouze jedna cesta k entitě *Zákazník*, tento ovládací prvek se nezobrazí.
    1. Volbou **Hotovo** použijete svůj výběr. 
 
@@ -123,7 +125,7 @@ Následující postup popisuje kroky k vytvoření nové míry pomocí šablony.
 
 1. Vyberte **Hotovo**.
 
-1. V části **Nastavit časové období** definujte časový rámec dat, která se mají použít. Vyberte, zda chcete, aby nová míra pokrývala celou datovou sadu, výběrem možnosti **Pořád**. Nebo zda chcete, aby se míra zaměřovala na **Specifické časové období**.
+1. V části **Nastavit časové období** definujte časový rámec dat, která se mají použít. Vyberte, zda má nová míra pokrývat celou datovou sadu, výběrem **Kdykoli**, nebo zda se má zaměřovat na **Specifické časové období**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Screenshot zobrazující část časového období při konfiguraci míry ze šablony.":::
 
@@ -142,12 +144,12 @@ Následující postup popisuje kroky k vytvoření nové míry pomocí šablony.
 
 Seznam měr naleznete na stránce **Míry**.
 
-Najdete informace o typu, tvůrci, datu vytvoření, statusu a stavu míry. Když vyberete míru ze seznamu, můžete zobrazit náhled výstupu a stáhnout soubor .CSV.
+Najdete informace o typu, tvůrci, datu vytvoření, statusu a stavu míry. Když vyberete míru ze seznamu, můžete zobrazit náhled výstupu a stáhnout soubor CSV.
 
 Chcete-li obnovit všechna vaše opatření současně, vyberte **Aktualizovat vše** bez výběru konkrétního opatření.
 
 > [!div class="mx-imgBorder"]
-> ![Akce ke správě jednotlivých opatření](media/measure-actions.png "Akce ke správě jednotlivých opatření")
+> ![Akce ke správě jednotlivých opatření.](media/measure-actions.png "Akce ke správě jednotlivých opatření.")
 
 Vyberte míru ze seznamu a použijte některou z následujících voleb:
 
@@ -163,7 +165,7 @@ Vyberte míru ze seznamu a použijte některou z následujících voleb:
 
 ## <a name="next-step"></a>Další krok
 
-K vytvoření použijete stávající míry pro vytvoření [zákaznického segmentu](segments.md).
+K vytváření můžete použít stávající míry [zákaznický segment](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124357"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304802"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Export segmentů do služby AdRoll (preview)
 
@@ -28,11 +28,11 @@ Exportujte segmenty sjednocených profilů zákazníků do služby AdRoll a pou�
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Do služby AdRoll můžete exportovat maximálně 250 000 profilů na jeden export.
+- Do AdRoll můžete exportovat až 250 000 záznamů současně.
 - Do AdRoll nelze exportovat segmenty s méně než 100 profily. 
 - Export do služby Marketo je omezen na segmenty.
 - Export až 250 000 profilů do služby AdRoll může trvat až 10 minut. 
-- Počet profilů, které můžete exportovat do služby AdRoll, závisí a je omezen na vaší smlouvě se službou AdRoll.
+- Počet profilů, které můžete exportovat do služby AdRoll, závisí na vaší smlouvě se společností AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Nastavení propojení s AdRoll
 
@@ -64,7 +64,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. V poli **propojení pro export** vyberte propojení v části AdRoll. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
 
-1. Vložte své **ID inzerenta AdRoll** Další informace viz [Profily inzerenta AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Vložte své **ID inzerenta AdRoll**. Další informace viz [Profily inzerentů AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je nutné exportovat segmenty do služby AdRoll.
 
@@ -74,11 +74,13 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 Uložení exportu nespustí export okamžitě.
 
-Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
+Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). 
+
+Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
 
 Když povolíte Dynamics 365 Customer Insights přenést data do služby AdRoll, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že služba AdRoll splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Tuto funkci cíle exportu může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+Váš správce Dynamics 365 Customer Insights může tento cíl exportu kdykoli odebrat a ukončit tak používání této funkce.

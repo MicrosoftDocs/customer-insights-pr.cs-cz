@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129937"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306341"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Predikce celoživotní hodnoty zákazníka (CLV) – ukázkový průvodce
 
@@ -123,7 +123,7 @@ Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jedn
 
 1. Přejděte na kartu **Párování** a vyberte **Nastavit pořadí**.
 
-1. V rozevíracím seznamu **Primární** vyberte **eCommerceContacts: eCommerce** jako primární zdroj a zahrňte všechny záznamy.
+1. V **primárním** rozevíracím seznamu zvolte jako primární zdroj **eCommerceContacts : eCommerce** a zahrňte všechny záznamy.
 
 1. V rozevíracím seznamu **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všechny záznamy.
 
@@ -133,16 +133,16 @@ Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jedn
 
 1. Přidejte svou první podmínku pomocí FullName.
 
-   - Pro eCommerceContacts vyberte **FullName** v rozbalovací nabídce.
-   - Pro loyCustomers vyberte **FullName** v rozbalovací nabídce.
-   - Vyberte rozevírací seznam **Normalizovat** a vyberte **Typ (telefon, jméno, adresa, ...)**.
+   - Pro eCommerceContacts vyberte **Celé jméno** v rozevírací nabídce.
+   - Pro loyCustomers vyberte **Celé jméno** v rozevírací nabídce.
+   - Vyberte rozevírací seznam **Normalizovat** a zvolte **Typ (Telefon, Jméno, Adresa, ...)**.
    - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
 
 1. Zadejte jméno **Celé jméno, e-mail** pro nové pravidlo.
 
    - Přidejte druhou podmínku pro e-mailovou adresu výběrem **Přidat podmínku**
-   - Pro entitu eCommerceContacts zvolte **EMail** v rozevíracím seznamu.
-   - Pro entitu loyCustomers zvolte **EMail** v rozevíracím seznamu.
+   - Pro entitu eCommerceContacts zvolte **EMail** v rozevírací nabídce.
+   - Pro entitu loyCustomers zvolte **EMail** v rozevírací nabídce.
    - Ponechejte pole Noramlizovat prázdné.
    - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
 

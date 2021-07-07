@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965570"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305424"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obohacení profilů zákazníků o vylepšené adresy
 
@@ -22,7 +22,7 @@ Adresy ve vašich datech mohou být nestrukturované, neúplné nebo nesprávné
 
 ## <a name="how-we-enhance-addresses"></a>Jak vylepšujeme adresy
 
-Náš model prochází vylepšením adresy ve dvou krocích. Nejprve analyzuje adresu, aby identifikovala její komponenty, a umístí je do strukturovaného formátu. Poté pomocí umělé inteligence opravíme, doplníme a standardizujeme hodnoty v adrese.
+Náš model prochází vylepšením adresy ve dvou krocích. Nejprve analyzuje adresu, aby identifikovala její komponenty, a umístí je do strukturovaného formátu. Poté pomocí AI opravíme, doplníme a standardizujeme hodnoty v adrese.
 
 ### <a name="example"></a>Příklad
 
@@ -50,7 +50,7 @@ Vylepšené adresy pracují pouze s hodnotami, které již existují v přijatý
 2. Ověřte, zda jsou některé z hodnot, například PSČ nebo názvy ulic, platné.
 3. Změňte hodnoty, které nerozpozná.
 
-Model používá techniky založené na strojovém učení k vylepšení adres. I když použijeme vysokou mezní hodnotu spolehlivosti, platí, že když model změní vstupní hodnotu, stejně jako u jakéhokoli modelu založeného na ML není zaručena 100% přesnost.
+Model používá techniky založené na strojovém učení k vylepšení adres. I když použijeme vysokou prahovou hodnotu spolehlivosti, když model změní vstupní hodnotu, stejně jako u jakéhokoli modelu založeného na strojovém učení, není zaručena 100% přesnost.
 
 ## <a name="supported-countries-or-regions"></a>Podporované země nebo regiony
 
@@ -76,7 +76,7 @@ Adresy musí obsahovat hodnotu země / oblasti. Nezpracováváme adresy pro zem�
 1. Vyberte způsob formátování adres v datové sadě. Pokud adresy ve vašich datech používají jedno pole, zvolte **Adresa s jedním atributem**. Pokud adresy ve vašich datech používají více než jedno datové pole, zvolte **Adresa s více atributy**.
 
    > [!NOTE]
-   > Země / oblast je povinná u adresy s jedním i více atributy. Adresy, které neobsahují platné nebo podporované hodnoty země / oblasti, nebudou obohaceny
+   > Země / oblast je povinná u adres s jedním atributem i u více atributů. Adresy, které neobsahují platné nebo podporované hodnoty země / oblasti, nebudou obohaceny.
 
 1.  Mapujte pole adresy z vaší sjednocené entity zákazníka.
 
@@ -98,6 +98,6 @@ Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobném
 
 ## <a name="next-steps"></a>Další kroky
 
-Stavte na svých obohacených zákaznických údajích. Vytvářejte [segmenty](segments.md), [míry](measures.md) a dokonce [exportujte data](export-destinations.md), abyste svým zákazníkům dopřáli osobní zážitek.
+Stavte na svých obohacených zákaznických údajích. Vytvořte [segmenty](segments.md) a [míry](measures.md) a dokonce [exportujte data](export-destinations.md), abyste svým zákazníkům poskytli přizpůsobené prostředí.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111379"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306249"
 ---
 # <a name="segments-overview"></a>Přehled segmentů
 
@@ -68,7 +68,7 @@ Segment můžete exportovat ze stránky segmentů nebo ze [stránky exportů](ex
 
 1. Vyberte možnost **Zobrazit další [...]** pro segment, který chcete exportovat.
 
-1. Vyberte položku **Spravovat exporty** z rozevíracího seznamu akcí.
+1. V rozevíracím seznamu akcí vyberte **Spravovat exporty**.
 
 1. Otevře se stránka **Exporty (preview) pro segment**. Můžete zobrazit všechny konfigurované exporty seskupené podle exportů, které obsahují aktuální segment nebo jej neobsahují.
 

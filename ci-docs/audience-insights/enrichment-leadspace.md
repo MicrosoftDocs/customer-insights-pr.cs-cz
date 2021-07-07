@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895905"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305194"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Rozšíření profilů společnosti o Leadspace (náhled)
 
@@ -36,7 +36,7 @@ Abyste mohli Leadspace konfigurovat, je třeba splnit následující předpoklad
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Screenshot dlaždice Leadspace.":::
 
-1. V rozevíracím seznamu vyberte [propojení](connections.md). Pokud není k dispozici propojení , kontaktujte správce. Pokud jste správce, můžete vytvořit propojení výběrem možnosti **Přidat propojení** a **Leadspace**. 
+1. V rozevíracím seznamu vyberte [připojení](connections.md). Pokud není k dispozici propojení , kontaktujte správce. Pokud jste správce, můžete vytvořit propojení výběrem možnosti **Přidat propojení** a **Leadspace**. 
 
 1. propojení potvrďte výběrem **Připojit k Leadspace**.
 
@@ -63,7 +63,7 @@ Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci ro
 
 1. Zadejte platný token Leadspace.
 
-1. Projděte si a poskytněte svůj souhlas s **Ochranou osobních údajů a dodržování předpisů** výběrem zaškrtávacího políčka **Souhlasím**.
+1. Zkontrolujte a poskytněte svůj souhlas s **ochranou osobních údajů a dodržováním předpisů** výběrem **souhlasím**.
 
 1. Vyberte **Ověřit** k ověření konfigurace.
 
@@ -81,7 +81,7 @@ Další informace naleznete na webu [Rozhraní API Leadspace](https://support.le
 
 ## <a name="next-steps"></a>Další kroky
 
-Stavte na svých obohacených zákaznických údajích. Vytvářejte [segmenty](segments.md), [míry](measures.md) a dokonce [exportujte data](export-destinations.md), abyste svým zákazníkům dopřáli osobní zážitek.
+Stavte na svých obohacených zákaznických údajích. Vytvořte [segmenty](segments.md) a [míry](measures.md) a dokonce [exportujte data](export-destinations.md), abyste svým zákazníkům poskytli přizpůsobené prostředí.
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
 

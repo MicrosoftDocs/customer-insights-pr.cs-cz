@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253032"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305470"
 ---
 # <a name="exports-preview-overview"></a>Přehled exportů (Preview)
 
 Stránka **Export** zobrazuje všechny nakonfigurované exporty. Exporty sdílejí konkrétní data s různými aplikacemi. Mohou zahrnovat zákaznické profily nebo entity, schémata a podrobnosti mapování. Každý export vyžaduje [připojení, které nastavil správce, ke správě ověřování a přístupu](connections.md).
 
-Jděte na **Data** > **Exporty** pro zobrazení stránky exportů. Všechny uživatelské role mají přístup k zobrazení nakonfigurovaných exportů. Pomocí vyhledávacího pole na panelu příkazů můžete najít exporty podle jejich názvu, názvu připojení nebo typu připojení.
+Jděte na **Data** > **Exporty** pro zobrazení stránky exportů. Všechny uživatelské role mohou zobrazit nakonfigurované exporty. Pomocí vyhledávacího pole na panelu příkazů vyhledejte exporty podle jejich názvu, názvu připojení nebo typu připojení.
 
 ## <a name="set-up-a-new-export"></a>Nastavení nového exportu
 
@@ -65,7 +65,7 @@ Po vytvoření jsou cíle exportu uvedeny v části **Data** > **Exporty**. Vši
 
 1. Přejděte na **Data** > **Exporty**.
 
-1. Uživatelé bez oprávnění k úpravám mohou vybrat **Zobrazit** místo **Upravit** k zobrazení podrobností o exportu.
+1. Vyberte uživatele bez oprávnění k úpravám **Zobrazit** namísto **Upravit**, abyste mohli zobrazit podrobnosti exportu.
 
 1. Postranní podokno ukazuje konfiguraci exportu. Bez oprávnění k úpravám nemůžete hodnoty měnit. Vyberte **Zavřít** pro návrat na stránku exportu.
 
@@ -73,7 +73,7 @@ Po vytvoření jsou cíle exportu uvedeny v části **Data** > **Exporty**. Vši
 
 Každý export, který konfigurujete, má plán aktualizace. Během aktualizace systém hledá nová nebo aktualizovaná data, která mají být zahrnuta do exportu. Ve výchozím nastavení jsou exporty spouštěny jako součást každé [plánované aktualizace systému](system.md#schedule-tab). Plán aktualizace můžete upravit nebo jej vypnout, aby se exporty spouštěly ručně.
 
-Plány exportu závisí na stavu vašeho prostředí. Pokud probíhají aktualizace [závislostí](system.md#refresh-policies) v době, kdy by měl začít plánovaný export, systém nejprve dokončí závislosti a poté spustí export. Ve sloupci **Aktualizováno** vidíte, kdy byl export naposledy aktualizován.
+Plány exportu závisí na stavu vašeho prostředí. Pokud probíhají aktualizace [závislostí](system.md#refresh-policies), když by měl začít plánovaný export, systém nejprve dokončí aktualizace a poté spustí export. Ve sloupci **Aktualizováno** vidíte, kdy byl export naposledy aktualizován.
 
 ### <a name="schedule-exports"></a>Plánování exportů
 

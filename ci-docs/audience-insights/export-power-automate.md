@@ -1,7 +1,7 @@
 ---
 title: Konektor Power Automate | Microsoft Docs
 description: Vytváření toků v Microsoft Power Automate z Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+ms.date: 06/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 57be0a204ef920b7a4bb31cf9a5b3a77f96eca0d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976080"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305056"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (preview)
 
@@ -31,9 +31,10 @@ Pomocí triggerů můžete vytvářet cloudové toky a automatizovat opakující
 - Spustí se, když je dokončena úplná aktualizace (zdroje dat, segmenty, míry, ...).
 - Spustí se, když je dokončena aktualizace procesu sjednocení (mapování, spárování, sloučení).
 
-[Konfigurace triggerů v Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
+[Konfigurace triggerů v Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
 ## <a name="power-automate-actions"></a>Akce Power Automate
+
 Konektor Power Automate poskytuje jiné akce než dostupné triggery. Další informace naleznete v dokumentaci [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Vytvoření toku Power Automate

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596905"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305883"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Připojte se k Power Query zdroji dat
 
@@ -72,7 +72,7 @@ Konektory se zaškrtnutím ve sloupci **Customer Insights (toky dat)** slouží 
 
 1. V přehledech cílové skupiny přejděte na **Data** > **Zdroje dat**.
 
-2. Vyberte vertikální tři tečky vedle zdroje dat, který chcete změnit, a vyberte **Upravit** z rozbalovací nabídky.
+2. Vyberte svislé tlačítko se třemi tečkami vedle zdroje dat, který chcete změnit, a v rozevírací nabídce vyberte **Upravit**.
 
    > [!div class="mx-imgBorder"]
    > ![Upravit možnost](media/edit-option-data-sources.png "Upravit možnost")

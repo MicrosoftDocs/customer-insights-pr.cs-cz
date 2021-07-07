@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085522"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304688"
 ---
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
@@ -30,15 +30,15 @@ Zdroj dat můžete přidat třemi hlavními způsoby:
 
 - [Prostřednictvím desítek konektorů Power Query](connect-power-query.md)
 - [Ze složky modelu Common Data Model](connect-common-data-model.md)
-- [Z vlastního jezera Common Data Service](connect-common-data-service-lake.md)
+- [Z vlastního jezera Microsoft Dataverse](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Přidání dat z místních zdrojů dat
 
-Příjem dat z místní zdrojů dat v cílové skupině Insights je podporován na základě toků dat Power Platform. Toky dat lze povolit v nástroji Customer Insights [poskytnutím adresy URL prostředí Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) při nastavování prostředí.
+Příjem dat z místních zdrojů dat v cílové skupině přehledů je podporován na základě toků dat Microsoft Power Platform. Toky dat lze povolit v nástroji Customer Insights [poskytnutím adresy URL prostředí Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) při nastavování prostředí.
 
-Zdroje dat, které se vytvoří po přidružení prostředí Dataverse k nástroji Customer Insights, budou používat [toky dat Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) ve výchozím stavu. Datové toky podporují místní připojení pomocí datové brány. Odeberte a znovu vytvořte zdroje dat, které existovaly před přidružením prostředí Dataverse k [použití místních bran dat](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Zdroje dat, které se vytvoří po přidružení prostředí Dataverse k nástroji Customer Insights, budou používat [toky dat Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) ve výchozím stavu. Datové toky podporují místní připojení pomocí datové brány. Odeberte a znovu vytvořte zdroje dat, které existovaly před přidružením prostředí Dataverse k [použití místních bran dat](/data-integration/gateway/service-gateway-app.md).
 
-Datové brány z existujícího prostředí Power BI nebo Power Apps bude viditelné a můžete jej znovu použít ve službě Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy pro přechod do prostředí Power Platform, kde můžete prohlížet a konfigurovat místní brány dat.
+Datové brány z existujícího prostředí Power BI nebo Power Apps bude viditelné a můžete jej znovu použít ve službě Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy, na které chcete přejít v prostředí Microsoft Power Platform, kde můžete prohlížet a konfigurovat místní datové brány.
 
 ## <a name="review-ingested-data"></a>Zkontrolujte přijatá data
 
@@ -56,7 +56,7 @@ Uvidíte název každého přijatého zdroje dat, jeho stav a poslední čas, kd
 
 Vyberte hodnotu ve sloupci **Stav** ve zdroji dat, chcete-li znát další podrobnosti. V podokně **Podrobnosti o průběhu** rozbalte **Zdroje dat**. Volbou **Zobrazit podrobnosti** zobrazíte další informace o stavu aktualizace, včetně podrobností o chybách a následných aktualizacích procesu.
 
-Načtení dat může chvíli trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce **Entity**. Další informace najdete v tématu [Entity](entities.md).
+Načítání dat může nějakou dobu trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce **Entity**. Další informace najdete v tématu [Entity](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Aktualizace zdroje dat
 
@@ -66,9 +66,9 @@ Přejděte na **Správce** > **Systém** > [**Plán**](system.md#schedule-tab), 
 
 Chcete-li aktualizovat zdroj dat na vyžádání, postupujte takto:
 
-1. V přehledech cílové skupiny přejděte na **Data** > **Zdroje dat**
+1. V přehledech cílové skupiny přejděte na **Data** > **Zdroje dat**.
 
-2. Vyberte svislé tři tečky vedle zdroje dat, který chcete aktualizovat, a vyberte **Aktualizovat** z rozevíracího seznamu.
+2. Vyberte svislé tlačítko se třemi tečkami vedle zdroje dat, který chcete aktualizovat, a v rozevíracím seznamu vyberte **Aktualizovat**.
 
 3. Zdroj dat je nyní spuštěn pro ruční aktualizaci. Aktualizací zdroj dat aktualizujete schéma entity i data pro všechny entity uvedené ve zdroji dat.
 
@@ -78,7 +78,7 @@ Chcete-li aktualizovat zdroj dat na vyžádání, postupujte takto:
 
 1. V přehledech cílové skupiny přejděte na **Data** > **Zdroje dat**.
 
-2. Vyberte vertikální tři tečky vedle zdroje dat, který chcete odebrat, a vyberte **Odstranit** z rozbalovací nabídky.
+2. Vyberte svislé tlačítko se třemi tečkami vedle zdroje dat, který chcete odebrat, a v rozevírací nabídce vyberte **Odstranit**.
 
 3. Odstranění potvrďte.
 

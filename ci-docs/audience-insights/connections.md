@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896089"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304964"
 ---
 # <a name="connections-preview-overview"></a>Přehled propojení (preview)
 
@@ -42,7 +42,7 @@ Chcete-li přidat propojení, musíte mít [oprávnění správce](permissions.m
 
 1. Přejde na kartu **Propojení**.
 
-1. Výběrem možnosti **Přidat propojení** vytvořte nové propojení. Z rozevírací nabídky vyberte, jaký typ propojení chcete vytvořit.
+1. Výběrem možnosti **Přidat propojení** vytvořte nové propojení. Z rozbalovací nabídky vyberte, jaký typ připojení chcete vytvořit.
 
 1. V podokně **Nastavení propojení** uveďte požadované podrobnosti. 
    1. Propojení popisuje **zobrazované jméno** a typ propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl tohoto propojení.
@@ -74,7 +74,9 @@ Při nastavování nebo úpravách propojení pro export si vyberete, kterým u�
 
 ## <a name="remove-a-connection"></a>Odebrání propojení
 
-Pokud propojení, které odebíráte, používá rozšíření nebo export, musíte je nejprve odpojit nebo odebrat. Dialogové okno odebrání vás provede příslušným rozšířením nebo exportem. Oddělená rozšíření a exporty se stanou neaktivními. Znovu je aktivujete přidáním dalšího propojení na stránce [Rozšíření](enrichment-hub.md) nebo [Exporty](export-destinations.md).
+Pokud propojení, které odebíráte, používá rozšíření nebo export, musíte je nejprve odpojit nebo odebrat. Dialogové okno odebrání vás provede příslušným rozšířením nebo exportem. 
+
+Oddělená rozšíření a exporty se stanou neaktivními. Znovu je aktivujete přidáním dalšího propojení na stránce [Rozšíření](enrichment-hub.md) nebo [Exporty](export-destinations.md).
 
 1. Přejděte na **Správce** > **Propojení (náhled)**.
 

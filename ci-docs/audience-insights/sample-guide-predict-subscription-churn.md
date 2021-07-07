@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595510"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306295"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Průvodce ukázkami (Preview) predikce úbytku předplatných
 
@@ -22,7 +22,7 @@ Provedeme vás příkladem predikce úbytku předplatných od začátku dokonce 
 
 ## <a name="scenario"></a>Scénář
 
-Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary, které prodává prostřednictvím svých webových stránek Contoso Coffee. Nedávno zavedla předplatné pro své zákazníky, aby mohli pravidelně dostávat kávu. Jejím cílem je pochopit, kteří zákazníci s předplatným mohou v příštích několika měsících své předplatné zrušit. Informace, který z jejích zákazníků bude **pravděpodobně ztracen**, jí může pomoci ušetřit marketingové prostředky tím, že se soustředí na jeho udržení.
+Contoso je společnost vyrábějící vysoce kvalitní kávu a kávovary, které prodávají prostřednictvím svého webu Contoso Coffee. Nedávno zavedla předplatné pro své zákazníky, aby mohli pravidelně dostávat kávu. Jejím cílem je pochopit, kteří zákazníci s předplatným mohou v příštích několika měsících své předplatné zrušit. Informace, který z jejích zákazníků bude **pravděpodobně ztracen**, jí může pomoci ušetřit marketingové prostředky tím, že se soustředí na jeho udržení.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -124,11 +124,11 @@ Po ingestaci dat nyní začínáme s procesem **Mapování, párování, slouče
 
    :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Sjednocení LoyaltyId jako primární klíč.":::
 
-### <a name="match"></a>Shoda barev
+### <a name="match"></a>Párování
 
 1. Přejděte na kartu **Párování** a vyberte **Nastavit pořadí**.
 
-1. V rozevíracím seznamu **Primární** vyberte **eCommerceContacts: eCommerce** jako primární zdroj a zahrňte všechny záznamy.
+1. V **primárním** rozevíracím seznamu zvolte jako primární zdroj **eCommerceContacts : eCommerce** a zahrňte všechny záznamy.
 
 1. V rozevíracím seznamu **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všechny záznamy.
 
@@ -138,16 +138,16 @@ Po ingestaci dat nyní začínáme s procesem **Mapování, párování, slouče
 
 1. Přidejte svou první podmínku pomocí FullName.
 
-   * Pro eCommerceContacts vyberte **FullName** v rozbalovací nabídce.
-   * Pro loyCustomers vyberte **FullName** v rozbalovací nabídce.
+   * Pro eCommerceContacts vyberte **Celé jméno** v rozevírací nabídce.
+   * Pro loyCustomers vyberte **Celé jméno** v rozevírací nabídce.
    * Vyberte rozevírací seznam **Normalizovat** rozevírací seznam a vyberte **Typ (telefon, jméno, adresa, ...)**.
    * Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
 
 1. Zadejte jméno **Celé jméno, e-mail** pro nové pravidlo.
 
    * Přidejte druhou podmínku pro e-mailovou adresu výběrem **Přidat podmínku**
-   * Pro entitu eCommerceContacts zvolte **EMail** v rozevíracím seznamu.
-   * Pro entitu loyCustomers zvolte **EMail** v rozevíracím seznamu. 
+   * Pro entitu eCommerceContacts zvolte **EMail** v rozevírací nabídce.
+   * Pro entitu loyCustomers zvolte **EMail** v rozevírací nabídce. 
    * Ponechejte pole Noramlizovat prázdné. 
    * Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
 

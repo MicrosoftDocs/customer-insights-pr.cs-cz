@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760273"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305378"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Použití segmentů Customer Insights v Adobe Campaign Standard (Preview)
 
-Jako uživatel přehledů cílových skupin pro Dynamics 365 Customer Insights jste možná vytvořili segmenty, které vám pomohou zefektivnit marketingové kampaně cílením na relevantní cílové skupiny. Chcete-li použít segment z přehledů cílových skupin v Adobe Experience Platform a aplikacích, jako je Adobe Campaign Standard, musíte postupovat podle několika kroků uvedených v tomto článku.
+Jako uživatel přehledů cílové skupiny v Dynamics 365 Customer Insights jste možná vytvořili segmenty, které vám pomohou zefektivnit marketingové kampaně cílením na relevantní cílovou skupinu. Chcete-li použít segment z přehledů cílových skupin v Adobe Experience Platform a aplikacích, jako je Adobe Campaign Standard, musíte postupovat podle několika kroků uvedených v tomto článku.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagram zpracování kroků popsaných v tomto článku.":::
 
@@ -128,7 +128,7 @@ Pokud v Adobe Campaign Standard neexistují žádné záznamy kromě těch, kter
 
 Nyní, když je vše připraveno, musíme importovat připravená data cílové skupiny z přehledů cílové skupiny do Adobe Campaign Standard, čímž vytvoříme profily. Naučte se [importovat profily v Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) pomocí pracovního postupu.
 
-Pracovní postup importu na obrázku níže je konfigurován tak, aby se spouštěl každých 8 hodin, a hledá exportované segmenty přehledů cílové skupiny (soubor .csv v Azure Blob Storage). Pracovní postup extrahuje obsah souboru CSV v určeném pořadí sloupců. Tento pracovní postup byl vytvořen tak, aby prováděl základní zpracování chyb a zajistil, aby měl každý záznam e-mailovou adresu před vložením dat do Adobe Campaign Standard. Pracovní postup také extrahuje název segmentu z názvu souboru před provedením operace upsert na data profilu ACS.
+Pracovní postup importu na obrázku níže byl nakonfigurován tak, aby se spouštěl každých osm hodin a hledal exportované segmenty přehledu cílové skupiny (soubor .csv v Azure Blob Storage). Pracovní postup extrahuje obsah souboru CSV v určeném pořadí sloupců. Tento pracovní postup byl vytvořen tak, aby prováděl základní zpracování chyb a zajistil, aby měl každý záznam e-mailovou adresu před vložením dat do Adobe Campaign Standard. Pracovní postup také extrahuje název segmentu z názvu souboru před upsertingem do dat profilu Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Screenshot pracovního postupu importu v uživatelském rozhraní Adobe Campaign Standard.":::
 

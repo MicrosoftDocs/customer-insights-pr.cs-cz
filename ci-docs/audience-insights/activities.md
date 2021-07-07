@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866399"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304918"
 ---
 # <a name="customer-activities"></a>Aktivity zákazníka
 
@@ -53,23 +53,23 @@ Vaše zdroje dat mohou zahrnovat entity s transakčními a aktivními daty z ví
 
 1. V kroku **Sjednocení aktivity** vyberte událost aktivity a čas zahájení aktivity. 
    - **Povinná pole**
-      1. **Aktivita události**: Pole, které je událostí pro tuto aktivitu
-      2. **Časové razítko**: Pole, které představuje čas zahájení vaší aktivity.
+      - **Aktivita události**: Pole, které je událostí pro tuto aktivitu.
+      - **Časové razítko**: Pole, které představuje čas zahájení vaší aktivity.
 
    - **Nepovinná pole**
-      1. **Další podrobnosti**: Pole s příslušnými informacemi pro tuto aktivitu.
-      2. **Ikona**: Ikona, která nejlépe představuje tento typ aktivity.
-      3. **Webová adresa**: Pole obsahující adresu URL s informacemi o této aktivitě. Například transakční systém, který tuto aktivitu využívá. Tato adresa URL může být libovolné pole zdroje dat, nebo může být vytvořeno jako nové pole pomocí transformace Power Query. Data URL budou uložena v entitě *Sjednocená aktivita*, kterou lze následně spotřebovat pomocí [API](apis.md).
+      - **Další podrobnosti**: Pole s příslušnými informacemi pro tuto aktivitu.
+      - **Ikona**: Ikona, která nejlépe představuje tento typ aktivity.
+      - **Webová adresa**: Pole obsahující adresu URL s informacemi o této aktivitě. Například transakční systém, který tuto aktivitu využívá. Tato adresa URL může být libovolné pole zdroje dat, nebo může být vytvořeno jako nové pole pomocí transformace Power Query. Data URL budou uložena v entitě *Sjednocená aktivita*, kterou lze následně spotřebovat pomocí [API](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Zadejte údaje o aktivitě zákazníka v entitě Unified Activity.":::
 
 1. Volbou **Další** přejdete na další krok. Můžete vybrat **Dokončit a zkontrolovat** pro uložení aktivity nyní s typem aktivity nastaveným na **Jiný**. 
 
-1. V kroku **Typ aktivity** vyberte typ aktivity a volitelně vyberte, zda chcete sémanticky mapovat některé typy aktivit pro použití v jiných oblastech Customer Insights. V současné době lze typy aktivity *Předplatné* & *SalesOrderLine* sémanticky mapovat po souhlasu s mapováním polí. Pokud typ aktivity není pro novou aktivitu relevantní, můžete si vybrat *Jiný* nebo *Vytvořit nový* pro vlastní typ aktivity.
+1. V kroku **Typ aktivity** vyberte typ aktivity a volitelně vyberte, zda chcete sémanticky mapovat některé typy aktivit pro použití v jiných oblastech Customer Insights. V současné době lze typy aktivit *Předplatné* a *SalesOrderLine* sémanticky mapovat po souhlasu s mapováním polí. Pokud typ aktivity není pro novou aktivitu relevantní, můžete si vybrat *Jiný* nebo *Vytvořit nový* pro vlastní typ aktivity.
 
 1. Volbou **Další** přejdete na další krok. 
 
-1. V kroku **Kontrola** ověřte výběr. Vrátíte se k některému z předchozích kroků a v případě potřeby informace aktualizujete.
+1. V kroku **Kontrola** ověřte výběr. Vraťte se k některému z předchozích kroků a v případě potřeby informace aktualizujte.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Zkontrolujte aktivitu v zadaných polích.":::
    
@@ -89,7 +89,7 @@ Následující akce jsou k dispozici, když vyberete aktivitu.
 
 - **Upravit**: Otevře nastavení aktivity v kroku kontroly. Z tohoto kroku můžete změnit některou nebo celou aktuální konfiguraci. Po změně konfigurace vyberte **Uložit aktivitu** a poté vyberte **Spustit** ke zpracování změn.
 
-- **Přejmenovat**: Otevře dialogové okno, kde zadáte jiný název vybrané aktivity. Výběrem možnosti **Uložit** se vaše změny uplatní.
+- **Přejmenovat**: Otevře dialogové okno, kde můžete zadat jiný název vybrané aktivity. Výběrem možnosti **Uložit** se vaše změny uplatní.
 
 - **Vymazat**: Otevře dialogové okno s potvrzením odstranění vybrané aktivity. Můžete také odstranit více než jednu aktivitu najednou tak, že vyberete aktivity a poté vyberete ikonu odstranění. Vyberte **Odstranit** pro potvrzení odstranění.
 

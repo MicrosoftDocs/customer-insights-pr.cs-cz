@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129891"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306158"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Průvodce ukázkami predikce doporučení produktů (Preview)
 
@@ -101,11 +101,11 @@ Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jedn
 
    ![Sjednocení LoyaltyId jako primární klíč.](media/unify-loyaltyid.png)
 
-### <a name="match"></a>Shoda barev
+### <a name="match"></a>Párování
 
 1. Přejděte na kartu **Párování** a vyberte **Nastavit pořadí**.
 
-2. V rozevíracím seznamu **Primární** vyberte **eCommerceContacts: eCommerce** jako primární zdroj a zahrňte všechny záznamy.
+2. V **primárním** rozevíracím seznamu zvolte jako primární zdroj **eCommerceContacts : eCommerce** a zahrňte všechny záznamy.
 
 3. V rozevíracím seznamu **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všechny záznamy.
 
@@ -115,16 +115,16 @@ Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jedn
 
 5. Přidejte svou první podmínku pomocí FullName.
 
-   - Pro eCommerceContacts vyberte **FullName** v rozbalovací nabídce.
-   - Pro loyCustomers vyberte **FullName** v rozbalovací nabídce.
+   - Pro eCommerceContacts vyberte **Celé jméno** v rozevírací nabídce.
+   - Pro loyCustomers vyberte **Celé jméno** v rozevírací nabídce.
    - Vyberte rozevírací seznam **Normalizovat** rozevírací seznam a vyberte **Typ (telefon, jméno, adresa, ...)**.
    - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
 
 6. Zadejte jméno **Celé jméno, e-mail** pro nové pravidlo.
 
    - Přidejte druhou podmínku pro e-mailovou adresu výběrem **Přidat podmínku**
-   - Pro entitu eCommerceContacts zvolte **EMail** v rozevíracím seznamu.
-   - Pro entitu loyCustomers zvolte **EMail** v rozevíracím seznamu.
+   - Pro entitu eCommerceContacts zvolte **EMail** v rozevírací nabídce.
+   - Pro entitu loyCustomers zvolte **EMail** v rozevírací nabídce.
    - Ponechejte pole Noramlizovat prázdné.
    - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
 

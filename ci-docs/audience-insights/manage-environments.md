@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259091"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304872"
 ---
 # <a name="manage-environments"></a>Správa prostředí
 
@@ -54,29 +54,32 @@ Vytvoření prostředí:
 1. Vyberte **Nové**.
 
    > [!div class="mx-imgBorder"]
-   > ![Nastavení prostředí](media/environment-settings-dialog.png)
+   > ![Nastavení prostředí.](media/environment-settings-dialog.png)
 
-1. V dialogovém okně **Vytvoření nového prostředí** vyberte **Nové prostředí**.
+1. V dialogovém okně **Vytvořit prostředí** vyberte **Nové prostředí**.
 
    Pokud chcete [kopírovat data z aktuálního prostředí](#considerations-for-copy-configuration-preview), vyberte **Kopírovat z existujícího prostředí**. Uvidíte seznam všech dostupných prostředí z vaší organizace, ze kterých můžete kopírovat data.
 
 1. Zadejte následující údaje:
    - **Název**: Název tohoto prostředí. Toto pole je již vyplněno, pokud kopírujete z existujícího prostředí, ale můžete jej změnit.
-   - **Oblast**: Oblast, ve které je služba nasazena a hostována.
    - **Typ**: Vyberte, zda chcete vytvořit provozní nebo sandboxové prostředí.
-
+   - **Oblast**: Oblast, ve které je služba nasazena a hostována.
+   
 1. Volitelně můžete vybrat **Upřesnit nastavení**:
 
-   - **Uložit všechna data do**: Určuje, kam chcete ukládat výstupní data generovaná z Customer Insights. Budete mít dvě možnosti: **úložiště Customer Insights** (úložiště Azure Data Lake spravované týmem Customer Insights) a **Azure Data Lake Storage Gen2** (vaše vlastní úložiště Azure Data Lake Storage). Ve výchozím nastavení je vybráno úložiště Customer Insights.
+   - **Uložit všechna data do**: Určuje, kam chcete ukládat výstupní data generovaná z Customer Insights. Budete mít dvě možnosti: **Úložiště Customer Insights** (Azure Data Lake spravované týmem Customer Insights) a **Azure Data Lake Storage** (váš vlastní Azure Data Lake Storage). Ve výchozím nastavení je vybráno úložiště Customer Insights.
 
-   > [!NOTE]
-   > Uložením dat do úložiště Azure Data Lake Storage souhlasíte s tím, že tato data budou přenesena a uložena v příslušném zeměpisném umístění pro daný účet Azure Storage, které se může lišit od umístění dat uložených ve službě Dynamics 365 Customer Insights. [Další informace naleznete v centru zabezpečení Microsoft.](https://www.microsoft.com/trust-center)
-   >
-   > V současné době jsou přijímané entity vždy ukládány do datového jezera spravovaného řešením Customer Insights.
-   > Podporujeme pouze účty úložiště Azure Data Lake Gen2 ze stejné oblasti Azure, kterou jste vybrali při vytváření prostředí.
-   > Podporujeme pouze účty úložišť Azure Data Lake Gen2 s podporou hierarchického prostoru názvů (HNS).
+     > [!NOTE]
+     > Uložením dat do úložiště Azure Data Lake Storage souhlasíte s tím, že tato data budou přenesena a uložena v příslušném zeměpisném umístění pro daný účet Azure Storage, které se může lišit od umístění dat uložených ve službě Dynamics 365 Customer Insights. [Další informace naleznete v centru zabezpečení Microsoft.](https://www.microsoft.com/trust-center)
+     >
+     > V současné době jsou přijímané entity vždy ukládány do Data Lake spravovaného řešením Customer Insights. 
+     > 
+     > Podporujeme pouze účty Azure Data Lake Storage ze stejné oblasti Azure, kterou jste vybrali při vytváření prostředí. 
+     > 
+     > Podporujeme pouze účty Azure Data Lake Storage, které mají povolený hierarchický obor názvů.
 
-   - Pro možnost Azure Data Lake Storage Gen2 si můžete vybrat mezi ověřováním založeném na prostředku nebo na předplatném. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Název **Kontejner** nelze změnit a bude mít hodnotu `customerinsights`.
+
+   - Pro možnost Azure Data Lake Storage si můžete pro ověřování vybrat mezi možností založenou na zdroji a možností založenou na předplatném. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Název **Kontejner** nelze změnit a bude mít hodnotu `customerinsights`.
    
    - Pokud chcete použít [predikce](predictions.md), konfigurovat sdílení dat s Microsoft Dataverse, nebo povolit příjem dat z místních zdrojů dat, uveďte adresu URL prostředí Microsoft Dataverse v části **Konfigurace sdílení dat s Microsoft Dataverse a povolení dalších funkcí**. Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights se službou Data Lake spravovanou Microsoft Dataverse.
 
@@ -85,7 +88,7 @@ Vytvoření prostředí:
      > - [Predikce chybějících hodnot v entitě](predictions.md) není momentálně podporováno, když povolíte sdílení dat se službou Data Lake spravovanou Microsoft Dataverse.
 
      > [!div class="mx-imgBorder"]
-     > ![Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
 
    Když spustíte procesy, jako je ingestace dat nebo vytvoření segmentu, vytvoří se odpovídající složky v účtu úložiště, který jste zadali výše. Datové soubory a soubory model.json budou vytvořeny a přidány do složek na základě názvu procesu.
 
@@ -113,14 +116,14 @@ Následující nastavení se *nezkopírují*:
 
 - Profily zákazníků.
 - Přihlašovací údaje ke zdroji dat. Budete muset zadat přihlašovací údaje pro každý zdroj dat a ručně aktualizovat zdroje dat.
-- Zdroje dat ze složky Common Data Model a datového jezera spravovaného prostřednictvím Common Data Service. Tyto zdroje dat budete muset vytvořit ručně se stejným názvem jako ve zdrojovém prostředí.
+- Zdroje dat ze složky Common Data Model a Dataverse spravované v Data Lake. Tyto zdroje dat budete muset vytvořit ručně se stejným názvem jako ve zdrojovém prostředí.
 
 Při kopírování prostředí se zobrazí potvrzovací zpráva o vytvoření nového prostředí. Volbou **Přejít na zdroje dat** zobrazíte seznam zdrojů dat.
 
 Všechny zdroje dat zobrazí stav **Povinné přihlašovací údaje**. Upravte zdroje dat a zadejte přihlašovací údaje a aktualizujte je.
 
 > [!div class="mx-imgBorder"]
-> ![Kopírované zdroje dat](media/data-sources-copied.png)
+> ![Kopírované zdroje dat.](media/data-sources-copied.png)
 
 Po aktualizaci zdrojů dat přejděte na **Data** > **Sjednotit**. Zde najdete nastavení ze zdrojového prostředí. Upravte je podle potřeby nebo volbou **Spustit** zahajte proces sjednocení dat a vytvořte jednotnou entitu zákazníka.
 
@@ -136,7 +139,7 @@ Můžete upravit některé podrobnosti existujících prostředí.
 
 3. V poli **Upravit prostředí** můžete změnit **zobrazovaný název** prostředí, ale nemůžete změnit **Oblast** nebo **Typ**.
 
-4. Pokud je prostředí nakonfigurováno pro ukládání dat v úložišti Azure Data Lake Storage Gen2, můžete aktualizovat **Klíč účtu**. Nemůžete však změnit **Název účtu** nebo název **Kontejneru**.
+4. Pokud je prostředí nakonfigurováno pro ukládání dat Azure Data Lake Storage, můžete aktualizovat **Klíč účtu**. Nemůžete však změnit **Název účtu** nebo název **Kontejneru**.
 
 5. Volitelně můžete provést aktualizaci z připojení na základě klíče účtu do připojení založeného na prostředcích nebo předplatném. Po upgradu nelze vrátit klíč účtu. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Nemůžete změnit informace o **kontejneru** při aktualizaci připojení.
 
@@ -158,19 +161,19 @@ Pokud jste správce a chcete odstranit všechny konfigurace a odebrat ingegstova
 
 1.  Vyberte nástroj pro výběr **prostředí** v záhlaví aplikace. 
 
-2.  Vyberte prostředí, které chcete obnovit, a vyberte tři tečky **...**. 
+2.  Vyberte prostředí, které chcete obnovit, a vyberte tři tečky (**...**). 
 
 3. Vyberte volbu **Obnovit**. 
 
 4.  Chcete-li potvrdit odstranění, zadejte název prostředí a vyberte **Obnovit**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Odstranění existujícího prostředí (pouze pro správce)
+## <a name="delete-an-existing-environment"></a>Odstranění existujícího prostředí
 
 Jako správce můžete odstranit prostředí, které spravujete.
 
 1.  Vyberte nástroj pro výběr **prostředí** v záhlaví aplikace.
 
-2.  Vyberte prostředí, které chcete obnovit, a vyberte tři tečky **...**. 
+2.  Vyberte prostředí, které chcete obnovit, a vyberte tři tečky (**...**). 
 
 3. Vyberte volbu **Odstranit**. 
 

@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245699"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305148"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte si zákaznické profily značkami a zájmovými skupinami (preview)
 
-Použijte vlastnická data společnosti Microsoft k rozšíření svých zákaznických dat o afinitu ke značce a zájmem. Tato náklonnost je určována na základě údajů od osob z podobné demografické skupiny jako vaši zákazníci. Tyto informace vám pomohou lépe porozumět a rozdělit zákazníky podle jejich náklonnosti ke konkrétním značkám a zájmům.
+Použijte vlastnická data společnosti Microsoft k rozšíření svých zákaznických dat o afinitu ke značce a zájmem. Tyt afinity jsou založeny na datech od lidí v podobné demografické skupině, jako jsou vaši zákazníci. Tyto informace vám pomohou lépe porozumět a rozdělit zákazníky podle jejich náklonnosti ke konkrétním značkám a zájmům.
 
 V přehledech cílové skupiny přejděte na **Data** > **Rozšíření**, kde můžete [nakonfigurovat a zobrazit rozšíření](enrichment-hub.md).
 
@@ -35,7 +35,7 @@ Chcete-li nakonfigurovat rozšíření o náklonnost k zájmům, přejděte na k
 
 ## <a name="affinity-level-and-score"></a>Úroveň a skóre afinity
 
-U každého rozšířeného zákaznického profilu poskytujeme dvě související hodnoty -–úroveň afinity a skóre afinity. Tyto hodnoty vám pomohou určit, jak silná je afinita k demografickému segmentu daného profilu, ke značce nebo zájmu ve srovnání s jinými demografickými segmenty.
+U každého rozšířeného zákaznického profilu poskytujeme dvě související hodnoty: úroveň afinity a skóre afinity. Tyto hodnoty vám pomohou určit, jak silná je afinita k demografickému segmentu daného profilu, ke značce nebo zájmu ve srovnání s jinými demografickými segmenty.
 
 *Úroveň afinity* se skládá ze čtyř úrovní a *skóre afinity* se počítá na 100bodové stupnici, která se mapuje na úrovně afinity.
 
@@ -53,7 +53,7 @@ V závislosti na granularitě, kterou chcete pro měření afinity, můžete pou
 
 V současné době podporujeme následující země/oblasti: Austrálie, Kanada (angličtina), Francie, Německo, Spojené království nebo Spojené státy americké (angličtina).
 
-Chcete-li vybrat zemi, otevřete **Rozšíření značek** nebo **Rozšíření zájmů** a vyberte **Změnit** vedle **Země/oblasti**. V podokně **Nastavení země/oblasti** vyberte požadovanou možnost a vyberte **Použít**.
+Chcete-li vybrat zemi nebo region, otevřete **Obohacování značek** nebo **Obohacování zájmů** a vyberte **Změna** vedle **Země/Region**. V podokně **Nastavení země/oblasti** vyberte požadovanou možnost a vyberte **Použít**.
 
 ### <a name="implications-related-to-country-selection"></a>Důsledky výběru země
 
@@ -61,7 +61,7 @@ Chcete-li vybrat zemi, otevřete **Rozšíření značek** nebo **Rozšíření 
 
 - Při [výběru odvětví](#define-your-brands-or-interests) se vám zobrazí nejrelevantnější značky nebo zájmy na základě vybrané země nebo oblasti.
 
-- Při [rozšiřování profilů](#refresh-enrichment) dojde k rozšíření profilů zákazníků, pro které získáme údaje o vybraných značkách a zájmech. Včetně profilů, které nejsou ve vybrané zemi nebo oblasti. Pokud jste například vybrali Německo, rozšíříme profily nacházející se ve Spojených státech, pokud máme k dispozici údaje o vybraných značkách a zájmech v USA.
+- Při [obohacování profilů](#refresh-enrichment) obohatíme všechny profily zákazníků, pro které získáváme data pro vybrané značky a zájmy, včetně profilů, které nejsou ve vybrané zemi nebo oblasti. Pokud jste například vybrali Německo, rozšíříme profily nacházející se ve Spojených státech, pokud máme k dispozici údaje o vybraných značkách a zájmech v USA.
 
 ## <a name="configure-enrichment"></a>Konfigurace rozšíření
 
@@ -71,7 +71,7 @@ Asistované prostředí vám pomůže s konfigurací obohacení.
 
 Vyberte až pět značek nebo zájmů pomocí jedné nebo obou z těchto možností:
 
-- **Odvětví** : Vyberte své odvětví z rozevíracího seznamu a poté vyberte své nejlepší značky nebo zájmy pro toto odvětví.
+- **Odvětví**: Vyberte své odvětví z rozevíracího seznamu a poté vyberte z nejlepších značek nebo zájmů pro toto odvětví.
 - **Zvolte své vlastní** : Zadejte značku nebo zájem, který je relevantní pro vaši organizaci, a poté vyberte z odpovídajících návrhů. Pokud neuvedeme značku nebo zájem, který hledáte, pošlete nám zpětnou vazbu pomocí odkazu **Navrhnout**.
 
 ### <a name="review-enrichment-preferences"></a>Kontrola předvoleb rozšíření
@@ -88,19 +88,19 @@ Vyberte **Rozšířená entita** a vyberte datovou sadu, kterou chcete rozšíř
 
 Namapujte pole z vaší sjednocené entity zákazníka a definujte demografický segment, který má systém použít k rozšíření vašich zákaznických dat. Namapujte zemi/oblast a alespoň atributy Datum narození nebo Pohlaví. Kromě toho je nutné namapovat alespoň jedno z měst (a kraj) nebo PSČ. Volbou **Upravit** definujete mapování polí a když máte hotovo, vyberte **Použít**. Vyberte **Uložit** pro dokončení mapování pole.
 
-Jsou podporovány následující formáty a hodnoty, hodnoty nerozlišují velká a malá písmena:
+Jsou podporovány následující formáty a hodnoty (hodnoty nerozlišují velká a malá písmena):
 
-- **Datum narození**: Během příjmu dat doporučujeme převést datum narození na typ Datum a čas. Alternativně to může být řetězec ve formátu [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) „rrrr-MM-dd“ nebo „rrrr-MM-ddTHH: mm: ssZ“.
-- **Pohlaví**: Muž, žena, neznámý
-- **PSČ**: Pětimístné PSČ pro USA, standardní PSČ všude jinde
-- **Město**: Název města v angličtině
-- **Kraj**: Dvoupísmenná zkratka pro USA a Kanadu. Dvou- nebo třípísmenná zkratka pro Austrálii. Nelze použít ve Francii, Německu nebo Velké Británii.
+- **Datum narození**: Během příjmu dat doporučujeme převést datum narození na typ Datum a čas. Alternativně to může být řetězec v [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formát „rrrr-MM-dd“ nebo „rrrr-MM-ddTHH: mm: ss“.
+- **Pohlaví**: Muž, žena, neznámé.
+- **Poštovní směrovací číslo**: Pětimístné PSČ pro Spojené státy, standardní PSČ všude jinde.
+- **Město**: Název města v angličtině.
+- **Kraj**: Dvoupísmenná zkratka pro USA a Kanadu. Dvou nebo třípísmenná zkratka pro Austrálii. Nelze použít ve Francii, Německu nebo Velké Británii.
 - **Země/oblast**:
 
   - US: Spojené státy americké, Spojené státy, USA, US, Amerika
   - CA: Kanada, CA
   - GB: Spojené království, UK, Velká Británie, GB, Spojené království Velké Británie a Severního Irska, Spojené království Velké Británie
-  - AU: Austrálie, AU, Australské společenství
+  - AU: Austrálie, AU, Australské království
   - FR: Francie, FR, Francouzská republika
   - DE: Německo, němčina, Deutschland, Allemagne, DE, Spolková republika Německo, Německo
 
@@ -113,6 +113,7 @@ Nakonec si přečtěte informace a uveďte název rozšíření.
 ## <a name="refresh-enrichment"></a>Aktualizace rozšíření
 
 Spusťte obohacení po konfiguraci značek, zájmů a mapování terénu pro demografii. Chcete-li zahájit proces, vyberte **Spustit** na stránce konfigurace značek nebo zájmů. Kromě toho můžete nechat systém spustit rozšíření automaticky jako součást plánované aktualizace.
+
 V závislosti na velikosti vašich zákaznických dat může dokončení obohacování trvat několik minut.
 
 > [!TIP]
@@ -134,7 +135,7 @@ Náklonnost ke značkám a zájmům lze zobrazit také na jednotlivých kartác
 
 ## <a name="next-steps"></a>Další kroky
 
-Stavte na svých obohacených zákaznických údajích. Vytvářejte [segmenty](segments.md), [míry](measures.md) a dokonce [exportujte data](export-destinations.md), abyste svým zákazníkům dopřáli osobní zážitek.
+Stavte na svých obohacených zákaznických údajích. Vytvořte [segmenty](segments.md) a [míry](measures.md) a dokonce [exportujte data](export-destinations.md), abyste svým zákazníkům poskytli přizpůsobené prostředí.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700660"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305617"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastní modely strojového učení
 
@@ -72,7 +72,7 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
       > [!div class="mx-imgBorder"]
       > ![Podokno výstupních parametrů modelu](media/intelligence-screen3-outputparameters.png "Podokno výstupních parametrů modelu")
 
-1. Vyberte odpovídající atribut z rozevíracího seznamu **ID zákazníka ve výsledcích**, který identifikuje zákazníky, a vyberte **Uložit**.
+1. Vyberte odpovídající atribut z rozevíracího seznamu **D zákazníka ve výsledcích**, který identifikuje zákazníky, a pak vyberte **Uložit**.
 
    > [!div class="mx-imgBorder"]
    > ![Propojení výsledků v podokně údajů o zákaznících](media/intelligence-screen4-relatetocustomer.png "Propojení výsledků v podokně údajů o zákaznících")
@@ -100,7 +100,7 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
       1. Vyberte **Název parametru úložiště výstupních dat** pro váš testovací kanál.
       1. Vyberte **Název parametru výstupní cesty** pro váš testovací kanál.
 
-1. Vyberte odpovídající atribut z rozevíracího seznamu **ID zákazníka ve výsledcích**, který identifikuje zákazníky, a vyberte **Uložit**.
+1. Vyberte odpovídající atribut z rozevíracího seznamu **D zákazníka ve výsledcích**, který identifikuje zákazníky, a pak vyberte **Uložit**.
    Vyberte atribut z výstupu odvození s hodnotami podobnými sloupci ID zákazníka entity Zákazník. Pokud takový sloupec chybí v datové sadě, vyberte atribut, který jednoznačně identifikuje řádek.
 
 ## <a name="run-a-workflow"></a>Spuštění pracovního postupu

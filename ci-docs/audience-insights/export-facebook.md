@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976034"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305102"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Export seznamu segmentů do Facebook Správce reklam (preview)
 
@@ -22,12 +22,12 @@ Export segmentů sjednocených zákaznických profilů do Správce reklam Facebo
 
 ## <a name="prerequisites-for-connection"></a>Předpoklady pro připojení
 
-- Musíte mít účet [**Facebook pro reklamy**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), který zahrnuje účet [**Facebook pro firmy**](https://business.facebook.com/).
-- Musíte být správcem [**reklamního účtu Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Potřebujete [**účet Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), který zahrnuje [**účet Facebook Business**](https://business.facebook.com/).
+- Musíte být správce [**účtu Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Až 10 milionů zákaznických profilů na jeden export do služby Facebook Správce reklam.
+- Až 10 milionů zákaznických profilů na export do Facebook Ads Manager.
 - Export do služby Facebook Správce reklam je omezen na segmenty.
 - Vytvářejte nebo aktualizujte vlastní cílovou skupinu pouze typu Facebook *seznam zákazníků*.
 - Export segmentů s celkem 10 milionem profilů může trvat až 90 minut.
@@ -42,19 +42,19 @@ Než uživatelé mohou vytvořit export, musí správce nakonfigurovat propojen�
 
 1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
 
-1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude **Správci**. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Ověření pomocí Facebook reklam: 
 
-   1. Vyberte **Pokračovat s Facebook** pro příhlášení ke svému reklamnímu účtu Facebook.
+   1. Vyberte **Pokračovat s Facebook** pro přihlášení k účtu Facebook Ads.
 
    1. Povolte oprávnění **ads_management** po ověření pomocí Facebooku.
 
    1. Vyberte **Reklmaní účet Facebook**, se kterým chcete pracovat.
 
-   1. Vyberte **Existující vlastní cílová skupina** z rozevíracího seznamu nebo vytvořte **Nová vlastní cílová skupina**. Další informace viz [**Cílové skupiny ve Správci reklam Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+   1. V rozevíracím seznamu vyberte **Existující vlastní cílová skupina** nebo vytvořte **novou vlastní cílovou skupinu**. Další informace viz [**Cílové skupiny ve Správci reklam Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
-      > Vlastní cílové skupiny můžete vytvářet nebo aktualizovat pouze na Facebooku typu *seznam zákazníků* s tímto exportem. V některých případech se v rozevíracím seznamu zobrazí vlastní cílová skupina různých typů. Výběr jiného typu než *seznam zákazníků* bude mít za následek selhání exportu. 
+      > Vlastní cílové skupiny můžete vytvářet nebo aktualizovat pouze na Facebooku typu *seznam zákazníků* s tímto exportem. V některých případech se v rozevíracím seznamu zobrazí vlastní cílové skupiny různých typů. Výběr jiného typu než *seznam zákazníků* bude mít za následek selhání exportu. 
 
 1. Zkontrolujte část **Ochrana osobních údajů a dodržování předpisů** a vyberte **Souhlasím**.
 
@@ -75,7 +75,8 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**.
 
 1. Mapujte odpovídající atributy z unifikované entity zákazníka na vybraný identifikátor klíče.
-   > [TIP] Nejlepší šance na shodu nastanou, pokud vyberte **E-mail** jako identifikátor klíče. Přidání dalších identifikátorů může zlepšit shodu.
+   > [!TIP]
+   > Nejlepší šance na shodu nastanou, pokud vyberte **E-mail** jako identifikátor klíče. Přidání dalších identifikátorů může zlepšit shodu.
 
 1. Vyberte **Přidat atribut** k mapování více atributů pro odeslání do Správce reklam Facebook. Atributy Správce reklam Facebook mapují následující uživatelsky přehledná jména: **FN** = **křestní jméno**, **LN** = **příjmení**, **FI** = **Počáteční písmeno**, **PHONE** = **Telefon**, **GEN** = **pohlaví**, **DOB** = **Datum narození**, **ST** = **Stát**, **CT** = **Město**, **ZIP** = **PSČ**, **COUNTRY** = **Země / Region**
 
@@ -85,12 +86,14 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 Uložení exportu nespustí export okamžitě.
 
-Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
+Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). 
+
+Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
 
 Když pro Dynamics 365 Customer Insights povolíte přenos dat do služby Facebook Ads Manager, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že služba Facebook Ads splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
-Tuto funkci cíle exportu může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+Váš správce Dynamics 365 Customer Insights může tento cíl exportu kdykoli odebrat a ukončit tak používání této funkce.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954479"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305240"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
@@ -22,7 +22,8 @@ K rozšíření svých zákaznických dat použijte data ze zdrojů, jako je Mic
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Stránka centra obohacení":::
 
-V přehledech cílové skupiny přejděte na **Data** > **Rozšíření**, kde můžete pracovat s možnostmi rozšíření.    
+V přehledech cílové skupiny přejděte na **Data** > **Rozšíření**, kde můžete pracovat s možnostmi rozšíření.  
+
 K vytváření nebo úpravě rozšíření musíte mít oprávnění přispěvatele nebo správce. Další informace naleznete v části [Oprávnění](permissions.md).
 
 Na kartě **Zjistit** najdete následující rozšíření:
@@ -31,7 +32,7 @@ Na kartě **Zjistit** najdete následující rozšíření:
 - [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft
 - [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft
 - [Údaje o společnosti](enrichment-leadspace.md) poskytované společností Leadspace
-- [Demografická data](enrichment-experian.md) poskytované společností Experian
+- [Demografické údaje](enrichment-experian.md) poskytované společností Experian
 - [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies
 - [Vlastní data](enrichment-SFTP-custom-import.md) prostřednictvím vlastního importu protokolu (SFTP)
 
@@ -39,7 +40,7 @@ Na kartě **Moje rozšíření** se můžete podívat na rozšíření, která j
 
 ## <a name="manage-existing-enrichments"></a>Správa existujících rozšíření
 
-Přejděte do oblasti **Moje rozšíření**, kde se nacházejí všechna konfigurovaná rozšíření. Každé rozšíření je uvedeno jako jeden jako řádek, který obsahuje další informace o rozšíření.
+Jděte na kartu **Moje obohacení**, kde zobrazíte všechna nakonfigurovaná obohacení. Každé rozšíření je uvedeno jako jeden jako řádek, který obsahuje další informace o rozšíření.
 
 Výběrem rozšíření zobrazíte dostupné možnosti. Můžete také vybrat tři tečky (...) na položce seznamu a zobrazit možnosti.
 
@@ -59,6 +60,6 @@ Rozšíření třetích stran se konfigurují pomocí [připojení](connections.
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Více rozšíření stejného typu
 
-Entita, kterou chcete rozšířit, je zadána během konfigurace rozšíření, což vám umožní rozšířit pouze podmnožinu vašich profilů. Můžete například rozšířit data pouze pro konkrétní segment. Můžete nakonfigurovat několik rozšíření stejného typu a znovu použít stejné propojení . Některá rozšíření budou mít rozšíření počtu obohacení stejného typu, které lze vytvořit. Limity a současné použití lze zobrazit na stránce **Rozšíření**.
+Entita, kterou chcete rozšířit, je zadána během konfigurace rozšíření, což vám umožní rozšířit pouze podmnožinu vašich profilů. Například obohaťte data pouze pro konkrétní segment. Můžete nakonfigurovat několik rozšíření stejného typu a znovu použít stejné propojení . Některá rozšíření budou mít rozšíření počtu obohacení stejného typu, které lze vytvořit. Limity a současné použití lze zobrazit na stránce **Rozšíření**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
