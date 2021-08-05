@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305621"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650126"
 ---
 # <a name="merge-entities"></a>Správa entit
 
@@ -109,7 +109,7 @@ Některé entity obsahují více podrobností než jiné. Pokud entita obsahuje 
 Ať už ručně sloučíte atributy nebo necháte systém je sloučit, můžete vždy spustit sloučení. Vyberte **Spustit** na stránce **Sloučení**, chcete-li zahájit proces.
 
 > [!div class="mx-imgBorder"]
-> ![Ukládání a spuštění sloučení dat](media/configure-data-merge-save-run.png "Ukládání a spuštění sloučení dat")
+> ![Ukládání a spuštění sloučení dat.](media/configure-data-merge-save-run.png "Ukládání a spuštění sloučení dat")
 
 Zvolte **Spustit pouze sloučení**, pokud chcete vidět pouze výstup odražený v entitě sjednoceného zákazníka. Následné procesy budou aktualizovány jako [definované v plánu aktualizací](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Zvolte **Spustit procesy sloučení a následné procesy** k aktualizaci systém
 Chcete-li provést další změny a znovu spustit krok, můžete zrušit probíhající sloučení. Vyberte text **Aktualizace** a vyberte **Zrušit úlohu** v postranním podokně, které se objeví.
 
 > [!TIP]
-> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies). Můžete vybrat stav procesu a zobrazit podrobnosti o průběhu celé úlohy. Po výběru **Zobrazit podrobnosti** pro jeden z úkolů úlohy najdete další informace: čas zpracování, datum posledního zpracování a všechny chyby a varování spojené s úkolem.
+> Po spuštění procesu sloučení vyberte stav procesu a otevřete podokno **Podrobnosti o úkolu**. Poskytuje přehled o době zpracování, datu posledního zpracování a všech chybách a výstrahách spojených s úkolem. Vyberte **Zobrazit podrobnosti**, abyste zjistili, které entity se zúčastnily procesu porovnávání, zda bylo řešení konfliktů úspěšné, jaká pravidla u nich byla použita a zda byly aktualizace úspěšně publikovány.  
+> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Podrobná cesta k získání podrobností o zpracování z odkazu na stav úkolu.":::
 
 ## <a name="next-step"></a>Další krok
 

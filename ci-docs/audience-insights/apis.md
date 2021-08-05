@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304734"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554473"
 ---
 # <a name="work-with-customer-insights-apis"></a>Práce s rozhraními API v Customer Insights
 
@@ -35,7 +35,7 @@ Tento článek popisuje, jak přistupovat k API Customer Insights, vytvořit reg
  
    Povolením rozhraní API vytvoříte primární a sekundární klíč předplatného pro vaši instanci, který se použije v požadavcích rozhraní API. Klíče můžete znovu generovat výběrem možnosti **Opětovně vygenerovat primární** nebo **Opětovně vygenerovat sekundární** v části **Správce** > **Oprávnění** > **Rozhraní API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Povolení rozhraní API aplikace Customer Insights":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Povolení rozhraní API aplikace Customer Insights.":::
 
 1. Volbou **Prozkoumejte naše rozhraní API** si [vyzkoušejte rozhraní API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Zjistěte, jak začít používat klientské knihovny C# z NuGet.org. Pro více 
  
    Případně spusťte tento příkaz v **Konzole správce balíčků NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Přidání balíčku NuGet do projektu Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Přidání balíčku NuGet do projektu Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Použití klientské knihovny C#
 
@@ -141,7 +141,7 @@ Zjistěte, jak začít používat klientské knihovny C# z NuGet.org. Pro více 
 
 1. Předejte klienta `HttpClient` do sestavení klienta `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Ukázka httpclient":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Ukázka httpclient.":::
 
 1. Telefonujte s klientem prostřednictvím „metod rozšíření“ - například `GetAllInstancesAsync`. Pokud je preferován přístup k základní odpovědi `Microsoft.Rest.HttpOperationResponse` - použijte například „metody zpráv HTTP“ `GetAllInstancesWithHttpMessagesAsync`.
 

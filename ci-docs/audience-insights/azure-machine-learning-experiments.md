@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597411"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554427"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Použití modelů založených na Azure Machine Learning
 
@@ -52,7 +52,7 @@ Musíte vytvořit datové sady pro použití dat entit z Customer Insights ve va
      V návrháři otevřete **Výběr sloupců v datové sadě** a vyberte **Nastavit jako parametr kanálu**, kde zadáte název parametru.
 
      > [!div class="mx-imgBorder"]
-     > ![Parametrizace datové sady v návrháři](media/intelligence-designer-dataset-parameters.png "Parametrizace datové sady v návrháři")
+     > ![Parametrizace datové sady v návrháři.](media/intelligence-designer-dataset-parameters.png "Parametrizace datové sady v návrháři")
    
 * Parametr datové sady v SDK (Python)
    
@@ -78,7 +78,7 @@ Musíte vytvořit datové sady pro použití dat entit z Customer Insights ve va
 
 * Návrhář poskytuje [modul exportu dat](/azure/machine-learning/algorithm-module-reference/export-data), který umožňuje export výstupu kanálu do úložiště Azure. V současné době musí modul používat typ úložiště dat **Azure Blob Storage** a parametrizovat **Úložiště dat** a relativní **Cestu**. Customer Insights přepíše oba tyto parametry během provádění kanálu datovým úložištěm a cestou, která je pro produkt přístupná.
    > [!div class="mx-imgBorder"]
-   > ![Konfigurace modulu exportu dat](media/intelligence-designer-importdata.png "Konfigurace modulu exportu dat")
+   > ![Konfigurace modulu exportu dat.](media/intelligence-designer-importdata.png "Konfigurace modulu exportu dat")
    
 * Při psaní výstupu odvození pomocí kódu můžete výstup odeslat na cestu v rámci *registrovaného datového úložiště* v pracovním prostoru. Pokud jsou cesta a datové úložiště parametrizovány v kanálu, aplikace Customer Insights bude moci číst a importovat výstup odvození. V současné době je podporován jeden tabulkový výstup ve formátu CSV. Cesta musí zahrnovat adresář a název souboru.
 

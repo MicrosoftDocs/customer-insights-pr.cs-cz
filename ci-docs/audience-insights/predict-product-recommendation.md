@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095548"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556116"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predikce doporučení produktů (Preview)
 
@@ -64,7 +64,7 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 
 1. Vyberte dlaždici **Model doporučení produktů (Preview)** a vyberte **Použít tento model**.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice modelu doporučení produktů s tlačítkem Použít tento model](media/product-recommendation-usethismodel.PNG "Dlaždice modelu doporučení produktů s tlačítkem Použít tento model")
+   > ![Dlaždice modelu doporučení produktů s tlačítkem Použít tento model.](media/product-recommendation-usethismodel.PNG "Dlaždice modelu doporučení produktů s tlačítkem Použít tento model")
 
 1. Zkontrolujte informace o požadavcích na model. Pokud máte požadovaná data, vyberte **Začít**.
 
@@ -93,7 +93,7 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 
 1. Namapujte sémantická pole na atributy v rámci entity historie nákupu a vyberte **Další**. Pro popis polí se podívejte na [předpoklady](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Definování vztahů entit](media/product-recommendation-purchasehistorymapping.PNG "Stránka historie nákupu zobrazující sémantické atributy, které jsou mapovány na pole ve vybrané entitě historie nákupů")
+   > ![Definujte vztah entity.](media/product-recommendation-purchasehistorymapping.PNG "Stránka historie nákupu zobrazující sémantické atributy, které jsou mapovány na pole ve vybrané entitě historie nákupů")
 
 1. Pokud pole nejsou vyplněna, nakonfigurujte vztah z entity historie nákupu na entitu *Zákazník*.
     1. Vyberte **Entita Historie nákupů**.
@@ -101,7 +101,7 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
     1. Vyberte **entitu zákazníka**, která odpovídá vaší primární entitě zákazníka.
     1. Zadejte název, který popisuje daný vztah.
        > [!div class="mx-imgBorder"]
-       > ![Stránka historie nákupů znázorňující vytvoření vztahu se zákazníkem](media/model-purchase-join.png "Stránka historie nákupů znázorňující vytvoření vztahu se zákazníkem")
+       > ![Stránka historie nákupů znázorňující vytvoření vztahu se zákazníkem.](media/model-purchase-join.png "Stránka historie nákupů znázorňující vytvoření vztahu se zákazníkem")
 
 1. Zvolte **Uložit**.
 
@@ -145,7 +145,7 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
 
 1. Jděte na kartu **Moje predikce** v umístění **Analytické nástroje** > **Predikce**.
    > [!div class="mx-imgBorder"]
-   > ![Zobrazení stránky Moje predikce](media/product-recommendation-mypredictions.PNG "Zobrazení stránky Moje predikce")
+   > ![Zobrazení stránky Moje predikce.](media/product-recommendation-mypredictions.PNG "Zobrazení stránky Moje predikce")
 
 1. Vyberte předpověď, kterou chcete zkontrolovat.
    - **Název predikce:** Název predikce zadaný při jejím vytvoření.
@@ -163,7 +163,7 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
 
 1. Vyberte svislé tři tečky vedle predikce, pro kterou chcete zkontrolovat výsledky, a vyberte **Zobrazit**.
    > [!div class="mx-imgBorder"]
-   > ![Zobrazení možností v nabídce svislých třech teček pro predikci včetně úprav, aktualizace, zobrazení, protokolů a odstranění](media/product-recommendation-verticalellipses.PNG "Zobrazení možností v nabídce svislých třech teček pro predikci včetně úprav, aktualizace, zobrazení, protokolů a odstranění")
+   > ![Zobrazení možností v nabídce svislých třech teček pro predikci včetně úprav, aktualizace, zobrazení, protokolů a odstranění.](media/product-recommendation-verticalellipses.PNG "Zobrazení možností v nabídce svislých třech teček pro predikci včetně úprav, aktualizace, zobrazení, protokolů a odstranění")
 
 1. Na stránce s výsledky je pět primárních sekcí dat:
     1. **Výkon cvičení modelu:** Skóre může být A, B nebo C. Toto skóre označuje výkon predikce a může vám pomoci při rozhodování o použití výsledků uložených ve výstupní entitě.
@@ -173,13 +173,13 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
             - **C** Kvalita modelu bude ohodnocena známkou **C**, pokud je metrika „Úspěch @ K“ nižší než základ.
                
                > [!div class="mx-imgBorder"]
-               > ![Zobrazení výsledku výkonu modelu](media/product-recommendation-modelperformance.PNG "Zobrazení výsledku výkonu modelu")
+               > ![Zobrazení výsledku výkonu modelu.](media/product-recommendation-modelperformance.PNG "Zobrazení výsledku výkonu modelu")
             - **Základ**: Model převezme nejvíce doporučované produkty podle počtu nákupů u všech zákazníků a na základě naučených pravidel rozpoznaných modelem vytvoří sadu doporučení pro zákazníky. Predikce jsou poté porovnány s nejlepšími produkty, které byly vypočítány podle počtu zákazníků, kteří si produkty koupili. Pokud má zákazník v doporučených produktech alespoň jeden produkt, který byl také mezi nejprodávanějšími produkty, považuje se za součást základu. Pokud by 10 z těchto zákazníků mělo zakoupený doporučený produkt ze 100 celkových zákazníků, byl by základ 10 %.
             - **Úspěch @ K.**: Pomocí ověřovací sady časového období transakcí se vytvoří doporučení pro všechny zákazníky a porovnají se s ověřovací sadou transakcí. Například v období 12 měsíců může být měsíc 12 vyčleněn jako ověřovací sada dat. Pokud model predikuje alespoň jednu věc, kterou byste si koupili v 12. měsíci na základě toho, co se dozvěděl z předchozích 11 měsíců, zákazník by zvýšil metriku „Úspěch @ K“.
     
     1. **Nejvíce doporučované produkty (se shodou):** Prvních pět produktů, které byly predikovány vašim zákazníkům.
        > [!div class="mx-imgBorder"]
-       > ![Graf zobrazující prvních 5 nejdoporučovanějších produktů](media/product-recommendation-topproducts.PNG "Graf zobrazující prvních 5 nejdoporučovanějších produktů")
+       > ![Graf zobrazující prvních 5 nejdoporučovanějších produktů.](media/product-recommendation-topproducts.PNG "Graf zobrazující prvních 5 nejdoporučovanějších produktů")
     
     1. **Klíčové faktory doporučení:** Model používá k provádění doporučení produktů historii transakcí zákazníků. Učí se vzory založené na minulých nákupech a hledá podobnosti mezi zákazníky a produkty. Tyto podobnosti se pak využijí ke generování doporučení produktů.
     Následují faktory, které by mohly ovlivnit doporučení produktu generované modelem. 
@@ -190,20 +190,20 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
         Každé doporučení produktu je ovlivněno jedním nebo více z těchto faktorů. Procento doporučení, kde každý ovlivňující faktor hrál roli, je zobrazeno v grafu. V následujícím příkladu bylo 100 % doporučení ovlivněno minulými transakcemi, 60 % podobností zákazníků a 22 % podobností produktů. Umístěním kurzoru myši nad pruhy v grafu zobrazíte přesné procento, kam přispěly ovlivňující faktory.
 
         > [!div class="mx-imgBorder"]
-        > ![Klíčové faktory doporučení](media/product-recommendation-keyrecommendationfactors.png "Klíčové faktory doporučení, které model získal při generování doporučení produktu")
+        > ![Klíčové faktory doporučení.](media/product-recommendation-keyrecommendationfactors.png "Klíčové faktory doporučení, které model získal při generování doporučení produktu")
        
      
    1. **Statistika údajů**: Poskytuje přehled počtu transakcí, zákazníků a produktů, které model zvažuje. Je založen na vstupních datech, která byla použita k osvojení vzorů a generování doporučení produktů.
 
       > [!div class="mx-imgBorder"]
-      > ![Statistika dat](media/product-recommendation-datastatistics.png "Statistiky dat kolem vstupních dat používaných modelem k učení vzorců")
+      > ![Statistika dat.](media/product-recommendation-datastatistics.png "Statistiky dat kolem vstupních dat používaných modelem k učení vzorců")
 
       Tato část zobrazuje statistiky kolem datových bodů, které model používal k učení vzorů a generování doporučení produktů. Filtrování, jak je nakonfigurováno v konfiguraci modelu, se použije na výstup generovaný modelem. Model však používá všechna dostupná data k učení vzorců. Pokud tedy v konfiguraci modelu používáte filtrování produktů, v této části se zobrazí celkový počet produktů, které model analyzoval, aby se naučil vzorce, které se mohou lišit od počtu produktů, které odpovídají definovaným kritériím filtrování.
 
    1. **Doporučení produktů s vysokou spolehlivostí:** Ukázka doporučených produktů zákazníkům, o kterých se model domnívá, že si je zákazník pravděpodobně zakoupí.    
       Pokud je přidán katalog produktů, ID produktů budou nahrazena názvy produktů. Názvy produktů poskytují akčnější a intuitivnější informace o predikcích.
        > [!div class="mx-imgBorder"]
-       > ![Seznam zobrazující návrhy s vysokou spolehlivostí pro vybranou sadu jednotlivých zákazníků](media/product-recommendation-highconfidence.PNG "Seznam zobrazující návrhy s vysokou spolehlivostí pro vybranou sadu jednotlivých zákazníků")
+       > ![Seznam zobrazující návrhy s vysokou spolehlivostí pro vybranou sadu jednotlivých zákazníků.](media/product-recommendation-highconfidence.PNG "Seznam zobrazující návrhy s vysokou spolehlivostí pro vybranou sadu jednotlivých zákazníků")
 
 ## <a name="manage-predictions"></a>Správa predikcí
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095640"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556299"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikce odchodu předplatitelů (Preview)
 
@@ -63,9 +63,9 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
 1. V přehledech cílové skupiny přejděte na **Analytické nástroje** > **Predikce**.
 1. Vyberte dlaždici **Model odchodu předplatitelů (Preview)** a vyberte **Použít tento model**.
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice modelu odchodu předplatitelů s tlačítkem Použít tento model](media/subscription-churn-usethismodel.PNG "Dlaždice modelu odchodu předplatitelů s tlačítkem Použít tento model")
+   > ![Dlaždice modelu odchodu předplatitelů s tlačítkem Použít tento model.](media/subscription-churn-usethismodel.PNG "Dlaždice modelu odchodu předplatitelů s tlačítkem Použít tento model")
 
-### <a name="name-model"></a>Pojmenujte model
+### <a name="name-model"></a>Pojmenování modelu
 
 1. Zadejte název modelu, abyste jej odlišili od ostatních modelů.
 1. Zadejte název výstupní entity pouze pomocí písmen a číslic bez mezer. Jedná se o název, který bude používat entita modelu. Pak vyberte **Další**.
@@ -86,11 +86,11 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
     1. Vyberte **entitu zákazníka**, která odpovídá vaší primární entitě zákazníka.
     1. Zadejte název, který popisuje daný vztah.
        > [!div class="mx-imgBorder"]
-       > ![Stránka historie předplatného ukazující vytvoření vztahu k zákazníkovi](media/subscription-churn-subscriptionhistoryrelationship.PNG "Stránka historie předplatného ukazující vytvoření vztahu k zákazníkovi")
+       > ![Stránka historie předplatného ukazující vytvoření vztahu k zákazníkovi.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Stránka historie předplatného ukazující vytvoření vztahu k zákazníkovi")
 1. Vyberte **Další**.
 1. Namapujte sémantická pole na atributy v rámci entity historie předplatného a vyberte **Uložit**. Pro popis polí se podívejte na [předpoklady](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Stránka historie předplatného, která zobrazuje sémantické atributy, které jsou mapovány na pole ve vybrané entitě historie předplatného](media/subscription-churn-subscriptionhistorymapping.PNG "Stránka historie předplatného, která zobrazuje sémantické atributy, které jsou mapovány na pole ve vybrané entitě historie předplatného")
+   > ![Stránka historie předplatného, která zobrazuje sémantické atributy, které jsou mapovány na pole ve vybrané entitě historie předplatného.](media/subscription-churn-subscriptionhistorymapping.PNG "Stránka historie předplatného, která zobrazuje sémantické atributy, které jsou mapovány na pole ve vybrané entitě historie předplatného")
 1. Zvolte **Přidat data** pro **Aktivity zákazníků** a vyberte entitu, která poskytuje informace o aktivitě zákazníka, jak je popsáno v předpokladech.
 1. Vyberte typ aktivity, který odpovídá typu aktivity zákazníka, kterou konfigurujete.  Pokud nevidíte možnost odpovídající typu aktivity, kterou potřebujete, vyberte **Vytvořit novou** a zadejte název.
 1. Budete muset nakonfigurovat vztah mezi vaší entitou aktivity zákazníka a entitou zákazníka.
@@ -101,7 +101,7 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
 1. Namapujte sémantická pole na atributy v rámci entity aktivit zákazníka a vyberte **Uložit**. Pro popis polí se podívejte na [předpoklady](#prerequisites).
 1. (Volitelné) Pokud máte nějaké další aktivity zákazníka, které chcete zahrnout, opakujte výše uvedené kroky.
    > [!div class="mx-imgBorder"]
-   > ![Definování vztahů entit](media/subscription-churn-customeractivitiesmapping.PNG "Stránka aktivit zákazníků, která zobrazuje sémantické atributy, které jsou mapovány na pole ve vybrané entitě aktivity zákazníka")
+   > ![Definujte vztah entity.](media/subscription-churn-customeractivitiesmapping.PNG "Stránka aktivit zákazníků, která zobrazuje sémantické atributy, které jsou mapovány na pole ve vybrané entitě aktivity zákazníka")
 1. Vyberte **Další**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Nastavení plánu a kontrola konfigurace
@@ -115,7 +115,7 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
 
 1. Jděte na kartu **Moje predikce** v umístění **Analytické nástroje** > **Predikce**.
    > [!div class="mx-imgBorder"]
-   > ![Zobrazení stránky Moje predikce](media/subscription-churn-mypredictions.PNG "Zobrazení stránky Moje predikce")
+   > ![Zobrazení stránky Moje predikce.](media/subscription-churn-mypredictions.PNG "Zobrazení stránky Moje predikce")
 1. Vyberte předpověď, kterou chcete zkontrolovat.
    - **Název predikce:** Název predikce zadaný při jejím vytvoření.
    - **Typ predikce:** Typ modelu použitého pro predikci.
@@ -131,7 +131,7 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
    - **Poslední aktualizace:** Datum, kdy predikce aktualizovala výsledky ve výstupní entitě.
 1. Vyberte svislé tři tečky vedle predikce, pro kterou chcete zkontrolovat výsledky, a vyberte **Zobrazit**.
    > [!div class="mx-imgBorder"]
-   > ![Zobrazení možností v nabídce svislých třech teček pro predikci včetně úprav, aktualizace, zobrazení, protokolů a odstranění](media/subscription-churn-verticalellipses.PNG "Zobrazení možností v nabídce svislých třech teček pro predikci včetně úprav, aktualizace, zobrazení, protokolů a odstranění")
+   > ![Zobrazení možností v nabídce svislých třech teček pro predikci včetně úprav, aktualizace, zobrazení, protokolů a odstranění.](media/subscription-churn-verticalellipses.PNG "Zobrazení možností v nabídce svislých třech teček pro predikci včetně úprav, aktualizace, zobrazení, protokolů a odstranění")
 1. Na stránce výsledků jsou tři primární sekce s daty:
     1. **Výkon cvičení modelu:** Skóre může být A, B nebo C. Toto skóre označuje výkon predikce a může vám pomoci při rozhodování o použití výsledků uložených ve výstupní entitě.
         - Skóre je stanoveno na základě následujících pravidel:
@@ -139,13 +139,13 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
             - **B**, když model přesně predikoval alespoň 50 % celkových predikcí a když procento přesných predikcí odešlých zákazníků je maximálně o 10 % vyšší, než je historická průměrná míra odešlých zákazníků.
             - **C**, když model přesně predikoval méně než 50 % celkových predikcí nebo když procento přesných predikcí odešlých zákazníků je nižší, než historická průměrná míra odešlých zákazníků.
                > [!div class="mx-imgBorder"]
-               > ![Zobrazení výsledku výkonu modelu](media/subscription-churn-modelperformance.PNG "Zobrazení výsledku výkonu modelu")
+               > ![Zobrazení výsledku výkonu modelu.](media/subscription-churn-modelperformance.PNG "Zobrazení výsledku výkonu modelu")
     1. **Pravděpodobnost odchodu (počet zákazníků):** Skupiny zákazníků na základě jejich predikovaného rizika odchodu. Tato data vám mohou pomoci později, pokud chcete vytvořit segment zákazníků s vysokým rizikem odchodu. Takové segmenty pomáhají pochopit, kde by se pro členství v segmentech mělo nacházet vyřazení.
        > [!div class="mx-imgBorder"]
-       > ![Graf znázorňující rozložení výsledných odchodů rozdělený do rozmezí od 0 do 100 %](media/subscription-churn-resultdistribution.PNG "Graf znázorňující rozložení výsledných odchodů rozdělený do rozmezí od 0 do 100 %")
+       > ![Graf znázorňující rozložení výsledných odchodů rozdělený do rozmezí od 0 do 100 %.](media/subscription-churn-resultdistribution.PNG "Graf znázorňující rozložení výsledných odchodů rozdělený do rozmezí od 0 do 100 %")
     1. **Nejvlivnější faktory:** Při vytváření predikce se bere v úvahu mnoho faktorů. Každý z faktorů má svou důležitost vypočítanou pro agregované predikce, které model vytváří. Tyto faktory můžete použít k ověření výsledků predikce. Nebo můžete tyto informace použít později při [vytváření segmentů](segments.md), které mohou pomoci ovlivnit riziko odchodů zákazníků.
        > [!div class="mx-imgBorder"]
-       > ![Seznam zobrazující vlivné faktory a jejich význam při predikci výsledných odchodů](media/subscription-churn-influentialfactors.PNG "Seznam zobrazující vlivné faktory a jejich význam při predikci výsledných odchodů")
+       > ![Seznam zobrazující vlivné faktory a jejich význam při predikci výsledných odchodů.](media/subscription-churn-influentialfactors.PNG "Seznam zobrazující vlivné faktory a jejich význam při predikci výsledných odchodů")
 
 ## <a name="manage-predictions"></a>Správa predikcí
 

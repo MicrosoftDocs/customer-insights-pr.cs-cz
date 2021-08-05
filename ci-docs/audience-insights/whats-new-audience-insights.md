@@ -1,7 +1,7 @@
 ---
 title: Nové a připravované funkce
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263243"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692381"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Aktualizace z června 2021
+
+Aktualizace v červnu 2021 zahrnují několik funkcí, vylepšení výkonu a opravy chyb.
+
+### <a name="data-ingestion"></a>Příjem dat
+
+- **Vylepšené aktualizace postupu sjednocení dat** Nyní můžete na stránce zobrazit podrobnější a vylepšené dynamické aktualizace stavu v krocích [procesu sjednocení dat](data-unification.md). Tato funkce vám umožňuje sledovat podrobný postup, porozumět toku procesů a podniknout kroky v případě, že jakýkoli krok vyžaduje pozornost.
+
+### <a name="extensibility"></a>Rozšiřitelnost
+
+- **Export segmentů a dalších data do Salesforce Marketing Cloud** Rozšířili jsme naše exportní destinace o [Marketingový cloud Salesforce](export-salesforce.md). Nyní můžete exportovat segmenty a další typy dat do Salesforce Marketing Cloud prostřednictvím značkového exportu SFTP. Import dat lze v Salesforce plně automatizovat a použít k vytváření efektivnějších marketingových kampaní.  
+ 
+- **Export segmentů do ActiveCampaign** Rozšířili jsme naše exportní destinace tak, aby zahrnovaly [Aktivní kampaň](export-active-campaign.md). Exporty můžete nyní segmentovat, aby bylo možné generovat kampaně, poskytovat e-mailový marketing a využívat konkrétní skupiny zákazníků pomocí ActiveCampaign.
+ 
+- **Export segmentů do Sendinblue** Rozšířili jsme naše exportní destinace tak, aby zahrnovaly [Sendinblue](export-sendinblue.md). Exporty můžete nyní segmentovat, aby bylo možné generovat kampaně, poskytovat e-mailový marketing a využívat konkrétní skupiny zákazníků pomocí Sendinblue.
+ 
+### <a name="ux-updates"></a>Aktualizace UX 
+
+- **Nová a vylepšená stránka Zákazníci a stránka s podrobnostmi o profilu** Stránky Zákazníci a stránky podrobností profilu jsme přepracovali, tak abychom zlepšili uživatelské prostředí a zlepšili výkon. Tyto změny vám umožňují prohlížet, třídit, vyhledávat a filtrovat zákazníky. V adrese URL jsou nyní zastoupeny filtry, které umožňují bezproblémové sdílení výsledků vyhledávání s ostatními uživateli. Výsledky vyhledávání lze také uložit jako segment.    
+  Stránka podrobností pro profily zákazníků nyní seskupuje data v různých podsekcích, jako jsou demografická data, ID a další atributy profilu pro lepší čitelnost. Ostatní sekce na stránce podrobností profilu jsou nyní interaktivnější. Sekce aktivit například nyní umožňuje filtrování a třídění.
+
 
 ## <a name="may-2021-updates"></a>Aktualizace z května 2021
 
@@ -170,7 +192,7 @@ Aktualizace v únoru 2021 zahrnují několik funkcí, vylepšení výkonu a opra
 
 - **Kopírování prostředí podporuje více typů zdrojů dat**
 
-  Správci mohou kopírovat konfigurace prostředí do nového prostředí ve stejné organizaci. Tato funkce rozšiřuje funkci kopírování prostředí pro případy, kdy jsou použity zdroje dat založené na datovém jezeře Common Data Service nebo složce Common Data Model.
+  Správci mohou kopírovat konfigurace prostředí do nového prostředí ve stejné organizaci. Tato funkce rozšiřuje funkce kopírovacího prostředí pro případy, kdy se používají zdroje dat založené na spravovaném datovém jezeře Microsoft Dataverse nebo složce Common Data Model.
 
 ## <a name="january-2021-updates"></a>Aktualizace z ledna 2021
 

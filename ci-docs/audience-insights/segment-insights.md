@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306066"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554977"
 ---
 # <a name="segment-insights-preview"></a>Přehledy pro segmenty (Preview)
 
@@ -44,7 +44,7 @@ Můžete také analyzovat, jak se překrývání mění u konkrétních atribut�
 Po dokončení analýzy vyhledejte podrobnosti o tomto přehledu v části **Segmenty** > **Přehledy (Preview)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Podrobnosti přehledu překrytí segmentů":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Podrobnosti přehledu překrytí segmentů.":::
 
 Chcete-li zobrazit výsledky analýzy, vyberte příslušný přehled:
 
@@ -77,7 +77,7 @@ Diferenciátory segmentů vám pomohou zjistit, co odlišuje segment od ostatní
 Po dokončení analýzy vyhledejte podrobnosti o tomto přehledu v části **Segmenty** > **Přehledy (Preview)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Podrobnosti přehledu diferenciátoru segmentů":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Podrobnosti přehledu diferenciátoru segmentů.":::
 
 Chcete-li zobrazit výsledky analýzy, vyberte příslušný přehled. Analýza diferenciátoru zahrnuje dvě karty. Karta **Atributy** uvádí atributy profilu, které jsou považovány za diferenciátory. Karta **Míry** obsahuje diferenciátory. Každá karta obsahuje následující podrobnosti:
 

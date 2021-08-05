@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305883"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554675"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Připojte se k Power Query zdroji dat
 
@@ -42,7 +42,7 @@ Power Query nabízí širokou sadu konektorů pro příjem dat. Většina z těc
 1. Dialogové okno **Power Query - Upravit dotazy** umožňuje zkontrolovat a upřesnit data. V levém podokně se zobrazí entity, které systémy identifikované ve vybraném zdroj dat.
 
    > [!div class="mx-imgBorder"]
-   > ![Dialog Upravit dotazy](media/data-manager-configure-edit-queries.png "Dialog Upravit dotazy")
+   > ![Dialog Upravit dotazy.](media/data-manager-configure-edit-queries.png "Dialog Upravit dotazy")
 
 1. Data lze rovněž transformovat. Vyberte entitu, kterou chcete upravit nebo transformovat. K použití transformací použijte možnosti v okně Power Query. Každá transformace bude uvedena v **Použité kroky**. Power Query poskytuje řadu předem připravených možností transformace. Další informace najdete v tématu [Transormace Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Konektory se zaškrtnutím ve sloupci **Customer Insights (toky dat)** slouží 
 2. Vyberte svislé tlačítko se třemi tečkami vedle zdroje dat, který chcete změnit, a v rozevírací nabídce vyberte **Upravit**.
 
    > [!div class="mx-imgBorder"]
-   > ![Upravit možnost](media/edit-option-data-sources.png "Upravit možnost")
+   > ![Upravit možnost.](media/edit-option-data-sources.png "Upravit možnost")
 
 3. Aplikujte své změny a transformace v dialogovém okně **Power Query - Upravit dotazy**, jak je popsáno v sekci [Vytvořte nový zdroj dat](#create-a-new-data-source).
 

@@ -1,7 +1,7 @@
 ---
 title: Export dat ze služby Customer Insights do Salesforce Marketing Cloud
 description: Naučte se, jak nakonfigurovat propojení a exportovat ho do Salesforce Marketing Cloud.
-ms.date: 06/24/2021
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 8ce243918c2388e931a98df3bbe576ddf692f707
+ms.sourcegitcommit: 4823684a1399fd66ffecfce21735f2bc90a1733c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314591"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6660259"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>Export segmentů a dalších dat do Salesforce Marketing Cloud (náhled)
 
@@ -23,11 +23,6 @@ Využijte svá zákaznická data ve službě Salesforce Marketing Cloud jejich e
 ## <a name="prerequisites-for-connection"></a>Předpoklady pro připojení
 
 - Dostupnost hostitele SFTP a odpovídajících pověření správce. [Jak nastavit umístění SFTP pro Salesforce Marketing Cloud](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
-
-## <a name="known-limitations"></a>Známá omezení
-
-- Běh exportu závisí na výkonu vašeho systému. Jako minimální konfiguraci vašeho serveru doporučujeme dvě jádra CPU a 1 GB paměti. 
-- Export entit s až 100 miliony zákaznických profilů může při použití doporučené minimální konfigurace trvat 90 minut. 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>Nastavení připojení k Salesforce Marketing Cloud
 

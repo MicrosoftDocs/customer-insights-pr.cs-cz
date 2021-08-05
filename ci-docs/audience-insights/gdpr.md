@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597503"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554301"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žádosti o práva subjektu údajů (DSR) v rámci GDPR
 
@@ -40,7 +40,7 @@ Správce Customer Insights může podle těchto kroků odebrat zákaznická data
    2. Zkontrolujte stav zdroje dat ve volbě **Stav**. Zaškrtnutí znamená, že aktualizace proběhla úspěšně. Výstražný trojúhelník znamená, že se něco pokazilo. Pokud se zobrazí výstražný trojúhelník, kontaktujte D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Správa požadavků na výmaz GDPR pro zákaznická data](media/gdpr-data-sources.png "Správa požadavků na výmaz GDPR pro zákaznická data")
+> ![Správa požadavků na výmaz GDPR pro zákaznická data.](media/gdpr-data-sources.png "Správa požadavků na výmaz GDPR pro zákaznická data")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Správa žádostí o odstranění údajů uživatele
 
@@ -52,7 +52,7 @@ Správce Customer Insights může odstranit údaje o uživatelích Customer Insi
 4. Vyberte **Odstranit**.
 
 > [!div class="mx-imgBorder"]
-> ![Zpracování žádostí o odstranění údajů uživatele v rámci GDPR](media/gdpr-permissions.png "Zpracování žádostí o odstranění údajů uživatele v rámci GDPR")
+> ![Zpracování žádostí o odstranění údajů uživatele v rámci GDPR.](media/gdpr-permissions.png "Zpracování žádostí o odstranění údajů uživatele v rámci GDPR")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Odpověď na žádosti subjektu údajů o export údajů v rámci GDPR
 

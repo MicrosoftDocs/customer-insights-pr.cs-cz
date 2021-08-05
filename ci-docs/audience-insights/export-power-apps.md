@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598147"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554105"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Konektor Microsoft Power Apps (preview)
 
@@ -56,12 +56,12 @@ Například přidáte profily zákazníků do [ovládacího prvku galerie](/powe
 1. Přidat ovládací prvek **Galerie** do aplikace, kterou stavíte.
 
 > [!div class="mx-imgBorder"]
-> ![Přidat prvek galerie](media/connector-powerapps9.png "Přidat prvek galerie")
+> ![Přidat prvek galerie.](media/connector-powerapps9.png "Přidat prvek galerie")
 
 1. Vyberte **Zákazník** jako zdroj dat pro položky.
 
     > [!div class="mx-imgBorder"]
-    > ![Vybrat zdroj dat](media/choose-datasource-powerapps.png "Vybrat zdroj dat")
+    > ![Vyberte zdroj dat.](media/choose-datasource-powerapps.png "Vybrat zdroj dat")
 
 1. Panel dat můžete změnit vpravo a vybrat pole pro entitu Zákazník, které se má zobrazit v galerii.
 

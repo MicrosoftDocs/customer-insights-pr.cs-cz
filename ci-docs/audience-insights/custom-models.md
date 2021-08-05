@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305617"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554840"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastní modely strojového učení
 
@@ -42,7 +42,7 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
 1. Zadejte rozpoznatelný název vlastního modelu do pole **Název**.
 
    > [!div class="mx-imgBorder"]
-   > ![Snímek obrazovky podokna Nový pracovní postup](media/new-workflowv2.png "Snímek obrazovky podokna Nový pracovní postup")
+   > ![Screenshot podokna Nový pracovní postup.](media/new-workflowv2.png "Snímek obrazovky podokna Nový pracovní postup")
 
 1. Vyberte organizaci, která obsahuje webovou službu, v části **Klient, který obsahuje vaši webovou službu**.
 
@@ -59,7 +59,7 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
    > Pracovní postup vlastního modelu použije heuristiku k mapování vstupních polí webové služby na atributy entity na základě názvu a datového typu pole. Pokud pole webové služby nelze mapovat na entitu, zobrazí se chyba.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfigurace pracovního postupu](media/intelligence-screen2-updated.png "Konfigurace pracovního postupu")
+   > ![Konfigurace pracovního postupu.](media/intelligence-screen2-updated.png "Konfigurace pracovního postupu")
 
 1. V kroku **Výstupní parametry modelu** nastavte následující vlastnosti:
    - Machine Learning Studio (classic)
@@ -70,12 +70,12 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
       1. Vyberte **Název parametru výstupní cesty** vašeho dávkového kanálu z rozbalovací nabídky.
 
       > [!div class="mx-imgBorder"]
-      > ![Podokno výstupních parametrů modelu](media/intelligence-screen3-outputparameters.png "Podokno výstupních parametrů modelu")
+      > ![Podokno výstupních parametrů modelu.](media/intelligence-screen3-outputparameters.png "Podokno výstupních parametrů modelu")
 
 1. Vyberte odpovídající atribut z rozevíracího seznamu **D zákazníka ve výsledcích**, který identifikuje zákazníky, a pak vyberte **Uložit**.
 
    > [!div class="mx-imgBorder"]
-   > ![Propojení výsledků v podokně údajů o zákaznících](media/intelligence-screen4-relatetocustomer.png "Propojení výsledků v podokně údajů o zákaznících")
+   > ![Propojení výsledků v podokně údajů o zákaznících.](media/intelligence-screen4-relatetocustomer.png "Propojení výsledků v podokně údajů o zákaznících")
 
 1. Zobrazí se obrazovka **Pracovní postup uložen** s podrobnostmi o pracovním postupu.    
    Pokud jste nakonfigurovali pracovní postup pro kanál Azure Machine Learning, přehledy cílové skupiny se připojí k pracovnímu prostoru, který obsahuje kanál. Přehledy cílové skupiny získají roli **Přispěvatel** v pracovním prostoru Azure.

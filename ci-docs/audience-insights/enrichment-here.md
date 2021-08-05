@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305286"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555299"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Rozšíření profilů zákazníků od HERE Technologies (Preview)
 
@@ -35,7 +35,7 @@ Chcete-li nakonfigurovat rozšíření společnosti HERE Technologies, musíte s
 1. Vyberte **Rozšířit moje data** v dlaždici HERE Technologies a vyberte **Začít**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice HERE Technologies](media/HERE-tile.png "Dlaždice HERE Technologies")
+   > ![Dlaždice HERE Technologies.](media/HERE-tile.png "Dlaždice HERE Technologies")
 
 1. V rozevíracím seznamu vyberte [připojení](connections.md). Pokud není k dispozici propojení, kontaktujte správce. Pokud jste správce, můžete vytvořit propojení výběrem možnosti **Přidat propojení**. V rozevíracím seznamu vyberte **HERE Technologies**. 
 
@@ -50,7 +50,7 @@ Chcete-li nakonfigurovat rozšíření společnosti HERE Technologies, musíte s
 1. Definujte, která pole z vašich sjednocených profilů se mají použít k vyhledání odpovídajících dat umístění od HERE Technologies. Pole **Ulice 1** a **Poštovní směrovací číslo** jsou povinná pro vybranou primární a/nebo sekundární adresu. Pro vyšší přesnost shody lze přidat více polí.
 
    > [!div class="mx-imgBorder"]
-   > ![Stránka konfigurace rozšíření od HERE Technologies](media/enrichment-HERE-configuration.png "Stránka konfigurace rozšíření od HERE Technologies")
+   > ![Stránka konfigurace rozšíření od HERE Technologies.](media/enrichment-HERE-configuration.png "Stránka konfigurace rozšíření od HERE Technologies")
 
 1. Výběrem možnosti **Další** dokončete mapování polí.
 
@@ -73,7 +73,7 @@ Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci ro
 1. Po dokončení ověření vyberte **Uložit**.
 
    > [!div class="mx-imgBorder"]
-   > ![Stránka konfigurace připojení pro HERE Technologies](media/enrichment-HERE-connection.png "Stránka konfigurace připojení pro HERE Technologies")
+   > ![Stránka konfigurace připojení pro HERE Technologies.](media/enrichment-HERE-connection.png "Stránka konfigurace připojení pro HERE Technologies")
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 

@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596491"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692105"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Připojení k účtu Azure Data Lake Storage Gen2 s instančním objektem Azure pro přehledy cílové skupiny
 
 Automatizované nástroje, které používají služby Azure, by vždy měly mít omezená oprávnění. Místo toho, aby se aplikace přihlašovaly jako plně privilegovaný uživatel, Azure nabízí instanční objekty. Čtěte dále a dozvíte se, jak propojit přehledy cílové skupiny s účtem Azure Data Lake Storage Gen2 pomocí instančního objektu Azure namísto klíčů účtu úložiště. 
 
-Instanční objekt můžete použít pro bezpečné [přidání nebo úpravu složky Common Data Model jako zdroje dat](connect-common-data-model.md) nebo [vytvoření nového nebo aktualizaci stávajícího prostředí](manage-environments.md#create-an-environment-in-an-existing-organization).
+Instanční objekt můžete použít pro bezpečné [přidání nebo úpravu složky Common Data Model jako zdroje dat](connect-common-data-model.md) nebo [vytvoření nového nebo aktualizaci stávajícího prostředí](get-started-paid.md).
 
 > [!IMPORTANT]
 > - Účet úložiště Azure Data Lake Gen2, který chce použít instanční objekt, musí mít [povolenu funkci Hierarchický prostor názvů (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Změny se mohou projevit až za 15 minut.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Zadejte ID prostředku Azure nebo podrobnosti předplatného Azure v příloze účtu úložiště k přehledům cílové skupiny.
 
-Připojte účet úložiště Azure Data Lake v přehledech cílové skupiny, abyste mohli [ukládat výstupní data](manage-environments.md) nebo jej [použít jako zdroj dat](connect-common-data-service-lake.md). Možnost Azure Data Lake vám umožní vybrat si mezi přístupem založeným na prostředcích nebo na základě předplatného.
+Připojte účet úložiště Azure Data Lake v přehledech cílové skupiny, abyste mohli [ukládat výstupní data](manage-environments.md) nebo jej [použít jako zdroj dat](connect-dataverse-managed-lake.md). Možnost Azure Data Lake vám umožní vybrat si mezi přístupem založeným na prostředcích nebo na základě předplatného.
 
 Podle níže uvedených kroků poskytněte požadované informace o vybraném přístupu.
 

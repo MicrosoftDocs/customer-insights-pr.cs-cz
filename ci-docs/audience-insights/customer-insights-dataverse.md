@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259183"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650034"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práce s daty Customer Insights v Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Aplikace Customer Insights nabízí možnost zpřístupnění výstupních entit
 
 **Organizace se stávajícími prostředími Dataverse**
 
-Organizace, které již používají Dataverse, mohou [použít jedno z jejich stávajících prostředí Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization), když správce nastavuje přehledy cílové skupiny. Poskytnutím adresy URL prostředí Dataverse toto prostředí připojíte k novému prostředí přehledů cílové skupiny. Aby byl zajištěn co nejlepší výkon, musejí být prostředí Customer Insights a Dataverse hostována ve stejné oblasti.
+Organizace, které již používají Dataverse, mohou [použít jedno z jejich stávajících prostředí Dataverse](get-started-paid.md), když správce nastavuje přehledy cílové skupiny. Poskytnutím adresy URL prostředí Dataverse toto prostředí připojíte k novému prostředí přehledů cílové skupiny. Aby byl zajištěn co nejlepší výkon, musejí být prostředí Customer Insights a Dataverse hostována ve stejné oblasti.
 
 Chcete-li připojit prostředí Dataverse, rozbalte při vytváření prostředí přehledů cílové skupiny uzel **Rozšířená nastavení**. Zadejte **adresu URL prostředí Microsoft Dataverse** a zaškrtněte políčko **Povolit sdílení dat**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Nová organizace**
 

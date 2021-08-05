@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595893"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692519"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Doplňte své dílčí údaje pomocí predikcí
 
@@ -31,11 +31,11 @@ Předpovědi vám umožňují snadno vytvářet předpovídané hodnoty, které 
 
 Než bude vaše organizace moci používat funkci předpovědí, musí být splněny následující předpoklady:
 
-1. Vaše organizace má instanci [vytvořenou v Common Data Service](/ai-builder/build-model#prerequisites) a je ve stejné organizaci jako Customer Insights.
+1. Vaše organizace má instanci [nastavení v Microsoft Dataverse](/ai-builder/build-model#prerequisites) a je ve stejné organizaci jako Customer Insights.
 
-2. Vaše prostředí je připojeno k vaší instanci Common Data Service.
+2. Vaše prostředí přehledu cílové skupiny je připojeno k vaší instanci Dataverse.
 
-Pokud [vytváříte první prostředí](manage-environments.md), nakonfigurujte jej v dialogu **Vytvořit prostředí** a vyberete **Rozšířený**. Pokud jste již vytvořili prostředí, přejděte na jeho nastavení a vyberte možnost **Pokročilý**. Ať tak či onak, v sekci **Použití predikcí** přejděte na adresu URL instance Common Data Service, ke které chcete připojit své prostředí.
+Pokud [vytváříte první prostředí](get-started-paid.md), nakonfigurujte jej v dialogu **Vytvořit prostředí** a vyberete **Rozšířený**. Pokud jste již vytvořili prostředí, přejděte na jeho nastavení a vyberte možnost **Pokročilý**. Ať tak či onak, v sekci **Použití predikcí** přejděte na adresu URL instance Dataverse, ke které chcete připojit své prostředí.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Vytvoření predikce v entitě Zákazník
 
@@ -47,17 +47,17 @@ Pokud [vytváříte první prostředí](manage-environments.md), nakonfigurujte 
 
 4. Vyhledejte název atributu, pro který chcete predikovat hodnoty, a vyberte ikonu **Přehled** ve sloupci **Souhrn**.
    > [!div class="mx-imgBorder"]
-   > ![Přehledová ikona](media/intelligence-overviewicon.png "Přehledová ikona")
+   > ![Ikona přehledu.](media/intelligence-overviewicon.png "Přehledová ikona")
 
 5. Pokud pro váš atribut existuje vysoká míra chybějících hodnot, vyberte **Předpovědět chybějící hodnoty** a pokračujte tak ve své predikci.
    > [!div class="mx-imgBorder"]
-   > ![Přehledový stav se zobrazeným tlačítkem predikce chybějících hodnot](media/intelligence-overviewpredictmissingvalues.png "Přehledový stav se zobrazeným tlačítkem predikce chybějících hodnot")
+   > ![Přehledový stav se zobrazeným tlačítkem predikce chybějících hodnot.](media/intelligence-overviewpredictmissingvalues.png "Přehledový stav se zobrazeným tlačítkem predikce chybějících hodnot")
 
 6. Poskytněte **Zobrazované jméno** a **Název výstupní entity** pro výsledky predikce.
 
 7. Předvyplněný seznam možností ukáže, kde můžete namapovat hodnoty na předpovídanou kategorii. V takovém případě budou vaše jediné možnosti kategorie 0 nebo 1, protože mapují na pravdivou / nepravdivou nebo binární povahu predikce. Ve sloupci Kategorie namapujte hodnoty polí, které chcete mít klasifikovány jako „0“ v konečné predikci, na „0“ ve sloupci Kategorie, a položky, které chcete v konečné predikci klasifikovat jako „1“, na „1“.
    > [!div class="mx-imgBorder"]
-   > ![Příklad zobrazení mapovaných hodnot polí do kategorií](media/intelligence-categorymapping.png "Příklad zobrazení mapovaných hodnot polí do kategorií")
+   > ![Příklad zobrazení mapovaných hodnot polí do kategorií.](media/intelligence-categorymapping.png "Příklad zobrazení mapovaných hodnot polí do kategorií")
 
 8. Vyberte **Hotovo** a předpověď bude zpracována. Zpracování bude nějakou dobu trvat, v závislosti na velikosti a složitosti dat. Výsledky buduo k dispozici v nové entitě na základě **Název výstupní entity** předpovědi, kterou jste vytvořili.
 
@@ -77,7 +77,7 @@ V rámci tohoto toku si vyberete konkrétní atribut, který bude základem vaš
 
 5. Pokud segment, který jste vytvořili, obsahuje neúplná data ve zdrojovém poli, můžete předpovědět chybějící hodnoty.
    > [!div class="mx-imgBorder"]
-   > ![Tlačítko predikce](media/segments-predictoption.png "Tlačítko predikce")
+   > ![Tlačítko predikce.](media/segments-predictoption.png "Tlačítko predikce")
 
 6. Poskytněte **Zobrazované jméno** a **Název výstupní entity** pro výsledky predikce.
 
@@ -93,7 +93,7 @@ V rámci tohoto toku si vyberete konkrétní atribut, který bude základem vaš
 
 4. Uvidíte několik datových bodů v zobrazení vaší predikce.
    > [!div class="mx-imgBorder"]
-   > ![Stránka predikce](media/intelligence-predictionsviewpage.png "Stránka predikce")
+   > ![Stránka predikce.](media/intelligence-predictionsviewpage.png "Stránka predikce")
 
    - **Předvídané hodnoty** zobrazuje mapování, které jste vytvořili během fáze mapování Pole na Kategorie. Zobrazí se hodnoty ve vašem datovém souboru, které byly mapovány do konkrétní kategorie.
    -**Špičkové vlivy** jsou faktory v rámci vašeho datového souboru, které s největší pravděpodobností ovlivnily důvěru predikce, že vaše hodnota pole bude mapována na konkrétní kategorii.
@@ -139,7 +139,7 @@ Příští spuštění vaší predikce použije aktualizovaný model, který jst
 
 ## <a name="troubleshooting"></a>Řešení problémů
 
-Pokud nemůžete dokončit připojení procesu Common Data Service kvůli chybě, můžete zkusit proces dokončit ručně. V procesu připojení se mohou vyskytnout dva známé problémy:
+Pokud nemůžete dokončit připojení procesu Dataverse kvůli chybě, můžete zkusit proces dokončit ručně. V procesu připojení se mohou vyskytnout dva známé problémy:
 
 - Řešení Doplněk karty zákazníka není nainstalováno.
     1. Vyplňte pokyny k [instalaci a konfiguraci řešení](customer-card-add-in.md).

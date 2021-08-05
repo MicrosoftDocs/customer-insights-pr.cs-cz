@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306020"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650310"
 ---
 # <a name="match-entities"></a>Párování entit
 
@@ -138,7 +138,7 @@ Zadání pravidel zrušení duplikace není povinné. Pokud nejsou nakonfigurov�
    - **Nejdřívější**: Identifikuje vítězný záznam na základě nejmenší aktuálnosti. Vyžaduje datum nebo číselné pole pro definování aktuálnosti.
  
    > [!div class="mx-imgBorder"]
-   > ![Pravidla zrušení duplicit – krok 1](media/match-selfconflation.png "Pravidla zrušení duplicit – krok 1")
+   > ![Pravidla zrušení duplicit – krok 1.](media/match-selfconflation.png "Pravidla zrušení duplicit – krok 1")
  
 1. Jakmile jsou entity vybrány a je nastavena jejich předvolba sloučení, vyberte **Přidat pravidlo** pro definování pravidel na úrovni entity.
    - **Vyberte pole** udává všechna dostupná pole z dané entity. Vyberte pole, u kterého chcete zkontrolovat duplicity. Vyberte pole, která jsou potenciálně jedinečná pro každého jednotlivého zákazníka. Například e-mailová adresa nebo kombinace jména, města a telefonního čísla.
@@ -146,7 +146,7 @@ Zadání pravidel zrušení duplikace není povinné. Pokud nejsou nakonfigurov�
    - Definujte podmínky volbou **Přidat podmínku**.
  
    > [!div class="mx-imgBorder"]
-   > ![Pravidla zrušení duplicit – krok 2](media/match-selfconflation-rules.png "Pravidla zrušení duplicit – krok 2")
+   > ![Pravidla zrušení duplicit – krok 2.](media/match-selfconflation-rules.png "Pravidla zrušení duplicit – krok 2")
 
   Pro entitu můžete vytvořit několik pravidel zrušení duplicit. 
 
@@ -179,7 +179,9 @@ Jděte na **Data** > **Sjednocení** > **Párování** a volbou **Spustit** spus
 Výsledek úspěšného spuštění, sjednocenou entitu profilu zákazníka, najdete na stránce **Entity**. Sjednocená entita profilu zákazníka se jmenuje **Zákazníci** v sekci **Profily**. První úspěšné spuštění párování vytvoří sjednocenou entitu *Zákazník*. Všechna následná spuštění shody tuto entitu rozšíří.
 
 > [!TIP]
-> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies). Můžete vybrat stav procesu a zobrazit podrobnosti o průběhu celé úlohy. Po výběru **Zobrazit podrobnosti** pro jeden z úkolů úlohy najdete další informace: čas zpracování, datum posledního zpracování a všechny chyby a varování spojené s úkolem.
+> Po spuštění procesu shody vyberte stav procesu a otevřete podokno **Podrobnosti o úkolu**. Poskytuje přehled o době zpracování, datu posledního zpracování a všech chybách a výstrahách spojených s úkolem. Vyberte **Zobrazit podrobnosti**, abyste zjistili, které entity se zúčastnily procesu porovnávání, jaká pravidla u nich byla použita a zda byly aktualizace úspěšně publikovány.  
+> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Podrobná cesta k získání podrobností o zpracování z odkazu na stav úkolu.":::
 
 ## <a name="review-and-validate-your-matches"></a>Kontrola a ověření shody
 

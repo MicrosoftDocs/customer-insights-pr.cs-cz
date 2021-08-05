@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977369"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327356"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Export dat do Azure Synapse Analytics (Preview)
 
@@ -74,8 +74,10 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 1. Poskytují rozpoznatelné **zobrazované jméno** pro váš export a **název databáze**.
 
 1. Vyberte entity, do kterých chcete exportovat Azure Synapse Analytics.
+   > [!NOTE]
+   > Zdroje dat založené na [složce Common Data Model](connect-common-data-model.md) nejsou podporovány.
 
-1. Zvolte **Uložit**.
+2. Zvolte **Uložit**.
 
 Uložení exportu nespustí export okamžitě.
 

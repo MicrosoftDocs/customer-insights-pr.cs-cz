@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305148"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555483"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte si zákaznické profily značkami a zájmovými skupinami (preview)
 
@@ -27,7 +27,7 @@ Chcete-li nakonfigurovat rozšíření o náklonnost ke značkám, přejděte na
 Chcete-li nakonfigurovat rozšíření o náklonnost k zájmům, přejděte na kartu **Zjistit** a vyberte **Rozšířit moje data** na dlaždici **Zájmy**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice Značky a zájmy](media/BrandsInterest-tile-Hub.png "Dlaždice Značky a zájmy")
+   > ![Dlaždice Značky a zájmy.](media/BrandsInterest-tile-Hub.png "Dlaždice Značky a zájmy")
 
 ## <a name="how-we-determine-affinities"></a>Jak určujeme afinity
 
@@ -123,7 +123,7 @@ V závislosti na velikosti vašich zákaznických dat může dokončení obohaco
 
 Po spuštění procesu rozšíření přejděte na **Moje rozšíření**, kde zkontrolujte celkový počet rozšířených zákazníků a rozpis značek nebo zájmů v rozšířených profilech zákazníků.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Náhled výsledků po spuštění procesu rozšíření":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Náhled výsledků po spuštění procesu rozšíření.":::
 
 Prohlédněte si obohacená data výběrem **Zobrazit obohacená data** v grafu. Obohatená data pro značky obsahuje entita **BrandAffinityFromMicrosoft**. Data pro zájmy jsou v entitě **InterestAffinityFromMicrosoft**. Tyto entity najdete také ve skupině **Rozšíření** v umístění **Data** > **Entity**.
 
@@ -131,7 +131,7 @@ Prohlédněte si obohacená data výběrem **Zobrazit obohacená data** v grafu.
 
 Náklonnost ke značkám a zájmům lze zobrazit také na jednotlivých kartách zákazníka. Jděte na **Zákazníci** a vyberte profil zákazníka. Na kartě zákazníka najdete grafy značek nebo zájmů, ke kterým mají lidé v demografickém profilu zákazníka náklonnost.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Karta zákazníka s rozšířenými daty":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Karta zákazníka s rozšířenými daty.":::
 
 ## <a name="next-steps"></a>Další kroky
 

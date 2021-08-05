@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596537"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554886"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Připojení ke složce Common Data Model prostřednictvím účtu Azure Data Lake
 
@@ -45,7 +45,7 @@ Tento článek poskytuje informace, jak ingestovat data ze složky Common Data M
 
 1. Můžete si vybrat mezi použitím možnosti založené na prostředku a možnosti založené na předplatném ověřování. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Zadejte informace o **Kontejneru** a vyberte **Další**.
    > [!div class="mx-imgBorder"]
-   > ![Dialogové okno pro zadání nových podrobností o připojení pro Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Dialogové okno pro zadání nových podrobností o připojení pro Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Abyste se mohli připojit a vytvořit zdroj dat, potřebujete jednu z následujících rolí pro kontejner nebo výše uvedený účet úložiště:
    >  - Čtenář dat objektů blob úložiště
@@ -58,11 +58,11 @@ Tento článek poskytuje informace, jak ingestovat data ze složky Common Data M
 
 1. Ve vybraném souboru model.json nebo manifest.json získáte seznam dostupných entit. Můžete zkontrolovat seznam dostupných entit, vybrat z něho a vybrat **Uložit**. Všechny vybrané entity budou ingestovány z nového zdroje dat.
    > [!div class="mx-imgBorder"]
-   > ![Dialogové okno zobrazující seznam entit ze souboru model.json](media/review-entities.png)
+   > ![Dialogové okno zobrazující seznam entit ze souboru model.json.](media/review-entities.png)
 
 8. Označte, pro které datové entity chcete povolit profilování dat a vyberte **Uložit**. Profilování dat umožňuje analýzy a další funkce. Můžete vybrat celou entitu, čímž vyberete všechny atributy z entity, nebo můžete vybrat jen některé atributy dle vaší preference. Ve výchozím nastavení není pro profilování dat povolena žádná entita.
    > [!div class="mx-imgBorder"]
-   > ![Dialogové okno zobrazující profilování dat](media/dataprofiling-entities.png)
+   > ![Dialogové okno zobrazující profilování dat.](media/dataprofiling-entities.png)
 
 9. Po uložení vašich výběrů se otevře stránka **Zdroje dat**. Nyní byste měli vidět připojení ke složce Common Data Model jako zdroj dat.
 
@@ -81,12 +81,12 @@ Můžete aktualizovat přístupový klíč pro účet úložiště obsahující 
 
 4. Volitelně aktualizujte **Přístupový klíč** a vyberte **Další**.
 
-   ![Dialog pro úpravu a aktualizaci přístupového klíče pro existující zdroj dat](media/edit-access-key.png)
+   ![Dialog pro úpravu a aktualizaci přístupového klíče pro existující zdroj dat.](media/edit-access-key.png)
 
 5. Volitelně můžete provést aktualizaci z připojení klíče účtu do připojení založeného na prostředcích nebo předplatném. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Nemůžete změnit informace o **kontejneru** při aktualizaci připojení.
    > [!div class="mx-imgBorder"]
 
-   > ![Dialogové okno pro zadání podrobností o připojení k existujícímu účtu úložiště Azure Data Lake](media/enter-existing-storage-details.png)
+   > ![Dialogové okno pro zadání podrobností o připojení k existujícímu účtu úložiště Azure Data Lake.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Abyste se mohli připojit a vytvořit zdroj dat, potřebujete jednu z následujících rolí pro kontejner nebo výše uvedený účet úložiště:

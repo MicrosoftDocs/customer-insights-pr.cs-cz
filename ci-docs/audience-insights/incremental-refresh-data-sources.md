@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 03f76bcfc7336d8430146e8a26ffa649c6a17db0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596813"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554151"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Přírůstková aktualizace pro zdroje dat založené na Power Query
 
@@ -45,7 +45,7 @@ Přehledy cílové skupiny umožňují přírůstkovou aktualizaci zdrojů dat i
 1. Na stránce **Nastavení přírůstkové aktualizace** nakonfigurujete přírůstkovou aktualizaci pro všechny entity, které jste vybrali při vytváření zdroje dat.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfigurace entit ve zdroj dat pro přírůstkovou aktualizaci](media/incremental-refresh-settings.png "Konfigurace entit ve zdroj dat pro přírůstkovou aktualizaci")
+   > ![Konfigurace entit ve zdroj dat pro přírůstkovou aktualizaci.](media/incremental-refresh-settings.png "Konfigurace entit ve zdroj dat pro přírůstkovou aktualizaci")
 
 1. Vyberte entitu a uveďte následující podrobnosti:
 

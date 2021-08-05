@@ -1,7 +1,7 @@
 ---
 title: Konektor pro Power BI
 description: Zjistěte, jak používat konektor Dynamics 365 Customer Insights v Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596031"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661094"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor pro Power BI (preview)
 
@@ -39,7 +39,7 @@ Vytvářejte vizualizace svých dat pomocí Power BI Desktop. Vytvářejte dalš
 
 1. V dialogovém okně **Navigátor**. se zobrazí seznam všech prostředí, do kterých máte přístup. Rozbalte prostředí a otevřete libovolnou složku (entity, míry, segmenty, rozšíření). Například otevřete složky **Entity**, abyste viděli všechny entity, které můžete importovat.
 
-   ![Navigátor konektoru Power BI](media/power-bi-navigator.png "Navigátor konektoru Power BI")
+   ![Navigátor konektoru Power BI.](media/power-bi-navigator.png "Navigátor konektoru Power BI")
 
 1. Zaškrtněte políčka vedle entit, které chcete zahrnout, a **Načíst**. Můžete vybrat více entit z více prostředí.
 
@@ -68,5 +68,11 @@ Duplikované vztahy můžete identifikovat a odstranit.
 3. Odstraňte veškeré identifikované duplicitní vztahy.
 
 Po odstranění duplicitních vztahů zkuste znovu nakonfigurovat konektor Power BI. Prostředí by mělo být ihned k dispozici.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Chyby v polích data při načítání entit do Power BI Desktop
+
+Při načítání entit, které obsahují pole s formátem data, jako je MM/DD/RRRR, můžete narazit na chyby v důsledku neshodných formátů národního prostředí. K tomuto nesouladu dochází, když je váš soubor Power BI Desktop je nastaven na jiné národní prostředí než angličtina (Spojené státy), protože pole s daty v přehledech cílové skupiny jsou uložena v americkém formátu.
+
+Soubor Power BI Desktop má jediné nastavení národního prostředí, které se použije při načítání dat. Aby byla tato pole dat interpretována správně, nastavte národní prostředí souboru .BPI na angličtinu (Spojené státy). [Zjistěte, jak změnit národní prostředí souboru plochy Power BI](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595985"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555115"
 ---
 # <a name="map-entities-and-attributes"></a>Mapování entit a atributů
 
@@ -35,14 +35,14 @@ Další informace o obecném toku sjednocení dat naleznete na stránce [Sjednot
 3. Vyberte entity a atributy, které chcete použít ve fázích *párování* a *sloučení*. Můžete vybrat požadované atributy jednotlivě z entity nebo zahrnout všechny atributy z entity zaškrtnutím políčka **Zahrnout všechna pole** na úrovni entity. Doporučujeme vybrat alespoň dvě entity, aby bylo možné proces sjednocení dat používat výhodně.
 
    > [!div class="mx-imgBorder"]
-   > ![Přiklad Přidat entity](media/data-manager-configure-map-add-entities-example.png "Přiklad Přidat entity")
+   > ![Přiklad Přidat entity.](media/data-manager-configure-map-add-entities-example.png "Přiklad Přidat entity")
 
    V tomto příkladu přidáváme entity **eCommerceContacts** a **loyCustomers**. Výběrem těchto entit můžete získat přehled, kteří z online obchodních zákazníků jsou členy věrnostního programu.
    
    Můžete vyhledávat klíčová slova ve všech atributech a entitách a vybrat požadované atributy, které chcete mapovat.
    
      > [!div class="mx-imgBorder"]
-   > ![Příklad vyhledávacích polí](media/data-manager-configure-map-search-fields-example.png "Příklad vyhledávacích polí")
+   > ![Příklad vyhledávacích polí.](media/data-manager-configure-map-search-fields-example.png "Příklad vyhledávacích polí")
 
 4. Volbou **Použít** potvrďte svůj výběr.
 
@@ -55,7 +55,7 @@ Po výběru entit se zobrazí stránka **Mapa** s vybranými entitami pro vaši 
 - **Sémantický typ atributu**: Kategorie vašich atributů, jako je e-mailová adresa nebo jméno. Chcete-li použít modely AI pro inteligentní predikci sémantiky, ušetřit čas a zlepšit přesnost, nastavte **Inteligentní mapování** na **ZAPNUTO**. Inteligentní mapování využívá doporučení sémantiky založené na AI v poli **Typ**. Pokud ji nastavíte na **VYPNUTO**, uvidíte naše pravidelná doporučení pro mapování. Z dostupného seznamu možností můžete vybrat libovolný sémantický typ a přepsat navrhovaný výběr.
 
 > [!div class="mx-imgBorder"]
-> ![Typ atributu a sémantická predikce](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Typ atributu a sémantická predikce")
+> ![Typ atributu a sémantická predikce.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Typ atributu a sémantická predikce")
 
 Je také možné přidat vlastní sémantický typ entity. Vyberte pole typu pro atribut a zadejte název vlastního sémantického typu. Tímto způsobem můžete také změnit typy atributů, které byly systémem identifikovány.
 
@@ -64,7 +64,7 @@ Všechny atributy, pro které je sémantický typ automaticky identifikován, js
 Atributy, které nejsou automaticky mapovány na sémantický typ, jsou seskupeny v sekci **Definování dat v nemapovaných polích**. Vyberte pole sémantického typu pro nemapované atributy nebo zadejte vlastní název typu atributu.
 
 > [!div class="mx-imgBorder"]
-> ![Primární klíč a typ atributu](media/data-manager-configure-map-add-attributes.png "Primární klíč a typ atributu")
+> ![Primární klíč a typ atributu.](media/data-manager-configure-map-add-attributes.png "Primární klíč a typ atributu")
 
 > [!NOTE]
 > Jedno pole by se mělo namapovat na sémantický typ Person.FullName k naplnění jména zákazníka na kartě zákazníka. Jinak se zákaznické karty objeví beze jména. 
@@ -76,7 +76,7 @@ Atributy, které nejsou automaticky mapovány na sémantický typ, jsou seskupen
 2. V podokně **Upravit pole** přidejte nebo odeberte atributy a entity. Vyhledejte nebo posunutím vyhledejte a vyberte své atributy a entity, které vás zajímají. Nelze odebrat atribut nebo entitu, pokud již byly spárovány.
 
    > [!div class="mx-imgBorder"]
-   > ![Přidat či odebrat atributy](media/configure-data-map-edit.png "Přidat či odebrat atributy")
+   > ![Přidat či odebrat atributy.](media/configure-data-map-edit.png "Přidat či odebrat atributy")
 
 3. Vyberte **Použít**.
 

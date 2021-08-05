@@ -1,7 +1,7 @@
 ---
 title: Rozšíření sjednocených profilů zákazníka
 description: Využijte možnosti rozšíření svých zákaznických dat.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305240"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555253"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
 K rozšíření svých zákaznických dat použijte data ze zdrojů, jako je Microsoft a další partneři.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Stránka centra obohacení":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Stránka centra rozšíření.":::
 
 V přehledech cílové skupiny přejděte na **Data** > **Rozšíření**, kde můžete pracovat s možnostmi rozšíření.  
 
@@ -42,17 +43,17 @@ Na kartě **Moje rozšíření** se můžete podívat na rozšíření, která j
 
 Jděte na kartu **Moje obohacení**, kde zobrazíte všechna nakonfigurovaná obohacení. Každé rozšíření je uvedeno jako jeden jako řádek, který obsahuje další informace o rozšíření.
 
-Výběrem rozšíření zobrazíte dostupné možnosti. Můžete také vybrat tři tečky (...) na položce seznamu a zobrazit možnosti.
+Výběrem rozšíření zobrazíte dostupné možnosti. Můžete také vybrat tři tečky (...) na položce seznamu a zobrazit možnosti. Pokud jste nakonfigurovali několik rozšíření, můžete je rychle najít pomocí vyhledávacího pole.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Možnosti správy rozšíření v seznamu rozšíření":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Možnosti správy rozšíření v seznamu rozšíření.":::
 
 - Možností **Zobrazit** zobrazíte podrobnosti o rozšíření s počtem rozšířených profilů zákazníků.
 - Možností **Upravit** upravíte konfiguraci rozšíření.
 - **Spustit** rozšíření k aktualizaci profilů zákazníků o nejnovější data.
 - Možností **Deaktivovat** zastavíte automatické aktualizace rozšíření při každé plánované aktualizaci. Data z poslední úspěšné aktualizace budou nadále k dispozici. Možností **Aktivovat** restartujete automatické aktualizace rozšíření s každou plánovanou aktualizací.
-- **Odstranění** rozšíření.
+- **Odstraňte** rozšíření.
 
-Výběrem ze seznamu můžete spustit nebo deaktivovat více rozšíření najednou. Možnosti zobrazení a úpravy nejsou k dispozici jako hromadná akce a fungují vždy jen pro jedno rozšíření.
+Spusťte nebo deaktivujte více rozšíření najednou jejich výběrem v seznamu. Možnosti zobrazení a úprav nejsou k dispozici jako hromadné akce. Pracují vždy jen na jedno rozšíření.
 
 ## <a name="enrichments-and-connections"></a>Rozšíření a propojení 
 

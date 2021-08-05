@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309812"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555345"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obohaťte profily zákazníků o demografické údaje z Experian (náhled)
 
@@ -39,7 +39,7 @@ V současné době podporujeme rozšíření profilů zákazníků pouze ve Spoj
 1. Vyberte **Obohatit moje data** v dlaždici Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian dlaždic](media/experian-tile.png "Experian tile")
+   > ![Dlaždice Experian.](media/experian-tile.png "Experian tile")
    > 
 
 1. V rozevíracím seznamu vyberte [připojení](connections.md). Pokud není k dispozici propojení , kontaktujte správce. Pokud jste správce, můžete vytvořit připojení výběrem **Přidat připojení** a výběrem Experian z rozevíracího seznamu. 

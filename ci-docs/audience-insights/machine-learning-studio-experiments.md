@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598331"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555161"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Použití modelů založených na Azure Machine Learning Studio (classic)
 
@@ -41,7 +41,7 @@ V prvním kroku musíme vytvořit pracovní prostor a otevřít Machine Learning
 
 1. Po vytvoření prostředku se zobrazí řídicí panel pracovního prostoru Machine Learning Studio. Vyberte **Spustit Machine Learning Studio**.
 
-   ![Uživatelské rozhraní Azure Machine Learning Studio](media/azure-machine-learning-studio.png)
+   ![Uživatelské rozhraní Azure Machine Learning Studio.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Práce s Azure Machine Learning Studio
 
@@ -55,7 +55,7 @@ Nyní můžete vytvořit nový experiment nebo importovat existující šablonu 
 
 1. Pokud vytvoříte nový experiment nebo použijete šablonu experimentu z galerie, musíte nakonfigurovat vlastnosti **Importovat data**. V průvodci nebo přímo zadejte podrobnosti pro přístup k úložišti Azure Blob Storage, které obsahuje vaše data.  
 
-   ![Experiment Azure Machine Learning Studio](media/azure-machine-learning-studio-experiment.png)
+   ![Experiment Azure Machine Learning Studio.](media/azure-machine-learning-studio-experiment.png)
 
 1. Nyní můžete sestavit vlastní procesní kanál pro čištění a předzpracování dat, extrahování funkcí a trénování vhodného modelu.
 
@@ -63,15 +63,15 @@ Nyní můžete vytvořit nový experiment nebo importovat existující šablonu 
 
 1. Pokud jste spokojeni s kvalitou modelu, vyberte **Nastavit webovou službu** > **Prediktivní webová služba**. Tato možnost importuje trénovaný model a kanál pro vytváření funkcí z výukového experimentu do prediktivní služby. Prediktivní služba může vzít další sadu vstupních dat se schématem použitým ve výukovém experimentu k vytváření predikcí.
 
-   ![Nastavení prediktivní webové služby](media/predictive-webservice-control.png)
+   ![Nastavení prediktivní webové služby.](media/predictive-webservice-control.png)
 
 1. Jakmile je experiment prediktivní webové služby úspěšný, můžete jej nasadit pro automatické plánování. Chcete-li, aby webová služba fungovala s Customer Insights, zvolte **Nasadit webovou službu** > **Nasadit webovou službu [nová] Preview**. [Další informace o nasazení webové služby](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Nasazení prediktivní webové služby](media/predictive-webservice-deploy.png)
+   ![Nasazení prediktivní webové služby.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Ukázkové modely z galerie
 
-Pro modely v tomto článku použijeme fiktivní scénář Contoso Hotel. Contoso Hotel shromažďuje následující data:
+Pro modely v tomto článku použijeme fiktivní scénář Contoso Hotel. Contoso Hotel shromažďuje následující údaje:
 
 - Data CRM sestávající z aktivity hotelového pobytu. Datová sada obsahuje informace o datech pobytu každého registrovaného zákazníka. Obsahuje také informace o rezervaci, typech pokojů, podrobnosti o výdajích atd. Data pokrývají čtyři roky, od ledna 2014 do ledna 2018.
 - Profily zákazníků hotelových hostů. Tyto profily obsahují informace o každém zákazníkovi, včetně jeho jména, data narození, poštovní adresy, pohlaví a telefonního čísla.
@@ -87,13 +87,13 @@ Definice úbytku se může lišit podle scénáře. V tomto příkladu by měl b
 
 Šablonu experimentu lze importovat z galerie. Nejprve se ujistěte, že importujete data pro **Aktivita hotelového pobytu** (Hotel Stay Activity), **Zákaznická data** (Customer Data) a **Data využití služby** (Service Usage Data) z úložiště Azure Blob.
 
-   ![Import dat pro model úbytku](media/import-data-azure-blob-storage.png)
+   ![Import dat pro model úbytku.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Vytváření funkcí
 
 Na základě definice úbytku nejprve identifikujeme nezpracované funkce, které ovlivní popisek. Poté tyto nezpracované funkce zpracujeme na číselné funkce, které lze použít s modely strojového učení. K integraci dat dochází v Customer Insights, abychom se k těmto tabulkám mohli připojit pomocí *ID zákazníka*.
 
-   ![Spojení importovaných dat](media/join-imported-data.png)
+   ![Spojení importovaných dat.](media/join-imported-data.png)
 
 Vytváření funkcí pro sestavení modelu analýzy odlivu zákazníků může být trochu složitější. Data jsou funkcí času, kdy se denně zaznamenává nová hotelová aktivita. Během vytváření funkcí chceme generovat statické funkce z dynamických dat. V tomto případě generujeme několik funkcí z hotelové aktivity s posuvným oknem po dobu jednoho roku. Rovněž rozšiřujeme kategorické funkce, jako je typ pokoje nebo typ rezervace, na samostatné funkce pomocí kódování nul a jedniček.  
 
@@ -114,7 +114,7 @@ Nyní musíme zvolit optimální algoritmus, který se má použít. V tomto př
 
 Následující obrázek ukazuje cvičení modelu a kanál vyhodnocení v Azure Machine Learning Studio:
 
-![Model úbytku v Azure Machine Learning Studio](media/azure-machine-learning-model.png)
+![Model úbytku v Azure Machine Learning Studio.](media/azure-machine-learning-model.png)
 
 Také používáme techniku zvanou **Důležitost funkce permutace**, což je důležitý aspekt optimalizace modelu. Integrované modely mají malý až žádný přehled o dopadu na jakékoli konkrétní funkce konečné predikce. Kalkulačka důležitosti funkce používá vlastní algoritmus pro výpočet vlivu jednotlivých prvků na výsledek konkrétního modelu. Důležitost funkce je normalizována mezi +1 a -1. Negativní vliv znamená, že odpovídající funkce má kontraintuitivní vliv na výsledek a měla by být z modelu odstraněna. Pozitivní vliv naznačuje, že funkce výrazně přispívá k predikci. Tyto hodnoty nejsou korelačními koeficienty, protože se jedná o odlišné metriky. Další informace viz [Důležitost funkce permutace](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Tento cíl definujeme jako maximalizaci dolarové částky za využití služeb 
 
 Stejně jako u modelu úbytku se připojíme k ID zákazníka služby (ServiceCustomerID) hotelu pomocí ID zákazníka (CustomerID), abychom mohli vytvářet doporučení konzistentně podle ID zákazníka.
 
-![Vytváření funkcí pro model doporučení](media/azure-machine-learning-model-featurization.png)
+![Vytváření funkcí pro model doporučení.](media/azure-machine-learning-model-featurization.png)
 
 Data jsou získána ze tří různých entit a funkce jsou z nich odvozeny. Vytváření funkcí pro problém doporučení se liší ve srovnání se scénáři úbytku nebo CLTV. Model doporučení vyžaduje vstupní data ve formě tří sad funkcí.
 
@@ -156,13 +156,13 @@ Data jsou získána ze tří různých entit a funkce jsou z nich odvozeny. Vytv
 
 Predikujeme produkty nebo služby pomocí algoritmu **Trénování nástroje pro doporučení shody** pro trénování modelu doporučení.
 
-![Algoritmus doporučení produktů](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritmus doporučení produktů.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Tři vstupní porty pro model **Trénování nástroje pro doporučení shody** vezmou data o využití služeb cvičení, popis zákazníka (volitelné) a popis služby. Existují tři různé způsoby bodování modelu. Jedním z nich je hodnocení modelu, kde se skóre Normalizovaný srážkový kumulativní přírůstek (NDCG) vypočítá pro zařazení hodnocených položek. V tomto experimentu máme skóre NDCG 0,97. Další dvě možnosti jsou bodování modelu v celém katalogu doporučitelných služeb nebo bodování pouze u položek, které uživatelé dosud nepoužili.
 
 Pokud se podíváme dále na distribuci doporučení v celém katalogu služeb, všimneme si, že nejlepší služby pro doporučení jsou telefon, WiFi a kurýr. To je v souladu s tím, co jsme zjistili z distribucí údajů o spotřebě služby:
 
-![Výstup modelu doporučení](media/azure-machine-learning-model-output.png)
+![Výstup modelu doporučení.](media/azure-machine-learning-model-output.png)
 
 Celý [experiment s doporučením produktu je přístupný v Azure AI Gallery.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

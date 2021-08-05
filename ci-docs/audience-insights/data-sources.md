@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304688"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692427"
 ---
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
@@ -30,13 +31,13 @@ Zdroj dat můžete přidat třemi hlavními způsoby:
 
 - [Prostřednictvím desítek konektorů Power Query](connect-power-query.md)
 - [Ze složky modelu Common Data Model](connect-common-data-model.md)
-- [Z vlastního jezera Microsoft Dataverse](connect-common-data-service-lake.md)
+- [Z vlastního jezera Microsoft Dataverse](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Přidání dat z místních zdrojů dat
 
-Příjem dat z místních zdrojů dat v cílové skupině přehledů je podporován na základě toků dat Microsoft Power Platform. Toky dat lze povolit v nástroji Customer Insights [poskytnutím adresy URL prostředí Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) při nastavování prostředí.
+Příjem dat z místních zdrojů dat v cílové skupině přehledů je podporován na základě toků dat Microsoft Power Platform. Toky dat lze povolit v nástroji Customer Insights [poskytnutím adresy URL prostředí Microsoft Dataverse](get-started-paid.md) při nastavování prostředí.
 
-Zdroje dat, které se vytvoří po přidružení prostředí Dataverse k nástroji Customer Insights, budou používat [toky dat Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) ve výchozím stavu. Datové toky podporují místní připojení pomocí datové brány. Odeberte a znovu vytvořte zdroje dat, které existovaly před přidružením prostředí Dataverse k [použití místních bran dat](/data-integration/gateway/service-gateway-app.md).
+Zdroje dat, které se vytvoří po přidružení prostředí Dataverse k nástroji Customer Insights, budou používat [toky dat Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) ve výchozím stavu. Datové toky podporují místní připojení pomocí datové brány. Odeberte a znovu vytvořte zdroje dat, které existovaly před přidružením prostředí Dataverse k [použití místních bran dat](/data-integration/gateway/service-gateway-app).
 
 Datové brány z existujícího prostředí Power BI nebo Power Apps bude viditelné a můžete jej znovu použít ve službě Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy, na které chcete přejít v prostředí Microsoft Power Platform, kde můžete prohlížet a konfigurovat místní datové brány.
 
@@ -45,9 +46,9 @@ Datové brány z existujícího prostředí Power BI nebo Power Apps bude vidite
 Uvidíte název každého přijatého zdroje dat, jeho stav a poslední čas, kdy byla data pro tento zdroj aktualizována. Seznam zdrojů dat můžete seřadit podle každého sloupce.
 
 > [!div class="mx-imgBorder"]
-> ![Přidaný zdroj dat](media/configure-data-datasource-added.png "Přidaný zdroj dat")
+> ![Přidaný zdroj dat.](media/configure-data-datasource-added.png "Přidaný zdroj dat")
 
-|Stav  |Popis  |
+|Průběh  |Popis  |
 |---------|---------|
 |Úspěch   |Zdroj dat byl úspěšně ingestován, pokud je v sloupci **Aktualizováno** uveden čas.
 |Nezahájeno   |Zdroj dat zatím nemá žádná ingestovaná data nebo je stále v režimu konceptu.         |

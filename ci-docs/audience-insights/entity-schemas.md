@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596353"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692297"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémata entit v Common Data Model
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596353"
 
 Tento sdílený datový model umožňuje aplikacím a datovým integrátorům snadnější spolupráci tím, že poskytuje jednotnou definici dat. Common Data Model zahrnuje bohatý systém metadat se standardními entitami, vztahy, hierarchiemi, zvláštnostmi a další. Pochází z aplikací Dynamics 365 a jeho veřejný zdrojový kód je k dispozici na GitHubu s více než 260 standardními entitami. Rozsáhlý systém interních a externích partnerů přispívá koncepty Common Data Model pro jednotlivá odvětví.
 
-Common Data Model dnes implementuje různé systémy a platformy, včetně datových toků Power BI a Azure Data Services. Je již podporován v Common Data Service, Dynamics 365, Power Apps, Power BI a nadcházejících datových službách Azure s přímo narůstající hodnotou vůči [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Common Data Model dnes implementuje více systémů a platforem, včetně datových toků Power BI a Azure Data Services. Už je podporováno v Microsoft Dataverse, Dynamics 365, Power Apps, Power BI a nadcházející datové služby Azure, přímo zvyšující hodnotu vůči [Otevřené datové iniciativě](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Schémata entit Customer Insights
 
@@ -44,7 +44,7 @@ Další informace naleznete v dokumentaci [Schémata entit Customer Insights v d
 
 Entity si můžete prohlédnout v [navigátoru entit Common Data Model](https://microsoft.github.io/CDM/). Vyberte tlačítko **Načíst z GitHubu!** a přejděte na **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, kde najdete seznam entit Customer Insights a všechny jejich definice.
 > [!div class="mx-imgBorder"]
-> ![Navigátor entit CDM zobrazující entitu CustomerActivity](media/CDM-entity-navigator.png "Navigátor entit CDM zobrazující entitu CustomerActivity")
+> ![Navigátor entit CDM zobrazující entitu CustomerActivity.](media/CDM-entity-navigator.png "Navigátor entit CDM zobrazující entitu CustomerActivity")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
