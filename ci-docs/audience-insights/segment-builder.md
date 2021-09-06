@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685454"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377780"
 ---
 # <a name="create-and-manage-segments"></a>Vytvořit a spravovat segmenty
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685454"
 > - Boční podokno pro výběr atributů bude neustále k dispozici.
 > - Možnost vybrat cesty vztahů entit.
 > Chcete -li vyzkoušet nový nástroj pro tvorbu segmentů, pošlete e-mail s předmětem „Žádost o povolení nového nástroje pro vytváření segmentů“ na adresu cihelp [at] microsoft.com. Uveďte název své organizace a ID prostředí sandboxu.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Prvky nástroje pro tvorbu segmentů." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Uspořádejte svůj segment pomocí pravidel a dílčích pravidel. Každé pravidlo nebo dílčí pravidlo se skládá z podmínek. Zkombinujte podmínky s logickými operátory
+>
+> 2 - Vyberte [cestu vztahu](relationships.md) mezi entitami, které platí pro pravidlo. Cesta vztahu určuje, které atributy lze použít v podmínce.
+>
+> 3 - Spravujte pravidla a dílčí pravidla. Změňte pozici pravidla nebo jej odstraňte.
+>
+> 4 - Přidejte podmínky a vytvořte správnou úroveň vnoření pomocí dílčích pravidel.
+>
+> 5 - Aplikujte nastavené operace na připojená pravidla.
+>
+> 6 - Pomocí podokna atributů přidejte dostupné atributy entit nebo vytvořte podmínky na základě atributů. Podokno zobrazuje seznam entit a atributů na základě zvolené cesty vztahu, které jsou k dispozici pro vybrané pravidlo.
+>
+> 7 - Přidejte podmínky na základě atributů ke stávajícím pravidlům a dílčím pravidlům nebo je přidejte do nového pravidla.
+>
+> 8 - Zrušit a znovu provést změny při vytváření segmentu.
 
 Definujte složité filtry kolem sjednocené entity zákazníka a souvisejících entit. Každý segment po zpracování vytvoří sadu záznamů o zákaznících, které můžete exportovat a se kterými můžete provádět akce. Segmenty jsou spravovány na stránce **Segmenty**. 
 
@@ -64,7 +81,7 @@ Při vytváření segmentu můžete uložit koncept. Bude uložen jako neaktivn�
 
    |Počet |Definice  |
    |---------|---------|
-   |0     |Entity          |
+   |1     |Entity          |
    |2     |Atribut          |
    |3    |Operátor         |
    |4    |Hodnota         |
@@ -147,6 +164,6 @@ Rychlé segmenty umožňují rychle vytvářet jednoduché segmenty jediným ope
 
 ## <a name="next-steps"></a>Další kroky
 
-[Exportujtesegment](export-destinations.md) a prozkoumejte [Kartu zákazníka](customer-card-add-in.md) a [Konektory](export-power-bi.md), abyste získali přehled o úrovni zákazníka.
+[Exportujte segment](export-destinations.md) a prozkoumejte [integraci karty zákazníka](customer-card-add-in.md) pro použití segmentů v jiných aplikacích.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

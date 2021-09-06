@@ -1,7 +1,7 @@
 ---
 title: Přehledy cílových skupin pro Dynamics 365 Customer Insights
 description: Základní informace o přehledech cílových skupin pro Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539107"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034352"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Přehledy cílových skupin pro Dynamics 365 Customer Insights
 
-Přehledy cílové skupiny vám pomohou lépe porozumět vašim zákazníkům. Propojte data z různých transakčních, behaviorálních a observačních zdrojů a vytvořte kompletní pohled na zákazníka. Pomocí těchto statistik budete moci zkušenosti a procesy zaměřit na zákazníka. Sjednocení a pochopení zákaznických dat a jejich využití pro inteligentní přehledy a akce.
+[Přehledy cílových skupin, které jsou funkcí Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/), vám pomohou vybudovat hlubší porozumění vašim zákazníkům. Propojte data z různých transakčních, behaviorálních a observačních zdrojů a vytvořte kompletní pohled na zákazníka. Pomocí těchto statistik budete moci zkušenosti a procesy zaměřit na zákazníka. Sjednocení a pochopení zákaznických dat a jejich využití pro inteligentní přehledy a akce.
 
 ## <a name="main-benefits"></a>Hlavní výhody 
 
@@ -34,9 +34,9 @@ Přehledy cílové skupiny vám pomohou lépe porozumět vašim zákazníkům. P
 
 - **Posílit obchodní procesy a přizpůsobit zákaznické zkušenosti**
 
-  - Podporujte přizpůsobené zapojení napříč kanály – posilte odborníky na marketing, prodej a služby pomocí dodávaných kontextových přehledů zákazníků a přizpůsobených karet zákaznických profilů vložených do obchodních aplikací, které již každý den používají.
-  - Automatizujte zkušenosti a procesy zaměřené na zákazníka na základě přizpůsobitelných profilů, obchodních ukazatelů a segmentů.
-  - Povolte a rozšiřte obchodní prostředí sestavené v platformě [Microsoft Power Platform](https://powerplatform.microsoft.com/). Rychle vytvářejte aplikace s vloženými přehledy pomocí efektivního přístupu s minimem kódem v PowerApps.  
+  - Podporujte personalizovanou interakci napříč kanály - posilujte marketingové, prodejní a servisní profesionály. Používejte předdefinované karty, přehledy a přizpůsobené profily zákazníka, které se integrují s obchodními aplikacemi, které již používají.
+  - Automatizujte zkušenosti a procesy na základě přizpůsobitelných profilů, obchodních ukazatelů a segmentů.
+  - Povolte a rozšiřte obchodní prostředí sestavené v platformě [Microsoft Power Platform](https://powerplatform.microsoft.com/). Rychle vytvářejte aplikace s vloženými přehledy pomocí efektivního přístupu s minimem kódem v Power Apps.  
 
 ## <a name="key-audiences"></a>Hlavní cílové skupiny
 
@@ -50,13 +50,18 @@ Přehledy cílové skupiny vám pomohou lépe porozumět vašim zákazníkům. P
 
 - **Firemní uživatelé:**
 
-  - Kompletní přehledy o zákaznických profilech a ucelené zobrazení cesty zákazníka.
+  - Kompletní přehledy o zákaznických profilech a cestách zákazníka.
   - Prohlédněte si kompletní zákaznická data v obchodních procesech Dynamics 365 s předinstalovanými balíčky.
 
 - **Obchodní analytici:**
 
   - Sestavování přizpůsobitelných profilů, definování ukazatelů, vytváření segmentů na míru vaší organizace a využívání výhod prediktivní analýzy, abyste získali kompletní přehled o svém zákazníku.  
-  - K dalšímu zpracování přehledů použijte hotové konektory pro několik aplikací nebo rozhraní API od společnosti Microsoft a třetích stran.
+  - Ke zpracování přehledů použijte hotové konektory pro několik aplikací nebo API rozhraní od Microsoftu a třetích stran.
 
+## <a name="pricing-and-licensing"></a>Ceny a licence
+
+Aplikace Customer Insights je licencována na jednoho klienta a zahrnuje více funkcí. Oprávněné kapacity zahrnují sadu profilů, denní aktualizace systému, požadavky Power Platform a dvě prostředí. Ke zvýšení výchozí kvóty můžete zakoupit další kapacitu a licenci. 
+- Podrobná kapacita a nároky: [Průvodce licencí Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Přehled cen: [Ceny Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
