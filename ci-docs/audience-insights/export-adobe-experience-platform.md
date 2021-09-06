@@ -1,6 +1,6 @@
 ---
-title: Export dat Customer Insights do Adobe Experience Platform
-description: Naučte se používat segmenty přehledů cílové skupiny v Adobe Experience Platform.
+title: Export údajů ze služby Customer Insights do Adobe Experience Platform
+description: Zjistěte, jak používat segmenty přehledů cílových skupin v Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305516"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032109"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Použití segmentů Customer Insights v Adobe Experience Platform (Preview)
 
-Jako uživatel přehledů cílové skupiny v Dynamics 365 Customer Insights jste možná vytvořili segmenty, které vám pomohou zefektivnit marketingové kampaně cílením na relevantní cílovou skupinu. Chcete-li použít segment z přehledů cílových skupin v Adobe Experience Platform a aplikacích, jako je Adobe Campaign Standard, musíte postupovat podle několika kroků uvedených v tomto článku.
+Jako uživatel přehledů cílové skupiny v Dynamics 365 Customer Insights jste možná vytvořili segmenty, které vám pomohou zefektivnit marketingové kampaně cílením na relevantní cílovou skupinu. Chcete-li použít segment z přehledů cílových skupin v Adobe Experience Platform a aplikacích jako je Adobe Campaign Standard, musíte postupovat podle několika kroků uvedených v tomto článku.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagram zpracování kroků popsaných v tomto článku.":::
 
 ## <a name="prerequisites"></a>Požadavky
 
 -   Licence služby Dynamics 365 Customer Insights
--   Licence Adobe Experience Platform
+-   Licence služby Adobe Experience Platform
 -   Licence Adobe Campaign Standard
 -   Účet Azure Blob Storage
 
 ## <a name="campaign-overview"></a>Přehled kampaně
 
-Abyste lépe pochopili, jak můžete použít segmenty z přehledů cílových skupin v Adobe Experience Platform, pojďme se podívat na fiktivní ukázkovou kampaň.
+Abyste lépe porozuměli tomu, jak můžete používat segmenty přehledů cílových skupin v Adobe Experience Platform, podívejme se na fiktivní ukázkovou kampaň.
 
-Předpokládejme, že vaše společnost nabízí svým zákazníkům v USA měsíční službu založenou na předplatném. Chcete identifikovat zákazníky, jejichž předplatná mají být obnovena v příštích osmi dnech, ale kteří dosud neobnovili své předplatné. Chcete-li si tyto zákazníky udržet, chcete jim zaslat propagační nabídku e-mailem pomocí aplikace Adobe Experience Platform.
+Předpokládejme, že vaše společnost nabízí svým zákazníkům v USA měsíční službu založenou na předplatném. Chcete identifikovat zákazníky, jejichž předplatná mají být obnovena v příštích osmi dnech, ale kteří dosud neobnovili své předplatné. Abyste si udrželi tyto zákazníky, chcete jim zaslat propagační nabídku e-mailem pomocí Adobe Experience Platform.
 
 V tomto příkladu chceme jednou spustit propagační e-mailovou kampaň. Tento článek se nezabývá případem použití kampaně vícekrát.
 
@@ -93,7 +93,7 @@ Po uložení cíle exportu jej najdete v části **Data** > **Exporty**.
 Nyní můžete [exportovat segmentu na vyžádání](export-destinations.md#run-exports-on-demand). Export bude spuštěn také s každou [plánovanou aktualizací](system.md).
 
 > [!NOTE]
-> Zajistěte, aby počet záznamů v exportovaném segmentu byl v povoleném limitu vaší licence Adobe Campaign Standard.
+> Zajistěte, aby počet záznamů v exportovaném segmentu byl v rámci povoleného limitu vaší licence Adobe Campaign Standard.
 
 Exportovaná data jsou uložena v kontejneru úložiště Azure Blob, který jste nakonfigurovali výše. Ve vašem kontejneru se automaticky vytvoří následující cesta ke složce:
 
@@ -107,27 +107,27 @@ Příklad: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-
 
 ## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definování datového modelu prostředí (XDM) v Adobe Experience Platform
 
-Než lze data exportovaná z přehledů cílové skupiny použít v rámci Adobe Experience Platform, musíme definovat schéma datového modelu prostředí a [konfigurovat data pro profil zákazníka v reálném čase](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Než lze exportovaná data z přehledů cílových skupin použít v Adobe Experience Platform, musíme definovat schéma datového modelu prostředí a [nakonfigurovat data pro profil zákazníka v reálném čase](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Zjistěte, [co je XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) a seznamte se se [základy kompozice schématu](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Import dat do Adobe Experience Platform
+## <a name="import-data-into-adobe-experience-platform"></a>Importovat data do Adobe Experience Platform
 
-Nyní, když je vše připraveno, musíme importovat připravená data cílové skupiny z přehledů cílové skupiny do Adobe Experience Platform, čímž vytvoříme profily.
+Nyní, když je vše na svém místě, musíme importovat připravená data cílové skupiny z přehledů cílových skupin do Adobe Experience Platform.
 
 Nejprve [vytvořte připojení zdroje Azure Blob Storage](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-Po definování zdrojového připojení [nakonfigurujte tok dat](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) pro dávkové připojení cloudového úložiště kvůli importu výstupu segmentu z přehledů cílové skupiny do Adobe Experience Platform.
+Po definování zdrojového připojení [nakonfigurujte tok dat](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) pro dávkové připojení cloudového úložiště k importu výstupu segmentu z přehledů cílových skupin do Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Vytvoření cílové skupiny v Adobe Campaign Standard
 
-K odeslání e-mailu pro tuto kampaň použijeme Adobe Campaign Standard. Po importu dat do Adobe Experience Platform musíme [vytvořit cílovou skupinu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) v Adobe Campaign Standard s využitím dat v Adobe Experience Platform.
+K odeslání e-mailu pro tuto kampaň použijeme Adobe Campaign Standard. Po importu dat do Adobe Experience Platform musíme [vytvořit cílovou skupinu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) v Adobe Campaign Standard pomocí dat v Adobe Experience Platform.
 
 
-Zjistěte, jak [používat nástroj pro tvorbu segmentů](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) v Adobe Campaign Standard pro definování cílové skupiny na základě dat v Adobe Experience Platform.
+Zjistěte, jak [používat nástroj pro tvorbu segmentů](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) v Adobe Campaign Standard k definování cílové skupiny na základě dat v Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Vytvoření a odeslání e-mailu pomocí Adobe Campaign Standard
 
 Vytvořte obsah e-mailu a poté [otestujte a odešlete](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) svůj e-mail.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Ukázkový e-mail s nabídkou obnovení z Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Ukázkový e -mail s nabídkou obnovení od Adobe Campaign Standard.":::
