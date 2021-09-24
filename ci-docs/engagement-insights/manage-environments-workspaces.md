@@ -4,17 +4,17 @@ description: Jak vytvářet, přejmenovávat a mazat pracovní prostory a prost�
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034034"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486027"
 ---
 # <a name="manage-environments-and-workspaces"></a>Správa prostředí a pracovních prostorů
 
@@ -85,13 +85,11 @@ Odstraněním pracovního prostoru trvale odeberete veškerý jeho obsah, data, 
 
 1. Vyberte **Přidat členy** k udělení přístupu a [přiřazení rolí](user-roles.md). V současné době je k dispozici pouze **Správce pracovního prostoru**.
 
-1. Pokud nastavíte [připojení k přehledům cílové skupiny](configure-connections.md), můžete vybrat **Povolit přístup k datům profilu** a umožnit členovi zobrazit zprávy založené na [uživatelských profilech](profile-reports.md).
-
 1. Vyberte **Přidat členy** a přidejte je do svého pracovního prostoru.
 
 ## <a name="manage-an-environment"></a>Spravovat prostředí
 
-Jako správce prostředí můžete do prostředí přistupovat z levého navigačního podokna. Můžete nakonfigurovat nastavení prostředí, další správce prostředí, pracovní prostory a [připojení k přehledům cílové skupiny](configure-connections.md). Vyberte záložky pro přesun mezi různými oblastmi v centru pro správu.
+Jako správce prostředí můžete do prostředí přistupovat z levého navigačního podokna. Můžete konfigurovat nastavení prostředí, další správce prostředí a pracovní prostory. Vyberte záložky pro přesun mezi různými oblastmi v centru pro správu.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centrum pro správu prostředí.":::
 
@@ -123,8 +121,6 @@ Jako správce prostředí můžete do prostředí přistupovat z levého naviga�
 
 1. Vyberte **Přidat členy** k aktualizaci členů a [přiřazení rolí](user-roles.md). V současné době je k dispozici pouze **Správce prostředí**.
 
-1. Pokud nastavíte [připojení k přehledům cílové skupiny](configure-connections.md), můžete vybrat **Povolit přístup k datům profilu** a umožnit členovi zobrazit zprávy založené na [uživatelských profilech](profile-reports.md).
-
 1. Vyberte **Přidat členy** a přidejte je do svého prostředí.
 
 ### <a name="delete-an-environment"></a>Odstranění prostředí
@@ -143,7 +139,7 @@ Správci prostředí mohou prostředí odstranit. Před odstraněním prostřed�
 
 Navázání připojení k přehledům cílové skupiny vám umožní zobrazit sestavy ve statistikách zapojení na základě jednotných profilů zákazníků. 
 
-Další informace najdete v článku [Konfigurace připojení](configure-connections.md).
+Více informací najdete v části [Vytvoření propojení mezi přehledy cílových skupin a přehledy zapojení](integrate-audience-insights-engagement-insights.md)
 
 ## <a name="manage-personal-data"></a>Správa osobních údajů
 

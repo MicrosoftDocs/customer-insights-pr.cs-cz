@@ -1,7 +1,7 @@
 ---
-title: Vytvořit a spravovat segmenty
+title: Vytvoření segmentů pomocí tvůrce segmentů
 description: Vytvořte segmenty zákazníků a seskupte je podle různých atributů.
-ms.date: 07/18/2021
+ms.date: 09/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,104 +9,86 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: 7f7bd0e7e581305836287bd503ef273a2d556bff
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377780"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494486"
 ---
-# <a name="create-and-manage-segments"></a>Vytvořit a spravovat segmenty
+# <a name="create-segments"></a>Vytvoření segmentů
 
-> [!IMPORTANT]
-> V září 2021 bude v prostředí vytváření segmentů zavedeno několik změn: 
-> - Se změněnými prvky a vylepšeným tokem uživatelů bude segmentovač vypadat trochu jinak.
-> - V nástroji pro tvorbu segmentů jsou povoleny nové operátory datetime a vylepšený nástroj pro výběr data.
-> - Ze segmentů budete moci přidávat nebo odebírat podmínky a pravidla. 
-> - Vnořená pravidla, která začínají podmínkou OR, budou k dispozici. V krajní vrstvě již nepotřebujete podmínku AND.
-> - Boční podokno pro výběr atributů bude neustále k dispozici.
-> - Možnost vybrat cesty vztahů entit.
-> Chcete -li vyzkoušet nový nástroj pro tvorbu segmentů, pošlete e-mail s předmětem „Žádost o povolení nového nástroje pro vytváření segmentů“ na adresu cihelp [at] microsoft.com. Uveďte název své organizace a ID prostředí sandboxu.
-> :::image type="content" source="media/segment-builder-overview.png" alt-text="Prvky nástroje pro tvorbu segmentů." lightbox="media/segment-builder-overview.png":::
->
-> 1 - Uspořádejte svůj segment pomocí pravidel a dílčích pravidel. Každé pravidlo nebo dílčí pravidlo se skládá z podmínek. Zkombinujte podmínky s logickými operátory
->
-> 2 - Vyberte [cestu vztahu](relationships.md) mezi entitami, které platí pro pravidlo. Cesta vztahu určuje, které atributy lze použít v podmínce.
->
-> 3 - Spravujte pravidla a dílčí pravidla. Změňte pozici pravidla nebo jej odstraňte.
->
-> 4 - Přidejte podmínky a vytvořte správnou úroveň vnoření pomocí dílčích pravidel.
->
-> 5 - Aplikujte nastavené operace na připojená pravidla.
->
-> 6 - Pomocí podokna atributů přidejte dostupné atributy entit nebo vytvořte podmínky na základě atributů. Podokno zobrazuje seznam entit a atributů na základě zvolené cesty vztahu, které jsou k dispozici pro vybrané pravidlo.
->
-> 7 - Přidejte podmínky na základě atributů ke stávajícím pravidlům a dílčím pravidlům nebo je přidejte do nového pravidla.
->
-> 8 - Zrušit a znovu provést změny při vytváření segmentu.
+Definujte složité filtry kolem sjednocené entity zákazníka a souvisejících entit. Každý segment po zpracování vytvoří sadu záznamů o zákaznících, které můžete exportovat a se kterými můžete provádět akce. Segmenty jsou spravovány na stránce **Segmenty**. Můžete [vytvářet nové segmenty](#create-a-new-segment) pomocí [tvůrce segmentů](#segment-builder) nebo [vytvářet rychlé segmenty](#quick-segments) z jiných oblastí aplikace.
 
-Definujte složité filtry kolem sjednocené entity zákazníka a souvisejících entit. Každý segment po zpracování vytvoří sadu záznamů o zákaznících, které můžete exportovat a se kterými můžete provádět akce. Segmenty jsou spravovány na stránce **Segmenty**. 
+## <a name="segment-builder"></a>Tvůrce segmentů
 
-Následující příklad ukazuje funkci segmentace. Definovali jsme segment pro zákazníky, kteří si za posledních 90 dní objednali zboží alespoň za $500 *a* kteří se účastnili volání služby zákazníkům, které bylo eskalováno.
+Následující obrázek ukazuje různé aspekty tvůrce segmentů. Ukazuje segment, jehož výsledkem je skupina zákazníků. Zákazníci si objednali zboží v konkrétním časový rámec a nasbírali řadu bodů za odměnu nebo utratili určitou částku peněz. 
 
-:::image type="content" source="media/segmentation-group1-2.png" alt-text="Screenshot uživatelského rozhraní nástroje pro vytváření segmentů se dvěma skupinami, které určují segment zákazníka.":::
+:::image type="content" source="media/segment-builder-overview.png" alt-text="Prvky nástroje pro tvorbu segmentů." lightbox="media/segment-builder-overview.png":::
+
+1 - Uspořádejte svůj segment pomocí pravidel a dílčích pravidel. Každé pravidlo nebo dílčí pravidlo se skládá z podmínek. Zkombinujte podmínky s logickými operátory
+
+2 - Vyberte [cestu vztahu](relationships.md) mezi entitami, které platí pro pravidlo. Cesta vztahu určuje, které atributy lze použít v podmínce.
+
+3 - Spravujte pravidla a dílčí pravidla. Změňte pozici pravidla nebo jej odstraňte.
+
+4 - Přidejte podmínky a vytvořte správnou úroveň vnoření pomocí dílčích pravidel.
+
+5 - Aplikujte nastavené operace na připojená pravidla.
+
+6 - Pomocí podokna atributů přidejte dostupné atributy entit nebo vytvořte podmínky na základě atributů. Podokno zobrazuje seznam entit a atributů na základě zvolené cesty vztahu, které jsou k dispozici pro vybrané pravidlo.
+
+7 - Přidejte podmínky na základě atributů ke stávajícím pravidlům a dílčím pravidlům nebo je přidejte do nového pravidla.
+
+8 - Zrušit a znovu provést změny při vytváření segmentu.
+
+Výše uvedený příklad ilustruje schopnost segmentace. Definovali jsme segment pro zákazníky, kteří nakoupili zboží online alespoň za 500 USD *a* mají zájem o vývoj softwaru.
 
 ## <a name="create-a-new-segment"></a>Vytvořit nový segment
 
-Existuje několik způsobů, jak vytvořit nový segment. Tato část popisuje, jak vytvořit *prázdný segment*. Můžete také vytvořit *rychlý segment* na základě existujících entit nebo využijte strojové učení modely k získání *navrhovaných segmentů*. Další informace: [Přehled segmentů](segments.md)
+Existuje několik způsobů, jak vytvořit nový segment. Tato část popisuje, jak vytvořit vlastní segment od začátku. Můžete také vytvořit *rychlý segment* na základě existujících entit nebo využijte strojové učení modely k získání *navrhovaných segmentů*. Další informace: [Přehled segmentů](segments.md)
 
 Při vytváření segmentu můžete uložit koncept. Bude uložen jako neaktivní segment a nelze jej aktivovat, dokud není dokončen s platnou konfigurací.
 
 1. Přejde na stránku **Segmenty**.
 
-1. Vybrat **Nový** > **Prázdný segmeny**.
+1. Vyberte **Nový** > **Vytvořit svůj vlastní**.
 
-1. V podokně **Nový segment** vyberte typ segmentu:
+1. Na stránce tvůrce segmentů definujte první pravidlo. Pravidlo se skládá z jedné nebo více podmínek a definuje sadu zákazníků.
 
-   - **Dynamické segmenty** [obnovení](segments.md#refresh-segments) podle opakujícího se plánu.
-   - **Statické segmenty** se spustí jednou, když jej vytvoříte.
+1. V části **Pravidlo 1** vyberte atribut entity, podle které chcete filtrovat zákazníky. Vybrat atributy lze dvěma způsoby: 
+   - Zkontrolujte seznam dostupných entit a atributů v podokně **Přidat do pravidla** a vyberte ikonu **+** vedle atributu, který chcete přidat. Vyberte, zda chcete přidat atribut do existujícího pravidla, nebo jej použít k vytvoření nového pravidla.
+   - Chcete -li zobrazit návrhy shod, zadejte název atributu do sekce pravidel.
 
-1. Poskytněte **název výstupní entity** pro daný segment. Volitelně zadejte zobrazované jméno a popis, který pomáhá identifikovat segment.
+1. Vyberte operátory k určení odpovídajících hodnot podmínky. Atribut může mít jako hodnotu jeden ze čtyř datových typů: číselný, řetězec, datum nebo logickou hodnotu. V závislosti na datovém typu atributu jsou k určení podmínky k dispozici různé operátory. 
 
-1. Vyberte **Další**, chcete-li se dostat na stránku **Tvůrce segmentu**, kde definujete skupinu. Skupina je sada zákazníků.
+1. Vyberte **Přidat podmínku** pro přidání dalších podmínek do pravidla. Chcete -li vytvořit pravidlo pod aktuálním pravidlem, vyberte **Přidat dílčí pravidlo**.
 
-1. Zvolte entitu, která obsahuje atribut, který chcete zahrnout do segmentace.
+1. Pokud pravidlo používá jiné entity než *Zákazník*, musíte nastavit cestu vztahu. Cesta vztahu je povinná a informuje systém, přes které vztahy chcete přistupovat k jednotné entitě zákazníka. Vyberte **Nastavit cestu vztahu** a namapujte vybranou entitu na jednotnou entitu zákazníka. Pokud existuje pouze jedna možná cesta vztahu, systém ji automaticky vybere. Různé cesty vztahů mohou přinést různé výsledky. Každé pravidlo může mít svou vlastní cestu vztahu.
 
-1. Vyberte atribut, podle kterého chcete segmentovat. Tento atribut může mít jeden ze čtyř typů hodnot: číselný, řetězec, datum nebo logický.
+   :::image type="content" source="media/relationship-path.png" alt-text="Cesta potenciálního vztahu při vytváření pravidla na základě entity mapované na jednotnou entitu zákazníka.":::
 
-1. Zvolte operátor a hodnotu vybraného atributu.
+   Například entita *eCommerce_eCommercePurchases* na snímku obrazovky má čtyři možnosti mapování na entitu *Zákazník*: 
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Zákazník
+   - eCommerce_eCommercePurchases > Zákazník
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Zákazník
+   - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Zákazník Při výběru poslední možnosti můžeme do podmínek pravidla zahrnout atributy ze všech uvedených entit. Pravděpodobně získáme méně výsledků, protože odpovídající záznamy o zákaznících musí být součástí všech entit. V tomto případě zákazníci zakoupili zboží prostřednictvím elektronického obchodování (*eCommerce_eCommercePurchases*), v pokladním místě (*POS_posPurchases*) a účastnili se našeho věrnostního programu (*loyaltyScheme_loyCustomers*). Při výběru druhé možnosti můžeme vybrat pouze atributy z entit *eCommerce_eCommercePurchases* a *Zákazník*. Výsledkem bude pravděpodobně více výsledných profilů zákazníků.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vlastní filtr skupin.](media/customer-group-numbers.png "Filtr skupin zákazníků")
+1. Pokud máte v pravidle více podmínek, můžete si vybrat, který logický operátor je spojuje.
 
-   |Počet |Definice  |
-   |---------|---------|
-   |1     |Entity          |
-   |2     |Atribut          |
-   |3    |Operátor         |
-   |4    |Hodnota         |
+   - Operátor **AND**: Pro zařazení záznamu do segmentu musí být splněny všechny podmínky. Tato možnost je nejužitečnější při definování podmínek mezi různými entitami.
 
-   1. Chcete-li do skupiny přidat další podmínky, můžete použít dva logické operátory:
+   - Operátor **OR**: Pro zařazení záznamu do segmentu musí být jedna z podmínek. Tato možnost je nejužitečnější při definování více podmínek pro stejnou entitu.
 
-      - Operátor **AND**: Obě podmínky musí být splněny v rámci procesu segmentace. Tato možnost je nejužitečnější při definování podmínek mezi různými entitami.
+   :::image type="content" source="media/segmentation-either-condition.png" alt-text="Pravidlo s dvěma podmínkami AND":::
 
-      - Operátor **OR**: Buď je třeba splnit jednu z podmínek v rámci procesu segmentace. Tato možnost je nejužitečnější při definování více podmínek pro stejnou entitu.
+   Při použití operátoru OR musí být všechny podmínky založeny na entitách zahrnutých v cestě vztahu.
 
-      > [!div class="mx-imgBorder"]
-      > ![Operátor OR, u kterého je třeba splnit obě podmínky.](media/segmentation-either-condition.png "Operátor OR, u kterého je třeba splnit obě podmínky")
+   1. Můžete vytvořit více pravidel a vytvořit různé sady záznamů o zákaznících. Skupiny můžete kombinovat tak, aby zahrnovaly zákazníky požadované pro váš obchodní případ. Chcete-li vytvořit nové pravidlo, vyberte **Přidat pravidlo**. Konkrétně, pokud nemůžete zahrnout entitu do pravidla kvůli zadané cestě vztahu, musíte vytvořit nové pravidlo pro výběr atributů z něj.
 
-      V současné době je možné vnořit operátor **OR** do operátoru **AND**, ale ne naopak.
-
-   1. Každá skupina odpovídá skupině zákazníků. Skupiny můžete kombinovat tak, aby zahrnovaly zákazníky požadované pro váš obchodní případ.    
-   Vyberte **Přidat skupinu**.
-
-      > [!div class="mx-imgBorder"]
-      > ![Skupina zákazníků přidat skupinu.](media/customer-group-add-group.png "Skupina zákazníků přidat skupinu")
+      :::image type="content" source="media/segment-rule-grouping.png" alt-text="Přidejte nové pravidlo do segmentu a vyberte nastavený operátor.":::
 
    1. Vyberte jednoho z nastavených operátorů: **Union**, **Intersect** nebo **Except**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Skupina zákazníků přidat sjednocení.](media/customer-group-union.png "Skupina zákazníků přidat sjednocení")
 
    - **Sjednocení** sjednotí dvě skupiny.
 
@@ -114,25 +96,29 @@ Při vytváření segmentu můžete uložit koncept. Bude uložen jako neaktivn�
 
    - **Výjimka** kombinuje dvě skupiny. Pouze data ve skupině A, která *nejsou společná* s daty ve skupině B, zůstanou zachována.
 
-1. Pokud je entita propojena se sjednocenou entitou zákazníka prostřednictvím [Vztahů](relationships.md), musíte definovat cestu vztahu k vytvoření platného segmentu. Přidávejte entity z cesty vztahu, dokud nevyberete entitu **Zákazník: CustomerInsights** z rozevíracího seznamu. Poté vyberte **Všechny záznamy** pro každý krok.
+1. Ve výchozím nastavení segmenty generují výstupní entitu obsahující všechny atributy zákaznické profily, které odpovídají definovaným filtrům. Pokud je segment založen na jiných entitách než *Zákazník*, můžete do výstupní entity přidat další atributy z těchto entit. Volbou **Atributy projektu** zvolte atributy, které budou připojeny k výstupní entitě.  
 
-   > [!div class="mx-imgBorder"]
-   > ![Cesta vztahů při vytváření segmentů.](media/segments-multiple-relationships.png "Cesta vztahů při vytváření segmentů")
-
-1. Ve výchozím nastavení segmenty generují výstupní entitu, která obsahuje všechny atributy profilů zákazníků, které odpovídají definovaným filtrům. Pokud je segment založen na jiných entitách než *Zákazník*, můžete do výstupní entity přidat další atributy z těchto entit. Volbou **Atributy projektu** zvolte atributy, které budou připojeny k výstupní entitě.  
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Příklad projektovaných atributů vybraných v postranním podokně, které mají být přidány do výstupní entity.":::
   
-   Příklad: Segment je založen na entitě, která obsahuje údaje o aktivitě zákazníka, která je provázána s entitou *Zákazník*. Segment vyhledá všechny zákazníky, kteří volali na technickou podporu za posledních 60 dní. Můžete se rozhodnout připojit délku hovoru a počet hovorů ke všem odpovídajícím záznamům zákazníků ve výstupní entitě. Tyto informace mohou být užitečné k zaslání e-mailu s užitečnými odkazy na články online nápovědy a často kladené dotazy zákazníkům, kteří často volali.
+   Příklad: Segment je založen na entitě, která obsahuje data o nákupu, související s entitou *Zákazník*. Segment hledá všechny zákazníky ze Španělska, kteří zakoupili zboží v aktuálním roce. Můžete se rozhodnout připojit atributy, jako cena zboží nebo datum nákupu, ke všem odpovídajícím záznamům zákazníků ve výstupní entitě. Tyto informace mohou být užitečné pro analýzu sezónních korelací s celkovou útratou.
 
    > [!NOTE]
    > - Projektované atributy fungují pouze pro entity, které mají vztah jedna k mnoha s entitou zákazníka. Například jeden zákazník může mít více předplatných.
-   > - Můžete projektovat pouze atributy z entity, která se používá v každé skupině segmentového dotazu, který vytváříte.
+   > - Atributy můžete projektovat pouze z entity, která se používá v každém pravidle segmentového dotazu, který vytváříte.
    > - Při použití operátorů sady jsou zohledněny projektované atributy.
 
-1. Výběrem možnosti **Uložit** uložte segment. Pokud budou všechny požadavky ověřeny, bude váš segment uložen a zpracován. V opačném případě bude uložen jako koncept.
+1. Před uložením a spuštěním segmentu vyberte **Upravit podrobnosti** vedle názvu segmentu. Zadejte název pro svůj segment a aktualizujte navrhovaný **Název výstupní entity** pro segment. K segmentu můžete také přidat popis.
+
+1. Vyberte **Spustit** a uložte a zpracujte svůj segment, pokud jsou ověřeny všechny požadavky. V opačném případě bude uložen jako neaktivní koncept segmentu.
 
 1. Volbou **Zpět na segmenty** přejdete zpět na stránku **Segmenty**.
 
-
+> [!TIP]
+> - Při nastavování operátorů pro podmínky nebude tvůrce segmentů navrhovat platné hodnoty z entit. Můžete přejít na **Data** > **Entity** a stáhněte si data entit, abyste zjistili, které hodnoty jsou k dispozici.
+> - Podmínky založené na datech vám umožňují přepínat mezi pevnými daty a pohyblivým rozsahem dat.
+> - Pokud máte pro svůj segment více pravidel, najdete kolem pravidla, které upravujete, modrý pruh.
+> - Pravidla a podmínky můžete přesunout na jiná místa v definici segmentu. Vyberte [...] vedle pravidla nebo podmínky a zvolte, jak a kam je chcete přesunout.
+> - Ovládací prvky **Vrátit zpět** a **Opakovat** na panelu příkazů vám umožní vrátit zpět změny.
 
 ## <a name="quick-segments"></a>Rychlé segmenty
 
@@ -146,7 +132,7 @@ Rychlé segmenty umožňují rychle vytvářet jednoduché segmenty jediným ope
 
 2. V dialogovém okně **Nový rychlý segment** vyberte atribut z rozbalovací nabídky **Pole**.
 
-3. Systém vám poskytne další přehledy, které vám pomohou vytvořit lepší segmenty vašich zákazníků.
+3. Systém poskytne více přehledů, které vám pomohou vytvořit lepší segmenty vašich zákazníků.
    - Pro kategorická pole zobrazíme 10 nejlepších zákazníků. Vyberte **Hodnotu** a zvolte **Hodnotit**.
 
    - U číselného atributu systém zobrazí, jaká hodnota atributu spadá pod percentil každého zákazníka. Zvolte **Operátor** a **Hodnotu** a pak vyberte **Zkontrolovat**.

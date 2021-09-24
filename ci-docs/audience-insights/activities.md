@@ -1,20 +1,20 @@
 ---
 title: Aktivity zákazníka
-description: Definování aktivit zákazníků a jejich zobrazení na časové ose zákazníků.
-ms.date: 04/07/2021
+description: Definujte aktivity zákazníků a zobrazte je na časové ose v zákaznických profilech.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033623"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494403"
 ---
 # <a name="customer-activities"></a>Aktivity zákazníka
 
@@ -60,12 +60,15 @@ Vaše zdroje dat mohou zahrnovat entity s transakčními a aktivními daty z ví
       - **Další podrobnosti**: Pole s příslušnými informacemi pro tuto aktivitu.
       - **Ikona**: Ikona, která nejlépe představuje tento typ aktivity.
       - **Webová adresa**: Pole obsahující adresu URL s informacemi o této aktivitě. Například transakční systém, který tuto aktivitu využívá. Tato adresa URL může být libovolné pole zdroje dat, nebo může být vytvořeno jako nové pole pomocí transformace Power Query. Data URL budou uložena v entitě *Sjednocená aktivita*, kterou lze následně spotřebovat pomocí [API](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Zadejte údaje o aktivitě zákazníka v entitě Unified Activity.":::
+
+   - **Zobrazit na časové ose**
+      - Vyberte, zda se má tato aktivita zobrazovat v zobrazení časové osy ve vašich zákaznických profilech. Vyberte **Ano** pro zobrazení aktivity na časové ose nebo **Ne**, čímž ji skryjete.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Zadejte údaje o aktivitě zákazníka v entitě Unified Activity.":::
 
 1. Volbou **Další** přejdete na další krok. Můžete vybrat **Dokončit a zkontrolovat** pro uložení aktivity nyní s typem aktivity nastaveným na **Jiný**. 
 
-1. V kroku **Typ aktivity** vyberte typ aktivity a volitelně vyberte, zda chcete sémanticky mapovat některé typy aktivit pro použití v jiných oblastech Customer Insights. V současné době lze typy aktivit *Předplatné* a *SalesOrderLine* sémanticky mapovat po souhlasu s mapováním polí. Pokud typ aktivity není pro novou aktivitu relevantní, můžete si vybrat *Jiný* nebo *Vytvořit nový* pro vlastní typ aktivity.
+1. V kroku **Typ aktivity** vyberte typ aktivity a volitelně vyberte, zda chcete sémanticky mapovat některé typy aktivit pro použití v jiných oblastech Customer Insights. V současné době lze typy aktivit *Feedback*, *Loyalty*, *SalesOrder*, *SalesOrderLine* a *Subscription* sémanticky mapovat po souhlasu s mapováním polí. Pokud typ aktivity není pro novou aktivitu relevantní, můžete si vybrat *Jiný* nebo *Vytvořit nový* pro vlastní typ aktivity.
 
 1. Volbou **Další** přejdete na další krok. 
 

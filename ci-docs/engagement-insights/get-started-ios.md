@@ -4,17 +4,17 @@ description: Naučte se, jak přizpůsobit a spustit sadu iOS SDK
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036865"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494222"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Začínáme s iOS SDK
 
@@ -45,11 +45,36 @@ Začněte proces výběrem pracovního prostoru pro práci, výběrem mobilní p
 
 - Pokud nemáte existující pracovní prostor, vyberte **Nový pracovní prostor** a podle pokynů vytvořte [nový pracovní prostor](create-workspace.md).
 
+- Po vytvoření pracovního prostoru přejděte na **Správce** > **Pracovní prostor** a poté vyberte **Průvodce instalací**.
+
 ## <a name="configure-the-sdk"></a>Konfigurace SDK
 
-Jakmile si SDK stáhnete, můžete s ní v Xcode pracovat a povolit a definovat události.
+Jakmile si SDK stáhnete, můžete s ní v Xcode pracovat a povolit a definovat události. Provést to lze dvěma způsoby.
 
-1. Po vytvoření pracovního prostoru přejděte na **Správce** > **Pracovní prostor** a poté vyberte **Průvodce instalací**.
+### <a name="option-1-using-cocoapods-recommended"></a>Možnost 1: Použití CocoaPods (doporučeno)
+CocoaPods je správce závislostí pro projekty Swift a Objective-C Cocoa. Jeho použití usnadňuje integraci sady SDK přehledů zapojení pro iOS. CocoaPods také umožňuje upgradovat na nejnovější verzi sady SDK přehledů zapojení. Zde je návod, jak použít CocoaPods k integraci sady SDK přehledů zapojení do vašeho projektu Xcode. 
+
+1. Nainstalujte CocoaPods. 
+
+1. V kořenovém adresáři projektu vytvořte nový soubor s názvem Podfile a přidejte do něj následující příkazy.Nahraďte YOUR_TARGET_PROJECT_NAME názvem vašeho projektu Xcode. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+Výše uvedená konfigurace podu obsahuje verze ladění i vydání SDK. Vyberte si ten, který je pro váš projekt nejlepší.
+
+1. Nainstalujte pod spuštěním následujícího příkazu: `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>Možnost 2: Použití odkazu ke stažení
 
 1. Stáhněte si [sadu iOS SDK přehledů zapojení](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) a umístěte soubor `EIObjC.xcframework` do složky `Frameworks`.
 

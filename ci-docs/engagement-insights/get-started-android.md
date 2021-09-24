@@ -4,17 +4,17 @@ description: Naučte se, jak přizpůsobit a spustit sadu Android SDK
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036910"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494267"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Začínáme s Android SDK
 
@@ -35,17 +35,38 @@ Následující možnosti konfigurace lze předat do SDK:
 
 - Klíč pro příjem (získáte podle pokynů níže)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>Krok 1. Integrace SDK do vaší aplikace
+## <a name="integrate-the-sdk-into-your-application"></a>Integrace SDK do vaší aplikace
 Začněte proces výběrem pracovního prostoru pro práci, výběrem mobilní platformy Android a stažením sady SDK Android.
 
 - Pomocí přepínače pracovního prostoru v levém navigačním podokně vyberte svůj pracovní prostor.
 
 - Pokud nemáte existující pracovní prostor, vyberte **Nový pracovní prostor** a podle pokynů vytvořte [nový pracovní prostor](create-workspace.md).
 
-## <a name="step-2-configure-the-sdk"></a>Krok 2. Konfigurace SDK
+- Po vytvoření pracovního prostoru přejděte na **Správce** > **Pracovní prostor** a poté vyberte **Průvodce instalací**. 
 
-1. Po vytvoření pracovního prostoru přejděte na **Správce** > **Pracovní prostor** a poté vyberte **Průvodce instalací**. 
+## <a name="configure-the-sdk"></a>Konfigurace SDK
 
+Jakmile si sadu SDK stáhnete, můžete s ní v Android Studio pracovat a povolit a definovat události. Provést to lze dvěma způsoby:
+### <a name="option-1-using-jitpack-recommended"></a>Možnost 1: Použití JitPack (doporučeno)
+1. Přidejte úložiště JitPack do svého kořene `build.gradle`:
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Přidejte závislost:
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>Možnost 2: Použití odkazu ke stažení
 1. Stáhněte si [sadu SDK Android přehledů zapojení](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) a vložte soubor `eiandroidsdk-debug.aar` do složky `libs`.
 
 1. Otevřít soubor `build.gradle` na úrovni projektu a přidat následující fragmenty:
@@ -62,7 +83,17 @@ Začněte proces výběrem pracovního prostoru pro práci, výběrem mobilní p
     }
     ```
 
-1. Nastavte konfiguraci SDK statistiky zapojení prostřednictvím souboru `AndroidManifest.xml` umístěného ve složce `manifests`. 
+1. Přidejte oprávnění k síti a internetu do svého souboru `AndroidManifest.xml` umístěného ve složce `manifests`. 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. Nastavte konfiguraci SDK přehledů zapojení prostřednictvím souboru `AndroidManifest.xml`. 
+
+## <a name="enable-auto-instrumentation"></a>Povolit automatickou instrumentaci
 1. Zkopírujte fragment XML z **Instalační příručky**. `Your-Ingestion-Key` by měl být automaticky vyplněn.
 
    > [!NOTE]
@@ -85,7 +116,7 @@ Začněte proces výběrem pracovního prostoru pro práci, výběrem mobilní p
    </application>
    ```
 
-1. Povolte nebo zakažte automatický záznam zobrazení událostí `View` nastavením výše uvedeného pole `autoCapture` na hodnotu `true` nebo `false`.
+1. Povolte nebo zakažte automatický záznam zobrazení událostí `View` nastavením výše uvedeného pole `autoCapture` na hodnotu `true` nebo `false`. V současné době je třeba přidat události `Action` ručně.
 
 1. (Volitelné) Mezi další konfigurace patří nastavení adresy URL kolektoru koncový bod. Lze je přidat pod metadata klíče příjmu v `AndroidManifest.xml`:
     ```xml
@@ -94,9 +125,9 @@ Začněte proces výběrem pracovního prostoru pro práci, výběrem mobilní p
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>Krok 3. Inicializovat SDK z MainActivity 
+## <a name="implement-custom-events"></a>Implementace vlastních událostí
 
-Po inicializaci SDK můžete pracovat s událostmi a jejich vlastnostmi v prostředí MainActivity.
+Po inicializaci SDK můžete pracovat s událostmi a jejich vlastnostmi v prostředí `MainActivity`.
 
     
 Java:
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Nastavení podrobností o uživateli události (volitelné)
+## <a name="set-user-details-for-your-event-optional"></a>Nastavení podrobností o uživateli události (volitelné)
 
 Sada SDK umožňuje definovat informace o uživateli, které lze odeslat s každou událostí. Informace o uživateli můžete určit voláním API `setUser(user: User)` na úrovni `Analytics`.
 

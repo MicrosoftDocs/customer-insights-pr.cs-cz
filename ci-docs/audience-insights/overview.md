@@ -10,12 +10,12 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 925cb5c2ccb4279ae5db2eb927a356708d310360
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034352"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474049"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Přehledy cílových skupin pro Dynamics 365 Customer Insights
 
@@ -57,11 +57,5 @@ ms.locfileid: "7034352"
 
   - Sestavování přizpůsobitelných profilů, definování ukazatelů, vytváření segmentů na míru vaší organizace a využívání výhod prediktivní analýzy, abyste získali kompletní přehled o svém zákazníku.  
   - Ke zpracování přehledů použijte hotové konektory pro několik aplikací nebo API rozhraní od Microsoftu a třetích stran.
-
-## <a name="pricing-and-licensing"></a>Ceny a licence
-
-Aplikace Customer Insights je licencována na jednoho klienta a zahrnuje více funkcí. Oprávněné kapacity zahrnují sadu profilů, denní aktualizace systému, požadavky Power Platform a dvě prostředí. Ke zvýšení výchozí kvóty můžete zakoupit další kapacitu a licenci. 
-- Podrobná kapacita a nároky: [Průvodce licencí Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
-- Přehled cen: [Ceny Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

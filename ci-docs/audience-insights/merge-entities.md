@@ -1,7 +1,7 @@
 ---
 title: Sloučení entit ve sjednocení dat
 description: Sloučením entit můžete vytvořit sjednocené profily zákazníků.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034994"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494311"
 ---
 # <a name="merge-entities"></a>Správa entit
 
@@ -76,17 +76,40 @@ Vylučte atribut ze sjednoceného profilu zákazníka. Pokud se pole používá 
 
 Na stránce **Sloučit** vyberte **Vyloučit pole** pro zobrazení seznamu všech vyloučených polí. V tomto podokně je možné přidat vyloučená pole zpět.
 
+## <a name="edit-a-merged-field"></a>Úprava sloučeného pole
+
+1.  Vyberte sloučené pole.
+
+1.  Vyberte **Zobrazit více** a zvolte **Upravit**.
+
+1.  Určete, jak kombinovat nebo sloučit pole jednou ze tří možností:
+    - **Důležitost**: Identifikuje hodnotu vítěze na základě pořadí důležitosti specifikovaného pro zúčastněná pole. Toto je výchozí možnost sloučení. Vyberte **Přesunout nahoru/dolů** a nastavte pořadí důležitosti.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Možnost důležitosti v dialogovém okně sloučení polí."::: 
+    - **Nejnovější**: Identifikuje vítěznou hodnotu na základě aktuálnosti. K definování aktuálnosti vyžaduje datum nebo číselné pole pro každou zúčastněnou entitu v rozsahu sloučených polí.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Možnost aktuálnosti v dialogovém okně sloučení polí.":::
+    - **Nejstarší**: Identifikuje vítěznou hodnotu na základě nejstarší aktuálnosti. K definování aktuálnosti vyžaduje datum nebo číselné pole pro každou zúčastněnou entitu v rozsahu sloučených polí.
+
+1.  Chcete -li se účastnit procesu sloučení, můžete přidat další pole.
+
+1.  Sloučené pole můžete přejmenovat.
+
+1. Výběrem možnosti **Hotovo** se vaše změny použijí.
+
+1. Vyberte **Uložit** a **Spustit** ke zpracování změn. 
+
 ## <a name="manually-combine-fields"></a>Ruční zkombinování polí
 
 Ručně zadejte sloučený atribut. 
 
 1. Na stránce **Sloučit** vyberte **Zkombinovat pole**.
 
-1. Zadejte **Název** a **Název výstupního pole**.
+1. Upřesněte vítěznou zásadu sloučení v rozevíracím seznamu **Kombinovat pole podle**.
 
 1. Vyberte pole k přidání. Vyberte **Přidat pole** ke zkombinování více polí.
 
-1. Potvrďte vyloučení.
+1. Zadejte **Název** a **Název výstupního pole**.
+
+1. Výběrem možnosti **Hotovo** se změny použijí.
 
 1. Vyberte **Uložit** a **Spustit** ke zpracování změn. 
 
@@ -103,6 +126,27 @@ Některé entity obsahují více podrobností než jiné. Pokud entita obsahuje 
 1. Změnu potvrďte.
 
 1. Vyberte **Uložit** a **Spustit** ke zpracování změn.
+
+## <a name="configure-customer-id-generation"></a>Konfigurace generování ID zákazníka 
+
+Po konfiguraci slučování polí můžete definovat, jak generovat hodnoty CustomerId, jedinečné identifikátory profilu zákazníka. Krok sloučení v procesu sjednocení dat generuje jedinečný identifikátor profilu zákazníka. Identifikátor je CustomerId v entitě *Zákazník*, která je výsledkem procesu sjednocení dat. 
+
+Entita CustomerIdin v entitě Zákazník je založena na hašování první hodnoty vítězných nenulových primárních klíčů. Tyto klíče pocházejí z entit použitých ve fázi shody a sloučení a jsou ovlivněny pořadím shody.Vygenerované CustomerID se tedy může změnit, když se změní hodnota primárního klíče v primární entitě pořadí shody. V důsledku toho nemusí hodnota primárního klíče vždy představovat stejného zákazníka.
+
+Konfigurace stabilního ID zákazníka vám umožní vyhnout se tomuto chování.
+
+**Konfigurovat jedinečné ID zákazníka**
+
+1. Přejděte na **Sjednotit** > **Sloučit**.
+
+1. Na stránce **Sloučit** vyberte kartu **Klíče**. 
+
+1. Najeďte myší na řádek **CustomerId** a vyberte možnost **Konfigurovat**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Ovládací prvek pro přizpůsobení generování ID.":::
+
+1. Vyberte až pět polí, která budou obsahovat jedinečné ID zákazníka a jsou stabilnější. Záznamy, které neodpovídají vaší konfiguraci, používají místo toho ID nakonfigurované systémem.  
+
+1. Vyberte **Hotovo** a spusťte proces sloučení, abyste použili změny.
 
 ## <a name="run-your-merge"></a>Spuštění sloučení
 

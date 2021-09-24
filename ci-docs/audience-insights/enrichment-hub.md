@@ -1,7 +1,7 @@
 ---
 title: Rozšíření sjednocených profilů zákazníka
 description: Využijte možnosti rozšíření svých zákaznických dat.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032520"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7469952"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
@@ -29,6 +29,7 @@ K vytváření nebo úpravě rozšíření musíte mít oprávnění přispěvat
 
 Na kartě **Zjistit** najdete následující rozšíření:
 
+- [Azure Maps](enrichment-azure-maps.md) poskytuje společnost Microsoft
 - [Značky](enrichment-microsoft.md) poskytované společností Microsoft
 - [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft
 - [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft
@@ -62,5 +63,17 @@ Rozšíření třetích stran se konfigurují pomocí [připojení](connections.
 ## <a name="multiple-enrichments-of-the-same-type"></a>Více rozšíření stejného typu
 
 Entita, kterou chcete rozšířit, je zadána během konfigurace rozšíření, což vám umožní rozšířit pouze podmnožinu vašich profilů. Například obohaťte data pouze pro konkrétní segment. Můžete nakonfigurovat několik rozšíření stejného typu a znovu použít stejné propojení . Některá rozšíření budou mít rozšíření počtu obohacení stejného typu, které lze vytvořit. Limity a současné použití lze zobrazit na stránce **Rozšíření**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Podívejte se na průběh procesu obohacování
+
+Můžete najít podrobnosti o zpracování obohacení, včetně jeho stavu a potenciálních problémů, v průběhu obnovování nebo po dokončení aktualizace. Pochopte, které procesy jsou zahrnuty pro aktualizaci obohacení, a jak dlouho trvalo spuštění procesů. Stav obohacení je podporován pro Experian, Leadspace, HERE Technologies, SFTP Import a Azure Maps.
+
+Chcete -li zobrazit stav obohacení
+
+1. Přejděte na **Data** > **Rozšíření**. 
+1. Na karě **Moje obohacení** vyberte stav obohacení a otevřete boční panel. 
+1. V podokně **Podrobnosti o průběhu** rozbalte část **Obohacení**. 
+1. Pod obohacením, pro které chcete vidět průběh, vyberte **Zobrazit podrobnosti**. 
+1. V podokně **Podrobnosti o úkolu** vyberte **Zobrazit podrobnosti** a zobrazte procesy, které se podílejí na aktualizaci obohacení, a jejich stav. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

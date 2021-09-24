@@ -1,24 +1,23 @@
 ---
-title: Podporované jazyky v přehledech cílové skupiny
+title: Podporované jazyky pro aplikaci Dynamics 365 Customer Insights
 description: Popis a konfigurace jazykové podpory.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035131"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483334"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Podporované jazyky ve funkci přehledů cílové skupiny
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Podporované jazyky pro aplikaci Dynamics 365 Customer Insights
 
-Přehledy cílové skupiny pro Dynamics 365 Customer Insights jsou přeloženy do mnoha jazyků. Následující seznam obsahuje dostupné jazyky a informace o tom, co je přeloženo. Můžete se také dozvědět více o tom, jak změnit nastavení jazyka. 
+Aplikace Dynamics 365 Customer Insights je přeložena do mnoha jazyků. Následující seznam obsahuje dostupné jazyky a informace o tom, co je přeloženo. Můžete se také dozvědět více o tom, jak změnit nastavení jazyka. 
 
 ## <a name="languages"></a>Jazyky
 
@@ -69,7 +68,7 @@ Přehledy cílové skupiny pro Dynamics 365 Customer Insights jsou přeloženy d
 
 ## <a name="whats-translated"></a>Co je přeloženo
 
-Aplikace používá vaše jazykové preference k zobrazení prvků, jako je nabídka, text štítku a systémové zprávy ve vašem upřednostňovaném jazyce.
+Aplikace Customer Insights používá vaše jazykové preference k zobrazení prvků, jako je nabídka, text popisků a zprávy ve vašem upřednostňovaném jazyce.
 
 Protože většina funkcí vychází z vašich údajů, některé položky zůstávají v původním jazyce. Příklad:
 

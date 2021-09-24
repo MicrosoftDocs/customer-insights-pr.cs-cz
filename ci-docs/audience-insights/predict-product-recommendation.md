@@ -1,20 +1,20 @@
 ---
 title: Predikce doporučení produktů
 description: Predikujte produkty, které si zákazník pravděpodobně zakoupí nebo s nimž bude interagovat.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034948"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494531"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predikce doporučení produktů (Preview)
 
@@ -89,23 +89,24 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 
 ### <a name="add-required-data"></a>Přidejte požadovaná data
 
-1. Vyberte **Přidat data** pro **Historie transakcí zákazníka** a vyberte entitu, která poskytuje informace o historii transakcí/nákupů, jak je popsáno v [předpokladech](#prerequisites).
+1. Vyberte **Přidat data** a zvolte typ aktivity v postranním podokně, které obsahuje informace o požadované transakci nebo historii nákupů.
 
-1. Namapujte sémantická pole na atributy v rámci entity historie nákupu a vyberte **Další**. Pro popis polí se podívejte na [předpoklady](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Definujte vztah entity.](media/product-recommendation-purchasehistorymapping.PNG "Stránka historie nákupu zobrazující sémantické atributy, které jsou mapovány na pole ve vybrané entitě historie nákupů")
+1. V položce **Vybrat aktivity** vyberte konkrétní aktivity z vybrané aktivity, na které se chcete při výpočtu zaměřit.
 
-1. Pokud pole nejsou vyplněna, nakonfigurujte vztah z entity historie nákupu na entitu *Zákazník*.
-    1. Vyberte **Entita Historie nákupů**.
-    1. Vyberte **Pole**, které identifikuje zákazníka v entitě historie nákupu. Musí se vztahovat k primárnímu ID zákazníka vaší entity *Zákazník*.
-    1. Vyberte **entitu zákazníka**, která odpovídá vaší primární entitě zákazníka.
-    1. Zadejte název, který popisuje daný vztah.
-       > [!div class="mx-imgBorder"]
-       > ![Stránka historie nákupů znázorňující vytvoření vztahu se zákazníkem.](media/model-purchase-join.png "Stránka historie nákupů znázorňující vytvoření vztahu se zákazníkem")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Boční podokno zobrazující výběr konkrétních aktivit pod sémantickým typem.":::
+
+1. Pokud jste aktivitu dosud nemapovali na sémantický typ, proveďte to výběrem možnosti **Upravit**. Otevře se řízené prostředí s mapováním sémantických aktivit. Namapujte svá data na odpovídající pole ve zvoleném typu aktivity.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Typ aktivity nastavení stránky.":::
+
+1. Po namapování aktivity na odpovídající sémantický typ pokračujte výběrem možosti **Další**. 
+ 
+1. Namapujte sémantické atributy na pole, která jsou nutná ke spuštění modelu.
 
 1. Zvolte **Uložit**.
 
 1. Vyberte **Další**.
+
 
 ### <a name="configure-product-filters"></a>Konfigurace filtrů produktu
 

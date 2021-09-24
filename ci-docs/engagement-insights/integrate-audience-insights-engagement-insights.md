@@ -1,19 +1,19 @@
 ---
 title: Vytvoření propojení mezi přehledy cílových skupin a přehledy zapojení
 description: Vytvořte aktivní propojení mezi přehledy cílových skupin a přehledy zapojení, abyste povolili obousměrné sdílení dat.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461005"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487099"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Vytvoření propojení mezi přehledy cílových skupin a přehledy zapojení
 
@@ -26,14 +26,14 @@ Pomocí jednotných profilů a segmentů z přehledy cílových skupin získáte
 ## <a name="prerequisites"></a>Požadavky
 
 - Profily přehledů cílových skupin musí být uloženy v účtu Azure Data Lake Storage, který vlastníte, nebo ve spravovaném jezeře [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-
+- Vaše prostředí přehledů cílových skupin by mělo mít přidružené prostředí Dataverse. A pokud to prostředí také používá Dataverse pro ukládání dat, nezapomeňte zaškrtnout možnost **Povolit sdílení dat** v přehledech cílových skupin. Více informací najdete v části [Vytvoření a konfigurace placeného prostředí v přehledech cílových skupin](../audience-insights/get-started-paid.md)
 - Pro přehledy cílových skupin a přehledy zapojení potřebujete oprávnění správce.
-
 - Propojená prostředí musí být ve stejné geografické oblasti.
 
 > [!NOTE]
 > - Pokud je vaše předplatné přehledů cílových skupin zkušební verzí, která využívá datové jezero interně spravované přehledy cílových skupin, kontaktujte [pirequest@microsoft.com](mailto:pirequest@microsoft.com) ohledně pomoci. 
-> - Pokud vaše prostředí přehledů cílových skupin používá vaše vlastní Azure Data Lake Storage pro ukládání dat, musíte do účtu úložiště přidat instanční objekt Azure přehledů zapojení. Podrobnosti najdete v části [Připojení k účtu Azure Data Lake Storage s instančním objektem Azure pro přehledy cílových skupin](../audience-insights/connect-service-principal.md). Vaše prostředí přehledů cílových skupin by také mělo mít přidružené [prostředí Dataverse](../audience-insights/get-started-paid.md). 
+> - Pokud vaše prostředí přehledů cílových skupin používá vaše vlastní Azure Data Lake Storage pro ukládání dat, musíte do účtu úložiště přidat instanční objekt Azure přehledů zapojení. Podrobnosti najdete v části [Připojení k účtu Azure Data Lake Storage s instančním objektem Azure pro přehledy cílových skupin](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Vytvoření propojení prostředí
 
@@ -75,6 +75,7 @@ Po propojení můžete pro propojená prostředí vybrat volitelné funkce. Tyto
 
    > [!IMPORTANT]
    > Pokud v tomto kroku uživatele výslovně nepřidáte, data budou před uživateli skryta v přehledech zapojení.
+   > Aby se segmenty přehledů cílových skupin zobrazovaly v přehledech zapojení, musíte nejprve[spustit slučovací a navazující procesy](../audience-insights/merge-entities.md). Následné procesy jsou důležité, protože generují jedinečnou tabulku, která připravuje segmenty přehledů cílových skupin ke sdílení s přehledy zapojení. (Pokud je naplánována aktualizace systému, bude automaticky zahrnovat navazující procesy.)
 
 1. Zkontrolujte svůj výběr a poté vyberte **Dokončit**.
 

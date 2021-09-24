@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Funkce přehledů zapojení (Preview) v Dynamics 365 Customer Insights
+title: Funkce přehledů zapojení v Dynamics 365 Customer Insights (Preview)
 summary: Shromažďujte údaje pro své webové stránky. Pochopte interakce s uživateli a využití zákazníků na vašich webech. Využijte hlubokou integraci mezi přehledy zapojení a přehledy o cílové skupině, abyste obohatili svou analýzu chování v reálném čase o přehledy profilů zákazníků. Obohaťte profily zákazníků o webové aktivity a získejte spolu s příslušnými údaji o zákaznících údaje o chování v reálném čase. Transformujte své podnikání tak, aby z vašich údajů o zákaznících získalo okamžitou hodnotu.
 metadata:
   title: Dokumentace přehledů zapojení (Preview)
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036230"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494176"
 landingContent:
 - title: O uživateli
   linkLists:
   - linkListType: overview
     links:
-    - text: Přehled možností
+    - text: Výhody funkcí
       url: overview.md
-    - text: Podmínky a koncepty
+    - text: Glosář pojmů
       url: glossary.md
-    - text: Objevte přehledy zapojení
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Nové a aktualizované funkce
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Onboarding
   linkLists:
   - linkListType: how-to-guide
@@ -38,33 +38,35 @@ landingContent:
       url: create-workspace.md
     - text: Vybavení vašeho webu
       url: instrument-website.md
-- title: Zprávy
+- title: Zobrazení a filtrování sestav
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Zobrazit sestavy
       url: view-reports.md
-    - text: Vytvořit vlastní sestavy
-      url: custom-reports.md
     - text: Zobrazení sestavy sjednocených profilů
       url: profile-reports.md
-    - text: Vytvoření trychtýřových sestav
-      url: funnel-reports.md
-- title: Akce
+    - text: Použitá segmentů cílových skupin k filtrování sestav
+      url: integrate-audience-insights-segments.md
+- title: Analýza
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Vytvoření trychtýřových sestav
+      url: funnel-reports.md
+    - text: Analýza dat o chování
+      url: curate-dimensions.md
+    - text: Vytvořit vlastní sestavy
+      url: custom-reports.md
     - text: Vytvořit upřesněné události
       url: refined-events.md
     - text: Exportovat události
       url: export-events.md
-    - text: Odstranění a export osobních údajů
-      url: delete-export-personal-data.md
-- title: Materiály pro vývojáře
+- title: Zdroje pro vývojáře
   linkLists:
   - linkListType: reference
     links:
-    - text: Materiály pro vývojáře
+    - text: Zdroje pro vývojáře
       url: developer-resources.md
     - text: Ukázka WebSDK
       url: websdk-sample.md
@@ -81,6 +83,10 @@ landingContent:
     - text: Správa prostředí a pracovních prostorů
       url: manage-environments-workspaces.md
     - text: Připojit k přehledům cílových skupin
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Správa souborů cookie a souhlasu uživatele
       url: user-consent-storage.md
+    - text: Odstranění a export osobních údajů
+      url: delete-export-personal-data.md
+    - text: Omezení služby
+      url: ../service-limits.md

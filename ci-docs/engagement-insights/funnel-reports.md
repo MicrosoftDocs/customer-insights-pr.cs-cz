@@ -4,17 +4,17 @@ description: Jak používat trychtýřové sestavy k pochopení toho, jak se cí
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032247"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498634"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Vytvoření a správa trychtýřových sestav
 
@@ -158,4 +158,21 @@ Můžete změnit název trychtýřové sestavy, odstranit ji nebo upravit kroky 
 1. Otevřete sestavu výběrem jejího názvu.
 
 1. Vyberte krok, který chcete odebrat, a poté zvolte **Odstranit**.
+
+## <a name="funnel-insights"></a>Přehledy trychtýře 
+
+Přehledy zapojení nyní nabízí přehledy trychtýře pro zákazníky. Pomocí přehledů trychtýře získáte hlubší vhled do chování zákazníků ohledně kroků v sestavě trychtýře. Když vytvoříte a uložíte novou sestavu trychtýře, automaticky se pro vaši sestavu vygenerují přehledy trychtýře. 
+
+Přehledy trychtýře můžete zobrazit v následujících kategoriích, na hlavní i krokové úrovni: 
+
+ - Převodní poměr 
+ - Doba přechodu 
+ - Čas dokončení 
+
+Využijte tyto poznatky k hlubšímu prozkoumání chování zákazníků a lepšímu porozumění bodům opuštění a konverzím v sestavě trychtýře. 
+
+Přehledy trychtýře se přepočítávají každých 24 hodin, nebo když **uložíte** svou sestavu trychtýře. 
+
+> [!NOTE]
+> Abyste mohli zobrazit přehledy svého trychtýře, musíte sestavu uložit při každé změně. 
 
