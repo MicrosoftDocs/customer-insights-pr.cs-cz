@@ -1,20 +1,20 @@
 ---
 title: Vztahy mezi entitami a cesty k entitám
 description: Vytvářejte a spravujte vztahy mezi entitami z více zdrojů dat.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035223"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557344"
 ---
 # <a name="relationships-between-entities"></a>Vztahy mezi entitami
 
@@ -93,9 +93,9 @@ Dostupné možnosti:
 - **Změnit na vodorovné/svislé rozložení**: Změňte zarovnání entit a vztahů.
 - **Upravit**: Aktualizujte vlastnosti vlastních vztahů v podokně úprav a uložte změny.
 
-### <a name="relationship-path"></a>Cesta vztahu
+## <a name="relationship-paths"></a>Cesty vztahů
 
-Cesta vztahu popisuje entity, které jsou propojeny se vztahy mezi zdrojovou entitou a cílovou entitou. Používá se při vytváření segmentu nebo míry, která zahrnuje jiné entity než entitu jednotného profilu, a existuje několik možností, jak dosáhnout entity sjednoceného profilu.
+Cesta vztahu popisuje entity, které jsou propojeny vztahy mezi zdrojovou entitou a cílovou entitou. Používá se při vytváření segmentu nebo míry, která zahrnuje jiné entity než entitu jednotného profilu, a existuje několik možností, jak dosáhnout entity sjednoceného profilu. 
 
 Cesta vztahu informuje systém, přes které vztahy má přistupovat k entitě jednotného profilu. Různé cesty vztahů mohou přinést různé výsledky.
 
@@ -106,6 +106,42 @@ Například entita *eCommerce_eCommercePurchases* má ke sjednocenému profilu e
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Zákazník 
 
 Cesta vztahu určuje, které entity můžete použít při vytváření pravidel pro míry nebo segmenty. Výběr možnosti s nejdelší cestou vztahu pravděpodobně přinese méně výsledků, protože odpovídající záznamy musí být součástí všech entit. V tomto případě musí zákazník mít zakoupené zboží prostřednictvím elektronického obchodování (eCommerce_eCommercePurchases), v pokladním místě (POS_posPurchases) a účastnit se našeho věrnostního programu (loyaltyScheme_loyCustomers). Při výběru první možnosti byste pravděpodobně získali více výsledků, protože zákazníci musí existovat pouze v jedné další entitě.
+
+### <a name="direct-relationship"></a>Přímý vztah
+
+Vztah je klasifikován jako **přímý vztah**, když má zdrojová entita vztah k cílové entity pouze s jedním vztahem.
+
+Pokud například se entita aktivity s názvem *eCommerce_eCommercePurchases* připojí k cílové entitě *eCommerce_eCommerceContacts* pouze prostřednictvím *ContactId*, je to přímý vztah.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Zdrojová entita se připojí přímo k cílové entitě.":::
+
+#### <a name="multi-path-relationship"></a>Vztah více cest
+
+**Vztah více cest** je speciální typ přímého vztahu, který spojuje zdrojovou entitu s více než jednou cílovou entitou.
+
+Pokud například entita aktivity s názvem *eCommerce_eCommercePurchases* má vztah se dvěma cílovými entitami, *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, je to vztah více cest.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Zdrojová entita se připojuje přímo k více než jedné cílové entitě prostřednictvím vztahu přes více kroků.":::
+
+### <a name="indirect-relationship"></a>Nepřímý vztah
+
+Vztah je klasifikován jako **nepřímý vztah**, když má zdrojová entita vztah k alespoň jedné další entitě před vztahem k cílové entity.
+
+#### <a name="multi-hop-relationship"></a>Vztah více kroků
+
+*Vztah více kroků* je *nepřímý vztah*, které vám umožňuje připojit zdrojovou entitu k cílové entitě prostřednictvím jedné nebo více dalších zprostředkujících entit.
+
+Pokud se například entita aktivity *eCommerce_eCommercePurchasesWest* připojuje se k mezilehlé entitě s názvem *eCommerce_eCommercePurchasesEast* a poté se připojí k cílové entitě s názvem *eCommerce_eCommerceContacts*, je to vztah více kroků.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Zdrojová entita se připojuje přímo k cílové entitě s mezilehlou entitou.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Vztah více kroků a více cest
+
+Vztahy více kroků a více cest lze použít společně k vytvoření **vztahů více kroků a více cest**. Tento speciální typ kombinuje funkce **více kroků** a **vztahů více cest**. Umožňuje vám připojit se k více než jedné cílové entitě při použití mezilehlých entit.
+
+Pokud se například entita aktivity *eCommerce_eCommercePurchasesWest* připojuje se k mezilehlé entitě s názvem *eCommerce_eCommercePurchasesEast* a poté se připojí ke dvěma cílovým entitám, *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, je to vztah více kroků a více cest.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Zdrojová entita se připojuje přímo k jedné cílové entitě a připojuje se k jiné cílové entitě prostřednictvím mezilehlé entity.":::
 
 ## <a name="manage-existing-relationships"></a>Správa existujících vztahů 
 

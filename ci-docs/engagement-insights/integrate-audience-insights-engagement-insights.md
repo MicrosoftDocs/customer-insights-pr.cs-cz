@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487099"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559010"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Vytvoření propojení mezi přehledy cílových skupin a přehledy zapojení
 
@@ -54,6 +54,9 @@ Odkaz na prostředí můžete vytvořit aktualizací nastavení **Správce** > *
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Povolte atributy a segmenty sjednocených profilů přehledů cílových skupin
 
 Po propojení můžete pro propojená prostředí vybrat volitelné funkce. Tyto funkce povolují sjednocené atributy a segmenty profilu z cílových skupin pro interaktivní analýzu zákaznických dat.
+
+> [!IMPORTANT]
+> Aby se segmenty přehledů cílových skupin zobrazovaly v přehledech zapojení, musíte nejprve[spustit slučovací a navazující procesy](../audience-insights/merge-entities.md). Následné procesy jsou důležité, protože generují jedinečnou tabulku, která připravuje segmenty přehledů cílových skupin ke sdílení s přehledy zapojení. (Pokud je naplánována aktualizace systému, bude automaticky zahrnovat navazující procesy.)
 
 **Analyzovat webová data v přehledech zapojení**
 

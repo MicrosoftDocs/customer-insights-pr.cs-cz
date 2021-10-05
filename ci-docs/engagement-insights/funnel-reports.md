@@ -4,17 +4,17 @@ description: Jak používat trychtýřové sestavy k pochopení toho, jak se cí
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498634"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558805"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Vytvoření a správa trychtýřových sestav
 
@@ -163,13 +163,23 @@ Můžete změnit název trychtýřové sestavy, odstranit ji nebo upravit kroky 
 
 Přehledy zapojení nyní nabízí přehledy trychtýře pro zákazníky. Pomocí přehledů trychtýře získáte hlubší vhled do chování zákazníků ohledně kroků v sestavě trychtýře. Když vytvoříte a uložíte novou sestavu trychtýře, automaticky se pro vaši sestavu vygenerují přehledy trychtýře. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Přehledy trychtýře.":::
+
+> [!NOTE]
+> Přehledy trychtýřů lze generovat pouze pro kroky trychtýře, které **nezahrnují** vlastní rozměry. Chcete-li generovat přehledy trychtýřů pro všechny kroky v trychtýři, použijte k vytvoření kroků trychtýře připravené dimenze interaktivních statistik. 
+
 Přehledy trychtýře můžete zobrazit v následujících kategoriích, na hlavní i krokové úrovni: 
 
- - Převodní poměr 
+ - Převodní poměr
+ -    Konverzní poměr mezi pokladnou a nákupem je 22 %.
  - Doba přechodu 
+ -    Průměrná doba přechodu mezi košíkem a pokladnou je 23 minut. 
  - Čas dokončení 
+ -    Průměrná doba, kterou zákazníci potřebují na dokončení trychtýře, je 47 minut. 
 
 Využijte tyto poznatky k hlubšímu prozkoumání chování zákazníků a lepšímu porozumění bodům opuštění a konverzím v sestavě trychtýře. 
+
+Chcete-li porovnat statistiky v různých krocích, vyberte **Viz rozpis kroků** nebo **Porovnat s jinými kroky** z karet přehledů. Zobrazí se sloupcový graf porovnávající metriky pro každý krok cesty. 
 
 Přehledy trychtýře se přepočítávají každých 24 hodin, nebo když **uložíte** svou sestavu trychtýře. 
 

@@ -4,27 +4,27 @@ description: Nalezení informací o SDK a jak je použít.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036275"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558738"
 ---
 # <a name="developer-resources-overview"></a>Přehled materiálů pro vývojáře
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Tento článek uvádí všechny dostupné fragmenty kódu a ukázky pro rychlou referenci. Získejte kód pro odesílatele události pro svou platformu a postupujte podle pokynů. 
+Tento článek uvádí všechny dostupné fragmenty kódu a ukázky kódu sady nástrojů pro vývoj softwaru (SDK) pro vývojáře, se kterými lze sdílet data s Dynamics 365 Customer Insights. Získejte kód pro události specifické pro vaši platformu podle pokynů.
 
 ## <a name="capture-events-from-websites"></a>Zachytávání událostí z webů
 
-- [Jak přidat fragment kódu na web](instrument-website.md)
+- [Instrumentace webu](instrument-website.md)
 - [Ukázka webového rozhraní SDK](websdk-sample.md)
 - [Pokročilá webová instrumentace SDK](advanced-SDK-implementation.md)
 
