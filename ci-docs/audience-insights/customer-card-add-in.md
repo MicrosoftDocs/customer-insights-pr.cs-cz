@@ -1,7 +1,7 @@
 ---
 title: Doplněk zákaznické karty pro aplikace Dynamics 365
 description: Zobrazte data z přehledu cílové skupiny v aplikacích Dynamics 365 s tímto doplňkem.
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032980"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643382"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplněk karty zákazníka (preview)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dynamics 365. S doplňkem Zákaznická karta nainstalovaným v podporované aplikaci Dynamics 365 můžete zvolit zobrazení demografických údajů, přehledů a časových os aktivit. Doplněk načte data z Customer Insights bez ovlivnění dat v připojené aplikaci Dynamics 365. 
+Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dynamics 365. Když je v podporované aplikaci Dynamics 365 nainstalován doplněk Zákaznická karta, můžete se rozhodnout zobrazovat pole profilu zákazníka, přehledy a časovou osu aktivity. Doplněk načte data z Customer Insights bez ovlivnění dat v připojené aplikaci Dynamics 365.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -28,20 +30,19 @@ Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dyna
 - Aby se vaše data Dynamics 365 mapovala na profily zákazníků přehledů cílové skupiny, musí být [přijata z aplikace Dynamics 365 pomocí konektoru Microsoft Dataverse](connect-power-query.md).
 - Všichni uživatelé doplňku zákaznické karty Dynamics 365 musí být [přidáni jako uživatelé](permissions.md) v přehledech cílové skupiny, aby mohli zobrazovat data.
 - [Konfigurované možnosti vyhledávání a filtrování](search-filter-index.md) v přehledech cílové skupiny jsou vyžadovány, aby vyhledávání dat fungovalo.
-- Každý ovládací prvek doplňku závisí na konkrétních datech v přehledech cílové skupiny:
-  - Ovládací prvek měr: Vyžaduje [konfigurované míry](measures.md).
-  - Ovládání inteligence: Vyžaduje data generovaná pomocí [predikcí](predictions.md) nebo [vlastních modelů](custom-models.md).
-  - Ovládací prvek demografických údajů: V jednotném profilu zákazníka jsou k dispozici demografická pole (například věk nebo pohlaví).
-  - Kontrola rozšíření: Vyžaduje aktivní [rozšíření](enrichment-hub.md) aplikované na profily zákazníků.
-  - Ovládací prvek časové osy: Vyžaduje [konfigurované aktivity](activities.md).
+- Každý ovládací prvek doplňku závisí na konkrétních datech v přehledech cílové skupiny. Některá data a ovládací prvky jsou k dispozici pouze v prostředích konkrétních typů. Konfigurace doplňku vás bude informovat, pokud ovládací prvek není k dispozici kvůli vybranému typu prostředí. Další informace o [případech použití prostředí](work-with-business-accounts.md).
+  - **Kontrola měření**: Vyžaduje [nakonfigurované míry](measures.md) atributů typu zákazníka.
+  - **Ovládání analytických nástrojů**: Vyžaduje data generovaná pomocí [predikcí](predictions.md) nebo [vlastních modelů](custom-models.md).
+  - **Kontrola podrobností zákazníka**: Všechna pole z profilu jsou k dispozici v jednotném zákaznickém profilu.
+  - **Kontrola rozšíření:** Vyžaduje aktivní [rozšíření](enrichment-hub.md) aplikované na profily zákazníků.
+  - **Ovládání kontaktů**: Vyžaduje definici sémantické entity kontaktů typu.
+  - **Ovládací prvek časové osy**: Vyžaduje [konfigurované aktivity](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalace doplňku karty zákazníka
 
 Doplněk karty zákazníka je řešení pro aplikace pro zapojení zákazníků v Dynamics 365. Chcete-li nainstalovat řešení, přejděte na AppSource a vyhledejte **Kartu zákazníka Dynamics**. Vyberte [Doplněk karty zákazníka v AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) a vyberte **Získat**.
 
-K instalaci řešení se možná budete muset přihlásit pomocí svých přihlašovacích údajů pro aplikaci Dynamics 365.
-
-Instalace řešení do vašeho prostředí může nějakou dobu trvat.
+K instalaci řešení se možná budete muset přihlásit pomocí svých přihlašovacích údajů pro aplikaci Dynamics 365. Instalace řešení do vašeho prostředí může nějakou dobu trvat.
 
 ## <a name="configure-the-customer-card-add-in"></a>Nakonfigurujte doplněk zákaznické karty
 
@@ -50,7 +51,7 @@ Instalace řešení do vašeho prostředí může nějakou dobu trvat.
 1. Vyberte odkaz **Zobrazované jméno** řešení Doplněk karty zákazníka v **Dynamics 365 Customer Insights (preview)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Vyberte zobrazovaný název.](media/select-display-name.png "Výběr zobrazovaného názvu")
+   > ![Vyberte zobrazovaný název.](media/select-display-name.png "Vyberte zobrazované jméno.")
 
 1. Vyberte **Přihlásit se** a zadejte přihlašovací údaje pro účet správce, pomocí kterého konfigurujete Customer Insights.
 
@@ -64,7 +65,7 @@ Instalace řešení do vašeho prostředí může nějakou dobu trvat.
    - Chcete-li mapovat obchodní vztah, vyberte pole v entitě Zákazník, které odpovídá ID vaší entity obchodního vztahu.
 
    > [!div class="mx-imgBorder"]
-   > ![Pole ID kontaktu.](media/contact-id-field.png "Pole ID kontaktu")
+   > ![Pole ID kontaktu.](media/contact-id-field.png "Pole ID kontaktu.")
 
 1. Chcete-li uložit nastavení, vyberte tlačítko **Uložit konfiguraci**.
 
@@ -73,7 +74,9 @@ Instalace řešení do vašeho prostředí může nějakou dobu trvat.
 1. Přiřaďte roli **Úpravce karty Customer Insights** uživatelům, kteří přizpůsobí obsah zobrazený na kartě pro celou organizaci.
 
 ## <a name="add-customer-card-controls-to-forms"></a>Přidání ovládacích prvků karty zákazníka do formulářů
-  
+
+V závislosti na vašem scénáři se můžete rozhodnout přidat ovládací prvky buď do formuláře **Kontakt**, nebo do formuláře **Účet**. Pokud je vaše prostředí cílová skupina insights pro firemní účty, doporučujeme přidat ovládací prvky do formuláře Účet. V takovém případě nahraďte „kontakt“ v níže uvedených krocích výrazem „účet“.
+
 1. Chcete-li přidat ovládací prvky zákaznické karty do kontaktního formuláře, přejděte na stránku **Nastavení** > **Přizpůsobení** v Dynamics 365.
 
 1. Vyberte **Přizpůsobit systém**.
@@ -83,7 +86,7 @@ Instalace řešení do vašeho prostředí může nějakou dobu trvat.
 1. Vyberte kontaktní formulář, do kterého chcete přidat ovládací prvky karty zákazníka.
 
     > [!div class="mx-imgBorder"]
-    > ![Vyberte formulář kontaktu.](media/contact-active-forms.png "Výběr formuláře kontaktu")
+    > ![Vyberte formulář kontaktu.](media/contact-active-forms.png "Výběr formuláře kontaktu.")
 
 1. Chcete-li přidat ovládací prvek demografických údajů, v editoru formulářů přetáhněte libovolné pole z **Průzkumníka polí** na místo, kam chcete umístit ovládací prvek.
 
@@ -102,7 +105,8 @@ Instalace řešení do vašeho prostředí může nějakou dobu trvat.
 1. Chcete-li přizpůsobit, co se má zobrazit na vlastním ovládacím prvku, vyberte tlačítko Upravit v pravém horním rohu.
 
 ## <a name="upgrade-customer-card-add-in"></a>Upgrade doplňku karty zákazníka
-Doplněk karty zákazníka se neupgraduje automaticky. Chcete-li upgradovat na nejnovější verzi, postupujte podle tohoto postupu v aplikaci Dynamics 365, která má nainstalovaný doplněk.
+
+Doplněk karty zákazníka se neupgraduje automaticky. Chcete-li upgradovat na nejnovější verzi, postupujte podle následujících kroků v aplikaci Dynamics 365, ve které je nainstalován doplněk.
 
 1. V aplikaci Dynamics 365 přejděte na **Nastavení** > **Vlastní nastavení** a vyberte **Řešení**.
 

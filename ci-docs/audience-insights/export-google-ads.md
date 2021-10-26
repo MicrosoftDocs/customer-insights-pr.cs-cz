@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558947"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617910"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Export segmentů do Google Ads (náhled)
 
@@ -35,9 +35,9 @@ Exportujte segmenty sjednocených profilů zákazníků do seznamu cílové skup
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Až 1 milion profilů na jeden export do služby Google Ads.
+- Až 1 milion zákaznických profilů na export do Google Ads.
 - Export do služby Google Ads je omezen na segmenty.
-- Export segmentů s celkem 1 milionem profilů může z důvodu omezení na straně poskytovatele trvat až 5 minut. 
+- Export segmentů s celkem 1 milionem zákaznických profilů může kvůli omezením na straně poskytovatele trvat až 5 minut. 
 - Spárování v Google Ads může trvat až 48 hodin.
 
 ## <a name="set-up-connection-to-google-ads"></a>Nastavení propojení ke Google Ads
@@ -74,7 +74,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte své **[ID cílové skupiny Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** a volbou **Připojit** inicializujte připojení k Google Ads.
 
-1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka.
 
 1. Vyberte segmenty, které chcete exportovat. Do Google Ads můžete exportovat celkem až 1 milion zákaznických profilů.
 

@@ -2,8 +2,14 @@
   href: index.yml
 - name: Přehled produktu
   href: overview.md
-- name: Vytvoření zkušební verze
-  href: audience-insights/get-started-trial.md
+- name: Bezplatná zkušební verze
+  items:
+    - name: Registrace bezplatného zkušebního předplatného
+      href: trial-signup.md
+    - name: Nejčastější dotazy ke zkušební verzi
+      href: trial-FAQ.md
+- name: Zahájení placenou licencí
+  href: paid-license.md
 - name: Přístup do prostředí
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Přehledy pro cílovou skupinu
@@ -19,9 +25,11 @@
         - name: Stručná úvodní příručka
           href: audience-insights/get-started.md
         - name: Vytvořit nové prostředí
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Prozkoumání přehledů cílových skupin
           href: audience-insights/home.md
+    - name: Práce s obchodními účty
+      href: audience-insights/work-with-business-accounts.md
     - name: Výukové moduly
       items:
         - name: Ingestace dat
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Uvedení aktivit zákazníka
           href: audience-insights/activities.md
+        - name: Definování sémantických mapování
+          href: audience-insights/semantic-mappings.md
     - name: Rozšiřování dat
       items:
         - name: Rozšíření profilů zákazníků
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Průvodce ukázkami predikce úbytku předplatných
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Průvodce ukázkami predikce úbytku transakcí
+            - name: Ukázkový průvodce pro predikcí úbytku transakcí
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Průvodce ukázkami predikce doporučení produktů
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Správa více prostředí
           href: audience-insights/manage-environments.md
-        - name: Připojení k účtu úložiště ADLS pomocí instančního objektu
-          href: audience-insights/connect-service-principal.md
         - name: Podporované jazyky
           href: audience-insights/supported-languages.md
+        - name: Zabezpečení
+          items:
+            - name: Přineste si vlastní trezor klíčů
+              href: audience-insights/use-azure-key-vault.md
+            - name: Připojení k účtu úložiště ADLS pomocí instančního objektu
+              href: audience-insights/connect-service-principal.md
     - name: Rozšiřitelnost
       items:
         - name: Integrace webových dat z přehledů o zapojení zákazníků
@@ -248,6 +262,8 @@
       items:
         - name: Stručná úvodní příručka
           href: engagement-insights/get-started.md
+        - name: Vytvoření prostředí
+          href: engagement-insights/create-new-environment.md
         - name: Vytvořit pracovní prostor
           href: engagement-insights/create-workspace.md
         - name: Zachytávání události z webů a mobilních aplikací

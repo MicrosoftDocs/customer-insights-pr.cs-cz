@@ -4,23 +4,29 @@ description: Přehled dostupných rolí a oprávnění pro členy pracovního pr
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036685"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645529"
 ---
 # <a name="roles-and-permissions"></a>Role a oprávnění
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Pracovní prostor je prostor pro ukládání a správu událostí a sestav. Člen je uživatel, který má přístup do pracovního prostoru. Členům můžete přiřadit pracovní prostor a definovat jejich role a oprávnění. Role správce spravují pracovní prostory a prostředí a konfigurují přehledy zapojení pro ostatní uživatele. Role přispěvatele jsou zaměřeny na analytiky, kteří nepotřebují konfigurovat přehledy zapojení, ale chtějí vytvářet vlastní přehledy, trychtýře nebo segmenty.
+Pracovní prostor je místo pro ukládání a správu událostí a sestav. Další informace viz [Vytvoření pracovního prostoru a přidání členů](create-workspace.md). 
+
+Pracovní prostor může obsahovat následující role a oprávnění:
+
+- Role *Člen* jsou uživatelé, kteří mají přístup do pracovního prostoru. Členům můžete přiřadit pracovní prostor a definovat jejich role a oprávnění. 
+- Role *správce* spravují pracovní prostory a prostředí a konfigurují přehledy zapojení pro ostatní uživatele. 
+- Role *přispěvatel* jsou zaměřeny na analytiky, kteří nepotřebují konfigurovat přehledy zapojení, ale chtějí vytvářet vlastní přehledy, trychtýře nebo segmenty.
 
 ## <a name="permissions"></a>Oprávnění
   

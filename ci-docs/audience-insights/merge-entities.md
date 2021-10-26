@@ -1,7 +1,7 @@
 ---
 title: Sloučení entit ve sjednocení dat
 description: Sloučením entit můžete vytvořit sjednocené profily zákazníků.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494311"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648246"
 ---
 # <a name="merge-entities"></a>Správa entit
 
@@ -131,7 +133,7 @@ Některé entity obsahují více podrobností než jiné. Pokud entita obsahuje 
 
 Po konfiguraci slučování polí můžete definovat, jak generovat hodnoty CustomerId, jedinečné identifikátory profilu zákazníka. Krok sloučení v procesu sjednocení dat generuje jedinečný identifikátor profilu zákazníka. Identifikátor je CustomerId v entitě *Zákazník*, která je výsledkem procesu sjednocení dat. 
 
-Entita CustomerIdin v entitě Zákazník je založena na hašování první hodnoty vítězných nenulových primárních klíčů. Tyto klíče pocházejí z entit použitých ve fázi shody a sloučení a jsou ovlivněny pořadím shody.Vygenerované CustomerID se tedy může změnit, když se změní hodnota primárního klíče v primární entitě pořadí shody. V důsledku toho nemusí hodnota primárního klíče vždy představovat stejného zákazníka.
+Entita CustomerIdin v entitě Zákazník je založena na hašování první hodnoty vítězných nenulových primárních klíčů. Tyto klíče pocházejí z entit použitých ve fázi shody a sloučení a jsou ovlivněny pořadím shody.Vygenerované CustomerID se tedy může změnit, když se změní hodnota primárního klíče v primární entitě pořadí shody. Hodnota primárního klíče tedy nemusí vždy představovat stejného zákazníka.
 
 Konfigurace stabilního ID zákazníka vám umožní vyhnout se tomuto chování.
 
@@ -139,7 +141,7 @@ Konfigurace stabilního ID zákazníka vám umožní vyhnout se tomuto chování
 
 1. Přejděte na **Sjednotit** > **Sloučit**.
 
-1. Na stránce **Sloučit** vyberte kartu **Klíče**. 
+1. Vyberte kartu **Klíče**. 
 
 1. Najeďte myší na řádek **CustomerId** a vyberte možnost **Konfigurovat**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Ovládací prvek pro přizpůsobení generování ID.":::
@@ -147,6 +149,30 @@ Konfigurace stabilního ID zákazníka vám umožní vyhnout se tomuto chování
 1. Vyberte až pět polí, která budou obsahovat jedinečné ID zákazníka a jsou stabilnější. Záznamy, které neodpovídají vaší konfiguraci, používají místo toho ID nakonfigurované systémem.  
 
 1. Vyberte **Hotovo** a spusťte proces sloučení, abyste použili změny.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Seskupení profilů do domácností nebo clusterů
+
+V rámci procesu konfigurace generování profilu zákazníka můžete definovat pravidla pro seskupování souvisejících profilů do clusteru. V současné době jsou k dispozici dva typy clusterů - clustery domácnosti a vlastní clustery. Systém automaticky vybere domácnost s předdefinovanými pravidly, pokud entita *Zákazník* obsahuje sémantická pole *Osoba. Příjmení* a *Umístění. Adresa*. Můžete také vytvořit cluster s vlastními pravidly a podmínkami, podobně jako [pravidla porovnání](match-entities.md#define-rules-for-match-pairs).
+
+**Definování domácnosti nebo clusteru**
+
+1. Přejděte na **Sjednotit** > **Sloučit**.
+
+1. Na kartě **Sloučit** vyberte **Upřesnit** > **Vytvořit cluster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Ovládací prvek pro vytvoření nového clusteru.":::
+
+1. Vyberte si mezi clusterem **Domácnost** nebo **Vlastní**. Pokud sémantická pole *Osoba. Příjmení* a *Místo. Adresa* existují v entitě *Zákazník*, je automaticky vybrána domácnost.
+
+1. Zadejte název klastru a vyberte **Hotovo**.
+
+1. Vyberte kartu **Clustery** a vyhledejte cluster, který jste vytvořili.
+
+1. Zadejte pravidla a podmínky pro definování clusteru.
+
+1. Vyberte **Spustit** ke spuštění procesu sloučení a vytvoření clusteru.
+
+Po spuštění procesu sloučení jsou identifikátory clusteru přidány jako nová pole do entity *Zákazník*.
 
 ## <a name="run-your-merge"></a>Spuštění sloučení
 

@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6ce72486faa97e6f630a991044ca5e6d4714d0b8b8395a60fad12f3e3a49fa29
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032423"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645026"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Doplňte své dílčí údaje pomocí predikcí
 
@@ -35,7 +35,7 @@ Než bude vaše organizace moci používat funkci předpovědí, musí být spln
 
 2. Vaše prostředí přehledu cílové skupiny je připojeno k vaší instanci Dataverse.
 
-Pokud [vytváříte první prostředí](get-started-paid.md), nakonfigurujte jej v dialogu **Vytvořit prostředí** a vyberete **Rozšířený**. Pokud jste již vytvořili prostředí, přejděte na jeho nastavení a vyberte možnost **Pokročilý**. Ať tak či onak, v sekci **Použití predikcí** přejděte na adresu URL instance Dataverse, ke které chcete připojit své prostředí.
+Další informace naleznete v tématu [Vytvoření nového prostředí](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Vytvoření predikce v entitě Zákazník
 

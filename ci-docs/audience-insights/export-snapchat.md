@@ -1,7 +1,7 @@
 ---
 title: Export údajů ze služby Customer Insights do služby Snapchat
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do služby Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 421dcd5ba5421597cf9dea71a9f9f25c7972a4f26fb49d4b042f8667a317ab5d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033393"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618652"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Export segmentů do služby Snapchat (preview)
 
@@ -29,7 +29,7 @@ Exportujte segmenty sjednocených profilů zákazníků do služby Snapchat a po
 ## <a name="known-limitations"></a>Známá omezení
 
 - Export do Snapchatu je omezen na segmenty.
-- Export až 1 milionu profilů do Snapchatu může trvat až 15 minut. 
+- Export až 1 milionu zákaznických profilů do Snapchat může trvat až 15 minut. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Nastavení propojení se Snapchatem
 
@@ -63,7 +63,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte [**ID cílové skupiny Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je nutné exportovat segmenty do Snapchatu.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je nutné exportovat segmenty do Snapchatu.
 
 1. Vyberte segmenty, které chcete exportovat. 
 

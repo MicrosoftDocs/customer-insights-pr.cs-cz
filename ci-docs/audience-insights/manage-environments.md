@@ -1,7 +1,7 @@
 ---
 title: Tvorba a správa prostředí
 description: Zjistěte, jak se zaregistrovat do služby a jak spravovat prostředí.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034169"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645118"
 ---
 # <a name="manage-environments"></a>Správa prostředí
 
@@ -26,7 +26,7 @@ Vyberte ovládaí prvek **Prostředí** v pravém horním rohu stránky pro změ
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Snímek obrazovky ovládacího prvku pro přepínání prostředí.":::
 
-Správci mohou [vytvářet](get-started-paid.md) a spravovat prostředí.
+Správci mohou [vytvářet](create-environment.md) a spravovat prostředí.
 
 ## <a name="edit-an-existing-environment"></a>Úprava stávajícího prostředí
 
@@ -36,23 +36,9 @@ Můžete upravit některé podrobnosti existujících prostředí.
 
 2.  Vyberte ikonu **Upravit**.
 
-3. V poli **Upravit prostředí** můžete změnit **zobrazovaný název** prostředí, ale nemůžete změnit **Oblast** nebo **Typ**.
+3. V poli **Upravit prostředí** můžete aktualizovat nastavení prostředí.
 
-4. Pokud je prostředí nakonfigurováno pro ukládání dat Azure Data Lake Storage, můžete aktualizovat **Klíč účtu**. Nemůžete však změnit **Název účtu** nebo název **Kontejneru**.
-
-5. Volitelně můžete provést aktualizaci z připojení na základě klíče účtu do připojení založeného na prostředcích nebo předplatném. Po upgradu nelze vrátit klíč účtu. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Nemůžete změnit informace o **kontejneru** při aktualizaci připojení.
-
-6. Volitelně můžete poskytnout adresu URL prostředí Microsoft Dataverse v části **Konfigurace sdílení dat pomocí Microsoft Dataverse a povolení dalších funkcí**. Tyto funkce zahrnují sdílení dat s aplikacemi a řešeními založenými na Microsoft Dataverse, příjem dat z místních datových zdrojů nebo použití [predikcí](predictions.md). Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights se službou Data Lake spravovanou Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Sdílení dat se službou Data Lake spravovanou Microsoft Dataverse aktuálně není podporováno, když uložíte všechna data do svého vlastního úložiště Azure Data Lake Storage.
-   > - [Predikce chybějících hodnot v entitě](predictions.md) a vestavěné sestavy PowerBI v přehledech cílové skupiny (pokud jsou povoleny ve vašem prostředí) v současné době nejsou podporovány, když povolíte sdílení dat se spravovaným datovým jezerem Microsoft Dataverse.
-
-   Až povolíte sdílení dat s Microsoft Dataverse, spustí se jednorázová úplná aktualizace vašich zdrojů dat a dalších procesů. Pokud procesy aktuálně běží, neuvidíte možnost povolit sdílení dat s Microsoft Dataverse. Chcete-li povolit sdílení dat, počkejte, až se tyto procesy dokončí, nebo je zrušte. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse.":::
-   
-   Když spustíte procesy, jako je ingestace dat nebo vytvoření segmentu, vytvoří se odpovídající složky v účtu úložiště, který jste zadali výše. Datové soubory a soubory model.json budou vytvořeny a přidány do příslušných podsložek v závislosti na spuštěném procesu.
+Další informace o nastavení prostředí naleznete v tématu [Vytvoření nového prostředí](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Zkopírujte konfiguraci prostředí
 

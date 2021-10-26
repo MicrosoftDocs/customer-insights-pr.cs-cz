@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 34dc753aa9d2420ef8780d436e14c3c27377e4779eda0f83ca6b5424f2328f22
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4403c6f535f5dc60919be3717073d52640bbe61a
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031419"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619203"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Export seznamu segmentů do Facebook Správce reklam (preview)
 
@@ -30,7 +30,7 @@ Export segmentů sjednocených zákaznických profilů do Správce reklam Facebo
 - Až 10 milionů zákaznických profilů na export do Facebook Ads Manager.
 - Export do služby Facebook Správce reklam je omezen na segmenty.
 - Vytvářejte nebo aktualizujte vlastní cílovou skupinu pouze typu Facebook *seznam zákazníků*.
-- Export segmentů s celkem 10 milionem profilů může trvat až 90 minut.
+- Export segmentů s celkem 10 miliony zákaznických profilů může trvat až 90 minut.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Nastavení propojení se správcem reklam Facebook
 

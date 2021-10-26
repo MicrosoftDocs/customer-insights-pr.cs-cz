@@ -1,7 +1,7 @@
 ---
 title: Export údajů ze služby Customer Insights do služby LinkedIn Ads
 description: Naučte se konfigurovat připojení a export do služby LinkedIn Ads.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034215"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618283"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Export segmentů do LinkedIn Ads (preview)
 
@@ -28,9 +28,9 @@ Exportujte segmenty sjednocených profilů zákazníků do reklam LinkedIn Ads a
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Do LinkedIn Ads můžete exportovat až 100 000 profilů na export.
+- Do LinkedIn Ads můžete najednou exportovat až 100 000 zákaznických profilů.
 - Export do LinkedIn Ads je omezen na segmenty.
-- Export až 100 tisíc profilů do LinkedIn Ads může trvat až 10 minut. 
+- Export až 100 000 zákaznických profilů do LinkedIn Ads může trvat až 10 minut. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Nastavení připojení k LinkedIn Ads
 
@@ -66,7 +66,7 @@ Export můžete konfigurovat, pokud máte přístup k připojení tohoto typu. D
 
 1. Vyberte, zda chcete v LinkedIn exportovat data do [cílení kontaktů](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) nebo [cílení na společnost](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
-1. V oddíle **Párování dat** vyberte pole sjednoceného profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je nutné exportovat segmenty do LinkedIn Ads.
+1. V části **Shoda dat** pro cílení kontaktů vyberte alespoň jedno pole, které představuje e -mailovou adresu zákazníka, Apple Ad ID, Google Ad ID, Google User ID nebo jméno a příjmení. Pokud zvolíte cílení na společnost, vyberte alespoň jedno pole, které představuje název společnosti, e -mailovou doménu, adresu URL stránky LinkedIn, symbol akcií nebo web. Pro další definování exportu lze vybrat další pole. 
 
 1. Vyberte segmenty, které chcete exportovat. Spárované cílové skupiny v LinkedIn Campaign Manager se vytvoří automaticky s názvem segmentů, které jste vybrali k exportu. Výsledkem každého segmentu bude samostatná spárovaná cílová skupina. 
 

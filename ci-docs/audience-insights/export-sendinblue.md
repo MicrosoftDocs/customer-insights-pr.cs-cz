@@ -1,7 +1,7 @@
 ---
 title: Export údajů ze služby Customer Insights do Sendinblue
 description: Naučte se, jak nakonfigurovat propojení a exportovat ho do Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b5924b2d4e7f0b11ce6478a31015fcbaaf44ff93
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036047"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617777"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Export segmentů do Sendinblue (náhled)
 
@@ -29,10 +29,10 @@ Segmenty sjednocených profilů zákazníků exportujte pro účely generování
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Až 1 milion profilů na export do Sendinblue.
+- Až 1 milion zákaznických profilů na export do Sendinblue.
 - Export do Sendinblue je omezen na segmenty.
-- Export segmentů s celkem 1 milionem profilů může trvat až 90 minut. 
-- Počet profilů, které můžete exportovat do Sendinblue, závisí na vaší smlouvě se společností Sendinblue.
+- Export segmentů s celkem 1 miliony zákaznických profilů může trvat až 90 minut. 
+- Počet zákaznických profilů, které můžete exportovat do Sendinblue, závisí na vaší smlouvě se Sendinblue a je jí omezen.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Nastavení připojení se Sendinblue
 
@@ -64,7 +64,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte **ID seznamu Sendinblue** 
 
-1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. 
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. 
 
 1. Volitelně můžete exportovat **křestní jméno**, **příjmení**, a **telefon** k vytvoření přizpůsobených e-mailů. Volbou **Přidat atribut** namapujte tato pole.
 

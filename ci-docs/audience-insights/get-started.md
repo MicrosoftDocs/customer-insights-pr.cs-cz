@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466569"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645256"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Začínáme s funkcí přehledů cílových skupin v aplikaci Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Přehledy cílových skupin vám pomohou vybudovat hlubší porozumění vašim 
 
 ## <a name="step-1-create-an-environment"></a>Krok 1: Vytvoření prostředí
 
-Chcete -li začít, musíte nejprve vytvořit prostředí, ve kterém budete pracovat. Pokud si vaše organizace již zakoupila licenci, postupujte podle části [Začínáme s placeným předplatným](get-started-paid.md). Chcete -li spustit zkušební verzi přehledů cílových skupin, postupujte podle části [Nastavení zkušebního prostředí](get-started-trial.md). 
+Chcete -li začít, musíte nejprve vytvořit prostředí, ve kterém budete pracovat. Pokud si vaše organizace již zakoupila licenci, viz [Vytvoření prostředí](create-environment.md). Chcete -li spustit zkušební verzi přehledů cílových skupin, postupujte podle části [Nastavení zkušebního prostředí](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Krok 2: Prozkoumání přehledů cílových skupin
 

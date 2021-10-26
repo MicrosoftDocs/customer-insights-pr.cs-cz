@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033210"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605941"
 ---
 # <a name="connections-preview-overview"></a>Přehled propojení (preview)
 
@@ -47,6 +47,7 @@ Chcete-li přidat propojení, musíte mít [oprávnění správce](permissions.m
 1. V podokně **Nastavení propojení** uveďte požadované podrobnosti. 
    1. Propojení popisuje **zobrazované jméno** a typ propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl tohoto propojení.
    1. Přesná pole závisí na tom, ke které službě se připojujete. V článku o cílové službě se můžete dozvědět o podrobnostech konkrétního typu propojení.
+   1. Pokud [použijete vlastní trezor klíčů](use-azure-key-vault.md) k uložení tajných kódů, aktivujte **Použít trezor klíčů** a vyberte tajný kód ze seznamu.
 
 1. Pokud chcete vytvořit propojení, vyberte **Uložit**.
 
@@ -93,3 +94,6 @@ Oddělená rozšíření a exporty se stanou neaktivními. Znovu je aktivujete p
 
 1. Odstranění potvrďte výběrem **Odstranit**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Nastavte připojení pomocí tajných kódů spravovaných vaším vlastním trezorem klíčů
+
+Některá připojení vyžadují tajné kódy, jako jsou klíče API nebo hesla. Některá připojení podporují tajné kódy uložené ve vašem vlastním trezoru klíčů. Další informace o podporovaných připojeních a o tom, jak je nastavit ve [vašem vlastním trezoru klíčů pro přehledy cílové skupiny](use-azure-key-vault.md).

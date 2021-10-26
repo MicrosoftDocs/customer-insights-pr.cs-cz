@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557344"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622991"
 ---
 # <a name="relationships-between-entities"></a>Vztahy mezi entitami
 
@@ -67,6 +67,20 @@ Vztah se skládá ze *zdrojové entity* obsahující cizí klíč a *cílové en
    - **Pole cílového klíče**: Klíčové pole cílové entity. Příklad: Customer může použít klíčové pole **CustomerID**.
 
 4. Výběrem položky **Uložit** vytvoříte vlastní vztah.
+
+## <a name="set-up-account-hierarchies"></a>Nastavení hierarchií účtů
+
+Prostředí, která jsou nakonfigurována tak, aby používala podnikové účty jako primární cílovou skupinu, mohou nakonfigurovat hierarchie účtů pro související podnikové účty. Například společnost, která má samostatné obchodní jednotky. 
+
+Organizace vytvářejí hierarchie účtů pro lepší vzájemnou správu účtů a jejich vztahů. Schopnost přehledů cílové skupiny podporuje hierarchie nadřízeného a podřízeného účtu, které již v přijatých údajích zákazníka existují. Například účty z Dynamics 365 Sales. Tyto hierarchie lze konfigurovat na stránce **Vztahy** v přehledech cílové skupiny na kartě hierarchie účtu.
+
+1. Jděte na **Data** > **Vztahy**.
+1. Vyberte kartu **Hierarchie účtu**.
+1. Vyberte **Nová hierarchie účtů**. 
+1. V podokně **Hierarchie účtu** zadejte název hierarchie. Systém vytvoří název pro výstupní entitu. Můžete změnit název entity názvu výstupu.
+1. Vyberte entitu, která obsahuje hierarchii vašeho účtu. Obvykle je ve stejné entitě, která obsahuje účty.
+1. Vyberte **ID účtu** a **ID nadřízeného účtu** z vybrané entity 
+1. Vyberte **Uložit**, abyste mohli použít nastavení a dokončit hierarchii účtu.
 
 ## <a name="view-relationships"></a>Zobrazení vztahů
 

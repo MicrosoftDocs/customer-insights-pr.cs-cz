@@ -1,7 +1,7 @@
 ---
 title: Export údajů ze služby Customer Insights do služby RollWorks
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do služby RollWorks.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f8f6a79db9cb4bb109c03a464d9f8c7f3b862ad5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034582"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617436"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Export segmentů do služby RollWorks (preview)
 
@@ -28,11 +28,11 @@ Exportujte segmenty sjednocených profilů zákazníků do služby RollWorks a p
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Můžete exportovat až 250 000 profilů na export do RollWorks.
-- Do RollWorks nelze exportovat segmenty s méně než 100 profily. 
+- Do RollWorks můžete najednou exportovat až 250 000 zákaznických profilů.
+- Do RollWorks nemůžete exportovat segmenty s méně než 100 zákaznickými profily. 
 - Export do RollWorks je omezen na segmenty.
-- Export až 250 000 profilů do RollWorks může trvat až 10 minut. 
-- Počet profilů, které můžete exportovat do RollWorks, závisí na vaší smlouvě s RollWorks a je podle ní omezen.
+- Export až 250,000 milionu zákaznických profilů do RollWorks může trvat až 10 minut. 
+- Počet zákaznických profilů, které můžete exportovat do RollWorks, závisí na vaší smlouvě s RollWorks a je jí omezen.
 
 ## <a name="set-up-connection-to-rollworks"></a>Nastavení propojení s aplikací RollWorks
 
@@ -66,7 +66,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte **RollWorks Advertiser ID** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je nutné exportovat segmenty do RollWorks.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je nutné exportovat segmenty do RollWorks.
 
 1. Vyberte segmenty, které chcete exportovat. Vyberte segment s nejméně 100 členy. Menší segmenty nelze exportovat. Maximální velikost segmentu k exportu je navíc 250 000 členů na export. 
 

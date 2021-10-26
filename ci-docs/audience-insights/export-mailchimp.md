@@ -1,7 +1,7 @@
 ---
 title: Export dat Customer Insights do služby Mailchimp
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033531"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618605"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Export segmentů do služby Mailchimp (preview)
 
@@ -29,10 +29,10 @@ Exportujte segmenty sjednocených profilů zákazníků do služby Mailchimp a v
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Až 1 milion profilů na jeden export do služby Mailchimp.
+- Až 1 milion zákaznických profilů na export do Mailchimp.
 - Export do služby Mailchimp je omezen na segmenty.
-- Export segmentů s 1 milionem profilů může trvat až tři hodiny. 
-- Počet profilů, které můžete exportovat do služby Mailchimp, závisí a je omezen na vaší smlouvě se službou Mailchimp.
+- Export segmentů s celkem 1 miliony zákaznických profilů může trvat až tři hodiny. 
+- Počet zákaznických profilů, které můžete exportovat do Mailchimp, závisí na vaší smlouvě s Mailchimp a je jí omezen.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Nastavení propojení s aplikací Mailchimp
 
@@ -66,7 +66,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte **[ID cílové skupiny Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. 
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. 
 
 1. Volitelně můžete exportovat **křestní jméno** a **příjmení** pro vytvoření více přizpůsobených e-mailů. Volbou **Přidat atribut** namapujte tato pole.
 

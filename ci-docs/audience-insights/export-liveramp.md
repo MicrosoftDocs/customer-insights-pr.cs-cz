@@ -1,7 +1,7 @@
 ---
 title: 'Konektor LiveRamp '
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do LiveRamp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7940db3efacad62ba16099849b3e3ca00d2a5cc1ed31e15a34209c0797e6ae13
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035637"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618927"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Export segmentů do LiveRamp&reg; (náhled)
 
@@ -58,7 +58,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
    > [!div class="mx-imgBorder"]
    > ![Konektor LiveRamp s mapováním atributů.](media/export-liveramp-segments.png "Konektor LiveRamp s mapováním atributů")
 
-1. Mapujte odpovídající atributy z unifikované entity zákazníka na vybraný identifikátor klíče.
+1. Mapujte odpovídající atributy ze své entity *Zákazník* pro vybraný identifikátor klíče.
 
 1. Vyberte **Přidat atribut** k mapování více atributů pro odeslání na LiveRamp.
 

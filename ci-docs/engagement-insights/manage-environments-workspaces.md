@@ -4,17 +4,17 @@ description: Jak vytvářet, přejmenovávat a mazat pracovní prostory a prost�
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486027"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645438"
 ---
 # <a name="manage-environments-and-workspaces"></a>Správa prostředí a pracovních prostorů
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486027"
 
 ## <a name="overview"></a>Přehled
 
-Pracovní prostor je prostor pro ukládání a správu událostí a sestav. Zde můžete zobrazit aktivitu uživatelů v reálném čase. Když vytváříte pracovní prostor, vyberete typ dat, která se mají do pracovního prostoru odeslat. Aktuálně jsou podporována webová data a mobilní aplikace.
+Tento téma popisuje, jak spravovat pracovní prostory a prostředí, jakmile již byly vytvořeny. 
 
-Prostředí je prostor, kde spravujete své pracovní prostory a připojení. To, jak používáte prostředí, závisí na vaší organizaci a vašem případu použití. Je například možné vytvořit:
+- *Pracovní prostor* je prostor pro ukládání a správu událostí a sestav. Zde můžete zobrazit aktivitu uživatelů v reálném čase. Když vytváříte pracovní prostor, vyberete typ dat, která se mají do pracovního prostoru odeslat. Aktuálně jsou podporována webová data a mobilní aplikace. Další informace viz [Vytvoření pracovního prostoru a přidání členů](create-workspace.md).
 
--   Jedno prostředí.
--   Oddělená prostředí pro testování a produkci.
--   Oddělená prostředí pro konkrétní týmy nebo oddělení ve vaší organizaci, která obsahují relevantní události pro každou cílovou skupinu.
--   Oddělená prostředí pro různé globální pobočky vaší společnosti.
--   Připojení k funkci přehledů cílové skupiny Customer Insights.
+- *Prostředí* je prostor, kde spravujete své pracovní prostory a připojení. Další informace naleznete v tématu [Vytvoření nového prostředí](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Výběr prostředí a vytvoření pracovního prostoru 
-
-Každý pracovní prostor musí být v prostředí. Při vytváření pracovního prostoru můžete vybrat již existující prostředí nebo vytvořit nové. Pak se můžete rozhodnout přidat členy pracovního prostoru a začít sbírat data.
-
-**Vytvoření prvního pracovního prostoru**
-
-1. V přehledu zapojení vyberte **Nový** z přepínače pracovního prostoru. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Výběr pracovního prostoru stránky Customer Insights.":::
-
-1. Vyberte prostředí ze seznamu nebo vyberte **Vytvořit nové prostředí**.
-
-1. Zadejte název do **Název pracovního prostoru**. 
-
-1. Vyberte typ prostředí, které chcete vytvořit, podle toho, zda chcete měřit, co se děje na webu nebo v mobilní aplikaci. 
-
-1. Členy můžete přidat a přiřadit jejich úroveň oprávnění ze seznamu **Role**. Poté vyberte **Dokončit** k vytvoření pracovního prostoru nebo **Další** k instalaci kódu. 
-
-1. Nainstalujte fragment kódu, abyste mohli začít přijímat data, a poté vyberte **Hotovo**. 
-
-## <a name="manage-a-workspace"></a>Správa pracovního prostoru
+## <a name="manage-an-existing-workspace"></a>Správa existujícího pracovního prostoru
 
 V prostředí můžete udržovat více pracovních prostorů současně. Vaše [role](user-roles.md) určuje, jak v nich můžete pracovat. 
 
  - Chcete-li spravovat pracovní prostor, musíte být správcem prostředí nebo správcem pracovního prostoru.
  - Jako správce pracovního prostoru můžete stávající pracovní prostory přejmenovat nebo je odstranit. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Centrum správy pracovního prostoru":::
 
 ### <a name="edit-a-workspace-name"></a>Úprava názvu pracovního prostoru
 
@@ -75,7 +53,7 @@ Odstraněním pracovního prostoru trvale odeberete veškerý jeho obsah, data, 
 
 1. Vyberte **Odstranit pracovní prostor**. 
 
-1. Do dialogového okna **Odstranit pracovní prostor** zadejte **POTVRDIT ODSTRANĚNÍ**. 
+1. V dialogu **Odstranit pracovní prostor** zadejte **POTVRDIT ODSTRANěNí** velkými písmeny. 
 
 1. Chcete-li trvale odstranit pracovní prostor, vyberte **Odstranit**.
 
@@ -87,27 +65,11 @@ Odstraněním pracovního prostoru trvale odeberete veškerý jeho obsah, data, 
 
 1. Vyberte **Přidat členy** a přidejte je do svého pracovního prostoru.
 
-## <a name="manage-an-environment"></a>Spravovat prostředí
+## <a name="manage-an-existing-environment"></a>Správa existujícího prostředí
 
 Jako správce prostředí můžete do prostředí přistupovat z levého navigačního podokna. Můžete konfigurovat nastavení prostředí, další správce prostředí a pracovní prostory. Vyberte záložky pro přesun mezi různými oblastmi v centru pro správu.
 
-:::image type="content" source="media/New-environment.png" alt-text="Centrum pro správu prostředí.":::
-
-### <a name="create-an-environment"></a>Vytvořit prostředí
-
-1. V nástroji pro výběr pracovního prostoru vyberte **+Nový**.
-
-1. V řízeném prostředí otevřete rozevírací nabídku **Prostředí** a vyberte **Vytvořit nové prostředí**. 
-
-1. Zadejte **Název prostředí**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Vstupte řízeného prostředí a zadejte podrobnosti o prostředí.":::
-
-1. Zvolte **Oblast** a vyberte **Další**. 
-
-1. Zadejte název pracovního prostoru a vyberte typ pracovního prostoru, který chcete vytvořit. 
-
-1.  Volitelně můžete přidat členy a zkopírovat fragment kódu, čímž dokončíte proces vytváření.
+:::image type="content" source="media/environment-edit.png" alt-text="Centrum pro správu prostředí.":::
 
 ### <a name="rename-an-environment"></a>Přejmenování prostředí
 
@@ -131,7 +93,7 @@ Správci prostředí mohou prostředí odstranit. Před odstraněním prostřed�
 
 1. Vyberte **Odstranit prostředí**. 
 
-1. Do dialogového okna **Odstranit pracovní prostor** zadejte **POTVRDIT ODSTRANĚNÍ**. 
+1. V dialogu **Odstranit pracovní prostor** zadejte **POTVRDIT ODSTRANěNí** velkými písmeny. 
 
 1. Pokud chcete prostředí trvale odstranit, vyberte **Odstranit**.
 

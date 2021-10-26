@@ -1,7 +1,7 @@
 ---
 title: Export dat Customer Insights do AdRoll
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do AdRoll.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032063"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617324"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Export segmentů do služby AdRoll (preview)
 
@@ -28,11 +28,11 @@ Exportujte segmenty sjednocených profilů zákazníků do služby AdRoll a pou�
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Do AdRoll můžete exportovat až 250 000 záznamů současně.
-- Do AdRoll nelze exportovat segmenty s méně než 100 profily. 
+- Do AdRoll můžete exportovat až 250 000 zákaznických profilů najednou.
+- Do AdRoll nemůžete exportovat segmenty s méně než 100 zákaznickými profily. 
 - Export do služby Marketo je omezen na segmenty.
-- Export až 250 000 profilů do služby AdRoll může trvat až 10 minut. 
-- Počet profilů, které můžete exportovat do služby AdRoll, závisí na vaší smlouvě se společností AdRoll.
+- Export až 250 000 zákaznických profilů do AdRoll může trvat až 10 minut. 
+- Počet zákaznických profilů, které můžete exportovat do AdRoll, závisí na vaší smlouvě s AdRoll a je jí omezen.
 
 ## <a name="set-up-connection-to-adroll"></a>Nastavení propojení s AdRoll
 
@@ -66,7 +66,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Vložte své **ID inzerenta AdRoll**. Další informace viz [Profily inzerentů AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je nutné exportovat segmenty do služby AdRoll.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je nutné exportovat segmenty do služby AdRoll.
 
 1. Vyberte segmenty, které chcete exportovat. Vyberte segment s nejméně 100 členy. Menší segmenty nelze exportovat. Maximální velikost segmentu k exportu je navíc 250 000 členů na export. 
 

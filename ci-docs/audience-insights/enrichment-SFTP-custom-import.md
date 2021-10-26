@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032704"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618674"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Rozšíření profilů zákazníků o vlastní data (Preview)
 
@@ -44,6 +44,8 @@ Chcete-li nakonfigurovat vlastní import SFTP, musíte splnit následující př
 1.  Vyberte **Další** a zadejte **Cesta** a **Název souboru** datového souboru, který chcete importovat.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot při zadávání datového umístění.":::
+
+1. Vyberte **Další** a zvolte datovou sadu zákazníka. Mohou to být buď všechny zákaznické profily, nebo segment.
 
 1. Vyberte **Další** a zadejte název rozšíření a název výstupní entity. 
 
@@ -123,6 +125,6 @@ Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobném
 
 ## <a name="next-steps"></a>Další kroky
 
-Stavte na svých obohacených zákaznických údajích. Vytvořte [segmenty](segments.md) a [měření](measures.md) a [exportujte data](export-destinations.md), abyste svým zákazníkům poskytli přizpůsobené prostředí.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Pomocí dostupných sestav můžete zobrazit aktivitu na svém webu
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 06/18/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036640"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582914"
 ---
 # <a name="view-reports"></a>Zobrazit sestavy
 
@@ -92,12 +92,18 @@ Mobilní sestavy jsou seskupeny do kategorií použití v reálném čase, aplik
 
 - **Místa** zobrazují informace o uživatelích aplikace podle země, regionu a města.
 
-## <a name="filter-by-time-or-value"></a>Filtrovat podle času nebo hodnoty
+## <a name="filter-by-time-or-date-range"></a>Filtrovat podle času nebo období
 
-Můžete vybrat časový rámec nebo hodnotu ve webovém nebo mobilním přehledu a zaměřit se na hodnotu nebo časové období. 
+Chcete -li se zaměřit na hodnotu nebo časové období, můžete vybrat časový rámec nebo časové období ve webové nebo mobilní sestavě. 
 
-- Chcete-li vybrat časový rámec, vyberte **Více [...]** z rozevíracího seznamu sestavy. Výběr časového rozsahu je pro sestavu využití v reálném čase deaktivován; časový rozsah pro sestavu o využití v reálném čase je „nyní“.
+- Chcete-li vybrat časový rámec, v pravém horním rohu zobrazení sestavy vyberte hodnotu z rozevíracího seznamu sestavy. Můžete si také vybrat **pevné časové období**. 
 
-- Ve většině sestav vyberte hodnotu v grafu nebo seznamu a filtrujte sestavu pro vybranou hodnotu.
+  :::image type="content" source="media/filter-by-time.png" alt-text="Filtrovat podle času nebo období":::   
+
+- U většiny sestav vyberte hodnotu v grafu nebo seznamu, chcete -li sestavu filtrovat.
+
+> [!NOTE]
+> Výběr časového rozsahu je pro sestavu využití v reálném čase deaktivován; časový rozsah pro sestavu o využití v reálném čase je „nyní“.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

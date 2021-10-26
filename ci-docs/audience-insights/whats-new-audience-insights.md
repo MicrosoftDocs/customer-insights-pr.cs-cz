@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465197"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606050"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Aktualizace ze září 2021
+
+Aktualizace v září 2021 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="activities"></a>Aktivity
+
+- **Vylepšení časové osy aktivity** Rozšířili jsme filtry pro časovou osu aktivity na zákaznických profilech. Kromě toho můžete použít nový filtr pro filtrování podle typu aktivity a podle data. Data lze filtrovat za různých podmínek. Další informace získáte v části [Zobrazení časových os aktivit v zákaznických profilech](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relace
+
+- **Podpora vztahů více kroků** Při konfiguraci aktivit a definování vztahů mezi entitami použijte vztahy více kroků. Vztahy více kroků používají mezilehlou entitu k propojení dvou entit. Při konfiguraci aktivity můžete použít vztah více kroků k připojení entity aktivity k mezilehlé entitě a poté k entitě zákazníka. Můžete kombinovat vztahy více kroků se vztahy více cest. Další informace najdete v tématu [Vztah více kroků](relationships.md#multi-hop-relationship).
+
+- **Podpora vztahů více cest** Při konfiguraci aktivit a definování vztahů mezi entitami použijte vztahy více cest. Vztahy více cest vztahují zdrojovou entitu k více než jedné entitě. Při konfiguraci aktivity můžete použít vztah více cest k připojení entity aktivity k více než jedné entitě zákazníka. Můžete kombinovat vztahy více cest se vztahy více kroků. Další informace najdete v tématu [Vztah více cest](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Aktualizace ze srpna 2021
 

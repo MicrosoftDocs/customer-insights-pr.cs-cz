@@ -1,22 +1,22 @@
 ---
-title: Vytvořit pracovní prostor
-description: Účel pracovního prostoru a způsob jeho vytvoření.
+title: Vytvořit nový pracovní prostor
+description: Účel pracovního prostoru a způsob vytvoření nového.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 06/18/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 38c817c169ce7986c73fb46fa14a9a8352a218d359cdcb2fa822a34303ff5ecc
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034124"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645302"
 ---
-# <a name="create-the-first-workspaces-and-add-members"></a>Vytvoření prvního pracovního prostoru a přidání členů
+# <a name="create-a-new-workspace-and-add-members"></a>Vytvořte nový pracovní prostor a přidejte členy
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -24,7 +24,7 @@ Pracovní prostor je způsob, jakým můžete zobrazit aktivitu uživatelů v re
 
 Když vytváříte pracovní prostor, vyberete typ dat, na která se chcete zaměřit. Do stávajícího pracovního prostoru můžete kdykoli přidat další uživatele nebo členy. 
 
-## <a name="create-a-workspace"></a>Vytvořit pracovní prostor
+## <a name="create-a-new-workspace"></a>Vytvořit nový pracovní prostor
 
 Proces vytváření pracovního prostoru zahrnuje nastavení *prostředí* k uspořádání pracovního prostoru. Prostředí je prostor, který může obsahovat jeden nebo více pracovních prostorů. Prostředí můžete použít ke správě svých pracovních prostorů a připojení ke možnosti přehledů o cílové skupině Customer Insights.
 
@@ -32,13 +32,25 @@ Proces vytváření pracovního prostoru zahrnuje nastavení *prostředí* k usp
 
    :::image type="content" source="media/new-workspace.png" alt-text="Stránka Customer Insights s bublinovým popiskem v navigačním podokně a popisem.":::
 
-1. Vyberte prostředí ze seznamu nebo vyberte **Vytvořit nové prostředí**.
-1. Zadejte **Název pracovního prostředí**.
-1. Vyberte platformu, kterou chcete měřit.
-1. Až budete hotovi, zvolte **Dokončit**. 
-1. Členy můžete přidat a přiřadit jejich úroveň oprávnění ze seznamu **Role**. Další informace najdete v článku [Role a oprávnění](user-roles.md). Poté vyberte **Dokončit** k vytvoření pracovního prostoru nebo **Další** k instalaci kódu.
-1. Nainstalujte fragment kódu, abyste mohli začít přijímat data, a poté vyberte **Hotovo**.
+1. V podokně **Pracovní prostor** zadejte **Název pracovního prostoru**.
+
+   :::image type="content" source="media/workspace-name.png" alt-text="Zadejte název pracovního prostoru.":::
+
+1. Vyberte typ platformy (webovou nebo mobilní), kterou chcete měřit.
+
+1. Vyberte **Zobrazit pokročilá nastavení** k povolení nebo zakázání těchto volitelných nastavení:
+
+   - Přepněte **Neznámé na známé** na „povoleno“ pro přidružení webových událostí k uživatelům, kteří se dříve autentizovali. Další informace viz [Rozpoznání webových událostí od dříve ověřených návštěvníků](unknown-to-known.md)
+   - Přepněte **Filtrovat provoz robotů** na „povoleno“, aby se odstranil webový provoz robotů pro tento pracovní prostor. 
+
+1. Až budete hotovi, vyberte **Dokončit**. 
+
+1. Chcete -li začít přijímat data, nainstalujte fragment kódu a poté vyberte **Dokončit** k vytvoření pracovního prostoru. Další informace naleznete v tématu [Přehled zdrojů pro vývojáře](developer-resources.md).
+
+> [!NOTE]
+> Nyní můžete přidávat členy a přiřazovat jim úroveň oprávnění ze seznamu **Role**. Další informace najdete v článku [Role a oprávnění](user-roles.md). 
 
 Další informace viz [Správa a prostředí pracovních prostorů](manage-environments-workspaces.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

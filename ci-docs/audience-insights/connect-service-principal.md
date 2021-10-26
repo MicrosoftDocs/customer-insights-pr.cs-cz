@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483517"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645164"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Připojení k účtu Azure Data Lake Storage pomocí instančního objektu Azure
 
 Automatizované nástroje, které používají služby Azure, by vždy měly mít omezená oprávnění. Místo toho, aby se aplikace přihlašovaly jako plně privilegovaný uživatel, Azure nabízí instanční objekty. Přečtěte si, jak propojit Dynamics 365 Customer Insights s účtem Azure Data Lake Storage pomocí instančního objektu Azure namísto klíčů účtu úložiště. 
 
-Instanční objekt můžete použít k bezpečnému [přidání nebo upravení složky Common Data Model jako zdroje dat](connect-common-data-model.md), nebo [vytvoření či aktualizaci prostředí](get-started-paid.md).
+Instanční objekt můžete použít k bezpečnému [přidání nebo upravení složky Common Data Model jako zdroje dat](connect-common-data-model.md), nebo [vytvoření či aktualizaci prostředí](create-environment.md).
 
 > [!IMPORTANT]
 > - Účet Data Lake Storage, který bude používat objekt služby, musí mít [povolený hierarchický obor názvů](/azure/storage/blobs/data-lake-storage-namespace).

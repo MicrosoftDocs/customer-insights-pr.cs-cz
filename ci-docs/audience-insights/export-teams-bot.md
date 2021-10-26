@@ -1,7 +1,7 @@
 ---
 title: Bot pro Microsoft Teams
 description: Vyhledejte sjednocené profily zákazníků v Microsoft Teams pomocí bota.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 9bf401124b0ffb21b046954056141e7703386d4911f89f34ffc0fcb84bf0f4be
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: cff696834e3dad00ce5b0f1b5bcb13d86354a4e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032474"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617593"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot Teams pro Dynamics 365 Customer Insights (Preview)
 
@@ -31,6 +31,7 @@ Chcete-li nastavit a konfigurovat robota, musí být splněny následující př
 - [Proces sjednocení](data-unification.md) je dopončen.
 - Pole jsou přidána do [vyhledávacího a filtračního indexu](search-filter-index.md).
 - Customer Insights a Teams jsou ve stejné organizaci.
+- Vaše prostředí má primární cílovou skupinu nastavenou na jednotlivé zákazníky. Obchodní účty nejsou podporované.
 
 ## <a name="configure-the-bot"></a>Nakonfigurujte bota
 

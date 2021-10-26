@@ -1,7 +1,7 @@
 ---
 title: Rozšíření sjednocených profilů zákazníka
 description: Využijte možnosti rozšíření svých zákaznických dat.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469952"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617547"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
@@ -27,16 +27,26 @@ V přehledech cílové skupiny přejděte na **Data** > **Rozšíření**, kde m
 
 K vytváření nebo úpravě rozšíření musíte mít oprávnění přispěvatele nebo správce. Další informace naleznete v části [Oprávnění](permissions.md).
 
-Na kartě **Zjistit** najdete následující rozšíření:
+Na kartě **Objevit** najdete všechny podporované možnosti obohacení.
 
-- [Azure Maps](enrichment-azure-maps.md) poskytuje společnost Microsoft
+# <a name="individual-customers-b2c"></a>[Jednotliví zákazníci (B2C)](#tab/b2c)
+
 - [Značky](enrichment-microsoft.md) poskytované společností Microsoft
 - [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft
-- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft
-- [Údaje o společnosti](enrichment-leadspace.md) poskytované společností Leadspace
+- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft 
 - [Demografické údaje](enrichment-experian.md) poskytované společností Experian
-- [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies
-- [Vlastní data](enrichment-SFTP-custom-import.md) prostřednictvím vlastního importu protokolu (SFTP)
+- [Vlastní data](enrichment-SFTP-custom-import.md) prostřednictvím vlastního importu protokolu (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) poskytuje společnost Microsoft
+
+# <a name="business-accounts-b2b"></a>[Obchodní účty (B2C)](#tab/b2b)
+
+- [Údaje o společnosti](enrichment-leadspace.md) poskytované společností Leadspace
+- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft 
+- [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies 
+- [Vlastní data](enrichment-SFTP-custom-import.md) prostřednictvím vlastního importu protokolu (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) poskytuje společnost Microsoft
+
+---
 
 Na kartě **Moje rozšíření** se můžete podívat na rozšíření, která jste nakonfigurovali, a upravit jejich vlastnosti.
 
@@ -58,7 +68,7 @@ Spusťte nebo deaktivujte více rozšíření najednou jejich výběrem v seznam
 
 ## <a name="enrichments-and-connections"></a>Rozšíření a propojení 
 
-Rozšíření třetích stran se konfigurují pomocí [připojení](connections.md), které správce nastaví pomocí pověření a poskytne souhlas s datovými přenosy. propojení mohou správci a přispěvatelé použít ke konfiguraci rozšíření.  
+Rozšíření třetích stran se konfigurují pomocí [připojení](connections.md), které správce nastaví pomocí pověření a poskytne souhlas s datovými přenosy. Připojení mohou používat správci a přispěvatelé ke konfiguraci obohacení.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Více rozšíření stejného typu
 

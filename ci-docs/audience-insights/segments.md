@@ -1,7 +1,7 @@
 ---
 title: Segmenty v přehledech cílové skupiny
 description: Vytvořte přehled segmentů a způsob jejich vytváření a správy.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036365"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617331"
 ---
 # <a name="segments-overview"></a>Přehled segmentů
 
@@ -26,11 +26,19 @@ Profily zákazníků, které odpovídají filtrům definice segmentu, se označu
 
 Existuje několik způsobů, jak vytvořit nový segment: 
 
-- Složitý segment s nástrojem pro vytváření segmentů: [Prázdný segment](segment-builder.md#create-a-new-segment)
-- Jednoduché segmenty s jedním operátorem: [Rychlý segment](segment-builder.md#quick-segments)
-- Způsob vyhledání podobných zákazníků pomocí technologie AI: [Podobní zákazníci](find-similar-customer-segments.md)
-- Návrhy využívající AI založené na mírách nebo atributech: [Navrhované segmenty ke zlepšení měr](suggested-segments.md)
-- Návrhy založené na činnostech: [Navrhované segmenty na základě aktivity zákazníků](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Jednotliví zákazníci (B2C)](#tab/b2c)
+
+- Složitý segment s nástrojem pro tvorbu segmentů: [Vybudujte si vlastní](segment-builder.md#create-a-new-segment) 
+- Jednoduché segmenty s jedním operátorem: [Rychlý segment](segment-builder.md#quick-segments) 
+- Způsob vyhledání podobných zákazníků pomocí technologie AI: [Podobní zákazníci](find-similar-customer-segments.md) 
+- Návrhy využívající AI založené na mírách nebo atributech: [Navrhované segmenty ke zlepšení měr](suggested-segments.md) 
+- Návrhy založené na činnostech: [Navrhované segmenty na základě aktivity zákazníků](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Obchodní účty (B2C)](#tab/b2b)
+
+- Složitý segment s nástrojem pro tvorbu segmentů: [Vybudujte si vlastní](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Správa existujících segmentů
 
@@ -70,9 +78,9 @@ Segment můžete exportovat ze stránky segmentů nebo ze [stránky exportů](ex
 
 1. V rozevíracím seznamu akcí vyberte **Spravovat exporty**.
 
-1. Otevře se stránka **Exporty (preview) pro segment**. Můžete zobrazit všechny konfigurované exporty seskupené podle exportů, které obsahují aktuální segment nebo jej neobsahují.
+1. Otevře se stránka **Exporty (preview) pro segment**. Všechny nakonfigurované exporty můžete vidět seskupené podle toho, zda obsahují aktuální segment nebo ne.
 
-   1. Chcete-li přidat vybraný segment do exportu, vyberte export v seznamu a vyberte **Přidat segment**.
+   1. Chcete -li přidat vybraný segment do exportu, **upravte** příslušný export pro výběr odpovídajících segmentů a poté uložte. V prostředích pro jednotlivé zákazníky můžete místo toho vybrat export v seznamu a vybrat **Přidat segment**, abyste dosáhli stejného výsledku.
 
    1. Chcete-li vytvořit nový export s vybraným segmentem, vyberte **Přidat export**. Další informace o vytváření exportů najdete v části [Nastavení nového exportu](export-destinations.md#set-up-a-new-export).
 

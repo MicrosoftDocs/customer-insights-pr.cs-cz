@@ -1,7 +1,7 @@
 ---
 title: Export údajů ze služby Customer Insights do služby Campaign Monitor
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Campaign Monitor.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d2cc3ec944faa1d77ffb44e8abb422d753c5625d0ccef75cbb7efb14cb7c3741
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031879"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618973"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Export segmentů do služby Campaign Monitor (preview)
 
@@ -28,10 +28,10 @@ Exportujte segmenty sjednocených profilů zákazníků do služby Campaign Moni
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Můžete exportovat až 1 milion profilů na export do Campaign Monitor.
+- Do Campaign Monitor můžete exportovat až 1 milion zákaznických profilů na export.
 - Export do Campaign Monitor je omezen na segmenty.
-- Export až 1 milionu profilů do Campaign Monitor může trvat až 20 minut. 
-- Počet profilů, které můžete exportovat do Campaign Monitor, závisí na vaší smlouvě s Campaign Monitor a je podle ní omezen.
+- Export až 1 milionu zákaznických profilů do Campaign Monitor může trvat až 20 minut. 
+- Počet zákaznických profilů, které můžete exportovat do Campaign Monitor, závisí na vaší smlouvě s Campaign Monitor a je jí omezen.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Nastavení propojení s Campaign Monitor
 
@@ -66,7 +66,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 1. Zadejte [**ID seznamu Campaign Monitor**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
    [Vygenerujte klíč API](https://www.campaignmonitor.com/api/getting-started/) z **Nastavení účtu** nejprve v nástroji Campaign Monitor pro zobrazení ID seznamu API.  
 
-3. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je nutné exportovat segmenty do Campaign Monitor.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je nutné exportovat segmenty do Campaign Monitor.
 
 1. Zvolte **Uložit**.
 

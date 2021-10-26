@@ -4,18 +4,18 @@ description: Přehled zdrojů nápovědy, abyste mohli rychle začít.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494586"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623669"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Začínáme s možnostmi přehledu zapojení Dynamics 365 Customer Insights (Public Preview)
 
@@ -43,29 +43,43 @@ Při první návštěvě přehledů zapojení můžete konfigurovat nastavení, 
 
 1. Prozkoumejte produkt pomocí sady ukázkových dat.
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Krok 3: Nastavte pracovní prostor a přidejte kód na svůj web
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>Krok 3: Vytvořte pracovní prostor a vytvořte sestavy
 
 Pracovní prostor je místo, kde můžete v reálném čase sledovat aktivitu uživatelů a ukládat a spravovat sestavy. Přidejte kód na svůj web a začněte sbírat *události*, údaje o aktivitě, které přicházejí od uživatelů.
 
 1. [Vytvořte pracovní prostor](create-workspace.md) a přidejte členy.
 
-1. [Přidejte kód na web](instrument-website.md) nebo do [mobilní aplikace](developer-resources.md#capture-events-from-mobile-apps), abyste mohli zobrazit aktivitu uživatelů přicházejících do vašeho pracovního prostoru.
+1. Přidejte kód na [web](instrument-website.md) nebo do [mobilní aplikace](developer-resources.md#capture-events-from-mobile-apps), abyste mohli zobrazit aktivitu uživatelů přicházejících do vašeho pracovního prostoru.
 
 1. Podívejte se na [sestavu v reálném čase](view-reports.md), která zobrazuje aktivní uživatele podle prohlížeče, zařízení, operačního systému, místa a jazyka. Můžete také vytvářet [vlastní sestavy](custom-reports.md) k vytvoření vlastních vizualizací.
+
+1. Vytvořte [dimenze](dimensions.md) pro třídění návštěvníků podle nových a vracejících se uživatelů, [metriky](metrics.md) na pomoc pro lepší pochopení chování uživatelů a [segmenty](segments.md) k identifikaci podmnožin návštěvníků na základě charakteristik nebo interakcí na webových stránkách.
     
 ## <a name="step-4-export-data-to-other-channels"></a>Krok 4: Exportujte data do jiných kanálů
 
-Můžete vytvářet *upřesněné události* (virtuální pohled) vašich webových analytických dat. Poté filtrujte a exportujte data do Azure Data Lake Storage. Exportovaná data můžete přijmout jako zdroj dat. Více informací najdete v části [Vytvoření propojení mezi přehledy cílových skupin a přehledy zapojení](integrate-audience-insights-engagement-insights.md)
+Můžete vytvářet *upřesněné události* (virtuální pohled) vašich webových analytických dat. Poté filtrujte a exportujte data do Azure Data Lake Storage. Exportovaná data můžete přijmout jako zdroj dat.
 
 1. [Vytvářejte upřesněné události](refined-events.md) pro export.
 
-1. [Exportujte data](export-events.md) do Data Lake Storage.
+1. [Exportujte data](export-events.md) do Azure Data Lake Storage.
 
 1. [Vytvořte propojení mezi přehledy cílových skupin a přehledy zapojení](integrate-audience-insights-engagement-insights.md) a sdílejte data mezi těmito dvěma funkcemi.
 
+1. [Rozpoznání webových událostí od dříve ověřených uživatelů](unknown-to-known.md) pomocí funkce **Od neznámých ke známým**.
+
 1. Zjistěte, jak [odstranit a exportovat data událostí obsahující osobní údaje](delete-export-personal-data.md).
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>Krok 5: Vytvoření a správa trychtýřových sestav
+
+Trychtýřová sestava shromažďuje informace o krocích, ke kterým dojde během cesty zákazníka prostřednictvím vašeho webu nebo mobilní aplikace. Kromě vytváření předdefinovaných profilových sestav a vlastních přehledů můžete vytvořit také trychtýřovou sestavu, která identifikuje cesty, kterými se vaši zákazníci vydají před nákupem. 
+
+1. [Vytvořte trychtýřovou sestavu](funnel-reports.md) pro informování o rozhodnutích a identifikaci oblasti pro optimalizaci a vylepšení procesů.
+
+1. Vytvářejte přehledy vícekanálových trychtýřových sestav, jakmile svou mobilní aplikaci vybavíte přehledy zapojení [Android SDK](get-started-android.md) nebo [iOS SDK](get-started-ios.md).
+
+1. Pomocí [trychtýřových přehledů](funnel-reports.md#funnel-insights) získáte hlubší vhled do chování zákazníků ohledně kroků v trychtýřové sestavě.
  
-## <a name="step-5-stay-connected"></a>Krok 5: Zůstaňte ve spojení
+## <a name="step-6-stay-connected"></a>Krok 6: Zůstaňte ve spojení
 
 Vážíme si vaší aktivní účasti a při vývoji budoucích verzí zohledňujeme veškerou relevantní zpětnou vazbu. Sdělte nám svůj názor a nahlaste problémy jedním z těchto kanálů:
 - [Komunita](https://go.microsoft.com/fwlink/?linkid=2141648)
