@@ -1,7 +1,7 @@
 ---
 title: Predikce úbytku transakcí
 description: Predikujte, zda je zákazník ohrožen, když přestane nakupovat produkty nebo služby.
-ms.date: 10/11/2021
+ms.date: 10/20/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ac484f74e388aa23422a89e25dabb555f2ad4118
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643369"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673037"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predikce úbytku transakcí (Preview)
 
@@ -28,6 +28,32 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
 > Vyzkoušejte výukový program pro přechod transakcí predikce pomocí ukázkových dat: [Ukázka predikce úbytku transakcí (preview)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Předpoklady
+
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
+
+- Alespoň [oprávnění Přispěvatel](permissions.md) v Customer Insights.
+- Obchodní znalosti k pochopení toho, co znamená pro vaši firmu odchod zákazníků. Podporujeme definice časově závislých ztrát, což znamená, že zákazník je považován za ztraceného po určitém období bez nákupu.
+- Údaje o vašich transakcích/nákupech a jejich historie:
+    - Identifikátory transakcí k rozlišení nákupů/transakcí.
+    - Identifikátory zákazníků pro spárování transakcí s vašimi zákazníky.
+    - Data událostí, kdy došlo k transakci.
+    - Schéma sémantických dat pro nákupy/transakce vyžaduje následující informace:
+        - **ID transakce**: Jedinečný identifikátor nákupu nebo transakce.
+        - **Datum transakce**: Datum nákupu nebo transakce.
+        - **Hodnota transakce**: Měna / číselná hodnota částky transakce/položky.
+        - (Volitelně) **Jedinečné ID produktu**: ID zakoupeného produktu nebo služby, pokud jsou vaše data na úrovni řádkové položky.
+        - (Volitelně) **Zda se jednalo o vrácení**: Pole true/false, které identifikuje, zda transakce byla návratová, nebo ne. Pokud **Hodnota transakce** je záporná, použijeme tyto informace také k odvození vratky.
+- (Volitelně) Údaje o aktivitách zákazníka:
+    - Identifikátory aktivit pro rozlišení aktivit stejného typu.
+    - Identifikátory zákazníků pro mapování aktivit na vaše zákazníky.
+    - Informace o aktivitě obsahující název a datum aktivity.
+    - Schéma sémantických dat pro aktivity zákazníka zahrnuje:
+        - **Primární klíč:** Jedinečný identifikátor aktivity. Například záznam o návštěvě nebo využití webu, který ukazuje, že zákazník vyzkoušel vzorek vašeho produktu.
+        - **Časové razítko:** Datum a čas události identifikovaný primárním klíčem.
+        - **Událot:** Název události, kterou chcete použít. Například pole s názvem „UserAction“ v obchodě s potravinami může být kupón použitý zákazníkem.
+        - **Podrobnosti:** Podrobné informace o akci. Například pole s názvem „CouponValue“ v obchodě s potravinami může být hodnota měny kupónu.
+
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
 - Alespoň [oprávnění Přispěvatel](permissions.md) v Customer Insights.
 - Obchodní znalosti k pochopení toho, co znamená pro vaši firmu odchod zákazníků. Podporujeme definice časově závislých ztrát, což znamená, že zákazník je považován za ztraceného po určitém období bez nákupu.
@@ -51,7 +77,7 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
         - **Událot:** Název události, kterou chcete použít. Například pole s názvem „UserAction“ v obchodě s potravinami může být kupón použitý zákazníkem.
         - **Podrobnosti:** Podrobné informace o akci. Například pole s názvem „CouponValue“ v obchodě s potravinami může být hodnota měny kupónu.
 - (Volitelné) Údaje o vašich zákaznících:
-    - Tato data by měla být přizpůsobeny statičtějším atributům, aby model fungoval co nejlépe.
+    - Tato data by měla být přizpůsobena statičtějším atributům, aby model fungoval co nejlépe.
     - Sémantické datové schéma pro údaje o zákaznících zahrnuje:
         - **CustomerID:** Jedinečný identifikátor pro zákazníka.
         - **Datum vytvoření:** Datum, kdy byl zákazník původně přidán.
@@ -59,6 +85,9 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
         - **Země:** Země zákazníka.
         - **Odvětví:** Typ odvětví zákazníka. Například pole s názvem „Odvětví“ v pražírně kávy může indikovat, zda byl zákazník maloobchod.
         - **Klasifikace:** Kategorizace zákazníka pro vaši firmu. Například pole s názvem „ValueSegment“ v pražírně kávy může být úrovní zákazníka na základě velikosti zákazníka.
+
+---
+
 - Navrhované vlastnosti dat:
     - Dostatečná historická data: Data transakce alespoň pro dvojnásobek vybraného časového okna. Pokud možno dva až tři roky historie transakcí. 
     - Vícenásobné nákupy na zákazníka: Ideálně alespoň dvě transakce na zákazníka.
@@ -114,6 +143,32 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
 
 1. Vyberte **Další**.
 
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
+
+### <a name="add-additional-data-optional"></a>Přidat další údaje (volitelné)
+
+Nakonfigurujte vztah z vaší entity aktivity zákazníka s entitou *Zákazník*.
+
+1. Vyberte pole, které identifikuje zákazníka v tabulce aktivity zákazníka. Může přímo souviset s primárním ID zákazníka vaší entity *Zákazník*.
+
+1. Vyberte entitu, která je vaší primární entitou *Zákazník*.
+
+1. Zadejte název, který popisuje daný vztah.
+
+#### <a name="customer-activities"></a>Aktivity zákazníka
+
+1. Volitelně vyberte **Přidat data** pro **Aktivity zákazníka**.
+
+1. Vyberte typ sémantické aktivity, který obsahuje data, která chcete použít, a poté vyberte jednu nebo více aktivit v sekci **Aktivity**.
+
+1. Vyberte typ aktivity, který odpovídá typu aktivity zákazníka, kterou konfigurujete. Vyberte **Vytvořit nový** a vyberte dostupný typ aktivity nebo vytvořte nový typ.
+
+1. Vyberte **Další** a pak **Uložit**.
+
+1. Pokud máte nějaké další aktivity zákazníků, které byste chtěli zahrnout, opakujte výše uvedené kroky.
+
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
+
 ### <a name="select-prediction-level"></a>Vybrat úroveň predikce
 
 Většina predikcí je vytvářena na úrovni zákazníků. V některých situacích to nemusí být dostatečně podrobné, aby to vyhovovalo potřebám vaší firmy. Tuto funkci můžete použít k předpovídání úbytku například pro pobočku zákazníka, nikoli pro zákazníka jako celek.
@@ -122,7 +177,7 @@ Většina predikcí je vytvářena na úrovni zákazníků. V některých situac
 
 1. Rozbalte entity, ze kterých chcete vybrat sekundární úroveň, nebo použijte pole filtrování k vyfiltrování vybraných možností.
 
-1. Vyberte atribut, který chcete použít jako sekundární úroveň, a poté vyberte **Přidat**
+1. Vyberte atribut, který chcete použít jako sekundární úroveň, a poté vyberte **Přidat**.
 
 1. Vyberte **Další**.
 
@@ -159,7 +214,7 @@ Nakonfigurujte vztah z vaší entity aktivity zákazníka s entitou *Zákazník*
 
 1. Vyberte **Další**.
 
-### <a name="provide-an-optional-list-of-benchmark-accounts-business-accounts-only"></a>Poskytněte volitelný seznam srovnávacích účtů (pouze firemní účty)
+### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Poskytněte volitelný seznam srovnávacích účtů
 
 Přidejte seznam svých firemních zákazníků a účtů, které chcete použít jako měřítka. Získáte [podrobnosti o těchto srovnávacích účtech](#review-a-prediction-status-and-results) včetně jejich skóre úbytku a nejvlivnějších funkcí, které ovlivnily jejich predikci úbytku.
 
@@ -168,6 +223,8 @@ Přidejte seznam svých firemních zákazníků a účtů, které chcete použí
 1. Vyberte zákazníky, kteří fungují jako měřítko.
 
 1. Pokračujte kliknutím na tlačítko **Další**.
+
+---
 
 ### <a name="set-schedule-and-review-configuration"></a>Nastavení plánu a kontrola konfigurace
 
@@ -201,6 +258,25 @@ Přidejte seznam svých firemních zákazníků a účtů, které chcete použí
 1. Vyberte svislé tři tečky vedle predikce, pro kterou chcete zkontrolovat výsledky, a vyberte **Zobrazit**.
 
    :::image type="content" source="media/model-subs-view.PNG" alt-text="Ovládací prvek zobrazení s výsledky predikce.":::
+
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
+
+1. Na stránce výsledků jsou tři primární sekce s daty:
+   - **Výkon cvičení modelu**: Skóre může být A, B nebo C. Toto skóre označuje výkon predikce a může vám pomoci při rozhodování o použití výsledků uložených ve výstupní entitě. Skóre je stanoveno na základě následujících pravidel: 
+        - **A**, když model přesně predikoval alespoň 50 % celkových predikcí a když procento přesných predikcí ohledně zákazníků, kteří odešli, je větší než základní poměr alespoň o 10 %.
+            
+        - **B**, když model přesně predikoval alespoň 50 % celkových predikcí a když procento přesných predikcí ohledně zákazníků, kteří odešli, je větší než základní poměr alespoň do 10 %.
+            
+        - **C**, když model přesně predikoval méně než 50 % celkových predikcí nebo když procento přesných predikcí ohledně zákazníků, kteří odešli, je menší než základní poměr.
+               
+        - **Základní poměr** vezme vstupní časový interval predikce pro daný model (například jeden rok) a ten vytváří různé zlomky času dělením číslem 2, dokud nedosáhne jednoho měsíce nebo méně. Tyto zlomky používá k vytvoření obchodního pravidla pro zákazníky, kteří si v tomto časovém rámci nic nekoupili. Tito zákazníci jsou považováni za ztracené. Jako základní model je vybráno obchodní pravidlo založené na čase s nejvyšší schopností predikovat, kdo bude pravděpodobně ztracen.
+            
+    - **Pravděpodobnost odchodu (počet zákazníků)**: Skupiny zákazníků na základě jejich predikovaného rizika odchodu. Tato data vám mohou pomoci později, pokud chcete vytvořit segment zákazníků s vysokým rizikem odchodu. Takové segmenty pomáhají pochopit, kde by se pro členství v segmentech mělo nacházet vyřazení.
+       
+    - **Nejvlivnější faktory**: Při vytváření predikce se bere v úvahu mnoho faktorů. Každý z faktorů má svou důležitost vypočítanou pro agregované predikce, které model vytváří. Tyto faktory můžete použít k ověření vašich výsledků predikce, nebo tyto informace můžete použít později k [vytváření segmentů](segments.md), což by mohlo pomoci ovlivnit riziko úbytku zákazníků.
+
+
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
 1. Na stránce výsledků jsou tři primární sekce s daty:
    - **Výkon cvičení modelu**: Skóre může být A, B nebo C. Toto skóre označuje výkon predikce a může vám pomoci při rozhodování o použití výsledků uložených ve výstupní entitě. Skóre je stanoveno na základě následujících pravidel: 
@@ -237,6 +313,11 @@ Přidejte seznam svých firemních zákazníků a účtů, které chcete použí
        Když predikujete úbytek na úrovni účtu, všechny účty se berou v úvahu při odvozování průměrných hodnot funkcí pro segmenty úbytku. U předpovědí úbytku na sekundární úrovni pro každý účet závisí derivace segmentů úbytku na sekundární úrovni položky vybrané v bočním panelu. Pokud má například položka sekundární úroveň kategorie produktů = kancelářské potřeby, pak se při odvozování průměrných hodnot funkcí pro segmenty úbytku berou v úvahu pouze položky, které mají jako kategorii produktů kancelářské potřeby. Tato logika se používá k zajištění spravedlivého srovnání hodnot vlastností položky s průměrnými hodnotami v segmentech s nízkým, středním a vysokým úbytkem.
 
        V některých případech je průměrná hodnota segmentů s nízkým, středním nebo vysokým úbytkem prázdná nebo není k dispozici, protože neexistují žádné položky, které by patřily k odpovídajícím segmentům úbytku na základě výše uvedené definice.
+       
+       > [!NOTE]
+       > Interpretace hodnot ve sloupcích průměrná nízká, střední a vysoká se liší u kategoriálních prvků, jako je země nebo odvětví. Protože pojem „průměrná“ hodnota prvku se nevztahuje na kategoriální prvky, hodnoty v těchto sloupcích představují podíl zákazníků v segmentech nízkého, středního nebo vysokého odchodu zákazníků, které mají stejnou hodnotu kategoriálního prvku ve srovnání s položkou vybranou na postranním panelu.
+
+---
 
 ## <a name="manage-predictions"></a>Správa predikcí
 

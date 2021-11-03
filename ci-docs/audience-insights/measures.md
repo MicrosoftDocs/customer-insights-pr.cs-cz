@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622851"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673362"
 ---
 # <a name="define-and-manage-measures"></a>Definujte a spravujte opatření
 
@@ -28,7 +28,7 @@ Pomocí nástroje pro tvorbu měr můžete plánovat obchodní aktivity dotazov�
 
 Tato sekce vás provede vytvořením nové míry od nuly. Míru můžete vytvořit pomocí datových atributů z datových entit, které mají nastavený vztah pro připojení k jednotné entitě zákaznického profilu.
 
-# <a name="individual-customers-b2c"></a>[Jednotliví zákazníci (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 
 1. V přehledech cílové skupiny přejděte na **Míry**.
 
@@ -92,7 +92,7 @@ Tato sekce vás provede vytvořením nové míry od nuly. Míru můžete vytvoř
 
 1. Jděte na **Míry** pro zobrazení nově vytvořené míry v seznamu.
 
-# <a name="business-accounts-b2b"></a>[Obchodní účty (B2C)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
 1. V přehledech cílové skupiny přejděte na **Míry**.
 
@@ -164,7 +164,7 @@ Tato sekce vás provede vytvořením nové míry od nuly. Míru můžete vytvoř
 
 K jejich vytváření můžete použít předdefinované šablony běžně používaných měr. Podrobné popisy šablon a průvodce vám pomohou s efektivním vytvořením míry. Šablony vycházejí z mapovaných dat entity *Sjednocená aktivita*. Ujistěte se tedy, že jste nakonfigurovali [aktivity zákazníků](activities.md) před vytvořením míry ze šablony.
 
-# <a name="individual-customers-b2c"></a>[Jednotliví zákazníci (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 
 K jejich vytváření můžete použít předdefinované šablony běžně používaných měr. Podrobné popisy šablon a průvodce vám pomohou s efektivním vytvořením míry. Šablony vycházejí z mapovaných dat entity *Sjednocená aktivita*. Ujistěte se tedy, že jste nakonfigurovali [aktivity zákazníků](activities.md) před vytvořením míry ze šablony.
 
@@ -212,7 +212,7 @@ Následující postup popisuje kroky k vytvoření nové míry pomocí šablony.
 
 1. Nyní můžete vybrat **Spustit** k výpočtu výsledků míry. Chcete-li to upřesnit později, vyberte **Uložit koncept**.
 
-# <a name="business-accounts-b2b"></a>[Obchodní účty (B2C)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
 Tato funkce je k dispozici pouze pro míry vytvořené v prostředích s individuálním zákazníkem jako primární cílovou skupinou.
 

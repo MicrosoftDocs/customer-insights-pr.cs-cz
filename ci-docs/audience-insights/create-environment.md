@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645674"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673383"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Vytvoření prostředí v přehledech cílové skupiny
 
@@ -46,7 +46,7 @@ V kroku **Základní informace** zvolte, zda chcete vytvořit prostředí od za�
 
 Zadejte následující údaje:
    - **Název**: Název tohoto prostředí. Toto pole je již vyplněno, pokud kopírujete z existujícího prostředí, ale můžete jej změnit.
-   - **Vyberte svou firmu**: Vyberte primární cílovou skupinu pro nové prostředí. Můžete pracovat s jednotlivými zákazníky (B2C) nebo [obchodními zákaznickými účty](work-with-business-accounts.md) (B2B).
+   - **Vyberte svou firmu**: Vyberte primární cílovou skupinu pro nové prostředí. Můžete pracovat s jednotlivými spotřebiteli (B2C) nebo [obchodními účty](work-with-business-accounts.md) (B2B).
    - **Typ**: Vyberte, zda chcete vytvořit provozní nebo sandboxové prostředí. Sandboxová prostředí neumožňují plánovanou aktualizaci dat a jsou určena pro předimplementaci a testování. Prostředí sandboxu používají stejnou primární cílovou skupinu jako provozní prostředí, které je aktuálně vybráno.
    - **Oblast**: Oblast, ve které je služba nasazena a hostována.
 
@@ -54,7 +54,7 @@ Zadejte následující údaje:
 
 V kroku **Úložiště dat** z přehledů cílové skupiny vyberte, kam chcete data uložit.
 
-Budete mít dvě možnosti: **Úložiště Customer Insights** (Azure Data Lake spravované týmem Customer Insights) a **Azure Data Lake Storage** (váš vlastní Azure Data Lake Storage). Ve výchozím nastavení je vybráno úložiště Customer Insights.
+Budete mít dvě možnosti: **Úložiště Customer Insights** (datové jezero Azure spravované týmem Customer Insights) a **Azure Data Lake Storage** (vaše vlastní úložiště Azure Data Lake Storage). Ve výchozím nastavení je vybráno úložiště Customer Insights.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Vyberte Azure Data Lake Storage pro uložení přehledů dat cílové skupiny.":::
 
@@ -66,7 +66,7 @@ Uložením dat do Azure Data Lake Storage souhlasíte s tím, že data budou př
 > - Účty Azure Data Lake Storage ze stejné oblasti Azure, kterou jste vybrali při vytváření prostředí.
 > - Účty Azure Data Lake Storage, které mají povolený *hierarchický obor názvů*.
 
-Pro možnost Azure Data Lake Storage si můžete pro ověřování vybrat mezi možností založenou na zdroji a možností založenou na předplatném. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Název **kontejneru** bude `customerinsights` a nelze jej změnit.
+Pro možnost Azure Data Lake Storage si můžete pro ověřování vybrat mezi možností založenou na zdroji a možností založenou na předplatném. Více informací viz [Připojení k účtu Azure Data Lake Storage pomocí instančního objektu Azure](connect-service-principal.md). Název **kontejneru** bude `customerinsights` a nelze jej změnit.
 
 Po dokončení systémových procesů, jako je například příjem dat, systém vytvoří odpovídající složky v účtu úložiště, který jste zadali. Datové soubory a soubory *model.json* se vytvářejí a přidávají do složek na základě názvu procesu.
 
@@ -76,14 +76,14 @@ Pokud vytvoříte více prostředí Customer Insights a rozhodnete se uložit v�
    
 Krok **Microsoft Dataverse** vám umožní propojit Customer Insights s vaším prostředím Dataverse.
 
-Pokud chcete použít [připravené modely predikce](predictions-overview.md#out-of-box-models), nakonfigurujte sdílení dat pomocí Dataverse. Nebo můžete povolit příjem dat z místních zdrojů dat a poskytnout adresu URL prostředí Microsoft Dataverse, které spravuje vaše organizace. Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights se službou Data Lake spravovanou Dataverse.
+Pokud chcete použít [připravené modely predikce](predictions-overview.md#out-of-box-models), nakonfigurujte sdílení dat pomocí Dataverse. Nebo můžete povolit příjem dat z místních zdrojů dat a poskytnout adresu URL prostředí Microsoft Dataverse, které spravuje vaše organizace. Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights s datovým jezerem spravovaným Dataverse.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights nepodporuje následující scénáře sdílení dat:
-> - Pokud uložíte všechna data do svých vlastních Azure Data Lake Storage, nebudete moci povolit sdílení dat pomocí spravovaného datového jezera Microsoft Dataverse.
-> - Pokud povolíte sdílení dat pomocí spravovaného datového jezera Microsoft Dataverse, nebudete moci [vytvořit předpokládané nebo chybějící hodnoty v entitě](predictions.md).
+> - Pokud uložíte všechna data do vlastního úložiště Azure Data Lake Storage, nebudete moci povolit sdílení dat pomocí datového jezera spravovaného Dataverse.
+> - Pokud povolíte sdílení dat pomocí Dataverse, nebudete moci [vytvořit předpokládané nebo chybějící hodnoty v entitě](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Krok 4: Dokončení nastavení
 
@@ -93,10 +93,10 @@ Většinu nastavení můžete také změnit později. Další informace naleznet
 
 ## <a name="work-with-your-new-environment"></a>Práce s novým prostředím
 
-Přečtěte si následující články, které vám pomohou začít s konfigurací Customer Insights. 
+Přečtěte si následující články, které vám pomohou začít s konfigurací Customer Insights: 
 
 - [Přidání více uživatelů a přiřazení oprávnění](permissions.md).
 - [Přijměte zdroje dat](data-sources.md) a proveďte u nich [proces sjednocení dat](data-unification.md) k získání [sjednocených profilů zákazníků](customer-profiles.md).
 - [Obohaťte sjednocené profily zákazníků](enrichment-hub.md) nebo [spusťte prediktivní modely](predictions-overview.md).
-- [Vytvořte segmenty](segments.md) k seskupení zákazníků a [měr](measures.md) ke kontrole KPI.
+- [Vytvořte segmenty](segments.md) pro seskupení zákazníků a [měr](measures.md), abyste mohli posoudit klíčové ukazatele výkonu.
 - [Nastavte připojení](connections.md) a [exporty](export-destinations.md) ke zpracování dílčích sad dat v jiných aplikacích.

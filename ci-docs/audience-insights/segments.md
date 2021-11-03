@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617331"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673752"
 ---
 # <a name="segments-overview"></a>Přehled segmentů
 
@@ -26,7 +26,7 @@ Profily zákazníků, které odpovídají filtrům definice segmentu, se označu
 
 Existuje několik způsobů, jak vytvořit nový segment: 
 
-# <a name="individual-customers-b2c"></a>[Jednotliví zákazníci (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 
 - Složitý segment s nástrojem pro tvorbu segmentů: [Vybudujte si vlastní](segment-builder.md#create-a-new-segment) 
 - Jednoduché segmenty s jedním operátorem: [Rychlý segment](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Existuje několik způsobů, jak vytvořit nový segment:
 - Návrhy využívající AI založené na mírách nebo atributech: [Navrhované segmenty ke zlepšení měr](suggested-segments.md) 
 - Návrhy založené na činnostech: [Navrhované segmenty na základě aktivity zákazníků](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Obchodní účty (B2C)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
 - Složitý segment s nástrojem pro tvorbu segmentů: [Vybudujte si vlastní](segment-builder.md#create-a-new-segment)
 

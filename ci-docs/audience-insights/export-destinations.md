@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623093"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673315"
 ---
 # <a name="exports-preview-overview"></a>Přehled exportů (Preview)
 
@@ -32,14 +32,14 @@ Existují dva hlavní typy exportu:
 
 ### <a name="export-segments"></a>Export segmentů
 
-**Export segmentů v prostředích pro firemní účty (B2B) nebo individuální zákazníky (B2C)**  
-Většina možností exportu podporuje oba typy prostředí. Export segmentů do různých cílových systémů má specifické požadavky. Obecně řečeno, člen segmentu, profil zákazníka, obsahuje kontaktní informace. I když to obvykle platí pro segmenty postavené na individuálních zákaznících (B2C), nemusí to nutně platit pro segmenty založené na obchodních účtech (B2B). 
+**Export segmentů v prostředích pro obchodní účty (B2B) nebo individuální spotřebitele (B2C)**  
+Většina možností exportu podporuje oba typy prostředí. Export segmentů do různých cílových systémů má specifické požadavky. Obecně řečeno, člen segmentu, profil zákazníka, obsahuje kontaktní informace. I když to obvykle platí pro segmenty postavené na individuálních spotřebitelích (B2C), nemusí to nutně platit pro segmenty založené na obchodních účtech (B2B). 
 
-**Segmenty exportu prostředí pro firemní účty (B2B)**  
+**Segmenty exportu prostředí pro obchodní účty (B2B)**  
 - Segmenty v kontextu prostředí pro obchodní účty jsou postaveny na entitě *účet*. Chcete -li exportovat segmenty účtu tak, jak jsou, musí cílový systém podporovat segmenty čistého účtu. To je případ [LinkedIn](export-linkedin-ads.md), když při definování exportu vyberete **společnost**.
 - Všechny ostatní cílové systémy vyžadují pole od kontaktní entity. Aby bylo zajištěno, že segmenty účtu mohou načítat data ze souvisejících kontaktů, definice vašeho segmentu potřebuje promítnout atributy entity kontaktu. Další informace o tom, jak [konfigurovat segmenty a atributy projektu](segment-builder.md).
 
-**Export segmentů v prostředích pro jednotlivé zákazníky (B2C)**  
+**Export segmentů v prostředích pro jednotlivé spotřebitele (B2C)**  
 - Segmenty v kontextu prostředí pro jednotlivé zákazníky jsou postaveny na entitě *sjednocený profil zákazníka*. Exportovat lze každý segment, který splňuje požadavky cílových systémů (například e -mailová adresa).
 
 **Limity exportu segmentů**  

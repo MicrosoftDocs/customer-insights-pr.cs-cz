@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617547"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7672991"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
@@ -29,7 +29,7 @@ K vytváření nebo úpravě rozšíření musíte mít oprávnění přispěvat
 
 Na kartě **Objevit** najdete všechny podporované možnosti obohacení.
 
-# <a name="individual-customers-b2c"></a>[Jednotliví zákazníci (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 
 - [Značky](enrichment-microsoft.md) poskytované společností Microsoft
 - [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft
@@ -38,7 +38,7 @@ Na kartě **Objevit** najdete všechny podporované možnosti obohacení.
 - [Vlastní data](enrichment-SFTP-custom-import.md) prostřednictvím vlastního importu protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) poskytuje společnost Microsoft
 
-# <a name="business-accounts-b2b"></a>[Obchodní účty (B2C)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
 - [Údaje o společnosti](enrichment-leadspace.md) poskytované společností Leadspace
 - [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft 

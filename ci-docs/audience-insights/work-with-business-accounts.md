@@ -1,7 +1,7 @@
 ---
 title: Začněte s obchodními účty jako primární cílová skupina
 description: Přečtěte si o obchodních účtech jako o primární cílové skupině Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7644980"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673679"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Práce s firemními účty v přehledech cílové skupiny
 
-Schopnosti přehledů cílové skupiny v Dynamics 365 Customer Insights umožňují konfigurovat prostředí pro různé primární cílové skupiny: jednotliví zákazníci (B2C) a obchodní účty (B2B). Ve scénářích B2C jsou data soustředěna kolem jednotlivců. U B2B jsou primární cílovou skupinou zákaznické účty - organizace nebo společnosti - a kontakty. Tento článek vám pomůže začít s prostředím pro obchodní zákaznické účty. Uvádí rozdíly pro oblasti funkcí v přehledech cílové skupiny v závislosti na zaměření na prostředí. Další informace o rozdílech najdete v dokumentech oblastí funkcí. 
+Funkce přehledů cílové skupiny v Dynamics 365 Customer Insights umožňují konfigurovat prostředí pro různé primární cílové skupiny: jednotlivé spotřebitele (B2C) a obchodní účty (B2B). Ve scénářích B2C jsou data soustředěna kolem jednotlivců. U B2B jsou primární cílovou skupinou obchodní účty – organizace nebo společnosti – a kontakty. Tento článek vám pomůže začít s prostředím pro obchodní zákaznické účty. Uvádí rozdíly pro oblasti funkcí v přehledech cílové skupiny v závislosti na zaměření na prostředí. Další informace o rozdílech najdete v dokumentech oblastí funkcí. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Vytvoření prostředí pro obchodní účty
 
@@ -32,7 +32,7 @@ Po sjednocení dat [určete hierarchie účtů](relationships.md#set-up-account-
 
 Pokud vaše organizace spravuje prostředí pro jednotlivé zákazníky a obchodní účty, můžete pomocí přepínače v levém podokně vybrat primární cíl cílovou skupinu.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Přepínač pro změnu primární cílové skupiny mezi jednotlivými zákaznickými a firemními účty.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Přepínač pro změnu primární cílové skupiny mezi jednotlivými zákaznickými a firemními účty.":::
 
 ## <a name="supported-feature-areas"></a>Podporované oblasti funkce
 
