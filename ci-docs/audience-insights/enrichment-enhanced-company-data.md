@@ -1,7 +1,7 @@
 ---
 title: Vylepšení dat společnosti
 description: Rozšiřte a normalizujte data společnosti pomocí modelů společnosti Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770162"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813910"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Rozšíření profilů společnosti o vylepšená data společnosti
 
@@ -51,7 +51,8 @@ Vylepšená data mají několik omezení. Položky v seznamu níže nejsou model
 
 1.  Potvrzení identity společnosti. Neověřujeme, zda je vstupem existující organizace nebo zda společnost používá výstup jako svůj standardní název.
 2.  Komplexně pokrývá společnosti po celém světě. Data společnosti kompilovaná společností Microsoft mají globální pokrytí, ale většinu pokrytí nabízejí v Austrálii, Kanadě, Spojeném království a Spojených státech.
-3.  Garance správnosti nebo aktuálnosti dat. Vzhledem k tomu, že obchodní informace se často mění, nemůžeme zaručit, že poskytovaná vylepšená data společnosti jsou vždy přesná nebo aktuální.
+3.  Globálně standardizujte firemní adresy. V současné době podporujeme standardizaci adres v těchto zemích nebo oblastech: Austrálie, Kanada, Francie, Německo, Itálie, Japonsko, Spojené království a Spojené státy americké.
+4.  Garance správnosti nebo aktuálnosti dat. Vzhledem k tomu, že obchodní informace se často mění, nemůžeme zaručit, že poskytovaná vylepšená data společnosti jsou vždy přesná nebo aktuální.
 
 ## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
 

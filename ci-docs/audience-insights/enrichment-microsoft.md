@@ -1,7 +1,7 @@
 ---
 title: Rozšíření profilů zákazníků daty od společnosti Microsoft
-description: Použijte vlastnická data od společnosti Microsoft k rozšíření svých zákaznických dat o afinitu ke značce a zájmem.
-ms.date: 11/01/2021
+description: Použijte proprietární data od společnosti Microsoft k obohacení vašich zákaznických údajů o afinitách a podílu na sledovanosti.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732534"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793696"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obohaťte si zákaznické profily značkami a zájmovými skupinami (preview)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obohaťte profily zákazníků o afinity a podíl na sledovanosti (Preview)
 
-Použijte vlastnická data společnosti Microsoft k rozšíření svých zákaznických dat o afinitu ke značce a zájmem. Tyt afinity jsou založeny na datech od lidí v podobné demografické skupině, jako jsou vaši zákazníci. Tyto informace vám pomohou lépe porozumět a rozdělit zákazníky podle jejich náklonnosti ke konkrétním značkám a zájmům.
+Použijte proprietární data Microsoftu k obohacení vašich zákaznických dat o afinity značky, afinity zájmu a podílu na sledovanosti. Tyto afinity a podíl na sledovanosti jsou založeny na datech od lidí s demografickými údaji podobnými vašim zákazníkům. Tyto informace vám pomohou lépe porozumět a segmentovat vaše zákazníky na základě jejich afinity nebo podílu sledovanosti vzhledem ke konkrétním značkám a zájmům.
 
 V přehledech cílové skupiny přejděte na **Data** > **Rozšíření**, kde můžete [nakonfigurovat a zobrazit rozšíření](enrichment-hub.md).
 
-Chcete-li nakonfigurovat rozšíření o náklonnost ke značkám, přejděte na kartu **Zjistit** a vyberte **Rozšířit moje data** na dlaždici **Značky**.
+Chcete-li nakonfigurovat obohacení o afinity značky a podílu na sledovanosti, přejděte na kartu **Objevit** a vyberte **Obohatit moje data** na dlaždici **Značky**.
 
-Chcete-li nakonfigurovat rozšíření o náklonnost k zájmům, přejděte na kartu **Zjistit** a vyberte **Rozšířit moje data** na dlaždici **Zájmy**.
+Chcete-li nakonfigurovat obohacení o afinity zájmu a podílu na sledovanosti, přejděte na kartu **Objevit** a vyberte **Obohatit moje data** na dlaždici **Zájmy**.
 
    > [!div class="mx-imgBorder"]
    > ![Dlaždice Značky a zájmy.](media/BrandsInterest-tile-Hub.png "Dlaždice Značky a zájmy")
 
-## <a name="how-we-determine-affinities"></a>Jak určujeme afinity
+## <a name="how-we-determine-affinities-and-sov"></a>Jak určujeme afinity a podíl na sledovanosti
 
-Údaje online vyhledávání společnosti Microsoft používáme k vyhledání afinity ke značkám a zájmy v různých demografických segmentech (definovaných podle věku, pohlaví nebo polohy). Objem online vyhledávání pro určitou značku nebo zájem určuje, jak velkou afinitu má demografický segment ve srovnání s jinými segmenty k této značce nebo zájmu.
+Údaje o online vyhledávání společnosti Microsoft používáme k nalezení afinit a podílu na sledovanosti pro značky a zájmy v různých demografických segmentech (definovaných podle věku, pohlaví nebo místa). Objem online vyhledávání pro značku nebo zájem tvoří základ pro určení afinity nebo podílu na sledovanosti. Každý však poskytuje jinou perspektivu pochopení vašich zákazníků.
+
+- Afinita je srovnávací faktor napříč demografickými segmenty. Tyto informace můžete použít k identifikaci demografických segmentů, které mají nejvyšší afinitu k dané značce nebo zájmu ve srovnání s ostatními segmenty.
+
+- Podíl na sledovanosti je srovnávací faktor mezi vámi vybranými značkami nebo zájmy. Tyto informace můžete použít ke zjištění, která značka nebo zájem má nejvyšší podíl sledovanosti pro daný demografický segment ve srovnání s jinými značkami nebo zájmy, které jste vybrali.
 
 ## <a name="affinity-level-and-score"></a>Úroveň a skóre afinity
 
@@ -48,6 +52,10 @@ U každého rozšířeného zákaznického profilu poskytujeme dvě souvisejíc�
 |nízkou     | 1–34        |
 
 V závislosti na granularitě, kterou chcete pro měření afinity, můžete použít buď úroveň nebo skóre afinity. Skóre afinity vám dává přesnější kontrolu.
+
+## <a name="share-of-voice-sov"></a>Podíl na sledovanosti
+
+Podíl na sledovanosti počítáme na 100bodové škále. Celkový podíl na sledovanosti napříč všemi značkami nebo zájmy pro každý obohacený zákaznický profil se rovná 100. Na rozdíl od afinity je podíl na sledovanosti relativní ke značkám a zájmům, které vyberete. Například hodnoty podíli na sledovanosti pro Microsoft se mohou lišit, pokud jsou vybrané značky (Microsoft, GitHub) a (Microsoft, LinkedIn).
 
 ## <a name="supported-countriesregions"></a>Podporované země/oblasti
 
@@ -82,7 +90,7 @@ Zkontrolujte své výchozí předvolby rozšíření a podle potřeby je aktuali
 
 ### <a name="select-entity-to-enrich"></a>Vyberte entitu, kterou chcete rozšířit.
 
-Vyberte **Rozšířená entita** a vyberte datovou sadu, kterou chcete rozšířit o firemní data od společnosti Microsoft. Můžete vybrat entitu Zákazník k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
+Vyberte **Obohacená entita** a vyberte datovou sadu, kterou chcete obohatit o data od společnosti Microsoft. Můžete vybrat entitu Zákazník k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
 
 ### <a name="map-your-fields"></a>Mapování polí
 
@@ -124,13 +132,11 @@ Po spuštění procesu rozšíření přejděte na **Moje rozšíření**, kde z
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Náhled výsledků po spuštění procesu rozšíření.":::
 
-Prohlédněte si obohacená data výběrem **Zobrazit obohacená data** v grafu. Obohatená data pro značky obsahuje entita **BrandAffinityFromMicrosoft**. Data pro zájmy jsou v entitě **InterestAffinityFromMicrosoft**. Tyto entity najdete také ve skupině **Rozšíření** v umístění **Data** > **Entity**.
-
-Uvidíte graf s počtem obohacených zákaznických profilů v průběhu času a náhled obohacené entity. Vyberte **Zobrazit více** v dlaždici náhledu a otevřete obohacenou entitu.
+Najdete zde graf s počtem obohacených zákaznických profilů v průběhu času a náhledy obohacených entit. Prohlédněte si obohacená data výběrem možnosti **Další informace** v grafech **Úroveň afinity** nebo **Podíl na sledovanosti** grafy. Obohacená data pro značky přechízí do entit **BrandAffinityFromMicrosoft** a **BrandShareOfVoiceFromMicrosoft**. Údaje pro zájmy jsou v entitách **InterestAffinityFromMicrosoft** a **InterestShareOfVoiceFromMicrosoft**. Tyto entity najdete také ve skupině **Rozšíření** v umístění **Data** > **Entity**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Zobrazení rozšíření dat na kartě zákazníka
 
-Náklonnost ke značkám a zájmům lze zobrazit také na jednotlivých kartách zákazníka. Jděte na **Zákazníci** a vyberte profil zákazníka. Na kartě zákazníka najdete grafy značek nebo zájmů, ke kterým mají lidé v demografickém profilu zákazníka náklonnost.
+Podíl na sledovanosti značky a zájmu lze zobrazit i na jednotlivých zákaznických kartách. Jděte na **Zákazníci** a vyberte profil zákazníka. V zákaznické kartě najdete grafy pro podíl na sledovanosti značky nebo zájmu založené na lidech v demografickém profilu daného zákazníka.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Karta zákazníka s rozšířenými daty.":::
 
