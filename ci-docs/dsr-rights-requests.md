@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483652"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732672"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žádosti o práva subjektu údajů (DSR) v rámci GDPR
 
@@ -79,7 +79,14 @@ Správce klienta může exportovat údaje pomocí následujícího postupu:
 2. Potvrďte potvrzení pro export dat pro požadovaného uživatele.
 3. Exportovaná data obdržíte prostřednictvím e-mailové adresy správce klienta.
 
-## <a name="engagement-insights"></a>Přehledy zapojení
+## <a name="consent-management-preview"></a>Správa souhlasu (Preview)
+
+Funkce správy souhlasu neshromažďuje uživatelská data přímo. Importuje a zpracovává pouze data souhlasu poskytnuté uživateli v jiných aplikacích.
+
+Chcete-li odebrat data souhlasu konkrétních uživatelů, odstraňte je ze zdrojů dat ingestovaných funkcí správy souhlasu. Po aktualizaci zdroje dat budou odebraná data odstraněna také v Centru souhlasu. Aplikace, které používají entitu souhlasu, odstraní také data, která byla odstraněna ze zdroje po [aktualizaci](audience-insights/system.md#refresh-processes). Zdroje dat doporučujeme aktualizovat krátce po reakci na žádost subjektu údajů o odebrání dat uživatele ze všech ostatních procesů a aplikací.
+
+
+## <a name="engagement-insights-preview"></a>Přehledy zapojení (Preview)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Odstranění a export dat události obsahující identifikovatelné údaje koncového uživatele
 

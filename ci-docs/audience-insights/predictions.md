@@ -1,7 +1,7 @@
 ---
 title: Doplnění částečných dat pomocí predikcí
 description: Pomocí predikcí můžete vyplnit neúplná zákaznická data.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,17 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645026"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732370"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Doplňte své dílčí údaje pomocí predikcí
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Doplňte svá dílčí data o predikce (zastaralé)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Tato funkce bude **zastaralá** od **5. listopadu 2021**. Stávající implementace budou fungovat, dokud nebude funkce odstraněna, ale pomocí níže uvedených pokynů nebudete moci vytvářet nové integrace.
 
 Předpovědi vám umožňují snadno vytvářet předpovídané hodnoty, které mohou zlepšit vaše porozumění zákazníkovi. Na stránce **Analytické nástroje** > **Predikce** můžete volbou **Moje predikce** zobrazit predikce, které jste nakonfigurovali v jiných částech přehledů cílové skupiny, a umožnit vám je dále přizpůsobovat.
 
@@ -60,6 +61,8 @@ Další informace naleznete v tématu [Vytvoření nového prostředí](create-e
    > ![Příklad zobrazení mapovaných hodnot polí do kategorií.](media/intelligence-categorymapping.png "Příklad zobrazení mapovaných hodnot polí do kategorií")
 
 8. Vyberte **Hotovo** a předpověď bude zpracována. Zpracování bude nějakou dobu trvat, v závislosti na velikosti a složitosti dat. Výsledky buduo k dispozici v nové entitě na základě **Název výstupní entity** předpovědi, kterou jste vytvořili.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Vytvořte předpověď při vytváření segmentu
 

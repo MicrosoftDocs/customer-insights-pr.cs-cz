@@ -1,7 +1,7 @@
 ---
 title: Konfigurace systému v přehledech cílové skupiny
 description: Další informace o nastavení systému ve funkci přehledů cílové skupiny v Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651832"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732353"
 ---
-# <a name="system-configuration"></a>konfigurace systému,
+# <a name="system-configuration"></a>Konfigurace systému
+
+Chcete-li získat přístup ke konfiguraci systému v přehledech cílových skupin, na levém navigačním panelu vyberte **Správa** > **Systém**, čímž zobrazíte seznam systémových úloh a procesů.
 
 Stránka **Systém** obsahuje následující karty:
 - [Průběh](#status-tab)
@@ -30,39 +32,55 @@ Stránka **Systém** obsahuje následující karty:
 
 ## <a name="status-tab"></a>Karta stavu
 
-Karta **Stav** umožňuje sledovat průběh příjmu dat, exportu dat a několik dalších důležitých procesů produktu. Zkontrolujte informace na této kartě pro zajištění úplnosti aktivních procesů.
+Karta **Stav** umožňuje sledovat průběh úloh, příjmu dat, exportu dat a několik dalších důležitých procesů produktu. Projděte si informace na této kartě, abyste se ujistili, že vaše aktivní úlohy a procesy jsou dokončeny.
 
-Tato karta obsahuje tabulky se stavem a informacemi o zpracování pro různé procesy. Každá tabulka sleduje **Název** úlohy a její odpovídající entity, **Stav** jejího posledního běhu a kdy proběhla **Poslední aktualizace**.
+Tato karta obsahuje tabulky se stavem a informacemi o zpracování pro různé procesy. Každá tabulka sleduje **Název** úlohy a její odpovídající entity, **Stav** jejího posledního běhu a kdy proběhla **Poslední aktualizace**. Podrobnosti o posledních několika spuštěních můžete zobrazit výběrem názvu úlohy nebo procesu. 
 
-Podrobnosti o posledních několika bězích úlohy zobrazíte výběrem jejího názvu.
+Výběrem stavu vedle úlohy nebo procesu ve sloupci **Stav** otevřete podokno **Podrobnosti o průběhu**.
 
-### <a name="status-types"></a>Typy stavu
+   :::image type="content" source="media/system-progress-details.png" alt-text="Systémové podokno podrobností o průběhu":::
 
-Existuje šest typů stavů pro úkoly. Následující typy stavu se také zobrazují na stránkách *Párování*, *Sloučení*, *Zdroje dat*, *Segmenty*, *Opatření*, *Obohacení*, *Aktivity* a *Předpovědi*:
+### <a name="status-definitions"></a>Definice stavu
 
-- **Zpracovává se:** Probíhá úkol. Stav se může změnit na Úspěšný nebo Neúspěšný.
-- **Úspěšný:** Úloha byla úspěšně dokončena.
-- **Přeskočeno:** Úloha byla přeskočena. Jeden nebo více následných procesů, na kterých tato úloha závisí, selhávají nebo jsou přeskočeny.
-- **Selhání:** Zpracování úlohy se nezdařilo.
-- **Zrušeno:** Zpracování bylo uživatelem zrušeno před dokončením.
-- **Ve frontě:** Zpracování je ve frontě a začne po dokončení všech předcházejících úkolů. Další informace naleznete v [Zásadách aktualizace](#refresh-policies).
+Systém používá pro úlohy a procesy následující stavy:
 
-### <a name="refresh-policies"></a>Zásady aktualizace
+|Průběh  |Definice  |
+|---------|---------|
+|Zrušeno |Zpracování bylo před dokončením zrušeno uživatelem.   |
+|Nezdařilo se   |Při přijímání dat došlo k chybám.         |
+|Chyba  |Zpracování selhalo.  |
+|Nezahájeno   |Zdroj dat zatím nemá žádná ingestovaná data nebo je stále v režimu konceptu.         |
+|Zpracování  |Úloha nebo proces probíhá.  |
+|Probíhá aktualizace    |Probíhá příjem dat. Tuto operaci můžete zrušit výběrem **Přestat obnovovat** v sloupci **Akce**. Zastavením aktualizace zdroje dat se vrátíte do posledního stavu obnovy.       |
+|Přeskočena  |Úloha nebo proces byl přeskočen. Jeden nebo více následných procesů, na kterých tato úloha závisí, selhávají nebo jsou přeskočeny.|
+|Úspěch  |Úloha nebo proces byl úspěšně dokončen. U zdrojů dat označuje, že data byla úspěšně přijata, pokud je ve sloupci **Aktualizováno** uveden čas.|
+|Zařazeno do fronty | Zpracování je zařazeno do fronty a bude zahájeno, jakmile budou dokončeny všechny upstreamové úlohy a procesy. Další informace najdete v tématu [Aktualizace procesů](#refresh-processes).|
 
-Tento seznam zobrazuje zásady aktualizace pro každý z hlavních procesů:
+### <a name="refresh-processes"></a>Procesy aktualizací
 
-- **Zdroje dat:** Běží podle [nakonfigurovaného plánu](#schedule-tab). Nezávisí na žádném jiném procesu. Shoda závisí na úspěšném dokončení tohoto procesu.
-- **Párování** Běží podle [nakonfigurovaného plánu](#schedule-tab). Závisí na zpracování zdrojů dat použitých v definici shody. Párování závisí na úspěšném dokončení tohoto procesu.
-- **Sloučení**: Běží podle [nakonfigurovaného plánu](#schedule-tab). Závisí na úspěšném dokončení procesu párování. Segmenty, opatření, obohacení, vyhledávání, aktivity, předpovědi a příprava dat závisí na úspěšném dokončení tohoto procesu.
-- **Segmenty**: Spouštěny ručně (jednorázová aktualizace) a podle [nakonfigurovaného plánu](#schedule-tab). Závisí na sloučení. Přehledy závisí na jeho zpracování.
-- **Opatření**: Spouštěny ručně (jednorázová aktualizace) a podle [nakonfigurovaného plánu](#schedule-tab). Závisí na sloučení.
-- **Aktivity**: Spouštěny ručně (jednorázová aktualizace) a podle [nakonfigurovaného plánu](#schedule-tab). Závisí na sloučení.
-- **Obohacení**: Spouštěno ručně (jednorázová aktualizace) a podle [nakonfigurovaného plánu](#schedule-tab). Závisí na sloučení.
-- **Vyhledávání**: Spouštěno ručně (jednorázová aktualizace) a podle [nakonfigurovaného plánu](#schedule-tab). Závisí na sloučení.
-- **Připrava dat**: Běží podle [nakonfigurovaného plánu](#schedule-tab). Závisí na sloučení.
-- **Přehledy**: Spouštěny ručně (jednorázová aktualizace) a podle [nakonfigurovaného plánu](#schedule-tab). Závisí na segmentech.
+Aktualizace úloh a procesů se spouští podle [konfigurovaného plánu](#schedule-tab). 
 
-Vyberte stav úkolu a zobrazte podrobnosti o průběhu celé úlohy, ve které se nachází. Výše uvedené zásady aktualizace mohou pomoci pochopit, co můžete udělat pro splnění úkolu **Přeskočeno** nebo **Ve frontě**.
+|Zpracovat  |Popis  |
+|---------|---------|
+|Aktivita  |Spouští se ručně (jednorázová aktualizace). Závisí na procesu sloučení. Přehledy závisí na jeho zpracování.|
+|Propojení analýzy |Spouští se ručně (jednorázová aktualizace). Závisí na segmentech.  |
+|Příprava analýzy |Spouští se ručně (jednorázová aktualizace). Závisí na segmentech.  |
+|Příprava dat   |Závisí na sloučení.   |
+|Zdroje dat   |Nezávisí na žádném jiném procesu. Shoda závisí na úspěšném dokončení tohoto procesu.  |
+|Rozšíření   |Spouští se ručně (jednorázová aktualizace). Závisí na procesu sloučení. |
+|Cíle exportů |Spouští se ručně (jednorázová aktualizace). Závisí na segmentech.  |
+|Přehledy |Spouští se ručně (jednorázová aktualizace). Závisí na segmentech.  |
+|Analytické nástroje   |Závisí na sloučení.   |
+|Párování |Závisí na zpracování zdrojů dat použitých v definici shody.      |
+|Míry  |Spouští se ručně (jednorázová aktualizace). Závisí na procesu sloučení.  |
+|Sloučení   |Závisí na úspěšném dokončení procesu párování. Segmenty, opatření, obohacení, vyhledávání, aktivity, předpovědi a příprava dat závisí na úspěšném dokončení tohoto procesu.   |
+|Profily   |Spouští se ručně (jednorázová aktualizace). Závisí na procesu sloučení. |
+|Vyhledávat   |Spouští se ručně (jednorázová aktualizace). Závisí na procesu sloučení. |
+|Segmenty  |Spouští se ručně (jednorázová aktualizace). Závisí na procesu sloučení. Přehledy závisí na jeho zpracování.|
+|Systémová   |Závisí na úspěšném dokončení procesu párování. Segmenty, opatření, obohacení, vyhledávání, aktivity, předpovědi a příprava dat závisí na úspěšném dokončení tohoto procesu.   |
+|Uživatelská  |Spouští se ručně (jednorázová aktualizace). Závisí na entitách.  |
+
+Výběrem stavu procesu zobrazíte podrobnosti o průběhu celé úlohy, ve které byl. Výše popsané procesy aktualizací vám pomohou lépe pochopit, co můžete dělat s úlohami nebo procesy ve stavu **Přeskočeno** nebo **Ve frontě**.
 
 ## <a name="schedule-tab"></a>Karta Plán
 
@@ -86,7 +104,7 @@ Karta **Informace** obsahuje **Zobrazovaný název** vaší organizace, aktivní
 
 Na kartě **Obecné** můžete změnit jazyk a formát země/oblasti.
 
-Customer Insights [podporuje řadu jazyků](/dynamics365/get-started/availability). Aplikace používá vaše jazykové preference k zobrazení prvků, jako je nabídka, text štítku a systémové zprávy ve vašem upřednostňovaném jazyce.
+Řešení Customer Insights [podporuje mnoho jazyků](/dynamics365/get-started/availability). Aplikace používá vaše jazykové preference k zobrazení prvků, jako je nabídka, text štítku a systémové zprávy ve vašem upřednostňovaném jazyce.
 
 Importovaná data a informace, které jste zadali ručně, se nepřekládají.
 

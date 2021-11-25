@@ -1,7 +1,7 @@
 ---
 title: Párování entit pro sjednocení dat
 description: Přiřazujte entity ke kombinování datových sad a vytváření jednotných zákaznických profilů.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648200"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732626"
 ---
 # <a name="match-entities"></a>Párování entit
 
@@ -180,10 +180,7 @@ Jděte na **Data** > **Sjednocení** > **Párování** a volbou **Spustit** spus
 
 Výsledek úspěšného spuštění, sjednocenou entitu profilu zákazníka, najdete na stránce **Entity**. Sjednocená entita profilu zákazníka se jmenuje **Zákazníci** v sekci **Profily**. První úspěšné spuštění párování vytvoří sjednocenou entitu *Zákazník*. Všechna následná spuštění shody tuto entitu rozšíří.
 
-> [!TIP]
-> Po spuštění procesu shody vyberte stav procesu a otevřete podokno **Podrobnosti o úkolu**. Poskytuje přehled o době zpracování, datu posledního zpracování a všech chybách a výstrahách spojených s úkolem. Vyberte **Zobrazit podrobnosti**, abyste zjistili, které entity se zúčastnily procesu porovnávání, jaká pravidla u nich byla použita a zda byly aktualizace úspěšně publikovány.  
-> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Podrobná cesta k získání podrobností o zpracování z odkazu na stav úkolu.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Kontrola a ověření shody
 

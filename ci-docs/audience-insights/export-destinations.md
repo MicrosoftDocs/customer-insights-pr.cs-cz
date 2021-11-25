@@ -1,7 +1,7 @@
 ---
 title: Export dat ze služby Customer Insights
 description: Spravujte exporty ke sdílení dat.
-ms.date: 10/08/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673315"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732127"
 ---
 # <a name="exports-preview-overview"></a>Přehled exportů (Preview)
 
@@ -97,7 +97,9 @@ Po vytvoření jsou cíle exportu uvedeny v části **Data** > **Exporty**. Vši
 
 Každý export, který konfigurujete, má plán aktualizace. Během aktualizace systém hledá nová nebo aktualizovaná data, která mají být zahrnuta do exportu. Ve výchozím nastavení jsou exporty spouštěny jako součást každé [plánované aktualizace systému](system.md#schedule-tab). Plán aktualizace můžete upravit nebo jej vypnout, aby se exporty spouštěly ručně.
 
-Plány exportu závisí na stavu vašeho prostředí. Pokud probíhají aktualizace [závislostí](system.md#refresh-policies), když by měl začít plánovaný export, systém nejprve dokončí aktualizace a poté spustí export. Ve sloupci **Aktualizováno** vidíte, kdy byl export naposledy aktualizován.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Plány exportu závisí na stavu vašeho prostředí. Pokud probíhají aktualizace [závislostí](system.md#refresh-processes), když by měl začít plánovaný export, systém nejprve dokončí aktualizace a poté spustí export. Ve sloupci **Aktualizováno** vidíte, kdy byl export naposledy aktualizován.
 
 ### <a name="schedule-exports"></a>Plánování exportů
 

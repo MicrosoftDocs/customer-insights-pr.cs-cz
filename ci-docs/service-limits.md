@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483653"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7791973"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Limity služeb ve funkcích aplikace Customer Insights
 
@@ -24,9 +24,9 @@ Tento článek popisuje vestavěné limity služby Customer Insights, které jso
 
 ### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Omezení funkce přehledů cílové skupiny v Dynamics 365 Customer Insights
 
-| Plocha  | Limity  | Poznámky |
+| Plocha  | Limity  | Notes |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenty a míry | 100 segmentů nebo měr. | Celkový počet aktivních [segmentů](audience-insights/segments.md) a [měr](audience-insights/measures.md) dohromady nesmí překročit 100.  |
+| Segmenty, míry a predikce | 300  | Celkový počet [segmentů](audience-insights/segments.md), [měr](audience-insights/measures.md) a [predíkcí](audience-insights/predictions.md) dohromady nesmí přesáhnout 300.  |
 | Relace | 20 úrovní hloubky vztahů v cestách entit. | Při vytváření [segmentů](audience-insights/segments.md) nebo [měření](audience-insights/measures.md) pomocí rozhraní Builderu mohou mít cesty entit až 20 skokových relací mezi počáteční entitou a cílovou entitou.  |
 
 

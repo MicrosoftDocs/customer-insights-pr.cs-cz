@@ -1,7 +1,7 @@
 ---
 title: Sloučení entit ve sjednocení dat
 description: Sloučením entit můžete vytvořit sjednocené profily zákazníků.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648246"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732764"
 ---
 # <a name="merge-entities"></a>Správa entit
 
@@ -187,10 +187,9 @@ Zvolte **Spustit procesy sloučení a následné procesy** k aktualizaci systém
 
 Chcete-li provést další změny a znovu spustit krok, můžete zrušit probíhající sloučení. Vyberte text **Aktualizace** a vyberte **Zrušit úlohu** v postranním podokně, které se objeví.
 
-> [!TIP]
-> Po spuštění procesu sloučení vyberte stav procesu a otevřete podokno **Podrobnosti o úkolu**. Poskytuje přehled o době zpracování, datu posledního zpracování a všech chybách a výstrahách spojených s úkolem. Vyberte **Zobrazit podrobnosti**, abyste zjistili, které entity se zúčastnily procesu porovnávání, zda bylo řešení konfliktů úspěšné, jaká pravidla u nich byla použita a zda byly aktualizace úspěšně publikovány.  
-> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Podrobná cesta k získání podrobností o zpracování z odkazu na stav úkolu.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Podrobná cesta k získání podrobností o zpracování z odkazu na stav úkolu.":::
 
 ## <a name="next-step"></a>Další krok
 

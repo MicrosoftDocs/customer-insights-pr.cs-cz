@@ -1,7 +1,7 @@
 ---
 title: Sémantická mapování (Preview)
 description: Přehled sémantických mapování a jejich použití.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622927"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731935"
 ---
 # <a name="semantic-mappings"></a>Sémantická mapování
 
@@ -75,8 +75,7 @@ Sémantická mapování vám umožňují mapovat data o vaší neaktivitě na p�
 
 1. Chcete -li sémantické mapování spustit později, vyberte sémantické mapování a vyberte **Obnovit**.
 
-> [!TIP]
-> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies). Můžete vybrat stav procesu a zobrazit podrobnosti o průběhu celé úlohy. Po výběru **Zobrazit podrobnosti** pro jeden z úkolů úlohy najdete další informace: čas zpracování, datum posledního zpracování a všechny chyby a varování spojené s úkolem.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Správa stávajících sémantických mapování
 
@@ -91,5 +90,6 @@ Na kartě **Data** > **Sémantická mapování (náhled)** můžete zobrazit vš
 - **Přejmenovat**: Otevře dialog, kde můžete zadat jiný název pro vybrané sémantické mapování. Výběrem možnosti **Uložit** se vaše změny uplatní.
 
 - **Odstranit**: Otevře dialog pro potvrzení odstranění vybraného sémantického mapování. Můžete také odstranit více než jedno sémantické mapování najednou výběrem sémantického mapování a ikonou odstranění. Vyberte **Odstranit** pro potvrzení odstranění.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Hledání a filtrování profilů zákazníků
 description: Rychle vyhledejte informace o sjednocených profilech zákazníků a filtrujte zadané atributy.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7469953"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732026"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profily zákazníků: Prohledávání a filtrování indexu
 
 Výsledkem sjednocení údajů o zákaznících je entita profilu zákazníka, která poskytuje jednotný pohled na vaši celkovou zákaznickou základnu. Chcete-li rychle [najít informace o konkrétním zákazníkovi nebo skupině zákazníků](customer-profiles.md), můžete nakonfigurovat funkce **Vyhledávání** a **Filtr** na stránce **Zákazníci**. Čtěte dále a dozvíte se, jak mohou správci upravovat atributy na stránce **Prohledávání a filtrování rejstříku**, které jsou uživatelům k dispozici pro vyhledávání a filtrování.
 
-> [!div class="mx-imgBorder"]
-> ![Filtr hledání.](media/search-filter.png "Filtr hledání")
+   :::image type="content" source="media/search-filter.png" alt-text="Filtr hledání":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Přidejte pole a zadejte atributy
 

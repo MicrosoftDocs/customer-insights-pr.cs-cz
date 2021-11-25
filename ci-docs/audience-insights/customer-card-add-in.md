@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643382"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792019"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplněk karty zákazníka (preview)
 
@@ -34,7 +34,7 @@ Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dyna
   - **Kontrola měření**: Vyžaduje [nakonfigurované míry](measures.md) atributů typu zákazníka.
   - **Ovládání analytických nástrojů**: Vyžaduje data generovaná pomocí [predikcí](predictions.md) nebo [vlastních modelů](custom-models.md).
   - **Kontrola podrobností zákazníka**: Všechna pole z profilu jsou k dispozici v jednotném zákaznickém profilu.
-  - **Kontrola rozšíření:** Vyžaduje aktivní [rozšíření](enrichment-hub.md) aplikované na profily zákazníků.
+  - **Kontrola rozšíření:** Vyžaduje aktivní [rozšíření](enrichment-hub.md) aplikované na profily zákazníků. Doplněk karty podporuje tato vylepšení: [Značky](enrichment-microsoft.md) poskytované společností Microsoft, [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft.
   - **Ovládání kontaktů**: Vyžaduje definici sémantické entity kontaktů typu.
   - **Ovládací prvek časové osy**: Vyžaduje [konfigurované aktivity](activities.md).
 

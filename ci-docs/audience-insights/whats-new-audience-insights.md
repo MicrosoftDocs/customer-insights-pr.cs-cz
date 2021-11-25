@@ -1,7 +1,7 @@
 ---
 title: Nové a připravované funkce
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673820"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753109"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
 
@@ -26,6 +26,41 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Aktualizace říjen 2021
+
+Aktualizace v říjnu 2021 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="b-to-b"></a>B2B
+
+Od října 2021 můžete v Customer Insights pracovat s obchodními účty a jejich souvisejícími kontakty. Dříve byla aplikace většinou přizpůsobena individuálním spotřebitelům. Bylo aktualizováno několik oblastí funkcí, aby podporovaly scénáře B2B nad rámec nového typu prostředí. Přehled podporovaných funkcí B2B viz [Práce s obchodními účty v přehledech cílové skupiny](work-with-business-accounts.md).
+
+Následující části zdůrazňují některé z klíčových oblastí, které byly přizpůsobeny podpoře obchodních účtů a individuálních spotřebitelů.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Export segmentů na základě obchodních účtů
+
+Všechny exporty segmentů v přehledech cílových skupin jsou dostupné v kontextu obchodních účtů. Většina exportů segmentů vyžaduje zvláštní konfiguraci a [kontaktní informace promítnuté](segment-builder.md#create-a-new-segment) v podkladových segmentech, aby byly platné pro firemní účty. Další informace viz [Export segmentů](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Použití exportu LinkedIn Ads s obchodními účty
+
+Nyní je k dispozici export LinkedIn Ads pro cílení kontaktů a společností v kontextu obchodních účtů. Když vyberete cílení na společnost jako primární cíl exportu LinkedIn, můžete exportovat segmenty postavené na obchodních účtech, aniž byste museli projektovat kontaktní informace. Další informace najdete v dokumentech o [exportu LinkedIn Ads](export-linkedin-ads.md) a rozdílech mezi [cílením kontaktů](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) a [cílením společností](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Vytváření měr založených na obchodních účtech a jejich hierarchii
+
+Tvůrce měr umožňuje vytvářet míry v obchodních účtech a volitelně používat informace o hierarchii. Informace o hierarchii shrnují výpočet měr napříč účtem a všemi souvisejícími podúčty. Můžete například vytvořit míry typu celkové výnosy pro každou skupinu obchodních účtů identifikovaných podle jejich hierarchie. Další informace viz [Definování a správa měr](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Vytváření segmentů založených na obchodních účtech a jejich hierarchii
+
+Tvůrce segmentů umožňuje vytvářet segmenty obchodních účtů, které volitelně zahrnují kontaktní informace pro každý účet v segmentu. Pokud máte vytvořenou hierarchii účtu, při vytváření segmentu můžete použít informace o hierarchii účtu. Další informace naleznete v tématu [Vytvoření nového segmentu](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Udržení zákazníků v obchodních účtech pomocí podrobných přehledů o tendencích odlivu zákazníků
+
+Model predikce ztracených zákazníků nyní podporuje také obchodní účty. Riziko odchodu můžete vyhodnotit nejen pro obchodní vztah, ale i pro kombinaci obchodního vztahu a kategorie produktů nebo služeb, které si od vás koupí. Tento přídavek vám pomůže pochopit, zda je pravděpodobnější, že od vás obchodní vztah přestane nakupovat obecně nebo jen v určité kategorii zboží nebo služeb. Pro další usnadnění tento model AI také uvádí důvody, proč je pravděpodobný odliv zákazníků pro tento obchodní vztah. Další informace viz [Predikce úbytku transakcí (Preview)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Zobrazení kontaktů obchodního účtu v zobrazení zákazníka
+
+Pokud jsou obchodní účty namapovány na související účty, aplikace Customer Insights zobrazí tyto související kontakty jako součást zobrazení podrobností o zákazníkovi. Další informace viz [Profily zákazníků](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Aktualizace ze září 2021
 
