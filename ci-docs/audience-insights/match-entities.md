@@ -1,7 +1,7 @@
 ---
 title: Párování entit pro sjednocení dat
-description: Přiřazujte entity ke kombinování datových sad a vytváření jednotných zákaznických profilů.
-ms.date: 11/01/2021
+description: Spárováním entit můžete vytvořit sjednocené profily zákazníků.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732626"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863803"
 ---
 # <a name="match-entities"></a>Párování entit
 
@@ -224,17 +224,24 @@ Většinu parametrů párování můžete překonfigurovat a doladit.
 
 ## <a name="specify-custom-match-conditions"></a>Zadání vlastních podmínek párování
 
-Můžete určit podmínky, za kterých by se určité záznamy měly vždy shodovat nebo by se neměly nikdy shodovat. Tato pravidla lze nahrát, čímž dojde k přepsání standardního procesu párování. Pokud jsou například v našich záznamech John Doe I a John Doe II, systém by je mohl spárovat jako jednu osobu. Vlastní pravidla párování umožňují určit, že jejich profily odkazují na různé lidi. 
+Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici jsou čtyři možnosti: 
+
+|Možnost  |Description |Příklad  |
+|---------|---------|---------|
+|Vždy se shodovat     | Definuje hodnoty, které se vždy shodují.         |  Vždy se shodují *Mike* a *MikeR*.       |
+|Nikdy se neshodovat     | Definuje hodnoty, které se nikdy neshodují.        | Nikdy se neshodují *John* a *Jonathan*.        |
+|Vlastní obejití     | Definuje hodnoty, které by měl systém ve fázi shody vždy ignorovat. |  Ignorujte hodnoty *11111* a *Neznámá* během shody.        |
+|Mapování aliasů    | Definování hodnot, které by měl systém považovat za stejnou hodnotu.         | Považuje *Joe* za shodné s *Joseph*.        |
 
 1. Jděte na **Data** > **Sjednocení** > **párování** a vyberte **Vlastní párování** v sekci **Podrobnosti o spárovaných záznamech**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Screenshot sekce Pravidla párování se zvýrazněným ovládacím prvkem Vlastní párování.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Screenshot sekce Pravidla párování se zvýrazněným ovládacím prvkem Vlastní párování.":::
 
-1. Pokud nemáte nastavena žádná vlastní pravidla párování, zobrazí se nové podokno **Vlastní párování** s více podrobnostmi.
+1. V podokně **Vlastní** přejděte na kartu **Záznamy**.
 
-1. Vyberte **Vyplnit šablonu**, chcete-li získat soubor šablony, který může určit, které záznamy entit by se měly vždy párovat nebo nikdy párovat. Budete muset samostatně zadat záznamy "vždy párovat" a záznamy "nikdy nepárovat" ve dvou různých souborech.
+1. Vyberte možnost vlastní shody z rozevíracího seznamu **Vlastní typ** a vyberte **Stáhnout šablonu**. Pro každou možnost shody potřebujete samostatnou šablonu.
 
-1. Šablona obsahuje pole pro určení entity a hodnoty primárního klíče entity, které mají být použity ve vlastní shodě. Například pokud chcete, aby se primární klíč *12345* z entity *Prodej* vždy shodoval s primárním klíčem *34567* z entity *Kontakt*, vyplňte šablonu:
+1. Stáhne se soubor šablony. Otevřete jej a vyplňte podrobnosti. Šablona obsahuje pole pro určení entity a hodnoty primárního klíče entity, které mají být použity ve vlastní shodě. Například pokud chcete, aby se primární klíč *12345* z entity *Prodej* vždy shodoval s primárním klíčem *34567* z entity *Kontakt*, vyplňte šablonu:
     - Entita 1: Prodej
     - Klíč entity 1: 12345
     - Entita 2: Kontakt
@@ -244,26 +251,32 @@ Můžete určit podmínky, za kterých by se určité záznamy měly vždy shodo
    
    Pokud chcete zadat vlastní párování pro odstranění duplicit v entitě, zadejte stejnou entitu jako Entita 1 a Entita 2 a nastavte různé hodnoty primárního klíče.
 
-1. Po přidání všech přepsání, které chcete použít, uložte soubor šablony.
+1. Po přidání všech přepsání uložte soubor šablony.
 
-1. Přejděte na **Data** > **Zdroje dat** a ingestujte soubory šablon jako nové entity. Po požití je můžete použít k určení konfigurace Shoda.
+1. Přejděte na **Data** > **Zdroje dat** a ingestujte soubory šablon jako nové entity.
 
-1. Po nahrání souborů a entit opět vyberte možnost **Vlastní párování**. Zobrazí se možnosti určující entity, které chcete zahrnout. V rozevírací nabídce vyberte požadované entity.
+1. Po nahrání souborů a entit opět vyberte možnost **Vlastní párování**. Zobrazí se možnosti určující entity, které chcete zahrnout. Vyberte požadované entity z rozbalovacího seznamu a vyberte **Hotovo**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Screenshot dialogového okna pro výběr přepsání v případě scénáře vlastní shody.":::
 
-1. Vyberte entity, které chcete použít pro **Vždy párovat** a **Nikdy nepárovat**, a vyberte **Hotovo**.
+1. Použití vlastní shody závisí na možnosti shody, kterou chcete použít. 
+
+   - Pro **Vždy se shodovat** nebo **Nikdy se neshodovat** pokračujte dalším krokem.
+   - Pro **Vlastní obejití** nebo **Mapování aliasů** vyberte **Upravit** v existujícím pravidlu shody nebo vytvořte nové pravidlo. V rozevíracím seznamu Normalizace vyberte možnost **Vlastní obejití** nebo **Mapování aliasů** a vyberte **Hotovo**.
 
 1. Volbou **Uložit** na stránce **Párování** použijte vlastní konfiguraci párování.
 
 1. Volbou **Spustit** na stránce **Párování** spusťte proces párování. Ostatní zadaná pravidla párování jsou přepsána vlastní konfigurací párování.
 
-> [!TIP]
-> Jděte na **Data** > **Entity** a zkontrolujte entitu **ConflationMatchPair**, zda došlo k přepsání.
+### <a name="known-issues"></a>Známé problémy 
+
+- Samosloučení neukazuje normalizovaná data v deduplikačních entitách. Normalizaci však aplikuje interně během deduplikace. Je to záměrné pro všechny normalizace. 
+- Pokud je nastavení sémantického typu odstraněno ve fázi **Mapovat**, kdy pravidlo shody používá mapování aliasu nebo vlastní obejití, normalizace se nepoužije. Stává se to pouze v případě, že po konfiguraci normalizace v pravidle shody vymažete sémantický typ, protože sémantický typ bude neznámý.
+
 
 ## <a name="next-step"></a>Další krok
 
-Po dokončení procesu shody pro alespoň jednu dvojici shody můžete vyřešit možné rozpory v datech procházením tématu [**Sloučení**](merge-entities.md).
+Po dokončení procesu shody pro alespoň jeden shodný pár pokračujte ke kroku [**Spojit**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

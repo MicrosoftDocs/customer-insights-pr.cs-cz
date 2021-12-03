@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618283"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866880"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Export segmentů do LinkedIn Ads (preview)
 
@@ -28,6 +28,7 @@ Exportujte segmenty sjednocených profilů zákazníků do reklam LinkedIn Ads a
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Váš segment v Customer Insights musí obsahovat alespoň 300 jedinečných profilů. 
 - Do LinkedIn Ads můžete najednou exportovat až 100 000 zákaznických profilů.
 - Export do LinkedIn Ads je omezen na segmenty.
 - Export až 100 000 zákaznických profilů do LinkedIn Ads může trvat až 10 minut. 
