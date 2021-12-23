@@ -1,7 +1,7 @@
 ---
 title: Přírůstková aktualizace pro zdroje dat založené na Power Query
 description: Aktualizujte nová a aktualizovaná data pro velké zdroje dat založené na Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377826"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900247"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Přírůstková aktualizace pro zdroje dat založené na Power Query
+
+Tento článek popisuje, jak nakonfigurovat přírůstkovou aktualizaci pro zdroje dat na základě Power Query.
 
 Přírůstková aktualizace pro zdroje dat poskytuje následující výhody:
 
@@ -30,9 +32,9 @@ Přehledy cílové skupiny umožňují přírůstkovou aktualizaci zdrojů dat i
 
 1. [Vytvoření nového zdroje dat na základě Power Query](connect-power-query.md).
 
-1. Zadejte název zdroje dat.
+1. Zadejte **Název** zdroje dat.
 
-1. Vyberte zdroj dat, který podporuje přírůstkové aktualizace, například databázi Azure SQL.
+1. Vyberte zdroj dat, který podporuje přírůstkové aktualizace, například [databázi Azure SQL](/power-query/connectors/azuresqldatabase).
 
 1. Vyberte entity nebo tabulky, které chcete ingestovat.
 

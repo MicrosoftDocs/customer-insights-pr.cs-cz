@@ -1,7 +1,7 @@
 ---
 title: Vlastní modely strojové učení | Microsoft Docs
 description: Práce s vlastními modely z řešení Azure Machine Learning v aplikaci Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032934"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881776"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastní modely strojového učení
+
+> [!NOTE]
+> Podpora pro Machine Learning Studio (klasické) skončí 31. srpna 2024. Do tohoto data vám doporučujeme přejít na [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning).
+>
+> Od 1. prosince 2021 nebudete moci vytvářet nové zdroje Machine Learning Studio (klasické). Do 31. srpna 2024 můžete nadále používat stávající zdroje Machine Learning Studio (klasické). Další informace viz [Migrace do Azure Machine Learning](/azure/machine-learning/migrate-overview).
+
 
 **Analytické nástroje** > **Vlastní modely** umožňuje spravovat pracovní postupy založené na modelech strojového učení Azure Machine Learning. Pracovní postupy vám pomohou vybrat data, ze kterých chcete generovat přehledy, a namapovat výsledky na vaše sjednocená data o zákaznících. Další informace o vytváření vlastních modelů ML najdete v tématu [Použití modelů založených na Azure Machine Learning](azure-machine-learning-experiments.md).
 
@@ -24,9 +30,9 @@ ms.locfileid: "7032934"
 
 Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obchodní schopnosti a zdroje příjmů. Důrazně doporučujeme, abyste vyvážili hodnotu své predikce s dopadem, který má, a možnými opatřeními proti předpojatosti zavedenými z etických důvodů. Další informace, jak společnost Microsoft [přistupuje k zodpovědné AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Můžete se také dozvědět o [technikách a procesech pro zodpovědné strojové učení](/azure/machine-learning/concept-responsible-ml) specifické pro Azure Machine Learning.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-- V současné době tato funkce podporuje webové služby publikované prostřednictvím [Machine Learning Studio (classic)](https://studio.azureml.net) a [dávkových kanálů Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
+- Tato funkce podporuje webové služby publikované prostřednictvím [dávkových kanálů Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
 
 - Abyste mohli používat tuto funkci, potřebujete účet úložiště Azure Data Lake Gen2 přidružený k vaší instanci Azure Studio. Další informace viz [Vytvoření účtu úložiště Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
 
 1. Pokud je vaše předplatné Azure Machine Learning v jiném klientovi než Customer Insights, vyberte **Přihlásit** pomocí přihlašovacích údajů pro vybranou organizaci.
 
-1. Vyberte **Pracovní prostory** přidružené k vaší webové službě. Jsou zde uvedeny dvě sekce, jedna pro Azure Machine Learning v1 (Machine Learning Studio (classic)) a Azure Machine Learning v2 (Azure Machine Learning). Pokud si nejste jisti, který pracovní prostor je ten pravý pro vaši webovou službu Machine Learning Studio (classic), vyberte **Žádný**.
+1. Vyberte **Pracovní prostory** přidružené k vaší webové službě. 
 
-1. Zvolte webovou službu Machine Learning Studio (classic) nebo kanál Azure Machine Learning v rozevíracím seznamu **Webová služba obsahující váš model**. Pak vyberte **Další**.
-   - Další informace o [publikování webové služby v Machine Learning Studio (classic)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Další informace o [publikování kanálu v Azure Machine Learning pomocí návrháře](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) nebo [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Váš kanál musí být publikován pod [koncovým bodem kanálu](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Vyberte kanál Azure Machine Learning v rozevíracím seznamu **Webová služba obsahující váš model**. Pak vyberte **Další**.    
+   Další informace o [publikování kanálu v Azure Machine Learning pomocí návrháře](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) nebo [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Váš kanál musí být publikován pod [koncovým bodem kanálu](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Pro každou položku **Vstup webové služby** vyberte odpovídající **entitu** z přehledů cílové skupiny a vyberte **Další**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
    > ![Konfigurace pracovního postupu.](media/intelligence-screen2-updated.png "Konfigurace pracovního postupu")
 
 1. V kroku **Výstupní parametry modelu** nastavte následující vlastnosti:
-   - Machine Learning Studio (classic)
-      1. Zadejte **Název entity** výstupu, kam mají směřovat výstupní výsledky webové služby.
-   - Azure Machine Learning
       1. Zadejte **Název entity** výstupu, kam mají směřovat výstupní výsledky kanálu.
       1. Vyberte **Název parametru úložiště výstupních dat** vašeho dávkového kanálu z rozbalovací nabídky.
       1. Vyberte **Název parametru výstupní cesty** vašeho dávkového kanálu z rozbalovací nabídky.
@@ -93,9 +95,6 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
 1. Pro každou položku **Vstup webové služby** můžete změnit odpovídající **entitu** z přehledů cílové skupiny. Pak vyberte **Další**.
 
 1. V kroku **Výstupní parametry modelu** nastavte následující vlastnosti:
-   - Machine Learning Studio (classic)
-      1. Zadejte **Název entity** výstupu, kam mají směřovat výstupní výsledky webové služby.
-   - Azure Machine Learning
       1. Zadejte **Název entity** výstupu, kam mají směřovat výstupní výsledky kanálu.
       1. Vyberte **Název parametru úložiště výstupních dat** pro váš testovací kanál.
       1. Vyberte **Název parametru výstupní cesty** pro váš testovací kanál.

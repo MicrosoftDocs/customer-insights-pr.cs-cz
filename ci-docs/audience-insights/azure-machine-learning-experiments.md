@@ -1,7 +1,7 @@
 ---
 title: Experimenty v Azure Machine Learning
 description: Použití modelů založených na Azure Machine Learning v Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,16 +9,16 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: e37eec503c9df83ef72497e22afa1266296e642c
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033164"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881730"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Použití modelů založených na Azure Machine Learning
 
-Sjednocená data v Dynamics 365 Customer Insights jsou zdrojem pro vytváření modelů strojového učení, které mohou generovat další obchodní poznatky. Customer Insights se integruje s řešeními Machine Learning Studio (classic) a Azure Machine Learning, abyste mohli používat své vlastní modely. Viz [Experimenty v Machine Learning Studio (classic)](machine-learning-studio-experiments.md), kde najdete příklady experimentů postavených na Machine Learning Studio (classic). 
+Sjednocená data v Dynamics 365 Customer Insights jsou zdrojem pro vytváření modelů strojového učení, které mohou generovat další obchodní poznatky. Řešení Customer Insights je integrováno s Azure Machine Learning, abyste mohli používat vaše vlastní modely.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -35,7 +35,7 @@ Sjednocená data v Dynamics 365 Customer Insights jsou zdrojem pro vytváření 
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Práce s návrhářem Azure Machine Learning
 
-Návrhář Azure Machine Learning poskytuje vizuální plátno, kam můžete přetahovat datové sady a moduly, podobně jako Machine Learning Studio (klasické řešení). Dávkový kanál vytvořený v návrháři lze integrovat do aplikace Customer Insights, pokud je odpovídajícím způsobem nakonfigurována. 
+Návrhář Azure Machine Learning poskytuje vizuální plátno, kde můžete přetahovat datové sady a moduly. Dávkový kanál vytvořený v návrháři lze integrovat do aplikace Customer Insights, pokud je odpovídajícím způsobem nakonfigurována. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Práce s Azure Machine Learning SDK
 

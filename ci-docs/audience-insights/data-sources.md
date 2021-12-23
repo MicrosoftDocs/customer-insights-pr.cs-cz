@@ -1,7 +1,7 @@
 ---
 title: Použití zdrojů dat pro ingestaci dat
 description: Naučte se, jak importovat data z různých zdrojů.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6846c73cb156aaa049e2656c8e327bcba1f73abc
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732119"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900328"
 ---
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
@@ -25,19 +25,22 @@ Funkce přehledů cílové skupiny v Dynamics 365 Customer Insights propojuje da
 
 ## <a name="add-a-data-source"></a>Přidat zdroj dat
 
-V závislosti na zvolené možnosti si přečtěte podrobné články o tom, jak přidat zdroj dat.
+V podrobných článcích se dozvíte, jak přidat zdroj dat v závislosti na zvolené možnosti.
 
-Zdroj dat můžete přidat třemi hlavními způsoby:
+Jako zástupce můžete přidat následující zdroje dat:
 
-- [Prostřednictvím desítek konektorů Power Query](connect-power-query.md)
-- [Ze složky modelu Common Data Model](connect-common-data-model.md)
-- [Z vlastního jezera Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [Konektory Power Query](connect-power-query.md)
+- [Common Data Model](connect-common-data-model.md)
+- [Jezero Microsoft Dataverse](connect-dataverse-managed-lake.md)
+
+> [!NOTE]
+> Pokud používáte zkušební verzi, sekce s metodami importu obsahuje možnost **Knihovna dat Customer Insights**. Tuto možnost vyberte, chcete-li vybrat ukázkovou datovou sadu dostupnou pro různá odvětví. Další informace viz [Zkušební verze Dynamics 365 Customer Insights](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Přidání dat z místních zdrojů dat
 
-Příjem dat z místních zdrojů dat v cílové skupině přehledů je podporován na základě toků dat Microsoft Power Platform. Toky dat lze povolit v nástroji Customer Insights [poskytnutím adresy URL prostředí Microsoft Dataverse](create-environment.md) při nastavování prostředí.
+Příjem dat z místních zdrojů dat v cílové skupině přehledů je podporován na základě toků dat Microsoft Power Platform. Datové toky v Customer Insights můžete povolit [zadáním adresy URL prostředí Microsoft Dataverse](create-environment.md) při nastavování prostředí.
 
-Zdroje dat, které se vytvoří po přidružení prostředí Dataverse k nástroji Customer Insights, budou používat [toky dat Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) ve výchozím stavu. Datové toky podporují místní připojení pomocí datové brány. Odeberte a znovu vytvořte zdroje dat, které existovaly před přidružením prostředí Dataverse k [použití místních bran dat](/data-integration/gateway/service-gateway-app).
+Zdroje dat, které jsou vytvořeny po přidružení prostředí Dataverse ke Customer Insights, standardně používají [datové toky Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datové toky podporují místní připojení pomocí datové brány. Zdroje dat, které existovaly před přidružením prostředí Dataverse, můžete odebrat a znovu vytvořit [pomocí místní bran dat](/data-integration/gateway/service-gateway-app).
 
 Datové brány z existujícího prostředí Power BI nebo Power Apps bude viditelné a můžete jej znovu použít ve službě Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy, na které chcete přejít v prostředí Microsoft Power Platform, kde můžete prohlížet a konfigurovat místní datové brány.
 

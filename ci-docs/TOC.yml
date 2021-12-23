@@ -84,7 +84,7 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Rozšířené adresy
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Vylepšení dat společnosti
+        - name: Vylepšená data společnosti
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Přidejte si Azure Maps
           href: audience-insights/enrichment-azure-maps.md
@@ -94,6 +94,8 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Obohacení pomocí Experian
           href: audience-insights/enrichment-experian.md
+        - name: Rozšíření pomocí dat Office 365
+          href: audience-insights/enrichment-office.md
         - name: Rozšíření pomocí vlastního importu SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmenty
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Experimenty s Azure Machine Learning
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Experimenty v Azure Machine Learning Studio
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Správa predikcí
           href: audience-insights/manage-predictions.md
         - name: Vytvoření segmentů na základě predikcí
@@ -240,6 +240,8 @@
               href: audience-insights/use-azure-key-vault.md
             - name: Připojení k účtu úložiště ADLS pomocí instančního objektu
               href: audience-insights/connect-service-principal.md
+            - name: Export diagnostických protokolů
+              href: audience-insights/diagnostics.md
     - name: Rozšiřitelnost
       items:
         - name: Integrace webových dat z přehledů o zapojení zákazníků

@@ -1,7 +1,7 @@
 ---
 title: Připojení dat Common Data Model k účtu Azure Data Lake
 description: Práce s daty Common Data Model pomocí Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033118"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900189"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Připojení ke složce Common Data Model prostřednictvím účtu Azure Data Lake
 
@@ -30,7 +30,7 @@ Tento článek poskytuje informace, jak ingestovat data ze složky Common Data M
 
 - Účet úložiště Azure Data Lake, ke kterému se chcete připojit a ingestovat data, musí být ve stejné oblasti Azure jako prostředí Dynamics 365 Customer Insights. Připojení ke složce Common Data Model z datového jezera v jiné oblasti Azure není podporováno. Chcete-li znát svoji oblast prostředí Azure, přejděte na **Správce** > **Systém** > **O produktu** v přehledech cílové skupiny.
 
-- Data uložená ve službách online mohou být uložena v jiném umístění, než kde jsou zpracovávána nebo uložena v Dynamics 365 Customer Insights. Importem nebo připojením k datům uloženým v online službách souhlasíte s tím, že data lze přenášet a ukládat pomocí Dynamics 365 Customer Insights. [Další informace naleznete v Microsoft Trust Center.](https://www.microsoft.com/trust-center)
+- Data uložená ve službách online mohou být uložena v jiném umístění, než kde jsou zpracovávána nebo uložena v Dynamics 365 Customer Insights. Importem nebo připojením k datům uloženým v online službách souhlasíte s tím, že data lze přenášet a ukládat pomocí Dynamics 365 Customer Insights. [Další informace naleznete v Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Připojit se ke složce modelu Common Data Model
 
@@ -38,12 +38,11 @@ Tento článek poskytuje informace, jak ingestovat data ze složky Common Data M
 
 1. Vyberte **Přidat zdroj dat**.
 
-1. Vyberte **Připojit se ke složce modelu Common Data Model**, zadejte **Název** pro zdroj dat a vyberte **Další**. Pokyny pro tvoření názvů: 
-   - Začněte písmenem.
-   - Používejte pouze písmena a číslice. Nejsou povoleny speciální znaky a mezery.
-   - Název musí mít 3 až 64 znaků.
+1. Vyberte **Azure Data Lake Storage**, vložte **Název** zdroje dat a poté vyberte **Další**.
 
-1. Můžete si vybrat mezi použitím možnosti založené na prostředku a možnosti založené na předplatném ověřování. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Zadejte informace o **Kontejneru** a vyberte **Další**.
+   - Pokud budete vyzváni, vyberte jednu z ukázkových datových sad, které se týkají vašeho odvětví, a poté vyberte **Další**. 
+
+1. Můžete si vybrat mezi použitím možnosti založené na prostředku a možnosti založené na předplatném ověřování. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Zadejte **Adresu serveru**, vyberte **Přihlásit se** a poté vyberte **Další**.
    > [!div class="mx-imgBorder"]
    > ![Dialogové okno pro zadání nových podrobností o připojení pro Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Tento článek poskytuje informace, jak ingestovat data ze složky Common Data M
    > [!NOTE]
    > Soubor model.json ani manifest.json přidružený k jinému zdroj dat v prostředí se v seznamu nezobrazí.
 
-1. Ve vybraném souboru model.json nebo manifest.json získáte seznam dostupných entit. Můžete zkontrolovat seznam dostupných entit, vybrat z něho a vybrat **Uložit**. Všechny vybrané entity budou ingestovány z nového zdroje dat.
+1. Ve vybraném souboru model.json nebo manifest.json uvidíte seznam dostupných entit. Projděte si jej, vyberte si z něj a zvolte **Uložit**. Všechny vybrané entity budou ingestovány z nového zdroje dat.
    > [!div class="mx-imgBorder"]
    > ![Dialogové okno zobrazující seznam entit ze souboru model.json.](media/review-entities.png)
 
-8. Označte, pro které datové entity chcete povolit profilování dat a vyberte **Uložit**. Profilování dat umožňuje analýzy a další funkce. Můžete vybrat celou entitu, čímž vyberete všechny atributy z entity, nebo můžete vybrat jen některé atributy dle vaší preference. Ve výchozím nastavení není pro profilování dat povolena žádná entita.
+8. Označte, pro které datové entity chcete povolit profilování dat, a poté vyberte **Uložit**. Profilování dat umožňuje analýzy a další funkce. Můžete vybrat celou entitu, čímž vyberete všechny atributy z entity, nebo můžete vybrat jen některé atributy dle vaší preference. Ve výchozím nastavení není pro profilování dat povolena žádná entita.
    > [!div class="mx-imgBorder"]
    > ![Dialogové okno zobrazující profilování dat.](media/dataprofiling-entities.png)
 

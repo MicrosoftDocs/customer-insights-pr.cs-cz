@@ -1,7 +1,7 @@
 ---
 title: Sémantická mapování (Preview)
 description: Přehled sémantických mapování a jejich použití.
-ms.date: 11/01/2021
+ms.date: 12/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731935"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881822"
 ---
-# <a name="semantic-mappings"></a>Sémantická mapování
+# <a name="semantic-mappings-preview"></a>Sémantická mapování (Preview)
 
 Sémantická mapování vám umožňují mapovat data o vaší neaktivitě na předem definovaná schémata. Tato schémata pomáhají přehledům cílové skupiny lépe porozumět vašim datovým atributům. Sémantické mapování a poskytovaná data umožňují nové přehledy a funkce v přehledech cílové skupiny. Chcete -li namapovat data o vaší aktivitě na schémata, zkontrolujte dokumentaci k [aktivitám](activities.md).
 
@@ -91,5 +91,40 @@ Na kartě **Data** > **Sémantická mapování (náhled)** můžete zobrazit vš
 
 - **Odstranit**: Otevře dialog pro potvrzení odstranění vybraného sémantického mapování. Můžete také odstranit více než jedno sémantické mapování najednou výběrem sémantického mapování a ikonou odstranění. Vyberte **Odstranit** pro potvrzení odstranění.
 
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Pomocí mapování sémantické entity ContactProfile vytvořte aktivity na úrovni kontaktu
+
+Po vytvoření mapování sémantické entity *ContactProfile*, můžete zachytit aktivity kontaktů. Na časové ose aktivity pro obchodní vztah vám umožňuje vidět , který kontakt byl zodpovědný za jednotlivé aktivity. Většina kroků se řídí typickou konfigurací mapování aktivit.
+
+   > [!NOTE]
+   > Aby aktivity na úrovni kontaktu fungovaly, musíte mít oba atributy **AccountID** a **ContactID** pro každý záznam v datech aktivity.
+
+1. [Definujte mapování sémantické entity *ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) a spusťte sémantické mapování.
+
+1. V přehledech cílové skupiny přejděte na **Data** > **Aktivity**.
+
+1. Volbou **Přidat aktivitu** vytvořte novou aktivitu.
+
+1. Pojmenujte aktivitu, vyberte zdrojovou entitu aktivity a vyberte primární klíč entity aktivity.
+
+1. V kroku **Vztahy** vytvořte nepřímý vztah mezi zdroji dat aktivity a obchodními vztahy prostřednictvím vašich kontaktních údajů jako zprostředkující entity. Další informace viz [přímé a nepřímé cesty vztahů](relationships.md#relationship-paths).
+   - Příklad vztahu pro aktivitu nazvanou *Nákupy*:
+      - **Zdrojová data aktivity pro nákupy** > **Kontaktní údaje** na atributu **ContactID**
+      - **Kontaktní údaje** > **Údaje o obchodním vztahu** na atributu **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Ukázkové nastavení vztahu.":::
+
+1. Po nastavení vztahů vyberte **Další** a dokončete konfiguraci mapování aktivit. Podrobné kroky k vytvoření aktivity viz [definování aktivity](activities.md).
+
+1. Spusťte mapování aktivit.
+
+1. Vaše aktivity na úrovni kontaktu budou nyní viditelné na časové ose zákazníka.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Konečný výsledek po konfiguraci kontaktních aktivit":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Filtrování časové osy aktivity na úrovni kontaktu
+
+Po konfiguraci mapování aktivity na úrovni kontaktu a jejím spuštění se aktualizuje časová osa aktivit vašich zákazníků. Obsahuje jejich ID nebo jména v závislosti na konfiguraci entity *ContactProfile* pro aktivity, které prováděli. Aktivity můžete filtrovat podle kontaktů na časové ose, abyste viděli konkrétní kontakty, které vás zajímají. Kromě toho můžete zobrazit všechny aktivity, které nejsou přiřazeny ke konkrétnímu kontaktu, výběrem možnosti **Aktivity, které nejsou mapovány na kontakt**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Možnosti filtrování dostupné pro aktivity na úrovni kontaktu.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

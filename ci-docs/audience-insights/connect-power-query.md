@@ -1,7 +1,7 @@
 ---
-title: Ingestování data prostřednictvím konektoru Power Query
+title: Příjem dat přes konektor Power Query (video)
 description: Konektory pro zdroje dat založené na Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732210"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903832"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Připojte se k Power Query zdroji dat
 
-Power Query nabízí širokou sadu konektorů pro příjem dat. Většina z těchto konektorů je podporována Dynamics 365 Customer Insights. Přidání zdrojů dat na základě Power Query konektorů obecně postupuje podle kroků uvedených v následující části. V závislosti na použitém konektoru jsou však vyžadovány různé informace. Další informace najdete v dokumentaci o jednotlivých konektorech v [Odkazu na konektory Power Query](/power-query/connectors/).
+Power Query nabízí širokou sadu konektorů pro příjem dat. Většina z těchto konektorů je podporována Dynamics 365 Customer Insights. 
+
+Přidávání zdrojů dat na základě konektorů Power Query se obecně řídí kroky popsanými v této části. V závislosti na použitém konektoru jsou však vyžadovány různé informace. Další informace naleznete v dokumentaci k jednotlivým konektorům v [podkladech ke konektoru Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query nabízí širokou sadu konektorů pro příjem dat. Většina z těc
 
 1. Vyberte **Přidat zdroj dat**.
 
-1. Vyberte metodu **Import dat** a vyberte **Další**.
+1. Vyberte **Microsoft Power Query** a poté vyberte **Další**.
 
-1. Uveďte **Název** pro zdroj dat a vyberte **Další** k vytvoření zdroje dat. Pokyny pro tvoření názvů: 
-   - Začněte písmenem.
-   - Používejte pouze písmena a číslice. Nejsou povoleny speciální znaky a mezery.
-   - Název musí mít 3 až 64 znaků.
+1. Uveďte **Název** pro zdroj dat a vyberte **Další** k vytvoření zdroje dat.
 
-1. Vyberte jeden z [dostupných konektorů](#available-power-query-data-sources). V tomto příkladu vybereme konektor **Text / CSV**.
+1. Vyberte jeden z [dostupných konektorů](#available-power-query-data-sources). V tomto příkladu vybereme konektor **Text/CSV**.
 
 1. Zadejte požadované podrobnosti do **Nastavení připojení** pro vybraný konektor a vyberte **Další** pro zobrazení náhledu dat.
 
@@ -50,7 +49,7 @@ Power Query nabízí širokou sadu konektorů pro příjem dat. Většina z těc
 
 1. Výběrem **Získejte data** v dialogu **Upravit dotazy** můžete do svého zdroje dat přidat další entity.
 
-   Tyto transformace jsou vysoce doporučeny:
+   Doporučujeme použít následující transformace:
 
    - Pokud přijímáte data ze souboru CSV, první řádek často obsahuje záhlaví. Přejděte na **Transformační tabulka** a vyberte **Jako první řádek použijte záhlaví**.
    - Zajistěte, aby byl datový typ nastaven správně.
@@ -61,7 +60,7 @@ Power Query nabízí širokou sadu konektorů pro příjem dat. Většina z těc
 
 ## <a name="available-power-query-data-sources"></a>Dostupné Power Query zdroje dat
 
-Viz [Odkaz na konektory Power Query](/power-query/connectors/) pro aktuální seznam konektorů, které můžete vybrat k importu dat do Customer Insights. 
+Viz [podklady ke konektoru Power Query](/power-query/connectors/), kde najdete seznam konektorů, které můžete použít k importu dat do Customer Insights. 
 
 Konektory se zaškrtnutím ve sloupci **Customer Insights (toky dat)** slouží k vytvoření nových zdrojů dat založených na Power Query. Projděte si dokumentaci konkrétního konektoru a dozvíte se více o jeho požadavcích, omezeních a dalších podrobnostech.
 
@@ -70,7 +69,7 @@ Konektory se zaškrtnutím ve sloupci **Customer Insights (toky dat)** slouží 
 > [!NOTE]
 > Pravděpodobně nebude možné provést změny ve zdrojích dat, které se aktuálně používají v jednom z procesů aplikace (např. *segmentace*, *shoda* nebo *sloučit*). 
 >
-> Za použití stránky **Nastavení** můžete sledovat průběh každého z aktivních procesů. Po dokončení procesu se můžete vrátit na stránku **Zdroje dat** stránku a provést změny.
+> Na stránce **Nastavení** můžete sledovat průběh každého z aktivních procesů. Po dokončení procesu se můžete vrátit na stránku **Zdroje dat** stránku a provést změny.
 
 1. V přehledech cílové skupiny přejděte na **Data** > **Zdroje dat**.
 

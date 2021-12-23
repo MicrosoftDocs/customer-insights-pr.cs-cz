@@ -1,7 +1,7 @@
 ---
 title: Aktivace pravidel souhlasu pro segmenty
 description: Postupujte podle následujících kroků k propojení dat souhlasu a aktivaci kontrol souhlasu v přehledech cílových skupin. Správce může také zakázat kontroly souhlasu.
-ms.date: 11/03/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 45899738d39bd5caa433e123f9fe59020e831998
-ms.sourcegitcommit: 79b09498d1328e5551fb8684c44af1fb149f9881
+ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7790768"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884066"
 ---
 # <a name="activate-consent-rules"></a>Aktivace pravidel obsahu
 
@@ -49,3 +49,6 @@ Pokud chcete používat data souhlasu v přehledech cílových skupin, správce 
 1. Vyberte kartu **Souhlas (Preview)**.
 
 1. V sekci **Povolit kontroly souhlasu** nastavte přepínač do polohy **Vypnuto**.
+
+> [!TIP]
+> Chcete-li přestat používat funkci správy souhlasu, viz [Nastavení systému v Centru souhlasu (Preview)](../consent-management/system-settings.md).

@@ -1,7 +1,7 @@
 ---
 title: Nové a připravované funkce
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753109"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884254"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
 
@@ -26,6 +26,18 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Aktualizace z listopadu 2021
+
+Aktualizace v listopadu 2021 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Nyní je v Dataverse dostupné členství v segmentu
+
+Informace o členství v segmentu pro profily zákazníků jsou nyní dostupné v Dataverse spolu s profily a přehledy zákazníků. Akční aplikace a modelem řízené aplikace Dynamics 365 mohou tato data použít k vyhledání podrobností o členství v segmentu pro daného zákazníka.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivity podporují podrobnosti na úrovni kontaktů pro obchodní účty
+
+Nyní můžete konfigurovat, zobrazovat a filtrovat aktivity kontaktů na časových osách aktivit vašeho obchodního účtu, abyste lépe pochopili, které kontakty obchodního vztahu se účastnily konkrétních aktivit.
 
 ## <a name="october-2021-updates"></a>Aktualizace říjen 2021
 

@@ -1,7 +1,7 @@
 ---
 title: Entity a datové sady
 description: Zobrazení data na stránce Entity.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,51 +9,57 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732072"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900419"
 ---
 # <a name="entities-in-audience-insights"></a>Entity v přehledech cílové skupiny
 
 Po [konfigurace zdrojů dat](data-sources.md) přejděte na stránku **Entity** pro vyhodnocení kvality přijímaných dat. Entity jsou považovány za datové sady. Kolem těchto entit jsou postaveny některé funkce Dynamics 365 Customer Insights. Jejich pečlivá kontrola vám pomůže ověřit výstup těchto funkcí.
 
-Stránka **Entity** uvádí entity a zahrnuje několik sloupců:
+Stránka **Entity** uvádí entity a obsahuje tyto sloupce:
 
-- **Název**: Název vaší datové entity. Pokud se vedle názvu entity zobrazí varovný symbol, znamená to, že se data pro tuto entitu nenačítala úspěšně.
-- **Zdroj**: Typ zdroje dat, který přijal entitu
-- **Vytvořil/a**: Jméno osoby, která entitu vytvořila
-- **Vytvořeno**: Datum a čas, kdy byla entita vytvořena
-- **Aktualizováno** : Jméno osoby, která entitu aktualizovala
-- **Stav**: Podrobnosti o poslední aktualizaci entity
+- **Název**: Název datové entity. Pokud se vedle názvu entity zobrazí varovný symbol, znamená to, že se data pro tuto entitu nenačítala úspěšně.
+- **Zdroj**: Typ zdroje dat přijatého entitou.
+- **Aktualizováno**: Čas poslední aktualizace entity.
+- **Stav**: Podrobnosti o poslední aktualizaci entity.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Prozkoumání dat konkrétní entity
 
-Vyberte entitu a prozkoumejte různá pole a záznamy obsažené v této entitě.
+1. V přehledech cílové skupiny přejděte na **Data** > **Entity**.
+1. Na stránce **Entity** vyberte entitu a otevřete stránku podrobností.  
+1. Prozkoumejte různá pole a záznamy obsažené v této entitě.
 
-> [!div class="mx-imgBorder"]
-> ![Zvolte entitu.](media/data-manager-entities-data.png "Zvolte entitu")
-
-- Karta **Data** záložka zobrazuje tabulku s podrobnostmi o jednotlivých záznamech entity.
+- Ve výchozím nastavení je vybrána karta **Atributy**, která zobrazuje tabulku pro kontrolu podrobností vybrané entity, jako jsou názvy polí, datové typy a typy. Sloupec **Typ** zobrazuje typy přidružené k Common Data Model, které jsou systémem automaticky identifikovány nebo [ručně mapovány](map-entities.md) uživateli. Tyto typy jsou sémantické typy, které se mohou lišit od datových typů atributů. Níže uvedené pole *E-mail* má například datový typ *Text*, ale jeho (sémantický typ) Common Data Model může být *Email* nebo *EmailAddress*.
 
 > [!div class="mx-imgBorder"]
 > ![Tabulka polí.](media/data-manager-entities-fields.PNG "Tabulka polí")
 
-- Ve výchozím nastavení je vybrána karta **Atributy**, která zobrazuje tabulku pro kontrolu podrobností vybrané entity, jako jsou názvy polí, datové typy a typy. Sloupec **Typ** zobrazuje typy přidružené k Common Data Model, které jsou systémem automaticky identifikovány nebo [ručně mapovány](map-entities.md) uživateli. Tyto typy jsou sémantické typy, které se mohou lišit od datových typů atributů. Níže uvedené pole *E-mail* má například datový typ *Text*, ale jeho (sémantický typ) Common Data Model může být *Email* nebo *EmailAddress*.
-
 > [!NOTE]
-> Obě tabulky ukazují pouze ukázku dat vaší entity. Chcete-li zobrazit celou datovou sadu, přejděte na stránku **Zdroje dat**, vyberte entitu, vyberte **Upravit** a poté si prohlédněte data této entity pomocí editoru Power Query, jak je vysvětleno v části [Zdroje dat](data-sources.md).
+> Tato stránka zobrazuje pouze ukázku dat entity. Chcete-li zobrazit celou datovou sadu, přejděte na stránku **Zdroje dat**, vyberte entitu, vyberte **Upravit** a poté si prohlédněte data této entity pomocí editoru Power Query, jak je vysvětleno v části [Zdroje dat](data-sources.md).
 
-Chcete-li se dozvědět více o údajích přijímaných v entitě, sloupec **Souhrn** poskytuje některé důležité vlastnosti dat, jako jsou nuly, chybějící hodnoty, jedinečné hodnoty, počty a distribuce, které se vztahují na vaše data.
-
-Klepnutím na ikonu grafu zobrazíte souhrn dat.
+Chcete-li se dozvědět více o údajích přijímaných v entitě, sloupec **Souhrn** poskytuje některé důležité vlastnosti dat, jako jsou nuly, chybějící hodnoty, jedinečné hodnoty, počty a distribuce, které se vztahují na vaše data. Klepnutím na ikonu grafu zobrazíte souhrn dat.
 
 > [!div class="mx-imgBorder"]
 > ![Souhrnný symbol.](media/data-manager-entities-summary.png "Souhrnná tabulka dat")
+
+- Karta **Data** záložka zobrazuje tabulku s podrobnostmi o jednotlivých záznamech entity. Uvedené podrobnosti závisí na datovém typu entity.
+
+> [!div class="mx-imgBorder"]
+> ![Zvolte entitu.](media/data-manager-entities-data.png "Zvolte entitu")
+
+- Karta **Sestavy** (dostupná pro některé entity) umožňuje vizualizovat data vytvořením sestavy a obsahuje tyto sloupce:
+
+  - **Název sestavy**: Název sestavy.
+  - **Vytvořil/a**: Jméno osoby, která entitu vytvořila.
+  - **Vytvořeno**: Datum a čas, kdy byla entita vytvořena.
+  - **Upravil/a**: Jméno osoby, která entitu upravila.
+  - **Upraveno**: Datum a čas, kdy byla entita změněna. 
 
 ## <a name="entity-specific-information"></a>Informace specifické pro entitu
 
@@ -73,8 +79,7 @@ Následující kontroly běží na přijatých datech, aby odhalily poškozené 
 
 - Hodnota pole se neshoduje s datovým typem jeho sloupce.
 - Pole obsahují znaky, které způsobují, že sloupce neodpovídají očekávanému schématu. Například: nesprávně formátované uvozovky, neuzavřené uvozovky nebo znaky nového řádku.
-- Pokud existují sloupce datetime/date/datetimeoffset, je třeba v modelu specifikovat jejich formát, pokud nedodržuje standardní formát ISO.
-
+- Pokud existují sloupce datetime/date/datetimeoffset, je třeba jejich formát zadat v modelu, pokud se neřídí standardním formátem ISO.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Připojení k účtu Azure Data Lake Storage pomocí instančního objektu
 description: Pro připojení k vašemu vlastnímu datovému jezeru použijte instanční objekt Azure.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645164"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900235"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Připojení k účtu Azure Data Lake Storage pomocí instančního objektu Azure
 
-Automatizované nástroje, které používají služby Azure, by vždy měly mít omezená oprávnění. Místo toho, aby se aplikace přihlašovaly jako plně privilegovaný uživatel, Azure nabízí instanční objekty. Přečtěte si, jak propojit Dynamics 365 Customer Insights s účtem Azure Data Lake Storage pomocí instančního objektu Azure namísto klíčů účtu úložiště. 
+Tento článek popisuje, jak propojit Dynamics 365 Customer Insights s účtem Azure Data Lake Storage pomocí instančního objektu Azure namísto klíčů účtu úložiště. 
 
-Instanční objekt můžete použít k bezpečnému [přidání nebo upravení složky Common Data Model jako zdroje dat](connect-common-data-model.md), nebo [vytvoření či aktualizaci prostředí](create-environment.md).
+Automatizované nástroje, které používají služby Azure, by vždy měly mít omezená oprávnění. Místo toho, aby se aplikace přihlašovaly jako plně privilegovaný uživatel, Azure nabízí instanční objekty. Pomocí instančních objektů můžete bezpečně [přidat nebo upravit složku Common Data Model jako zdroj dat](connect-common-data-model.md) nebo [vytvořit nebo aktualizovat prostředí](create-environment.md).
 
 > [!IMPORTANT]
 > - Účet Data Lake Storage, který bude používat objekt služby, musí mít [povolený hierarchický obor názvů](/azure/storage/blobs/data-lake-storage-namespace).
-> - K vytvoření instančního objektu potřebujete oprávnění správce pro vaše předplatné Azure.
+> - K vytvoření instančního objektu potřebujete oprávnění správce pro své předplatné Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Vytvoření instančního objektu Azure pro Customer Insights
 
-Před vytvořením nového instančního objektu pro přehledy cílových skupin nebo přehledy cílových zapojení zkontrolujte, zda již ve vaší organizaci existuje.
+Před vytvořením nového instančního objektu pro Customer Insights zkontrolujte, zda již ve vaší organizaci existuje.
 
 ### <a name="look-for-an-existing-service-principal"></a>Vyhledání existujícího instančního objektu
 
