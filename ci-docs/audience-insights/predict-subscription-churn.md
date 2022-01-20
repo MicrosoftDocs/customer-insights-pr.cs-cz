@@ -1,5 +1,5 @@
 ---
-title: Predikce úbytku předplatitelů (video)
+title: Predikce úbytku předplatitelů (obsahuje video)
 description: Predikuje, zda hrozí odchod zákazníka, když přestane používat předplatné pro produkty nebo služby vaší společnosti.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903941"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967693"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predikce odchodu předplatitelů (Preview)
 
@@ -77,7 +77,7 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
 1. Zadejte počet dní pro **Dny od ukončení předplatného**, po jejichž uplynutí vaše firma považuje zákazníka za odchozího. Toto období je obvykle přizpůsobeno obchodním činnostem, jako jsou nabídky nebo jiné marketingové činnosti, které se snaží zabránit ztrátě zákazníka.
 1. Zadejte hodnotu pro **Počet dní predikce odlivu zákazníků**, čímž nastavíte okno pro predikci odlivu zákazníků. Například predikujte rizika odlivu zákazníků během následujících 90 dnů, abyste mohli přizpůsobit svůj marketing pro jejich udržení. Předvídání rizika odchodu zákazníků na delší nebo kratší období může ztížit řešení faktorů ve vašem profilu rizika odchodu zákazníků, v závislosti na vašich konkrétních obchodních požadavcích. Pokračujte kliknutím na tlačítko **Další**.
    >[!TIP]
-   > Kdykoli můžete použít volbu **Uložit a zavřít**, kterou uložíte predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
+   > Kdykoliv můžete volbou **Uložit koncept** uložit predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
 
 ### <a name="add-required-data"></a>Přidejte požadovaná data
 

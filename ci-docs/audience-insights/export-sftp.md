@@ -1,5 +1,5 @@
 ---
-title: Export dat Customer Insights do hostitelů SFTP (video)
+title: Export dat Customer Insights do hostitelů SFTP (obsahuje video)
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do umístění SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bb73c49cf87657b71e0c2f5934662b062eeffb21
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904111"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934879"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Export segmentů a dalších dat do SFTP (preview)
 
@@ -28,6 +28,7 @@ Využijte svá zákaznická data v aplikacích třetích stran a exportujte je d
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Cíle SFTP za branami firewall v současnosti nejsou podporovány. 
 - Běh exportu závisí na výkonu vašeho systému. Jako minimální konfiguraci vašeho serveru doporučujeme dvě jádra CPU a 1 GB paměti. 
 - Export entit s až 100 miliony zákaznických profilů může trvat 90 minut při použití doporučené minimální konfigurace dvou jader CPU a 1 GB paměti. 
 

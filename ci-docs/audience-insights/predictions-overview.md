@@ -1,21 +1,20 @@
 ---
 title: Přehled podporovaných scénářů predikcí
 description: Scénáře a možnosti predikcí, se kterými se setkáte v aplikaci Dynamics 365 Customer Insights.
-ms.date: 09/06/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673954"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7978005"
 ---
 # <a name="predictions-overview"></a>Přehled predikcí
 
@@ -31,6 +30,7 @@ Nejjednodušší způsob, jak začít s předpovídáním dat, jsou předem defi
 - [Doporučení produktu](predict-product-recommendation.md): Navrhuje sady prediktivních doporučení produktů na základě nákupního chování a zákazníků s podobnými nákupními vzory.
 - [Úbytek předplatitelů](predict-subscription-churn.md): Předpovídá, zda hrozí ztráta zákazníka, pokud přestane používat produkty nebo služby v rámci předplatného vaší společnosti.
 - [Úbytek transakcí](predict-transactional-churn.md): Předpovídá, zda si zákazník v určitém časovém rámci již nebude kupovat vaše produkty nebo služby.
+- [Analýza postoje](sentiment-analysis.md): Analyzujte postoje zákazníků z jejich názorů a identifikujte obchodní aspekty, které jsou často zmiňovány.
 
 # <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 

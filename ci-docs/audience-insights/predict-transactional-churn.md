@@ -1,7 +1,7 @@
 ---
-title: Predikce úbytku transakcí (video)
+title: Predikce úbytku transakcí (obsahuje video)
 description: Predikujte, zda je zákazník ohrožen, když přestane nakupovat produkty nebo služby.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904064"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967739"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predikce úbytku transakcí (Preview)
 
@@ -103,10 +103,10 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
 
 1. Vyberte dlaždici **Model úbytku zákazníků (Preview)** a vyberte **Použít tento model**.
 
-1. V podokně **Model úbytku zákazníků** zvolte **Transakce** a vyberte **Začínáme**.
+1. V podokně **Model úbytku zákazníků (Preview)** zvolte **Transakce** a vyberte **Začínáme**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Snímek obrazovky s vybranou možností transakce v podokně Model úbytku zákazníků.":::
-
+ 
 ### <a name="name-model"></a>Pojmenování modelu
 
 1. Zadejte název modelu, abyste jej odlišili od ostatních modelů.
@@ -117,11 +117,11 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
 
 ### <a name="define-customer-churn"></a>Definujte ztracené zákazníky
 
-1. Nastavte interval ve dnech pro predikci úbytku zákazníků v poli **Identifikujte zákazníky, kteří mohou odejít za dalších:**. Například predikujte riziko odchodu vašich zákazníků v průběhu následujících 90 dnů pro slazení vaší marketingové úspěšnosti prodeje. Předvídání rizika odlivu zákazníků v delším nebo kratším časovém období může ztěžovat zohlednění faktorů v profilu rizika odlivu zákazníků, ale záleží na vašich konkrétních obchodních požadavcích.
+1. Nastavte **Okno predikce**. Například predikujte riziko odchodu vašich zákazníků v průběhu následujících 90 dnů pro slazení vaší marketingové úspěšnosti prodeje. Předvídání rizika odlivu zákazníků v delším nebo kratším časovém období může ztěžovat zohlednění faktorů v profilu rizika odlivu zákazníků, ale záleží na vašich konkrétních obchodních požadavcích.
    >[!TIP]
-   > Kdykoli můžete použít volbu **Uložit a zavřít**, kterou uložíte predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
+   > Kdykoliv můžete volbou **Uložit koncept** uložit predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
 
-1. Zadejte počet dní pro definici odchodu zákazníků v poli **Zákazník se považuje za ztraceného, pokud neprovedl žádné nákupy za:**. Pokud si například zákazník za posledních 30 dní nic nekoupil, může být pro vaši firmu považován za ztraceného. 
+1. Zadejte počet dní definující úbytek v poli **Definice úbytku**. Pokud si například zákazník za posledních 30 dní nic nekoupil, může být pro vaši firmu považován za ztraceného. 
 
 1. Pokračujte kliknutím na tlačítko **Další**.
 
@@ -129,19 +129,16 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
 
 1. Vyberte **Přidat data** a zvolte typ aktivity v postranním podokně, které obsahuje informace o požadované transakci nebo historii nákupů.
 
-1. V položce **Vybrat aktivity** vyberte konkrétní aktivity z vybrané aktivity, na které se chcete při výpočtu zaměřit.
+1. V sekci **Vyberte aktivity** vyberte konkrétní aktivity z vybraného typu aktivit, na které se má výpočet zaměřit.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Boční podokno zobrazující výběr konkrétních aktivit pod sémantickým typem.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Boční podokno zobrazující výběr konkrétních aktivit pod sémantickým typem.":::
 
-1. Pokud jste aktivitu dosud nemapovali na sémantický typ, proveďte to výběrem možnosti **Upravit**. Otevře se řízené prostředí s mapováním sémantických aktivit. Namapujte svá data na odpovídající pole ve zvoleném typu aktivity.
+   Pokud jste aktivitu dosud nemapovali na sémantický typ, proveďte to výběrem možnosti **Upravit**. Otevře se řízené prostředí s mapováním sémantických aktivit. Namapujte svá data na odpovídající pole ve zvoleném typu aktivity.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Typ aktivity nastavení stránky.":::
+1. Namapujte sémantické atributy na pole, která jsou nutná ke spuštění modelu. Pokud pole níže nejsou vyplněna, nakonfigurujte vztah z entity historie nákupu na entitu *Zákazník*. Vyberte **Uložit**.
 
-1. Po namapování aktivity na odpovídající sémantický typ pokračujte výběrem možosti **Další**.
+1. V kroku **Přidejte požadovaná data** volbou **Další** pokračujte, pokud nechcete přidat další aktivity.
 
-1. Namapujte sémantické atributy na pole, která jsou nutná ke spuštění modelu. Pokud pole níže nejsou vyplněna, nakonfigurujte vztah z entity historie nákupu na entitu *Zákazník*.
-
-1. Vyberte **Další**.
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 

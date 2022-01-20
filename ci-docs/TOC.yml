@@ -80,7 +80,7 @@
       items:
         - name: Rozšíření profilů zákazníků
           href: audience-insights/enrichment-hub.md
-        - name: Značka a zájmové afinity
+        - name: Značky a zájmy
           href: audience-insights/enrichment-microsoft.md
         - name: Rozšířené adresy
           href: audience-insights/enrichment-enhanced-addresses.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Predikce úbytku transakcí
               href: audience-insights/predict-transactional-churn.md
+            - name: Analýza postoje na základě názorů zákazníků
+              href: audience-insights/sentiment-analysis.md
             - name: Používání vlastních modelů z Azure Machine Learning
               href: audience-insights/custom-models.md
             - name: Vyplnění částečně chybějících dat

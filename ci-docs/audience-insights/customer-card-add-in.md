@@ -1,7 +1,7 @@
 ---
-title: Doplněk karty zákazníka pro aplikace Dynamics 365 (video)
+title: Doplněk karty zákazníka pro aplikace Dynamics 365 (obsahuje video)
 description: Zobrazte data z přehledu cílové skupiny v aplikacích Dynamics 365 s tímto doplňkem.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904005"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945419"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplněk karty zákazníka (preview)
 
@@ -27,12 +27,12 @@ Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dyna
 ## <a name="prerequisites"></a>Požadavky
 
 - Doplněk funguje pouze s modelem řízenými aplikacemi Dynamics 365, jako je Sales nebo Customer Service, verze 9.0 a novější.
-- Aby se vaše data Dynamics 365 mapovala na profily zákazníků přehledů cílové skupiny, musí být [přijata z aplikace Dynamics 365 pomocí konektoru Microsoft Dataverse](connect-power-query.md).
+- Aby byla vaše data Dynamics 365 mapována na profily zákazníků s přehledy cílové skupiny, doporučujeme je [přijímat z aplikace Dynamics 365 pomocí konektoru Microsoft Dataverse](connect-power-query.md). Pokud pro přijímání kontaktů (nebo obchodních vztahů) Dynamics 365 používáte jinou metodu, musíte se ujistit, že pole `contactid` (nebo `accountid`) je nastaveno jako [primární klíč pro tento zdroj dat v kroku mapování v rámci procesu sjednocení dat](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Všichni uživatelé doplňku zákaznické karty Dynamics 365 musí být [přidáni jako uživatelé](permissions.md) v přehledech cílové skupiny, aby mohli zobrazovat data.
 - [Konfigurované možnosti vyhledávání a filtrování](search-filter-index.md) v přehledech cílové skupiny jsou vyžadovány, aby vyhledávání dat fungovalo.
 - Každý ovládací prvek doplňku závisí na konkrétních datech v přehledech cílové skupiny. Některá data a ovládací prvky jsou k dispozici pouze v prostředích konkrétních typů. Konfigurace doplňku vás bude informovat, pokud ovládací prvek není k dispozici kvůli vybranému typu prostředí. Další informace o [případech použití prostředí](work-with-business-accounts.md).
   - **Kontrola měření**: Vyžaduje [nakonfigurované míry](measures.md) atributů typu zákazníka.
-  - **Ovládání analytických nástrojů**: Vyžaduje data generovaná pomocí [predikcí](predictions.md) nebo [vlastních modelů](custom-models.md).
+  - **Ovládání analytických nástrojů**: Vyžaduje data generovaná pomocí [predikcí nebo vlastních modelů](predictions-overview.md).
   - **Kontrola podrobností zákazníka**: Všechna pole z profilu jsou k dispozici v jednotném zákaznickém profilu.
   - **Kontrola rozšíření:** Vyžaduje aktivní [rozšíření](enrichment-hub.md) aplikované na profily zákazníků. Doplněk karty podporuje tato rozšíření: [Značky](enrichment-microsoft.md) poskytované společností Microsoft, [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft a [Data Office o zapojení](enrichment-office.md) poskytované společností Microsoft.
   - **Ovládání kontaktů**: Vyžaduje definici sémantické entity kontaktů typu.

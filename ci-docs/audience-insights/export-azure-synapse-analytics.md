@@ -1,7 +1,7 @@
 ---
 title: Export údajů ze služby Customer Insights do Azure Synapse Analytics
 description: Zjistěte, jak nakonfigurovat připojení a exportovat je do Azure Synapse Analytics.
-ms.date: 04/12/2021
+ms.date: 01/05/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f206043298bdbf8a84b0ef37b47a43290653beba7d3d0e8b807ec74513614aa8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
+ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031925"
+ms.lasthandoff: 01/10/2022
+ms.locfileid: "7951034"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Export dat do Azure Synapse Analytics (Preview)
 
@@ -49,6 +49,8 @@ V Azure:
 
 ### <a name="configure-a-connection"></a>Konfigurace připojení
 
+Chcete-li vytvořit připojení, instanční objekt a uživatelský účet v Customer Insights potřebují oprávnění **Čtenář** ve *skupina prostředků*, kde se nachází pracovní prostor Synapse Analytics. Kromě toho potřebuje instanční objekt a uživatel v pracovním prostoru Synapse Analytics oprávnění **Správce Synapse**. 
+
 1. Přejděte na **Správce** > **Propojení**.
 
 1. Vyberte **Přidat připojení** a zvolte **Azure Synapse Analytics** nebo vyberte **Nastavit** v dlaždici **Azure Synapse Analytics** ke konfiguraci připojení.
@@ -63,7 +65,7 @@ V Azure:
 
 ### <a name="configure-an-export"></a>Konfigurace exportu
 
-Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
+Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Pro konfiguraci exportu se sdíleným připojením potřebujete v Customer Insights minimálně oprávnění **Přispěvatel**. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
 
 1. Přejděte na **Data** > **Exporty**.
 
@@ -82,6 +84,8 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 Uložení exportu nespustí export okamžitě.
 
 Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand).
+
+Chcete-li dotazovat data, která byla exportována do Synapse Analytics, potřebujete přístup **Čtenář dat objektu blob úložiště** k cílovému úložišti v pracovním prostoru exportů. 
 
 ### <a name="update-an-export"></a>Aktualizace exportu
 
