@@ -1,7 +1,7 @@
 ---
 title: Vylepšení dat společnosti
 description: Rozšiřte a normalizujte data společnosti pomocí modelů společnosti Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927574"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Rozšíření profilů společnosti o vylepšená data společnosti
 
 K opravě, doplnění a standardizování profilů vaší společnosti použijte modely a kompilovaná firemní data společnosti Microsoft. Pro lepší přesnost a přehledy použijeme [formát Common Data Model](/common-data-model/schema/core/applicationcommon/account).
@@ -82,17 +77,17 @@ Chcete-li zahájit proces obohacení, vyberte **Spustit** z panelu příkazů. M
 
 Po dokončení procesu obohacení můžete zkontrolovat nově obohacené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet obohacených profilů.
 
-Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobnému zobrazení každého rozšířeného profilu.
+Ukázku obohacených dat můžete vidět v dlaždici **Náhled obohacených zákazníků**. Vyberte možnost **Další informace** a vyberte kartu **Data** , na které najdete podrobné zobrazení každého obohaceného profilu.
 
 ### <a name="overview-card"></a>Karta Přehled
 
 Karta Přehled zobrazuje podrobnosti o pokrytí rozšíření. 
 
-* **Zpracovaní a změnění zákazníci**: Počet zákaznických profilů, které byly úspěšně rozšířeny.
+* **Zpracované a změněné společnosti**: Počet profilů společností zákazníků, které byly úspěšně rozšířeny.
 
-* **Zpracovaní a nezměnění zákazníci**: Počet zákaznických profilů, které byly rozpoznány, ale nebyly změněny. To se obvykle stane, když jsou vstupní data platná a nelze je zlepšit rozšířením.
+* **Zpracované a nezměněné společnosti**: Počet profilů společností zákazníků, které byly rozpoznány, ale nebyly změněny. To se obvykle stane, když jsou vstupní data platná a nelze je zlepšit rozšířením.
 
-* **Nezpracovaní a nezměnění zákazníci**: Počet zákaznických profilů, které nebyly rozpoznány. Obvykle se to děje u vstupních dat, která jsou neplatná nebo je rozšíření nepodporuje.
+* **Nezpracované a nezměněné společnosti**: Počet profilů společností zákazníků, které nebyly rozpoznány. Obvykle se to děje u vstupních dat, která jsou neplatná nebo je rozšíření nepodporuje.
 
 ## <a name="next-steps"></a>Další kroky
 

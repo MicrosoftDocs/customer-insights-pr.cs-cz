@@ -1,7 +1,7 @@
 ---
 title: Sloučení entit ve sjednocení dat
 description: Sloučením entit můžete vytvořit sjednocené profily zákazníků.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732764"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Správa entit
 
 Fáze sloučení je poslední fází v procesu sjednocení dat. Jeho účelem je slazování protichůdných údajů. Příklady konfliktních dat mohou zahrnovat jméno zákazníka, které se nachází ve dvou vašich datových sadách, ale v každé z nich se zobrazuje trochu jinak ("Grant Marshall" versus "Grant Marshal") nebo telefonní číslo, které se liší ve formátu (617-803-091X versus 617803091X). Sloučení těchto konfliktních datových bodů se provádí na základě atribut - atribut.
@@ -99,11 +94,13 @@ Na stránce **Sloučit** vyberte **Vyloučit pole** pro zobrazení seznamu všec
 
 1. Vyberte **Uložit** a **Spustit** ke zpracování změn. 
 
-## <a name="manually-combine-fields"></a>Ruční zkombinování polí
+## <a name="combine-fields-manually"></a>Ruční kombinace polí
 
-Ručně zadejte sloučený atribut. 
+Ručně zadejte sloučený atribut.
 
-1. Na stránce **Sloučit** vyberte **Zkombinovat pole**.
+1. Na stránce **Sloučit** vyberte **Kombinovat**.
+
+1. Vyberte možnost **Pole**.
 
 1. Upřesněte vítěznou zásadu sloučení v rozevíracím seznamu **Kombinovat pole podle**.
 
@@ -114,6 +111,26 @@ Ručně zadejte sloučený atribut.
 1. Výběrem možnosti **Hotovo** se změny použijí.
 
 1. Vyberte **Uložit** a **Spustit** ke zpracování změn. 
+
+## <a name="combine-a-group-of-fields"></a>Kombinace skupiny polí
+
+Zacházejte se skupinou polí jako s jednou jednotkou. Například když naše záznamy obsahují pole Adresa1, Adresa2, Město, Stát a PSČ. Pravděpodobně nechceme sloučit adresu2 do jiného záznamu kvůli tomu, že by to udělalo naše data úplnější
+
+1. Na stránce **Sloučit** vyberte **Kombinovat**.
+
+1. Vyberte možnost **Skupina polí**.
+
+1. Upřesněte vítěznou zásadu sloučení v rozevíracím seznamu **Seřadit skupiny podle**.
+
+1. Vyberte možnost **Přidat** a zvolte, zda chcete k polím přidat další pole nebo další skupiny.
+
+1. Zadejte **Název** a **Název výstupu** pro každé kombinované pole.
+
+1. Zadejte **Název** pro skupinu polí. 
+
+1. Výběrem možnosti **Hotovo** se změny použijí.
+
+1. Vyberte **Uložit** a **Spustit** ke zpracování změn.
 
 ## <a name="change-the-order-of-fields"></a>Změna pořadí polí
 

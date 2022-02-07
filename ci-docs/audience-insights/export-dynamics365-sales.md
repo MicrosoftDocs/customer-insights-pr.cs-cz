@@ -1,6 +1,6 @@
 ---
 title: Export dat Customer Insights do Dynamics 365 Sales
-description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Dynamics 365 Sales.
+description: 'Zjistěte, jak nakonfigurovat propojení a exportovat je do Dynamics 365 Sales.'
 ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,11 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8a0654ac062e41ef7eb52a34b1ae169e28b389f86875eead774422fef60f2232
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031512"
 ---
+
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Použití segmentů v Dynamics 365 Sales (Preview)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Aplikace Dynamics 365 Sales umožňuje na základě zákaznických dat vytvářet marketingové seznamy, sledovat pracovní postupy a rozesílat propagační akce.
 

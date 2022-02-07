@@ -1,7 +1,7 @@
 ---
 title: Párování entit pro sjednocení dat
 description: Spárováním entit můžete vytvořit sjednocené profily zákazníků.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863803"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Párování entit
 
 Fáze párování určuje, jak zkombinovat vaše datové sady do jednotného datového souboru zákaznického profilu. Po dokončení [kroku mapování](map-entities.md) v procesu sjednocení dat jste připraveni spárovat své entity. Fáze párování vyžaduje alespoň dvě mapované entity.
@@ -35,7 +30,7 @@ Každé párování sjednocuje dvě nebo více entit do jedné konsolidované en
 
 :::image type="content" source="media/match-page.png" alt-text="Screenshot stránky Párování v oblasti Sjednocení pro proces sjednocení dat.":::
   
-Primární entita *eCommerce:eCommerceContacts* je spárována s další entitou *LoyaltyScheme:loyCustomers*. Datová sada, která je výsledkem prvního kroku párování, je spárována s následující entitou, pokud máte více než dvě entity.
+Primární entita *eCommerce:eCommerceContacts* je spárována s další entitou *LoyaltyScheme:loyCustomers*. Pokud máte více než dvě entity, datová sada, která je výsledkem prvního kroku shody, se shoduje s následující entitou.
 
 > [!IMPORTANT]
 > Entita, kterou si vyberete jako svoji primární, bude sloužit jako základ pro vaši datovou sadu sjednocených profilů. K této entitě budou přidány další entity vybrané během fáze párování. To neznamená, že sjednocená entita bude zahrnovat *všechna* data obsažená v této entitě.
@@ -130,17 +125,21 @@ Zadání pravidel zrušení duplikace není povinné. Pokud nejsou nakonfigurov�
 
 1. Přejděte na **Data** > **Sjednocení** > **Párování**.
 
-1. V sekci **Sloučené duplicity** vyberte **Nastavit entity**. V případě, že pravidla pro zrušení duplicit jsou již vytvořena, vyberte **Upravit**.
+1. V sekci **Podrobnosti o deduplikovaných záznamech** vyberte možnost **Nastavit entity**. V případě, že pravidla pro zrušení duplicit jsou již vytvořena, vyberte **Upravit**.
 
 1. V podokně **Sloučení předvoleb** vyberte entity, pro které chcete spustit zrušení duplicit.
 
-1. Zadejte, jak zkombinovat duplicitní záznamy, a vyberte jednu ze tří možností sloučení:
-   - **Nejvíce vyplněný**: Identifikuje záznam s nejvíce vyplněnými poli atributů jako vítězný záznam. Toto je výchozí možnost sloučení.
-   - **Nejnovější**: Identifikuje vítězný záznam na základě největší aktuálnosti. Vyžaduje datum nebo číselné pole pro definování aktuálnosti.
-   - **Nejdřívější**: Identifikuje vítězný záznam na základě nejmenší aktuálnosti. Vyžaduje datum nebo číselné pole pro definování aktuálnosti.
+   1. Zadejte, jak zkombinovat duplicitní záznamy, a vyberte jednu ze tří možností sloučení:
+      - **Nejvíce vyplněný**: Identifikuje záznam s nejvíce vyplněnými poli atributů jako vítězný záznam. Toto je výchozí možnost sloučení.
+      - **Nejnovější**: Identifikuje vítězný záznam na základě největší aktuálnosti. Vyžaduje datum nebo číselné pole pro definování aktuálnosti.
+      - **Nejdřívější**: Identifikuje vítězný záznam na základě nejmenší aktuálnosti. Vyžaduje datum nebo číselné pole pro definování aktuálnosti.
+
+   1. Volitelně vyberte možnost **Upřesnit** a definujte deduplikační pravidla pro jednotlivé atributy entity. Můžete se například rozhodnout zachovat nejnovější e-mail A nejúplnější adresu z různých záznamů. Rozbalte entitu, abyste viděli všechny její atributy a definujte, kterou možnost mají použít jednotlivé atributy. Pokud zvolíte možnost založenou na aktuálnosti, musíte také zadat pole data/času, které definuje aktuálnost. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Pravidla zrušení duplicit – krok 1.](media/match-selfconflation.png "Pravidla zrušení duplicit – krok 1")
+      > [!div class="mx-imgBorder"]
+      > ![Pravidla zrušení duplicit – krok 1.](media/match-selfconflation.png "Pravidla zrušení duplicit – krok 1")
+
+   1. Výběrem možnosti **Hotovo** použijte předvolby sloučení pro deduplikaci.
  
 1. Jakmile jsou entity vybrány a je nastavena jejich předvolba sloučení, vyberte **Přidat pravidlo** pro definování pravidel na úrovni entity.
    - **Vyberte pole** udává všechna dostupná pole z dané entity. Vyberte pole, u kterého chcete zkontrolovat duplicity. Vyberte pole, která jsou potenciálně jedinečná pro každého jednotlivého zákazníka. Například e-mailová adresa nebo kombinace jména, města a telefonního čísla.
@@ -158,7 +157,7 @@ Zadání pravidel zrušení duplikace není povinné. Pokud nejsou nakonfigurov�
 
 1. Jakákoli definovaná vlastní pravidla párování přepíšou pravidla zrušení duplicit. Pokud pravidlo zrušení duplicit identifikuje shodné záznamy a vlastní pravidlo párování je nastaveno tak, aby tyto záznamy nikdy napárovalo, nebudou tyto dva záznamy porovnány.
 
-1. Po [spuštění procesu párování](#run-the-match-process) uvidíte statistiky zrušení duplicit v dlaždicích klíčových metrik.
+1. Po [spuštění procesu párování](#run-the-match-process) uvidíte statistiky deduplikace na dlaždicích klíčových metrik.
 
 ### <a name="deduplication-output-as-an-entity"></a>Výstup odebraných duplicit jako entita
 
@@ -222,7 +221,23 @@ Většinu parametrů párování můžete překonfigurovat a doladit.
 
 - **Odstraňte pravidlo** výběrem symbolu **Odstranit**.
 
-## <a name="specify-custom-match-conditions"></a>Zadání vlastních podmínek párování
+## <a name="advanced-options"></a>Rozšířené možnosti
+
+### <a name="add-exceptions-to-a-rule"></a>Přidání výjimek do pravidla
+
+Ve většině případů párování entit vede k jedinečným uživatelským profilům s konsolidovanými daty. Chcete-li dynamicky řešit vzácné případy falešně pozitivních a falešně negativních výsledků, můžete definovat výjimky pro pravidlo shody. Výjimky se uplatňují po zpracování pravidel shody a zabraňují spárování všech záznamů, které splňují kritéria výjimky.
+
+Pokud například vaše pravidlo shody kombinuje příjmení, město a datum narození, systém by identifikoval dvojčata se stejným příjmením, která žijí ve stejném městě, jako stejný profil. Můžete zadat výjimku, která nespáruje profily, pokud křestní jména v entitách, které kombinujete, nejsou stejná.
+
+1. Jděte na **Data** > **Sjednocení** > **Párování** a vyberte **Upravit** u pravidla, do kterého chcete přidat podmínky.
+
+1. V podokně **Upravit pravidlo** vyberte **Přidat výjimku**.
+
+1. Zadejte kritéria výjimky. 
+
+1. Pravidlo uložte kliknutím na tlačítko **Hotovo**.
+
+### <a name="specify-custom-match-conditions"></a>Zadání vlastních podmínek párování
 
 Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici jsou čtyři možnosti: 
 
@@ -241,7 +256,7 @@ Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici
 
 1. Vyberte možnost vlastní shody z rozevíracího seznamu **Vlastní typ** a vyberte **Stáhnout šablonu**. Pro každou možnost shody potřebujete samostatnou šablonu.
 
-1. Stáhne se soubor šablony. Otevřete jej a vyplňte podrobnosti. Šablona obsahuje pole pro určení entity a hodnoty primárního klíče entity, které mají být použity ve vlastní shodě. Například pokud chcete, aby se primární klíč *12345* z entity *Prodej* vždy shodoval s primárním klíčem *34567* z entity *Kontakt*, vyplňte šablonu:
+1. Otevřete stažený soubor šablony a vyplňte podrobnosti. Šablona obsahuje pole pro určení entity a hodnoty primárního klíče entity, které mají být použity ve vlastní shodě. Například pokud chcete, aby se primární klíč *12345* z entity *Prodej* vždy shodoval s primárním klíčem *34567* z entity *Kontakt*, vyplňte šablonu:
     - Entita 1: Prodej
     - Klíč entity 1: 12345
     - Entita 2: Kontakt
@@ -268,7 +283,7 @@ Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici
 
 1. Volbou **Spustit** na stránce **Párování** spusťte proces párování. Ostatní zadaná pravidla párování jsou přepsána vlastní konfigurací párování.
 
-### <a name="known-issues"></a>Známé problémy 
+#### <a name="known-issues"></a>Známé problémy
 
 - Samosloučení neukazuje normalizovaná data v deduplikačních entitách. Normalizaci však aplikuje interně během deduplikace. Je to záměrné pro všechny normalizace. 
 - Pokud je nastavení sémantického typu odstraněno ve fázi **Mapovat**, kdy pravidlo shody používá mapování aliasu nebo vlastní obejití, normalizace se nepoužije. Stává se to pouze v případě, že po konfiguraci normalizace v pravidle shody vymažete sémantický typ, protože sémantický typ bude neznámý.

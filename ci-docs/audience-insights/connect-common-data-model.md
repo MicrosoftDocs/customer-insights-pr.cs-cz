@@ -1,7 +1,7 @@
 ---
 title: Připojení dat Common Data Model k účtu Azure Data Lake
 description: Práce s daty Common Data Model pomocí Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900189"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Připojení ke složce Common Data Model prostřednictvím účtu Azure Data Lake
 
 Tento článek poskytuje informace, jak ingestovat data ze složky Common Data Model pomocí vašeho účtu Azure Data Lake Storage Gen2.
@@ -25,6 +20,8 @@ Tento článek poskytuje informace, jak ingestovat data ze složky Common Data M
 - Data v účtu Azure Data Lake musí odpovídat standardu Common Data Model. V současné době nejsou podporovány jiné formáty.
 
 - Ingestace dat podporuje exkluzivně účty úložiště Azure Data Lake *Gen2*. K ingestaci dat nemůžete používat účty úložiště Azure Data Lake Gen1.
+
+- Účet úložiště Azure Data Lake Storage musí mít [povolenou funkci Hierarchický prostor názvů](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Chcete-li provést ověření pomocí instančního objektu Azure, ujistěte se, že je nakonfigurován ve vašem klientovi. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md).
 

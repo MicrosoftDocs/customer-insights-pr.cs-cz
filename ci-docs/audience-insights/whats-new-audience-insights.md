@@ -1,7 +1,7 @@
 ---
 title: Nové a připravované funkce
-description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 12/02/2021
+description: 'Informace o nových funkcích, vylepšeních a opravách chyb.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884254"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 S radostí představujeme naše nejnovější aktualizace! Tento článek shrnuje funkce Public Preview, rozšíření obecné dostupnosti a aktualizace funkcí. Chcete-li zobrazit dlouhodobé plány funkcí, projděte si [plány vydávání Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Aktualizace z prosince 2021
+
+Aktualizace v prosinci 2021 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Předávání protokolů Customer Insights do Azure Monitor
+
+Customer Insights poskytuje přímou integraci s Azure Monitor. Tato funkce zahrnuje události auditu a provozní události. Protokoly prostředků Azure Monitor umožňují monitorovat a odesílat protokoly do Azure Storage, Azure Log Analytics nebo je streamovat do Azure Event Hubs.
+
+Více informací najdete v tématu [Přesměrování protokolů v Dynamics 365 Customer Insights s Azure Monitor (Preview)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Rozšíření profilů zákazníků o data o zapojení
+
+Pomocí dat z Microsoft Office 365 můžete rozšířit profily vašich zákaznických účtů o přehledy o zapojení prostřednictvím aplikací Office 365. Data o zapojení se skládají z aktivit e-mailů a schůzek, které jsou agregovány na úrovni účtu. Například počet e-mailů z obchodního účtu nebo počet schůzek s obchodním vztahem. Nejsou sdílena žádná data o jednotlivých uživatelích. Toto rozšíření je k dispozici pouze v následujících oblastech: Spojené království, Evropa, Severní Amerika.
+
+Více informací viz téma [Rozšíření profilů zákazníků o data o zapojení (Preview)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Pokročilé funkce sjednocení dat
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Povolení zásad řešení konfliktů na úrovni jednotlivých atributů
+
+Při deduplikaci záznamů zákazníků v rámci entity možná nebudete chtít, abyste jako vítěze museli vybrat úplný záznam. Nyní vám umožňujeme sloučit nejlepší pole z různých záznamů na základě pravidel pro každý atribut. Můžete se například rozhodnout zachovat nejnovější e-mail A nejúplnější adresu z různých záznamů. 
+
+Nyní můžete definovat samostatná pravidla slučování pro jednotlivé atributy a zároveň deduplikovat a slučovat záznamy v rámci jedné entity. Dříve jsme vám umožňovali vybrat pouze jediné pravidlo sloučení (udržování záznamů na základě úplnosti dat aktuálnosti) a toto pravidlo bylo aplikováno na úrovni záznamu na všechny atributy. Toto není ideální v případě, kdy se některá data, která chcete zachovat, nacházejí v záznamu A a jiná dobrá data v záznamu B.
+
+Další informace viz [Definování zrušení duplicit v entitě párování](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Vlastní pravidla pro párování
+
+Jsou chvíle, kdy potřebujete určit výjimku z obecných pravidel, aby se záznamy NEspárovaly. To se může stát, když více jednotlivců sdílí dostatek informací, takže je systém spáruje jako jednoho jednotlivce. Například dvojčata se stejným příjmením, žijící ve stejném městě a mající stejný datum narození.
+
+Výjimky zajišťují, že nesprávné sjednocení dat lze řešit v pravidlech sjednocení. K pravidlu můžete přidat více výjimek.
+
+Další informace najdete v části [Přidání výjimek do pravidla](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Zadání dalších zásad řešení konfliktů a povolení seskupování atributů
+
+Tato funkce umožňuje zacházet se skupinou polí jako s jednou jednotkou. Například když naše záznamy obsahují pole Adresa1, Adresa2, Město, Stát a PSČ. Pravděpodobně nechceme sloučit adresu2 do jiného záznamu kvůli tomu, že by to udělalo naše data úplnější.
+
+Nyní můžete zkombinovat skupinu souvisejících polí a použít na skupinu jedinou zásadu sloučení. 
+
+Více informací viz část [Kombinace skupiny polí](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Aktualizace z listopadu 2021
 

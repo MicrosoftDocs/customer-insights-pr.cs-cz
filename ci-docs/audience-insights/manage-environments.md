@@ -1,6 +1,6 @@
 ---
 title: Tvorba a správa prostředí
-description: Zjistěte, jak se zaregistrovat do služby a jak spravovat prostředí.
+description: 'Zjistěte, jak se zaregistrovat do služby a jak spravovat prostředí.'
 ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,11 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892376"
 ---
+
 # <a name="manage-environments"></a>Správa prostředí
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Přepnutí prostředí
 
