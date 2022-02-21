@@ -1,7 +1,7 @@
 ---
 title: Rozšíření sjednocených profilů zákazníka
 description: Využijte možnosti rozšíření svých zákaznických dat.
-ms.date: 11/05/2021
+ms.date: 02/07/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884208"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098781"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
@@ -37,6 +37,7 @@ Na kartě **Objevit** najdete všechny podporované možnosti obohacení.
 - [Demografické údaje](enrichment-experian.md) poskytované společností Experian
 - [Vlastní data](enrichment-SFTP-custom-import.md) prostřednictvím vlastního importu protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) poskytuje společnost Microsoft
+- [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies 
 
 # <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 

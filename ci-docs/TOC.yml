@@ -2,6 +2,22 @@
   href: index.yml
 - name: Přehled produktu
   href: overview.md
+- name: Katalog výukových materiálů
+  items:
+    - name: Seznámení
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Ingestace dat
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Vytvoření sjednoceného profilu zákazníka
+      href: /learn/modules/unified-customer-profile/
+    - name: Práce s přehledy cílové skupiny
+      href: /learn/modules/working-with-customer-insights/
+    - name: Rozšiřujte data a vytvářejte predikce
+      href: /learn/modules/enrich-data/
+    - name: Správa externích připojení
+      href: /learn/modules/configure-third-party-connections/
+    - name: Správa Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: Bezplatná zkušební verze
   items:
     - name: Registrace bezplatného zkušebního předplatného
@@ -30,21 +46,11 @@
           href: audience-insights/home.md
     - name: Práce s obchodními účty
       href: audience-insights/work-with-business-accounts.md
-    - name: Výukové moduly
-      items:
-        - name: Ingestace dat
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Vytvoření sjednoceného profilu zákazníka
-          href: /learn/modules/unified-customer-profile/
-        - name: Práce s aplikací
-          href: /learn/modules/working-with-customer-insights/
-        - name: Rozšíření dat a predikce
-          href: /learn/modules/enrich-data/
     - name: Zdroje dat
       items:
         - name: Přehled zdrojů dat
           href: audience-insights/data-sources.md
-        - name: Přidání zdrojů dat pomocí konektorů Power Query
+        - name: Přidejte zdroje pomocí konektorů Power Query
           href: audience-insights/connect-power-query.md
         - name: Přidání složky Common Data Model jako zdroje dat
           href: audience-insights/connect-common-data-model.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: Práva a požadavky DSR
   href: dsr-rights-requests.md
+- name: Získání podpory
+  href: /power-platform/admin/get-help-support

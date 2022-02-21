@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892330"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088094"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Vytvoření prostředí v přehledech cílové skupiny
 
@@ -28,7 +28,7 @@ Organizace mohou vytvořit *dvě* prostředí pro každou licenci Customer Insig
 
 ## <a name="create-a-new-environment"></a>Vytvořit nové prostředí
 
-Po zakoupení předplacené licence pro Customer Insights obdrží globální správce klienta Microsoft 365 e-mail s pozvánkou k vytvoření prostředí. Začněte tak, že přejdete na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
+Po zakoupení licence předplatného pro Customer Insights globální správce klienta Microsoft 365 obdrží e-mail s výzvou k vytvoření prostředí. Začněte tak, že přejdete na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
 
 Řízené prostředí vám pomůže krok za krokem shromáždit všechny požadované informace pro nové prostředí. Potřebujete [oprávnění správce](permissions.md) v přehledech cílové skupiny k vytváření nebo správě prostředí.
 
@@ -64,7 +64,7 @@ Uložením dat do Azure Data Lake Storage souhlasíte s tím, že data budou př
 > Customer Insights aktuálně podporuje následující:
 > - Požité entity z toků dat Power BI, které jsou uloženy v souboru Microsoft Dataverse - spravované Data Lake.  
 > - Účty Azure Data Lake Storage ze stejné oblasti Azure, kterou jste vybrali při vytváření prostředí.
-> - Účty Azure Data Lake Storage, které mají povolený *hierarchický obor názvů*.
+> - Účty Azure Data Lake Storage, které jsou Gen2 a které mají povolený *hierarchický obor názvů*. Účty úložiště Azure Data Lake Gen1 nejsou podporovány.
 
 Pro možnost Azure Data Lake Storage si můžete pro ověřování vybrat mezi možností založenou na zdroji a možností založenou na předplatném. Více informací viz [Připojení k účtu Azure Data Lake Storage pomocí instančního objektu Azure](connect-service-principal.md). Název **kontejneru** bude `customerinsights` a nelze jej změnit.
 

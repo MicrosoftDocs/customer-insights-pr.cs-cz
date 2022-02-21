@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732256"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100132"
 ---
 # <a name="work-with-customer-insights-apis"></a>Práce s rozhraními API v Customer Insights
 
@@ -35,7 +35,7 @@ Tento článek popisuje, jak přistupovat k API Customer Insights, vytvořit reg
  
    Povolením rozhraní API vytvoříte primární a sekundární klíč předplatného pro vaši instanci, který se použije v požadavcích rozhraní API. Klíče můžete znovu generovat výběrem možnosti **Opětovně vygenerovat primární** nebo **Opětovně vygenerovat sekundární** v části **Správce** > **Oprávnění** > **Rozhraní API**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Povolení rozhraní API aplikace Customer Insights.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Volbou **Prozkoumejte naše rozhraní API** si [vyzkoušejte rozhraní API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +49,7 @@ Tento článek popisuje, jak přistupovat k API Customer Insights, vytvořit reg
 
 Odpověď HTTP se brzy objeví níže.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Jak testovat API.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Vytvoření nové registrace aplikace v portálu Azure
 
@@ -65,7 +65,7 @@ Tyto kroky vám pomohou začít používat rozhraní API Customer Insights v apl
 
 1. Při registraci vaší nové aplikace přejděte na **Oprávnění rozhraní API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Jak nastavit oprávnění API v registraci aplikace.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Vyberte **Přidat oprávnění** a vyberte **Customer Insights** v postranním panelu.
 
@@ -77,7 +77,7 @@ Tyto kroky vám pomohou začít používat rozhraní API Customer Insights v apl
 
 Můžete použít ID aplikace/klienta pro registraci této aplikace v knihovně Microsoft Authentication Library (MSAL) k získání nosného tokenu, který odešlete s vaším požadavkem do rozhraní API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Jak udělit souhlas správce.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Další informace o MSAL naleznete v části [Přehled knihovny Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ Informace o používání rozhraní API v našich klientských knihovnách najde
 
 1. Vyberte **Udělit souhlas správce pro...** k dokončení registrace aplikace.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Jak udělit souhlas správce.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. Na závěr musíme přidat název registrace aplikace jako uživatel v Customer Insights.  
    
@@ -129,7 +129,7 @@ Zjistěte, jak začít používat klientské knihovny C# z NuGet.org. Pro více 
  
    Případně spusťte tento příkaz v **Konzole správce balíčků NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Přidání balíčku NuGet do projektu Visual Studio.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>Použití klientské knihovny C#
 
@@ -141,7 +141,7 @@ Zjistěte, jak začít používat klientské knihovny C# z NuGet.org. Pro více 
 
 1. Předejte klienta `HttpClient` do sestavení klienta `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Ukázka httpclient.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Telefonujte s klientem prostřednictvím „metod rozšíření“ - například `GetAllInstancesAsync`. Pokud je preferován přístup k základní odpovědi `Microsoft.Rest.HttpOperationResponse` - použijte například „metody zpráv HTTP“ `GetAllInstancesWithHttpMessagesAsync`.
 

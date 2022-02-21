@@ -1,7 +1,7 @@
 ---
 title: Párování entit pro sjednocení dat
 description: Spárováním entit můžete vytvořit sjednocené profily zákazníků.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098827"
 ---
-
 # <a name="match-entities"></a>Párování entit
 
 Fáze párování určuje, jak zkombinovat vaše datové sady do jednotného datového souboru zákaznického profilu. Po dokončení [kroku mapování](map-entities.md) v procesu sjednocení dat jste připraveni spárovat své entity. Fáze párování vyžaduje alespoň dvě mapované entity.
@@ -24,13 +29,7 @@ Stránka párování se skládá ze tří částí:
 
 ## <a name="specify-the-match-order"></a>Určení pořadí párování
 
-Přejděte na **Data** > **Sjednocení** > **Párování** a pro zahájení fáze párování vyberte **Nastavit pořadí**.
-
-Každé párování sjednocuje dvě nebo více entit do jedné konsolidované entity. Zároveň uchovává jedinečné záznamy o zákaznících. Například jsme vybrali dvě entity: **eCommerce:eCommerceContacts** jako primární entitu a **LoyaltyScheme:loyCustomers** jako druhou entitu. Pořadí entit určuje, v jakém pořadí se systém pokusí spárovat záznamy.
-
-:::image type="content" source="media/match-page.png" alt-text="Screenshot stránky Párování v oblasti Sjednocení pro proces sjednocení dat.":::
-  
-Primární entita *eCommerce:eCommerceContacts* je spárována s další entitou *LoyaltyScheme:loyCustomers*. Pokud máte více než dvě entity, datová sada, která je výsledkem prvního kroku shody, se shoduje s následující entitou.
+Každé párování sjednocuje dvě nebo více entit do jedné konsolidované entity. Zároveň uchovává jedinečné záznamy o zákaznících. Pořadí shody udává pořadí, ve kterém se systém pokusí záznamy spárovat.
 
 > [!IMPORTANT]
 > Entita, kterou si vyberete jako svoji primární, bude sloužit jako základ pro vaši datovou sadu sjednocených profilů. K této entitě budou přidány další entity vybrané během fáze párování. To neznamená, že sjednocená entita bude zahrnovat *všechna* data obsažená v této entitě.
@@ -38,9 +37,18 @@ Primární entita *eCommerce:eCommerceContacts* je spárována s další entitou
 > Existují dva aspekty, které vám mohou pomoci vybrat hierarchii vašich entit:
 >
 > - Vyberte entitu s nejúplnějšími a nejspolehlivějšími daty profilu o vašich zákaznících jako primární entitu.
-> - Vyberte entitu, která má několik společných atributů s jinými entitami (například jméno, telefonní číslo nebo e-mailová adresa) jako primární entitu.
+> - Vyberte entitu, která ma několik atrubutů společných s jinými entitami (například jméno, telefonní číslo nebo e-mailová adresa), jakožto primární entitu.
 
-Po zadání pořadí párování uvidíte definované párované dvojice v sekci **Podrobnosti o spárovaných záznamech** v umístění **Data** > **Sjednocení** > **Párování**. Klíčové metriky budou prázdné, dokud nebude dokončen proces párování.
+1. Přejděte na **Data** > **Sjednocení** > **Párování** a pro zahájení fáze párování vyberte **Nastavit pořadí**.
+1. Vyberte **Pořadí entit**. Například vyberte **eCommerce:eCommerceContacts** jako primární entitu a **LoyaltyScheme:loyCustomers** jako druhou entitu. 
+1. Pokud chcete mít každý záznam v entitě jedinečným zákazníkem spárovaným s každou následující entitou, vyberte **Zahrnou vše**.
+1. Vyberte **Hotovo**. 
+
+Po zadání pořadí párování se definované páry shody zobrazí v sekci **Podrobnosti o sprárovaných záznamech** v **Data** > **Sjednotit** > **Párování**. Klíčové metriky jsou prázdné, dokud se proces shody nedokončí.
+
+:::image type="content" source="media/match-page.png" alt-text="Screenshot stránky Párování v oblasti Sjednocení pro proces sjednocení dat.":::
+  
+Primární entita *eCommerce:eCommerceContacts* je spárována s další entitou *LoyaltyScheme:loyCustomers*. Pokud máte více než dvě entity, datová sada, která je výsledkem prvního kroku shody, se shoduje s následující entitou.
 
 ## <a name="define-rules-for-match-pairs"></a>Definování pravidel pro párování
 
@@ -50,7 +58,7 @@ Varování **Jsou zapotřebí pravidla** vedle názvu entity naznačuje, že pro
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Screenshot sekce Podrobnosti o spárovaných záznamech s ovládacím prvkem pro přidání zvýrazněných pravidel.":::
 
-1. Vyberte **Přidat pravidla** pod entitou v sekci **Podrobnosti o spárovaných záznamech** pro definování pravidel párování.
+1. Vyberte **Přidat pravidlo** pod entitou v sekci **Podrobnosti o spárovaných záznamech** pro definování pravidel párování.
 
 1. V podokně **Vytvoření pravidla** nakonfigurujte podmínky pravidla.
 
@@ -61,15 +69,15 @@ Varování **Jsou zapotřebí pravidla** vedle názvu entity naznačuje, že pro
    - **Entita/pole (druhý řádek)**: Vyberte atribut, který souvisí s atributem entity zadaném v prvním řádku.
 
    - **Normalizovat**: Vyberte z následujících možností normalizace pro vybrané atributy. 
-     - Mezera: Odebere všechny mezery. Z *Ahoj světe* se stane *Ahojsvěte*.
+     - Číslice: Převede jiné číselné systémy, například římské číslice, na arabské číslice. Z *VIII* se stane *8*.
      - Symboly: Odstraní všechny symboly a speciální znaky. Z *Head&Shoulder* se stane *HeadShoulder*.
      - Text na malá písmena: Převede všechny znaky na malá písmena. Z *VŠECHNA PÍSMENA VELKÁ a Název Případu* se stane *všechna písmena velká a název případu*.
+     - Typ (telefon, jméno, adresa, organizace): Standardizuje jména, tituly, telefonní čísla, adresy atd. 
      - Unicode na ASCII: Převede zápis Unicode na znaky ASCII. Z */u00B2* se stane *2*.
-     - Číslice: Převede jiné číselné systémy, například římské číslice, na arabské číslice. Z *VIII* se stane *8*.
-     - Sémantické typy: Standardizuje jména, tituly, telefonní čísla, adresy atd. 
+     - Mezera: Odebere všechny mezery. Z *Ahoj světe* se stane *Ahojsvěte*.
 
    - **Přesnost**: Nastaví úroveň přesnosti pro tuto podmínku. 
-     - **Základní**: Vyberte jednu z možností *Nízká*, *Střední*, *Vysoká* a *Přesná*. Vyberte **Přesná**, chcete-li porovnat pouze záznamy, které odpovídají 100 procentům. Vyberte jednu z dalších úrovní, které odpovídají záznamům, které nejsou 100% identické.
+     - **Základní**: Vyberte jednu z možností *Nízká*, *Střední*, *Vysoká* a *Přesná*. Vyberte **Přesný**, aby se shodovaly pouze záznamy, které se stoprocentně shodují. Vyberte jednu z dalších úrovní, které odpovídají záznamům, které nejsou 100% identické.
      - **Vlastní**: Nastaví procento, kterému musí záznamy odpovídat. Systém bude párovat pouze záznamy splňující tuto prahovou hodnotu.
 
 1. Zadejte **Jméno** tohoto pravidla.
@@ -117,7 +125,7 @@ Můžete změnit pořadí entit pro pravidla shody a změnit tak pořadí, ve kt
 
 Navíc pro [pravidla párování mezi entitami](#define-rules-for-match-pairs) můžete také zadat pravidla zrušení duplicit. *Zrušení duplicit* je další proces párování záznamů. Tato funkce identifikuje duplicitní záznamy a sloučí je do jednoho záznamu. Zdrojové záznamy se propojí se sloučeným záznamem s alternativními ID.
 
-Záznamy se zrušenými duplicitami budou použity v procesu párování mezi entitami. Zrušení duplicit se děje u jednotlivých entit a lze jej nakonfigurovat pro každou entitu použitou v párovaných dvojicích.
+Deduplikované záznamy se používají v procesu porovnávání mezi entitami. K deduplikaci dochází u jednotlivých entit a lze ji nakonfigurovat pro každou entitu použitou v párech shod.
 
 Zadání pravidel zrušení duplikace není povinné. Pokud nejsou nakonfigurována žádná taková pravidla, použijí se systémově definovaná pravidla. Ta zkombinují všechny záznamy do jednoho záznamu před předáním dat entit do párování mezi entitami pro lepší výkon.
 
@@ -134,7 +142,7 @@ Zadání pravidel zrušení duplikace není povinné. Pokud nejsou nakonfigurov�
       - **Nejnovější**: Identifikuje vítězný záznam na základě největší aktuálnosti. Vyžaduje datum nebo číselné pole pro definování aktuálnosti.
       - **Nejdřívější**: Identifikuje vítězný záznam na základě nejmenší aktuálnosti. Vyžaduje datum nebo číselné pole pro definování aktuálnosti.
 
-   1. Volitelně vyberte možnost **Upřesnit** a definujte deduplikační pravidla pro jednotlivé atributy entity. Můžete se například rozhodnout zachovat nejnovější e-mail A nejúplnější adresu z různých záznamů. Rozbalte entitu, abyste viděli všechny její atributy a definujte, kterou možnost mají použít jednotlivé atributy. Pokud zvolíte možnost založenou na aktuálnosti, musíte také zadat pole data/času, které definuje aktuálnost. 
+   1. Volitelně, chcete-li definovat deduplikační pravidla pro jednotlivé atributy entity, vyberte **Rozšířené**. Můžete se například rozhodnout zachovat nejnovější e-mail A nejúplnější adresu z různých záznamů. Rozbalte entitu, abyste viděli všechny její atributy a definujte, kterou možnost mají použít jednotlivé atributy. Pokud zvolíte možnost založenou na aktuálnosti, musíte také zadat pole data/času, které definuje aktuálnost. 
  
       > [!div class="mx-imgBorder"]
       > ![Pravidla zrušení duplicit – krok 1.](media/match-selfconflation.png "Pravidla zrušení duplicit – krok 1")

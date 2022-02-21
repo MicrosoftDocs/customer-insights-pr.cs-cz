@@ -1,7 +1,7 @@
 ---
 title: Nové a připravované funkce
-description: 'Informace o nových funkcích, vylepšeních a opravách chyb.'
-ms.date: 01/27/2022
+description: Informace o nových funkcích, vylepšeních a opravách chyb.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088277"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Aktualizace z ledna 2022
+
+Aktualizace v lednu 2022 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analýza postoje v názorech vašich zákazníků
+
+Customer Insights poskytuje novou funkci založenou na umělé inteligenci, která syntetizuje sentiment zákazníků a identifikuje konkrétní obchodní aspekty jako příležitosti pro cílená zlepšení. Analýzou písemné zpětné vazby vašich zákazníků můžete získat přesné informace za nízkou cenu. Analýza zabarvení založená na modelech zpracování přirozeného jazyka (NLP), které generují dva odvozené přehledy pro každé ID zákazníka. Skóre zabarvení (od –5 do 5) a seznam použitelných obchodních aspektů. 
+
+Více informací viz [Analýza zabarvení v názorech zákazníků (preview)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Aktualizace z prosince 2021
@@ -37,7 +53,7 @@ Více informací najdete v tématu [Přesměrování protokolů v Dynamics 365 C
 
 Pomocí dat z Microsoft Office 365 můžete rozšířit profily vašich zákaznických účtů o přehledy o zapojení prostřednictvím aplikací Office 365. Data o zapojení se skládají z aktivit e-mailů a schůzek, které jsou agregovány na úrovni účtu. Například počet e-mailů z obchodního účtu nebo počet schůzek s obchodním vztahem. Nejsou sdílena žádná data o jednotlivých uživatelích. Toto rozšíření je k dispozici pouze v následujících oblastech: Spojené království, Evropa, Severní Amerika.
 
-Více informací viz téma [Rozšíření profilů zákazníků o data o zapojení (Preview)](enrichment-office.md)
+Více informací viz téma [Rozšíření profilů zákazníků o data o zapojení (Preview)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Pokročilé funkce sjednocení dat
 

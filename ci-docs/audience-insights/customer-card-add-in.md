@@ -1,7 +1,7 @@
 ---
 title: Doplněk karty zákazníka pro aplikace Dynamics 365 (obsahuje video)
-description: "Zobrazte data z přehledu cílové skupiny v aplikacích Dynamics 365\_s tímto doplňkem."
-ms.date: 12/22/2021
+description: Zobrazte data z přehledu cílové skupiny v aplikacích Dynamics 365 s tímto doplňkem.
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085205"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Doplněk karty zákazníka (preview)
 
 
@@ -113,5 +118,26 @@ Doplněk karty zákazníka se neupgraduje automaticky. Chcete-li upgradovat na n
 
 1. Po spuštění procesu upgradu se zobrazí indikátor načítání, dokud se upgrade nedokončí. Pokud není k dispozici žádná novější verze, zobrazí se při upgradu chybová zpráva.
 
+## <a name="troubleshooting"></a>Řešení problému
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Ovládací prvky z doplňku Zákaznické karty nenacházejí data
+
+**Problém:**
+
+I při správně nakonfigurovaných polích ID nemohou ovládací prvky najít data pro žádného zákazníka.  
+
+**Řešení**
+
+1. Ujistěte se, že jste nakonfigurovali doplněk Karta podle pokynů: [Nakonfigurujte doplněk Zákaznická karta](#configure-the-customer-card-add-in) 
+
+1. Zkontrolujte konfiguraci příjmu dat. Upravte zdroj dat pro systém Dynamics 365, který obsahuje GUID ID kontaktu. Pokud je ID kontaktu GUID zobrazeno s velkými písmeny v editoru Power Query, zkuste následující: 
+    1. Upravte zdroj dat a otevřete zdroj dat v editoru Power Query.
+    1. Vyberte sloupec ID kontaktu.
+    1. Vyberte **Transformovat** v panelu záhlaví a zobrazíte dostupné akce.
+    1. Vyberte **malá písmena**. Ověřte, zda jsou GUID v tabulce nyní malá písmena.
+    1. Uložte zdroj dat.
+    1. Spusťte příjem dat, sjednocení a následné procesy k šíření změn do GUID. 
+
+Po dokončení úplné aktualizace by ovládací prvky doplňku Zákaznické karty měly zobrazovat očekávaná data. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
