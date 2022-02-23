@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008757"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analýza postoje na základě názorů zákazníků (Preview)
 
 Dnešní zákazníci očekávají vysoce kvalitní produkty, služby a prostředí. Zejména zákazníci, kteří sdílejí své názory. Pro organizace je velmi náročné analyzovat rostoucí objem dat, aniž by utrpěla přesnost a nenarostly pracovní náklady. Dynamics 365 Customer Insights nabízí model analýzy postoje na základě názorů zákazníků, který organizacím umožňuje přesněji a s nižšími náklady analyzovat svá data.

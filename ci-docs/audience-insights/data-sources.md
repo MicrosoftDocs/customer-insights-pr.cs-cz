@@ -1,6 +1,6 @@
 ---
 title: Použití zdrojů dat pro ingestaci dat
-description: 'Naučte se, jak importovat data z různých zdrojů.'
+description: Naučte se, jak importovat data z různých zdrojů.
 ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
+ms.openlocfilehash: ca979527c9cb8418e12af4a74513033047e4901c
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046580"
 ---
-
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
 

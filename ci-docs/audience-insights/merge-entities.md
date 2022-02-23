@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046555"
 ---
-
 # <a name="merge-entities"></a>Správa entit
 
 Fáze sloučení je poslední fází v procesu sjednocení dat. Jeho účelem je slazování protichůdných údajů. Příklady konfliktních dat mohou zahrnovat jméno zákazníka, které se nachází ve dvou vašich datových sadách, ale v každé z nich se zobrazuje trochu jinak ("Grant Marshall" versus "Grant Marshal") nebo telefonní číslo, které se liší ve formátu (617-803-091X versus 617803091X). Sloučení těchto konfliktních datových bodů se provádí na základě atribut - atribut.

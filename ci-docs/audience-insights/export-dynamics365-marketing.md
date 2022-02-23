@@ -1,6 +1,6 @@
 ---
 title: Export dat Customer Insights do Dynamics 365 Marketing
-description: 'Zjistěte, jak nakonfigurovat propojení a exportovat je do Dynamics 365 Marketing.'
+description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Dynamics 365 Marketing.
 ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,8 +9,13 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: e2ec9f1cc11fdab5ff313bb3041d2b158ed6ca67
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046662"
 ---
-
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Použití segmentů v Dynamics 365 Marketing (Preview)
 
 
