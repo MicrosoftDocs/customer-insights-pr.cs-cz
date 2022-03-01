@@ -1,7 +1,7 @@
 ---
 title: Predikce doporučení produktů
 description: Predikujte produkty, které si zákazník pravděpodobně zakoupí nebo s nimž bude interagovat.
-ms.date: 01/13/2022
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967786"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494531"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predikce doporučení produktů (Preview)
 
@@ -79,11 +79,11 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 1. Nastavte **Počet produktů**, kolik chcete doporučit zákazníkovi. Tato hodnota závisí na tom, jak váš způsob doručení vyplňuje data. Pokud můžete doporučit tři produkty, nastavte tuto hodnotu odpovídajícím způsobem.
    
    >[!TIP]
-   > Kdykoliv můžete volbou **Uložit koncept** uložit predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
+   > Kdykoli můžete použít volbu **Uložit a zavřít**, kterou uložíte predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
 
-1. Vyberte, zda chcete zahrnout produkty, které si zákazníci nedávno zakoupili, v poli **Očekávány opakované nákupy**.
+1. Zvolte, zda chcete **Navrhovat produkty, které zákazníci nedávno zakoupili**.
 
-1. Nastavte **Okno ohlédnutí**. Toto nastavení určuje časový rámec, kterým se model řídí před opětovným doporučením produktu uživateli. Například označte, že si zákazník kupuje notebook každé dva roky. Toto okno se zaměří na historii nákupů za poslední dva roky a pokud bude nalezena položka, bude položka filtrována z doporučení.
+1. Pokud jste se rozhodli *nedoporučit* nedávno zakoupené produkty, nastavte **Okno ohlédnutí**. Toto nastavení určuje časový rámec, kterým se model řídí před opětovným doporučením produktu uživateli. Například označte, že si zákazník kupuje notebook každé dva roky. Toto okno se zaměří na historii nákupů za poslední dva roky a pokud bude nalezena položka, bude položka filtrována z doporučení.
 
 1. Vyberte **Další**.
 

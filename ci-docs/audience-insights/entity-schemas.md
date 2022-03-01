@@ -1,7 +1,7 @@
 ---
 title: Schéma entit Customer Insights v definici Common Data Model
 description: Práce s entitami v Common Data Model.
-ms.date: 08/13/2021
+ms.date: 04/17/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2cdbe11a1c0cc5d65434fb2ae3a3f38c18f31cf4
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046495"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692297"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémata entit v Common Data Model
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 [Common Data Model](/common-data-model/) je deklarativní specifikace a definice standardních entit, která představuje běžně používané koncepce a aktivity v různých obchodních a produktivních aplikacích. Tento model se rozšiřuje také na pozorovací a analytická data. Common Data Model poskytuje jasně definované, modulární a rozšiřitelné obchodní entity (například Účet, Obchodní jednotka, Případ, Kontakt, Zájemce, Příležitost a Produkt) a také interakce a vztahy mezi dodavateli, pracovníky a zákazníky, například aktivity a smlouvy o úrovni služeb. Kdokoli může stavět a rozšiřovat definice Common Data Model, aby zahrnul další podnikatelské nápady.
 
@@ -42,7 +42,7 @@ Další informace naleznete v dokumentaci [Schémata entit Customer Insights v d
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Zobrazení entit pomocí navigátoru entit Common Data Model
 
-Entity si můžete prohlédnout v [navigátoru entit Common Data Model](https://microsoft.github.io/CDM/). Vyberte entitu z části aplikace přehledů a získáte seznam entit Customer Insights a jejich definice.
+Entity si můžete prohlédnout v [navigátoru entit Common Data Model](https://microsoft.github.io/CDM/). Vyberte tlačítko **Načíst z GitHubu!** a přejděte na **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, kde najdete seznam entit Customer Insights a všechny jejich definice.
 > [!div class="mx-imgBorder"]
 > ![Navigátor entit CDM zobrazující entitu CustomerActivity.](media/CDM-entity-navigator.png "Navigátor entit CDM zobrazující entitu CustomerActivity")
 

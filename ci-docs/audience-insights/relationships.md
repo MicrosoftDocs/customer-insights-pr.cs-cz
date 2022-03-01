@@ -1,20 +1,20 @@
 ---
 title: Vztahy mezi entitami a cesty k entitám
 description: Vytvářejte a spravujte vztahy mezi entitami z více zdrojů dat.
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622991"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171156"
 ---
 # <a name="relationships-between-entities"></a>Vztahy mezi entitami
 
@@ -68,20 +68,6 @@ Vztah se skládá ze *zdrojové entity* obsahující cizí klíč a *cílové en
 
 4. Výběrem položky **Uložit** vytvoříte vlastní vztah.
 
-## <a name="set-up-account-hierarchies"></a>Nastavení hierarchií účtů
-
-Prostředí, která jsou nakonfigurována tak, aby používala podnikové účty jako primární cílovou skupinu, mohou nakonfigurovat hierarchie účtů pro související podnikové účty. Například společnost, která má samostatné obchodní jednotky. 
-
-Organizace vytvářejí hierarchie účtů pro lepší vzájemnou správu účtů a jejich vztahů. Schopnost přehledů cílové skupiny podporuje hierarchie nadřízeného a podřízeného účtu, které již v přijatých údajích zákazníka existují. Například účty z Dynamics 365 Sales. Tyto hierarchie lze konfigurovat na stránce **Vztahy** v přehledech cílové skupiny na kartě hierarchie účtu.
-
-1. Jděte na **Data** > **Vztahy**.
-1. Vyberte kartu **Hierarchie účtu**.
-1. Vyberte **Nová hierarchie účtů**. 
-1. V podokně **Hierarchie účtu** zadejte název hierarchie. Systém vytvoří název pro výstupní entitu. Můžete změnit název entity názvu výstupu.
-1. Vyberte entitu, která obsahuje hierarchii vašeho účtu. Obvykle je ve stejné entitě, která obsahuje účty.
-1. Vyberte **ID účtu** a **ID nadřízeného účtu** z vybrané entity 
-1. Vyberte **Uložit**, abyste mohli použít nastavení a dokončit hierarchii účtu.
-
 ## <a name="view-relationships"></a>Zobrazení vztahů
 
 Stránka Vztahy uvádí seznam všech vztahů, které byly vytvořeny. Každý řádek představuje vztah, který zahrnuje také podrobnosti o zdrojové entitě, cílové entitě a kardinalitě. 
@@ -96,7 +82,7 @@ Tato stránka nabízí sadu možností pro stávající a nové vztahy:
 
 ### <a name="explore-the-relationship-visualizer"></a>Prohlídka vizualizéru vztahů
 
-Vizualizér vztahů zobrazuje si síťový diagram stávajících vztahů mezi propojenými entitami a jejich kardinalitu. Vizualizuje také cestu vztahu.
+Vizualizér vztahů zobrazuje si síťový diagram stávajících vztahů mezi propojenými entitami a jejich kardinalitu.
 
 Chcete-li si zobrazení přizpůsobit, můžete změnit polohu polí jejich přetažením na plátně.
 
@@ -106,56 +92,6 @@ Dostupné možnosti:
 - **Exportovat jako obrázek**: Uloží aktuální zobrazení jako obrazový soubor.
 - **Změnit na vodorovné/svislé rozložení**: Změňte zarovnání entit a vztahů.
 - **Upravit**: Aktualizujte vlastnosti vlastních vztahů v podokně úprav a uložte změny.
-
-## <a name="relationship-paths"></a>Cesty vztahů
-
-Cesta vztahu popisuje entity, které jsou propojeny vztahy mezi zdrojovou entitou a cílovou entitou. Používá se při vytváření segmentu nebo míry, která zahrnuje jiné entity než entitu jednotného profilu, a existuje několik možností, jak dosáhnout entity sjednoceného profilu. 
-
-Cesta vztahu informuje systém, přes které vztahy má přistupovat k entitě jednotného profilu. Různé cesty vztahů mohou přinést různé výsledky.
-
-Například entita *eCommerce_eCommercePurchases* má ke sjednocenému profilu entity *Zákazník* následující vztahy:
-
-- eCommerce_eCommercePurchases > Zákazník
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Zákazník
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Zákazník 
-
-Cesta vztahu určuje, které entity můžete použít při vytváření pravidel pro míry nebo segmenty. Výběr možnosti s nejdelší cestou vztahu pravděpodobně přinese méně výsledků, protože odpovídající záznamy musí být součástí všech entit. V tomto případě musí zákazník mít zakoupené zboží prostřednictvím elektronického obchodování (eCommerce_eCommercePurchases), v pokladním místě (POS_posPurchases) a účastnit se našeho věrnostního programu (loyaltyScheme_loyCustomers). Při výběru první možnosti byste pravděpodobně získali více výsledků, protože zákazníci musí existovat pouze v jedné další entitě.
-
-### <a name="direct-relationship"></a>Přímý vztah
-
-Vztah je klasifikován jako **přímý vztah**, když má zdrojová entita vztah k cílové entity pouze s jedním vztahem.
-
-Pokud například se entita aktivity s názvem *eCommerce_eCommercePurchases* připojí k cílové entitě *eCommerce_eCommerceContacts* pouze prostřednictvím *ContactId*, je to přímý vztah.
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="Zdrojová entita se připojí přímo k cílové entitě.":::
-
-#### <a name="multi-path-relationship"></a>Vztah více cest
-
-**Vztah více cest** je speciální typ přímého vztahu, který spojuje zdrojovou entitu s více než jednou cílovou entitou.
-
-Pokud například entita aktivity s názvem *eCommerce_eCommercePurchases* má vztah se dvěma cílovými entitami, *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, je to vztah více cest.
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="Zdrojová entita se připojuje přímo k více než jedné cílové entitě prostřednictvím vztahu přes více kroků.":::
-
-### <a name="indirect-relationship"></a>Nepřímý vztah
-
-Vztah je klasifikován jako **nepřímý vztah**, když má zdrojová entita vztah k alespoň jedné další entitě před vztahem k cílové entity.
-
-#### <a name="multi-hop-relationship"></a>Vztah více kroků
-
-*Vztah více kroků* je *nepřímý vztah*, které vám umožňuje připojit zdrojovou entitu k cílové entitě prostřednictvím jedné nebo více dalších zprostředkujících entit.
-
-Pokud se například entita aktivity *eCommerce_eCommercePurchasesWest* připojuje se k mezilehlé entitě s názvem *eCommerce_eCommercePurchasesEast* a poté se připojí k cílové entitě s názvem *eCommerce_eCommerceContacts*, je to vztah více kroků.
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="Zdrojová entita se připojuje přímo k cílové entitě s mezilehlou entitou.":::
-
-### <a name="multi-hop-multi-path-relationship"></a>Vztah více kroků a více cest
-
-Vztahy více kroků a více cest lze použít společně k vytvoření **vztahů více kroků a více cest**. Tento speciální typ kombinuje funkce **více kroků** a **vztahů více cest**. Umožňuje vám připojit se k více než jedné cílové entitě při použití mezilehlých entit.
-
-Pokud se například entita aktivity *eCommerce_eCommercePurchasesWest* připojuje se k mezilehlé entitě s názvem *eCommerce_eCommercePurchasesEast* a poté se připojí ke dvěma cílovým entitám, *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, je to vztah více kroků a více cest.
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Zdrojová entita se připojuje přímo k jedné cílové entitě a připojuje se k jiné cílové entitě prostřednictvím mezilehlé entity.":::
 
 ## <a name="manage-existing-relationships"></a>Správa existujících vztahů 
 
@@ -169,6 +105,6 @@ Vyberte vztah a zvolte jednu z následujících možností:
 
 ## <a name="next-step"></a>Další krok
 
-Systém a vlastní vztahy se používají k [vytváření segmentů](segments.md) a [měr](measures.md) na základě více zdrojů dat, které již nejsou seskupeny v silech.
+Systémové a vlastní vztahy se používají k [vytvoření segmentů](segments.md) založených na více zdrojích dat, které již nejsou izolovány.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

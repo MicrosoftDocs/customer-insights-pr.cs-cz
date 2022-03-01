@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967647"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881776"
 ---
 # <a name="custom-machine-learning-models"></a>Vlastní modely strojového učení
 
@@ -40,8 +40,6 @@ Predikce umožňují vytvářet lepší zákaznické prostředí, zlepšovat obc
 
    > [!NOTE]
    > Data se přenášejí mezi vašimi instancemi Customer Insights a vybranými webovými službami nebo kanály Azure v pracovním postupu. Když přenášíte data do služby Azure, ujistěte se, že je služba nakonfigurovaná tak, aby zpracovávala data způsobem a umístěním nezbytným pro splnění jakýchkoli právních nebo regulačních požadavků na tato data pro vaši organizaci.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Přidání nového pracovního postupu
 

@@ -1,75 +1,50 @@
 ---
-title: Export dat Customer Insights do služby Azure Blob Storage
-description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Blob Storage.
-ms.date: 10/06/2021
-ms.reviewer: mhart
+title: Export dat Customer Insights do úložiště Azure Blob
+description: Naučte se, jak nakonfigurovat připojení k úložišti Azure Blob.
+ms.date: 09/18/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d02c09a1869d0099db4861b65ac8ff006914873e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: 925b53260e7c633e17d7f172d2dd2d581e982e10
+ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605830"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4667131"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Export seznamu segmentů a dalších dat do služby Azure Blob Storage (náhled)
+# <a name="connector-for-azure-blob-storage-preview"></a>Konektor pro úložiště Azure Blob (náhled)
 
-Uložte si data Customer Insights do služby Azure Blob Storage nebo je použijte k přenosu dat do jiných aplikací.
+Uchovávejte svá data Customer Insights v úložišti Azure Blob nebo jej použijte k přenosu dat do jiných aplikací.
 
-## <a name="known-limitations"></a>Známá omezení
+## <a name="configure-the-connector-for-azure-blob-storage"></a>Konfigurace konektoru pro úložiště Azure Blob
 
-1. U Azure Blob Storage si můžete vybrat mezi [Úrovní výkonu Standard a Premium](/azure/storage/blobs/storage-blob-performance-tiers). Pokud zvolíte úroveň výkonu Premium, vyberte [jako typ účtu objekty blob prémiového bloku](/azure/storage/common/storage-account-overview#types-of-storage-accounts).
+1. V přehledech cílové skupiny přejděte na **Správa** > **Cíle exportu**.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Nastavení propojení s Blob Storage
+1. V **Azure Blob Storage** vyberte **Založit**.
 
-1. Přejděte na **Správce** > **Propojení**.
+1. Vložte **Název účtu**, **Klíč účtu** a **Kontejner** pro váš účet úložiště Azure Blob.
+    - Další informace o tom, jak najít název účtu úložiště Azure Blob a klíč účtu, viz [Správa nastavení účtu úložiště v portálu Azure](https://docs.microsoft.com/azure/storage/common/storage-account-manage).
+    - Informace o tom, jak vytvořit kontejner, viz [Vytvoření kontejneru](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Vyberte **Přidat připojení** a zvolte **Azure Blob Storage** pro konfiguraci připojení.
+1. Zadejte rozpoznatelný název cíle do pole **Zobrazovaný název**.
 
-1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
-
-1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Zadejte **jméno obchodního vztahu**, **klíč obchodního vztahu** a **kontejner** pro účet Blob Storage.
-    - Další informace o vyhledání účtu Blob Storage a klíči účtu najdete v tématu [Správa nastavení účtu úložiště na webu Azure Portal](/azure/storage/common/storage-account-manage).
-    - Informace o tom, jak vytvořit kontejner, viz [Vytvoření kontejneru](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
-
-1. Dokončete propojení výběrem možnosti **Uložit**. 
-
-## <a name="configure-an-export"></a>Konfigurace exportu
-
-Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
-
-> [!IMPORTANT]
-> Pokud jste pro účet Azure Blob Storage zapnuli nastavení obnovitelné odstranění, exporty se nezdaří. Chcete -li exportovat data do objektů BLOB, vypněte obnovitelné odstranění. Další informace viz [Povolení obnovitelného odstranění objektů blob](/azure/storage/blobs/soft-delete-blob-enable.md)
-
-1. Přejděte na **Data** > **Exporty**.
-
-1. Pokud chcete vytvořit nový export, vyberte **Přidat cíl**.
-
-1. V poli **propojení pro export** vyberte propojení z části Azure Blob Storage. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
+1. Vyberte **Další**.
 
 1. Zaškrtněte políčko vedle každé entity, kterou chcete exportovat do tohoto cíle.
 
 1. Zvolte **Uložit**.
 
-Uložení exportu nespustí export okamžitě.
+Exportovaná data jsou uložena v konfiguračním úložném kontejneru Azure Blob. Ve vašem kontejneru se automaticky vytvoří následující cesty ke složkám:
 
-Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab).     
-
-Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
-
-Exportovaná data jsou uložena v kontejneru úložiště Blob Storage, který jste nakonfigurovali. Ve vašem kontejneru se automaticky vytvoří následující cesty ke složkám:
-
-- Pro zdrojové entity a entity generované systémem:   
-  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
+- Pro zdrojové entity a entity generované systémem: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
   - Příklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
-- Model.json pro exportované entity bude mít úroveň %ExportDestinationName%.  
+- Model.json pro exportované entity bude umístěn na úrovni %ExportDestinationName%
   - Příklad: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+## <a name="export-the-data"></a>Export dat
+
+Můžete [exportovat data na vyžádání](/export-destinations.md#export-data-on-demand). Export bude spuštěn také s každou [plánovanou aktualizací](system.md#schedule-tab).

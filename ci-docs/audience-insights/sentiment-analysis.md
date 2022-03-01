@@ -1,6 +1,6 @@
 ---
-title: Analýza postoje v názorech zákazníků
-description: Naučte se používat model analýzy postoje v názorech zákazníků v Dynamics 365 Customer Insights.
+title: Sémantická analýza názorů zákazníků
+description: Naučte se používat model analýzy postoje na základě názorů zákazníků v Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
-ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
+ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8008757"
+ms.lasthandoff: 01/10/2022
+ms.locfileid: "7951075"
 ---
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analýza postoje na základě názorů zákazníků (Preview)
 
@@ -38,7 +38,7 @@ Abychom zajistili, že výsledkům modelů můžete důvěřovat, poskytujeme tr
 
 Používáme dva **modely zpracování přirozeného jazyka (NLP)**: První model přiřadí každému komentáři s názory skóre postoje. Druhý model přidruží každý názor ke všem vhodným obchodním aspektům. Modely jsou trénovány na veřejných datech ze zdrojů napříč sociálními médii, maloobchodem, restauracemi, spotřebním zbožím a automobilovým průmyslem.    
   
-Předdefinované obchodní aspekty modelu, které jsou přidruženy k datům názorů, zahrnují následující položky:
+- Předdefinované obchodní aspekty modelu, které jsou přidruženy k datům názorů, zahrnují následující položky:
 -   Správa účtů
 -   Pokladna a platba
 -   Zákaznická podpora

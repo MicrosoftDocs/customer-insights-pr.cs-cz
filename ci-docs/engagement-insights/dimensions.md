@@ -4,17 +4,17 @@ description: Vytváření, úprava a odstraňování dimenzí.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 136da1e1265c7087d861712d34d011b09cb60ad5
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623624"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033989"
 ---
 # <a name="view-and-create-dimensions"></a>Zobrazení a vytvoření dimenzí
 
@@ -22,7 +22,7 @@ ms.locfileid: "7623624"
 
 Dimenze je atribut událostí, který může popisovat, filtrovat nebo seskupovat data. Pokud na svém webu provozujete marketingovou propagaci, můžete pomocí dimenzí třídit návštěvníky na nové a vracející se uživatele.  
 
-Přehledy zapojení zahrnují předem připravené vestavěné dimenze (OOB) pro vlastnosti události. Příklady:
+Přehledy zapojení zahrnují předem připravené vestavěné dimenze pro vlastnosti události. Příklady:
 
 - Název prohlížeče
 - Název stránky
@@ -44,21 +44,17 @@ Dimenze jsou založeny na stávajících vlastnostech události. Když použijet
 Kromě dimenzí generovaných systémem mohou správci prostředí a pracovního prostoru vytvářet vlastní dimenze. Vlastní dimenze jsou založeny na výchozích vlastnostech základních událostí nebo mohou použít [uživatelské vlastnosti události](advanced-SDK-implementation.md).
 
 1. Přejděte na položku **Data** > **Dimenze**.
-1. Vyberte **Nová dimenze**.
+1. Vyberte položku **Přidat dimenzi**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Přidání dimenze k události.":::
 
 1. V podokně **Vytvořit dimenzi** vyberte vlastnost, na které bude dimenze založena. Seznam vlastností zobrazí všechny vlastnosti v pracovním prostoru, které nejsou přiřazeny k dimenzi.
-   
-   :::image type="content" source="media/create-new-dimension.png" alt-text="Vytvořte novou dimenzi.":::
-      
-3. Zapište název do pole **Zobrazovaný název**. Volitelně můžete přidat **popis**.
-4. Výběrem příkazu **Vytvořit** dimenzi uložte. Může trvat až jednu minutu, než budete moci použít dimenzi ve [vlastní sestavě](custom-reports.md) nebo [segmentu](segments.md). 
+1. Zapište název do pole **Zobrazovaný název**. Volitelně můžete přidat popis.
+1. Výběrem příkazu **Vytvořit** dimenzi uložte. Může trvat až jednu minutu, než budete moci použít dimenzi ve [vlastní sestavě](custom-reports.md) nebo [segmentu](segments.md). 
 
 ## <a name="edit-a-dimension"></a>Úprava dimenze
 
-Název a popis dimenze můžete změnit. Můžete upravovat pouze dimenze vytvořené uživateli, ale nemůžete upravovat systémové dimenze.
-
+Název a popis dimenze můžete změnit.
 
 1. Přejděte na položku **Data** > **Dimenze**.
 1. Vyberte dimenzi, kterou chcete odstranit.

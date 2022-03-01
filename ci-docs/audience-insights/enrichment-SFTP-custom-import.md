@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618674"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304642"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Rozšíření profilů zákazníků o vlastní data (Preview)
 
@@ -45,8 +45,6 @@ Chcete-li nakonfigurovat vlastní import SFTP, musíte splnit následující př
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot při zadávání datového umístění.":::
 
-1. Vyberte **Další** a zvolte datovou sadu zákazníka. Mohou to být buď všechny zákaznické profily, nebo segment.
-
 1. Vyberte **Další** a zadejte název rozšíření a název výstupní entity. 
 
 1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
@@ -66,7 +64,7 @@ Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci ro
 1. Po dokončení ověření lze připojení uložit výběrem **Uložit**.
 
    > [!div class="mx-imgBorder"]
-   > ![Stránka konfigurace připojení Experian.](media/enrichment-SFTP-connection.png "Stránka konfigurace připojení Experian")
+   > ![Stránka konfigurace připojení Experian](media/enrichment-SFTP-connection.png "Stránka konfigurace připojení Experian")
 
 
 ## <a name="defining-field-mappings"></a>Definování mapování polí 
@@ -125,6 +123,6 @@ Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobném
 
 ## <a name="next-steps"></a>Další kroky
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Stavte na svých obohacených zákaznických údajích. Vytvořte [segmenty](segments.md) a [měření](measures.md) a [exportujte data](export-destinations.md), abyste svým zákazníkům poskytli přizpůsobené prostředí.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

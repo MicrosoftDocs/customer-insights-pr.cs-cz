@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466340"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461095"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Použití demografických dimenzí k rozdělení údajů o chování
 
@@ -29,7 +29,7 @@ Pomocí demografických dimenzí jednotného profilu mají uživatelé přehled�
 - Prostředí přehledů zapojení, ve kterém máte data profilu zákazníků propojená s prostředím přehledů cílových skupin, kde jsou profily zákazníků vytvářeny. Více informací: [Vytvoření propojení mezi přehledy cílových skupin a přehledy zapojení](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Poté, co vytvoříte propojení mezi přehledy cílových skupin a přehledy zapojení můžete chtít pouze data specifická pro vlastnosti zákaznického profilu, což může být užitečné jako dimenze v přehledech zapojení. Pro další informace přejděte na část [Povolte atributy a segmenty sjednocených profilů přehledů cílových skupin](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
+> Poté, co vytvoříte propojení mezi přehledy cílových skupin a přehledy zapojení můžete chtít pouze data specifická pro vlastnosti zákaznického profilu, což může být užitečné jako dimenze v přehledech zapojení. Pro další informace přejděte na část [Povolte atributy a segmenty sjednocených profilů přehledů cílových skupin](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Vytvoření nové vlastní sestavy
 

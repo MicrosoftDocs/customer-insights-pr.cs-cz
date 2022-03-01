@@ -4,17 +4,17 @@ description: Jak vytvářet, upravovat a odstraňovat segmenty a kde je použít
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623579"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036140"
 ---
 # <a name="view-and-create-segments"></a>Zobrazení a vytvoření segmentů
 
@@ -44,27 +44,22 @@ Tato část popisuje, jak vytvořit *prázdný segment*.
 
 1. Vyberte **Nový segment**.
 
-1. V **Knihovně zdrojů** vyberte (+) vedle atributu, podle kterého chcete filtrovat. V současné době můžete vytvářet pouze segmenty na základě dimenzí.
+1. V **Knihovně zdrojů** vyberte atribut, podle kterého chcete filtrovat. V současné době můžete vytvářet pouze segmenty na základě dimenzí.
 
-   :::image type="content" source="media/create-new-segment.png" alt-text="Vytvořte nový segment.":::
-
-1. V části **Pravidlo** vyberte operátor a hodnotu pro vybraný atribut. Použít můžete následující operace:
-
-   :::image type="content" source="media/choose-operator-segment.png" alt-text="Vyberte operátora pro svůj nový segment.":::
-
+1. Zvolte operátor a hodnotu vybraného atributu. Použít můžete následující operace:
    - **je**: vyžaduje přesnou shodu pro zahrnutí hodnot. Používá operátor **rovná se** pro jednu hodnotu nebo **jakýkoliv z** pro zahrnutí více hodnot.
    - **není**: vyžaduje přesnou shodu pro vyloučení hodnot. Používá operátor **rovná se** pro jednu hodnotu nebo **jakýkoliv z** pro zahrnutí více hodnot.
    - **začíná na**: řetězec, kterým začínají odpovídající hodnoty.
    - **končí na**: řetězec, kterým končí odpovídající hodnoty.
    - **obsahuje**: řetězec obsažený v odpovídajících hodnotách.
 
-1. Chcete -li do skupiny přidat další podmínky, můžete použít logické operátory. Při použití operátorů sady jsou zohledněny projektované atributy.
+1. Chcete-li do skupiny přidat další podmínky, můžete použít dva logické operátory. Při použití operátorů sady jsou zohledněny projektované atributy.
    - Operátor **AND**: Obě podmínky musí být splněny v rámci procesu segmentace. Tato možnost je nejužitečnější při definování podmínek mezi různými entitami.
    - Operátor **OR**: Buď je třeba splnit jednu z podmínek v rámci procesu segmentace. Tato možnost je nejužitečnější při definování více podmínek pro stejnou entitu.
 
 1. Vyberte **Uložit** a pojmenujte segment. 
 
-Segment bude uveden na stránce **Segmenty** a můžete jej použít na všechny sestavy a trychtýře v pracovním prostoru.
+Segment bude uveden na stránce Segmenty a můžete jej použít na všechny sestavy a trychtýře v pracovním prostoru.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Použití segmentu v sestavě nebo trychtýři
 
@@ -72,7 +67,7 @@ Segmenty můžete použít na přehled nebo trychtýř a filtrovat je podle podm
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Sestava zobrazení stránky s rozbaleným rozevíracím seznamem pro výběr, které segmenty se mají použít.":::
 
-Chcete-li použít segment, otevřete sestavu nebo trychtýř. Vyberte **+ Přidat podmínku** a poté **Filtrovat podle segmentu**. V seznamu vyberte segment, který chcete použít. Segment bude použit na sestavu. Pokud graf nepodporuje segment, zobrazí chybu. Další informace najdete v tématu o [vytváření a správě trychtýřových sestav](funnel-reports.md).
+Chcete-li použít segment, otevřete sestavu nebo trychtýř. Vyberte **Přidat podmínku** a poté **Filtrovat podle segmentu**. V seznamu vyberte segment, který chcete použít. Segment bude použit na sestavu. Pokud graf nepodporuje segment, zobrazí chybu.
  
 Na sestavu nebo trychtýř můžete použít *až tři segmenty*.
 
@@ -96,7 +91,5 @@ Na sestavu nebo trychtýř můžete použít *až tři segmenty*.
 1. V seznamu segmentů vyberte **Další [...]**. 
 1. Z rozevíracího seznamu vyberte **Odstranit**.
 1. Výběrem možnosti **Odstranit** potvrdíte akci.
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

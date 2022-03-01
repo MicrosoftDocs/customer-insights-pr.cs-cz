@@ -1,247 +1,113 @@
 ---
-title: Vytváření a správa měr
-description: Definujte míry, které budou analyzovat a reflektovat výkon vašeho podnikání.
-ms.date: 11/01/2021
+title: Vytváření a úprava měr
+description: Definujte opatření související se zákazníky pro analýzu a zohlednění výkonu určitých obchodních oblastí.
+ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: wameng
-ms.reviewer: mhart
+ms.author: mhart
+ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732718"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405394"
 ---
 # <a name="define-and-manage-measures"></a>Definujte a spravujte opatření
 
-Míry vám pomohou lépe porozumět chování zákazníků a výkonnosti podniku. Zaměřují se na relevantní hodnoty ze [sjednocených profilů](data-unification.md). Například firma chce vidět *celkové výdaje na zákazníka*, aby rozuměla historii nebo míře nákupu jednotlivého zákazníka nebo změřila *celkový prodej společnosti*, aby porozuměla agregovaným výnosům v celém podniku.  
+**Opatření** představují klíčové ukazatele výkonnosti, které odrážejí výkonnost a zdraví konkrétních obchodních oblastí. Přehledy cílové skupiny poskytuje intuitivní prostředí pro vytváření různých typů měr pomocí nástroje pro vytváření dotazů, které nevyžaduje ruční kódování nebo ověřování měr. Obchodní opatření můžete sledovat na **Domovské stránce**, zobrazit opatření pro konkrétní zákazníky na **Kartě zákazníka** a použít opatření k definování segmentů zákazníků na stránce **Segmenty**.
 
-Míry jsou vytvářeny pomocí nástroje pro tvorbu měr, což je platforma pro dotazování dat s různými operátory a možnostmi jednoduchého mapování. Umožňuje filtrovat data, seskupovat výsledky, detekovat [cesty vztahů mezi entitami](relationships.md) a zobrazovat náhledy výstupu.
+## <a name="create-a-measure"></a>Vytvořit nové opatření
 
-Pomocí nástroje pro tvorbu měr můžete plánovat obchodní aktivity dotazováním zákaznických dat a extrahováním přehledů. Například vytvoření míry *celkové výdaje na zákazníka* a *celková návratnost na zákazníka* pomáhá identifikovat skupinu zákazníků s vysokými výdaji, ale s vysokou návratností. [Vytvořením segmentu](segments.md) můžete řídit nejvhodnější akce, které se mají následně provést. 
-
-## <a name="build-your-own-measure-from-scratch"></a>Vytvoření vlastní míry od začátku
-
-Tato sekce vás provede vytvořením nové míry od nuly. Míru můžete vytvořit pomocí datových atributů z datových entit, které mají nastavený vztah pro připojení k jednotné entitě zákaznického profilu.
-
-# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
+Tato část vás provede vytvořením opatření od začátku. Můžete vytvářet opatřen s daty z více zdrojů dat, které jsou propojeny prostřednictvím entity Zákazník. Použijí se některé [servisní limity](service-limits.md).
 
 1. V přehledech cílové skupiny přejděte na **Míry**.
 
-1. Vyberte **Nový** a zvolte **Vytvořit vlastní**.
+2. Vyberte **Nové opatření**.
 
-1. Vyberte **Upravit jméno** a zadejte **Název** míry. 
+3. Zvolte **Typ** opatření:
 
-1. V oblasti konfigurace vyberte funkci agregace z rozevírací nabídky **Vybrat funkci**. Agregační funkce zahrnují: 
-   - **Sum**
-   - **Průměr**
-   - **Počet**
-   - **Počet jedinečných**
-   - **Max**
-   - **Min.**
-   - **První**: přebírá první hodnotu datového záznamu
-   - **Poslední**: převezme poslední hodnotu, která byla přidána do datového záznamu
+   - **Atribut záazníka**: Jedno pole na zákazníka, které odráží skóre, hodnotu nebo stav pro zákazníka. Atributy zákazníka jsou vytvořeny jako atributy v nové systémové entitě nazývané **Opatření zákazníka**.
 
-   :::image type="content" source="media/measure-operators.png" alt-text="Operátory pro výpočty měr.":::
+   - **Opatření zákazníka**: Přehledy o chování zákazníků s rozdělením podle vybraných dimenzí. Pro každé opatření je generována nová entita, potenciálně s více záznamy na zákazníka.
 
-1. Volbou **Přidat atribut** vyberte data, která potřebujete k vytvoření této míry.
-   
-   1. Vyberte kartu **Atributy**. 
-   1. Datová entita: Vyberte entitu, která obsahuje atribut, který chcete měřit. 
-   1. Atribut dat: Vyberte atribut, který chcete použít ve funkci agregace pro výpočet míry. Nelze vybrat více atributů najednou.
-   1. Atribut dat ze stávající míry můžete také vybrat výběrem karty **Míry** nebo můžete vyhledat název entity nebo míry. 
-   1. Volbou **Přidat** přidáte vybraný atribut do míry.
+   - **Obchodní opatření**: Sleduje výkonnost a zdraví podniku. Obchodní opatření mohou mít dva různé výstupy: číselný výstup, který se zobrazí na **Domovské stránce** nebo novou entitu, kterou najdete na stránce **Entity**.
 
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Vyberte atribut, který se má použít ve výpočtech.":::
+4. Zadejte **Název** a volitelný **Zobrazovaný název** a pak vyberte **Další**.
 
-1. Chcete-li vytvořit složitější míry, můžete přidat další atributy nebo použít matematické operátory ve své funkci míry.
+5. V sekci **Entity** z rozevíracího seznamu vyberte první entitu. V tomto okamžiku byste se měli rozhodnout, zda jsou v rámci definice míry potřeba další entity.
 
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Vytvořte komplexní míru s matematickými operátory.":::
+   > [!div class="mx-imgBorder"]
+   > ![Definice opatření](media/measure-definition.png "Definice míry")
 
-1. Chcete-li přidat filtry, vyberte možnost **Filtr** v konfigurační oblasti. 
-  
-   1. V části **Přidat atribut** podokna **Filtry** vyberte atribut, který chcete použít k vytvoření filtrů.
-   1. Nastavte operátory filtru tak, aby definovaly filtr pro každý vybraný atribut.
-   1. Volbou **Použít** přidáte filtry do míry.
+   Chcete-li přidat další entity, vyberte **Přidat entitu** a vyberte entity, které chcete pro opatření použít.
 
-1. Chcete-li přidat dimenze, vyberte možnost **Dimenze** v konfigurační oblasti. Dimenze se v entitě výstupu míry zobrazí jako sloupce.
- 
-   1. Volbou **Upravit dimenze** přidáte atributy dat, podle kterých chcete seskupit hodnoty měr. Například město nebo pohlaví. Ve výchozím nastavení je vybrána dimenze *CustomerID* k vytvoření *měr na úrovni zákazníka*. Pokud chcete vytvořit *míry na úrovni podniku*, můžete odebrat výchozí míru.
-   1. Volbou **Hotovo** přidáte dimenze do míry.
+   > [!NOTE]
+   > Můžete vybrat entity, které mají vztah s počáteční entitou. Další informace o definování vztahů najdete v tématu [Vztahy](relationships.md).
 
-1. Pokud jsou ve vašich datech hodnoty, které je třeba nahradit celým číslem, vyberte **Pravidla**. Nakonfigurujte pravidlo a ujistěte se, že jako náhradu zvolíte pouze celá čísla. Například nahraďte text *nula* číslem *0*.
+6. Volitelně můžete nakonfigurovat proměnné. V části **Proměnné** vyberte **Nová proměnná**.
 
-1. Pokud mezi datovou entitou, kterou jste mapovali, a entitou *Zákazník* existuje více cest, musíte zvolit jednu z identifikovaných [cest vztahů mezi entitami](relationships.md). Výsledné míry se mohou lišit v závislosti na vybrané cestě. 
-   
-   1. Vyberte **Vztahová cesta** a vyberte cestu entity, která by měla být použita k identifikaci vaší míry. Pokud existuje pouze jedna cesta k entitě *Zákazník*, tento ovládací prvek se nezobrazí.
-   1. Volbou **Hotovo** použijete svůj výběr. 
+   Proměnné jsou výpočty, které jsou prováděny v každém z vybraných záznamů. Například sčítání prodejních míst (POS) a online prodeje pro každý záznam zákazníka.
 
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Umožňuje vybrat cestu entitu pro tuto míru.":::
+7. Zadejte **Název** proměnné.
 
-1. Chcete-li přidat další výpočty pro míru, vyberte **Nový výpočet**. Pro nové výpočty můžete použít pouze entity na stejné cestě entity. Další výpočtu se v entitě výstupu míry zobrazí jako nové sloupce.
+8. V oblasti **Výraz** zvolte pole, se kterým chcete začít výpočet.
 
-1. Vyberte **...** na výpočtu, abyste **duplikovali**, **přejmenovali** nebo **odstranili** výpočet z míry.
+9. Zadejte výraz do oblasti **Výraz** a vyberte další pole, která mají být zahrnuta do výpočtu.
 
-1. V oblasti **Náhled** uvidíte schéma dat pro entitu výstupu míry, včetně filtrů a dimenzí. Náhled dynamicky reaguje na změny v konfiguraci.
+   > [!NOTE]
+   > V současné době jsou podporovány pouze aritmetické výrazy. Kromě toho není podporován variabilní výpočet pro entity z různých [cest entit](relationships.md).
 
-1. Volbou **Spustit** vypočtete výsledky pro konfigurovanou míru. Vyberte **Uložit a zavřít**, chcete-li zachovat aktuální konfiguraci a spustit míru později.
+10. Vyberte **Hotovo**.
 
-1. Jděte na **Míry** pro zobrazení nově vytvořené míry v seznamu.
+11. V části **Definice opatření** definujete, jak jsou vybrané entity a vypočtené proměnné agregovány v nové entitě nebo atributu měření.
 
-# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
+12. Vyberte **Nová dimenze**. Dimenzi si můžete představit jako funkci *seskupit dle*. Datový výstup entity nebo atributu Opatření bude seskupen podle všech definovaných dimenzí.
 
-1. V přehledech cílové skupiny přejděte na **Míry**.
+    > [!div class="mx-imgBorder"]
+    > ![Zvolit agregační cyklus](media/measures-businessreport-measure-definition2.png "Zvolit agregační cyklus")
 
-1. Vyberte **Nový** a zvolte **Vytvořit vlastní**.
+    Vyberte nebo zadejte následující informace jako součást definice dimenze:
 
-1. Vyberte **Upravit jméno** a zadejte **Název** míry. 
+    - **Entita**: Pokud definujete entitu Opatření, měla by obsahovat alespoň jeden atribut. Pokud definujete atribut Opatření, bude ve výchozím nastavení obsahovat pouze jeden atribut. Tento výběr je o výběru entity, která obsahuje tento atribut.
+    - **Pole**: Zvolte konkrétní atribut, který má být zahrnut buď do entity Opatření, nebo atributu.
+    - **Kbelík**: Zvolte, zda chcete agregovat data na denní, měsíční nebo roční bázi. Je to povinný výběr, pouze pokud jste vybrali atribut Typ data.
+    - **Jako**: Definuje název nového pole.
+    - **Zobrazované jméno**: Definuje zobrazované jméno pole.
 
-1. V oblasti konfigurace vyberte funkci agregace z rozevírací nabídky **Vybrat funkci**. Agregační funkce zahrnují: 
-   - **Sum**
-   - **Průměr**
-   - **Počet**
-   - **Počet jedinečných**
-   - **Max**
-   - **Min.**
-   - **První**: přebírá první hodnotu datového záznamu
-   - **Poslední**: převezme poslední hodnotu, která byla přidána do datového záznamu
+    > [!NOTE]
+    > Vaše obchodní opatření bude uloženo jako entita s jedním číslem a zobrazí se na **Domovské stránce**, pokud k opatření nepřidáte další dimenze. Po přidání dalších dimenzí se opatření *nezobrazí* na **Domovské stránce**.
 
-   :::image type="content" source="media/measure-operators.png" alt-text="Operátory pro výpočty měr.":::
+13. Volitelně přidejte funkce agregace. Jakákoli agregace, kterou vytvoříte, má za následek novou hodnotu v rámci entity nebo atributu Opatření. Podporované agregační funkce jsou: **Min**, **Maxi**, **Průměr**, **Medián**, **Součet**, **Počet jedinečných**, **První** (bere první záznam hodnoty dimenze) a **Poslední** (bere poslední záznam přidaný na hodnotu dimenze).
 
-1. Volbou **Přidat atribut** vyberte data, která potřebujete k vytvoření této míry.
-   
-   1. Vyberte kartu **Atributy**. 
-   1. Datová entita: Vyberte entitu, která obsahuje atribut, který chcete měřit. 
-   1. Atribut dat: Vyberte atribut, který chcete použít ve funkci agregace pro výpočet míry. Nelze vybrat více atributů najednou.
-   1. Atribut dat ze stávající míry můžete také vybrat výběrem karty **Míry** nebo můžete vyhledat název entity nebo míry. 
-   1. Volbou **Přidat** přidáte vybraný atribut do míry.
-
-   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Vyberte atribut, který se má použít ve výpočtech.":::
-
-1. Chcete-li vytvořit složitější míry, můžete přidat další atributy nebo použít matematické operátory ve své funkci míry.
-
-   :::image type="content" source="media/measure-math-operators.png" alt-text="Vytvořte komplexní míru s matematickými operátory.":::
-
-1. Chcete-li přidat filtry, vyberte možnost **Filtr** v konfigurační oblasti. 
-  
-   1. V části **Přidat atribut** podokna **Filtry** vyberte atribut, který chcete použít k vytvoření filtrů.
-   1. Nastavte operátory filtru tak, aby definovaly filtr pro každý vybraný atribut.
-   1. Volbou **Použít** přidáte filtry do míry.
-
-1. Chcete-li přidat dimenze, vyberte možnost **Dimenze** v konfigurační oblasti. Dimenze se v entitě výstupu míry zobrazí jako sloupce.
- 
-   1. Volbou **Upravit dimenze** přidáte atributy dat, podle kterých chcete seskupit hodnoty měr. Například město nebo pohlaví. Ve výchozím nastavení je vybrána dimenze *CustomerID* k vytvoření *měr na úrovni zákazníka*. Pokud chcete vytvořit *míry na úrovni podniku*, můžete odebrat výchozí míru.
-   1. Volbou **Hotovo** přidáte dimenze do míry.
-
-1. Pokud jsou ve vašich datech hodnoty, které je třeba nahradit celým číslem, vyberte **Pravidla**. Nakonfigurujte pravidlo a ujistěte se, že jako náhradu zvolíte pouze celá čísla. Například nahraďte text *nula* číslem *0*.
-
-1. Můžete použít přepínač **Sloučit podúčty** pokud [používáte účty s hierarchiemi](relationships.md#set-up-account-hierarchies).
-   - Pokud je nastavena na **Vypnuto**, míra se vypočítá pro každý účet. Každý účet má svůj vlastní výsledek.
-   - Pokud je nastavena na **Na**, vyberte **Upravit** ke zvolení hierarchie účtu podle přijatých hierarchií. Míra přinese pouze jeden výsledek, protože je agregována s podúčty.
-
-1. Pokud mezi datovou entitou, kterou jste mapovali, a entitou *Zákazník* existuje více cest, musíte zvolit jednu z identifikovaných [cest vztahů mezi entitami](relationships.md). Výsledné míry se mohou lišit v závislosti na vybrané cestě. 
-   
-   1. Vyberte **Vztahová cesta** a vyberte cestu entity, která by měla být použita k identifikaci vaší míry. Pokud existuje pouze jedna cesta k entitě *Zákazník*, tento ovládací prvek se nezobrazí.
-   1. Volbou **Hotovo** použijete svůj výběr. 
-
-   :::image type="content" source="media/measures-data-preferences.png" alt-text="Umožňuje vybrat cestu entitu pro tuto míru.":::
-
-1. Vyberte **...** na výpočtu, abyste **duplikovali**, **přejmenovali** nebo **odstranili** výpočet z míry.
-
-1. V oblasti **Náhled** uvidíte schéma dat pro entitu výstupu míry, včetně filtrů a dimenzí. Náhled dynamicky reaguje na změny v konfiguraci.
-
-1. Volbou **Spustit** vypočtete výsledky pro konfigurovanou míru. Vyberte **Uložit a zavřít**, chcete-li zachovat aktuální konfiguraci a spustit míru později.
-
-1. Jděte na **Míry** pro zobrazení nově vytvořené míry v seznamu.
-
----
-
-## <a name="use-a-template-to-build-a-measure"></a>Vytvoření míry pomocí šablony
-
-K jejich vytváření můžete použít předdefinované šablony běžně používaných měr. Podrobné popisy šablon a průvodce vám pomohou s efektivním vytvořením míry. Šablony vycházejí z mapovaných dat entity *Sjednocená aktivita*. Ujistěte se tedy, že jste nakonfigurovali [aktivity zákazníků](activities.md) před vytvořením míry ze šablony.
-
-# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
-
-K jejich vytváření můžete použít předdefinované šablony běžně používaných měr. Podrobné popisy šablon a průvodce vám pomohou s efektivním vytvořením míry. Šablony vycházejí z mapovaných dat entity *Sjednocená aktivita*. Ujistěte se tedy, že jste nakonfigurovali [aktivity zákazníků](activities.md) před vytvořením míry ze šablony.
-
-Dostupné šablony měr: 
-- Průměrná hodnota transakce
-- Celková hodnota transakce
-- Průměrné denní výnosy
-- Průměrné roční výnosy
-- Počet transakcí
-- Získané věrnostní body
-- Uplatněné věrnostní body
-- Zůstatek věrnostních bodů
-- Životnost aktivního zákazníka
-- Doba trvání věrnostního členství
-- Čas od posledního nákupu
-
-Následující postup popisuje kroky k vytvoření nové míry pomocí šablony.
-
-1. V přehledech cílové skupiny přejděte na **Míry**.
-
-1. Vyberte **Nová** a vyberte **Zvolit šablonu**.
-
-   :::image type="content" source="media/measure-use-template.png" alt-text="Screenshot rozevírací nabídky při vytváření nové míry se zvýrazněním šablony.":::
-
-1. Najděte šablonu, která vyhovuje vašim potřebám, a vyberte **Zvolit šablonu**.
-
-1. Zkontrolujte požadovaná data a vyberte **Začít**, pokud máte všechna data na místě.
-
-1. V podokně **Upravit jméno** nastavte název míry a výstupní entitu. 
-
-1. Vyberte **Hotovo**.
-
-1. V části **Nastavit časové období** definujte časový rámec dat, která se mají použít. Vyberte, zda má nová míra pokrývat celou datovou sadu, výběrem **Kdykoli**, nebo zda se má zaměřovat na **Specifické časové období**.
-
-   :::image type="content" source="media/measure-set-time-period.png" alt-text="Screenshot zobrazující část časového období při konfiguraci míry ze šablony.":::
-
-1. V další části vyberte **Přidat data** pro výběr aktivit a namapování příslušných dat z entity *Sjednocená aktivita*.
-
-    1. Krok 1 ze 2: V části **Typ aktivity** vyberte typ entity, kterou chcete použít. Pro **Aktivity** vyberte entity, které chcete mapovat.
-    1. Krok 2 ze 2: Vyberte atribut z entity *Sjednocená aktivita* pro komponentu požadovanou vzorcem. Například pro průměrnou hodnotu transakce je to atribut představující hodnotu transakce. Pro **Časové razítko aktivity** vyberte atribut z entity Unified Activity, která představuje datum a čas aktivity.
-   
-1. Jakmile je mapování dat úspěšné, můžete vidět stav jako **Kompletní** a název mapovaných aktivit a atributů.
-
-   :::image type="content" source="media/measure-template-configured.png" alt-text="Screenshot z dokončené konfigurace šablony míry.":::
-
-1. Nyní můžete vybrat **Spustit** k výpočtu výsledků míry. Chcete-li to upřesnit později, vyberte **Uložit koncept**.
-
-# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
-
-Tato funkce je k dispozici pouze pro míry vytvořené v prostředích s individuálním zákazníkem jako primární cílovou skupinou.
-
----
+14. Výběrem možnosti **Uložit** použijete změny na opatření.
 
 ## <a name="manage-your-measures"></a>Správa opatření
 
-Seznam měr naleznete na stránce **Míry**.
+Po vytvoření alespoň jedné míry se na stránce **Míry** zobrazí seznam měr.
 
-Najdete informace o typu, tvůrci, datu vytvoření, statusu a stavu míry. Když vyberete míru ze seznamu, můžete zobrazit náhled výstupu a stáhnout soubor CSV.
+Najdete zde informace o typu opatření, autorovi, datu a čase vytvoření, datu a datu poslední úpravy, stavu (zda je opatření aktivní, neaktivní nebo neúspěšné) a o datu a čase poslední aktualizace. Když vyberete opatření ze seznamu, zobrazí se náhled jeho výstupu.
 
 Chcete-li obnovit všechna vaše opatření současně, vyberte **Aktualizovat vše** bez výběru konkrétního opatření.
 
 > [!div class="mx-imgBorder"]
-> ![Akce ke správě jednotlivých opatření.](media/measure-actions.png "Akce ke správě jednotlivých opatření.")
+> ![Akce ke správě jednotlivých opatření](media/measure-actions.png "Akce ke správě jednotlivých opatření")
 
-Vyberte míru ze seznamu a použijte některou z následujících voleb:
+Případně vyberte opatření ze seznamu a proveďte jednu z následujících akcí:
 
-- Chcete-li zobrazit podrobnosti, vyberte název míry.
-- **Upravte** konfiguraci míry.
-- **Aktualizujte** míru na základě nejnovějších údajů.
-- **Přejmenujte** míru.
-- **Odstraňte** míry.
-- **Aktivujte** nebo **deaktivujte**. Neaktivní míry se během [plánované aktualizace](system.md#schedule-tab) neaktualizují.
+- Chcete-li zobrazit podrobnosti, vyberte název opatření.
+- **Upravte** konfiguraci opatření.
+- **Přejmenujte** opatření.
+- **Odstraňte** opatření.
+- Vyberte tři tečky (...) a poté **Obnovit** pro zahájení procesu aktualizace opatření.
+- Vyberte tři tečky (...) a poté **Stáhnout**, chcete-li získat .CSV soubor opatření.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies). Můžete vybrat stav procesu a zobrazit podrobnosti o průběhu celé úlohy. Po výběru **Zobrazit podrobnosti** pro jeden z úkolů úlohy najdete další informace: čas zpracování, datum posledního zpracování a všechny chyby a varování spojené s úkolem.
 
 ## <a name="next-step"></a>Další krok
 
-K vytváření můžete použít stávající míry [zákaznický segment](segments.md).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Existující opatření můžete použít k vytvoření prvního segmentu zákazníků na stránce **Segmenty**. Další informace najdete v tématu [Segmenty](segments.md).

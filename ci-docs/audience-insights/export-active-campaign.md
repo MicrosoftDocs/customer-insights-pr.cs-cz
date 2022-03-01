@@ -1,7 +1,7 @@
 ---
 title: Export údajů ze služby Customer Insights do ActiveCampaign
 description: Naučte se, jak nakonfigurovat propojení a exportovat ho do ActiveCampaign.
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618145"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314593"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Export segmentů do ActiveCampaign (náhled)
 
@@ -28,9 +28,9 @@ Exportujte segmenty sjednocených profilů zákazníků do ActiveCampaign a pou�
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Na jeden export do ActiveCampaign můžete exportovat až 1 milion zákaznických profilů a jeho dokončení může trvat až 90 minut.
+- Do aplikace ActiveCampaign můžete exportovat až 1 milion profilů na jeden export a dokončení může trvat až 90 minut.
 - Export do ActiveCampaign je omezen na segmenty.
-- Počet zákaznických profilů, které můžete exportovat do ActiveCampaign, závisí na vaší smlouvě s ActiveCampaign.
+- Počet profilů, které můžete exportovat do služby ActiveCampaign, závisí na vaší smlouvě se společností ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Můžete nastavit propojení řešení s ActiveCampaign.
 
@@ -64,7 +64,7 @@ Export můžete konfigurovat, pokud máte přístup k připojení tohoto typu. D
 
 1. Zadejte [**ID seznamu ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je potřeba pro export segmentů do ActiveCampaign. Volitelně můžete exportovat křestní jméno, příjmení, a telefon a vytvářet více přizpůsobené e-maily. Volbou Přidat atribut namapujte tato pole.
+3. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je potřeba pro export segmentů do ActiveCampaign. Volitelně můžete exportovat křestní jméno, příjmení, a telefon a vytvářet více přizpůsobené e-maily. Volbou Přidat atribut namapujte tato pole.
 
 1. Zvolte **Uložit**.
 

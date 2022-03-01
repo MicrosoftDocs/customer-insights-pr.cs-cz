@@ -3,18 +3,18 @@ title: Nejčastější dotazy ke zkušební verzi - Dynamics 365 Customer Insigh
 description: Řešení častých otázek týkajících se nastavení a správy zkušební verze Customer Insights. Přečtěte si, jak vyřešit problémy s platformou a aplikacemi.
 author: m-hartmann
 ms.author: mhart
-ms.date: 02/10/2022
+ms.date: 09/30/2021
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
-ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
+ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
+ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "8115960"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "7642856"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Nejčastější otázky ke zkušební verzi Dynamics 365 Customer Insights
 
@@ -43,7 +43,7 @@ Když se zaregistrujete ke zkušební verzi, obdržíte e-mail s podrobnostmi o 
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Jak přidám do zkušební verze další uživatele?
 
-Pokud chcete přidat uživatele, přejděte pomocí účtu správce zkušební verze do [Centra pro správu Microsoft 365](https://admin.microsoft.com). Podle pokynů [centra pro správu](/microsoft-365/admin/add-users/add-users) přidejte uživatele až do limitu zkušební licence. Pokud již uživatel, kterého přidáváte, má účet Microsoft 365, přiřaďte mu roli zabezpečení v organizaci zkušební verze. Další informace naleznete v tématu [Přiřazení role zabezpečení uživateli](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Pokud chcete přidat uživatele, přejděte do [Centra pro správu Microsoftu 365](https://admin.microsoft.com) pomocí účtu správce zkušební verze. Podle pokynů [centra pro správu](/microsoft-365/admin/add-users/add-users) přidejte uživatele až do limitu zkušební licence. Pokud uživatel, kterého přidáváte, už má účet Microsoft 365, přiřaďte mu role zabezpečení v organizaci zkušební verze. Další informace naleznete v tématu [Přiřazení role zabezpečení uživatele](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Kolik uživatelů mohu přidat do zkušebního prostředí?
 
@@ -63,7 +63,7 @@ Zkušební verzi můžete v aplikaci prodloužit přímo. Zkušební verzi můž
 
 Při upgradu na placenou verzi Customer Insights obecně doporučujeme začít s novými daty. 
 
-Pokud volitelně používáte pouze přehledy cílové skupiny, můžete si data zkopírovat ze zkušebního prostředí, pokud si zakoupíte Customer Insights. Musíte být správcem zkušební verze Customer Insights a globálním správcem svého klienta Microsoft 365 nebo správcem Dynamics 365 ve vaší organizaci k migraci nastavení ze zkušebního prostředí do placeného prostředí. 
+Pokud volitelně používáte pouze přehledy cílové skupiny, můžete si data zkopírovat ze zkušebního prostředí, pokud si zakoupíte Customer Insights. Chcete -li migrovat nastavení ze zkušebního prostředí do placeného, musíte být správcem zkušební verze Customer Insights a globálním správcem vašeho klienta Microsoft 365 nebo správcem Dynamics 365 ve vaší organizaci. 
 
 Po prvním přihlášení k placené instanci Customer Insights budete požádáni o vytvoření nového prostředí. V tomto procesu se můžete rozhodnout zkopírovat konfiguraci z existujícího prostředí a migrovat většinu nastavení. Pokud máte výše uvedená oprávnění, zkušební prostředí se zobrazí v tomto seznamu. Další informace viz [Kopírování konfigurace prostředí](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,9 +82,8 @@ Po přihlášení ke zkušební verzi se dostanete na hlavní obrazovku aplikace
 
 Většina funkcí funkcí Customer Insights je k dispozici ve zkušební verzi.
 
-Následující funkce **nejsou k dispozici**: 
+Následující funkce není dostupná: 
 - Nemůžete vytvářet nová prostředí, která používají váš vlastní účet úložiště Azure Data Lake.
-- Prostředí zkušební verze není možné odstranit. 
 
 ### <a name="how-long-does-the-trial-last"></a>Jak dlouho zkušební verze platí?
 

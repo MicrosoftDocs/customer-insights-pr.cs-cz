@@ -2,30 +2,8 @@
   href: index.yml
 - name: Přehled produktu
   href: overview.md
-- name: Katalog výukových materiálů
-  items:
-    - name: Seznámení
-      href: /learn/modules/get-started-customer-data-platform/
-    - name: Ingestace dat
-      href: /learn/modules/ingest-data-customer-insights/
-    - name: Vytvoření sjednoceného profilu zákazníka
-      href: /learn/modules/unified-customer-profile/
-    - name: Práce s přehledy cílové skupiny
-      href: /learn/modules/working-with-customer-insights/
-    - name: Rozšiřujte data a vytvářejte predikce
-      href: /learn/modules/enrich-data/
-    - name: Správa externích připojení
-      href: /learn/modules/configure-third-party-connections/
-    - name: Správa Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
-- name: Bezplatná zkušební verze
-  items:
-    - name: Registrace bezplatného zkušebního předplatného
-      href: trial-signup.md
-    - name: Nejčastější dotazy ke zkušební verzi
-      href: trial-FAQ.md
-- name: Zahájení placenou licencí
-  href: paid-license.md
+- name: Vytvoření zkušební verze
+  href: audience-insights/get-started-trial.md
 - name: Přístup do prostředí
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Přehledy pro cílovou skupinu
@@ -41,16 +19,24 @@
         - name: Stručná úvodní příručka
           href: audience-insights/get-started.md
         - name: Vytvořit nové prostředí
-          href: audience-insights/create-environment.md
+          href: audience-insights/get-started-paid.md
         - name: Prozkoumání přehledů cílových skupin
           href: audience-insights/home.md
-    - name: Práce s obchodními účty
-      href: audience-insights/work-with-business-accounts.md
+    - name: Výukové moduly
+      items:
+        - name: Ingestace dat
+          href: /learn/modules/ingest-data-customer-insights/
+        - name: Vytvoření sjednoceného profilu zákazníka
+          href: /learn/modules/unified-customer-profile/
+        - name: Práce s aplikací
+          href: /learn/modules/working-with-customer-insights/
+        - name: Rozšíření dat a predikce
+          href: /learn/modules/enrich-data/
     - name: Zdroje dat
       items:
         - name: Přehled zdrojů dat
           href: audience-insights/data-sources.md
-        - name: Přidejte zdroje pomocí konektorů Power Query
+        - name: Přidání zdrojů dat pomocí konektorů Power Query
           href: audience-insights/connect-power-query.md
         - name: Přidání složky Common Data Model jako zdroje dat
           href: audience-insights/connect-common-data-model.md
@@ -80,18 +66,14 @@
           href: audience-insights/relationships.md
         - name: Uvedení aktivit zákazníka
           href: audience-insights/activities.md
-        - name: Definování sémantických mapování
-          href: audience-insights/semantic-mappings.md
     - name: Rozšiřování dat
       items:
         - name: Rozšíření profilů zákazníků
           href: audience-insights/enrichment-hub.md
-        - name: Značky a zájmy
+        - name: Značka a zájmové afinity
           href: audience-insights/enrichment-microsoft.md
         - name: Rozšířené adresy
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Vylepšená data společnosti
-          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Přidejte si Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Rozšíření dat od společnosti HERE Technologies
@@ -100,8 +82,6 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Obohacení pomocí Experian
           href: audience-insights/enrichment-experian.md
-        - name: Rozšíření pomocí dat Office 365
-          href: audience-insights/enrichment-office.md
         - name: Rozšíření pomocí vlastního importu SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmenty
@@ -136,8 +116,6 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Predikce úbytku transakcí
               href: audience-insights/predict-transactional-churn.md
-            - name: Analýza postoje na základě názorů zákazníků
-              href: audience-insights/sentiment-analysis.md
             - name: Používání vlastních modelů z Azure Machine Learning
               href: audience-insights/custom-models.md
             - name: Vyplnění částečně chybějících dat
@@ -148,12 +126,14 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Průvodce ukázkami predikce úbytku předplatných
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Ukázkový průvodce pro predikcí úbytku transakcí
+            - name: Průvodce ukázkami predikce úbytku transakcí
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Průvodce ukázkami predikce doporučení produktů
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Experimenty s Azure Machine Learning
               href: audience-insights/azure-machine-learning-experiments.md
+            - name: Experimenty v Azure Machine Learning Studio
+              href: audience-insights/machine-learning-studio-experiments.md
         - name: Správa predikcí
           href: audience-insights/manage-predictions.md
         - name: Vytvoření segmentů na základě predikcí
@@ -242,14 +222,10 @@
           href: audience-insights/connections.md
         - name: Správa více prostředí
           href: audience-insights/manage-environments.md
-        - name: Zabezpečení
-          items:
-            - name: Přineste si vlastní trezor klíčů
-              href: audience-insights/use-azure-key-vault.md
-            - name: Připojení k účtu úložiště ADLS pomocí instančního objektu
-              href: audience-insights/connect-service-principal.md
-            - name: Export diagnostických protokolů
-              href: audience-insights/diagnostics.md
+        - name: Připojení k účtu úložiště ADLS pomocí instančního objektu
+          href: audience-insights/connect-service-principal.md
+        - name: Podporované jazyky
+          href: audience-insights/supported-languages.md
     - name: Rozšiřitelnost
       items:
         - name: Integrace webových dat z přehledů o zapojení zákazníků
@@ -262,52 +238,16 @@
           href: audience-insights/apis.md
         - name: Referenční informace o rozhraních API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Správa souhlasu (Preview)
-  items:
-    - name: Centrum nápovědy
-      href: consent-management/index.yml
-    - name: Přehled možností
-      href: consent-management/overview.md
-    - name: Začínáme
-      items:
-        - name: Začínáme
-          href: consent-management/get-started.md
-        - name: Koncepty a terminologie
-          href: consent-management/glossary.md
-    - name: Importovat data souhlasu
-      items:
-        - name: Importovat data souhlasu
-          href: consent-management/import-consent-data.md
-        - name: Nastavení dat souhlasu a použití předvoleb souhlasu
-          href: consent-management/set-consent-rules.md
-    - name: Správa dat souhlasu
-      items:
-        - name: Povolení pravidel souhlasu v přehledech cílových skupin
-          href: audience-insights/activate-consent.md
-        - name: Správa výchozích pravidel souhlasu v segmentech přehledů cílových skupin
-          href: audience-insights/change-default-consent-rules.md
-    - name: Správa nastavení a uživatelů
-      items:
-        - name: Konfigurace nastavení systému
-          href: consent-management/system-settings.md
-        - name: Správa uživatelů a oprávnění
-          href: consent-management/manage-users.md
-    - name: Použití dat souhlasu
-      items:
-        - name: Vytváření predikcí s daty souhlasu
-          href: consent-management/predictions-consent-data.md
 - name: Přehledy zapojení (Preview)
   items:
     - name: Centrum nápovědy
       href: engagement-insights/index.yml
-    - name: O přehledu zapojení
+    - name: Přehled možností
       href: engagement-insights/overview.md
     - name: Začínáme
       items:
         - name: Stručná úvodní příručka
           href: engagement-insights/get-started.md
-        - name: Vytvořit prostředí
-          href: engagement-insights/create-new-environment.md
         - name: Vytvořit pracovní prostor
           href: engagement-insights/create-workspace.md
         - name: Zachytávání události z webů a mobilních aplikací
@@ -366,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Regionální dostupnost
       href: engagement-insights/regional-availability.md
-- name: Sdílení dat mezi funkcemi
+- name: Integrace přehledů cílových skupin a zapojení
   items:
     - name: Propojení přehledů cílových skupin a zapojení
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -379,4 +319,4 @@
 - name: Práva a požadavky DSR
   href: dsr-rights-requests.md
 - name: Získání podpory
-  href: /power-platform/admin/get-help-support
+  href: 'https://dynamics.microsoft.com/support/'

@@ -1,27 +1,27 @@
 ---
 title: Bot pro Microsoft Teams
 description: Vyhledejte sjednocené profily zákazníků v Microsoft Teams pomocí bota.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: conceptual
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967811"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4405384"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot Teams pro Dynamics 365 Customer Insights (Preview)
 
 Připojte se k Microsoft Teams, aby mohl bot vyhledat sjednocené profily zákazníků v kanálech Teams.
 
 > [!div class="mx-imgBorder"]
-> ![Bot Teams zobrazující zákaznický záznam.](media/teams-bot.png "Bot Teams zobrazující zákaznický záznam")
+> ![Bot Teams zobrazující zákaznický záznam](media/teams-bot.png "Bot Teams zobrazující zákaznický záznam")
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -31,10 +31,7 @@ Chcete-li nastavit a konfigurovat robota, musí být splněny následující př
 - [Proces sjednocení](data-unification.md) je dopončen.
 - Pole jsou přidána do [vyhledávacího a filtračního indexu](search-filter-index.md).
 - Customer Insights a Teams jsou ve stejné organizaci.
-- Vaše prostředí má primární cílovou skupinu nastavenou na jednotlivé zákazníky. Obchodní účty nejsou podporované.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Nakonfigurujte bota
 
 1. V přehledech cílové skupiny přejděte na **Správa** > **Cíle exportu**.
@@ -55,6 +52,3 @@ Bot poskytuje možnosti vyhledávání pro jednotné profily zákazníků.
 - Pokud vaše organizace používá více prostředí Customer Insights ve stejné organizaci, můžete zadat **switchinstance**, čímž zvolíte, ke kterému prostředí chcete bota připojit.
 
 - Zadejte **pomoc** a zobrazíte seznam dostupných příkazů pro robota.  
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

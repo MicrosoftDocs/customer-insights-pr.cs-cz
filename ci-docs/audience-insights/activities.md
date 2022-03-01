@@ -1,128 +1,84 @@
 ---
 title: Aktivity zákazníka
-description: Definujte aktivity zákazníků a zobrazte je na časové ose v zákaznických profilech.
-ms.date: 11/01/2021
+description: Definování aktivit zákazníků a jejich zobrazení na časové ose zákazníků.
+ms.date: 10/13/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: adkuppa
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
+ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732435"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "4667221"
 ---
 # <a name="customer-activities"></a>Aktivity zákazníka
 
-Zkombinujte aktivity zákazníků z [různých zdrojů dat](data-sources.md) v Dynamics 365 Customer Insights k vytvoření časové osy, která chronologicky uvádí aktivity. Zahrňte časovou osu do aplikací Dynamics 365 pomocí řešení [Doplněk Zákaznická karta](customer-card-add-in.md) nebo v řídicím panelu Power BI.
+Zkombinujte aktivity zákazníků z [různých zdrojů dat](data-sources.md) v Dynamics 365 Customer Insights a vytvořte časovou osu zákazníků se seznamem aktivit v chronologickém pořadí. Časovou osu můžete zahrnout do aplikací pro zapojení zákazníků v Dynamics 365 prostřednictvím [doplňku karty zákazníka](customer-card-add-in.md) nebo v řídicím panelu Power BI.
 
 ## <a name="define-an-activity"></a>Definování aktivity
 
-Vaše zdroje dat mohou zahrnovat entity s transakčními a aktivními daty z více zdrojů dat. Identifikujte tyto entity a vyberte aktivity, které chcete zobrazit na časové ose zákazníka. Vyberte entitu, která zahrnuje vaši cílovou aktivitu nebo aktivity.
-
-Entita musí mít alespoň jeden atribut typu **Datum**, aby byla součástí na časové osy zákazníka a nelze přidávat entity bez pole **Datum**. Ovládací prvek **Přidat aktivitu** není povolen, pokud není taková entita nalezena.
+Vaše zdroje dat zahrnují entity s transakčními a aktivními daty z více zdrojů dat. Identifikujte tyto entity a vyberte aktivity, které chcete zobrazit na časové ose zákazníka. Vyberte entitu, která zahrnuje vaši cílovou aktivitu nebo aktivity.
 
 1. V přehledech cílové skupiny přejděte na **Data** > **Aktivity**.
 
-1. Výběrem možnosti **Přidat aktivitu** spusťte řízené prostředí pro proces nastavení aktivity.
+1. Vyberte **Přidat aktivitu**.
 
-1. V kroku **Data aktivity** nastavte hodnoty pro následující pole:
+   > [!NOTE]
+   > Entita musí mít alespoň jeden atribut typu **Datum**, aby byla součástí na časové osy zákazníka a nelze přidávat entity bez pole **Datum**. Ovládací prvek **Přidat aktivitu** není povolen, pokud není taková entita nalezena.
 
-   - **Název aktivity**: Vyberte název své aktivity.
+1. V podokně **Přidat aktivitu** nastavte hodnoty pro následující pole:
+
    - **Entita**: Vyberte entitu, která obsahuje údaje o transakcích nebo aktivitách.
    - **Primární klíč**: Vyberte pole, které jedinečně identifikuje záznam. Nemělo by obsahovat žádné duplicitní hodnoty, prázdné hodnoty nebo chybějící hodnoty.
+   - **Časové razítko**: Vyberte pole, které představuje čas zahájení vaší aktivity.
+   - **Událost**: Vyberte pole, které je událostí pro aktivitu.
+   - **Webová adresa**: Vyberte pole představující adresu URL s dalšími informacemi o této aktivitě. Například transakční systém, který tuto aktivitu využívá. Tato adresa URL může být libovolné pole zdroje dat, nebo může být vytvořeno jako nové pole pomocí transformace Power Query. Tato data URL budou uložena v entitě Sjednocená aktivita, která může být spotřebována jako navazující pomocí API.
+   - **Podrobnosti**: Volitelně vyberte pole, které se přidá pro další podrobnosti.
+   - **Ikona**: Volitelně vyberte ikonu představující tuto aktivitu.
+   - **Typ aktivity**: Definujte odkaz na typ aktivity v Common Data Model, který nejlépe popisuje sémantickou definici aktivity.
 
-   :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Nastavte data aktivity s názvem, entitou a primárním klíčem.":::
+1. V sekci **Nastavit vztah** nakonfigurujte podrobnosti tak, aby se údaje o vaší činnosti připojily k odpovídajícímu zákazníkovi.
 
-1. Vyberte **Další** pro přechod k dalšímu kroku.
+   > [!div class="mx-imgBorder"]
+   > ![Definování vztahů entit](media/activities-entities-define.png "Definování vztahů entit")
 
-1. V kroku **Vztah** nakonfigurujte podrobnosti tak, aby se data o vaší činnosti připojila k odpovídajícímu záznamu zákazníka. Tento krok vizualizuje spojení mezi entitami.  
+    - **Pole entity aktivity**: Vyberte pole v entitě aktivity, které bude použito k navázání vztahu s jinou entitou.
+    - **Entita zákazníka**: Vyberte odpovídající zdrojovou entitu zákazníka, se kterou bude vaše entita aktivity ve vztahu. Můžete se vztahovat pouze k těm zdrojovým zákaznickým entitám, které se používají v procesu sjednocení dat.
+    - **Pole entity zákazníka**: Toto pole zobrazuje primární klíč zdrojové zákaznické entity vybraný v procesu mapování. Toto pole primárního klíče ve zdrojové entitě zákazníka se používá k navázání vztahu s entitou aktivity.
+    - **Název**: Pokud již existuje vztah mezi touto entitou aktivity a vybranou zdrojovou entitou zákazníka, bude název vztahu v režimu jen pro čtení. Pokud takový vztah neexistuje, bude vytvořen nový vztah se zde uvedeným názvem.
 
-   - **První**: Cizí pole ve vaší entitě aktivity, které se použije k navázání vztahu s jinou entitou.
-   - **Druhý**: Odpovídající entita zdrojového zákazníka, se kterou bude vaše entita aktivity ve vztahu. Můžete ji přidružit pouze ke zdrojovým entitám zákazníků, které se používají v procesu sjednocení dat.
-   - **Třetí**: Pokud vztah mezi touto entitou aktivity a vybranou entitou zdrojového zákazníka již existuje, název vztahu bude v režimu jen pro čtení. Pokud takový vztah neexistuje, vytvoří se nový vztah se jménem, které uvedete v tomto poli.
+1. Výběrem možnosti **Uložit** se vaše změny uplatní.
 
-   :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definujte vztah entity.":::
+1. Na stránce **Aktivity** vyberte možnost **Spustit**.
 
-   > [!TIP]
-   > V prostředích B2B můžete vybírat mezi entitami účtu a jinými entitami. Pokud vyberete entitu účtu, cesta vztahu se nastaví automaticky. U ostatních entit musíte definovat cestu vztahu přes jednu nebo více mezilehlých entit, dokud nedosáhnete entity účtu.
+> [!TIP]
+> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies). Můžete vybrat stav procesu a zobrazit podrobnosti o průběhu celé úlohy. Po výběru **Zobrazit podrobnosti** pro jeden z úkolů úlohy najdete další informace: čas zpracování, datum posledního zpracování a všechny chyby a varování spojené s úkolem.
 
-1. Vyberte **Další** pro přechod k dalšímu kroku. 
+## <a name="edit-an-activity"></a>Úprava aktivity
 
-1. V kroku **Sjednocení aktivity** vyberte událost aktivity a čas zahájení aktivity. 
-   - **Povinná pole**
-      - **Aktivita události**: Pole, které je událostí pro tuto aktivitu.
-      - **Časové razítko**: Pole, které představuje čas zahájení vaší aktivity.
+1. V přehledech cílové skupiny přejděte na **Data** > **Aktivity**.
 
-   - **Nepovinná pole**
-      - **Další podrobnosti**: Pole s příslušnými informacemi pro tuto aktivitu.
-      - **Ikona**: Ikona, která nejlépe představuje tento typ aktivity.
-      - **Webová adresa**: Pole obsahující adresu URL s informacemi o této aktivitě. Například transakční systém, který tuto aktivitu využívá. Tato adresa URL může být libovolné pole zdroje dat, nebo může být vytvořeno jako nové pole pomocí transformace Power Query. Data URL budou uložena v entitě *Sjednocená aktivita*, kterou lze následně spotřebovat pomocí [API](apis.md).
+2. Vyberte entitu aktivity, kterou chcete upravit, a vyberte **Upravit**. Nebo se můžete pohybovat nad řádkem entity a vybrat ikonu **Upravit**.
 
-   - **Zobrazit na časové ose**
-      - Vyberte, zda se má tato aktivita zobrazovat v zobrazení časové osy ve vašich zákaznických profilech. Vyberte **Ano** pro zobrazení aktivity na časové ose nebo **Ne**, čímž ji skryjete.
+3. Klikněte na ikonu **Upravit**.
 
-      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Zadejte údaje o aktivitě zákazníka v entitě Unified Activity.":::
+4. V podokně **Upravit aktivitu** aktualizujte hodnoty a vyberte **Uložit**.
 
-1. Volbou **Další** přejdete na další krok. Můžete vybrat **Dokončit a zkontrolovat** pro uložení aktivity nyní s typem aktivity nastaveným na **Jiný**. 
+5. Na stránce **Aktivity** vyberte možnost **Spustit**.
 
-1. V kroku **Typ aktivity** vyberte typ aktivity a volitelně vyberte, zda chcete sémanticky mapovat některé typy aktivit pro použití v jiných oblastech Customer Insights. V současné době lze typy aktivit *Feedback*, *Loyalty*, *SalesOrder*, *SalesOrderLine* a *Subscription* sémanticky mapovat po souhlasu s mapováním polí. Pokud typ aktivity není pro novou aktivitu relevantní, můžete si vybrat *Jiný* nebo *Vytvořit nový* pro vlastní typ aktivity.
+## <a name="delete-an-activity"></a>Odstranění aktivity
 
-1. Volbou **Další** přejdete na další krok. 
+1. V přehledech cílové skupiny přejděte na **Data** > **Aktivity**.
 
-1. V kroku **Kontrola** ověřte výběr. Vraťte se k některému z předchozích kroků a v případě potřeby informace aktualizujte.
+2. Vyberte entitu aktivity, kterou chcete odebrat, a vyberte **Odstranit**. Nebo se můžete pohybovat nad řádkem entity a vybrat ikonu **Odstranit**. Kromě toho můžete vybrat více entit aktivity, které chcete odstranit najednou.
+   > [!div class="mx-imgBorder"]
+   > ![Upravit nebo odstranit vztahy mezi entitami](media/activities-entities-edit-delete.png "Upravit nebo odstranit vztahy mezi entitami")
 
-   :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Zkontrolujte aktivitu v zadaných polích.":::
-   
-1. Vyberte **Uložit aktivitu** pro použití změn a vyberte **Hotovo** pro návrat na **Data** > **Aktivity**. Zde vidíte, které aktivity jsou nastaveny tak, aby se zobrazovaly na časové ose. 
+3. Vybrání ikony **Odstranit**.
 
-1. Na stránce **Aktivity** vyberte **Spustit** ke zpracování aktivity. 
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-
-## <a name="manage-existing-activities"></a>Správa existujících aktivit
-
-Na stránce **Data** > **Aktivity** můžete zobrazit všechny uložené aktivity a spravovat je. Každá aktivita je reprezentována řádkem, který také obsahuje podrobnosti o zdroji, entitě a typu aktivity.
-
-Následující akce jsou k dispozici, když vyberete aktivitu. 
-
-- **Upravit**: Otevře nastavení aktivity v kroku kontroly. Z tohoto kroku můžete změnit některou nebo celou aktuální konfiguraci. Po změně konfigurace vyberte **Uložit aktivitu** a poté vyberte **Spustit** ke zpracování změn.
-
-- **Přejmenovat**: Otevře dialogové okno, kde můžete zadat jiný název vybrané aktivity. Výběrem možnosti **Uložit** se vaše změny uplatní.
-
-- **Vymazat**: Otevře dialogové okno s potvrzením odstranění vybrané aktivity. Můžete také odstranit více než jednu aktivitu najednou tak, že vyberete aktivity a poté vyberete ikonu odstranění. Vyberte **Odstranit** pro potvrzení odstranění.
-
-## <a name="view-activity-timelines-on-customer-profiles"></a>Zobrazení časových os aktivit v zákaznických profilech
-
-Po konfiguraci zákaznických aktivit vyberte **Zobrazit na časové ose aktivity** v konfiguraci aktivity k vyhledání všech aktivit vašeho zákazníka na jeho zákaznickém profilu.
-
-Chcete -li zákazníkovi otevřít časovou osu, přejděte na **Zákazníci** a vyberte profil zákazníka, který chcete zobrazit.
-
-Pokud se zákazník zúčastnil aktivity, kterou jste nakonfigurovali, najdete ji v části **Časová osa aktivity**.
-
-:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Zobrazte nakonfigurované aktivity v zákaznických profilech.":::
-
-Existuje několik způsobů, jak filtrovat aktivity na časové ose aktivity:
-
-- Můžete vybrat jednu nebo více ikon aktivit a upřesnit výsledky tak, aby zahrnovaly pouze vybrané typy.
-
-  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrujte aktivity podle typu pomocí ikon.":::
-
-- Můžete vybrat **Filtr** pro otevření panelu filtrů a konfiguraci filtrů časové osy.
-
-   1. Můžete filtrovat podle *Typ aktivity* a *datum*
-   1. Vyberte **Použít** k použití filtrů na časové ose aktivity.
-
-   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Pomocí panelu filtru nakonfigurujte podmínky filtru.":::
-
-Chcete -li filtry odebrat, vyberte **X** vedle každého filtru použitého na časové ose nebo vyberte **Vymazat filtry**.
-
-
-> [!NOTE]
-> Filtry aktivit se odstraní, když opustíte profil zákazníka. Musíte je použít při každém otevření v zákaznickém profilu.
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+4. Odstranění potvrďte.
