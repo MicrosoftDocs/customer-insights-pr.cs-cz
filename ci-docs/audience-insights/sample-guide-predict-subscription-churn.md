@@ -3,26 +3,28 @@ title: Průvodce ukázkami predikce úbytku předplatných
 description: Pomocí tohoto průvodce ukázkami můžete vyzkoušet dodávaný model predikce úbytku předplatných.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306295"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355605"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Průvodce ukázkami (Preview) predikce úbytku předplatných
+# <a name="subscription-churn-prediction-sample-guide"></a>Průvodce ukázkami predikce úbytku předplatných
 
 Provedeme vás příkladem predikce úbytku předplatných od začátku dokonce s využitím níže uvedených ukázkových dat. 
 
 ## <a name="scenario"></a>Scénář
 
-Contoso je společnost vyrábějící vysoce kvalitní kávu a kávovary, které prodávají prostřednictvím svého webu Contoso Coffee. Nedávno zavedla předplatné pro své zákazníky, aby mohli pravidelně dostávat kávu. Jejím cílem je pochopit, kteří zákazníci s předplatným mohou v příštích několika měsících své předplatné zrušit. Informace, který z jejích zákazníků bude **pravděpodobně ztracen**, jí může pomoci ušetřit marketingové prostředky tím, že se soustředí na jeho udržení.
+Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary, které prodává prostřednictvím svých webových stránek Contoso Coffee. Nedávno zavedla předplatné pro své zákazníky, aby mohli pravidelně dostávat kávu. Jejím cílem je pochopit, kteří zákazníci s předplatným mohou v příštích několika měsících své předplatné zrušit. Informace, který z jejích zákazníků bude **pravděpodobně ztracen**, jí může pomoci ušetřit marketingové prostředky tím, že se soustředí na jeho udržení.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -31,7 +33,7 @@ Contoso je společnost vyrábějící vysoce kvalitní kávu a kávovary, které
 
 ## <a name="task-1---ingest-data"></a>Úkol 1 – Ingestace dat
 
-Projděte si články [o příjmu (ingestaci) dat](data-sources.md) a [importu zdrojů dat pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně. 
+Prohlédněte si články [o přijímání dat](data-sources.md) a [importu datových zdrojů pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingestace zákaznických dat z platformy eCommerce
 
@@ -168,7 +170,7 @@ Po ingestaci dat nyní začínáme s procesem **Mapování, párování, slouče
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Úkol 3 – Konfigurace predikce úbytku předplatných
 
-Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci úbytku předplatných. Podrobné kroky najdete v části [Predikce úbytku předplatných (Preview)](predict-subscription-churn.md). 
+Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci úbytku předplatných. Podrobné kroky viz článek [Predikce úbytku předplatitelů](predict-subscription-churn.md). 
 
 1. Přejděte na **Analytické nástroje** > **Prozkoumat** a vyberte **Model úbytku zákazníků**.
 

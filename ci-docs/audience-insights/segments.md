@@ -1,32 +1,37 @@
 ---
 title: Segmenty v přehledech cílové skupiny
 description: Vytvořte přehled segmentů a způsob jejich vytváření a správy.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+searchScope:
+- ci-customers-page
+- ci-enrichment-details
+- ci-segments
+- ci-segment-details
+- customerInsights
+ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617331"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355975"
 ---
 # <a name="segments-overview"></a>Přehled segmentů
 
 Segmenty umožňují seskupit zákazníky na základě demografických, transakčních nebo behaviorálních atributů. Segmenty můžete použít k cílení propagačních kampaní, prodejních aktivit a akcí podpory zákazníků k dosažení vašich obchodních cílů.
 
-Profily zákazníků, které odpovídají filtrům definice segmentu, se označují jako *prvky* segmentu. Použijí se některé [servisní limity](service-limits.md).
+Profily zákazníků, které odpovídají filtrům definice segmentu, se označují jako *prvky* segmentu. Použijí se některé [servisní limity](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-new-segment"></a>Vytvořit nový segment
 
 Existuje několik způsobů, jak vytvořit nový segment: 
 
-# <a name="individual-customers-b2c"></a>[Jednotliví zákazníci (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 
 - Složitý segment s nástrojem pro tvorbu segmentů: [Vybudujte si vlastní](segment-builder.md#create-a-new-segment) 
 - Jednoduché segmenty s jedním operátorem: [Rychlý segment](segment-builder.md#quick-segments) 
@@ -34,7 +39,7 @@ Existuje několik způsobů, jak vytvořit nový segment:
 - Návrhy využívající AI založené na mírách nebo atributech: [Navrhované segmenty ke zlepšení měr](suggested-segments.md) 
 - Návrhy založené na činnostech: [Navrhované segmenty na základě aktivity zákazníků](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Obchodní účty (B2C)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
 - Složitý segment s nástrojem pro tvorbu segmentů: [Vybudujte si vlastní](segment-builder.md#create-a-new-segment)
 
@@ -65,8 +70,7 @@ Když vyberete segment, jsou k dispozici následující akce:
 
 Můžete aktualizovat všechny segmenty najednou výběrem **Aktualizovat vše** na stránce **Segmenty** nebo můžete aktualizovat jeden nebo více segmentů, když je vyberete a z možností vyberete volbu **Aktualizovat**. Případně můžete nakonfigurovat opakovanou aktualizaci **Správce** > **Systém** > **Plán**.
 
-> [!TIP]
-> Existuje [šest typů stavů](system.md#status-types) pro úkoly/procesy. Navíc většina procesů [závisí na dalších navazujících procesech](system.md#refresh-policies). Můžete vybrat stav procesu a zobrazit podrobnosti o průběhu celé úlohy. Po výběru **Zobrazit podrobnosti** pro jeden z úkolů úlohy najdete další informace: čas zpracování, datum posledního zpracování a všechny chyby a varování spojené s úkolem.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Export segmentů
 
@@ -106,4 +110,5 @@ Spodní část obsahuje seznam členů segmentu.
 >
 >Seznam je náhledem odpovídajících členů segmentu a zobrazuje prvních 100 záznamů segmentu, takže jej můžete rychle vyhodnotit a v případě potřeby zkontrolovat jeho definice. Chcete-li zobrazit všechny odpovídající záznamy, je třeba [segment exportovat](export-destinations.md).
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)] 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

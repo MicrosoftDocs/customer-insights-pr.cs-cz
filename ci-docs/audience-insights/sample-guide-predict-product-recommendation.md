@@ -3,26 +3,29 @@ title: Průvodce ukázkami predikce doporučení produktů
 description: Pomocí tohoto průvodce ukázkami můžete vyzkoušet dodávaný model predikce doporučení produktů.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035177"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354639"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Průvodce ukázkami predikce doporučení produktů (Preview)
+# <a name="product-recommendation-prediction-sample-guide"></a>Průvodce ukázkami predikce doporučení produktů
 
 Provedeme vás příkladem predikce doporučení produktů od začátku dokonce s využitím níže uvedených ukázkových dat.
 
 ## <a name="scenario"></a>Scénář
 
-Contoso je společnost vyrábějící vysoce kvalitní kávu a kávovary, které prodávají prostřednictvím svého webu Contoso Coffee. Jejich cílem je pochopit, které produkty by měli doporučit svým vracejícím se zákazníkům. Informovanost, u kterých zákazníků je **pravděpodobnější nákup**, jim může pomoci ušetřit marketingové úsilí zaměřením na konkrétní položky.
+Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary, které prodává prostřednictvím svých webových stránek Contoso Coffee. Jejich cílem je pochopit, které produkty by měli doporučit svým vracejícím se zákazníkům. Informovanost, u kterých zákazníků je **pravděpodobnější nákup**, jim může pomoci ušetřit marketingové úsilí zaměřením na konkrétní položky.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -31,7 +34,7 @@ Contoso je společnost vyrábějící vysoce kvalitní kávu a kávovary, které
 
 ## <a name="task-1---ingest-data"></a>Úkol 1 – Ingestace dat
 
-Projděte si články [o příjmu (ingestaci) dat](data-sources.md) a [importu zdrojů dat pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně.
+Prohlédněte si články [o přijímání dat](data-sources.md) a [importu datových zdrojů pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingestace zákaznických dat z platformy eCommerce
 

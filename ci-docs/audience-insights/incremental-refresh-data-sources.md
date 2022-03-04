@@ -1,22 +1,24 @@
 ---
-title: Přírůstková aktualizace pro zdroje dat založené na Power Query
-description: Aktualizujte nová a aktualizovaná data pro velké zdroje dat založené na Power Query.
+title: Přírůstková aktualizace pro datové zdroje založené na Power Query
+description: Aktualizujte nová a aktualizovaná data pro velké zdroje dat na základě Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900247"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353673"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Přírůstková aktualizace pro zdroje dat založené na Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Přírůstková aktualizace pro datové zdroje založené na Power Query
 
 Tento článek popisuje, jak nakonfigurovat přírůstkovou aktualizaci pro zdroje dat na základě Power Query.
 
@@ -28,9 +30,9 @@ Přírůstková aktualizace pro zdroje dat poskytuje následující výhody:
 
 ## <a name="configure-incremental-refresh"></a>Konfigurovat přírůstkovou aktualizaci
 
-Přehledy cílové skupiny umožňují přírůstkovou aktualizaci zdrojů dat importovaných prostřednictvím Power Query, které podporují přírůstkovou ingestaci. Například databáze Azure SQL s datovými a časovými poli, která označují, kdy byly naposledy aktualizovány datové záznamy.
+Přehledy cílových skupin umožňují přírůstkovou aktualizaci pro zdroje dat importované prostřednictvím Power Query, které podporují přírůstkovou ingestaci. Například databáze Azure SQL s datovými a časovými poli, která označují, kdy byly naposledy aktualizovány datové záznamy.
 
-1. [Vytvoření nového zdroje dat na základě Power Query](connect-power-query.md).
+1. [Vytvořte nový zdroj dat založený na Power Query](connect-power-query.md).
 
 1. Zadejte **Název** zdroje dat.
 

@@ -1,21 +1,23 @@
 ---
 title: Vytvoření prostředí v Customer Insights
 description: Kroky k vytvoření prostředí s licencovaným předplatným pro Dynamics 365 Customer Insights.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088094"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354087"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Vytvoření prostředí v přehledech cílové skupiny
 
@@ -76,12 +78,14 @@ Pokud vytvoříte více prostředí Customer Insights a rozhodnete se uložit v�
    
 Krok **Microsoft Dataverse** vám umožní propojit Customer Insights s vaším prostředím Dataverse.
 
-Pokud chcete použít [připravené modely predikce](predictions-overview.md#out-of-box-models), nakonfigurujte sdílení dat pomocí Dataverse. Nebo můžete povolit příjem dat z místních zdrojů dat a poskytnout adresu URL prostředí Microsoft Dataverse, které spravuje vaše organizace. Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights s datovým jezerem spravovaným Dataverse.
+Poskytněte své vlastní prodtředí Microsoft Dataverse pro sdílení dat (profilů a přehledů) s podnikovými aplikacemi založenými na Dataverse, jako je Dynamics 365 Marketing nebo modelem řízené aplikace v Power Apps. Pokud nemáte vlastní prostředí Dataverse, nechte toto pole prázdné a my vám ho vytvoříme.
+
+Připojení k prostředí Dataverse vám také umožňuje [ingestovat data z místních zdrojů dat pomocí datových toků a bran platformy Power Platform](data-sources.md#add-data-from-on-premises-data-sources). Můžete také použít [vestavěné modely predikce](predictions-overview.md?tabs=b2c#out-of-box-models) připojením k prostředí Dataverse.
 
 > [!IMPORTANT]
 > Customer Insights a Dataverse musí být ve stejné oblasti, aby bylo možné sdílet data.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="sdílení dat s Microsoft Dataverse automaticky povolenémo pro nové instance sítě.":::
 
 > [!NOTE]
 > Customer Insights nepodporuje následující scénáře sdílení dat:

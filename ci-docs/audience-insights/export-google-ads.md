@@ -1,24 +1,26 @@
 ---
 title: Export dat Customer Insights do služby Google Ads
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Google Ads.
-ms.date: 03/03/2021
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
-ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
+ms.openlocfilehash: 28e2b35c5a47a025b8cdcccdb3f61c79878bf056
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "6604269"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227002"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Export segmentů do Google Ads (náhled)
 
 Exportujte segmenty sjednocených profilů zákazníků do seznamu cílové skupiny Google Ads a použijte je k inzerci v Google Search, Gmailu, YouTube a síti Google Display Network. 
+
+> [!IMPORTANT]
+> V současné době můžete vytvořit nové připojení a exportovat data do Google Ads, pouze pokud již máte schválený token vývojáře Google Ads. Kvůli změnám zásad brzy aktualizujeme export Google Ads a poskytneme možnost exportu, která nebude vyžadovat vývojářský token, aby byla zajištěna kontinuita vašeho prostředí a zjednodušen export do Google Ads. Doporučujeme nenastavovat více připojení ke službě Google Ads, aby se usnadnil přechod na novou možnost exportu.
 
 ## <a name="prerequisites-for-connection"></a>Předpoklady pro připojení
 
@@ -32,9 +34,9 @@ Exportujte segmenty sjednocených profilů zákazníků do seznamu cílové skup
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Až 1 milion profilů na jeden export do služby Google Ads.
+- Až 1 milion zákaznických profilů na export do Google Ads.
 - Export do služby Google Ads je omezen na segmenty.
-- Export segmentů s celkem 1 milionem profilů může z důvodu omezení na straně poskytovatele trvat až 5 minut. 
+- Export segmentů s celkem 1 milionem zákaznických profilů může kvůli omezením na straně poskytovatele trvat až 5 minut. 
 - Spárování v Google Ads může trvat až 48 hodin.
 
 ## <a name="set-up-connection-to-google-ads"></a>Nastavení propojení ke Google Ads
@@ -71,7 +73,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte své **[ID cílové skupiny Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** a volbou **Připojit** inicializujte připojení k Google Ads.
 
-1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka.
 
 1. Vyberte segmenty, které chcete exportovat. Do Google Ads můžete exportovat celkem až 1 milion zákaznických profilů.
 

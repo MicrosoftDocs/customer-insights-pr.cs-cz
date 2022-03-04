@@ -3,20 +3,19 @@ title: Predikce úbytku předplatitelů (obsahuje video)
 description: Predikuje, zda hrozí odchod zákazníka, když přestane používat předplatné pro produkty nebo služby vaší společnosti.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967693"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354685"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Predikce odchodu předplatitelů (Preview)
+# <a name="subscription-churn-prediction"></a>Predikce ukončení předplatného
 
 Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazníka, když přestane používat předplatné pro produkty nebo služby vaší společnosti. Novou predikci odchodu předplatitelů můžete vytvořit na stránce **Analytické nástroje** > **Predikce**. Volbou **Moje predikce** zobrazíte ostatní predikce, které jste vytvořili.
 
@@ -63,7 +62,7 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
 ## <a name="create-a-subscription-churn-prediction"></a>Vytvoření predikce odchodu předplatitelů
 
 1. V přehledech cílové skupiny přejděte na **Analytické nástroje** > **Predikce**.
-1. Vyberte dlaždici **Model odchodu předplatitelů (Preview)** a vyberte **Použít tento model**.
+1. Vyberte dlaždici **Model úbytku předplatného** a vyberte **Použít tento model**.
    > [!div class="mx-imgBorder"]
    > ![Dlaždice modelu odchodu předplatitelů s tlačítkem Použít tento model.](media/subscription-churn-usethismodel.PNG "Dlaždice modelu odchodu předplatitelů s tlačítkem Použít tento model")
 

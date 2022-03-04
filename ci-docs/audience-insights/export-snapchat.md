@@ -1,22 +1,21 @@
 ---
 title: Export údajů ze služby Customer Insights do služby Snapchat
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do služby Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 7eac3307b3f82b6c5ebc3d66d6563ae50696ed65
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760495"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227240"
 ---
-# <a name="export-segment-lists-to-snapchat-preview"></a>Export seznamů segmentů do služby Snapchat (preview)
+# <a name="export-segments-to-snapchat-preview"></a>Export segmentů do služby Snapchat (preview)
 
 Exportujte segmenty sjednocených profilů zákazníků do služby Snapchat a použijte je pro reklamu. 
 
@@ -29,7 +28,7 @@ Exportujte segmenty sjednocených profilů zákazníků do služby Snapchat a po
 ## <a name="known-limitations"></a>Známá omezení
 
 - Export do Snapchatu je omezen na segmenty.
-- Export až 1 milionu profilů do Snapchatu může trvat až 15 minut. 
+- Export až 1 milionu zákaznických profilů do Snapchat může trvat až 15 minut. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Nastavení propojení se Snapchatem
 
@@ -63,7 +62,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte [**ID cílové skupiny Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je nutné exportovat segmenty do Snapchatu.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je nutné exportovat segmenty do Snapchatu.
 
 1. Vyberte segmenty, které chcete exportovat. 
 

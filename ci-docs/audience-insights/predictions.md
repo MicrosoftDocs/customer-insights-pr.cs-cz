@@ -1,24 +1,28 @@
 ---
 title: Doplnění částečných dat pomocí predikcí
 description: Pomocí predikcí můžete vyplnit neúplná zákaznická data.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645026"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353995"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Doplňte své dílčí údaje pomocí predikcí
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Doplňte svá dílčí data o predikce (zastaralé)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Tato funkce bude **zastaralá** od **5. listopadu 2021**. Stávající implementace budou fungovat, dokud nebude funkce odstraněna, ale pomocí níže uvedených pokynů nebudete moci vytvářet nové integrace.
 
 Předpovědi vám umožňují snadno vytvářet předpovídané hodnoty, které mohou zlepšit vaše porozumění zákazníkovi. Na stránce **Analytické nástroje** > **Predikce** můžete volbou **Moje predikce** zobrazit predikce, které jste nakonfigurovali v jiných částech přehledů cílové skupiny, a umožnit vám je dále přizpůsobovat.
 
@@ -60,6 +64,8 @@ Další informace naleznete v tématu [Vytvoření nového prostředí](create-e
    > ![Příklad zobrazení mapovaných hodnot polí do kategorií.](media/intelligence-categorymapping.png "Příklad zobrazení mapovaných hodnot polí do kategorií")
 
 8. Vyberte **Hotovo** a předpověď bude zpracována. Zpracování bude nějakou dobu trvat, v závislosti na velikosti a složitosti dat. Výsledky buduo k dispozici v nové entitě na základě **Název výstupní entity** předpovědi, kterou jste vytvořili.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Vytvořte předpověď při vytváření segmentu
 
@@ -110,7 +116,7 @@ V rámci tohoto toku si vyberete konkrétní atribut, který bude základem vaš
 
 ## <a name="edit-a-prediction"></a>Upravit předpověď
 
-Po vytvoření predikce můžete model v mátroji AI Builder přizpůsobit a zvýšit tak efektivitu svého modelu.  
+Poté, co vytvoříte predikce, můžete upravit model v AI Builderu pro zvýšení efektivity vašeho modelu.  
 
 1. V přehledech cílové skupiny přejděte na **Analytické nástroje** > **Predikce** > **Moje predikce**.
 
@@ -118,14 +124,14 @@ Po vytvoření predikce můžete model v mátroji AI Builder přizpůsobit a zv�
 
 3. Vyberte elipsu ve sloupci **Akce** a zvolte **Zobrazit**.
 
-4. Vyberte **Přizpůsobit v nástroji AI Builder**.
+4. Vyberte **Přizpůsobit v AI Builderu**.
 
-5. Aktualizujte svůj model v nástroji AI Builder. [Další informace o správě modelů v nástroji AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Aktualizujte svůj model v AI Builderu. [Další informace o správě modelů v nástroji AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Příští spuštění vaší predikce použije aktualizovaný model, který jste vytvořili.
 
 > [!NOTE]
-> Nové modely vytvořené v nástroji AI Builder se nezobrazí v přehledech cílové skupiny, pokud nebyly vytvořeny ve výše uvedených prostředích.
+> Nové modely vytvořené v AI Builderu se nezobrazí ve přehledech cílových skupin, pokud model nebyl vytvořen z výše uvedených prostředí.
 
 ## <a name="remove-a-prediction"></a>Odeberte předpověď
 

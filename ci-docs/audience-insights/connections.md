@@ -3,18 +3,20 @@ title: Propojení k dalším službám z Customer Insights.
 description: Sdílejte data s dalšími službami.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304964"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354375"
 ---
 # <a name="connections-preview-overview"></a>Přehled propojení (preview)
 
@@ -47,6 +49,7 @@ Chcete-li přidat propojení, musíte mít [oprávnění správce](permissions.m
 1. V podokně **Nastavení propojení** uveďte požadované podrobnosti. 
    1. Propojení popisuje **zobrazované jméno** a typ propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl tohoto propojení.
    1. Přesná pole závisí na tom, ke které službě se připojujete. V článku o cílové službě se můžete dozvědět o podrobnostech konkrétního typu propojení.
+   1. Pokud [použijete vlastní trezor klíčů](use-azure-key-vault.md) k uložení tajných kódů, aktivujte **Použít trezor klíčů** a vyberte tajný kód ze seznamu.
 
 1. Pokud chcete vytvořit propojení, vyberte **Uložit**.
 
@@ -93,3 +96,6 @@ Oddělená rozšíření a exporty se stanou neaktivními. Znovu je aktivujete p
 
 1. Odstranění potvrďte výběrem **Odstranit**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Nastavte připojení pomocí tajných kódů spravovaných vaším vlastním trezorem klíčů
+
+Některá připojení vyžadují tajné kódy, jako jsou klíče API nebo hesla. Některá připojení podporují tajné kódy uložené ve vašem vlastním trezoru klíčů. Další informace o podporovaných připojeních a o tom, jak je nastavit ve [vašem vlastním trezoru klíčů pro přehledy cílové skupiny](use-azure-key-vault.md).

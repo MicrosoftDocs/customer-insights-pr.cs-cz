@@ -1,20 +1,19 @@
 ---
-title: Rozšíření od třetí strany HERE Technologies
+title: Obohacení pomocí obohacení třetí strany HERE Technologies
 description: Obecné informace o rozšíření od třetí strany HERE Technologies.
-ms.date: 10/27/2020
-ms.reviewer: jodahl
-ms.service: customer-insights
+ms.date: 04/09/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668670"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230374"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Rozšíření profilů zákazníků od HERE Technologies (Preview)
 
@@ -24,33 +23,56 @@ HERE Technologies je společnost postavená na lokalizační platformě, která 
 
 Chcete-li nakonfigurovat rozšíření společnosti HERE Technologies, musíte splnit následující předpoklady:
 
-- Musíte mít aktivní předplatné HERE Technologies. Chcete-li získat předplatné, můžete se [registrovat zde](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) nebo [kontaktujte HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) přímo. [Zjistěte více o HERE Technologies Location Enrichment.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- Musíte mít aktivní předplatné HERE Technologies. Chcete-li získat předplatné, můžete se [registrovat zde](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) nebo přímo [kontaktovat HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Zjistěte více o HERE Technologies Location Enrichment.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Máte klíč rozhraní API pro HERE Technologies.
+- Je k dispozici [Připojení](connections.md) HERE *nebo* máte oprávnění [správce](permissions.md#administrator) a klíč API technologie HERE Technologies.
 
-- Máte oprávnění pro [správu](permissions.md#administrator).
+## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
 
-## <a name="configuration"></a>Konfigurace
+1. Přejděte na **Data** > **Rozšíření**. 
 
-1. Přejděte na **Data** > **Rozšíření**.
-
-1. Vyberte **Rozšířit moje data** na dlaždici HERE Technologies.
+1. Vyberte **Rozšířit moje data** v dlaždici HERE Technologies a vyberte **Začít**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dlaždice HERE Technologies](media/HERE-tile.png "Dlaždice HERE Technologies")
+   > ![Dlaždice HERE Technologies.](media/HERE-tile.png "Dlaždice HERE Technologies")
 
-1. Zadejte aktivní **klíč rozhraní API pro HERE Technologies**. Projděte si a poskytněte svůj souhlas s **Ochranou osobních údajů a dodržování předpisů** výběrem zaškrtávacího políčka **Souhlasím**. 
+1. V rozevíracím seznamu vyberte [připojení](connections.md). Pokud není k dispozici propojení, kontaktujte správce. Pokud jste správce, můžete vytvořit propojení výběrem možnosti **Přidat propojení**. V rozevíracím seznamu vyberte **HERE Technologies**. 
 
-1. Potvrďte oba vstupy výběrem **Připojit k HERE**.
+1. Výběr připojení potvrďte výběrem **Připojit k HERE Technologies**.
 
-1. Vyberte **Přidat data** a zvolte, zda chcete mapovat pole na primární nebo sekundární adresu. Můžete zadat mapování polí pro obě adresy (například adresu domácnosti a adresu firmy) a profily pro obě adresy rozšířit samostatně. Vyberte **Další**.
+1.  Vyberte **Další** a zvolte **datovou sadu zákazníka**, kterou chcete rozšířit o údaje o poloze od společnosti HERE Technologies. Můžete vybrat entitu **Zákazník** k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Screenshot výběru sady zákaznických dat.":::
+
+1. Zvolte, zda chcete mapovat pole na primární nebo sekundární adresu. Můžete určit mapování polí pro obě adresy a profily pro obě adresy obohatit samostatně. Například pokud existuje adresa domů a do zaměstnání. Vyberte **Další**.
 
 1. Definujte, která pole z vašich sjednocených profilů se mají použít k vyhledání odpovídajících dat umístění od HERE Technologies. Pole **Ulice 1** a **Poštovní směrovací číslo** jsou povinná pro vybranou primární a/nebo sekundární adresu. Pro vyšší přesnost shody lze přidat více polí.
 
    > [!div class="mx-imgBorder"]
-   > ![Stránka konfigurace rozšíření od HERE Technologies](media/enrichment-HERE-configuration.png "Stránka konfigurace rozšíření od HERE Technologies")
+   > ![Stránka konfigurace rozšíření od HERE Technologies.](media/enrichment-HERE-configuration.png "Stránka konfigurace rozšíření od HERE Technologies")
 
-1. Vyberte **Použít** k dokončení mapování polí.
+1. Výběrem možnosti **Další** dokončete mapování polí.
+
+1. Zadejte jméno rozšíření. 
+
+1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
+
+## <a name="configure-the-connection-for-here-technologies"></a>Konfigurace propojení pro HERE Technologies 
+
+Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci rozšíření vyberte **Přidat připojení** *nebo* přejděte na **Správce** > **Připojení** a v dlaždici HERE Technologies vyberte **Nastavit**.
+
+1. Do pole **Zobrazované jméno** zadejte jméno.
+
+1. Zadejte platný klíč API společnosti HERE Technologies.
+
+1. Zkontrolujte a poskytněte svůj souhlas s **ochranou osobních údajů a dodržováním předpisů** výběrem **souhlasím**.
+
+1. Vyberte **Ověřit** k ověření konfigurace.
+
+1. Po dokončení ověření vyberte **Uložit**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Stránka konfigurace připojení pro HERE Technologies.](media/enrichment-HERE-connection.png "Stránka konfigurace připojení pro HERE Technologies")
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
@@ -62,9 +84,12 @@ Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobném
 
 ## <a name="next-steps"></a>Další kroky
 
-Stavte na svých obohacených zákaznických údajích. Vytvářejte [segmenty](segments.md), [míry](measures.md) a dokonce [exportujte data](export-destinations.md), abyste svým zákazníkům dopřáli osobní zážitek.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
 
 Když povolíte Dynamics 365 Customer Insights přenos dat společnosti HERE Technologies, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že společnost HERE Technologies splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
 Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

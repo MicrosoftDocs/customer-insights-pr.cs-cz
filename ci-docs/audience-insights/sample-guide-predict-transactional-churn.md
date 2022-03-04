@@ -3,26 +3,25 @@ title: Průvodce ukázkami predikce úbytku transakcí
 description: Pomocí tohoto průvodce ukázkami můžete vyzkoušet dodávaný model predikce úbytku transakcí.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029437"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354593"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Průvodce ukázkami predikce úbytku transakcí (Preview)
+# <a name="transactional-churn-prediction-sample-guide"></a>Průvodce ukázkami predikce úbytku transakcí
 
-Tento průvodce vás provede příkladem predikce úbytku transakcí od začátku dokonce v Customer Insights s využitím níže uvedených ukázkových dat. Veškerá data použitá v této příručce nejsou skutečnými údaji o zákaznících a jsou součástí datové sady Contoso nalezené v *Ukázkovém* prostředí v rámci vašeho předplatného Customer Insights.
+Tento průvodce vás provede příkladem predikce úbytku transakcí od začátku dokonce v Customer Insights s využitím níže uvedených ukázkových dat. Všechna data použitá v tomto průvodci nejsou skutečná zákaznická data a jsou součástí datové sady Contoso v prostředí *Ukázka* v rámci vašeho předplatného Customer Insights.
 
 ## <a name="scenario"></a>Scénář
 
-Contoso je společnost vyrábějící vysoce kvalitní kávu a kávovary, které prodávají prostřednictvím svého webu Contoso Coffee. Jejím cílem je vědět, kteří zákazníci, kteří obvykle nakupují její produkty pravidelně, přestanou být aktivními zákazníky v příštích 60 dnech. Informace, který z jejích zákazníků bude **pravděpodobně ztracen**, jí může pomoci ušetřit marketingové prostředky tím, že se soustředí na jeho udržení.
+Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary, které prodává prostřednictvím svých webových stránek Contoso Coffee. Jejím cílem je vědět, kteří zákazníci, kteří obvykle nakupují její produkty pravidelně, přestanou být aktivními zákazníky v příštích 60 dnech. Informace, který z jejích zákazníků bude **pravděpodobně ztracen**, jí může pomoci ušetřit marketingové prostředky tím, že se soustředí na jeho udržení.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -31,7 +30,7 @@ Contoso je společnost vyrábějící vysoce kvalitní kávu a kávovary, které
 
 ## <a name="task-1---ingest-data"></a>Úkol 1 – Ingestace dat
 
-Projděte si články [o příjmu (ingestaci) dat](data-sources.md) a [importu zdrojů dat pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně. 
+Prohlédněte si články [o přijímání dat](data-sources.md) a [importu datových zdrojů pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingestace zákaznických dat z platformy eCommerce
 
@@ -149,7 +148,7 @@ Po ingestaci dat nyní začínáme s procesem **Mapování, párování, slouče
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Úkol 3 – Konfigurace predikce úbytku transakcí
 
-Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci úbytku předplatných. Podrobné kroky najdete v části [Predikce úbytku předplatných (Preview)](predict-subscription-churn.md). 
+Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci úbytku předplatných. Podrobné kroky viz článek [Predikce úbytku předplatitelů](predict-subscription-churn.md). 
 
 1. Přejděte na **Analytické nástroje** > **Prozkoumat** a vyberte **Model úbytku zákazníků**.
 

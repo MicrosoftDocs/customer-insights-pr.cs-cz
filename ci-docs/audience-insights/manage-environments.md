@@ -1,104 +1,73 @@
 ---
 title: Tvorba a správa prostředí
 description: Zjistěte, jak se zaregistrovat do služby a jak spravovat prostředí.
-ms.date: 06/15/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304872"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354271"
 ---
 # <a name="manage-environments"></a>Správa prostředí
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Tento článek vysvětluje, jak vytvořit novou organizaci a jak zřídit prostředí.
 
-## <a name="sign-up-and-create-an-organization"></a>Registrace a vytvoření organizace
+## <a name="switch-environments"></a>Přepnutí prostředí
 
-1. Přejděte na webovou stránku [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/).
+Vyberte ovládaí prvek **Prostředí** v pravém horním rohu stránky pro změnu prostředí.
 
-2. Vyberte **Začínáme**.
+:::image type="content" source="media/home-page-environment-switcher.png" alt-text="Snímek obrazovky ovládacího prvku pro přepínání prostředí.":::
 
-3. Vyberte preferovaný scénář registrace a vyberte odpovídající odkaz.
+Správci mohou [vytvářet](create-environment.md) a spravovat prostředí.
 
-4. Přijetím podmínek a volbou **Pokračovat** zahajte vytváření organizace.
+## <a name="edit-an-existing-environment"></a>Úprava stávajícího prostředí
 
-5. Po vytvoření prostředí budete přesměrováni na [Customer Insights](https://home.ci.ai.dynamics.com).
+Můžete upravit některé podrobnosti existujících prostředí.
 
-6. Pomocí ukázkového prostředí prozkoumejte aplikaci nebo vytvořte nové prostředí podle kroků v další části.
+1.  Vyberte nástroj pro výběr **prostředí** v záhlaví aplikace.
 
-7. Po zadání nastavení prostředí vyberte **Vytvořit**.
+2.  Vyberte ikonu **Upravit**.
 
-8. Po úspěšném vytvoření prostředí budete přihlášeni.
+3. V poli **Upravit prostředí** můžete aktualizovat nastavení prostředí.
 
-## <a name="create-an-environment-in-an-existing-organization"></a>Vytvoření prostředí v existující organizaci
+Další informace o nastavení prostředí naleznete v tématu [Vytvoření nového prostředí](create-environment.md).
 
-Nové prostředí lze vytvořit dvěma způsoby. Můžete specifikovat zcela novou konfiguraci nebo zkopírovat některá nastavení konfigurace z existujícího prostředí.
+## <a name="connect-to-microsoft-dataverse"></a>Připojení k Microsoft Dataverseu
+   
+Krok **Microsoft Dataverse** vám umožní propojit Customer Insights s vaším prostředím Dataverse.
+
+Pokud chcete použít [připravené modely predikce](predictions-overview.md#out-of-box-models), nakonfigurujte sdílení dat pomocí Dataverse. Nebo můžete povolit příjem dat z místních zdrojů dat a poskytnout adresu URL prostředí Microsoft Dataverse, které spravuje vaše organizace.
+
+> [!IMPORTANT]
+> Customer Insights a Dataverse musí být ve stejné oblasti, aby bylo možné sdílet data.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse.":::
 
 > [!NOTE]
-> Organizace mohou vytvořit *dvě* prostředí pro každou licenci Customer Insights. Pokud vaše organizace zakoupí více než jednu licenci, [kontaktujte náš tým podpory](https://go.microsoft.com/fwlink/?linkid=2079641) a požádejte o zvýšení počtu dostupných prostředí. Další informace o kapacitě a kapacitě doplňků získáte stažením [Průvodce licencováním Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+> Customer Insights nepodporuje následující scénáře sdílení dat:
+> - Pokud uložíte všechna data do vlastního úložiště Azure Data Lake Storage, nebudete moci povolit sdílení dat pomocí datového jezera spravovaného Dataverse.
+> - Pokud povolíte sdílení dat pomocí Dataverse, nebudete moci [vytvořit předpokládané nebo chybějící hodnoty v entitě](predictions.md).
 
-Vytvoření prostředí:
+## <a name="copy-the-environment-configuration"></a>Zkopírujte konfiguraci prostředí
 
-1. Vyberte nástroj pro výběr **prostředí** v záhlaví aplikace.
+Když vytváříte nové prostředí, můžete se rozhodnout zkopírovat konfiguraci z existujícího prostředí. 
 
-1. Vyberte **Nové**.
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Snímek obrazovky s možnostmi nastavení v nastavení prostředí.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Nastavení prostředí.](media/environment-settings-dialog.png)
-
-1. V dialogovém okně **Vytvořit prostředí** vyberte **Nové prostředí**.
-
-   Pokud chcete [kopírovat data z aktuálního prostředí](#considerations-for-copy-configuration-preview), vyberte **Kopírovat z existujícího prostředí**. Uvidíte seznam všech dostupných prostředí z vaší organizace, ze kterých můžete kopírovat data.
-
-1. Zadejte následující údaje:
-   - **Název**: Název tohoto prostředí. Toto pole je již vyplněno, pokud kopírujete z existujícího prostředí, ale můžete jej změnit.
-   - **Typ**: Vyberte, zda chcete vytvořit provozní nebo sandboxové prostředí.
-   - **Oblast**: Oblast, ve které je služba nasazena a hostována.
-   
-1. Volitelně můžete vybrat **Upřesnit nastavení**:
-
-   - **Uložit všechna data do**: Určuje, kam chcete ukládat výstupní data generovaná z Customer Insights. Budete mít dvě možnosti: **Úložiště Customer Insights** (Azure Data Lake spravované týmem Customer Insights) a **Azure Data Lake Storage** (váš vlastní Azure Data Lake Storage). Ve výchozím nastavení je vybráno úložiště Customer Insights.
-
-     > [!NOTE]
-     > Uložením dat do úložiště Azure Data Lake Storage souhlasíte s tím, že tato data budou přenesena a uložena v příslušném zeměpisném umístění pro daný účet Azure Storage, které se může lišit od umístění dat uložených ve službě Dynamics 365 Customer Insights. [Další informace naleznete v centru zabezpečení Microsoft.](https://www.microsoft.com/trust-center)
-     >
-     > V současné době jsou přijímané entity vždy ukládány do Data Lake spravovaného řešením Customer Insights. 
-     > 
-     > Podporujeme pouze účty Azure Data Lake Storage ze stejné oblasti Azure, kterou jste vybrali při vytváření prostředí. 
-     > 
-     > Podporujeme pouze účty Azure Data Lake Storage, které mají povolený hierarchický obor názvů.
-
-
-   - Pro možnost Azure Data Lake Storage si můžete pro ověřování vybrat mezi možností založenou na zdroji a možností založenou na předplatném. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Název **Kontejner** nelze změnit a bude mít hodnotu `customerinsights`.
-   
-   - Pokud chcete použít [predikce](predictions.md), konfigurovat sdílení dat s Microsoft Dataverse, nebo povolit příjem dat z místních zdrojů dat, uveďte adresu URL prostředí Microsoft Dataverse v části **Konfigurace sdílení dat s Microsoft Dataverse a povolení dalších funkcí**. Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights se službou Data Lake spravovanou Microsoft Dataverse.
-
-     > [!NOTE]
-     > - Sdílení dat se službou Data Lake spravovanou Microsoft Dataverse aktuálně není podporováno, když uložíte všechna data do svého vlastního úložiště Azure Data Lake Storage.
-     > - [Predikce chybějících hodnot v entitě](predictions.md) není momentálně podporováno, když povolíte sdílení dat se službou Data Lake spravovanou Microsoft Dataverse.
-
-     > [!div class="mx-imgBorder"]
-     > ![Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
-
-   Když spustíte procesy, jako je ingestace dat nebo vytvoření segmentu, vytvoří se odpovídající složky v účtu úložiště, který jste zadali výše. Datové soubory a soubory model.json budou vytvořeny a přidány do složek na základě názvu procesu.
-
-   Pokud vytvoříte více prostředí Customer Insights a zvolíte uložení výstupních entit z těchto prostředí do svého účtu úložiště, vytvoří se pro každé prostředí samostatné složky s ci_<environmentid> v kontejneru.
-
-### <a name="considerations-for-copy-configuration-preview"></a>Úvahy o konfiguraci kopírování (náhled)
+Uvidíte seznam všech dostupných prostředí z vaší organizace, ze kterých můžete kopírovat data.
 
 Následující nastavení konfigurace se zkopírují:
 
-- Konfigurace funkcí
 - Ingestované/importované zdroje dat
 - Konfigurace sjednocení dat (mapa, shoda, sloučení)
 - Segmenty
@@ -112,48 +81,22 @@ Následující nastavení konfigurace se zkopírují:
 - Správa modelů
 - Přiřazení rolí
 
-Následující nastavení se *nezkopírují*:
+Následující data *nejsou* zkopírována:
 
 - Profily zákazníků.
 - Přihlašovací údaje ke zdroji dat. Budete muset zadat přihlašovací údaje pro každý zdroj dat a ručně aktualizovat zdroje dat.
-- Zdroje dat ze složky Common Data Model a Dataverse spravované v Data Lake. Tyto zdroje dat budete muset vytvořit ručně se stejným názvem jako ve zdrojovém prostředí.
+
+- Zdroje dat ze složky Common Data Model a datového jezera spravovaného Dataverse. Tyto zdroje dat budete muset vytvořit ručně se stejným názvem jako ve zdrojovém prostředí.
 
 Při kopírování prostředí se zobrazí potvrzovací zpráva o vytvoření nového prostředí. Volbou **Přejít na zdroje dat** zobrazíte seznam zdrojů dat.
 
 Všechny zdroje dat zobrazí stav **Povinné přihlašovací údaje**. Upravte zdroje dat a zadejte přihlašovací údaje a aktualizujte je.
 
-> [!div class="mx-imgBorder"]
-> ![Kopírované zdroje dat.](media/data-sources-copied.png)
+:::image type="content" source="media/data-sources-copied.png" alt-text="Seznam zdrojů dat, které byly zkopírovány a vyžadují ověření.":::
 
 Po aktualizaci zdrojů dat přejděte na **Data** > **Sjednotit**. Zde najdete nastavení ze zdrojového prostředí. Upravte je podle potřeby nebo volbou **Spustit** zahajte proces sjednocení dat a vytvořte jednotnou entitu zákazníka.
 
 Po dokončení sjednocení dat přejděte na **Míry** a **Segmenty**, které také potřebují aktualizovat.
-
-## <a name="edit-an-existing-environment"></a>Úprava stávajícího prostředí
-
-Můžete upravit některé podrobnosti existujících prostředí.
-
-1.  Vyberte nástroj pro výběr **prostředí** v záhlaví aplikace.
-
-2.  Vyberte ikonu **Upravit**.
-
-3. V poli **Upravit prostředí** můžete změnit **zobrazovaný název** prostředí, ale nemůžete změnit **Oblast** nebo **Typ**.
-
-4. Pokud je prostředí nakonfigurováno pro ukládání dat Azure Data Lake Storage, můžete aktualizovat **Klíč účtu**. Nemůžete však změnit **Název účtu** nebo název **Kontejneru**.
-
-5. Volitelně můžete provést aktualizaci z připojení na základě klíče účtu do připojení založeného na prostředcích nebo předplatném. Po upgradu nelze vrátit klíč účtu. Další informace viz [Připojení přehledů cílové skupiny k účtu Azure Data Lake Storage Gen 2 pomocí instančního objektu Azure](connect-service-principal.md). Nemůžete změnit informace o **kontejneru** při aktualizaci připojení.
-
-6. Volitelně můžete poskytnout adresu URL prostředí Microsoft Dataverse v části **Konfigurace sdílení dat pomocí Microsoft Dataverse a povolení dalších funkcí**. Tyto funkce zahrnují sdílení dat s aplikacemi a řešeními založenými na Microsoft Dataverse, příjem dat z místních datových zdrojů nebo použití [predikcí](predictions.md). Vyberte **Povolit sdílení dat**, abyste sdíleli výstupní data Customer Insights se službou Data Lake spravovanou Microsoft Dataverse.
-
-   > [!NOTE]
-   > - Sdílení dat se službou Data Lake spravovanou Microsoft Dataverse aktuálně není podporováno, když uložíte všechna data do svého vlastního úložiště Azure Data Lake Storage.
-   > - [Predikce chybějících hodnot v entitě](predictions.md) momentálně není podporována, pokud povolíte sdílení dat se spravovanou službou Data Lake Microsoft Dataverse.
-
-   Až povolíte sdílení dat s Microsoft Dataverse, spustí se jednorázová úplná aktualizace vašich zdrojů dat a dalších procesů. Pokud procesy aktuálně běží, neuvidíte možnost povolit sdílení dat s Microsoft Dataverse. Chcete-li povolit sdílení dat, počkejte, až se tyto procesy dokončí, nebo je zrušte. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Možnosti konfigurace umožňující sdílení dat s Microsoft Dataverse.":::
-   
-   Když spustíte procesy, jako je ingestace dat nebo vytvoření segmentu, vytvoří se odpovídající složky v účtu úložiště, který jste zadali výše. Datové soubory a soubory model.json budou vytvořeny a přidány do příslušných podsložek v závislosti na spuštěném procesu.
 
 ## <a name="reset-an-existing-environment"></a>Obnovení existujícího prostředí
 

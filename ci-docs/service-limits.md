@@ -2,19 +2,18 @@
 title: Limity služeb v Dynamics 365 Customer Insights
 description: Pochopte limity a omezení.
 ms.date: 09/03/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: 9bf8f03b785fb3035e3fc979a3304d4e98fd8d28
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7791973"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350399"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Limity služeb ve funkcích aplikace Customer Insights
 
@@ -22,27 +21,25 @@ Tento článek popisuje vestavěné limity služby Customer Insights, které jso
 
 ## <a name="audience-insights"></a>Přehledy pro cílovou skupinu
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Omezení funkce přehledů cílové skupiny v Dynamics 365 Customer Insights
-
 | Plocha  | Limity  | Notes |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmenty, míry a predikce | 300  | Celkový počet [segmentů](audience-insights/segments.md), [měr](audience-insights/measures.md) a [predíkcí](audience-insights/predictions.md) dohromady nesmí přesáhnout 300.  |
 | Relace | 20 úrovní hloubky vztahů v cestách entit. | Při vytváření [segmentů](audience-insights/segments.md) nebo [měření](audience-insights/measures.md) pomocí rozhraní Builderu mohou mít cesty entit až 20 skokových relací mezi počáteční entitou a cílovou entitou.  |
 
+<!--
+## Engagement insights
 
-## <a name="engagement-insights"></a>Přehledy zapojení
+### Workspace and event quotas
 
-### <a name="workspace-and-event-quotas"></a>Pracovní prostor a kvóty událostí
+Engagement insights is a highly scalable application that can support millions of events per second. During public preview, events have a volume threshold. There's also a limit to the number of workspaces in an organization.
 
-Přehledy zapojení je vysoce škálovatelná aplikace, která může podporovat miliony událostí za sekundu. Během Public Preview mají události prahovou hodnotu objemu. Existuje také omezení počtu pracovních prostorů v organizaci.
+### Engagement insights limits
 
-### <a name="engagement-insights-limits"></a>Omezení přehledů zapojení
+- Maximum event volume per workspace  = 100 events per second
 
-- Maximální objem událostí na pracovní prostor = 100 událostí za sekundu
+- Maximum number of workspaces per organization = 100
 
-- Maximální počet pracovních prostorů na organizaci = 100
-
-Když události překročí prahovou hodnotu, může to vést ke ztrátě dat v sestavách na základě těchto událostí. Můžete [kontaktovat podporu](https://go.microsoft.com/fwlink/?linkid=2145734) a požádat o zvýšení objemu, než překročíte limity. Společně s vámi určíme, zda potřebujete zvýšit objem, a podpoříme váš požadavek.
-
+When events exceed the threshold, it can lead to loss of data in reports based on those events. You can [contact support](https://go.microsoft.com/fwlink/?linkid=2145734) to request a volume increase before you exceed limits. We'll work with you to determine your need for a volume increase and support your request.
+-->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

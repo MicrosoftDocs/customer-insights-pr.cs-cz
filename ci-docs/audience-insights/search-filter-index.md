@@ -3,18 +3,20 @@ title: Hledání a filtrování profilů zákazníků
 description: Rychle vyhledejte informace o sjednocených profilech zákazníků a filtrujte zadané atributy.
 ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732026"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354501"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profily zákazníků: Prohledávání a filtrování indexu
 

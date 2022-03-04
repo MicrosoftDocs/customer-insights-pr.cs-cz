@@ -1,22 +1,21 @@
 ---
 title: Predikce doporučení produktů
 description: Predikujte produkty, které si zákazník pravděpodobně zakoupí nebo s nimž bude interagovat.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494531"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355743"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Predikce doporučení produktů (Preview)
+# <a name="product-recommendation-prediction"></a>Predikce doporučení produktů
 
 Model doporučení produktů vytváří sady prediktivních doporučení produktů. Doporučení jsou založena na předchozím nákupním chování a zákaznících s podobnými nákupními vzory. Nové predikce doporučení produktů můžete vytvořit na stránce **Analytické nástroje** > **Predikce**. Volbou **Moje predikce** zobrazíte ostatní predikce, které jste vytvořili.
 
@@ -54,7 +53,7 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 
 > [!NOTE]
 > - Model vyžaduje historii transakcí vašich zákazníků. Definice transakce je poměrně flexibilní. Jakákoli data, která popisují interakci uživatele a produktu, mohou fungovat jako vstup. Například nákup produktu, absolvování kurzu nebo účast na události.
-> - Aktuálně lze konfigurovat pouze jednu entitu historie transakcí. Pokud existuje více entit nákupu, sjednoťte je před přijetím dat v Power Query.
+> - Aktuálně lze konfigurovat pouze jednu entitu historie transakcí. Pokud existuje více entit nákupu, sjednoťte je před příjmem dat v Power Query.
 > - Pokud jsou objednávka a podrobnosti objednávky různé entity, připojte se k nim před použitím v modelu. Model v entitě nefunguje pouze s ID objednávky nebo ID příjmu.
 
 
@@ -62,7 +61,7 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 
 1. V části Customer Insights přejděte na **Analytické nástroje** > **Předpovědi**.
 
-1. Vyberte dlaždici **Model doporučení produktů (Preview)** a vyberte **Použít tento model**.
+1. Vyberte dlaždici **Model doporučení produktu** a vyberte **Použít tento model**.
    > [!div class="mx-imgBorder"]
    > ![Dlaždice modelu doporučení produktů s tlačítkem Použít tento model.](media/product-recommendation-usethismodel.PNG "Dlaždice modelu doporučení produktů s tlačítkem Použít tento model")
 
@@ -79,11 +78,11 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 1. Nastavte **Počet produktů**, kolik chcete doporučit zákazníkovi. Tato hodnota závisí na tom, jak váš způsob doručení vyplňuje data. Pokud můžete doporučit tři produkty, nastavte tuto hodnotu odpovídajícím způsobem.
    
    >[!TIP]
-   > Kdykoli můžete použít volbu **Uložit a zavřít**, kterou uložíte predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
+   > Kdykoliv můžete volbou **Uložit koncept** uložit predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
 
-1. Zvolte, zda chcete **Navrhovat produkty, které zákazníci nedávno zakoupili**.
+1. Vyberte, zda chcete zahrnout produkty, které si zákazníci nedávno zakoupili, v poli **Očekávány opakované nákupy**.
 
-1. Pokud jste se rozhodli *nedoporučit* nedávno zakoupené produkty, nastavte **Okno ohlédnutí**. Toto nastavení určuje časový rámec, kterým se model řídí před opětovným doporučením produktu uživateli. Například označte, že si zákazník kupuje notebook každé dva roky. Toto okno se zaměří na historii nákupů za poslední dva roky a pokud bude nalezena položka, bude položka filtrována z doporučení.
+1. Nastavte **Okno ohlédnutí**. Toto nastavení určuje časový rámec, kterým se model řídí před opětovným doporučením produktu uživateli. Například označte, že si zákazník kupuje notebook každé dva roky. Toto okno se zaměří na historii nákupů za poslední dva roky a pokud bude nalezena položka, bude položka filtrována z doporučení.
 
 1. Vyberte **Další**.
 

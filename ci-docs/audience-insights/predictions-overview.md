@@ -1,21 +1,19 @@
 ---
 title: Přehled podporovaných scénářů predikcí
 description: Scénáře a možnosti predikcí, se kterými se setkáte v aplikaci Dynamics 365 Customer Insights.
-ms.date: 05/18/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036001"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228236"
 ---
 # <a name="predictions-overview"></a>Přehled predikcí
 
@@ -24,15 +22,26 @@ Dynamics 365 Customer Insights je vybavena řadou možností, které využívaj�
 ## <a name="out-of-box-models"></a>Předem připravené modely
 
 Nejjednodušší způsob, jak začít s předpovídáním dat, jsou předem definované modely, často označované jako vestavěné modely. K rychlému generování přehledů vyžadují pouze určitá data a strukturu. Aktuálně jsou k dispozici následující modely: 
-- [Celoživotní hodnota zákazníka](predict-customer-lifetime-value.md): Předpovídá potenciální výnos ze zákazníka během jeho celé interakce s firmou. 
+
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
+
+- [Celoživotní hodnota zákazníka](predict-customer-lifetime-value.md): Předpovídá potenciální výnos ze zákazníka během jeho celé interakce s firmou.
 - [Doporučení produktu](predict-product-recommendation.md): Navrhuje sady prediktivních doporučení produktů na základě nákupního chování a zákazníků s podobnými nákupními vzory.
 - [Úbytek předplatitelů](predict-subscription-churn.md): Předpovídá, zda hrozí ztráta zákazníka, pokud přestane používat produkty nebo služby v rámci předplatného vaší společnosti.
 - [Úbytek transakcí](predict-transactional-churn.md): Předpovídá, zda si zákazník v určitém časovém rámci již nebude kupovat vaše produkty nebo služby.
+- [Analýza postoje](sentiment-analysis.md): Analyzujte postoje zákazníků z jejich názorů a identifikujte obchodní aspekty, které jsou často zmiňovány.
+
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
+
+- [Úbytek transakcí](predict-transactional-churn.md): Předpovídá, zda si zákazník v určitém časovém rámci již nebude kupovat vaše produkty nebo služby.
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Integrace Azure Machine Learning
 
 Pokud organizace již používá scénáře strojového učení založené na experimentech Azure Machine Learning, funkce vlastních modelů v Customer Insights pomáhá propojit jednotlivé tečky. Vytvořte pracovní postupy, které vám pomohou vybrat data, ze kterých chcete generovat přehledy, a namapovat výsledky na vaše sjednocené profily zákazníků. Další informace viz [Vlastní modely strojového učení](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>Predikce AI Builder
+## <a name="ai-builder-prediction"></a>Predikce AI Builderu
 
 Někdy jsou datové sady neúplné a některé hodnoty chybí. Customer Insights může pomoci předpovědět chybějící hodnoty pro entitu a segmenty zákazníka. Další informace najdete v článku [Doplnění dílčích data pomocí predikcí](predictions.md).

@@ -3,18 +3,17 @@ title: Predikce celoživotní hodnoty zákazníka – ukázkový průvodce
 description: Pomocí tohoto ukázkového průvodce můžete vyzkoušet model predikce celoživotní hodnoty zákazníka.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306341"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354823"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Predikce celoživotní hodnoty zákazníka (CLV) – ukázkový průvodce
 
@@ -22,7 +21,7 @@ Tento průvodce vás provede kompletním příkladem predikce celoživotní hodn
 
 ## <a name="scenario"></a>Scénář
 
-Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary. Své výrobky podávají prostřednictvím webu Contoso Coffee. Společnost chce znát hodnotu (výnos), kterou mohou její zákazníci generovat v příštích 12 měsících. Znalost očekávané hodnoty jejich zákazníků v příštích 12 měsících jim pomůže nasměrovat jejich marketingové úsilí na zákazníky s vysokou důležitostí.
+Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary. Produkty prodávají prostřednictvím svých webových stránek Contoso Coffee. Společnost chce znát hodnotu (výnos), kterou mohou její zákazníci generovat v příštích 12 měsících. Znalost očekávané hodnoty jejich zákazníků v příštích 12 měsících jim pomůže nasměrovat jejich marketingové úsilí na zákazníky s vysokou důležitostí.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -31,7 +30,7 @@ Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary. Své
 
 ## <a name="task-1---ingest-data"></a>Úkol 1 – Ingestace dat
 
-Přečtěte si články [o příjmu dat](data-sources.md) a [importu zdrojů dat pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně.
+Prohlédněte si články [o přijímání dat](data-sources.md) a [importu datových zdrojů pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingestace zákaznických dat z platformy eCommerce
 
@@ -164,7 +163,7 @@ Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jedn
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Úkol 3 - Konfigurace predikce celoživotní hodnoty zákazníka
 
-Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci celoživotní hodnoty zákazníka. Podrobné kroky najdete v části [Predikce celoživotní hodnoty zákazníka (preview)](predict-customer-lifetime-value.md).
+Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci celoživotní hodnoty zákazníka. Podrobné kroky viz [Predikce hodnoty životního cyklu zákazníka](predict-customer-lifetime-value.md).
 
 1. Přejděte do nabídky **Analytické nástroje**  > **Predikce** a vyberte **Model celoživotní hodnoty zákazníka**.
 

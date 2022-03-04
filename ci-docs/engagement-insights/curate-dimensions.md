@@ -2,18 +2,17 @@
 title: Použití demografických dimenzí k rozdělení údajů o chování (kurátorované dimenze)
 description: Pomocí kurátorovaných dimenzí sjednoceného profilu povolíte vlastnosti profilu zákazníka přehledů cílových skupin.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461095"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232959"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Použití demografických dimenzí k rozdělení údajů o chování
 
@@ -29,7 +28,7 @@ Pomocí demografických dimenzí jednotného profilu mají uživatelé přehled�
 - Prostředí přehledů zapojení, ve kterém máte data profilu zákazníků propojená s prostředím přehledů cílových skupin, kde jsou profily zákazníků vytvářeny. Více informací: [Vytvoření propojení mezi přehledy cílových skupin a přehledy zapojení](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Poté, co vytvoříte propojení mezi přehledy cílových skupin a přehledy zapojení můžete chtít pouze data specifická pro vlastnosti zákaznického profilu, což může být užitečné jako dimenze v přehledech zapojení. Pro další informace přejděte na část [Povolte atributy a segmenty sjednocených profilů přehledů cílových skupin](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Poté, co vytvoříte propojení mezi přehledy cílových skupin a přehledy zapojení můžete chtít pouze data specifická pro vlastnosti zákaznického profilu, což může být užitečné jako dimenze v přehledech zapojení. Pro další informace přejděte na část [Povolte atributy a segmenty sjednocených profilů přehledů cílových skupin](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Vytvoření nové vlastní sestavy
 

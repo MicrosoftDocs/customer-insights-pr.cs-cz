@@ -3,18 +3,20 @@ title: Entity a datové sady
 description: Zobrazení data na stránce Entity.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900419"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355290"
 ---
 # <a name="entities-in-audience-insights"></a>Entity v přehledech cílové skupiny
 
@@ -71,7 +73,9 @@ Pole z přijatého zdroje dat mohou obsahovat poškozená data. Záznamy s pošk
 
 Sloupec „narozeniny“ má například datový typ nastavený jako „datum“. Záznam zákazníka má jeho narozeniny zadané jako '01/01/19777'. Systém označí tento záznam jako poškozený. Někdo teď může změnit narozeniny ve zdrojovém systému na '1977'. Po automatickém obnovení zdrojů dat má pole nyní platný formát a záznam bude odebrán z poškozené entity. 
 
-Jděte na **Data** > **Subjekty** a vyhledejte poškozené entity v sekci **Systém**. Schéma pojmenování poškozených entit: 'DataSourceName_EntityName_corrupt'.
+Jděte na **Data** > **Subjekty** a vyhledejte poškozené entity v sekci **Systém**. Schéma pojmenování poškozených entit: 'DataSourceName_EntityName_corrupt'. Vyberte poškozenou entitu a identifikujte všechna poškozená pole a důvod na úrovni jednotlivých záznamů.
+> [!div class="mx-imgBorder"]
+> ![Důvod poškození.](media/corruption-reason.png "Důvod poškození")
 
 Customer Insights stále zpracovává poškozené záznamy. Při práci se sjednocenými daty však mohou způsobit problémy.
 

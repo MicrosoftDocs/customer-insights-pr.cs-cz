@@ -1,20 +1,25 @@
 ---
 title: Rozšíření vylepšení adresy (obsahuje video)
 description: Obohaťte a normalizujte informace o adresách profilů zákazníků s modely společnosti Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934915"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353628"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obohacení profilů zákazníků o vylepšené adresy
 
@@ -100,17 +105,17 @@ Chcete-li zahájit proces obohacení, vyberte **Spustit** z panelu příkazů. M
 
 Po dokončení procesu obohacení můžete zkontrolovat nově obohacené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet obohacených profilů.
 
-Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobnému zobrazení každého rozšířeného profilu.
+Ukázku obohacených dat můžete vidět v dlaždici **Náhled obohacených zákazníků**. Vyberte možnost **Další informace** a vyberte kartu **Data** , na které najdete podrobné zobrazení každého obohaceného profilu.
 
 ### <a name="overview-card"></a>Karta Přehled
 
 Karta Přehled zobrazuje podrobnosti o pokrytí rozšíření. 
 
-* **Zpracovaní a změnění zákazníci**: Počet zákaznických profilů, které byly úspěšně rozšířeny.
+* **Zpracované a změněné adresy**: Počet zákaznických profilů s adresami, které byly úspěšně rozšířeny.
 
-* **Zpracovaní a nezměnění zákazníci**: Počet zákaznických profilů, které byly rozpoznány, ale nebyly změněny. To se obvykle stane, když jsou vstupní data platná a nelze je zlepšit rozšířením.
+* **Zpracované a nezměněné adresy**: Počet zákaznických profilů s adresami, které byly rozpoznány, ale nebyly změněny. To se obvykle stane, když jsou vstupní data platná a nelze je zlepšit rozšířením.
 
-* **Nezpracovaní a nezměnění zákazníci**: Počet zákaznických profilů, které nebyly rozpoznány. Obvykle se to děje u vstupních dat, která jsou neplatná nebo je rozšíření nepodporuje.
+* **Nezpracované a nezměněné adresy**: Počet zákaznických profilů s adresami, které nebyly rozpoznány. Obvykle se to děje u vstupních dat, která jsou neplatná nebo je rozšíření nepodporuje.
 
 ## <a name="next-steps"></a>Další kroky
 

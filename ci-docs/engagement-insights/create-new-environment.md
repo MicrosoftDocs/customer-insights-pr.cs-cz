@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648109"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225415"
 ---
 # <a name="create-a-new-environment"></a>Vytvořit nové prostředí 
 
@@ -40,13 +39,13 @@ Prostředí je prostor, kde spravujete své pracovní prostory a připojení. To
 
 1. Zvolte **Oblast** a vyberte **Další**. 
 
-1. Zadejte **Název pracovního prostoru**, což vám umožní shromažďovat data pro konkrétní web nebo aplikace. Další informace naleznete v tématu [Vytvoření pracovního prostoru](create-workspace.md).
+1. Zadejte **Název pracovního prostoru**, což vám umožní shromažďovat data pro konkrétní weby nebo aplikace. Další informace naleznete v tématu [Vytvoření pracovního prostoru](create-workspace.md).
 
 1. Vyberte **typ pracovního prostoru** (webový nebo mobilní), který chcete vytvořit. 
 
 1. Vyberte **Zobrazit pokročilá nastavení** k povolení nebo zakázání těchto volitelných nastavení:
 
-   - Přepněte **Neznámé na známé** na „povoleno“ pro přidružení webových událostí k uživatelům, kteří se dříve autentizovali. Další informace viz [Rozpoznání webových událostí od dříve ověřených návštěvníků](unknown-to-known.md)
+   - Přepněte **Neznámé na známé** na „povoleno“ pro přidružení webových událostí k uživatelům, kteří se dříve autentizovali. Další informace viz [Rozpoznání webových událostí od dříve ověřených návštěvníků](unknown-to-known.md).
    - Přepněte **Filtrovat provoz robotů** na „povoleno“, aby se odstranil webový provoz robotů pro tento pracovní prostor. 
 
 1. Až budete hotovi, vyberte **Dokončit**. 

@@ -4,17 +4,16 @@ description: Vytváření, úprava a odstraňování metrik.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 97189168e0f5586aad8be8089a1f9e27893c2115c7e805ddaab1efc00e11b860
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7e8c96f38af74f25080a40fd92e73f05c71320a8
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034261"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229808"
 ---
 # <a name="view-and-create-metrics"></a>Zobrazení a vytvoření metrik
 
@@ -38,21 +37,24 @@ Tyto systémové metriky jsou založeny na existujících vlastnostech událost�
 1. V levém navigačním podokně přejděte na **Data**. 
 1. Výběrem karty **Metriky** zobrazíte seznam všech metrik v pracovním prostoru. 
    > [!NOTE]
-   > Metriky generované systémem jsou jen ke čtení. Nelze je měnit ani odstranit. Vytvářet a upravovat můžete pouze vlastní metriky.
+   > Metriky generované systémem jsou jen ke čtení. Nemůžete je upravit ani odstranit. Vytvářet a upravovat můžete pouze vlastní metriky.
 
 ## <a name="create-a-metric"></a>Vytvoření metriky
 
 Správci prostředí a pracovního prostoru mohou vytvářet metriky. Před vytvořením metriky je nutné do pracovního prostoru odeslat vlastnosti události. Metriky můžete vytvořit na základě vlastností událostí, které jsou odesílány základními událostmi, nebo použít webové SDK [k odeslání uživatelských vlastností události](advanced-SDK-implementation.md).
 
 1. Přejděte na **Data** > **Metriky**.
-1. Vyberte položku **Nová metrika**.
+1. Výběrem možnosti **Nová metrika** otevřete dialog **Knihovna zdrojů** a **Nová metrika bez názvu**.
 
    :::image type="content" source="media/new-metric.png" alt-text="Přidání metriky k události.":::
 
-1. U formátu vyberte datový typ **Celé číslo** nebo **Dvojitá přesnost**. Celé číslo je číslo bez desetinné části. U typu Dvojitá přesnost můžete vybrat jedno až tři desetinná místa.
-1. V podokně **Knihovna zdrojů** vyhledejte vlastnost události, na které bude metrika založena.
-1. Vyberte **znaménko plus (+)** vedle vlastnosti, kterou chcete použít ve vzorci. Vzorec můžete vytvořit pouze na základě jedné vlastnosti. 
-1. Zvolte jednu z následujících agregačních funkcí. 
+1. V dialogovém okně **Nová metrika bez názvu** vyberte rozevíracího seznam **Formát** a vyberte datový typ **Celé číslo** nebo **Dvojnásobek**. Celé číslo je číslo bez desetinné části. U možnosti Dvojnásobek můžete zvolit jedno a tři desetinná místa.
+
+   :::image type="content" source="media/create-new-metric.png" alt-text="Vytvoření nové metriky":::
+   
+5. V podokně **Knihovna zdrojů** vyhledejte vlastnost události, na které bude metrika založena.
+6. Vyberte **znaménko plus (+)** vedle vlastnosti, kterou chcete použít ve vzorci. Vzorec můžete vytvořit pouze na základě jedné vlastnosti. 
+7. Zvolte jednu z následujících agregačních funkcí. 
 
    - Součet: aritmetický součet všech hodnot 
    - Průměr: průměr všech hodnot
@@ -68,12 +70,16 @@ Než metriku budete moci použít k [vytváření vlastních sestav](custom-repo
 
 ## <a name="edit-a-metric"></a>Úprava metriky
 
+Upravovat lze pouze vlastní metriky.
+
 1. Přejděte na **Data** > **Metriky**.
 1. V seznamu vyberte metriku.
 1. Změna definice metriky
 1. Zvolte **Uložit**.
 
 ## <a name="change-the-name-of-a-metric"></a>Změna názvu metriky
+
+Můžete změnit pouze název vlastních metrik.
 
 1. Přejděte na **Data** > **Metriky**.
 1. U metriky vyberte položku **Více [...]** a zvolte **Upravit název**.
@@ -82,11 +88,15 @@ Než metriku budete moci použít k [vytváření vlastních sestav](custom-repo
 
 ## <a name="delete-a-metric"></a>Odstranění metriky
 
+Odstranit lze pouze vlastní metriky.
+
 1. Přejděte na **Data** > **Metriky**.
 1. U metriky vyberte položku **Více [...]** a zvolte **Odstranit**.
 
    :::image type="content" source="media/delete-metric.png" alt-text="Odstranění metriky události.":::
 
 1. Vyberte **Odstranit** pro potvrzení odstranění.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
