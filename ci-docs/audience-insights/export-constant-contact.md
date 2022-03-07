@@ -1,19 +1,20 @@
 ---
 title: Export údajů ze služby Customer Insights do služby Constant
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Constant Contact.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8841945814397ffa70c56638a8bed25499c1a06f
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: b54659f028a141fe8f351645d96e933d47568a39
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226395"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362410"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Export segmentů do služby Constant Contact (preview)
 
@@ -27,10 +28,10 @@ Exportujte segmenty sjednocených profilů zákazníků do služby Constant Cont
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Do Constant Contact můžete exportovat až 1 milion zákaznických profilů na export.
+- Můžete exportovat až 1 milion profilů na export do Constant Contact.
 - Export do Constant Contact je omezen na segmenty.
-- Export až 1 milionu zákaznických profilů do Constant Contact může trvat až 1 hodinu. 
-- Počet zákaznických profilů, které můžete exportovat do Constant Contact, závisí na vaší smlouvě se Constant Contact a je jí omezen.
+- Export až 1 milionu profilů do Constant Contact může trvat až 1 hodinu. 
+- Počet profilů, které můžete exportovat do Constant Contact, závisí na vaší smlouvě s Constant Contact a je podle ní omezen.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Nastavení propojení s Constant Contact
 
@@ -64,7 +65,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte [**ID seznamu Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Otevřete seznam v Constant Contact a vyhledejte ID seznamu v adrese URL.
 
-1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je nutné exportovat segmenty do Constant Contact.
+1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je nutné exportovat segmenty do Constant Contact.
 
 1. Volitelně můžete exportovat Křestní jméno a Příjmení jako další pole k vytvoření lépe přizpůsobených e-mailů. Volbou **Přidat atribut** namapujte tato pole.
 

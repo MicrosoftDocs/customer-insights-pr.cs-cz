@@ -2,21 +2,19 @@
 title: Přijímání a omezení dat v reálném čase
 description: Obecné informace o funkcích v reálném čase v přehledech cílové skupiny.
 ms.date: 10/27/2020
-ms.reviewer: mhart
+ms.reviewer: nikeller
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-searchScope:
-- ci-system-api-usage
-- customerInsights
-ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355467"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689167"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Příjem dat v reálném čase (náhled)
 
@@ -56,7 +54,7 @@ Rozhraní API v reálném čase umožňuje publikovat novou aktivitu ze zdrojov�
 
 K rozhraní API v reálném čase se můžete připojit dvěma způsoby:
 
-- [nepřímo](#connect-via-the-dynamics-365-customer-insights-connector), pomocí konektoru [Dynamics 365 Customer Insights](/connectors/customerinsights/)
+- [nepřímo](#connect-via-the-dynamics-365-customer-insights-connector), pomocí konektoru [Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/)
 - [přímo](#connect-directly-to-the-real-time-api), s kódem
 
 Oba způsoby mají společné následující předpoklady:
@@ -68,13 +66,13 @@ Oba způsoby mají společné následující předpoklady:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Připojení přes konektor Dynamics 365 Customer Insights
 
-Rozhraní API v reálném čase může ingestovat data z vyhrazeného konektoru Power Platform, konektoru [Dynamics 365 Customer Insights](/connectors/customerinsights/), bez nutnosti zapisovat a nasazovat kód.    
-Konektor může provádět stejné akce v reálném čase jako API. Pro prémiové konektory potřebujete platnou licenci. Další informace získáte v části [Nejčastější dotazy k licencování Power Apps a Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
+Rozhraní API v reálném čase může ingestovat data z vyhrazeného konektoru Power Platform, konektoru [Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/), bez nutnosti zapisovat a nasazovat kód.    
+Konektor může provádět stejné akce v reálném čase jako API. Pro prémiové konektory potřebujete platnou licenci. Další informace získáte v části [Nejčastější dotazy k licencování Power Apps a Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps a/nebo Power Automate](/connectors/)
-- Azure [Logic Apps](/azure/connectors/apis-list)
+- Power Platform [Power Apps a/nebo Power Automate](https://docs.microsoft.com/connectors/)
+- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
 
-Podrobnosti o vytváření toků viz [dokumentace Power Automate](/power-automate/).
+Podrobnosti o vytváření toků viz [dokumentace Power Automate](https://docs.microsoft.com/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Připojení se přímo k rozhraní API v reálném čase
 
@@ -85,7 +83,6 @@ Podrobnosti o tomto rozhraní API, včetně parametrů a odpovědí, najdete v s
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Využití v reálném čase pomocí telemetrie
 
-Získejte přehled o objemu požadavků na rozhraní API v reálném čase a informace o problémech, se kterými se systém může setkat. Můžete [přistupovat k telemetrii v reálném čase](system.md#api-usage-tab). 
+Získejte přehled o objemu požadavků na rozhraní API v reálném čase a informace o problémech, se kterými se systém může setkat. [K telemetrii v reálném čase](system.md#api-usage-tab) můžete přejít cestou **Správce** > **Systém** > **Využití rozhraní API**. V tabulce **Operace** obsahují řádky pro operace API, které používají metody v reálném čase, tlačítko pro zobrazení využití rozhraní API v reálném čase. Tlačítko je znázorněno symbolem dalekohledu. Výběrem tohoto tlačítka otevřete postranní panel obsahující podrobnosti o využití rozhraní API v reálném čase v aktuálním prostředí.
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+V nástroji pro výběr **Seskupit podle** vyberte, jak nejlépe znázornit vaše interakce v reálném čase na časové ose od posledních 24 hodin do posledních 30 dnů. Data lze seskupit podle metody rozhraní API, kvalifikovaného názvu entity (přijaté entity), autora (zdroj události), výsledku (úspěch nebo selhání) nebo kódů chyb. Data jsou k dispozici jako graf historie a jako tabulka.

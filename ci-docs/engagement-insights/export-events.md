@@ -5,15 +5,16 @@ ms.reviewer: mhart
 ms.author: jusali
 author: jusali
 ms.date: 10/01/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: d062e2982c1041454b083630404f2b68f0da9669
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232880"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606191"
 ---
 # <a name="export-events"></a>Export událostí
 

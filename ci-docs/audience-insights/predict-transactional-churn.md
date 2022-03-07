@@ -1,21 +1,22 @@
 ---
-title: Predikce úbytku transakcí (obsahuje video)
+title: Predikce úbytku transakcí
 description: Predikujte, zda je zákazník ohrožen, když přestane nakupovat produkty nebo služby.
-ms.date: 01/13/2022
+ms.date: 10/20/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 9aa208ad94dcb6b1e0f110a3f974c56de00bbd07
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9fa6a044989d523e1068aff24266cfb475632736
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355651"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673037"
 ---
-# <a name="transaction-churn-prediction"></a>Predikce úbytku transakcí
+# <a name="transaction-churn-prediction-preview"></a>Predikce úbytku transakcí (Preview)
 
 Predikce úbytku transakcí pomáhá předvídat, zda si zákazník v daném časovém intervalu již nebude kupovat vaše produkty nebo služby. Nové predikce odlivu zákazníků můžete vytvářet v části **Analytické nástroje** > **Predikce**. Volbou **Moje predikce** zobrazíte ostatní predikce, které jste vytvořili. 
 
@@ -24,7 +25,7 @@ Predikce úbytku transakcí pomáhá předvídat, zda si zákazník v daném ča
 U prostředí založených na firemních účtech můžeme predikovat úbytek transakcí pro účet a také kombinaci účtu a další úrovně informací, jako je kategorie produktu. Přidání dimenze může pomoci zjistit, jak je pravděpodobné, že účet „Contoso“ přestane kupovat kategorii produktů „kancelářské potřeby“. Kromě toho můžeme u obchodních účtů také použít umělou inteligenci ke generování seznamu potenciálních důvodů, proč pravděpodobně dojde k úbytku účtu pro kategorii informací sekundární úrovně.
 
 > [!TIP]
-> Vyzkoušejte výukový program pro přechod transakcí predikce pomocí ukázkových dat: [Ukázkový průvodce pro predikcí úbytku transakcí](sample-guide-predict-transactional-churn.md).
+> Vyzkoušejte výukový program pro přechod transakcí predikce pomocí ukázkových dat: [Ukázka predikce úbytku transakcí (preview)](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Předpoklady
 
@@ -100,12 +101,12 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
 
 1. V části Customer Insights přejděte na **Analytické nástroje** > **Předpovědi**.
 
-1. Vyberte dlaždici **Model úbytku zákazníků** a vyberte **Použít tento model**.
+1. Vyberte dlaždici **Model úbytku zákazníků (Preview)** a vyberte **Použít tento model**.
 
 1. V podokně **Model úbytku zákazníků** zvolte **Transakce** a vyberte **Začínáme**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Snímek obrazovky s vybranou možností transakce v podokně Model úbytku zákazníků.":::
- 
+
 ### <a name="name-model"></a>Pojmenování modelu
 
 1. Zadejte název modelu, abyste jej odlišili od ostatních modelů.
@@ -116,11 +117,11 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
 
 ### <a name="define-customer-churn"></a>Definujte ztracené zákazníky
 
-1. Nastavte **Okno predikce**. Například predikujte riziko odchodu vašich zákazníků v průběhu následujících 90 dnů pro slazení vaší marketingové úspěšnosti prodeje. Předvídání rizika odlivu zákazníků v delším nebo kratším časovém období může ztěžovat zohlednění faktorů v profilu rizika odlivu zákazníků, ale záleží na vašich konkrétních obchodních požadavcích.
+1. Nastavte interval ve dnech pro predikci úbytku zákazníků v poli **Identifikujte zákazníky, kteří mohou odejít za dalších:**. Například predikujte riziko odchodu vašich zákazníků v průběhu následujících 90 dnů pro slazení vaší marketingové úspěšnosti prodeje. Předvídání rizika odlivu zákazníků v delším nebo kratším časovém období může ztěžovat zohlednění faktorů v profilu rizika odlivu zákazníků, ale záleží na vašich konkrétních obchodních požadavcích.
    >[!TIP]
-   > Kdykoliv můžete volbou **Uložit koncept** uložit predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
+   > Kdykoli můžete použít volbu **Uložit a zavřít**, kterou uložíte predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
 
-1. Zadejte počet dní definující úbytek v poli **Definice úbytku**. Pokud si například zákazník za posledních 30 dní nic nekoupil, může být pro vaši firmu považován za ztraceného. 
+1. Zadejte počet dní pro definici odchodu zákazníků v poli **Zákazník se považuje za ztraceného, pokud neprovedl žádné nákupy za:**. Pokud si například zákazník za posledních 30 dní nic nekoupil, může být pro vaši firmu považován za ztraceného. 
 
 1. Pokračujte kliknutím na tlačítko **Další**.
 
@@ -128,16 +129,19 @@ U prostředí založených na firemních účtech můžeme predikovat úbytek tr
 
 1. Vyberte **Přidat data** a zvolte typ aktivity v postranním podokně, které obsahuje informace o požadované transakci nebo historii nákupů.
 
-1. V sekci **Vyberte aktivity** vyberte konkrétní aktivity z vybraného typu aktivit, na které se má výpočet zaměřit.
+1. V položce **Vybrat aktivity** vyberte konkrétní aktivity z vybrané aktivity, na které se chcete při výpočtu zaměřit.
 
-   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Boční podokno zobrazující výběr konkrétních aktivit pod sémantickým typem.":::
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Boční podokno zobrazující výběr konkrétních aktivit pod sémantickým typem.":::
 
-   Pokud jste aktivitu dosud nemapovali na sémantický typ, proveďte to výběrem možnosti **Upravit**. Otevře se řízené prostředí s mapováním sémantických aktivit. Namapujte svá data na odpovídající pole ve zvoleném typu aktivity.
+1. Pokud jste aktivitu dosud nemapovali na sémantický typ, proveďte to výběrem možnosti **Upravit**. Otevře se řízené prostředí s mapováním sémantických aktivit. Namapujte svá data na odpovídající pole ve zvoleném typu aktivity.
 
-1. Namapujte sémantické atributy na pole, která jsou nutná ke spuštění modelu. Pokud pole níže nejsou vyplněna, nakonfigurujte vztah z entity historie nákupu na entitu *Zákazník*. Vyberte **Uložit**.
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Typ aktivity nastavení stránky.":::
 
-1. V kroku **Přidejte požadovaná data** volbou **Další** pokračujte, pokud nechcete přidat další aktivity.
+1. Po namapování aktivity na odpovídající sémantický typ pokračujte výběrem možosti **Další**.
 
+1. Namapujte sémantické atributy na pole, která jsou nutná ke spuštění modelu. Pokud pole níže nejsou vyplněna, nakonfigurujte vztah z entity historie nákupu na entitu *Zákazník*.
+
+1. Vyberte **Další**.
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 

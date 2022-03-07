@@ -1,76 +1,56 @@
 ---
 title: Rozšíření pomocí vlastního importu SFTP
 description: Obecné informace o rozšíření pomocí vlastního importu SFTP.
-ms.date: 04/09/2021
-ms.reviewer: mhart
+ms.date: 11/18/2020
+ms.reviewer: kishorem
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+ms.topic: conceptual
+author: jdahl
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 59f7f05ca0825ba147e9e93f10fa3508ec3a16dd
+ms.sourcegitcommit: ff824bbbd31fd666ab0da682bf48ea31580d242c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229630"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "4568420"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Rozšíření profilů zákazníků o vlastní data (Preview)
 
-Vlastní import prostřednictvím protokolu SFTP (Secure File Transfer Protocol) umožňuje importovat data, která nemusí projít procesem sjednocení dat. Je to flexibilní, bezpečný a snadný způsob, jak přenést svá data. Vlastní import SFTP lze použít v kombinaci s [exportem SFTP](export-sftp.md), který vám umožní exportovat data profilu zákazníka, která jsou potřebná pro rozšíření. Data lze poté zpracovat a obohatit a vlastní import SFTP lze použít k přenesení obohacených dat zpět do schopnosti cílové skupiny Dynamics 365 Customer Insights.
+Vlastní import prostřednictvím protokolu SFTP (Secure File Transfer Protocol) umožňuje importovat data, která nemusí projít procesem sjednocení dat. Je to flexibilní, bezpečný a snadný způsob, jak přenést svá data. Vlastní import SFTP lze použít v kombinaci s [exportem SFTP](export-sftp.md), který vám umožní exportovat data profilu zákazníka, která jsou potřebná pro rozšíření. Data lze poté zpracovat, rozšířit a vlastní import SFTP lze použít k přenesení rozšířených dat zpět do přehledů cílové skupiny v Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Požadavky
 
 Chcete-li nakonfigurovat vlastní import SFTP, musíte splnit následující předpoklady:
 
-- Máte název souboru a umístění (cestu) souboru, který se má importovat do hostitele SFTP.
-- Tady je soubor *model.json*, který určuje [schéma Common Data Model](/common-data-model/) pro data k importu. Tento soubor musí být ve stejném adresáři jako soubor, který chcete importovat.
-- Správce již nakonfiguroval připojení SFTP *nebo* máte oprávnění [správce](permissions.md#administrator). Budete potřebovat přihlašovací údaje uživatele, adresu URL a číslo portu pro umístění SFTP, ze kterého chcete importovat data.
+- Máte přihlašovací údaje uživatele (uživatelské jméno a heslo) pro umístění SFTP, odkud budou importována data.
+- Máte adresu URL a číslo portu (obvykle 22) pro hostitele STFP.
+- Máte název souboru a umístění souboru, který se má importovat na hostitele SFTP.
+- Existuje soubor *model.json*, který určuje schéma pro data, která mají být importována. Tento soubor musí být ve stejném adresáři jako soubor, který chcete importovat.
+- Máte oprávnění pro [správu](permissions.md#administrator).
 
-
-## <a name="configure-the-import"></a>Konfigurace importu
+## <a name="configuration"></a>Konfigurace
 
 1. Přejděte na **Data** > **Obohacení** a vyberte kartu **Objevit**.
 
-1. V **dlaždici Vlastní import SFTP** vyberte **Rozšířit moje údaje** a pak vyberte **Začínáme**.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Dlaždice vlastního importu SFTP":::
-
-1. V rozevíracím seznamu vyberte [připojení](connections.md). Pokud není k dispozici propojení , kontaktujte správce. Pokud jste správce, můžete vytvořit připojení výběrem **Přidat připojení** a výběrem **Vlastní import SFTP** z rozevíracího seznamu.
-
-1. Vybrané připojení potvrďte výběrem **Propojit s Custom Import**.
-
-1.  Vyberte **Další** a zadejte **Cesta** a **Název souboru** datového souboru, který chcete importovat.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot při zadávání datového umístění.":::
-
-1. Vyberte **Další** a zvolte datovou sadu zákazníka. Mohou to být buď všechny zákaznické profily, nebo segment.
-
-1. Vyberte **Další** a zadejte název rozšíření a název výstupní entity. 
-
-1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfigurace připojení pro vlastní import SFTP 
-
-Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci rozšíření vyberte **Přidat připojení** *nebo* přejděte na **Správce** > **Připojení** a v dlaždici Vlastní import vyberte **Nastavit**.
-
-1. Do pole **Zobrazované jméno** zadejte jméno.
-
-1. Zadejte platné uživatelské jméno, heslo a adresu URL hostitele pro server SFTP, na kterém se nacházejí importovaná data.
-
-1. Projděte si a poskytněte svůj souhlas s **Ochranou osobních údajů a dodržování předpisů** výběrem zaškrtávacího políčka **Souhlasím**.
-
-1. Vyberte **Ověřit** k ověření konfigurace.
-
-1. Po dokončení ověření lze připojení uložit výběrem **Uložit**.
+1. V **dlaždici vlastního importu SFTP** vyberte **Rozšířit moje data**.
 
    > [!div class="mx-imgBorder"]
-   > ![Stránka konfigurace připojení Experian.](media/enrichment-SFTP-connection.png "Stránka konfigurace připojení Experian")
+   > ![Dlaždice vlastního importu SFTP](media/SFTP_Custom_Import_tile.png "Dlaždice vlastního importu SFTP")
 
+1. Vyberte **Začít** a zadejte přihlašovací údaje a adresu serveru SFTP. Například sftp://mysftpserver.com:22.
+
+1. Zadejte název souboru, který obsahuje data, a cestu k souboru na serveru SFTP, pokud není v kořenové složce.
+
+1. Potvrďte všechny vstupy volbou **Připojit k vlastnímu importu**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Informační rámeček s konfigurací vlastního importu SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Informační rámeček s konfigurací vlastního importu SFTP")
 
 ## <a name="defining-field-mappings"></a>Definování mapování polí 
 
-Adresář obsahující soubor, který se má importovat na server SFTP, musí také obsahovat soubor *model.json*. Tento soubor definuje schéma, které se má použít pro import dat. Schéma musí používat [Common Data Model](/common-data-model/) ke specifikaci mapování pole. Jednoduchý příklad souboru model.json vypadá takto:
+Adresář obsahující soubor, který se má importovat na server SFTP, musí také obsahovat soubor *model.json*. Tento soubor definuje schéma, které se má použít pro import dat. Schéma musí používat [Common Data Model](https://docs.microsoft.com/common-data-model/) pro zadání mapování polí. Jednoduchý příklad souboru model.json vypadá takto:
 
 ```
 {
@@ -124,6 +104,6 @@ Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobném
 
 ## <a name="next-steps"></a>Další kroky
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Stavte na svých obohacených zákaznických údajích. Vytvořte [segmenty](segments.md), [míry](measures.md) a [exportujte data](export-destinations.md) pro zajištění prostředí na míru zákazníkům.
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

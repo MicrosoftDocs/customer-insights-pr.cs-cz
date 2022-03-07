@@ -1,19 +1,20 @@
 ---
 title: Export údajů ze služby Customer Insights do Klaviyo
 description: Naučte se, jak nakonfigurovat propojení a exportovat ho do Klaviyo.
-ms.date: 10/08/2021
+ms.date: 08/13/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 027aee70d9fdab0a92d7fd99209a6ac2ca3cc361
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225444"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7385780"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Export seznamů segmentů do Klaviyo (Preview)
 
@@ -27,10 +28,10 @@ Exportujte segmenty sjednocených profilů zákazníků do Klaviyo a použijte j
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Do Klaviyo můžete najednou exportovat až 100 000 zákaznických profilů.
+- Na export do Klaviyo můžete exportovat až 100 000 profilů.
 - Export do Klaviyo je omezen na segmenty.
-- Export až 1 milionu zákaznických profilů do Klaviyo může trvat až 20 minut. 
-- Počet zákaznických profilů, které můžete exportovat do Klaviyo, závisí na vaší smlouvě s Klaviyo a je jí omezen.
+- Export až 1 milion profilů do služby Klaviyo může trvat až 20 minut. 
+- Počet profilů, které můžete exportovat do Klaviyo, závisí na vaší smlouvě se společností Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Nastavení připojení ke Klaviyo
 
@@ -66,7 +67,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte [**ID seznamu Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je potřeba pro export segmentů do Klaviyo.
+3. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je potřeba pro export segmentů do Klaviyo.
 
 1. Zvolte **Uložit**.
 

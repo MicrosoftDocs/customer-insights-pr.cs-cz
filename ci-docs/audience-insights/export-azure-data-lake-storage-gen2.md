@@ -1,31 +1,22 @@
 ---
 title: Export dat Customer Insights do Azure Data Lake Storage Gen2
 description: Naučte se konfigurovat připojení k Azure Data Lake Storage Gen2.
-ms.date: 10/06/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: cc0b3aac11a33facc366e9c57071d1fb8be4ecc4
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231666"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760043"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Export seznamu segmentů a dalších dat do Azure Data Lake Storage Gen2 (náhled)
-
-Uložte si data Customer Insights v účtu Data Lake Storage Gen2, nebo ho použijte k přenosu dat do jiných aplikací.
-
-## <a name="known-limitations"></a>Známá omezení
-
-1. Pro Azure Data Lake Storage Gen2 si můžete vybrat mezi [úrovní standardního a prémiového výkonu](/azure/storage/blobs/create-data-lake-storage-account), když vytváříte účet úložiště pro vaše datové jezero. Pokud zvolíte úroveň výkonu Premium, vyberte jako typ účtu objekty blob prémiového bloku. 
-
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nastavení připojení pro Azure Data Lake Storage Gen2 
-
+# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Nastavení propojení řešení s aplikacemi Azure Data Lake Storage Gen2 (preview)
 
 1. Přejděte na **Správce** > **Propojení**.
 
