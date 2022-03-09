@@ -1,22 +1,21 @@
 ---
-title: Predikce ukončení předplatného
+title: Predikce úbytku předplatitelů (obsahuje video)
 description: Predikuje, zda hrozí odchod zákazníka, když přestane používat předplatné pro produkty nebo služby vaší společnosti.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799720"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354685"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Predikce odchodu předplatitelů (Preview)
+# <a name="subscription-churn-prediction"></a>Predikce ukončení předplatného
 
 Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazníka, když přestane používat předplatné pro produkty nebo služby vaší společnosti. Novou predikci odchodu předplatitelů můžete vytvořit na stránce **Analytické nástroje** > **Predikce**. Volbou **Moje predikce** zobrazíte ostatní predikce, které jste vytvořili.
 
@@ -63,7 +62,7 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
 ## <a name="create-a-subscription-churn-prediction"></a>Vytvoření predikce odchodu předplatitelů
 
 1. V přehledech cílové skupiny přejděte na **Analytické nástroje** > **Predikce**.
-1. Vyberte dlaždici **Model odchodu předplatitelů (Preview)** a vyberte **Použít tento model**.
+1. Vyberte dlaždici **Model úbytku předplatného** a vyberte **Použít tento model**.
    > [!div class="mx-imgBorder"]
    > ![Dlaždice modelu odchodu předplatitelů s tlačítkem Použít tento model.](media/subscription-churn-usethismodel.PNG "Dlaždice modelu odchodu předplatitelů s tlačítkem Použít tento model")
 
@@ -77,7 +76,7 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
 1. Zadejte počet dní pro **Dny od ukončení předplatného**, po jejichž uplynutí vaše firma považuje zákazníka za odchozího. Toto období je obvykle přizpůsobeno obchodním činnostem, jako jsou nabídky nebo jiné marketingové činnosti, které se snaží zabránit ztrátě zákazníka.
 1. Zadejte hodnotu pro **Počet dní predikce odlivu zákazníků**, čímž nastavíte okno pro predikci odlivu zákazníků. Například predikujte rizika odlivu zákazníků během následujících 90 dnů, abyste mohli přizpůsobit svůj marketing pro jejich udržení. Předvídání rizika odchodu zákazníků na delší nebo kratší období může ztížit řešení faktorů ve vašem profilu rizika odchodu zákazníků, v závislosti na vašich konkrétních obchodních požadavcích. Pokračujte kliknutím na tlačítko **Další**.
    >[!TIP]
-   > Kdykoli můžete použít volbu **Uložit a zavřít**, kterou uložíte predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
+   > Kdykoliv můžete volbou **Uložit koncept** uložit predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
 
 ### <a name="add-required-data"></a>Přidejte požadovaná data
 

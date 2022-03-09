@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645302"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229069"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Vytvořte nový pracovní prostor a přidejte členy
 
@@ -26,11 +25,11 @@ Když vytváříte pracovní prostor, vyberete typ dat, na která se chcete zam�
 
 ## <a name="create-a-new-workspace"></a>Vytvořit nový pracovní prostor
 
-Proces vytváření pracovního prostoru zahrnuje nastavení *prostředí* k uspořádání pracovního prostoru. Prostředí je prostor, který může obsahovat jeden nebo více pracovních prostorů. Prostředí můžete použít ke správě svých pracovních prostorů a připojení ke možnosti přehledů o cílové skupině Customer Insights.
+Proces vytváření pracovního prostoru zahrnuje nastavení *prostředí* k uspořádání pracovního prostoru. Prostředí je prostor, který může obsahovat jeden nebo více pracovních prostorů. Prostředí můžete použít ke správě svých pracovních prostorů a připojení k přehledům cílových skupin.
 
-1. Vyberte **Nový** z přepínače pracovního prostoru.
+1. Vyberte **+Nový** z přepínače pracovního prostoru.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Stránka Customer Insights s bublinovým popiskem v navigačním podokně a popisem.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Stránka Customer Insights s popisem v navigačním podokně a popisem.":::
 
 1. V podokně **Pracovní prostor** zadejte **Název pracovního prostoru**.
 

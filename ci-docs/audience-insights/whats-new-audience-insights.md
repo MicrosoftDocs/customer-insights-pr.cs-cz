@@ -2,19 +2,18 @@
 title: Nové a připravované funkce
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
 ms.date: 03/02/2022
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088277"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232650"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
 

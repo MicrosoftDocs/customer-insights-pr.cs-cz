@@ -4,17 +4,16 @@ description: Pokročilé scénáře, které je třeba vzít v úvahu při vybave
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 11/12/2020
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a083d8215f295af0884257a016b62b8c7e4ab2c7
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036320"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227190"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>Pokročilá webová instrumentace SDK
 
@@ -33,20 +32,20 @@ Objekt `IUser` obsahuje následující vlastnosti řetězce:
 - **authType**: Typ ověřování používaný k získání ověřeného ID uživatele.
 - **name**: Jméno uživatele.
 - **email**: E-mailová adresa uživatele.
-    
-Následující příklad ukazuje fragment kódu odesílajícího informace o uživateli. Kde uvidíte Funkce označené *, nahraďte ji implementací volání těchto hodnot:  
+
+Následující příklad ukazuje fragment kódu odesílajícího informace o uživateli. Kde vidíte funkce, kterým předchází symbol *, nahraďte funkci vlastní implementací:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     user:{
@@ -58,25 +57,25 @@ window, document
 […]
 ```
 
-Můžete také zadat informace o uživateli voláním API `setUser(user: IUser)` na SDK. Telemetrie odeslána po volání `setUser API` bude obsahovat informace o uživateli.
+Informace o uživateli můžete také zadat voláním rozhraní API `setUser(user: IUser)`. Telemetrie odeslána po volání rozhraní API `setUser` bude obsahovat informace o uživateli.
 
 ## <a name="adding-custom-properties-for-each-event"></a>Přidání vlastních vlastností pro každou událost
 
-Sada SDK umožňuje zadat vlastní vlastnosti, které lze odeslat s každou událostí. Můžete zadat vlastní vlastnosti jako objekt obsahující páry klíč-hodnota (hodnota může být typu `string | number | boolean`). Objekt lze přidat do vlastnosti s názvem `props`, podobně jako `src`, `name` a `cfg` v konfiguraci fragmentu kódu. 
+Sada SDK umožňuje zadat vlastní vlastnosti, které lze odeslat s každou událostí. Můžete zadat vlastní vlastnosti jako objekt obsahující páry klíč-hodnota (hodnota může být typu `string | number | boolean`). Objekt můžete přidat do vlastnosti s názvem `props`, podobně jako `src`, `name` a `cfg` v konfiguraci fragmentu kódu.
 
 Následující příklad ukazuje fragment kódu odesílajícího vlastní vlastnosti:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     props:{
@@ -87,7 +86,7 @@ window, document
 […]
 ```
 
-Můžete také zadat vlastní vlastnosti jednotlivě voláním API `setProperty(name: string, value: string | number | boolean)` na SDK.
+Vlastní vlastnosti můžete také zadat jednotlivě voláním rozhraní API `setProperty(name: string, value: string | number | boolean)`.
 
 ## <a name="sending-custom-events"></a>Odesílání vlastních událostí
 

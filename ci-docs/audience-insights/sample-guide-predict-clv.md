@@ -3,18 +3,17 @@ title: Predikce celoživotní hodnoty zákazníka – ukázkový průvodce
 description: Pomocí tohoto ukázkového průvodce můžete vyzkoušet model predikce celoživotní hodnoty zákazníka.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129937"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354823"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Predikce celoživotní hodnoty zákazníka (CLV) – ukázkový průvodce
 
@@ -22,7 +21,7 @@ Tento průvodce vás provede kompletním příkladem predikce celoživotní hodn
 
 ## <a name="scenario"></a>Scénář
 
-Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary. Své výrobky podávají prostřednictvím webu Contoso Coffee. Společnost chce znát hodnotu (výnos), kterou mohou její zákazníci generovat v příštích 12 měsících. Znalost očekávané hodnoty jejich zákazníků v příštích 12 měsících jim pomůže nasměrovat jejich marketingové úsilí na zákazníky s vysokou důležitostí.
+Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary. Produkty prodávají prostřednictvím svých webových stránek Contoso Coffee. Společnost chce znát hodnotu (výnos), kterou mohou její zákazníci generovat v příštích 12 měsících. Znalost očekávané hodnoty jejich zákazníků v příštích 12 měsících jim pomůže nasměrovat jejich marketingové úsilí na zákazníky s vysokou důležitostí.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -31,7 +30,7 @@ Contoso je společnost, která vyrábí vysoce kvalitní kávu a kávovary. Své
 
 ## <a name="task-1---ingest-data"></a>Úkol 1 – Ingestace dat
 
-Přečtěte si články [o příjmu dat](data-sources.md) a [importu zdrojů dat pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně.
+Prohlédněte si články [o přijímání dat](data-sources.md) a [importu datových zdrojů pomocí konektorů Power Query](connect-power-query.md). Následující informace předpokládají, že jste se seznámili s ingestací dat obecně.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingestace zákaznických dat z platformy eCommerce
 
@@ -123,7 +122,7 @@ Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jedn
 
 1. Přejděte na kartu **Párování** a vyberte **Nastavit pořadí**.
 
-1. V rozevíracím seznamu **Primární** vyberte **eCommerceContacts: eCommerce** jako primární zdroj a zahrňte všechny záznamy.
+1. V **primárním** rozevíracím seznamu zvolte jako primární zdroj **eCommerceContacts : eCommerce** a zahrňte všechny záznamy.
 
 1. V rozevíracím seznamu **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všechny záznamy.
 
@@ -133,16 +132,16 @@ Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jedn
 
 1. Přidejte svou první podmínku pomocí FullName.
 
-   - Pro eCommerceContacts vyberte **FullName** v rozbalovací nabídce.
-   - Pro loyCustomers vyberte **FullName** v rozbalovací nabídce.
-   - Vyberte rozevírací seznam **Normalizovat** a vyberte **Typ (telefon, jméno, adresa, ...)**.
+   - Pro eCommerceContacts vyberte **Celé jméno** v rozevírací nabídce.
+   - Pro loyCustomers vyberte **Celé jméno** v rozevírací nabídce.
+   - Vyberte rozevírací seznam **Normalizovat** a zvolte **Typ (Telefon, Jméno, Adresa, ...)**.
    - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
 
 1. Zadejte jméno **Celé jméno, e-mail** pro nové pravidlo.
 
    - Přidejte druhou podmínku pro e-mailovou adresu výběrem **Přidat podmínku**
-   - Pro entitu eCommerceContacts zvolte **EMail** v rozevíracím seznamu.
-   - Pro entitu loyCustomers zvolte **EMail** v rozevíracím seznamu.
+   - Pro entitu eCommerceContacts zvolte **EMail** v rozevírací nabídce.
+   - Pro entitu loyCustomers zvolte **EMail** v rozevírací nabídce.
    - Ponechejte pole Noramlizovat prázdné.
    - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
 
@@ -164,7 +163,7 @@ Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jedn
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Úkol 3 - Konfigurace predikce celoživotní hodnoty zákazníka
 
-Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci celoživotní hodnoty zákazníka. Podrobné kroky najdete v části [Predikce celoživotní hodnoty zákazníka (preview)](predict-customer-lifetime-value.md).
+Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci celoživotní hodnoty zákazníka. Podrobné kroky viz [Predikce hodnoty životního cyklu zákazníka](predict-customer-lifetime-value.md).
 
 1. Přejděte do nabídky **Analytické nástroje**  > **Predikce** a vyberte **Model celoživotní hodnoty zákazníka**.
 

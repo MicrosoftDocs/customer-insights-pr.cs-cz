@@ -1,20 +1,19 @@
 ---
 title: Export údajů ze služby Customer Insights do služby Omnisend
 description: Naučte se konfigurovat připojení a export do služby Omnisend.
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 15fc6fc2426ad3958268e5bcc200b8eb2b0fd13a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124469"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226754"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Export segmentů do Omnisend (preview)
 
@@ -28,9 +27,9 @@ Exportujte segmenty sjednocených profilů zákazníků do služby Omnisend a po
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Do Omnisend můžete exportovat až 1 milion profilů na export a jeho dokončení může trvat až 4 hodiny.
+- Na jeden export do Omnisend můžete exportovat až 1 milion zákaznických profilů a jeho dokončení může trvat až 4 hodny.
 - Export do Omnisend je omezen na segmenty.
-- Počet profilů, které můžete exportovat do Omnisend, závisí na vaší smlouvě se společností Omnisend.
+- Počet zákaznických profilů, které můžete exportovat do Omnisend, závisí na vaší smlouvě s Omnisend.
 
 ## <a name="set-up-connection-to-omnisend"></a>Nastavení připojení ke službě Omnisend
 
@@ -62,7 +61,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. V poli **Připojení pro export** vyberte připojení v části Omnisend. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
 
-1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Je nutné exportovat segmenty do služby Omnisend. Volitelně můžete exportovat křestní jméno, příjmení, adresu, zemi/region, stát, město a PSČ, abyste vytvořili více přizpůsobené e-maily. Volbou **Přidat atribut** namapujte tato pole.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je nutné exportovat segmenty do služby Omnisend. Volitelně můžete exportovat křestní jméno, příjmení, adresu, zemi/region, stát, město a PSČ, abyste vytvořili více přizpůsobené e-maily. Volbou **Přidat atribut** namapujte tato pole.
 
 1. Zvolte **Uložit**.
 

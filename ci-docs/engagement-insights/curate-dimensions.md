@@ -2,18 +2,17 @@
 title: Použití demografických dimenzí k rozdělení údajů o chování (kurátorované dimenze)
 description: Pomocí kurátorovaných dimenzí sjednoceného profilu povolíte vlastnosti profilu zákazníka přehledů cílových skupin.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466340"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232959"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Použití demografických dimenzí k rozdělení údajů o chování
 

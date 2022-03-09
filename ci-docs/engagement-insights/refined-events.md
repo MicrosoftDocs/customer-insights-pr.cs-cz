@@ -1,72 +1,96 @@
 ---
-title: Vytvořit a upravit upřesněné události
-description: Jak vytvořit a upravit upřesněné události.
+title: Vytváření a úpravy událostí
+description: Jak vytvořit a upravit události
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 04/30/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 0344bac5f4d43df853309f43c94d95f962937f77c936ed7305c5de4a08835f04
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: dbafa2231daa82c34ee2ec8292111575e95af675
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034766"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228195"
 ---
-# <a name="create-and-modify-refined-events"></a>Vytvořit a upravit upřesněné události
+# <a name="create-and-modify-events"></a>Vytváření a úpravy událostí
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
-
 
 Událost jsou data, která představují chování uživatelů, například aktivitu na webu.
 
 - *Základní* událost zaznamenává, kdy uživatel zobrazí stránku (aktivita zobrazení) nebo interaguje s obsahem (aktivita akce).
 - *Upřesněná* událost je virtuální pohled na základní událost. Upřesněné události definujete odebráním a přidáním vlastností nebo filtrováním událostí na základě hodnot vlastností.
 
+## <a name="prerequisites"></a>Předpoklady
+
+Chcete-li získat události, je nutné nejprve připojit data webu k přehledům zapojení pomocí jednoduchého fragmentu kódu. Další informace viz [Instalace webové sady SDK na web](instrument-website.md).
+
+ :::image type="content" source="media/new-events-connect-data.png" alt-text="Nejprve připojte data.":::
+
+## <a name="create-refined-events"></a>Vytvořit upřesněné události
+
 Pomocí rafinovaných událostí můžete snížit rozsah základní události pro [export](export-events.md) nebo odstranění vlastností, které není nutné vystavovat.
 
-## <a name="create-refined-events"></a>Vytváření upřesněných událostí
+> [!NOTE]
+> Jakmile na svůj web přidáte webovou sadu SDK, můžete si prohlížet základní události a vytvářet upřesněné události. 
 
-Existují tři způsoby, jak vytvořit upřesněnou událost ze základní události. 
+Chcete -li zobrazit základní události:
 
-1. Přejděte na **Data**> **Události** a vyberte jednu z následujících možností:
-    - Vyberte **Nové události** a poté vyberte **Vytvořit upřesněné události**.
-    - Vyberte základní událost, otevřete podrobné zobrazení a vyberte **Vytvořit upřesněné události** z horní nabídky.
-    - Vyberte **Více [...]** k otevření místní nabídky pro základní událost. Poté vyberte **Vytvořit upřesněné události**.
-    
-    :::image type="content" source="media/create-refined-events-options.png" alt-text="Možnosti pro vytvoření upřesněných událostí.":::
+1. V levém navigačním podokně přejděte na **Data**.
 
-1. V dialogovém okně **Vytvořit upřesněné události** zadejte následující informace:
+1. Vyberte **Události** k zobrazení seznamu všech událostí v pracovním prostoru.
 
-- Vyberte událost z rozevírací nabídky **Základní události**, pokud vytváříte novou událost.
-- Do pole **Zobrazovaný název upřesněných událostí** zadejte název.
-- Volitelně aktualizujte navrhovaný **Skutečný název** bez použití mezer.
+    :::image type="content" source="media/data-events.png" alt-text="Zobrazte události.":::
 
-3. Vyberte **Vytvořit** a použijte své nastavení.
+Vytvoření upřesněné události ze základní události: 
 
-1. V podrobném zobrazení vaší upřesněné události vyberte **Přidat a odeberte vlastnosti** a otevřete podokno **Upravit vlastnosti**. 
+1. Jděte na **Data** > **Události** a vyberte **+ Nové události** v horní části obrazovky.
 
-1. Pomocí zaškrtávacích políček vyberte vlastnosti, které chcete zobrazit, a ty, které chcete skrýt. 
-   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Úprava vlastností pro upřesněné události.":::
+1. V dialogu **Nové akce** vyberte **Vytvořit propracované události** a poté vyberte **Další**.
+   
+     :::image type="content" source="media/new-events-wizard.png" alt-text="Průvodce novými událostmi":::
+     
+1. V dialogu **Nové akce** zadejte následující informace:
 
-1. Vyberte **Potvrdit** k použití vašeho výběru.
+   - Vyberte událost z rozevíracího seznamu **Základní události**.
+   - Do pole **Zobrazovaný název upřesněných událostí** zadejte název.
+   - Volitelně aktualizujte navrhovaný **Skutečný název** bez použití mezer.
 
-1. Chcete-li uložit konfiguraci, vyberte tlačítko **Uložit**.
+1. Vyberte **Vytvořit** a použijte své nastavení.
 
-## <a name="edit-refined-events"></a>Úprava upřesněných událostí
-
-Můžete změnit název a vlastnosti upřesněné události.
+Upřesněná událost se nyní zobrazí v seznamu **Události**.
 
 ### <a name="edit-event-name"></a>Úprava názvu události
 
-1. Přejděte na **Data** > **Události**. 
-1. Vyberte **Více [...]** pro událost a vyberte **Upravit název**.
-1. Aktualizujte název události a vyberte **Přejmenovat**.
+Můžete změnit název a vlastnosti základní nebo upřesněné události.
 
-### <a name="edit-selected-properties"></a>Úprava vybraných vlastností
+1. Přejděte na **Data** > **Události**. 
+
+1. Vyberte **Více [...]** pro událost a vyberte **Upravit název**.
+    
+     :::image type="content" source="media/create-refined-events-options.png" alt-text="Možnosti pro vytvoření upřesněných událostí.":::
+
+3. Aktualizujte název události a vyberte **Přejmenovat**.
+
+### <a name="view-the-details-of-a-refined-event"></a>Zobrazení podrobností o upřesněné události:
+
+1. V seznamu **Událost** vyberte svou základní nebo upřesněnou událost. 
+
+1. Vyberte **Přidat a odebrat vlastnosti** v horní části obrazovky k otevření podokna **Upravit vlastnosti**. 
+
+     :::image type="content" source="media/add-remove-properties.png" alt-text="Přidejte a odeberte vlastnosti.":::
+
+1. Pomocí zaškrtávacích políček vyberte vlastnosti, které chcete zobrazit, a ty, které chcete skrýt. 
+
+   :::image type="content" source="media/edit-properties-refined-events.png" alt-text="Úprava vlastností pro upřesněné události.":::
+
+1. Vyberte **Potvrdit** pro použití výběru a pak vyberte **Uložit**.
+
+
+### <a name="edit-selected-properties-for-a-refined-event"></a>Úprava vybraných vlastností pro upřesněnou událost
 
 1. Přejděte na **Data** > **Události** a výběrem upřesněných událostí otevřete podrobné zobrazení.
 1. Vyberte **Přidat a odebrat vlastnosti**. 

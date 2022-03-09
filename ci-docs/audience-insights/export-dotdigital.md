@@ -1,38 +1,37 @@
 ---
 title: Export dat Customer Insights do služby DotDigital
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do DotDigital.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 235bcdfa4a7c4c1a382778bd4f66c1a9f5b7beb1
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: f9302e17c07238d837dcafb82baecb5aedda17de
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759951"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231610"
 ---
-# <a name="export-segment-lists-to-dotdigital-preview"></a>Export seznamů segmentů do služby DotDigital (preview)
+# <a name="export-segments-to-dotdigital-preview"></a>Export segmentů do služby DotDigital (preview)
 
 Exportujte segmenty sjednocených profilů zákazníků do adresářů DotDigital a použijte je pro kampaně, e-mailový marketing a vytváření segmentů zákazníků s pomocí služby DotDigital. 
 
 ## <a name="prerequisites-for-a-connection"></a>Předpoklady pro připojení
 
--   Máte [účet DotDigital](https://dotdigital.com/) a odpovídající přihlašovací údaje správce.
+-   Máte [účet DotDigital](https://dotdigital.com/) a vytvořili jste [uživatele API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). K vytvoření připojení budete muset použít přihlašovací údaje uživatele API
 -   Služba DotDigital obsahuje adresáře a odpovídající ID. ID najdete v adrese URL, když vyberete a otevřete adresář. Další informace viz [Adresáře DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   V přehledech cílové skupiny máte [konfigurované segmenty](segments.md).
 -   Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Až 1 milion profilů na jeden export do služby DotDigital.
+- Až 1 milion zákaznických profilů na export do DotDigital.
 - Export do služby DotDigital je omezen na segmenty.
-- Export segmentů s celkem 1 milionem profilů může z důvodu omezení na straně poskytovatele trvat až 3 hodiny. 
-- Počet profilů, které můžete exportovat do služby DotDigital, závisí a je omezen na vaší smlouvě se společností DotDigital.
+- Export segmentů s celkem 1 milionem zákaznických profilů může kvůli omezením na straně poskytovatele trvat až 3 hodiny. 
+- Počet zákaznických profilů, které můžete exportovat do DotDigital, závisí na vaší smlouvě s DotDigital a je jí omezen.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Nastavení propojení s aplikací DotDigital
 
@@ -44,7 +43,7 @@ Exportujte segmenty sjednocených profilů zákazníků do adresářů DotDigita
 
 1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Zadejte své **uživatelské jméno a heslo pro DotDigital**.
+1. Zadejte své **uživatelské jméno a heslo pro DotDigital API**. 
 
 1. Zadejte svoje **[ID adresáře DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -67,7 +66,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 1. V poli **propojení pro export** vyberte propojení v části DotDigital. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
 
 
-1. V sekci **Párování dat** poli **E-mail** vyberte pole ve sjednoceném profilu zákazníka, které představuje e-mailovou adresu zákazníka. Stejné kroky opakujte pro další volitelná pole, například **Křestní jméno**, **Příjmení**, **Celé jméno**, **Pohlaví** a **PSČ**.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Stejné kroky opakujte pro další volitelná pole, například **Křestní jméno**, **Příjmení**, **Celé jméno**, **Pohlaví** a **PSČ**.
 
 1. Vyberte segmenty, které chcete exportovat. Do služby DotDigital můžete exportovat celkem až 1 milion zákaznických profilů.
 

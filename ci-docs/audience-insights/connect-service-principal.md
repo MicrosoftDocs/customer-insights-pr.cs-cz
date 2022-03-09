@@ -1,62 +1,73 @@
 ---
-title: Připojení k účtu Azure Data Lake Storage Gen2 s instančním objektem
-description: Použití instančního objektu Azure přehledů cílové skupiny pro připojení k vlastnímu datovému jezeru při jeho připojení k přehledům cílové skupiny.
-ms.date: 02/10/2021
-ms.service: customer-insights
+title: Připojení k účtu Azure Data Lake Storage pomocí instančního objektu
+description: Pro připojení k vašemu vlastnímu datovému jezeru použijte instanční objekt Azure.
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+searchScope:
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: d593880b06bd21e96826039a67382b75a4296a87
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692105"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354180"
 ---
-# <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Připojení k účtu Azure Data Lake Storage Gen2 s instančním objektem Azure pro přehledy cílové skupiny
+# <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Připojení k účtu Azure Data Lake Storage pomocí instančního objektu Azure
 
-Automatizované nástroje, které používají služby Azure, by vždy měly mít omezená oprávnění. Místo toho, aby se aplikace přihlašovaly jako plně privilegovaný uživatel, Azure nabízí instanční objekty. Čtěte dále a dozvíte se, jak propojit přehledy cílové skupiny s účtem Azure Data Lake Storage Gen2 pomocí instančního objektu Azure namísto klíčů účtu úložiště. 
+Tento článek popisuje, jak propojit Dynamics 365 Customer Insights s účtem Azure Data Lake Storage pomocí instančního objektu Azure namísto klíčů účtu úložiště. 
 
-Instanční objekt můžete použít pro bezpečné [přidání nebo úpravu složky Common Data Model jako zdroje dat](connect-common-data-model.md) nebo [vytvoření nového nebo aktualizaci stávajícího prostředí](get-started-paid.md).
+Automatizované nástroje, které používají služby Azure, by vždy měly mít omezená oprávnění. Místo toho, aby se aplikace přihlašovaly jako plně privilegovaný uživatel, Azure nabízí instanční objekty. Pomocí instančních objektů můžete bezpečně [přidat nebo upravit složku Common Data Model jako zdroj dat](connect-common-data-model.md) nebo [vytvořit nebo aktualizovat prostředí](create-environment.md).
 
 > [!IMPORTANT]
-> - Účet úložiště Azure Data Lake Gen2, který chce použít instanční objekt, musí mít [povolenu funkci Hierarchický prostor názvů (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
-> - K vytvoření instančního objektu potřebujete oprávnění správce pro vaše předplatné Azure.
+> - Účet Data Lake Storage, který bude používat instanční objekt, musí být Gen2 a musí mít [povolený hierarchický obor názvů](/azure/storage/blobs/data-lake-storage-namespace). Účty úložiště Azure Data Lake Gen1 nejsou podporovány.
+> - K vytvoření instančního objektu potřebujete oprávnění správce pro své předplatné Azure.
 
-## <a name="create-azure-service-principal-for-audience-insights"></a>Vytvoření instančního objektu Azure pro přehledy cílové skupiny
+## <a name="create-an-azure-service-principal-for-customer-insights"></a>Vytvoření instančního objektu Azure pro Customer Insights
 
-Před vytvořením nového instančního objektu pro přehledy cílové skupiny zkontrolujte, zda ve vaší organizaci již existuje.
+Před vytvořením nového instančního objektu pro Customer Insights zkontrolujte, zda již ve vaší organizaci existuje.
 
 ### <a name="look-for-an-existing-service-principal"></a>Vyhledání existujícího instančního objektu
 
 1. Přejděte na [portál pro správu Azure](https://portal.azure.com) a přihlaste se do své organizace.
 
-2. Vyberte **Azure Active Directory** ze služeb Azure.
+2. Ze **služeb Azure** vyberte **Azure Active Directory**.
 
 3. Pod **Spravovat** vyberte **Podnikové aplikace**.
 
-4. Vyhledejte ID aplikace první strany pro přehledy cílové skupiny `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nebo název `Dynamics 365 AI for Customer Insights`.
+4. Vyhledejte ID aplikace Microsoft:
+   - Přehledy cílových skupin: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` s názvem `Dynamics 365 AI for Customer Insights`
+   - Přehledy zapojení: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` s názvem `Dynamics 365 AI for Customer Insights engagement insights`
 
-5. Pokud najdete odpovídající záznam, znamená to, že instanční objekt pro přehledy cílové skupiny existuje. Nemusíte jej znovu vytvářet.
+5. Pokud najdete odpovídající záznam, znamená to, že instanční objekt již existuje. 
    
-   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Screenshot zobrazující existující instanční objekt.":::
+   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Snímek obrazovky zobrazující existující instanční objekt.":::
    
 6. Pokud nejsou vráceny žádné výsledky, vytvořte nový instanční objekt.
 
+>[!NOTE]
+>Chcete-li využít plný výkon Dynamics 365 Customer Insights, doporučujeme přidat obě aplikace do instančního objektu.
+
 ### <a name="create-a-new-service-principal"></a>Vytvoření nového instančního objektu
 
-1. Nainstalujte si nejnovější verzi **Azure Active Directory PowerShell for Graph**. Další informace viz [Instalace Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
-   - Na počítači vyberte klávesu Windows na klávesnici a vyhledejte **Windows PowerShell** a **Spustit jako správce**.
-   
-   - V okně PowerShell, které se otevře, zadejte `Install-Module AzureAD`.
+1. Nainstalujte nejnovější verzi Azure Active Directory PowerShell pro Graph. Další informace najdete v části [Instalace Azure Active Directory PowerShell pro Graph](/powershell/azure/active-directory/install-adv2).
 
-2. Vytvořte instanční objekt pro přehledy cílové skupiny pomocí modulu Azure AD PowerShell.
-   - V okně PowerShell, zadejte `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Místo ID vašeho klienta zadejte ID klienta, ve kterém chcete vytvořit instanční objekt. Parametr názvu prostředí `AzureEnvironmentName` je volitelný.
+   1. Na počítači vyberte klávesu Windows na klávesnicivy, hledejte **Windows PowerShell** a vyberte **Spustit jako správce**.
+   
+   1. V okně PowerShell, které se otevře, zadejte `Install-Module AzureAD`.
+
+2. Vytvořte instanční objekt pro Customer Insights pomocí modulu Azure AD PowerShell.
+
+   1. V okně PowerShell, zadejte `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Místo *[ID vašeho klienta]* zadejte ID klienta, ve kterém chcete vytvořit instanční objekt. Parametr názvu prostředí `AzureEnvironmentName` je volitelný.
   
-   - Zadejte `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Tento příkaz vytvoří instanční objekt pro přehledy cílové skupiny u vybraného klienta.  
+   1. Zadejte `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Tento příkaz vytvoří instanční objekt pro přehledy cílové skupiny u vybraného klienta. 
+
+   1. Zadejte `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Tento příkaz vytvoří instanční objekt pro přehledy zapojení na zvoleném klientovi.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Udělení oprávnění instančnímu objektu pro přístup k účtu úložiště
 
@@ -66,14 +77,14 @@ Přejděte na portál Azure a udělte oprávnění instančnímu objektu pro ú�
 
 1. Otevřete účet úložiště, ke kterému má mít přístup instanční objekt pro přehledy cílové skupiny.
 
-1. Vyberte **Řízení přístupu (IAM)** z navigačního podokna a vyberte **Přidat** > **Přidat přiřazení role**.
-   
-   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Screenshot portálu Azure při výběru přiřazení rolí.":::
-   
-1. V podokně **Přidání přiřazení role** nastavte následující vlastnosti:
-   - Role: *Přispěvatel dat objektů blob úložiště*
-   - Přiřaďte přístup pro: *Uživatel, skupina nebo instanční objekt*
-   - Vyberte: *Dynamics 365 AI for Customer Insights* (dále jen [instanční objekt, který jste vytvořili](#create-a-new-service-principal))
+1. V levém podokně vyberte **Řízení přístupu (IAM)** a poté vyberte **Přidat** > **Přidat přiřazení rolí**.
+
+   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Snímek obrazovky ukazující portál Azure při přidávání přiřazení role.":::
+
+1. V podokně **Přidat přiřazení rolí** nastavte následující vlastnosti:
+   - Role: **Přispěvatel dat objektů blob úložiště**
+   - Přiřaďte přístup pro: **Uživatel, skupina nebo instanční objekt**
+   - Vyberte: **Dynamics 365 AI for Customer Insights** a **Přehledy zapojení Dynamics 365 AI pro Customer Insights** (dva [instanční objekty](#create-a-new-service-principal) vytvořené v tomto postupu)
 
 1.  Zvolte **Uložit**.
 
@@ -81,36 +92,34 @@ Změny se mohou projevit až za 15 minut.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Zadejte ID prostředku Azure nebo podrobnosti předplatného Azure v příloze účtu úložiště k přehledům cílové skupiny.
 
-Připojte účet úložiště Azure Data Lake v přehledech cílové skupiny, abyste mohli [ukládat výstupní data](manage-environments.md) nebo jej [použít jako zdroj dat](connect-dataverse-managed-lake.md). Možnost Azure Data Lake vám umožní vybrat si mezi přístupem založeným na prostředcích nebo na základě předplatného.
-
-Podle níže uvedených kroků poskytněte požadované informace o vybraném přístupu.
+Můžete připojit účet Data Lake Storage v přehledech cílových skupin k [uložení výstupních dat](manage-environments.md) nebo [ho použít jej jako zdroj dat](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). Tato možnost vám umožňuje vybrat si mezi přístupem založeným na zdrojích nebo předplatným. V závislosti na zvoleném přístupu postupujte podle postupu v jedné z následujících částí.
 
 ### <a name="resource-based-storage-account-connection"></a>Připojení k účtu úložiště založené na prostředcích
 
 1. Přejděte na [portál pro správu Azure](https://portal.azure.com), přihlaste se k předplatnému a otevřete účet úložiště.
 
-1. Přejděte na **Nastavení** > **Vlastnosti** v navigačním podokně.
+1. V levém podokně přejděte na **Nastavení** > **Vlastnosti**.
 
 1. Zkopírujte hodnotu ID prostředku účtu úložiště.
 
    :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Kopírování ID prostředku účtu úložiště.":::
 
-1. V přehledech cílové skupiny vložte ID prostředku do pole prostředku zobrazeného na obrazovce připojení účtu úložiště.
+1. V přehledech cílových skupin vložte ID prostředku do pole zdroje prostředku na obrazovce připojení účtu úložiště.
 
    :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Zadání informací o ID prostředku účtu úložiště.":::   
-   
+
 1. Pokračujte zbývajícími kroky v přehledech cílové skupiny pro připojení účtu úložiště.
 
 ### <a name="subscription-based-storage-account-connection"></a>Připojení k účtu úložiště založené na předplatném
 
 1. Přejděte na [portál pro správu Azure](https://portal.azure.com), přihlaste se k předplatnému a otevřete účet úložiště.
 
-1. Přejděte na **Nastavení** > **Vlastnosti** v navigačním podokně.
+1. V levém podokně přejděte na **Nastavení** > **Vlastnosti**.
 
 1. Zkontrolujte **Předplatné**, **Skupinu prostředků** a **Název** účtu úložiště a ujistěte se, že v přehledech cílové skupiny vyberete správné hodnoty.
 
-1. V přehledech cílové skupiny vyberte hodnoty pro odpovídající pole při připojování účtu úložiště.
-   
+1. V přehledech cílových skupin zvolte při připojování účtu úložiště hodnoty pro odpovídající pole.
+
 1. Pokračujte zbývajícími kroky v přehledech cílové skupiny pro připojení účtu úložiště.
 
 
