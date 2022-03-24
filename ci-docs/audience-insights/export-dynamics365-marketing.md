@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 0bd2bfa7402ed19cb92ff1f35208b150cfec48c3
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353903"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455807"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Použití segmentů v Dynamics 365 Marketing (Preview)
 
@@ -28,7 +28,7 @@ Pokud používáte nové funkce Dynamics 365 Marketing pro orchestraci cesty zá
 
 ## <a name="prerequisite-for-a-connection"></a>Předpoklad pro propojení
 
-- Než budete moci exportovat segment z Customer Insights do aplikace Marketing, musí se v Dynamics 365 Marketing nacházet záznamy kontaktu. Přečtěte si, jak ingestovat kontakty v [Dynamics 365 Marketing pomocí Microsoft Dataverse](connect-power-query.md).
+- Než budete moci exportovat segment z Customer Insights do aplikace Marketing, musí se v Dynamics 365 Marketing nacházet záznamy kontaktu. Přečtěte si, jak ingestovat kontakty v [Dynamics 365 Marketing pomocí Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
   > Export segmentů z přehledů cílové skupiny do aplikace Marketing nevytvoří nové záznamy kontaktů v instancích aplikace Marketing. Záznamy kontaktů z aplikace Marketing musí být zpracovány v přehledech cílové skupiny a použity jako zdroj dat. Než je možné segmenty exportovat, rovněž je třeba záznamy kontaktů zahrnout do sjednocené entity zákazníka, aby bylo možné mapovat ID zákazníků na ID kontaktů.

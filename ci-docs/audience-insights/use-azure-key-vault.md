@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355883"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376500"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Přineste si vlastní Azure key vault (preview)
 
@@ -31,7 +31,7 @@ Chcete -li konfigurovat trezor klíčů v přehledech cílové skupiny, musí b�
 
 - Musíte mít aktivní předplatné Azure.
 
-- V přehledech cílové skupiny máte roli [Administrátor](permissions.md#administrator). Více informací o [oprávněních uživatele v přehledech cílové skupiny](permissions.md#assign-roles-and-permissions).
+- V přehledech cílové skupiny máte roli [Administrátor](permissions.md#admin). Více informací o [oprávněních uživatele v přehledech cílové skupiny](permissions.md#assign-roles-and-permissions).
 
 - Máte role [Přispěvatel](/azure/role-based-access-control/built-in-roles#contributor) a [Správce přístupu uživatele](/azure/role-based-access-control/built-in-roles#user-access-administrator) v trezoru klíčů nebo skupině prostředků, ke které trezor klíčů patří. Další informace najdete v části [Přidání nebo odebrání přiřazení rolí Azure pomocí Azure Portal](/azure/role-based-access-control/role-assignments-portal). Pokud v trezoru klíčů nemáte roli správce přístupu uživatele, musíte nastavit oprávnění pro řízení přístupu na základě rolí pro instanční objekt služby Azure pro Dynamics 365 Customer Insights odděleně. Postupujte podle pokynů k [použití instančního objektu Azure](connect-service-principal.md) pro trezor klíčů, který by měl být propojen.
 

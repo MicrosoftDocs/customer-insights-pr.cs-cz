@@ -8,16 +8,18 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: e9cf93f28ba6918c72039670e42d26c8aaa7f922
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229395"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376314"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Rozšíření profilů společnosti o vylepšená data společnosti
 
 K opravě, doplnění a standardizování profilů vaší společnosti použijte modely a kompilovaná firemní data společnosti Microsoft. Pro lepší přesnost a přehledy použijeme [formát Common Data Model](/common-data-model/schema/core/applicationcommon/account).
+
+Můžete také [rozšířit podniková data ve zdrojích dat](data-sources-enrichment.md) a zlepšit přesnost shody v procesu sjednocování dat. 
 
 ## <a name="how-we-enhance-company-data"></a>Jak vylepšíme data společnosti
 
@@ -61,7 +63,7 @@ Vylepšená data mají několik omezení. Položky v seznamu níže nejsou model
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Dlaždice rozšíření v centru pro rozšíření dat společnosti.":::
 
-1. Vyberte **Datová sada zákazníka** a vyberte entitu obsahující adresy, které chcete rozšířit. Můžete vybrat entitu *Zákazník* k obohacení adres ve všech vašich zákaznických profilech nebo entitu segmentu k obohacení adres pouze v zákaznických profilech obsažených v tomto segmentu.
+1. Vyberte **Datová sada zákazníka** a vyberte entitu obsahující adresy, které chcete rozšířit. Můžete vybrat entitu *Zákazník* k rozšíření adres ve všech vašich zákaznických profilech nebo entitu segmentu k rozšíření adres pouze v zákaznických profilech obsažených v tomto segmentu.
 
 1. Vyberte, který typ polí z profilů vaší společnosti se má použít pro porovnání s daty společnosti zkompilovanými společností Microsoft. Tento výběr ovlivní mapovací pole, ke kterým máte přístup v dalším kroku.
 
@@ -71,17 +73,17 @@ Vylepšená data mají několik omezení. Položky v seznamu níže nejsou model
 
 1. Výběrem možnosti **Další** dokončete mapování polí.
 
-1. Zadejte název obohacení a název výstupní entity.
+1. Zadejte název rozšíření a název výstupní entity.
 
 1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
-Chcete-li zahájit proces obohacení, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit obohacení jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování závisí na velikosti vašich zákaznických dat.
+Chcete-li zahájit proces rozšíření, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit rozšíření jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování závisí na velikosti vašich zákaznických dat.
 
-Po dokončení procesu obohacení můžete zkontrolovat nově obohacené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet obohacených profilů.
+Po dokončení procesu rozšíření můžete zkontrolovat nově rozšířené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet rozšířených profilů.
 
-Ukázku obohacených dat můžete vidět v dlaždici **Náhled obohacených zákazníků**. Vyberte možnost **Další informace** a vyberte kartu **Data** , na které najdete podrobné zobrazení každého obohaceného profilu.
+Ukázku rozšířených dat můžete vidět v dlaždici **Náhled rozšířených zákazníků**. Vyberte možnost **Další informace** a vyberte kartu **Data** , na které najdete podrobné zobrazení každého rozšířeného profilu.
 
 ### <a name="overview-card"></a>Karta Přehled
 

@@ -1,7 +1,7 @@
 ---
 title: Správa uživatelských oprávnění
 description: Informace o oprávněních a rolích uživatele.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355929"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376730"
 ---
 # <a name="user-permissions"></a>Uživatelská oprávnění
 
@@ -48,7 +48,7 @@ Existují tři typy rolí:
 - Správa konfigurace a rozšíření zákaznických profilů ze stránky **Rozšíření** (pouze pro rozšíření první strany).
 - Spravujte a vytvářejte exporty na základě propojení sdílených s přispěvateli. [Další informace o tom, jak správci umožňují přispěvatelům používat propojení pro exporty](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Správce
+## <a name="admin"></a>Správa
 
 - Všechna oprávnění, která má k dispozici Přispěvatel.
 - Změna nastavení na stránce **Systém**, včetně pracovního jazyka a plánů aktualizace systémových procesů.
@@ -60,6 +60,12 @@ Existují tři typy rolí:
 - Nainstalujte a použijte **Doplněk zákaznické karty**.
 - Přidání a použiti **konektoru Power Apps**.
 - Povolení využití [rozhraní API aplikace Customer Insights](apis.md).
+- [Přiřazení vlastnictví prostředí](manage-environments.md#change-the-owner-of-an-environment) jinému správci.
+
+## <a name="admin-owner"></a>Správce (vlastník)
+
+- Všechna oprávnění dostupná správci.
+- [Obnovit a odstranit](manage-environments.md#reset-an-existing-environment) prostředí.
 
 ## <a name="assign-roles-and-permissions"></a>Přiřazení oprávnění a rolí
 

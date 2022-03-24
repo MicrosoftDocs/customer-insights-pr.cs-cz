@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355145"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376914"
 ---
 # <a name="match-entities"></a>Párování entit
 
@@ -180,7 +180,19 @@ Entita výstupu odstraněných duplicit obsahuje následující informace:
   - Deduplication_WinnerId: Toto pole obsahuje vítězné ID z identifikovaných skupin nebo clusterů. Pokud je hodnota Deduplication_WinnerId stejná jako hodnota primárního klíče záznamu, znamená to, že záznam je vítězným záznamem.
 - Pole použitá k definování pravidel odstranění duplicit.
 - Pole Pravidlo a Skóre označují, která z pravidel pro odstranění duplicit byla použita a které skóre bylo vráceno algoritmem pro párování.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Zahrnutí rozšířených entit (Preview)
+
+Pokud jste rozšířili entity na úrovni zdroje dat, vyberte je před spuštěním procesu párování. Rozšířené entity mohou zlepšit vaše výsledky sjednocení. Další informace najdete v tématu [Rozšíření zdrojů dat](data-sources-enrichment.md). 
+
+Rozšířená entita obsahuje původní pole zdroje dat a rozšířená pole. Pokud se tedy rozhodnete pracovat s rozšířenou entitou, stávající konfigurace nebude ovlivněna. Pravděpodobně však budete muset aktualizovat pravidla párování, aby místo toho používala rozšířená pole.
+
+1. Přejděte na **Data** > **Sjednotit** > **Spárovat** a v horní části stránky vyberte možnost **Používat rozšířené entity**.
+
+1. V podokně **Používat rozšířené entity** vyberte jednu nebo více rozšířených entit.
+
+1. Vyberte **Hotovo**. Kdekoli se použije zdrojová entita (jako je například pořadí párování nebo pravidla), automaticky se změní na rozšířenou entitu.
+  
 ## <a name="run-the-match-process"></a>Spuštění procesu párování
 
 S konfigurovanými pravidly párování, včetně pravidel párování mezi entitami a pravidel zrušení duplicit, můžete spustit proces párování. 

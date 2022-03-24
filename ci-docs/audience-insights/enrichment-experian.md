@@ -1,6 +1,6 @@
 ---
-title: Obohacení pomocí obohacení třetí strany Experian
-description: Obecné informace o obohacování třetí strany Experian.
+title: Rozšíření pomocí rozšíření třetí strany Experian
+description: Obecné informace o rozšíření třetí strany Experian.
 ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229956"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376684"
 ---
-# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obohaťte profily zákazníků o demografické údaje z Experian (náhled)
+# <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Rozšiřte profily zákazníků o demografické údaje z Experian (náhled)
 
-Experian je světovým lídrem v oblasti reportingu spotřebitelských a obchodních úvěrů a marketingových služeb. Se službami rozšiřování dat Experian můžete získat hlubší porozumění svým zákazníkům obohacením svých profilů zákazníků o demografické údaje, jako je velikost domácnosti, příjem atd.
+Experian je světovým lídrem v oblasti reportingu spotřebitelských a obchodních úvěrů a marketingových služeb. Se službami rozšiřování dat Experian můžete získat hlubší porozumění svým zákazníkům rozšířením svých profilů zákazníků o demografické údaje, jako je velikost domácnosti, příjem atd.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -25,7 +25,7 @@ Abyste mohli konfigurovat Experian, je třeba splnit následující předpoklady
 
 - Musíte mít aktivní předplatné Experian. Chcete-li získat předplatné, [kontaktujte Experian](https://www.experian.com/marketing-services/contact) přímo. [Další informace o rozšiřování dat Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Správce již nakonfiguroval připojení Experian *nebo* máte oprávnění [správce](permissions.md#administrator). Pro svůj účet Secure Transport (ST) s povoleným SSH potřebujete také ID uživatele, ID strany a Číslo modelu, které pro vás společnost Experian vytvořila.
+- Správce již nakonfiguroval připojení Experian *nebo* máte oprávnění [správce](permissions.md#admin). Pro svůj účet Secure Transport (ST) s povoleným SSH potřebujete také ID uživatele, ID strany a Číslo modelu, které pro vás společnost Experian vytvořila.
 
 ## <a name="supported-countriesregions"></a>Podporované země/oblasti
 
@@ -33,9 +33,9 @@ V současné době podporujeme rozšíření profilů zákazníků pouze ve Spoj
 
 ## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
 
-1. Přejděte na **Data** > **Obohacení** a vyberte kartu **Objevit**.
+1. Přejděte na **Data** > **Rozšíření** a vyberte kartu **Objevit**.
 
-1. Vyberte **Obohatit moje data** v dlaždici Experian.
+1. Vyberte **Rozšířit moje data** v dlaždici Experian.
 
    > [!div class="mx-imgBorder"]
    > ![Dlaždice Experian.](media/experian-tile.png "Experian tile")
@@ -45,7 +45,7 @@ V současné době podporujeme rozšíření profilů zákazníků pouze ve Spoj
 
 1. Vyberte **Připojit k Experian** pro potvrzení výběru připojení.
 
-1.  Vyberte **Další** a zvolte **Sadu dat zákazníka**, kterou chcete obohatit o demograficé údaje z Experian. Můžete vybrat entitu **Zákazník** k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
+1.  Vyberte **Další** a zvolte **Sadu dat zákazníka**, kterou chcete rozšířit o demograficé údaje z Experian. Můžete vybrat entitu **Zákazník** k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Screenshot výběru sady zákaznických dat.":::
 
@@ -64,7 +64,7 @@ V současné době podporujeme rozšíření profilů zákazníků pouze ve Spoj
 
 ## <a name="configure-the-connection-for-experian"></a>Konfigurace rolí připojení pro Experian 
 
-Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci obohacení vyberte **Přidat připojení** *nbo* jděte na **Správa** > **Připojení** a vyberte **Nastavit** v dlaždici Experian.
+Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci rozšíření vyberte **Přidat připojení** *nbo* jděte na **Správa** > **Připojení** a vyberte **Nastavit** v dlaždici Experian.
 
 1. Vyberte **Začínáme**.
 
@@ -82,9 +82,9 @@ Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci ob
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
-Chcete-li zahájit proces obohacení, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit obohacení jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování bude záviset na velikosti vašich údajů o zákaznících a na procesech obohacování nastavených pro váš účet Experian.
+Chcete-li zahájit proces rozšíření, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit rozšíření jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování bude záviset na velikosti vašich údajů o zákaznících a na procesech rozšíření nastavených pro váš účet Experian.
 
-Po dokončení procesu obohacení můžete zkontrolovat nově obohacené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet obohacených profilů.
+Po dokončení procesu rozšíření můžete zkontrolovat nově rozšířené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet rozšířených profilů.
 
 Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobnému zobrazení každého rozšířeného profilu.
 

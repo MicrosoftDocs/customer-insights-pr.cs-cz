@@ -1,6 +1,6 @@
 ---
 title: Rozšíření vylepšení adresy (obsahuje video)
-description: Obohaťte a normalizujte informace o adresách profilů zákazníků s modely společnosti Microsoft.
+description: Rozšiřte a normalizujte informace o adresách profilů zákazníků s modely společnosti Microsoft.
 ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353628"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376289"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obohacení profilů zákazníků o vylepšené adresy
+# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Rozšíření profilů zákazníků o vylepšené adresy
 
-Adresy ve vašich datech mohou být nestrukturované, neúplné nebo nesprávné. Použijte modely společnosti Microsoft k normalizaci a obohacení vašich adres do [formátu Common Data Model](/common-data-model/schema/core/applicationcommon/address) pro lepší přesnost a přehledy.
+Adresy ve vašich datech mohou být nestrukturované, neúplné nebo nesprávné. Použijte modely společnosti Microsoft k normalizaci a rozšíření vašich adres do [formátu Common Data Model](/common-data-model/schema/core/applicationcommon/address) pro lepší přesnost a přehledy.
+
+Můžete také [rozšířit zdroje dat o adresy](data-sources-enrichment.md) a zlepšit přesnost shody v procesu sjednocování dat. 
 
 ## <a name="how-we-enhance-addresses"></a>Jak vylepšujeme adresy
 
@@ -61,7 +63,7 @@ Model používá techniky založené na strojovém učení k vylepšení adres. 
 
 ## <a name="supported-countries-or-regions"></a>Podporované země nebo regiony
 
-V současné době podporujeme obohacující adresy v těchto zemích nebo regionech: 
+V současné době podporujeme rozšiřující adresy v těchto zemích nebo regionech: 
 
 - Austrálie
 - Kanada
@@ -78,16 +80,16 @@ Adresy musí obsahovat hodnotu země / oblasti. Nezpracováváme adresy pro zem�
 
 1. Přejděte na **Data** > **Rozšíření**.
 
-1. Vyberte **Obohatit moje data** v dlaždici **Vylepšené adresy**.
+1. Vyberte **Rozšířit moje data** v dlaždici **Vylepšené adresy**.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Screenshot dlaždice Vylepšené adresy.":::
 
-1. Vyberte **Datová sada zákazníka** a vyberte entitu obsahující adresy, které chcete rozšířit. Můžete vybrat entitu *Zákazník* k obohacení adres ve všech vašich zákaznických profilech nebo entitu segmentu k obohacení adres pouze v zákaznických profilech obsažených v tomto segmentu.
+1. Vyberte **Datová sada zákazníka** a vyberte entitu obsahující adresy, které chcete rozšířit. Můžete vybrat entitu *Zákazník* k rozšíření adres ve všech vašich zákaznických profilech nebo entitu segmentu k rozšíření adres pouze v zákaznických profilech obsažených v tomto segmentu.
 
 1. Vyberte způsob formátování adres v datové sadě. Pokud adresy ve vašich datech používají jedno pole, zvolte **Adresa s jedním atributem**. Pokud adresy ve vašich datech používají více než jedno datové pole, zvolte **Adresa s více atributy**.
 
    > [!NOTE]
-   > Země / oblast je povinná u adres s jedním atributem i u více atributů. Adresy, které neobsahují platné nebo podporované hodnoty země / oblasti, nebudou obohaceny.
+   > Země / oblast je povinná u adres s jedním atributem i u více atributů. Adresy, které neobsahují platné nebo podporované hodnoty země / oblasti, nebudou rozšířeny.
 
 1.  Mapujte pole adresy z vaší sjednocené entity zákazníka.
 
@@ -95,17 +97,17 @@ Adresy musí obsahovat hodnotu země / oblasti. Nezpracováváme adresy pro zem�
 
 1. Výběrem možnosti **Další** dokončete mapování polí.
 
-1. Zadejte název obohacení a název výstupní entity.
+1. Zadejte název rozšíření a název výstupní entity.
 
 1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
-Chcete-li zahájit proces obohacení, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit obohacení jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování závisí na velikosti vašich zákaznických dat.
+Chcete-li zahájit proces rozšíření, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit rozšíření jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování závisí na velikosti vašich zákaznických dat.
 
-Po dokončení procesu obohacení můžete zkontrolovat nově obohacené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet obohacených profilů.
+Po dokončení procesu rozšíření můžete zkontrolovat nově rozšířené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet rozšířených profilů.
 
-Ukázku obohacených dat můžete vidět v dlaždici **Náhled obohacených zákazníků**. Vyberte možnost **Další informace** a vyberte kartu **Data** , na které najdete podrobné zobrazení každého obohaceného profilu.
+Ukázku rozšířených dat můžete vidět v dlaždici **Náhled rozšířených zákazníků**. Vyberte možnost **Další informace** a vyberte kartu **Data** , na které najdete podrobné zobrazení každého rozšířeného profilu.
 
 ### <a name="overview-card"></a>Karta Přehled
 

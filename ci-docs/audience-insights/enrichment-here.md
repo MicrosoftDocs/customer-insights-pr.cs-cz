@@ -1,5 +1,5 @@
 ---
-title: Obohacení pomocí obohacení třetí strany HERE Technologies
+title: Rozšíření pomocí rozšíření třetí strany HERE Technologies
 description: Obecné informace o rozšíření od třetí strany HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 1cbbad9bfe559bcb15b23894fc7475507aae8add
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230374"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376272"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Rozšíření profilů zákazníků od HERE Technologies (Preview)
 
@@ -25,7 +25,7 @@ Chcete-li nakonfigurovat rozšíření společnosti HERE Technologies, musíte s
 
 - Musíte mít aktivní předplatné HERE Technologies. Chcete-li získat předplatné, můžete se [registrovat zde](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) nebo přímo [kontaktovat HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Zjistěte více o HERE Technologies Location Enrichment.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Je k dispozici [Připojení](connections.md) HERE *nebo* máte oprávnění [správce](permissions.md#administrator) a klíč API technologie HERE Technologies.
+- Je k dispozici [Připojení](connections.md) HERE *nebo* máte oprávnění [správce](permissions.md#admin) a klíč API technologie HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
 
@@ -44,7 +44,7 @@ Chcete-li nakonfigurovat rozšíření společnosti HERE Technologies, musíte s
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Screenshot výběru sady zákaznických dat.":::
 
-1. Zvolte, zda chcete mapovat pole na primární nebo sekundární adresu. Můžete určit mapování polí pro obě adresy a profily pro obě adresy obohatit samostatně. Například pokud existuje adresa domů a do zaměstnání. Vyberte **Další**.
+1. Zvolte, zda chcete mapovat pole na primární nebo sekundární adresu. Můžete určit mapování polí pro obě adresy a profily pro obě adresy rozšířit samostatně. Například pokud existuje adresa domů a do zaměstnání. Vyberte **Další**.
 
 1. Definujte, která pole z vašich sjednocených profilů se mají použít k vyhledání odpovídajících dat umístění od HERE Technologies. Pole **Ulice 1** a **Poštovní směrovací číslo** jsou povinná pro vybranou primární a/nebo sekundární adresu. Pro vyšší přesnost shody lze přidat více polí.
 
@@ -76,9 +76,9 @@ Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci ro
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
-Chcete-li zahájit proces obohacení, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit obohacení jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování bude záviset na velikosti vašich zákaznických dat a dobách odezvy rozhraní API od HERE Technologies.
+Chcete-li zahájit proces rozšíření, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit rozšíření jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování bude záviset na velikosti vašich zákaznických dat a dobách odezvy rozhraní API od HERE Technologies.
 
-Po dokončení procesu obohacení můžete zkontrolovat nově obohacené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet obohacených profilů.
+Po dokončení procesu rozšíření můžete zkontrolovat nově rozšířené údaje o zákaznických profilech v **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet rozšířených profilů.
 
 Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobnému zobrazení každého rozšířeného profilu.
 

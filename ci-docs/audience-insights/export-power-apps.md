@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229023"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455944"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Konektor Microsoft Power Apps (preview)
 
@@ -38,6 +38,8 @@ Po přidání Customer Insights jako datového připojení si můžete v systém
 ### <a name="retrievable-entities"></a>Vyhledatelné entity
 
 Můžete načíst pouze entity **Customer**, **UnifiedActivity**, **Segments** a **ContactProfile** prostřednictvím konektoru Power Apps. Entita ContactProfile je k dispozici pouze v instanci přehledů cílových skupin pro obchodní účty. Jsou zobrazeny další entity, protože podkladový konektor je podporuje prostřednictvím spouštěčů v Power Automate.
+
+Za 60 sekund můžete uskutečnit maximálně 100 hovorů. Pomocí parametru $skip můžete volat API koncový bod vícekrát. [Další informace o parametru $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Delegování
 

@@ -8,16 +8,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 0db0c984f6bf9f7ded0704b6fa0caf39c7dace3a
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230626"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376776"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Rozšíření profilů společnosti o Leadspace (náhled)
 
-Leadspace je společnost zabývající se vědou o datech, která poskytuje platformu zákaznických dat B2B. Umožňuje prostředí s jednotnými profily zákazníků založenými na účtech obohacovat jejich data. Obohaťte *Profily zákazníků* o atributy, jako je velikost společnosti, umístění nebo odvětví. Obohaťte *Kontaktní profily* o atributy, jako je titul, osobnost nebo ověření e -mailem.
+Leadspace je společnost zabývající se vědou o datech, která poskytuje platformu zákaznických dat B2B. Umožňuje prostředí s jednotnými profily zákazníků založenými na účtech rozšiřovat jejich data. Rozšiřte *Profily zákazníků* o atributy, jako je velikost společnosti, umístění nebo odvětví. Rozšiřte *Kontaktní profily* o atributy, jako je titul, osobnost nebo ověření e -mailem.
 
 ## <a name="prerequisites"></a>Předpoklady
 
@@ -25,7 +25,7 @@ Abyste mohli Leadspace konfigurovat, je třeba splnit následující předpoklad
 
 - Máte aktivní licenci Leadspace.
 - Máte [sjednocené profily zákazníků](customer-profiles.md) na základě účtů.
-- propojení Leadspace již bylo nakonfigurováno správcem nebo máte oprávnění [správce](permissions.md#administrator) a "trvalý klíč" (označovaný jako **Token Leadspace**). Informace o produktu si zjistěte přímo u společnosti [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/).
+- propojení Leadspace již bylo nakonfigurováno správcem nebo máte oprávnění [správce](permissions.md#admin) a "trvalý klíč" (označovaný jako **Token Leadspace**). Informace o produktu si zjistěte přímo u společnosti [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/).
 
 ## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
 
@@ -49,9 +49,9 @@ Abyste mohli Leadspace konfigurovat, je třeba splnit následující předpoklad
 
 1. Výběrem možnosti **Další** dokončete mapování polí.
 
-1. Pokud máte *profily kontaktu*, které byste chtěli obohatit, zaškrtněte políčko. Přehledy cílové skupiny automaticky namapují požadovaná pole.
+1. Pokud máte *profily kontaktu*, které byste chtěli rozšířit, zaškrtněte políčko. Přehledy cílové skupiny automaticky namapují požadovaná pole.
 
-   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Kontakt Leadspace zaznamenává obohacení.":::
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Kontakt Leadspace zaznamenává rozšíření.":::
  
 1. Zadejte název rozšíření a po přezkoumání vašich voleb vyberte **Uložit rozšíření**.
 

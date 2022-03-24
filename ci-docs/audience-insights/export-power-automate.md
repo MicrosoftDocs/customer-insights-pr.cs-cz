@@ -8,16 +8,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: dd90ef4576246b49d4a9c74005196ee9813a6744
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226706"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455899"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (preview)
 
 Služba Power Automate podporuje automatické spouštění vybraných událostí při změně dat nebo přímou správu složitějších toků v [Power Automate](https://flow.microsoft.com/).
+
+## <a name="known-limitations"></a>Známá omezení
+
+- Za 60 sekund můžete uskutečnit maximálně 100 hovorů. Pomocí parametru $skip můžete volat API koncový bod vícekrát. [Další informace o parametru $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ## <a name="power-automate-triggers"></a>Triggery Power Automate
 

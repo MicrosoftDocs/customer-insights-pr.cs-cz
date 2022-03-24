@@ -8,16 +8,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229630"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376546"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Rozšíření profilů zákazníků o vlastní data (Preview)
 
-Vlastní import prostřednictvím protokolu SFTP (Secure File Transfer Protocol) umožňuje importovat data, která nemusí projít procesem sjednocení dat. Je to flexibilní, bezpečný a snadný způsob, jak přenést svá data. Vlastní import SFTP lze použít v kombinaci s [exportem SFTP](export-sftp.md), který vám umožní exportovat data profilu zákazníka, která jsou potřebná pro rozšíření. Data lze poté zpracovat a obohatit a vlastní import SFTP lze použít k přenesení obohacených dat zpět do schopnosti cílové skupiny Dynamics 365 Customer Insights.
+Vlastní import prostřednictvím protokolu SFTP (Secure File Transfer Protocol) umožňuje importovat data, která nemusí projít procesem sjednocení dat. Je to flexibilní, bezpečný a snadný způsob, jak přenést svá data. Vlastní import SFTP lze použít v kombinaci s [exportem SFTP](export-sftp.md), který vám umožní exportovat data profilu zákazníka, která jsou potřebná pro rozšíření. Data lze poté zpracovat a rozšířit a vlastní import SFTP lze použít k přenesení rozšířených dat zpět do schopnosti cílové skupiny Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -25,12 +25,12 @@ Chcete-li nakonfigurovat vlastní import SFTP, musíte splnit následující př
 
 - Máte název souboru a umístění (cestu) souboru, který se má importovat do hostitele SFTP.
 - Tady je soubor *model.json*, který určuje [schéma Common Data Model](/common-data-model/) pro data k importu. Tento soubor musí být ve stejném adresáři jako soubor, který chcete importovat.
-- Správce již nakonfiguroval připojení SFTP *nebo* máte oprávnění [správce](permissions.md#administrator). Budete potřebovat přihlašovací údaje uživatele, adresu URL a číslo portu pro umístění SFTP, ze kterého chcete importovat data.
+- Správce již nakonfiguroval připojení SFTP *nebo* máte oprávnění [správce](permissions.md#admin). Budete potřebovat přihlašovací údaje uživatele, adresu URL a číslo portu pro umístění SFTP, ze kterého chcete importovat data.
 
 
 ## <a name="configure-the-import"></a>Konfigurace importu
 
-1. Přejděte na **Data** > **Obohacení** a vyberte kartu **Objevit**.
+1. Přejděte na **Data** > **Rozšíření** a vyberte kartu **Objevit**.
 
 1. V **dlaždici Vlastní import SFTP** vyberte **Rozšířit moje údaje** a pak vyberte **Začínáme**.
 
@@ -116,9 +116,9 @@ Adresář obsahující soubor, který se má importovat na server SFTP, musí ta
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
-Chcete-li zahájit proces obohacení, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit obohacení jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování bude záviset na velikosti dat, která mají být importována, a na připojení k serveru SFTP.
+Chcete-li zahájit proces rozšíření, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit rozšíření jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování bude záviset na velikosti dat, která mají být importována, a na připojení k serveru SFTP.
 
-Po dokončení procesu rozšíření můžete zkontrolovat nově importovaná data v sekci **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet obohacených profilů.
+Po dokončení procesu rozšíření můžete zkontrolovat nově importovaná data v sekci **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet rozšířených profilů.
 
 Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobnému zobrazení každého rozšířeného profilu.
 

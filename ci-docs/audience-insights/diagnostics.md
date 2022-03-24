@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354364"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376408"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Přesměrování protokolů v Dynamics 365 Customer Insights s Azure Monitor (Preview)
 
@@ -37,7 +37,7 @@ Customer Insights odesílá následující protokoly událostí:
 Chcete -li konfigurovat diagnostiku v Customer Insights, musí být splněny následující předpoklady:
 
 - Máte aktivní [předplatné Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Máte oprávnění [správce](permissions.md#administrator) v Customer Insights.
+- Máte oprávnění [správce](permissions.md#admin) v Customer Insights.
 - Máte roli **Přispěvatel** a **Správce přístupu uživatelů** v cílovém prostředku v Azure. Prostředkem může být účet Azure Storage, centrum událostí Azure nebo pracovní prostor Azure Log Analytics. Další informace najdete v části [Přidání nebo odebrání přiřazení rolí Azure pomocí Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 - Splněny [požadavky na cíl](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pro Azure Storage, centrum událostí Azure nebo Azure Log Analytics.
 - Máte alespoň roli **Čtenář** ve skupině prostředků, do které prostředek patří.
@@ -132,7 +132,7 @@ Události rozhraní API a události pracovního postupu mají společnou struktu
 | `resultSignature` | String    | Volitelné          | Výsledný stav události. Pokud operace odpovídá volání REST API, je to stavový kód HTTP.        | `200`             |
 | `durationMs`      | Dlouhé celé číslo      | Volitelné          | Doba trvání operace v milisekundách.     | `133`     |
 | `callerIpAddress` | String    | Volitelné          | IP adresa volajícího, pokud operace odpovídá volání rozhraní API, které pochází z veřejně dostupné IP adresy.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Volitelné          | Objekt JSON popisující identitu uživatele nebo aplikace, která provedla operaci.       | Viz sekce [Identita](#identity-schema).     |  |
+| `identity`        | String    | Volitelné          | Objekt JSON popisující identitu uživatele nebo aplikace, která provedla operaci.       | Viz sekce [Identita](#identity-schema).     |  
 | `properties`      | String    | Volitelné          | Objekt JSON s více vlastnostmi pro konkrétní kategorii událostí.      | Viz sekce [Vlastnosti](#api-properties-schema).    |
 | `level`           | String    | Požaduje se          | Úroveň závažnosti události.    | `Informational`, `Warning`, `Error` nebo `Critical`.           |
 | `uri`             | String    | Volitelné          | Absolutní identifikátor URI požadavku.    |               |
@@ -200,7 +200,7 @@ Pracovní postup obsahuje několik kroků. [Ingestace zdrojů dat](data-sources.
 | EntityMeasures    | [Segmenty a míry](segments.md)      |
 | Opatření          | [Segmenty a míry](segments.md)      |
 | Segmentace      | [Segmenty a míry](segments.md)      |
-| Obohacení        | [Obohacení](enrichment-hub.md)                                          |
+| Rozšíření        | [Rozšíření](enrichment-hub.md)                                          |
 | Analytické nástroje      | [Předpovědi](predictions-overview.md)                                          |
 | AiBuilder         | [Předpovědi](predictions-overview.md)                                          |
 | Přehledy          | [Předpovědi](predictions-overview.md)                                          |
@@ -239,7 +239,7 @@ Události pracovního postupu mají následující vlastnosti.
 | `properties.startTimestamp`                  | Ano      | Ano  | Časové razítko UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Ano      | Ano  | Časové razítko UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Ano      | Ano  | Časové razítko UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Ano      | Ano  | `instanceId` pro Customer Insights                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Ano      | Ano  | `instanceId` pro Customer Insights                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Ano  | - Jestliže OperationType = `Export`, identifikátor představuje guid pro konfiguraci exportu. <br> - Jestliže OperationType = `Enrichment`, jedná se o identifikátor guid rozšíření <br> - Jestliže OperationType = `Measures` a `Segmentation`, identifikátor je název entity. |
 | `properties.friendlyName`                    | No       | Ano  | Uživatelsky přívětivý název exportu nebo zpracovávané entity.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Ano  | Nepovinné. Chybová zpráva s více podrobnostmi.                                                                                                                                                                                                                  |

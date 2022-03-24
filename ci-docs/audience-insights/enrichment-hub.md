@@ -1,7 +1,7 @@
 ---
 title: Rozšíření sjednocených profilů zákazníka
 description: Využijte možnosti rozšíření svých zákaznických dat.
-ms.date: 02/07/2022
+ms.date: 02/18/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: e8cac35ccf7012524dc22cb4a499dc605dd66346
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355375"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372694"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
@@ -31,7 +31,7 @@ V přehledech cílové skupiny přejděte na **Data** > **Rozšíření**, kde m
 
 K vytváření nebo úpravě rozšíření musíte mít oprávnění přispěvatele nebo správce. Další informace naleznete v části [Oprávnění](permissions.md).
 
-Na kartě **Objevit** najdete všechny podporované možnosti obohacení.
+Na kartě **Objevit** najdete všechny podporované možnosti rozšíření.
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 
@@ -42,6 +42,7 @@ Na kartě **Objevit** najdete všechny podporované možnosti obohacení.
 - [Vlastní data](enrichment-SFTP-custom-import.md) prostřednictvím vlastního importu protokolu (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) poskytuje společnost Microsoft
 - [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies 
+- [Identitu](enrichment-liveramp.md) poskytuje společnost LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
@@ -59,7 +60,7 @@ Na kartě **Moje rozšíření** se můžete podívat na rozšíření, která j
 
 ## <a name="manage-existing-enrichments"></a>Správa existujících rozšíření
 
-Jděte na kartu **Moje obohacení**, kde zobrazíte všechna nakonfigurovaná obohacení. Každé rozšíření je uvedeno jako jeden jako řádek, který obsahuje další informace o rozšíření.
+Jděte na kartu **Moje rozšíření**, kde zobrazíte všechna nakonfigurovaná rozšíření. Každé rozšíření je uvedeno jako jeden jako řádek, který obsahuje další informace o rozšíření.
 
 Výběrem rozšíření zobrazíte dostupné možnosti. Můžete také vybrat tři tečky (...) na položce seznamu a zobrazit možnosti. Pokud jste nakonfigurovali několik rozšíření, můžete je rychle najít pomocí vyhledávacího pole.
 
@@ -75,22 +76,26 @@ Spusťte nebo deaktivujte více rozšíření najednou jejich výběrem v seznam
 
 ## <a name="enrichments-and-connections"></a>Rozšíření a propojení 
 
-Rozšíření třetích stran se konfigurují pomocí [připojení](connections.md), které správce nastaví pomocí pověření a poskytne souhlas s datovými přenosy. Připojení mohou používat správci a přispěvatelé ke konfiguraci obohacení.  
+Rozšíření třetích stran se konfigurují pomocí [připojení](connections.md), které správce nastaví pomocí pověření a poskytne souhlas s datovými přenosy. Připojení mohou používat správci a přispěvatelé ke konfiguraci rozšíření.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Více rozšíření stejného typu
 
-Entita, kterou chcete rozšířit, je zadána během konfigurace rozšíření, což vám umožní rozšířit pouze podmnožinu vašich profilů. Například obohaťte data pouze pro konkrétní segment. Můžete nakonfigurovat několik rozšíření stejného typu a znovu použít stejné propojení . Některá rozšíření budou mít rozšíření počtu obohacení stejného typu, které lze vytvořit. Limity a současné použití lze zobrazit na stránce **Rozšíření**.
+Entita, kterou chcete rozšířit, je zadána během konfigurace rozšíření, což vám umožní rozšířit pouze podmnožinu vašich profilů. Například rozšiřte data pouze pro konkrétní segment. Můžete nakonfigurovat několik rozšíření stejného typu a znovu použít stejné propojení . Některá rozšíření budou mít rozšíření počtu rozšíření stejného typu, které lze vytvořit. Limity a současné použití lze zobrazit na stránce **Rozšíření**.
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Podívejte se na průběh procesu obohacování
+## <a name="enrich-data-sources-before-unification"></a>Rozšíření zdrojů dat před sjednocením
 
-Můžete najít podrobnosti o zpracování obohacení, včetně jeho stavu a potenciálních problémů, v průběhu obnovování nebo po dokončení aktualizace. Pochopte, které procesy jsou zahrnuty pro aktualizaci obohacení, a jak dlouho trvalo spuštění procesů. Stav obohacení je podporován pro Experian, Leadspace, HERE Technologies, SFTP Import a Azure Maps.
+Před sjednocením dat můžete rozšířit zákaznická data, abyste zvýšili kvalitu shody dat. Další informace najdete v tématu [Rozšíření zdroje dat](data-sources-enrichment.md).
 
-Chcete -li zobrazit stav obohacení
+## <a name="see-the-progress-of-the-enrichment-process"></a>Podívejte se na průběh procesu rozšíření
+
+Můžete najít podrobnosti o zpracování rozšíření, včetně jeho stavu a potenciálních problémů, v průběhu obnovování nebo po dokončení aktualizace. Pochopte, které procesy jsou zahrnuty pro aktualizaci rozšíření, a jak dlouho trvalo spuštění procesů. Stav rozšíření je podporován pro Experian, Leadspace, HERE Technologies, SFTP Import a Azure Maps.
+
+Chcete -li zobrazit stav rozšíření
 
 1. Přejděte na **Data** > **Rozšíření**. 
-1. Na karě **Moje obohacení** vyberte stav obohacení a otevřete boční panel. 
-1. V podokně **Podrobnosti o průběhu** rozbalte část **Obohacení**. 
-1. Pod obohacením, pro které chcete vidět průběh, vyberte **Zobrazit podrobnosti**. 
-1. V podokně **Podrobnosti o úkolu** vyberte **Zobrazit podrobnosti** a zobrazte procesy, které se podílejí na aktualizaci obohacení, a jejich stav. 
+1. Na karě **Moje rozšíření** vyberte stav rozšíření a otevřete boční panel. 
+1. V podokně **Podrobnosti o průběhu** rozbalte část **Rozšíření**. 
+1. Pod rozšířením, pro které chcete vidět průběh, vyberte **Zobrazit podrobnosti**. 
+1. V podokně **Podrobnosti o úkolu** vyberte **Zobrazit podrobnosti** a zobrazte procesy, které se podílejí na aktualizaci rozšíření, a jejich stav. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

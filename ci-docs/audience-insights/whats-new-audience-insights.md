@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232650"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376454"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Co je nového ve funkci přehledů cílové skupiny Dynamics 365 Customer Insights
-
-
 
 S radostí představujeme naše nejnovější aktualizace! Tento článek shrnuje funkce Public Preview, rozšíření obecné dostupnosti a aktualizace funkcí. Chcete-li zobrazit dlouhodobé plány funkcí, projděte si [plány vydávání Dynamics 365 a Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +24,62 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="february-2022-updates"></a>Aktualizace z února 2022
+
+Aktualizace v únoru 2022 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="general-availability-for-prediction-models"></a>Všeobecná dostupnost modelů predikce
+
+Integrované modely predikce, včetně **úbytku předplatného**, **úbytku transakcí** a **hodnoty životnosti zákazníka (CLV)** budou obecně dostupné jako součást Customer Insights. 
+
+Další informace naleznete v tématu [Přehled predikcí](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nový zdroj dat: Integrace s Azure Synapse Analytics (Preview)
+
+Azure Synapse Analytics je podniková analytická služba, která urychluje čas potřebný k získání přehledů napříč datovými sklady a velkými datovými systémy.
+
+Pokud vaše organizace již používá pokročilé analytické schopnosti Azure Synapse Analytics a ukládá výstup do databází Data Lake, můžete tato data snadno ingestovat do Customer Insights. Další informace najdete v tématu [Připojení ke zdroji dat Azure Synapse (Preview)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Rozšíření pomocí LiveRamp (Preview)
+
+Společnost LiveRamp poskytuje deterministické offline rozlišení identity a konsolidaci zákaznických dat. Osobní identifikátory ve svých zákaznických datech můžete mapovat do grafu identity AbiliTec a přijímat ID AbiliTec. Tato ID pak můžete využít pro lepší sjednocení údajů o vašich zákaznících.
+
+Více informací viz téma [Rozšíření profilů zákazníků daty identity z LiveRamp (Preview)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Rozšíření zdrojů dat (Preview)
+
+Použijte data ze zdrojů, jako je Microsoft a další partneři, abyste rozšířili svá zákaznická data před jejich sjednocením. Rozšíření zdrojů dat pomáhají vytvářet vyšší úplnost a kvalitu dat, která může pomoci dosáhnout lepších výsledků, jakmile svá data sjednotíte.
+
+Další informace najdete v tématu [Rozšíření zdrojů dat (Preview)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Změnit vlastníka prostředí
+
+I když v Customer Insights může mít několik uživatelů oprávnění správce, vlastníkem prostředí je pouze jeden uživatel. Vylepšené prostředí vám umožňuje změnit vlastníky prostředí a nárokovat vlastnictví, pokud bývalý vlastník opustil organizaci. 
+
+Více informací najdete v části [Změna vlastníka prostředí](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Proces přípravy dat uvádí důvod poškození u poškozených záznamů
+
+Proces přípravy dat nyní ukazuje důvod poškození u všech polí s poškozenými daty na úrovni jednotlivých záznamů, aby byla možná jejich snadná identifikace. 
+
+Další informace: [Poškozené zdroje dat](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Konec fáze Preview pro funkce vykazování ve funkci přehledů zapojení
+
+Verze Preview přehledů zapojení řešení Dynamics 365 Customer Insights skončila 15. února 2022.  
+Tato změna znamená, že zkušební prostředí Customer Insights již nezahrnuje možnost vytvářet tryctýře ani jiné funkce vytváření sestav.
+
+Zveme vás k prozkoumání a hodnocení mnoha dalších funkcí [Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/), platformy Microsoft Customer Data Platform (CDP).    
+ 
+Po přechodnou dobu mají stávající účastníci verze Preview stále přístup k některým možnostem a funkcím Preview:
+
+- Získejte kód pro instrumentaci webu nebo mobilní aplikace 
+- Podívejte se na události a vlastnosti události 
+- Vylepšete sjednocené profily pomocí ingestovaných a upřesněných událostí, abyste mohli využít plnou hodnotu svých zákaznických dat
+  
+Během přechodného období jsou zachycené události stále streamovány do připojeného Data Lake. Jakmile je tato funkce vypnuta, sdílení dat mezi přehledy zapojení a přehledy cílových skupin se zastaví a do připojeného úložiště nebudou odesílány žádné nové události.
+Máte-li dotazy ke konci verze Preview této funkce, kontaktujte přímo svůj tým pro účet Microsoft. Váš obchodní tým vás bude informovat o nadcházejících vydáních. 
 
 ## <a name="january-2022-updates"></a>Aktualizace z ledna 2022
 
@@ -220,23 +274,23 @@ Aktualizace v dubnu 2021 zahrnují několik funkcí, upgrady výkonu a opravy ch
 
 ### <a name="enrichments"></a>Rozšíření
 
- - **Nové obohacení: Vylepšené adresy**    
+ - **Nové rozšíření: Vylepšené adresy**    
   
-   Jsme nadšeni, že můžeme představit nové obohacení pro vylepšení adres ve vašich zákaznických datech. Adresy ve vašich datech mohou být nestrukturované, neúplné nebo nesprávné. Tato funkce využívá modely společnosti Microsoft k normalizaci a obohacení vašich adres do formátu Common Data Model pro lepší přesnost a přehledy.
+   Jsme nadšeni, že můžeme představit nové rozšíření pro vylepšení adres ve vašich zákaznických datech. Adresy ve vašich datech mohou být nestrukturované, neúplné nebo nesprávné. Tato funkce využívá modely společnosti Microsoft k normalizaci a rozšíření vašich adres do formátu Common Data Model pro lepší přesnost a přehledy.
  
-   Další informace viz [Obohacení profilů zákazníků o vylepšené adresy](enrichment-enhanced-addresses.md).
+   Další informace viz [Rozšíření profilů zákazníků o vylepšené adresy](enrichment-enhanced-addresses.md).
 
-- **Řízená konfigurace pro obohacení**    
+- **Řízená konfigurace pro rozšíření**    
   
-   Znovu jsme navštívili konfigurační prostředí pro obohacení pomocí jednoduchého, řízeného zážitku. Nyní máte jasný postup krok za krokem pro vytváření a úpravy obohacení.
+   Znovu jsme navštívili konfigurační prostředí pro rozšíření pomocí jednoduchého, řízeného zážitku. Nyní máte jasný postup krok za krokem pro vytváření a úpravy rozšíření.
  
-   Kromě toho jsme oddělili konfiguraci připojení pro obohacení třetích stran, aby bylo možné použít stejné připojení pro více obohacení. Jenom správci mohou konfigurovat nová propojení, ale vytvořená propojení jsou k dispozici správcům i přispěvatelům.    
+   Kromě toho jsme oddělili konfiguraci připojení pro rozšíření třetích stran, aby bylo možné použít stejné připojení pro více rozšíření. Jenom správci mohou konfigurovat nová propojení, ale vytvořená propojení jsou k dispozici správcům i přispěvatelům.    
 
    Další informace najdete v článku [Přehled připojení](connections.md).
 
 - **Více rozšíření stejného typu**    
   
-   Nyní uživatelům umožňujeme vytvářet a spravovat více obohacení stejného typu. Například nyní můžete vytvořit dvě samostatná obohacení adres a obohatit tak dva různé segmenty zákazníků. Platí limity na to, kolik obohacení stejného typu lze vytvořit, a liší se v závislosti na typu obohacení.
+   Nyní uživatelům umožňujeme vytvářet a spravovat více rozšíření stejného typu. Například nyní můžete vytvořit dvě samostatná rozšíření adres a rozšířit tak dva různé segmenty zákazníků. Platí limity na to, kolik rozšíření stejného typu lze vytvořit, a liší se v závislosti na typu rozšíření.
   
    Další informace viz [rozšiřování pro profily zákazníků](enrichment-hub.md).
 

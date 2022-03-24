@@ -1,7 +1,7 @@
 ---
 title: Rozšíření profilů zákazníků daty od společnosti Microsoft
-description: Použijte proprietární data od společnosti Microsoft k obohacení vašich zákaznických údajů o afinitách a podílu na sledovanosti.
-ms.date: 11/11/2021
+description: Použijte proprietární data od společnosti Microsoft k rozšíření vašich zákaznických údajů o afinitách a podílu na sledovanosti.
+ms.date: 03/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,22 +12,22 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 77972475c9a448186cee3b1b62eeda7b1996edfc
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 12704ec46832e9463e6115db6c4df64e72bf4f97
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355311"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372665"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obohaťte profily zákazníků o afinity a podíl na sledovanosti (Preview)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Rozšiřte profily zákazníků o afinity a podíl na sledovanosti (Preview)
 
-Použijte proprietární data Microsoftu k obohacení vašich zákaznických dat o afinity značky, afinity zájmu a podílu na sledovanosti. Tyto afinity a podíl na sledovanosti jsou založeny na datech od lidí s demografickými údaji podobnými vašim zákazníkům. Tyto informace vám pomohou lépe porozumět a segmentovat vaše zákazníky na základě jejich afinity nebo podílu sledovanosti vzhledem ke konkrétním značkám a zájmům.
+Použijte proprietární data Microsoftu k rozšíření vašich zákaznických dat o afinity značky, afinity zájmu a podílu na sledovanosti. Tyto afinity a podíl na sledovanosti jsou založeny na datech od lidí s demografickými údaji podobnými vašim zákazníkům. Tyto informace vám pomohou lépe porozumět a segmentovat vaše zákazníky na základě jejich afinity nebo podílu sledovanosti vzhledem ke konkrétním značkám a zájmům.
 
 V přehledech cílové skupiny přejděte na **Data** > **Rozšíření**, kde můžete [nakonfigurovat a zobrazit rozšíření](enrichment-hub.md).
 
-Chcete-li nakonfigurovat obohacení o afinity značky a podílu na sledovanosti, přejděte na kartu **Objevit** a vyberte **Obohatit moje data** na dlaždici **Značky**.
+Chcete-li nakonfigurovat rozšíření o afinity značky a podílu na sledovanosti, přejděte na kartu **Objevit** a vyberte **Rozšířit moje data** na dlaždici **Značky**.
 
-Chcete-li nakonfigurovat obohacení o afinity zájmu a podílu na sledovanosti, přejděte na kartu **Objevit** a vyberte **Obohatit moje data** na dlaždici **Zájmy**.
+Chcete-li nakonfigurovat rozšíření o afinity zájmu a podílu na sledovanosti, přejděte na kartu **Objevit** a vyberte **Rozšířit moje data** na dlaždici **Zájmy**.
 
    > [!div class="mx-imgBorder"]
    > ![Dlaždice Značky a zájmy.](media/BrandsInterest-tile-Hub.png "Dlaždice Značky a zájmy")
@@ -58,13 +58,13 @@ V závislosti na granularitě, kterou chcete pro měření afinity, můžete pou
 
 ## <a name="share-of-voice-sov"></a>Podíl na sledovanosti
 
-Podíl na sledovanosti počítáme na 100bodové škále. Celkový podíl na sledovanosti napříč všemi značkami nebo zájmy pro každý obohacený zákaznický profil se rovná 100. Na rozdíl od afinity je podíl na sledovanosti relativní ke značkám a zájmům, které vyberete. Například hodnoty podíli na sledovanosti pro Microsoft se mohou lišit, pokud jsou vybrané značky (Microsoft, GitHub) a (Microsoft, LinkedIn).
+Podíl na sledovanosti počítáme na 100bodové škále. Celkový podíl na sledovanosti napříč všemi značkami nebo zájmy pro každý rozšířený zákaznický profil se rovná 100. Na rozdíl od afinity je podíl na sledovanosti relativní ke značkám a zájmům, které vyberete. Například hodnoty podíli na sledovanosti pro Microsoft se mohou lišit, pokud jsou vybrané značky (Microsoft, GitHub) a (Microsoft, LinkedIn).
 
 ## <a name="supported-countriesregions"></a>Podporované země/oblasti
 
 V současné době podporujeme následující země/oblasti: Austrálie, Kanada (angličtina), Francie, Německo, Spojené království nebo Spojené státy americké (angličtina).
 
-Chcete-li vybrat zemi nebo region, otevřete **Obohacování značek** nebo **Obohacování zájmů** a vyberte **Změna** vedle **Země/Region**. V podokně **Nastavení země/oblasti** vyberte požadovanou možnost a vyberte **Použít**.
+Chcete-li vybrat zemi nebo region, otevřete **Rozšíření značek** nebo **Rozšíření zájmů** a vyberte **Změna** vedle **Země/Region**. V podokně **Nastavení země/oblasti** vyberte požadovanou možnost a vyberte **Použít**.
 
 ### <a name="implications-related-to-country-selection"></a>Důsledky výběru země
 
@@ -72,11 +72,11 @@ Chcete-li vybrat zemi nebo region, otevřete **Obohacování značek** nebo **Ob
 
 - Při [výběru odvětví](#define-your-brands-or-interests) se vám zobrazí nejrelevantnější značky nebo zájmy na základě vybrané země nebo oblasti.
 
-- Při [obohacování profilů](#refresh-enrichment) obohatíme všechny profily zákazníků, pro které získáváme data pro vybrané značky a zájmy, včetně profilů, které nejsou ve vybrané zemi nebo oblasti. Pokud jste například vybrali Německo, rozšíříme profily nacházející se ve Spojených státech, pokud máme k dispozici údaje o vybraných značkách a zájmech v USA.
+- Při [rozšíření profilů](#refresh-enrichment) rozšíříme všechny profily zákazníků, pro které získáváme data pro vybrané značky a zájmy, včetně profilů, které nejsou ve vybrané zemi nebo oblasti. Pokud jste například vybrali Německo, rozšíříme profily nacházející se ve Spojených státech, pokud máme k dispozici údaje o vybraných značkách a zájmech v USA.
 
 ## <a name="configure-enrichment"></a>Konfigurace rozšíření
 
-Asistované prostředí vám pomůže s konfigurací obohacení. 
+Asistované prostředí vám pomůže s konfigurací rozšíření. 
 
 ### <a name="define-your-brands-or-interests"></a>Uveďte své značky nebo zájmy
 
@@ -93,7 +93,7 @@ Zkontrolujte své výchozí předvolby rozšíření a podle potřeby je aktuali
 
 ### <a name="select-entity-to-enrich"></a>Vyberte entitu, kterou chcete rozšířit.
 
-Vyberte **Obohacená entita** a vyberte datovou sadu, kterou chcete obohatit o data od společnosti Microsoft. Můžete vybrat entitu Zákazník k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
+Vyberte **Rozšířená entita** a vyberte datovou sadu, kterou chcete rozšířit o data od společnosti Microsoft. Můžete vybrat entitu Zákazník k rozšíření všech profilů vašich zákazníků nebo vyberte entitu segmentu k rozšíření pouze profilů zákazníků obsažených v tomto segmentu.
 
 ### <a name="map-your-fields"></a>Mapování polí
 
@@ -123,9 +123,9 @@ Nakonec si přečtěte informace a uveďte název rozšíření.
 
 ## <a name="refresh-enrichment"></a>Aktualizace rozšíření
 
-Spusťte obohacení po konfiguraci značek, zájmů a mapování terénu pro demografii. Chcete-li zahájit proces, vyberte **Spustit** na stránce konfigurace značek nebo zájmů. Kromě toho můžete nechat systém spustit rozšíření automaticky jako součást plánované aktualizace.
+Spusťte rozšíření po konfiguraci značek, zájmů a mapování terénu pro demografii. Chcete-li zahájit proces, vyberte **Spustit** na stránce konfigurace značek nebo zájmů. Kromě toho můžete nechat systém spustit rozšíření automaticky jako součást plánované aktualizace.
 
-V závislosti na velikosti vašich zákaznických dat může dokončení obohacování trvat několik minut.
+V závislosti na velikosti vašich zákaznických dat může dokončení rozšíření trvat několik minut.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
@@ -135,7 +135,7 @@ Po spuštění procesu rozšíření přejděte na **Moje rozšíření**, kde z
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Náhled výsledků po spuštění procesu rozšíření.":::
 
-Najdete zde graf s počtem obohacených zákaznických profilů v průběhu času a náhledy obohacených entit. Prohlédněte si obohacená data výběrem možnosti **Další informace** v grafech **Úroveň afinity** nebo **Podíl na sledovanosti** grafy. Obohacená data pro značky přechízí do entit **BrandAffinityFromMicrosoft** a **BrandShareOfVoiceFromMicrosoft**. Údaje pro zájmy jsou v entitách **InterestAffinityFromMicrosoft** a **InterestShareOfVoiceFromMicrosoft**. Tyto entity najdete také ve skupině **Rozšíření** v umístění **Data** > **Entity**.
+Najdete zde graf s počtem rozšířených zákaznických profilů v průběhu času a náhledy rozšířených entit. Prohlédněte si rozšířená data výběrem možnosti **Další informace** v grafech **Úroveň afinity** nebo **Podíl na sledovanosti** grafy. Rozšířená data pro značky přechízí do entit **BrandAffinityFromMicrosoft** a **BrandShareOfVoiceFromMicrosoft**. Údaje pro zájmy jsou v entitách **InterestAffinityFromMicrosoft** a **InterestShareOfVoiceFromMicrosoft**. Tyto entity najdete také ve skupině **Rozšíření** v umístění **Data** > **Entity**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Zobrazení rozšíření dat na kartě zákazníka
 
