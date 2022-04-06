@@ -1,24 +1,19 @@
 ---
 title: Vytvoření prostředí v Customer Insights
 description: Kroky k vytvoření prostředí s licencovaným předplatným pro Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
-- ci-home
-- customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354087"
+  - ci-home
+  - customerInsights
 ---
+
 # <a name="create-an-environment-in-audience-insights"></a>Vytvoření prostředí v přehledech cílové skupiny
 
 Tento článek vysvětluje, jak vytvořit nové prostředí poté, co vaše organizace zakoupila předplatné Dynamics 365 Customer Insights. 
@@ -83,14 +78,16 @@ Poskytněte své vlastní prodtředí Microsoft Dataverse pro sdílení dat (pro
 Připojení k prostředí Dataverse vám také umožňuje [ingestovat data z místních zdrojů dat pomocí datových toků a bran platformy Power Platform](data-sources.md#add-data-from-on-premises-data-sources). Můžete také použít [vestavěné modely predikce](predictions-overview.md?tabs=b2c#out-of-box-models) připojením k prostředí Dataverse.
 
 > [!IMPORTANT]
-> Customer Insights a Dataverse musí být ve stejné oblasti, aby bylo možné sdílet data.
+> 1. Customer Insights a Dataverse musí být ve stejné oblasti, aby bylo možné sdílet data.
+> 1. Musíte mít roli globálního správce v prostředí Dataverse. Ověřte, zda je toto prostředí [Dataverse přidruženo](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) k určitým skupinám zabezpečení a ujistěte se, že jste do těchto skupin zabezpečení přidáni.
+> 1. K tomuto prostředí Dataverse již není přidruženo žádné existující prostředí Customer Insights. Naučte se, jak [odebrat existující připojení k prostředí Dataverse](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="sdílení dat s Microsoft Dataverse automaticky povolenémo pro nové instance sítě.":::
 
-> [!NOTE]
-> Customer Insights nepodporuje následující scénáře sdílení dat:
-> - Pokud uložíte všechna data do vlastního úložiště Azure Data Lake Storage, nebudete moci povolit sdílení dat pomocí datového jezera spravovaného Dataverse.
-> - Pokud povolíte sdílení dat pomocí Dataverse, nebudete moci [vytvořit předpokládané nebo chybějící hodnoty v entitě](predictions.md).
+Další informace o povolení sdílení dat s Microsoft Dataverse z vlastního Azure Data Lake Storage viz [Připojení k Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+Customer Insights nepodporuje následující scénáře sdílení dat:
+- Pokud povolíte sdílení dat pomocí Dataverse, nebudete moci [vytvořit předpokládané nebo chybějící hodnoty v entitě](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Krok 4: Dokončení nastavení
 

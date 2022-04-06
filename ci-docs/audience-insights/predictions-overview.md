@@ -1,20 +1,15 @@
 ---
 title: Přehled podporovaných scénářů predikcí
-description: Scénáře a možnosti predikcí, se kterými se setkáte v aplikaci Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+description: 'Scénáře a možnosti predikcí, se kterými se setkáte v aplikaci Dynamics 365 Customer Insights.'
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228236"
 ---
+
 # <a name="predictions-overview"></a>Přehled predikcí
 
 Dynamics 365 Customer Insights je vybavena řadou možností, které využívají AI a strojové učení k předpovídání dat. 
@@ -36,6 +31,11 @@ Nejjednodušší způsob, jak začít s předpovídáním dat, jsou předem defi
 - [Úbytek transakcí](predict-transactional-churn.md): Předpovídá, zda si zákazník v určitém časovém rámci již nebude kupovat vaše produkty nebo služby.
 
 ---
+
+> [!TIP]
+> Doporučujeme, abyste předpřipravené modely pravidelně aktualizovali o aktualizovaná data, abyste zajistili, že budou přesně informovat o vašem případu obchodního použití. Data se aktualizují ad-hoc, když systém ingestuje nové nebo aktualizované zdroje dat. Modely však v tomto případě pouze přehodnotí skóre a nadále budou používat stávající trénovací data.
+> 
+> V prostředí konfigurace můžete nakonfigurovat **Plán aktualizací** nastavením plánu přeškolení modelu. Model se podle tohoto plánu přeškolí a přehodnotí skóre. Tento plán můžete kdykoli změnit.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integrace Azure Machine Learning

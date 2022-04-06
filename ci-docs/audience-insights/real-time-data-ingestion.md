@@ -1,5 +1,5 @@
 ---
-title: Přijímání a omezení dat v reálném čase
+title: Příjem dat v reálném čase (Preview)
 description: Obecné informace o funkcích v reálném čase v přehledech cílové skupiny.
 ms.date: 10/27/2020
 ms.reviewer: mhart
@@ -9,15 +9,10 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-- ci-system-api-usage
-- customerInsights
-ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355467"
+  - ci-system-api-usage
+  - customerInsights
 ---
+
 # <a name="real-time-data-ingestion-preview"></a>Příjem dat v reálném čase (náhled)
 
 Díky funkcím téměř v reálném čase můžete během několika sekund vidět nejnovější interakce, které vaši zákazníci provedli s vašimi produkty nebo službami.

@@ -9,23 +9,20 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-- ci-customers-page
-- ci-customer-card
-- ci-activities
-- ci-activities-wizard
-- customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354873"
+  - ci-customers-page
+  - ci-customer-card
+  - ci-activities
+  - ci-activities-wizard
+  - customerInsights
 ---
+
 # <a name="customer-profiles"></a>Profily zákazníků
 
 Stránka **Zákazníci** zobrazuje kombinovaný pohled na vaše sjednocené zákaznické profily. Profily zákazníků jsou k dispozici, jakmile [vytvoříte sjednocenou entitu zákazníka](data-unification.md). Stránka vám umožňuje vyhledávat zákazníky a definovat index pro toto vyhledávání.
 
-Zákazníky mohou být jednotlivci nebo organizace. Každý zákaznický profil je reprezentován dlaždicí. Pomocí ovládacích prvků stránkování získáte další záznamy. Karta zobrazuje pole z entity *Zákazník* , jak je definována v souboru **indexu vyhledávání a filtrování**. Výběrem dlaždice zobrazíte data pro vybraného zákazníka na vyhrazené stránce s názvem [Stránka s podrobnostmi o zákazníkovi](customer-profiles.md#customer-details-page).
+Zákazníky mohou být jednotlivci nebo organizace. Každý zákaznický profil je reprezentován dlaždicí. Pomocí ovládacích prvků stránkování získáte další záznamy. Karta zobrazuje pole z entity *Zákazník* , jak je definována v souboru **indexu vyhledávání a filtrování**. Pořadí polí na jednotlivých kartách vybírá systém.
+
+Výběrem dlaždice zobrazíte data pro vybraného zákazníka na vyhrazené stránce s názvem [Stránka s podrobnostmi o zákazníkovi](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Stránka zákazníků zobrazující dlaždice výsledků](media/customers-page-result-tiles-B2C.png "Stránka zákazníků zobrazující dlaždice výsledků")

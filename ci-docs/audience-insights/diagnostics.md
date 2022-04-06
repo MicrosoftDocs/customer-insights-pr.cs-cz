@@ -1,6 +1,6 @@
 ---
 title: Audit Dynamics 365 Customer Insights s Azure Monitor
-description: Přečtěte si, jak odesílat protokoly do Microsoft Azure Monitor.
+description: 'Přečtěte si, jak odesílat protokoly do Microsoft Azure Monitor.'
 ms.date: 12/14/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -9,15 +9,10 @@ author: brndkfr
 ms.author: bkief
 manager: shellyha
 searchScope:
-- ci-system-diagnostic
-- customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376408"
+  - ci-system-diagnostic
+  - customerInsights
 ---
+
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Přesměrování protokolů v Dynamics 365 Customer Insights s Azure Monitor (Preview)
 
 Dynamics 365 Customer Insights poskytuje přímou integraci s Azure Monitor. Protokoly prostředků Azure Monitor umožňují monitorovat a odesílat protokoly do [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) nebo je streamovat do [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
@@ -230,7 +225,7 @@ Události pracovního postupu mají následující vlastnosti.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Ano      | Ano  | Vždy `WorkflowEvent` označující událost jako událost pracovního postupu.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Ano      | Ano  | Identifikátor běhu pracovního postupu. Všechny události pracovního postupu a úkolů v rámci provádění pracovního postupu mají stejné `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Ano      | Ano  | Identifikátor operace, viz [Typy operací].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Ano      | Ano  | Identifikátor operace, viz [Typy operací](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Ano      | No   | Pouze pracovní postup. Počet úloh, které aktivuje pracovní postup.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Ano      | No   | Nepovinné. Pouze pracovní postup událostí. Azure Active Directory [objectId uživatele](/azure/marketplace/find-tenant-object-id#find-user-object-id), který spustil pracovní postup, viz také `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Ano      | No   | `full` nebo `incremental` aktualizace.                                                                                                                                                                                                                            |

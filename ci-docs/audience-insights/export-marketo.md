@@ -1,6 +1,6 @@
 ---
 title: Export dat Customer Insights do služby Marketo
-description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Marketo.
+description: 'Zjistěte, jak nakonfigurovat propojení a exportovat je do Marketo.'
 ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,13 +8,8 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231971"
 ---
+
 # <a name="export-segments-to-marketo-preview"></a>Export segmentů do Marketo (náhled)
 
 Exportem segmentů sjednocených profilů zákazníků můžete generovat kampaně, poskytovat e-mailový marketing a využívat konkrétní skupiny zákazníků pomocí služby Marketo.
@@ -63,7 +58,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. Zadejte **[ID seznamu Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID seznamu je čistě číselná hodnota. Například pokud je vaše ID seznamu Marketo ST12345A7, odstraňte znak před a za číslicemi a zadejte `12345`. 
 
-1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. 
+1. V sekci **Párování dat** vyberte alespoň jedno pole, které představuje e-mailovou adresu zákazníka nebo ID Marketo zákazníka. 
 
 1. Volitelně můžete exportovat **křestní jméno**, **příjmení**, **město**, **stát** a **zemi/region** pro vytvoření více přizpůsobených e-mailů. Volbou **Přidat atribut** namapujte tato pole.
 

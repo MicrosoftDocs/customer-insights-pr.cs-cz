@@ -1,7 +1,7 @@
 ---
 title: Použití zdrojů dat pro ingestaci dat
-description: Naučte se, jak importovat data z různých zdrojů.
-ms.date: 12/06/2021
+description: 'Naučte se, jak importovat data z různých zdrojů.'
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -9,16 +9,11 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-data-sources
-- ci-create-data-source
-- customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354041"
+  - ci-data-sources
+  - ci-create-data-source
+  - customerInsights
 ---
+
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
 
@@ -47,7 +42,18 @@ Zdroje dat, které jsou vytvořeny po přidružení prostředí Dataverse ke Cus
 
 Datové brány z existujícího prostředí Power BI nebo Power Apps bude viditelné a můžete jej znovu použít ve službě Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy, na které chcete přejít v prostředí Microsoft Power Platform, kde můžete prohlížet a konfigurovat místní datové brány.
 
+> [!IMPORTANT]
+> Ujistěte se, že jsou vaše brány aktualizovány na nejnovější verzi. Můžete nainstalovat aktualizaci a překonfigurovat bránu přímo z výzvy zobrazené na obrazovce brány nebo [stáhnout nejnovější verzi](https://powerapps.microsoft.com/downloads/). Pokud nepoužíváte nejnovější verzi brány, aktualizace toku dat selže s chybovými zprávami, například **Klíčové slovo není podporováno: vlastnosti konfigurace. Název parametru: klíčové slovo**.
+
 ## <a name="review-ingested-data"></a>Zkontrolujte přijatá data
+Pokud vaše prostředí obsahuje toky dat Power Platform, stránka **Zdroje dat** bude obsahovat tři sekce: 
+- **Sdílené**: Zdroje dat, které mohou spravovat všichni správci Customer Insights. Příklady sdílených zdrojů dat jsou toky dat Power BI, váš vlastní účet úložiště nebo připojení k datovému jezeru spravovanému pomocí Dataverse.
+- **Spravováno mnou**: Vytvořené toky dat Power Platform, které můžete spravovat pouze vy. Ostatní správci Customer Insights mohou tyto toky dat pouze zobrazit, ale nemohou je upravovat, aktualizovat ani odstraňovat.
+- **Spravováno ostatními**: Toky dat Power Platform vytvořené jinými správci. Můžete je pouze zobrazovat. Uvádí vlastníka toku dat, kterého lze kontaktovat s žádostí o pomoc.
+> [!NOTE]
+> Všechny entity mohou zobrazovat a používat ostatní uživatelé. Kontextovost uživatele platí pouze pro zdroje dat a ne pro entity, které jsou výsledkem těchto toků dat.
+
+Pokud nejsou použity žádné toky dat Power Platform, neuvidíte žádné skupiny ani sekce. Stránka **Zdroje dat** obsahuje pouze seznam všech zdrojů dat.
 
 Uvidíte název každého přijatého zdroje dat, jeho stav a poslední čas, kdy byla data pro tento zdroj aktualizována. Seznam zdrojů dat můžete seřadit podle každého sloupce.
 

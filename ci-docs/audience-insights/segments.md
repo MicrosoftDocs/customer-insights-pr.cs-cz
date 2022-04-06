@@ -1,7 +1,7 @@
 ---
 title: Segmenty v přehledech cílové skupiny
 description: Vytvořte přehled segmentů a způsob jejich vytváření a správy.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -9,18 +9,13 @@ ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-customers-page
-- ci-enrichment-details
-- ci-segments
-- ci-segment-details
-- customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355975"
+  - ci-customers-page
+  - ci-enrichment-details
+  - ci-segments
+  - ci-segment-details
+  - customerInsights
 ---
+
 # <a name="segments-overview"></a>Přehled segmentů
 
 Segmenty umožňují seskupit zákazníky na základě demografických, transakčních nebo behaviorálních atributů. Segmenty můžete použít k cílení propagačních kampaní, prodejních aktivit a akcí podpory zákazníků k dosažení vašich obchodních cílů.
@@ -68,7 +63,9 @@ Když vyberete segment, jsou k dispozici následující akce:
 
 ## <a name="refresh-segments"></a>Aktualizovat segmenty
 
-Můžete aktualizovat všechny segmenty najednou výběrem **Aktualizovat vše** na stránce **Segmenty** nebo můžete aktualizovat jeden nebo více segmentů, když je vyberete a z možností vyberete volbu **Aktualizovat**. Případně můžete nakonfigurovat opakovanou aktualizaci **Správce** > **Systém** > **Plán**.
+Můžete aktualizovat všechny segmenty najednou výběrem **Aktualizovat vše** na stránce **Segmenty** nebo můžete aktualizovat jeden nebo více segmentů, když je vyberete a z možností vyberete volbu **Aktualizovat**. Případně můžete nakonfigurovat opakovanou aktualizaci **Správce** > **Systém** > **Plán**. Při konfiguraci opakované aktualizace platí následující pravidla:
+- Všechny segmenty s typem **Dynamický** nebo **Rozšíření** se automaticky aktualizují podle nastavené kadence. Po dokončení obnovy **Stav** označuje, zda při aktualizaci segmentu došlo k nějakým problémům. **Poslední aktualizace** zobrazuje časové razítko poslední úspěšné aktualizace. Pokud dojde k chybě, výběrem chyby zobrazíte podrobnosti o tom, co se stalo.
+- Segmenty s typem **Statický** *nebudou* automaticky aktualizovány. **Poslední aktualizace** zobrazuje časové razítko posledního spuštění nebo ruční aktualizace statických segmentů.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

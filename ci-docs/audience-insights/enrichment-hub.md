@@ -1,7 +1,7 @@
 ---
 title: Rozšíření sjednocených profilů zákazníka
 description: Využijte možnosti rozšíření svých zákaznických dat.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,17 +10,12 @@ ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
-- ci-enrichments
-- ci-enrichment-details
-- ci-enrichment-wizard
-- customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372694"
+  - ci-enrichments
+  - ci-enrichment-details
+  - ci-enrichment-wizard
+  - customerInsights
 ---
+
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
 K rozšíření svých zákaznických dat použijte data ze zdrojů, jako je Microsoft a další partneři.
@@ -97,5 +92,19 @@ Chcete -li zobrazit stav rozšíření
 1. V podokně **Podrobnosti o průběhu** rozbalte část **Rozšíření**. 
 1. Pod rozšířením, pro které chcete vidět průběh, vyberte **Zobrazit podrobnosti**. 
 1. V podokně **Podrobnosti o úkolu** vyberte **Zobrazit podrobnosti** a zobrazte procesy, které se podílejí na aktualizaci rozšíření, a jejich stav. 
+
+## <a name="enrichment-results"></a>Výsledky rozšíření
+
+Po dokončení rozšíření můžete zkontrolovat jeho výsledky.
+
+1. Přejděte na **Data** > **Rozšíření**. 
+1. Vyberte rozšíření, o kterém chcete informace.
+
+Všechna rozšíření ukazují základní informace, jako je počet rozšířených profilů, náhled generované entity rozšíření a počet rozšířených profilů v průběhu času. Pokud je k dispozici možnost **Počet zákazníků obohacených o pole**, můžete procházet k podrobnostem pokrytí každého rozšířeného pole.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Stránka s výsledky rozšíření.":::
+
+Některá rozšíření také zobrazují informace specifické pro typ rozšíření. Další informace naleznete v dokumentaci k příslušnému rozšíření.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

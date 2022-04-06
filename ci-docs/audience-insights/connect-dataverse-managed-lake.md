@@ -1,7 +1,7 @@
 ---
 title: Připojení k tabulkám v Microsoft Dataverse
 description: Importovat data ze spravovaného datového jezera Microsoft Dataverse.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -9,18 +9,11 @@ ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
 searchScope:
-- ci-dataverse
-- customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354133"
+  - ci-dataverse
+  - customerInsights
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Připojte se k datům ve spravovaném datovém jezeru Microsoft Dataverse
-
-
 
 Tento článek poskytuje informace, jak se uživatelé Dataverse mohou rychle připojit k analytickým entitám ve spravovaném jezeru Microsoft Dataverse. 
 
@@ -29,7 +22,8 @@ Tento článek poskytuje informace, jak se uživatelé Dataverse mohou rychle p�
 
 ## <a name="important-considerations"></a>Důležitá poznámka
 
-Data uložená v online službách, například Azure Data Lake Storage, mohou být uloženy na jiném místě, než kde jsou zpracovávána nebo ukládána data Dynamics 365 Customer Insights. Importem nebo připojením k datům uloženým v online službách souhlasíte s tím, že data lze přenášet a ukládat pomocí Dynamics 365 Customer Insights. [Další informace naleznete v Microsoft Trust Center](https://www.microsoft.com/trust-center).
+1. Data uložená v online službách, například Azure Data Lake Storage, mohou být uloženy na jiném místě, než kde jsou zpracovávána nebo ukládána data Dynamics 365 Customer Insights. Importem nebo připojením k datům uloženým v online službách souhlasíte s tím, že data lze přenášet a ukládat pomocí Dynamics 365 Customer Insights. [Další informace naleznete v Microsoft Trust Center](https://www.microsoft.com/trust-center).
+2. Viditelné jsou pouze entity Dataverse se zapnutým [sledováním změn](/power-platform/admin/enable-change-tracking-control-data-synchronization). Tyto entity lze exportovat do datového jezera spravovaného pomocí Dataverse a použít v Customer Insights. Předpřipravené tabulky Dataverse mají ve výchozím nastavení povoleno sledování změn. U vlastních tabulek musíte sledování změn zapnout. Chcete-li zkontrolovat, zda je u tabulky Dataverse povoleno sledování změn, přejděte na [Power Apps](https://make.powerapps.com) > **Data** > **Tabulky**. Vyhledejte tabulku, která vás zajímá, a vyberte ji. Jděte na **Nastavení** > **Upřesnit možnosti** a zkontrolujte nastavení **Sledovat změny**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Připojení k datovému jezeru spravovaném pomocí Dataverse
 

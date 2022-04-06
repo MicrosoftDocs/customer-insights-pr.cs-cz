@@ -24,8 +24,6 @@
       href: trial-signup.md
     - name: Nejčastější dotazy ke zkušební verzi
       href: trial-FAQ.md
-- name: Zahájení placenou licencí
-  href: paid-license.md
 - name: Přístup do prostředí
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Přehledy pro cílovou skupinu
@@ -36,16 +34,18 @@
       href: audience-insights/overview.md
     - name: Nové a aktualizované funkce
       href: audience-insights/whats-new-audience-insights.md
-    - name: Začínáme
+    - name: Seznámení
       items:
         - name: Stručná úvodní příručka
           href: audience-insights/get-started.md
+        - name: Zahájení placenou licencí
+          href: paid-license.md
         - name: Vytvořit nové prostředí
           href: audience-insights/create-environment.md
         - name: Prozkoumání přehledů cílových skupin
           href: audience-insights/home.md
-    - name: Práce s obchodními účty
-      href: audience-insights/work-with-business-accounts.md
+        - name: Práce s obchodními účty
+          href: audience-insights/work-with-business-accounts.md
     - name: Zdroje dat
       items:
         - name: Přehled zdrojů dat
@@ -64,8 +64,6 @@
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Příjem dat v reálném čase
           href: audience-insights/real-time-data-ingestion.md
-        - name: Vysvětlení entita a datových sad
-          href: audience-insights/entities.md
     - name: Sjednocení dat
       items:
         - name: Přehled sjednocení dat
@@ -76,16 +74,6 @@
           href: audience-insights/match-entities.md
         - name: Správa entit
           href: audience-insights/merge-entities.md
-        - name: Kontrola profilů sjednoceného rozhraní
-          href: audience-insights/customer-profiles.md
-        - name: Filtrování sjednocených profilů zákazníků
-          href: audience-insights/search-filter-index.md
-        - name: Budování vztahů a propojených entit
-          href: audience-insights/relationships.md
-        - name: Uvedení aktivit zákazníka
-          href: audience-insights/activities.md
-        - name: Definování sémantických mapování
-          href: audience-insights/semantic-mappings.md
     - name: Rozšiřování dat
       items:
         - name: Rozšíření profilů zákazníků
@@ -110,7 +98,15 @@
           href: audience-insights/enrichment-office.md
         - name: Rozšíření pomocí vlastního importu SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmenty
+    - name: Sjednocené profily
+      items:
+        - name: Kontrola profilů sjednoceného rozhraní
+          href: audience-insights/customer-profiles.md
+        - name: Filtrování sjednocených profilů zákazníků
+          href: audience-insights/search-filter-index.md
+        - name: Definování aktivit zákazníka
+          href: audience-insights/activities.md
+    - name: Segments
       items:
         - name: Přehled segmentů
           href: audience-insights/segments.md
@@ -190,6 +186,8 @@
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
+            - name: Braze
+              href: audience-insights/export-braze.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
             - name: Constant Contact
@@ -204,6 +202,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Iterable
+              href: audience-insights/export-iterable.md
             - name: Klaviyo
               href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
@@ -242,6 +242,18 @@
               href: audience-insights/export-power-automate.md
             - name: Power BI
               href: audience-insights/export-power-bi.md
+    - name: Entity
+      items:
+        - name: Informace o entitách
+          href: audience-insights/entities.md
+        - name: Kontrola schémat entit v Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Data Customer Insights v Dataverse
+          href: audience-insights/customer-insights-dataverse.md
+        - name: Budování vztahů a propojených entit
+          href: audience-insights/relationships.md
+        - name: Definování sémantických mapování
+          href: audience-insights/semantic-mappings.md
     - name: Správa
       items:
         - name: Nastavení konfigurace systému
@@ -252,15 +264,17 @@
           href: audience-insights/connections.md
         - name: Správa více prostředí
           href: audience-insights/manage-environments.md
-        - name: Zabezpečení
-          items:
-            - name: Přineste si vlastní trezor klíčů
-              href: audience-insights/use-azure-key-vault.md
-            - name: Připojení k účtu úložiště ADLS pomocí instančního objektu
-              href: audience-insights/connect-service-principal.md
-            - name: Export diagnostických protokolů
-              href: audience-insights/diagnostics.md
-    - name: Rozšiřitelnost
+        - name: Přineste si vlastní trezor klíčů
+          href: audience-insights/use-azure-key-vault.md
+        - name: Připojení k účtu úložiště pomocí instančního objektu
+          href: audience-insights/connect-service-principal.md
+        - name: Export diagnostických protokolů
+          href: audience-insights/diagnostics.md
+        - name: Omezení služby
+          href: service-limits.md
+        - name: Práva a požadavky DSR
+          href: dsr-rights-requests.md
+    - name: Rozhraní API
       items:
         - name: Kontrola schémat entit v Common Data Model
           href: audience-insights/entity-schemas.md
@@ -306,9 +320,5 @@
           href: consent-management/predictions-consent-data.md
 - name: Přehledy zapojení (Preview)
   href: engagement-insights/overview.md
-- name: Omezení služby
-  href: service-limits.md
-- name: Práva a požadavky DSR
-  href: dsr-rights-requests.md
 - name: Získání podpory
   href: /power-platform/admin/get-help-support
