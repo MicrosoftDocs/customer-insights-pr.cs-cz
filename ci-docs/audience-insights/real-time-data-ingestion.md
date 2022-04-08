@@ -9,10 +9,15 @@ author: Nils-2m
 ms.author: nikeller
 manager: shellyha
 searchScope:
-  - ci-system-api-usage
-  - customerInsights
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 138704445d52df3336af6af60420f0bd0ee0c639
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464018"
 ---
-
 # <a name="real-time-data-ingestion-preview"></a>Příjem dat v reálném čase (náhled)
 
 Díky funkcím téměř v reálném čase můžete během několika sekund vidět nejnovější interakce, které vaši zákazníci provedli s vašimi produkty nebo službami.
