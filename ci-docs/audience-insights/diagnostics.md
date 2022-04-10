@@ -1,6 +1,6 @@
 ---
 title: Audit Dynamics 365 Customer Insights s Azure Monitor
-description: 'Přečtěte si, jak odesílat protokoly do Microsoft Azure Monitor.'
+description: Přečtěte si, jak odesílat protokoly do Microsoft Azure Monitor.
 ms.date: 12/14/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -9,10 +9,15 @@ author: brndkfr
 ms.author: bkief
 manager: shellyha
 searchScope:
-  - ci-system-diagnostic
-  - customerInsights
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523660"
 ---
-
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Přesměrování protokolů v Dynamics 365 Customer Insights s Azure Monitor (Preview)
 
 Dynamics 365 Customer Insights poskytuje přímou integraci s Azure Monitor. Protokoly prostředků Azure Monitor umožňují monitorovat a odesílat protokoly do [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) nebo je streamovat do [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).

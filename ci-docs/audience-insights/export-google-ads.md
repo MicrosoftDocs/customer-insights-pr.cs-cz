@@ -1,6 +1,6 @@
 ---
 title: Export dat Customer Insights do služby Google Ads
-description: 'Zjistěte, jak nakonfigurovat propojení a exportovat je do Google Ads.'
+description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Google Ads.
 ms.date: 03/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -8,8 +8,13 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
+ms.openlocfilehash: 7a85237f7aff564d6b540b2c11553a52f875fac4
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523786"
 ---
-
 # <a name="export-segments-to-google-ads-preview"></a>Export segmentů do Google Ads (náhled)
 
 Exportujte segmenty sjednocených profilů zákazníků do seznamu cílové skupiny Google Ads a použijte je k inzerci v Google Search, Gmailu, YouTube a síti Google Display Network. 

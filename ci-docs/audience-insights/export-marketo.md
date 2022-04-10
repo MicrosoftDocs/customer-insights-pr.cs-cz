@@ -1,6 +1,6 @@
 ---
 title: Export dat Customer Insights do služby Marketo
-description: 'Zjistěte, jak nakonfigurovat propojení a exportovat je do Marketo.'
+description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Marketo.
 ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,8 +8,13 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487507"
 ---
-
 # <a name="export-segments-to-marketo-preview"></a>Export segmentů do Marketo (náhled)
 
 Exportem segmentů sjednocených profilů zákazníků můžete generovat kampaně, poskytovat e-mailový marketing a využívat konkrétní skupiny zákazníků pomocí služby Marketo.

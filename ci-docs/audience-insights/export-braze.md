@@ -1,6 +1,6 @@
 ---
 title: Export dat Customer Insights do Braze
-description: 'Zjistěte, jak nakonfigurovat připojení a export do Braze.'
+description: Zjistěte, jak nakonfigurovat připojení a export do Braze.
 ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -8,8 +8,13 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: 8d7cf95c1f157c771b2d655346464e5af03d73b9
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8524143"
 ---
-
 # <a name="export-segment-lists-to-braze-preview"></a>Export seznamů segmentů do Braze (Preview)
 
 Zjistěte, jak exportovat segmenty profilů Unified Customer Profile do Braze a použít je pro marketingové aktivity.

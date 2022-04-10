@@ -9,10 +9,15 @@ ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
 searchScope:
-  - ci-dataverse
-  - customerInsights
+- ci-dataverse
+- customerInsights
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464058"
 ---
-
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Připojte se k datům ve spravovaném datovém jezeru Microsoft Dataverse
 
 Tento článek poskytuje informace, jak se uživatelé Dataverse mohou rychle připojit k analytickým entitám ve spravovaném jezeru Microsoft Dataverse. 
