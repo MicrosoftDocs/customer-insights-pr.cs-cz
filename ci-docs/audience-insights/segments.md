@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508558"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529531"
 ---
 # <a name="segments-overview"></a>Přehled segmentů
 
@@ -47,24 +47,30 @@ Existuje několik způsobů, jak vytvořit nový segment:
 
 ## <a name="manage-existing-segments"></a>Správa existujících segmentů
 
-Jděte na stránku **segmenty**, kde můžete zobrazit všechny uložené segmenty a spravovat je.
+Jděte na stránku **Segmenty**, kde můžete zobrazit všechny uložené segmenty a spravovat je.
 
 Každý segment je reprezentován řádkem, která obsahuje další informace o segmentu.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Vybraný segment s rozevíracím seznamem možností a dostupnými možnostmi.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Vybraný segment s rozevíracím seznamem možností a dostupnými možnostmi." lightbox="media/segments-selected-segment.png":::
 
-Když vyberete segment, jsou k dispozici následující akce:
+Po výběru segmentu jsou k dispozici následující akce:
 
 - **Zobrazit** podrobnosti o segmentu, včetně trendu počtu členů, náhledu členů segmentu.
+- **Stáhnout** seznam členů jako soubor .CSV.
 - **Upravit** segment změnit jeho vlastnosti.
 - **Vytvořit duplicitu** segmentu. Můžete se rozhodnout upravit její vlastnosti hned nebo duplicitu jednoduše uložit.
 - **Obnovit** segment a zahrnout nejnovější data.
-- **Aktivace** nebo **deaktivace** segmentu. Segmenty mají dva možné stavy – aktivní nebo neaktivní. Tyto stavy jsou užitečné při úpravách segmentu. Pro neaktivní segmenty existuje jejich definice, ale zatím neobsahuje žádné zákazníky. Když aktivujete segment, jeho stav se změní z „neaktivní“ na „aktivní“ a začne hledat zákazníky, kteří odpovídají definici segmentu. Pokud je konfigurována [plánovaná aktualizace](system.md#schedule-tab), neaktivní segmenty mají **Stav** uveden jako **Přeskočeno**, což označuje, že u nich neproběhl ani pokus o aktualizaci. Když je neaktivní segment aktivován, aktualizuje se a bude součástí plánovaných aktualizací.
+- **Aktivace** nebo **deaktivace** segmentu. Pro neaktivní segmenty existuje jejich definice, ale zatím neobsahuje žádné zákazníky. Aktivní segment hledá zákazníky, kteří odpovídají definici segmentu. Pokud je konfigurována [plánovaná aktualizace](system.md#schedule-tab), neaktivní segmenty mají **Stav** uveden jako **Přeskočeno**, což označuje, že u nich neproběhl ani pokus o aktualizaci. Když je neaktivní segment aktivován, aktualizuje se a bude součástí plánovaných aktualizací.
   Případně můžete použít funkci **Plánovat později** v rozevíracím seznamu **Aktivovat/deaktivovat** pro určení budoucího data a času aktivace a deaktivace konkrétního segmentu.
+- **[Vyhledat podobné zákazníky](find-similar-customer-segments.md)** ze segmentu.
 - **Přejmenovat** segment.
+- Volbou **Značka** můžete [spravovat značky](work-with-tags-columns.md#manage-tags) pro segment.
 - **Stáhnout** seznam členů jako soubor .CSV.
 - Možnost **Spravovat exporty** zobrazí segment související s exportem a umožní jeho správu. [Další informace o exportech.](export-destinations.md)
 - **Odstranit** segment.
+- **Sloupce** pro [přizpůsobení sloupců](work-with-tags-columns.md#customize-columns), které se zobrazí.
+- **Filtrovat** pro [filtrování podle značek](work-with-tags-columns.md#filter-on-tags).
+- **Hledat název** pro vyhledání podle názvu segmentu.
 
 ## <a name="refresh-segments"></a>Aktualizovat segmenty
 

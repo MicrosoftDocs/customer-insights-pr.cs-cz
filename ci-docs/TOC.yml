@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Prozkoumání přehledů cílových skupin
           href: audience-insights/home.md
+        - name: Práce se značkami a sloupci
+          href: audience-insights/work-with-tags-columns.md
         - name: Práce s obchodními účty
           href: audience-insights/work-with-business-accounts.md
     - name: Zdroje dat

@@ -1,37 +1,36 @@
 ---
 title: Vytvoření segmentů pomocí tvůrce segmentů
 description: Vytvořte segmenty zákazníků a seskupte je podle různých atributů.
-ms.date: 10/18/2021
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segments
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 6fa6f0738bf7fba94b2fb84a70ea17483aae8dac
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 1a28289ecb740ab6cdfa603b2cd66376e7e8b576
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354547"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529577"
 ---
 # <a name="create-segments"></a>Vytvoření segmentů
 
-Definujte složité filtry kolem sjednocené entity zákazníka a souvisejících entit. Každý segment po zpracování vytvoří sadu záznamů o zákaznících, které můžete exportovat a se kterými můžete provádět akce. Segmenty jsou spravovány na stránce **Segmenty**. Můžete [vytvářet nové segmenty](#create-a-new-segment) pomocí tvůrce segmentů nebo [vytvářet rychlé segmenty](#quick-segments) z jiných oblastí aplikace. 
+Definujte složité filtry kolem sjednocené entity zákazníka a souvisejících entit. Každý segment po zpracování vytvoří sadu záznamů o zákaznících, které můžete exportovat a se kterými můžete provádět akce. Segmenty jsou spravovány na stránce **Segmenty**. Můžete [vytvářet nové segmenty](#create-a-new-segment) pomocí tvůrce segmentů nebo [vytvářet rychlé segmenty](#quick-segments) z jiných oblastí aplikace.
 
 > [!TIP]
-> - Rychlé segmenty jsou podporovány pouze v prostředích pro **jednotlivé zákazníky**.    
-> - Segmenty založené na **jednotlivých zákaznících** automaticky obsahují dostupné kontaktní informace pro členy segmentu. V prostředích pro **obchodní zákaznické účty** jsou segmenty založeny na zákaznických účtech (společnosti nebo dceřiné společnosti). Chcete -li do segmentu zahrnout kontaktní informace, použijte funkci **atributy projektu** v nástroji pro tvorbu segmentů.
->    - Ujistěte se, že jsou zdroje dat kontaktů [sémanticky mapovány na entitu ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> - Rychlé segmenty jsou podporovány pouze v prostředích pro **jednotlivé zákazníky**.
+> - Segmenty založené na **jednotlivých zákaznících** automaticky obsahují dostupné kontaktní informace pro členy segmentu. V prostředích pro **obchodní zákaznické účty** jsou segmenty založeny na zákaznických účtech (společnosti nebo dceřiné společnosti). Chcete -li do segmentu zahrnout kontaktní informace, použijte funkci **atributy projektu** v nástroji pro tvorbu segmentů. Ujistěte se, že jsou zdroje dat kontaktů [sémanticky mapovány na entitu ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Tvůrce segmentů
 
-Následující obrázek ukazuje různé aspekty tvůrce segmentů. Ukazuje segment, jehož výsledkem je skupina zákazníků. Zákazníci si objednali zboží v konkrétním časovém rámci a nasbírali body za odměnu nebo utratili určitou částku peněz. 
+Následující obrázek ukazuje různé aspekty tvůrce segmentů. Ukazuje segment, jehož výsledkem je skupina zákazníků. Zákazníci si objednali zboží v konkrétním časovém rámci a nasbírali body za odměnu nebo utratili určitou částku peněz.
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Prvky nástroje pro tvorbu segmentů." lightbox="media/segment-builder-overview.png":::
 
@@ -65,11 +64,11 @@ Při vytváření segmentu můžete uložit koncept. Ve fázi konceptu je segmen
 
 1. Na stránce tvůrce segmentů definujete nebo sestavujete pravidla. Pravidlo se skládá z jedné nebo více podmínek, které definují skupinu zákazníků.
 
-1. V části **Pravidlo 1** vyberte atribut entity, podle které chcete filtrovat zákazníky. Vybrat atributy lze dvěma způsoby: 
+1. V sekci **Pravidlo1** vyberte atribut entity, podle které chcete filtrovat zákazníky. Vybrat atributy lze dvěma způsoby:
    - Zkontrolujte seznam dostupných entit a atributů v podokně **Přidat do pravidla** a vyberte ikonu **+** vedle atributu, který chcete přidat. Vyberte, zda chcete přidat atribut do existujícího pravidla, nebo jej použít k vytvoření nového pravidla.
    - Chcete -li zobrazit návrhy shod, zadejte název atributu do sekce pravidel.
 
-1. Vyberte operátory k určení odpovídajících hodnot podmínky. Atribut může mít jako hodnotu jeden ze čtyř datových typů: číselný, řetězec, datum nebo logickou hodnotu. V závislosti na datovém typu atributu jsou k určení podmínky k dispozici různé operátory. Pro segmenty s podnikovými zákaznickými účty jsou k dispozici dva speciální operátoři, kteří zahrnují potenciální hierarchie mezi přijatými účty. Použijte operátory *podřízený* a *nadřazený* k zahrnutí souvisejících účtů. 
+1. Vyberte operátory k určení odpovídajících hodnot podmínky. Atribut může mít jako hodnotu jeden ze čtyř datových typů: číselný, řetězec, datum nebo logickou hodnotu. V závislosti na datovém typu atributu jsou k určení podmínky k dispozici různé operátory. Pro segmenty s podnikovými zákaznickými účty jsou k dispozici dva speciální operátoři, kteří zahrnují potenciální hierarchie mezi přijatými účty. Použijte operátory *podřízený* a *nadřazený* k zahrnutí souvisejících účtů.
 
 1. Vyberte **Přidat podmínku** pro přidání dalších podmínek do pravidla. Chcete -li vytvořit pravidlo pod aktuálním pravidlem, vyberte **Přidat dílčí pravidlo**.
 
@@ -77,7 +76,7 @@ Při vytváření segmentu můžete uložit koncept. Ve fázi konceptu je segmen
 
    :::image type="content" source="media/relationship-path.png" alt-text="Cesta potenciálního vztahu při vytváření pravidla na základě entity mapované na jednotnou entitu zákazníka.":::
 
-   Například entita *eCommerce_eCommercePurchases* na snímku obrazovky má čtyři možnosti mapování na entitu *Zákazník*: 
+   Například entita *eCommerce_eCommercePurchases* na snímku obrazovky má čtyři možnosti mapování na entitu *Zákazník*:
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Zákazník
    - eCommerce_eCommercePurchases > Zákazník
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Zákazník
@@ -101,11 +100,11 @@ Při vytváření segmentu můžete uložit koncept. Ve fázi konceptu je segmen
       - **Průnik** překrývá dvě skupiny. Pouze data, která *jsou společné* pro obě skupiny zůstávají v jednotné skupině.
       - **Výjimka** kombinuje dvě skupiny. Pouze data ve skupině A, která *nejsou společná* s daty ve skupině B, jsou zachována.
 
-1. Ve výchozím nastavení segmenty generují výstupní entitu obsahující všechny atributy zákaznické profily, které odpovídají definovaným filtrům. Pokud je segment založen na jiných entitách než *Zákazník*, můžete do výstupní entity přidat další atributy z těchto entit. Volbou **Atributy projektu** zvolte atributy, které budou připojeny k výstupní entitě. 
+1. Ve výchozím nastavení segmenty generují výstupní entitu obsahující všechny atributy zákaznické profily, které odpovídají definovaným filtrům. Pokud je segment založen na jiných entitách než *Zákazník*, můžete do výstupní entity přidat další atributy z těchto entit. Volbou **Atributy projektu** zvolte atributy, které budou připojeny k výstupní entitě.
 
    > [!IMPORTANT]
    > U segmentů založených na obchodních účtech je třeba do segmentu zahrnout podrobnosti o jednom nebo více kontaktech každého účtu z entity *ContactProfile*, aby bylo možné segment aktivovat nebo exportovat do destinací, které vyžadují kontaktní informace. Další informace o entitě *ContactProfile* viz [Sémantická mapování](semantic-mappings.md).
-   > Ukázkový výstup segmentu založený na obchodních účtech s předpokládanými atributy kontaktů by mohl vypadat takto: 
+   > Ukázkový výstup segmentu založený na obchodních účtech s předpokládanými atributy kontaktů by mohl vypadat takto:
    >
    > |ID  |Název obchodního vztahu  |Výnosy  |Jméno kontaktu  | Role kontaktu|
    > |---------|---------|---------|---------|---|
@@ -117,14 +116,16 @@ Při vytváření segmentu můžete uložit koncept. Ve fázi konceptu je segmen
 
    > [!NOTE]
    > - **Atributy projektu** fungují pouze pro entity, které mají vztah jeden ku mnoha s entitou zákazníka. Například jeden zákazník může mít více předplatných.
-   > - Pokud je atribut, který chcete promítat, více než jeden krok od entity *Zákazník*, jak je definována vztahem, tento atribut by měl být použit v každém pravidle segmentového dotazu, který vytváříte. 
-   > - Pokud je atribut, který chcete promítat, pouhý jeden krok od entity *Zákazník*, nemusí být tento atribut přítomen v každém pravidle dotazu na segment, který vytváříte. 
+   > - Pokud je atribut, který chcete promítat, více než jeden krok od entity *Zákazník*, jak je definována vztahem, tento atribut by měl být použit v každém pravidle segmentového dotazu, který vytváříte.
+   > - Pokud je atribut, který chcete promítat, pouhý jeden krok od entity *Zákazník*, nemusí být tento atribut přítomen v každém pravidle dotazu na segment, který vytváříte.
    > - Při použití operátorů sady jsou zohledněny **projektované atributy**.
 
-1. Před uložením a spuštěním segmentu vyberte **Upravit podrobnosti** vedle názvu segmentu. Zadejte název pro svůj segment a aktualizujte navrhovaný **Název výstupní entity** pro segment. K segmentu můžete také přidat popis.
+1. Vedle segmentu bez názvu vyberte možnost **Upravit podrobnosti**. Zadejte název pro svůj segment a aktualizujte navrhovaný **Název výstupní entity** pro segment. Volitelně do segmentu přidejte popis a [značky](work-with-tags-columns.md#manage-tags).
+
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Dialogové okno Úprava podrobností.":::
 
 1. Vyberte **Spustit**, chcete -li segment uložit, aktivujte jej a začněte zpracovávat svůj segment na základě všech pravidel a podmínek. V opačném případě bude uložen jako neaktivní segment.
-   
+
 1. Volbou **Zpět na segmenty** přejdete zpět na stránku **Segmenty**.
 
 1. Ve výchozím nastavení je segment vytvořen jako dynamický segment. To znamená, že segment se aktualizuje při aktualizaci systému. Chcete-li [zastavit automatickou aktualizaci](segments.md#manage-existing-segments), vyberte segment a zvolte možnost **Nastavit jako statický**. Statické segmenty lze kdykoli [aktualizovat ručně](segments.md#refresh-segments).
@@ -132,7 +133,7 @@ Při vytváření segmentu můžete uložit koncept. Ve fázi konceptu je segmen
 > [!TIP]
 > - Při nastavování operátorů pro podmínky nebude tvůrce segmentů navrhovat platné hodnoty z entit. Můžete přejít na **Data** > **Entity** a stáhněte si data entit, abyste zjistili, které hodnoty jsou k dispozici.
 > - Podmínky založené na datech vám umožňují přepínat mezi pevnými daty a pohyblivým rozsahem dat.
-> - Pokud pro svůj segment máte více pravidel, pravidlo, které upravujete, má vedle něj svislou modrou čáru. 
+> - Pokud pro svůj segment máte více pravidel, pravidlo, které upravujete, má vedle něj svislou modrou čáru.
 > - Pravidla a podmínky můžete přesunout na jiná místa v definici segmentu. Vyberte [...] vedle pravidla nebo podmínky a zvolte, jak a kam je chcete přesunout.
 > - Ovládací prvky **Zpět** a **Znovu** na panelu příkazů vám umožňují vrátit změny zpět.
 
@@ -153,10 +154,9 @@ Rychlé segmenty umožňují rychle vytvářet jednoduché segmenty jediným ope
 
 4. Systém vám poskytne **Odhadovanou velikost segmentu**. Můžete zvolit, zda chcete vygenerovat segment, který jste definovali, nebo jej nejprve znovu navštívit, abyste získali jinou velikost segmentu.
 
-    > [!div class="mx-imgBorder"]
-    > ![Název a odhad pro rychlý segment.](media/quick-segment-name.png "Název a odhad pro rychlý segment")
+   :::image type="content" source="media/quick-segment-name.png" alt-text="Název a odhad pro rychlý segment.":::
 
-5. Zadejte **Název** svého sgmentu. Volitelně zadejte **Zobrazovaný název**.
+5. Pro segment zadejte **Název** a **Název výstupní entity**. Volitelně přidejte [značky](work-with-tags-columns.md#manage-tags).
 
 6. Výběrem možnosti **Uložit** vytvořte segment.
 

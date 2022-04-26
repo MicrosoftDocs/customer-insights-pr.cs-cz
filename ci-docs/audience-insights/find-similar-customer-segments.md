@@ -1,23 +1,23 @@
 ---
 title: Hledání podobných zákazníků pomocí AI (obsahuje video)
 description: Najděte podobné segmenty zákazníků pomocí uměl= inteligence.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355237"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561562"
 ---
 # <a name="similar-customers-preview"></a>Podobní zákazníci (náhled)
 
@@ -36,6 +36,8 @@ Tato funkce vám umožní najít podobné zákazníky ve vaší zákaznické zá
 
 1. Zkontrolujte navrhované jméno nového segmentu a v případě potřeby jej změňte.
 
+1. Volitelně přidejte [značky](work-with-tags-columns.md#manage-tags) do nového segmentu.
+
 1. Zkontrolujte pole, která definují váš nový segment. Tato pole definují základ, na kterém se systém pokusí najít podobné zákazníky ve vašem zdrojovém segmentu. Systém ve výchozím nastavení vybere doporučená pole.
   Pole, která mohou výrazně snížit výkon modelu, jsou automaticky vyloučena:
   
@@ -44,9 +46,9 @@ Tato funkce vám umožní najít podobné zákazníky ve vaší zákaznické zá
 
 1. Zvolte, zda chcete zahrnout **Všichni zákazníci** nebo pouze zákazníci v **Specifickém existujícím segmentu** ve vašem novém segmentu.
 
-1. Vyloučte zákazníky ve svém zdrojovém segmentu výběrem zaškrtávacího políčka **Vyloučit všechny ve zdrojovém segmentu**.
-
 1. Ve výchozím nastavení systém navrhuje zahrnout do výstupu pouze 20% z velikosti cílové skupiny. Upravte tuto mezní hodnotu podle potřeby. Zvýšení mezní hodnoty sníží přesnost.
+
+1. Zaškrtnutím políčka **K zákazníkům s podobnými atributy přidat členy ze zdrojového segmentu** zahrnete zákazníky do zdrojového segmentu.
 
 1. Vyberte **Spustit** ve spodní části stránky a spusťte úlohu binární klasifikace (metoda strojového učení), která analyzuje datový soubor.
 
@@ -67,7 +69,7 @@ Můžete [pracovat s výstupem podobného segmentu](segments.md) stejně jako u 
 
 Chcete-li obnovit podobný segment, vyberte jej na stránce **Segmenty** a vyberte **Obnovit** na panelu akcí.
 
-Úpravy podobného segmentu znovu zpracují vaše data. Dříve vytvořený segment se aktualizuje aktualizovanými daty.    
+Úpravy podobného segmentu znovu zpracují vaše data. Dříve vytvořený segment se aktualizuje aktualizovanými daty.
 Chcete-li upravit podobný segment, vyberte jej na stránce **Segmenty** a vyberte **Upravit** na panelu akcí. Použijte své změny a vyberte **Spustit** pro zahájení zpracování.
 
 ## <a name="delete-a-similar-segment"></a>Odstranit podobný segment
@@ -84,6 +86,5 @@ Model strojového učení binární klasifikace přiřazuje skóre zákazníkům
 - Skóre podobnosti mezi 0,85 - 1 jsou zákazníci klasifikovaní jako *velmi podobní*
 
 Zákazníci s skóre podobnosti pod 0,4 nejsou do výstupu modelu zahrnuti. Systém je nepovažuje za dostatečně podobné zdrojovému segmentu.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

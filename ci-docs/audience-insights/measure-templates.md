@@ -1,22 +1,22 @@
 ---
 title: Vytvoření měr ze šablon
 description: Definujte míry pomocí šablon pro běžné případy použití.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359900"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529393"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Vytvoření míry pomocí šablony
 
@@ -51,7 +51,9 @@ Dostupné šablony měr:
 
 1. Zkontrolujte požadovaná data a vyberte **Začít**, pokud máte všechna data na místě.
 
-1. V podokně **Upravit jméno** nastavte název míry a výstupní entitu. 
+1. Vedle názvu míry vyberte možnost **Upravit podrobnosti**. Zadejte název míry. Volitelně přidejte [značky](work-with-tags-columns.md#manage-tags) do nové míry.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Dialogové okno Úprava podrobností":::
 
 1. Vyberte **Hotovo**.
 
