@@ -1,39 +1,41 @@
 ---
-title: Přehled produktu
+title: Přehled produktu Dynamics 365 Customer Insights
 author: m-hartmann
-description: Mějte přehled o řešení Dynamics 365 Customer Insights a jeho funkcích.
+description: Získejte přehled Dynamics 365 Customer Insights a jeho hlavní rysy.
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560425"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641892"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Přehled produktu Dynamics 365 Customer Insights
 
-[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je součástí platformy zákaznických dat (CDP) společnosti Microsoft, která pomáhá přizpůsobit zákaznické prostředí. Funkce platformy poskytují informace o tom, kdo jsou vaši zákazníci a jak s vaší platformou interagují. Sjednoťte zákaznická data napříč několika zdroji a mějte údaje o zákaznících v jednom místě.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je platforma pro zákaznická data (CDP) společnosti Microsoft, která pomáhá poskytovat personalizované zákaznické zkušenosti. Aplikace poskytuje holistický pohled na zákazníky s bezkonkurenčním časem na pochopení. Získejte nejkomplexnější pohled na své zákazníky sjednocením zákaznických dat s provozními a IoT daty v reálném čase. Obohaťte profily zákazníků o zdroje dat první a třetí strany. 
 
-[Přehledy cílových skupin](audience-insights/overview.md) vám pomohou transformovat vaše podnikání na organizaci zaměřenou na zákazníka. Profesionálové v oblasti marketingu, prodeje a služeb mají přehled, který potřebují k přizpůsobení prostředí na míru. Propojte data z transakčních, behaviorálních a pozorovacích zdrojů a mějte kompletní přehled o zákazníkovi. Rychleji zobrazujte výsledky díky platformě CDP navržené tak, aby poskytovala informace, dle kterých lze jednat. 
-
-[Přehledy zapojení](engagement-insights/overview.md) byla funkce Preview v Customer Insights, která se zaměřuje na shromažďování webových a mobilních událostí pro dodatečné přehledy. Verze Preview skončila 15. února 2022.
+Customer Insights vám pomůže přeměnit vaši firmu na organizaci zaměřenou na zákazníka tím, že umožní vašim marketingovým, prodejním a servisním profesionálům přizpůsobit interakce 1:1 na míru. Integrace na klíč s Microsoftem a aplikacemi třetích stran lze použít k aktivaci přehledů v reálném čase, které vedou k smysluplným akcím.
  
-## <a name="choose-a-capability"></a>Zvolte funkci
+Propojte data z transakčních, behaviorálních a demografických zdrojů dat a vytvořte 360stupňové pohledy zákazníků. Získejte okamžité přehledy s předem sestavenými modely AI nebo rychle sestavujte, testujte a nasazujte vlastní modely AI/ML pomocí pokročilých analytických řešení v neomezeném měřítku.
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Stránka s přehledy o zákaznících vám umožňuje přejít na přehledy cílové skupiny nebo přehledy o zapojení zákazníků.":::
-
-Volba funkce
-
-1. V navigačním podokně volbou **Všechny aplikace** otevřete okno **Vyberte svůj fokus**.
-1. Tlačítkem **Přejít** přejděte na funkci dle vaší preference.
+Udržujte plnou kontrolu nad svými zákaznickými daty, abyste zajistili nejvyšší úroveň správy dat a soulad se samoobslužným, podnikovým CDP založeným na Microsoft Azure. Podporujte obecné nařízení o ochraně osobních údajů (GDPR) a další legislativní požadavky a průmyslové standardy prostřednictvím vestavěných nástrojů pro ochranu soukromí, zabezpečení a správu a správu souhlasu.
 
 ## <a name="pricing-and-licensing"></a>Ceny a licence
+Customer Insights je licencován na klienta a zahrnuje funkce typu business-to-consumer (B2C) i business-to-business (B2B). Můžete si zakoupit další kapacitu s doplňkovými licencemi a zvýšit tak počet profilů a účtů.
 
-Aplikace Customer Insights je licencována na jednoho klienta a zahrnuje více funkcí. Ke zvýšení výchozí kvóty můžete zakoupit další kapacitu a licenci. 
 - [Přehled cen](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - Kapacita a nároky: [Průvodce licencí Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Web Multilicenční program společnosti Microsoft](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>Vyzkoušejte a začněte se službou Customer Insights
+
+Začněte [bezplatnou zkušební verze Customer Insights](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) dnes a otestujte aplikaci s vašimi vlastními zákaznickými daty. [Zjistěte, jak můžete rychle získat přístup k mnoha klíčovým funkcím aplikace a prozkoumat je](trial-signup.md). 
+
+Procházejte [doporučené výukové zdroje](https://dynamics.microsoft.com/ai/customer-insights/resources/) včetně zpráv analytiků, webinářů na vyžádání a příběhů zákazníků.
+
+Zjistěte, jak můžete lépe porozumět svým zákazníkům pomocí naší [příručky Začínáme](get-started.md).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

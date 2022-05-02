@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
-ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "8455990"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641846"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Začněte po zakoupení Customer Insights
 
@@ -34,9 +34,8 @@ První spuštění vám pomůže vybrat si počáteční zaměření pomocí Cus
 
 1. Jděte na [Adresa URL aplikace Customer Insights](https://home.ci.ai.dynamics.com).
 1. Přihlaste se přes pracovním nebo školním účtem. 
-1. Odsouhlaste podmínky služby a nastavte předvolby obsahu pro vaši instanci Customer Insights.
-1. Zvolte schopnost zaměření, dokud se nedostanete na úvodní stránku pro zvolenou schopnost.
+1. Odsouhlaste podmínky služby a nastavte předvolby obsahu pro vaše prostředí Customer Insights.
 
 ## <a name="create-your-own-environment"></a>Vytvoření vlastního prostředí
 
-Po prvním přihlášení se vám zobrazí prostředí s ukázkovými daty. Tato data můžete použít k prozkoumání funkcí a seznámení s aplikací. Chcete-li používat svá vlastní data, musíte [vytvořit prostředí](/dynamics365/customer-insights/audience-insights/create-environment).
+Po prvním přihlášení se vám zobrazí prostředí s ukázkovými daty. Tato data můžete použít k prozkoumání funkcí a seznámení s aplikací. Chcete-li používat svá vlastní data, musíte [vytvořit prostředí](create-environment.md).
