@@ -1,19 +1,19 @@
 ---
 title: Průvodce ukázkami predikce úbytku transakcí
 description: Pomocí tohoto průvodce ukázkami můžete vyzkoušet dodávaný model predikce úbytku transakcí.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646358"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741311"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Průvodce ukázkami predikce úbytku transakcí
 
@@ -86,69 +86,13 @@ Prohlédněte si články [o přijímání dat](data-sources.md) a [importu dato
 
 1. Uložte zdroj dat.
 
-
 ## <a name="task-2---data-unification"></a>Úkol 2 – Sjednocení dat
 
-Po ingestaci dat nyní začínáme s procesem **Mapování, párování, sloučení** pro vytvoření sjednoceného profilu zákazníka. Další informace naleznete v tématu [Sjednocení dat](data-unification.md).
-
-### <a name="map"></a>Mapovat
-
-1. Po ingestaci dat namapujte kontakty z eCommerce a věrnostní data na běžné datové typy. Přejděte na **Data** > **Sjednocení** > **Mapování**.
-
-1. Vyberte entity, které představují profil zákazníka – **eCommerceContacts** a **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Sjednocení zdrojů dat eCommerce a věrnostních bodů.":::
-
-1. Vyberte **ContactId** jako primární klíč pro **eCommerceContatcs** a **LoyaltyID** jako primární klíč pro **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Sjednocení LoyaltyId jako primární klíč.":::
-
-### <a name="match"></a>Párování
-
-1. Přejděte na kartu **Párování** a vyberte **Nastavit pořadí**.
-
-1. V **primárním** rozevíracím seznamu zvolte jako primární zdroj **eCommerceContacts : eCommerce** a zahrňte všechny záznamy.
-
-1. V rozevíracím seznamu **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všechny záznamy.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Sjednocení párování dat eCommerce a věrnostních bodů.":::
-
-1. Vyberte **Vytvořit nové pravidlo**
-
-1. Přidejte svou první podmínku pomocí FullName.
-
-   * Pro eCommerceContacts vyberte **Celé jméno** v rozevírací nabídce.
-   * Pro loyCustomers vyberte **Celé jméno** v rozevírací nabídce.
-   * Vyberte rozevírací seznam **Normalizovat** rozevírací seznam a vyberte **Typ (telefon, jméno, adresa, ...)**.
-   * Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
-
-1. Zadejte jméno **Celé jméno, e-mail** pro nové pravidlo.
-
-   * Přidejte druhou podmínku pro e-mailovou adresu výběrem **Přidat podmínku**
-   * Pro entitu eCommerceContacts zvolte **EMail** v rozevírací nabídce.
-   * Pro entitu loyCustomers zvolte **EMail** v rozevírací nabídce. 
-   * Ponechejte pole Noramlizovat prázdné. 
-   * Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Sjednocení pravidla párování pro jméno a e-mail.":::
-
-7. Zvolte **Uložit** a **Spustit**.
-
-### <a name="merge"></a>Sloučení
-
-1. Přejděte na kartu **Sloučení**.
-
-1. V **ContactId** pro entitu **loyCustomers** změňte zobrazované jméno na **ContactIdLOYALTY**, abyste jej odlišili od ingestovaných ID.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Přejmenování contactid z věrnostního ID.":::
-
-1. Volbami **Uložit** a **Spustit** zahájíte proces sloučení.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Úkol 3 – Konfigurace predikce úbytku transakcí
 
-Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci úbytku předplatných. Podrobné kroky viz článek [Predikce úbytku předplatitelů](predict-subscription-churn.md). 
+Se zavedenými sjednocenými zákaznickými profily nyní můžeme spustit převod transakcí predikce. Podrobné kroky viz článek [Predikce úbytku transakce](predict-transactional-churn.md). 
 
 1. Přejděte na **Analytické nástroje** > **Prozkoumat** a vyberte **Model úbytku zákazníků**.
 
@@ -180,7 +124,7 @@ Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikc
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Úkol 4 – Kontrola výsledků modelu a vysvětlení
 
-Nechte model dokončit cvičení a bodování dat. Nyní si můžete prohlédnout vysvětlení modelu úbytku předplatných. Další informace viz [Kontrola stavu a výsledků predikce](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Nechte model dokončit cvičení a bodování dat. Nyní si můžete prohlédnout vysvětlení modelu úbytku. Další informace viz [Kontrola stavu a výsledků predikce](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Úkol 5 – Vytvoření segmentu zákazníků s vysokým rizikem ztráty
 
@@ -192,14 +136,12 @@ Můžete vytvořit nový segment na základě entity vytvořené modelem.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Vytvoření segmentu s výstupem modelu.":::
 
-1. Vyberte koncový bod **OOBSubscriptionChurnPrediction** a definujte segment: 
+1. Vyberte koncový bod **OOBeCommerceChurnPrediction** a definujte segment: 
    - Pole: ChurnScore
    - Operátor: větší než
    - Hodnota: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Nastavení segmentu úbytku předplatných.":::
 
-Nyní máte segment, který se dynamicky aktualizuje a který identifikuje zákazníky s vysokým rizikem odchodu pro toto podnikání s předplatným.
+Nyní máte segment, který se dynamicky aktualizuje a který identifikuje zákazníky s vysokým rizikem odchodu zákazníků.
 
 Další informace najdete v tématu o [vytváření a správě segmentů](segments.md).
 

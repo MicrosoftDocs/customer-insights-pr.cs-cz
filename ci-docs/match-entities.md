@@ -1,267 +1,136 @@
 ---
 title: Párování entit pro sjednocení dat
 description: Spárováním entit můžete vytvořit sjednocené profily zákazníků.
-ms.date: 02/07/2022
+recommendations: false
+ms.date: 05/05/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-match
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 44f030f69b84a00438e92aa5fddca832f4e54c41
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bc470dd932c2c981adc5840bb52d60f8dfe0de61
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645805"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740941"
 ---
-# <a name="match-entities"></a>Párování entit
+# <a name="match-conditions"></a>Podmínky shody
 
-Fáze párování určuje, jak zkombinovat vaše datové sady do jednotného datového souboru zákaznického profilu. Po dokončení [kroku mapování](map-entities.md) v procesu sjednocení dat jste připraveni spárovat své entity. Fáze párování vyžaduje alespoň dvě mapované entity.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-Stránka párování se skládá ze tří částí: 
-- Klíčové metriky, které shrnují počet spárovaných záznamů
-- Pořadí párování a pravidla párování mezi entitami
-- Pravidla pro zrušení duplikace párovaných entit
+Tento krok sjednocení definuje pořadí párování a pravidla pro párování mezi entitami. Tento krok vyžaduje alespoň dvě entity.
+
+> [!NOTE]
+> Jakmile vytvoříte podmínky shody a vyberete **Další**, nemůžete odstranit vybranou entitu nebo atribut. V případě potřeby vyberte **Zpět** ke kontrole vybraných entit a atributů předtím, než budete pokračovat.
+
+## <a name="include-enriched-entities-preview"></a>Zahrnutí rozšířených entit (Preview)
+
+Pokud jste obohatili entity na úrovni zdroje dat, abyste pomohli zlepšit výsledky sjednocení, vyberte je. Další informace najdete v tématu [Rozšíření zdrojů dat](data-sources-enrichment.md). Pokud jste vybrali obohacené entity na stránce **Duplicitní záznamy**, nemusíte je znovu vybírat.
+
+1. V horní části stránky **Podmínky shody** vyberte **Použít obohacené entity**.
+
+1. V podokně **Používat rozšířené entity** vyberte jednu nebo více rozšířených entit.
+
+1. Vyberte **Hotovo**.
 
 ## <a name="specify-the-match-order"></a>Určení pořadí párování
 
 Každé párování sjednocuje dvě nebo více entit do jedné konsolidované entity. Zároveň uchovává jedinečné záznamy o zákaznících. Pořadí shody udává pořadí, ve kterém se systém pokusí záznamy spárovat.
 
 > [!IMPORTANT]
-> Entita, kterou si vyberete jako svoji primární, bude sloužit jako základ pro vaši datovou sadu sjednocených profilů. K této entitě budou přidány další entity vybrané během fáze párování. To neznamená, že sjednocená entita bude zahrnovat *všechna* data obsažená v této entitě.
+> První entita v seznamu se nazývá primární entita. Primární entita slouží jako základ pro vaši sadu sjednocených profilů. K této entitě budou přidány další vybrané entity.
 >
-> Existují dva aspekty, které vám mohou pomoci vybrat hierarchii vašich entit:
+> Důležité poznámky:
 >
-> - Vyberte entitu s nejúplnějšími a nejspolehlivějšími daty profilu o vašich zákaznících jako primární entitu.
+> - Jako primární subjekt vyberte subjekt s nejúplnějšími a nejspolehlivějšími profilovými údaji o vašich zákaznících.
 > - Vyberte entitu, která ma několik atrubutů společných s jinými entitami (například jméno, telefonní číslo nebo e-mailová adresa), jakožto primární entitu.
 
-1. Přejděte na **Data** > **Sjednocení** > **Párování** a pro zahájení fáze párování vyberte **Nastavit pořadí**.
-1. Vyberte **Pořadí entit**. Například vyberte **eCommerce:eCommerceContacts** jako primární entitu a **LoyaltyScheme:loyCustomers** jako druhou entitu. 
-1. Pokud chcete mít každý záznam v entitě jedinečným zákazníkem spárovaným s každou následující entitou, vyberte **Zahrnou vše**.
-1. Vyberte **Hotovo**. 
+1. Na stránce **Odpovídající podmínky** pomocí šipek pro pohyb nahoru a dolů přesuňte entity v požadovaném pořadí nebo je přetáhněte. Například vyberte **Contacts:eCommerce** jako primární entitu a **CustomerLoyalty:Loyalty** jako druhou entitu.
 
-Po zadání pořadí párování se definované páry shody zobrazí v sekci **Podrobnosti o sprárovaných záznamech** v **Data** > **Sjednotit** > **Párování**. Klíčové metriky jsou prázdné, dokud se proces shody nedokončí.
-
-:::image type="content" source="media/match-page.png" alt-text="Screenshot stránky Párování v oblasti Sjednocení pro proces sjednocení dat.":::
+1. Pokud chcete mít každý záznam v entitě jako jedinečného zákazníka bez ohledu na to, zda je nalezena shoda, vyberte **Zahrnou všechny záznamy**. Všechny záznamy v této entitě, které se neshodují se záznamy v jiných entitách, jsou zahrnuty do jednotného profilu. Záznamy, které nemají shodu, se nazývají singletony.
   
-Primární entita *eCommerce:eCommerceContacts* je spárována s další entitou *LoyaltyScheme:loyCustomers*. Pokud máte více než dvě entity, datová sada, která je výsledkem prvního kroku shody, se shoduje s následující entitou.
+Primární entita *Contacts:eCommerce* je spárována s další entitou *CustomerLoyalty:Loyalty*. Pokud máte více než dvě entity, datová sada, která je výsledkem prvního kroku shody, se shoduje s následující entitou.
+
+:::image type="content" source="media/m3_match.png" alt-text="Snímek obrazovky vybraného pořadí shody pro entity." lightbox="media/m3_match.png":::
 
 ## <a name="define-rules-for-match-pairs"></a>Definování pravidel pro párování
 
-Pravidla párováníí určují logiku, podle které bude přiřazen určitý pár entit.
+Pravidla párováníí určují logiku, podle které bude přiřazen určitý pár entit. Pravidlo se skládá z jedné nebo více podmínek.
 
-Varování **Jsou zapotřebí pravidla** vedle názvu entity naznačuje, že pro párovanou dvojici není definováno žádné pravidlo párování. 
+Upozornění vedle názvu entity znamená, že pro dvojici shody není definováno žádné pravidlo shody.
 
-:::image type="content" source="media/match-rule-add.png" alt-text="Screenshot sekce Podrobnosti o spárovaných záznamech s ovládacím prvkem pro přidání zvýrazněných pravidel.":::
+1. Vyberte **Přidat pravidlo** pro dvojici entit k definování pravidel shody.
 
-1. Vyberte **Přidat pravidlo** pod entitou v sekci **Podrobnosti o spárovaných záznamech** pro definování pravidel párování.
+1. V podokně **Přidat pravidlo** nakonfigurujte podmínky pro pravidlo.
 
-1. V podokně **Vytvoření pravidla** nakonfigurujte podmínky pravidla.
+   :::image type="content" source="media/m3_add_rule.png" alt-text="Snímek podokna Přidat pravidlo":::
 
-   :::image type="content" source="media/match-rule-conditions.png" alt-text="Screenshot otevřeného pravidla párování s přidanými podmínkami.":::
+   - **Vyberte entitu/pole (první řádek)**: Vyberte související entitu a atribut pro určení vlastnosti záznamu, která je pravděpodobně jedinečná pro zákazníka. Například telefonní číslo nebo e-mailová adresa. Vyvarujte se párování podle atributů typu aktivity. Například ID nákupu pravděpodobně nenajde shodu v jiných typech záznamů.
 
-   - **Entita/pole (první řádek)**: Vyberte související entitu a atribut pro zadání vlastnosti záznamu, která je pro zákazníka potenciálně jedinečná. Například telefonní číslo nebo e-mailová adresa. Vyvarujte se párování podle atributů typu aktivity. Například ID nákupu pravděpodobně nenajde shodu v jiných typech záznamů.
+   - **Vyberte entitu/pole (druhý řádek)**: Vyberte atribut, který souvisí s atributem entity zadané v prvním řádku.
 
-   - **Entita/pole (druhý řádek)**: Vyberte atribut, který souvisí s atributem entity zadaném v prvním řádku.
+   - **Normalizovat**: Vyberte z následujících možností normalizace pro vybrané atributy.
+     - **Číslice**: Převede jiné číselné systémy, například římské číslice, na arabské číslice. Z *VIII* se stane *8*.
+     - **Symboly**: Odstraní všechny symboly a speciální znaky. Z *Head&Shoulder* se stane *HeadShoulder*.
+     - **Text na malá písmena:** Převede všechny znaky na malá písmena. Z *VŠECHNA PÍSMENA VELKÁ a Název Případu* se stane *všechna písmena velká a název případu*.
+     - **Typ (telefon, jméno, adresa, organizace)**: Standardizuje jména, tituly, telefonní čísla, adresy a organizace.
+     - **Unicode na ASCII**: Převede zápis Unicode na znaky ASCII. Z */u00B2* se stane *2*.
+     - **Mezera**: Odebere všechny mezery. Z *Ahoj světe* se stane *Ahojsvěte*.
 
-   - **Normalizovat**: Vyberte z následujících možností normalizace pro vybrané atributy. 
-     - Číslice: Převede jiné číselné systémy, například římské číslice, na arabské číslice. Z *VIII* se stane *8*.
-     - Symboly: Odstraní všechny symboly a speciální znaky. Z *Head&Shoulder* se stane *HeadShoulder*.
-     - Text na malá písmena: Převede všechny znaky na malá písmena. Z *VŠECHNA PÍSMENA VELKÁ a Název Případu* se stane *všechna písmena velká a název případu*.
-     - Typ (telefon, jméno, adresa, organizace): Standardizuje jména, tituly, telefonní čísla, adresy atd. 
-     - Unicode na ASCII: Převede zápis Unicode na znaky ASCII. Z */u00B2* se stane *2*.
-     - Mezera: Odebere všechny mezery. Z *Ahoj světe* se stane *Ahojsvěte*.
-
-   - **Přesnost**: Nastaví úroveň přesnosti pro tuto podmínku. 
-     - **Základní**: Vyberte jednu z možností *Nízká*, *Střední*, *Vysoká* a *Přesná*. Vyberte **Přesný**, aby se shodovaly pouze záznamy, které se stoprocentně shodují. Vyberte jednu z dalších úrovní, které odpovídají záznamům, které nejsou 100% identické.
+   - **Přesnost**: Nastaví úroveň přesnosti pro tuto podmínku.
+     - **Základní**: Vyberte jednu z možností *Nízká* (30 %), *Střední (60 %)*, *Vysoká (80 %)* a *Přesná (100 %)*. Vyberte **Přesný**, aby se shodovaly pouze záznamy, které se stoprocentně shodují.
      - **Vlastní**: Nastaví procento, kterému musí záznamy odpovídat. Systém bude párovat pouze záznamy splňující tuto prahovou hodnotu.
 
-1. Zadejte **Jméno** tohoto pravidla.
+   - **Název**: Název pravidla.
 
-1. [Přidejte další podmínky](#add-conditions-to-a-rule) nebo volbou **Hotovo** dokončete vytváření pravidla.
+1. Chcete-li přiřadit entity pouze v případě, že atributy splňují více podmínek, vyberte **Přidat** > **Přidat podmínku** pro přidání dalších podmínek k pravidlu shody. Podmínky jsou spojeny s logickým operátorem AND a jsou tedy prováděny pouze tehdy, jsou-li všechny splněny.
+
+1. Případně zvažte pokročilé možnosti jako např. [výjimky](#add-exceptions-to-a-rule) nebo [vlastní podmínky shody](#specify-custom-match-conditions).
+
+1. Vyberte **Hotovo** pro dokončení pravidla.
 
 1. Volitelně [přidejte další pravidla](#add-rules-to-a-match-pair).
 
-1. Výběrem možnosti **Uložit** se vaše změny uplatní.
+1. Klikněte na tlačítko **Další**.
 
-### <a name="add-conditions-to-a-rule"></a>Přidání podmínek do pravidla
-
-Chcete-li párovat entity, pouze pokud atributy splňují více podmínek, přidejte do pravidla párování další podmínky. Podmínky jsou spojeny s logickým operátorem AND a jsou tedy prováděny pouze tehdy, jsou-li všechny splněny.
-
-1. Jděte na **Data** > **Sjednocení** > **Párování** a vyberte **Upravit** u pravidla, do kterého chcete přidat podmínky.
-
-1. V podokně **Upravit pravidlo** vyberte **Přidat podmínku**.
-
-1. Pravidlo uložte kliknutím na tlačítko **Hotovo**.
+> [!div class="nextstepaction"]
+> [Další krok: Sjednocení polí](merge-entities.md)
 
 ### <a name="add-rules-to-a-match-pair"></a>Přidání pravidel pro spárování dvojice
 
 Pravidla párování jsou sady podmínek. Pro párování entit podle podmínek založených na několika atributech přidejte další pravidla.
 
-1.  Jděte na **Data** > **Sjednocení** > **Párování** a vyberte **Přidat pravidlo** u entity, do které chcete přidat pravidla.
+1. Vyberte **Přidat pravidlo** v entitě, do které chcete přidat pravidla.
 
-2. Postupujte podle pokynů v části [Definování pravidel pro párování](#define-rules-for-match-pairs).
+1. Postupujte podle pokynů v části [Definování pravidel pro párování](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> Na pořadí pravidel záleží. Algoritmus párování se pokouší párovat na základě vašeho prvního pravidla a pokračuje k druhému pravidlu, pouze pokud nebyly identifikovány žádné shody s prvním pravidlem.
-
-### <a name="change-the-entity-order-in-match-rules"></a>Změna pořadí entit v pravidlech shody
-
-Můžete změnit pořadí entit pro pravidla shody a změnit tak pořadí, ve kterém jsou zpracovávány. Pravidla, která jsou v rozporu kvůli změněnému pořadí, budou odstraněna. Odebraná pravidla musíte znovu vytvořit s aktualizovanou konfigurací.
-
-1. Jděte na **Data** > **Sjednotit** > **Shoda** a vyberte **Upravit**.
-
-1. V podokně **Upravit pravidlo** vyberte ovládací prvek **Přesunout nahoru/dolů** nebo přetáhněte entity pro změnu jejich pořadí.
-
-   :::image type="content" source="media/reorder-match-rules.png" alt-text="Možnosti změnit pořadí, ve kterém jsou entity objednávky zpracovány ve fázi shody.":::
-
-1. Pravidlo uložte kliknutím na tlačítko **Hotovo**.
-
-## <a name="define-deduplication-on-a-match-entity"></a>Definování zrušení duplicit v entitě párování
-
-Navíc pro [pravidla párování mezi entitami](#define-rules-for-match-pairs) můžete také zadat pravidla zrušení duplicit. *Zrušení duplicit* je další proces párování záznamů. Tato funkce identifikuje duplicitní záznamy a sloučí je do jednoho záznamu. Zdrojové záznamy se propojí se sloučeným záznamem s alternativními ID.
-
-Deduplikované záznamy se používají v procesu porovnávání mezi entitami. K deduplikaci dochází u jednotlivých entit a lze ji nakonfigurovat pro každou entitu použitou v párech shod.
-
-Zadání pravidel zrušení duplikace není povinné. Pokud nejsou nakonfigurována žádná taková pravidla, použijí se systémově definovaná pravidla. Ta zkombinují všechny záznamy do jednoho záznamu před předáním dat entit do párování mezi entitami pro lepší výkon.
-
-### <a name="add-deduplication-rules"></a>Přidání pravidel zrušení duplicit
-
-1. Přejděte na **Data** > **Sjednocení** > **Párování**.
-
-1. V sekci **Podrobnosti o deduplikovaných záznamech** vyberte možnost **Nastavit entity**. V případě, že pravidla pro zrušení duplicit jsou již vytvořena, vyberte **Upravit**.
-
-1. V podokně **Sloučení předvoleb** vyberte entity, pro které chcete spustit zrušení duplicit.
-
-   1. Zadejte, jak zkombinovat duplicitní záznamy, a vyberte jednu ze tří možností sloučení:
-      - **Nejvíce vyplněný**: Identifikuje záznam s nejvíce vyplněnými poli atributů jako vítězný záznam. Toto je výchozí možnost sloučení.
-      - **Nejnovější**: Identifikuje vítězný záznam na základě největší aktuálnosti. Vyžaduje datum nebo číselné pole pro definování aktuálnosti.
-      - **Nejdřívější**: Identifikuje vítězný záznam na základě nejmenší aktuálnosti. Vyžaduje datum nebo číselné pole pro definování aktuálnosti.
-
-   1. Volitelně, chcete-li definovat deduplikační pravidla pro jednotlivé atributy entity, vyberte **Rozšířené**. Můžete se například rozhodnout zachovat nejnovější e-mail A nejúplnější adresu z různých záznamů. Rozbalte entitu, abyste viděli všechny její atributy a definujte, kterou možnost mají použít jednotlivé atributy. Pokud zvolíte možnost založenou na aktuálnosti, musíte také zadat pole data/času, které definuje aktuálnost. 
- 
-      > [!div class="mx-imgBorder"]
-      > ![Pravidla zrušení duplicit – krok 1.](media/match-selfconflation.png "Pravidla zrušení duplicit – krok 1")
-
-   1. Výběrem možnosti **Hotovo** použijte předvolby sloučení pro deduplikaci.
- 
-1. Jakmile jsou entity vybrány a je nastavena jejich předvolba sloučení, vyberte **Přidat pravidlo** pro definování pravidel na úrovni entity.
-   - **Vyberte pole** udává všechna dostupná pole z dané entity. Vyberte pole, u kterého chcete zkontrolovat duplicity. Vyberte pole, která jsou potenciálně jedinečná pro každého jednotlivého zákazníka. Například e-mailová adresa nebo kombinace jména, města a telefonního čísla.
-   - Zadejte nastavení normalizace a přesnosti.
-   - Definujte podmínky volbou **Přidat podmínku**.
- 
-   > [!div class="mx-imgBorder"]
-   > ![Pravidla zrušení duplicit – krok 2.](media/match-selfconflation-rules.png "Pravidla zrušení duplicit – krok 2")
-
-  Pro entitu můžete vytvořit několik pravidel zrušení duplicit. 
-
-1. Spuštění procesu párování nyní seskupuje záznamy na základě podmínek definovaných v pravidlech zrušení duplicity. Po seskupení záznamů se zásada sloučení použije k identifikaci vítězného záznamu.
-
-1. Tento vítězný záznam je poté předán k párování mezi entitami spolu s nevítěznými záznamy (například alternativní ID), aby se zlepšila kvalita párování.
-
-1. Jakákoli definovaná vlastní pravidla párování přepíšou pravidla zrušení duplicit. Pokud pravidlo zrušení duplicit identifikuje shodné záznamy a vlastní pravidlo párování je nastaveno tak, aby tyto záznamy nikdy napárovalo, nebudou tyto dva záznamy porovnány.
-
-1. Po [spuštění procesu párování](#run-the-match-process) uvidíte statistiky deduplikace na dlaždicích klíčových metrik.
-
-### <a name="deduplication-output-as-an-entity"></a>Výstup odebraných duplicit jako entita
-
-Proces zrušení duplicit vytvoří novou entitu pro každou entitu z párovaných dvojic kvůli identifikaci záznamů se zrušenými duplicitami. Tyto entity lze nalézt spolu s **ConflationMatchPairs:CustomerInsights** v sekci **Systém** na stránce **Entity** s názvem **Deduplication_DataSource_Entity**.
-
-Entita výstupu odstraněných duplicit obsahuje následující informace:
-- ID/klíče
-  - Pole primárního klíče a pole s alternativními ID. Pole alternativních ID se skládá ze všech alternativních ID identifikovaných pro záznam.
-  - Pole Deduplication_GroupId zobrazuje skupinu nebo cluster identifikované v rámci entity, které seskupují všechny podobné záznamy na základě zadaných polí odstraněných duplicit. Používá se pro účely systémového zpracování. Pokud nejsou zadána žádná pravidla pro ruční odstranění duplicit a platí systémově definovaná pravidla pro odstranění duplicit, možná toto pole v entitě výstupu odstraněných duplicit nenajdete.
-  - Deduplication_WinnerId: Toto pole obsahuje vítězné ID z identifikovaných skupin nebo clusterů. Pokud je hodnota Deduplication_WinnerId stejná jako hodnota primárního klíče záznamu, znamená to, že záznam je vítězným záznamem.
-- Pole použitá k definování pravidel odstranění duplicit.
-- Pole Pravidlo a Skóre označují, která z pravidel pro odstranění duplicit byla použita a které skóre bylo vráceno algoritmem pro párování.
- 
-## <a name="include-enriched-entities-preview"></a>Zahrnutí rozšířených entit (Preview)
-
-Pokud jste rozšířili entity na úrovni zdroje dat, vyberte je před spuštěním procesu párování. Rozšířené entity mohou zlepšit vaše výsledky sjednocení. Další informace najdete v tématu [Rozšíření zdrojů dat](data-sources-enrichment.md). 
-
-Rozšířená entita obsahuje původní pole zdroje dat a rozšířená pole. Pokud se tedy rozhodnete pracovat s rozšířenou entitou, stávající konfigurace nebude ovlivněna. Pravděpodobně však budete muset aktualizovat pravidla párování, aby místo toho používala rozšířená pole.
-
-1. Přejděte na **Data** > **Sjednotit** > **Spárovat** a v horní části stránky vyberte možnost **Používat rozšířené entity**.
-
-1. V podokně **Používat rozšířené entity** vyberte jednu nebo více rozšířených entit.
-
-1. Vyberte **Hotovo**. Kdekoli se použije zdrojová entita (jako je například pořadí párování nebo pravidla), automaticky se změní na rozšířenou entitu.
-  
-## <a name="run-the-match-process"></a>Spuštění procesu párování
-
-S konfigurovanými pravidly párování, včetně pravidel párování mezi entitami a pravidel zrušení duplicit, můžete spustit proces párování. 
-
-Jděte na **Data** > **Sjednocení** > **Párování** a volbou **Spustit** spusťte proces. Dokončení algoritmu párování trvá nějakou dobu a do té doby nemůžete změnit její konfiguraci. Chcete-li provést změny, můžete zrušit spuštění. Vyberte stav úlohy a vyberte **Zrušit úlohu** v podokně **Podrobnosti o průběhu**.
-
-Výsledek úspěšného spuštění, sjednocenou entitu profilu zákazníka, najdete na stránce **Entity**. Sjednocená entita profilu zákazníka se jmenuje **Zákazníci** v sekci **Profily**. První úspěšné spuštění párování vytvoří sjednocenou entitu *Zákazník*. Všechna následná spuštění shody tuto entitu rozšíří.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="review-and-validate-your-matches"></a>Kontrola a ověření shody
-
-Jděte na **Data** > **Sjednocení** > **Párování**, kde můžete zhodnotit kvalitu párování dvojic a v případě potřeby ji vylepšit.
-
-Dlaždice v horní části stránky zobrazují klíčové metriky, které shrnují počet párovaných záznamů a duplicit.
-
-:::image type="content" source="media/match-KPIs.png" alt-text="Oříznutý screenshot klíčových metrik na stránce Párování s čísly a podrobnostmi.":::
-
-- **Jedinečné zdrojové záznamy** zobrazuje počet jednotlivých zdrojových záznamů, které byly zpracovány při posledním spuštění párování.
-- **Spárované a nespárované záznamy** zdůrazňuje, kolik jedinečných záznamů zbývá po zpracování pravidel párování.
-- **Pouze spárované záznamy** zobrazuje počet párování všech spárovaných dvojic.
-
-Výsledky každého párování a jeho pravidla můžete posoudit v tabulce **Podrobnosti o spárovaných záznamech**. Porovnejte počet záznamů, které pocházejí z párované dvojice, s procentem úspěšně spárovaných záznamů.
-
-Zkontrolujte pravidla párované dvojice a podívejte se na procento úspěšně spárovaných záznamů na úrovni pravidel. Vyberte tři tečky (...) a poté volbou **Náhled párování** zobrazte všechny tyto záznamy na úrovni pravidel. Doporučujeme vám podívat se na některé záznamy a ověřit, zda byly správně spárovány.
-
-Pro podmínky vyzkoušejte různé prahové hodnoty přesnosti, abyste našli optimální hodnotu.
-
-  1. Vyberte tři tečky (...) pro pravidlo, se kterým chcete experimentovat, a vyberte **Upravit**.
-
-  2. Změňte hodnoty přesnosti v podmínkách, které chcete revidovat.
-
-  3. Volbou **Náhled** zobrazíte počet spárovaných a nespárovaných záznamů pro vybranou podmínku.
-
-## <a name="manage-match-rules"></a>Správa pravidel párování
-
-Většinu parametrů párování můžete překonfigurovat a doladit.
-
-:::image type="content" source="media/match-rules-management.png" alt-text="Screenshot rozevírací nabídky s možnostmi pravidla shody.":::
-
-- **Změňte pořadí pravidel**, pokud jste definovali více pravidel. Pořadí pravidel párování můžete změnit výběrem možností **Přesunout nahoru** a **Přesunout dolů** nebo přetažením.
-
-- **Z,ěňte podmínky pravidla** výběrem **Upravit** a volbou různých polí.
-
-- **Deaktivujte pravidlo** pro zachování pravidla shody a vyloučení z procesu párování.
-
-- **Duplikujte svá pravidla**, pokud jste definovali pravidlo párování a chtěli byste vytvořit podobné pravidlo s úpravami volbou **Duplikovat**.
-
-- **Odstraňte pravidlo** výběrem symbolu **Odstranit**.
+> Na pořadí pravidel záleží. Porovnávací algoritmus se pokusí porovnat daný záznam zákazníka na základě vašeho prvního pravidla a pokračuje k druhému pravidlu, pouze pokud nebyly identifikovány žádné shody s prvním pravidlem.
 
 ## <a name="advanced-options"></a>Rozšířené možnosti
 
 ### <a name="add-exceptions-to-a-rule"></a>Přidání výjimek do pravidla
 
-Ve většině případů párování entit vede k jedinečným uživatelským profilům s konsolidovanými daty. Chcete-li dynamicky řešit vzácné případy falešně pozitivních a falešně negativních výsledků, můžete definovat výjimky pro pravidlo shody. Výjimky se uplatňují po zpracování pravidel shody a zabraňují spárování všech záznamů, které splňují kritéria výjimky.
+Ve většině případů párování entit vede k jedinečným zákaznickým profilům s konsolidovanými daty. Chcete-li dynamicky řešit vzácné případy falešně pozitivních a falešně negativních výsledků, můžete definovat výjimky pro pravidlo shody. Výjimky se uplatňují po zpracování pravidel shody a zabraňují spárování všech záznamů, které splňují kritéria výjimky.
 
 Pokud například vaše pravidlo shody kombinuje příjmení, město a datum narození, systém by identifikoval dvojčata se stejným příjmením, která žijí ve stejném městě, jako stejný profil. Můžete zadat výjimku, která nespáruje profily, pokud křestní jména v entitách, které kombinujete, nejsou stejná.
 
-1. Jděte na **Data** > **Sjednocení** > **Párování** a vyberte **Upravit** u pravidla, do kterého chcete přidat podmínky.
+1. V podokně **Upravit pravidlo** vyberte **Přidat** > **Přidat výjimku**.
 
-1. V podokně **Upravit pravidlo** vyberte **Přidat výjimku**.
-
-1. Zadejte kritéria výjimky. 
+1. Zadejte kritéria výjimky.
 
 1. Pravidlo uložte kliknutím na tlačítko **Hotovo**.
 
 ### <a name="specify-custom-match-conditions"></a>Zadání vlastních podmínek párování
 
-Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici jsou čtyři možnosti: 
+Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici jsou čtyři možnosti:
 
 |Možnost  |Description |Příklad  |
 |---------|---------|---------|
@@ -270,13 +139,11 @@ Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici
 |Vlastní obejití     | Definuje hodnoty, které by měl systém ve fázi shody vždy ignorovat. |  Ignorujte hodnoty *11111* a *Neznámá* během shody.        |
 |Mapování aliasů    | Definování hodnot, které by měl systém považovat za stejnou hodnotu.         | Považuje *Joe* za shodné s *Joseph*.        |
 
-1. Jděte na **Data** > **Sjednocení** > **párování** a vyberte **Vlastní párování** v sekci **Podrobnosti o spárovaných záznamech**.
+1. Vyberte **Vlastní**.
 
-   :::image type="content" source="media/custom-match-create.png" alt-text="Screenshot sekce Pravidla párování se zvýrazněným ovládacím prvkem Vlastní párování.":::
+   :::image type="content" source="media/m3_match_custom.png" alt-text="Vlastní tlačítko":::
 
-1. V podokně **Vlastní** přejděte na kartu **Záznamy**.
-
-1. Vyberte možnost vlastní shody z rozevíracího seznamu **Vlastní typ** a vyberte **Stáhnout šablonu**. Pro každou možnost shody potřebujete samostatnou šablonu.
+1. Vyberte **Vlastní typ** a vyberte **Stáhnout šablonu**. Pro každou možnost shody potřebujete samostatnou šablonu.
 
 1. Otevřete stažený soubor šablony a vyplňte podrobnosti. Šablona obsahuje pole pro určení entity a hodnoty primárního klíče entity, které mají být použity ve vlastní shodě. Například pokud chcete, aby se primární klíč *12345* z entity *Prodej* vždy shodoval s primárním klíčem *34567* z entity *Kontakt*, vyplňte šablonu:
     - Entita 1: Prodej
@@ -285,35 +152,25 @@ Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici
     - Klíč entity 2: 34567
 
    Stejný soubor šablony může určit vlastní záznamy shody z více entit.
-   
+
    Pokud chcete zadat vlastní párování pro odstranění duplicit v entitě, zadejte stejnou entitu jako Entita 1 a Entita 2 a nastavte různé hodnoty primárního klíče.
 
 1. Po přidání všech přepsání uložte soubor šablony.
 
 1. Přejděte na **Data** > **Zdroje dat** a ingestujte soubory šablon jako nové entity.
 
-1. Po nahrání souborů a entit opět vyberte možnost **Vlastní párování**. Zobrazí se možnosti určující entity, které chcete zahrnout. Vyberte požadované entity z rozbalovacího seznamu a vyberte **Hotovo**.
+1. Po nahrání souborů vyberte znovu možnost **Vlastní**. Vyberte požadované entity z rozbalovacího seznamu a vyberte **Hotovo**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Screenshot dialogového okna pro výběr přepsání v případě scénáře vlastní shody.":::
 
-1. Použití vlastní shody závisí na možnosti shody, kterou chcete použít. 
+1. Použití vlastní shody závisí na možnosti shody, kterou chcete použít.
 
    - Pro **Vždy se shodovat** nebo **Nikdy se neshodovat** pokračujte dalším krokem.
-   - Pro **Vlastní obejití** nebo **Mapování aliasů** vyberte **Upravit** v existujícím pravidlu shody nebo vytvořte nové pravidlo. V rozevíracím seznamu Normalizace vyberte možnost **Vlastní obejití** nebo **Mapování aliasů** a vyberte **Hotovo**.
+   - Pro **Obejití** nebo **Mapování aliasů** vyberte **Upravit** v existujícím pravidlu shody nebo vytvořte nové pravidlo. V rozevíracím seznamu Normalizace vyberte možnost **Vlastní obejití** nebo **Mapování aliasů** a vyberte **Hotovo**.
 
-1. Volbou **Uložit** na stránce **Párování** použijte vlastní konfiguraci párování.
+1. Vyberte **Hotovo** na stránce **Vlastní** pro použití vlastní konfigurace shody.
 
-1. Volbou **Spustit** na stránce **Párování** spusťte proces párování. Ostatní zadaná pravidla párování jsou přepsána vlastní konfigurací párování.
-
-#### <a name="known-issues"></a>Známé problémy
-
-- Samosloučení neukazuje normalizovaná data v deduplikačních entitách. Normalizaci však aplikuje interně během deduplikace. Je to záměrné pro všechny normalizace. 
-- Pokud je nastavení sémantického typu odstraněno ve fázi **Mapovat**, kdy pravidlo shody používá mapování aliasu nebo vlastní obejití, normalizace se nepoužije. Stává se to pouze v případě, že po konfiguraci normalizace v pravidle shody vymažete sémantický typ, protože sémantický typ bude neznámý.
-
-
-## <a name="next-step"></a>Další krok
-
-Po dokončení procesu shody pro alespoň jeden shodný pár pokračujte ke kroku [**Spojit**](merge-entities.md).
-
+> [!div class="nextstepaction"]
+> [Další krok: Sjednocení polí](merge-entities.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

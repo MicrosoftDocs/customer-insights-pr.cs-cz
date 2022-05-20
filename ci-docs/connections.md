@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645792"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755301"
 ---
 # <a name="connections-preview-overview"></a>Přehled propojení (preview)
 
@@ -24,15 +24,15 @@ Propojení jsou klíčem k povolení sdílení dat do a z Customer Insights. Ka�
 
 Jděte na **Správce** > **Propojení** k vytvoření a zobrazení propojení.
 
-Na kartě **Propojení** se zobrazují všechna aktivní propojení. Seznam zobrazuje řádek pro každé propojení. 
+Na kartě **Propojení** se zobrazují všechna aktivní propojení. Seznam zobrazuje řádek pro každé propojení.
 
 Získejte rychlý přehled, popis a zjistěte, co můžete dělat s každou možností rozšiřitelnosti na kartě **Objev**.
 
-### <a name="exports"></a>Exporty
+## <a name="exports"></a>Exporty
 
 Pouze správci mohou konfigurovat nová propojení, ale mohou udělit přístup přispěvatelům k použití stávajících propojení. Správci kontrolují, kam mohou data směřovat, přispěvatelé definují datovou část a frekvenci podle svých potřeb. Další informace viz [Umožnění přispěvatelům použít připojení pro export](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Rozšíření
+## <a name="enrichments"></a>Rozšíření
 
 Jenom správci mohou konfigurovat nová propojení, ale vytvořená propojení jsou vždy k dispozici správcům i přispěvatelům. Správci spravují přihlašovací údaje a udělují souhlas s datovými přenosy. Následně mohou správci i přispěvatelé propojení použít.
 
@@ -46,7 +46,7 @@ Chcete-li přidat propojení, musíte mít [oprávnění správce](permissions.m
 
 1. Výběrem možnosti **Přidat propojení** vytvořte nové propojení. Z rozbalovací nabídky vyberte, jaký typ připojení chcete vytvořit.
 
-1. V podokně **Nastavení propojení** uveďte požadované podrobnosti. 
+1. V podokně **Nastavení propojení** uveďte požadované podrobnosti.
    1. Propojení popisuje **zobrazované jméno** a typ propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl tohoto propojení.
    1. Přesná pole závisí na tom, ke které službě se připojujete. V článku o cílové službě se můžete dozvědět o podrobnostech konkrétního typu propojení.
    1. Pokud [použijete vlastní trezor klíčů](use-azure-key-vault.md) k uložení tajných kódů, aktivujte **Použít trezor klíčů** a vyberte tajný kód ze seznamu.
@@ -77,7 +77,7 @@ Při nastavování nebo úpravách propojení pro export si vyberete, kterým u�
 
 ## <a name="remove-a-connection"></a>Odebrání propojení
 
-Pokud propojení, které odebíráte, používá rozšíření nebo export, musíte je nejprve odpojit nebo odebrat. Dialogové okno odebrání vás provede příslušným rozšířením nebo exportem. 
+Pokud je připojení, které odstraňujete, používáno obohacením nebo exportem, musíte je nejprve odpojit nebo odebrat. Dialogové okno odebrání vás provede příslušným rozšířením nebo exportem.
 
 Oddělená rozšíření a exporty se stanou neaktivními. Znovu je aktivujete přidáním dalšího propojení na stránce [Rozšíření](enrichment-hub.md) nebo [Exporty](export-destinations.md).
 
@@ -91,7 +91,7 @@ Oddělená rozšíření a exporty se stanou neaktivními. Znovu je aktivujete p
 
    1. Pokud existují rozšíření nebo exporty, která toto propojení používají, vyberte tlačítko a podívejte se, co propojení používá.
       - **Exporty:** Můžete se rozhodnout buď odebrat nebo odpojit exporty, abyste mohli odebrat propojení. Pro odpojení exportu mohou správci použít akci **Odpojit**. Tato akce je k dispozici pro jednotlivé a více vybraných exportů. Odpojením zachováte exportní konfiguraci, ale nebude spuštěna, dokud k ní nebude přidáno další propojení.
-      - **Rozšíření:** Můžete se rozhodnout buď odebrat nebo deaktivovat rozšíření, abyste mohli odebrat propojení. 
+      - **Rozšíření:** Můžete se rozhodnout buď odebrat nebo deaktivovat rozšíření, abyste mohli odebrat propojení.
    1. Jakmile propojení již nemá žádné závislosti, vraťte se zpět na **Správce** > **Propojení** a zkuste propojení znovu odebrat.
 
 1. Odstranění potvrďte výběrem **Odstranit**.

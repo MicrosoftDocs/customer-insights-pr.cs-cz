@@ -1,110 +1,83 @@
 ---
-title: Mapování entit a atributů pro unifikaci dat
-description: Vyberte entity, atributy, primární klíče a sémantické typy pro mapování dat do jednotného zákaznického profilu.
-ms.date: 10/18/2020
+title: Vyberte zdrojová pole pro sjednocení dat
+description: Prvním krokem v procesu sjednocení je výběr entit, atributů, primárních klíčů a sémantických typů pro mapování dat do jednotného profilu zákazníka.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645755"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740987"
 ---
-# <a name="map-entities-and-attributes"></a>Mapování entit a atributů
+# <a name="select-source-fields-for-data-unification"></a>Vyberte zdrojová pole pro sjednocení dat
 
-**Mapování** je první fází procesu sjednocování dat. Mapování se skládá ze tří fází:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Výběr entity*: Identifikujte kombinovatelné entity, které vedou k datové sadě, s úplnějšími informacemi o vašich zákaznících.
-- *Výběr atributů*: U každé entity určete sloupce, které chcete zkombinovat a spárovat ve fázích *přiřazení* a *sloučení*. Tyto sloupce se nazývají *Atributy*.
-- *Výběr primárního klíče a sémantického typu*: Pro každou entitu identifikujte atribut, který chcete definovat jako primární klíč pro danou entitu, a pro každý atribut identifikujte sémantický typ, který tento atribut nejlépe popisuje.
+Prvním krokem sjednocení je výběr entit a polí ve vašich datových sadách, které chcete sjednotit. Vyberte entity, které obsahují podrobnosti týkající se zákazníka, jako je jméno, adresa, telefonní číslo a e-mail. Lze vybrat jednu nebo více entit.
 
-Další informace o obecném toku sjednocení dat naleznete na stránce [Sjednotit](data-unification.md).
+## <a name="select-entities-and-fields"></a>Vybrat entity a pole
 
-## <a name="select-the-first-entities"></a>Vyberte první entity
+1. Přejděte na **Data** > **Sjednotit**.
 
-1. Přejděte na **Data** > **Sjednocení** > **Mapování**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Snímek obrazovky sjednocení vstupní stránky pro první spuštění se zvýrazněnou možností Začít.":::
 
-2. Začněte fázi mapování výběrem možnosti **Vybrat entity**.
+1. Vyberte **Začínáme**.
 
-3. Vyberte entity a atributy, které chcete použít ve fázích *párování* a *sloučení*. Můžete vybrat požadované atributy jednotlivě z entity nebo zahrnout všechny atributy z entity zaškrtnutím políčka **Zahrnout všechna pole** na úrovni entity. Doporučujeme vybrat alespoň dvě entity, aby bylo možné proces sjednocení dat používat výhodně.
+1. Na stránce **Zdrojová pole** vyberte **Vybrat entity a pole**. Zobrazí se podokno **Vybrat entity a pole**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Přiklad Přidat entity.](media/data-manager-configure-map-add-entities-example.png "Přiklad Přidat entity")
+1. Vyberte alespoň jednu entitu.
 
-   V tomto příkladu přidáváme entity **eCommerceContacts** a **loyCustomers**. Výběrem těchto entit můžete získat přehled, kteří z online obchodních zákazníků jsou členy věrnostního programu.
-   
-   Můžete vyhledávat klíčová slova ve všech atributech a entitách a vybrat požadované atributy, které chcete mapovat.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Příklad vyhledávacích polí.](media/data-manager-configure-map-search-fields-example.png "Příklad vyhledávacích polí")
+1. Pro každou vybranou entitu určete pole, která chcete použít ke spárování záznamů zákazníků a polí, která mají být zahrnuta do jednotného profilu. Tato pole se nazývají *Atributy*. Můžete vybrat požadované atributy jednotlivě z entity nebo zahrnout všechny atributy z entity zaškrtnutím políčka na úrovni entity. Můžete vyhledávat klíčová slova ve všech atributech a entitách a vybrat požadované atributy, které chcete mapovat.
 
-4. Volbou **Použít** potvrďte svůj výběr.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Snímek obrazovky vybraných entit a atributů.":::
+
+   V tomto příkladu přidáváme entity **Kontakty** a **CustomerLoyalty**. Výběrem těchto entit můžete získat přehled, kteří z online obchodních zákazníků jsou členy věrnostního programu.
+
+1. Volbou **Použít** potvrďte svůj výběr. Zobrazení vybraných entit a atributů
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Výběr primárního klíče a sémantického typu pro atributy
 
-Po výběru entit se zobrazí stránka **Mapa** s vybranými entitami pro vaši kontrolu. Definujte primární klíč pro entitu a identifikujte sémantický typ pro atribut v entitě.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Screenshot vybraných entit s nevybraným primárním klíčem." lightbox="media/m3_select_primary.png":::
 
-- **Primární klíč**: Vyberte jeden atribut jako primární klíč pro každou ze svých entit. Aby byl atribut platným primárním klíčem, nesmí obsahovat duplicitní hodnoty, chybějící hodnoty nebo hodnoty null. Atributy datových typů řetězce, celého čísla a GUID jsou podporovány jako primární klíče a budou zobrazeny v poli, ze kterého si můžete vybrat.
+Pro každou entitu proveďte následující kroky.
 
-- **Sémantický typ atributu**: Kategorie vašich atributů, jako je e-mailová adresa nebo jméno. Chcete-li použít modely AI pro inteligentní predikci sémantiky, ušetřit čas a zlepšit přesnost, nastavte **Inteligentní mapování** na **ZAPNUTO**. Inteligentní mapování využívá doporučení sémantiky založené na AI v poli **Typ**. Pokud ji nastavíte na **VYPNUTO**, uvidíte naše pravidelná doporučení pro mapování. Z dostupného seznamu možností můžete vybrat libovolný sémantický typ a přepsat navrhovaný výběr.
+1. Zvolte **Primární klíč**. Primární klíč je atribut jedinečný pro entitu. Aby byl atribut platným primárním klíčem, nesmí obsahovat duplicitní hodnoty, chybějící hodnoty nebo hodnoty null. Jako primární klíče jsou podporovány atributy typu String, Integer a GUID.
 
-> [!div class="mx-imgBorder"]
-> ![Typ atributu a sémantická predikce.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Typ atributu a sémantická predikce")
+1. Chcete-li používat modely AI pro inteligentní predikce sémantiky, ušetřit čas a zlepšit přesnost, ujistěte se, že je **Inteligentní mapování** zapnuto. Inteligentní mapování využívá doporučení sémantiky založené na AI v poli **Typ**. Navrhovaný výběr můžete přepsat výběrem libovolného sémantického typu ze seznamu dostupných možností.
 
-Je také možné přidat vlastní sémantický typ entity. Vyberte pole typu pro atribut a zadejte název vlastního sémantického typu. Tímto způsobem můžete také změnit typy atributů, které byly systémem identifikovány.
+1. Pro každý atribut vyberte sémantiku **Typ**, který nejlépe popisuje daný atribut, jako je jméno, město nebo e-mailová adresa.
 
-Všechny atributy, pro které je sémantický typ automaticky identifikován, jsou seskupeny v sekci **Kontrola mapovaných polí**. Zkontrolujte tyto atributy a jejich sémantické typy, protože se použijí ke sloučení vašich entit v kroku sloučení během sjednocení dat.
+   > [!NOTE]
+   > Jedno pole by se mělo namapovat na sémantický typ *Person.FullName* k vyplnění jména zákazníka na zákaznické kartě. Jinak se zákaznické karty objeví beze jména.
 
-Atributy, které nejsou automaticky mapovány na sémantický typ, jsou seskupeny v sekci **Definování dat v nemapovaných polích**. Vyberte pole sémantického typu pro nemapované atributy nebo zadejte vlastní název typu atributu.
+   1. Chcete-li změnit typ atributu identifikovaný systémem, vyberte jiný typ. Pokud typ neexistuje, vytvořte vlastní sémantický typ výběrem pole **Typ** pro atribut a zadání názvu vlastního sémantického typu.
 
-> [!div class="mx-imgBorder"]
-> ![Primární klíč a typ atributu.](media/data-manager-configure-map-add-attributes.png "Primární klíč a typ atributu")
+   1. Chcete-li přidat atribut, který obsahuje adresu URL, k veřejně dostupným profilovým obrázkům nebo logům, vyberte entitu a pole obsahující adresu URL. V poli **Typ** zadejte následující:
+      - Pro osobu: Person.ProfileImage
+      - Pro organizaci: Organization.LogoImage
 
-> [!NOTE]
-> Jedno pole by se mělo namapovat na sémantický typ Person.FullName k naplnění jména zákazníka na kartě zákazníka. Jinak se zákaznické karty objeví beze jména. 
+   1. Pro atribut názvu účtu zadejte do pole **Typ** Organization.Name".
 
-## <a name="add-and-remove-attributes-and-entities"></a>Přidání a odebrání atributů a entit
+1. Zkontrolujte atributy, kde je sémantický typ automaticky identifikován. Tyto atributy jsou uvedeny pod části **Zkontrolujte namapovaná pole**. V kroku **Sjednocená zákaznická pole** lze kombinovat pouze atributy stejného typu. Sémantické typy se používají k automatickému navrhování přehledů. Ujistěte se, že typy, které jste vybrali, jsou konzistentní ve všech vybraných entitách.
 
-1. V **Sjednocení** > **Mapování** vyberte **Upravit pole**.
+1. U atributů, které nejsou automaticky namapovány na sémantický typ, vyberte pole sémantického typu, zadejte název vlastního typu atributu nebo je ponechte nenamapované. Tyto atributy jsou uvedeny pod položkou **Definovat data v nenamapovaných polích**.
 
-2. V podokně **Upravit pole** přidejte nebo odeberte atributy a entity. Vyhledejte nebo posunutím vyhledejte a vyberte své atributy a entity, které vás zajímají. Nelze odebrat atribut nebo entitu, pokud již byly spárovány.
+1. Po dokončení kroků pro každou entitu vyberte **Uložit zdrojová pole**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Přidat či odebrat atributy.](media/configure-data-map-edit.png "Přidat či odebrat atributy")
+1. Vyberte **Další**.
 
-3. Vyberte **Použít**.
-
-## <a name="add-images-to-profiles"></a>Přidání obrázků do profilů
-
-Pokud entita obsahuje adresy URL pro veřejně dostupné profily nebo loga profilů, můžete je přidat do sjednoceného profilu zákazníka.
-
-Vyberte entitu a najděte pole, které obsahuje adresu URL obrázku profilu. V poli **Typ** ručně zadejte následující hodnotu: 
-- Pro osobu: Person.ProfileImage
-- Pro organizaci: Organization.LogoImage
-
-Pokračujte v krocích sjednocení a zajistěte, aby atribut, který obsahuje adresu URL obrázku, byl také přidán v kroku [Sloučení](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Nastavení atributů pro organizace
-
-U organizací (Preview) by měl být typ atributu mapován na „Organization.Name“
-> [!div class="mx-imgBorder"]
-> ![Primární klíč a typ atributu B2B.](media/configure-data-map-edit-b2b.png "Primární klíč a typ atributu B2B")
-
-## <a name="next-step"></a>Další krok
-
-V rámci procesu sjednocení údajů přejděte na stránku **Přiřazení**. Návštivte [**Přiřazení**](match-entities.md) a získejte další informace o této fázi.
-
-> [!TIP]
-> Podívejte se na následující video: [Začínáme: Vytvoření jednotného profilu zákazníka](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Další krok: Odstraňte duplikáty](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

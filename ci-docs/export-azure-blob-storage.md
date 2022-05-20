@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645823"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757378"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Export seznamu segmentů a dalších dat do služby Azure Blob Storage (náhled)
 
@@ -44,7 +44,7 @@ Uložte si data Customer Insights do služby Azure Blob Storage nebo je použijt
 Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
 
 > [!IMPORTANT]
-> Pokud jste pro účet Azure Blob Storage zapnuli nastavení obnovitelné odstranění, exporty se nezdaří. Chcete -li exportovat data do objektů BLOB, vypněte obnovitelné odstranění. Další informace viz [Povolení obnovitelného odstranění objektů blob](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Pokud jste pro účet Azure Blob Storage zapnuli nastavení obnovitelné odstranění, exporty se nezdaří. Chcete -li exportovat data do objektů BLOB, vypněte obnovitelné odstranění. Další informace viz [Povolení obnovitelného odstranění objektů blob](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. Přejděte na **Data** > **Exporty**.
 

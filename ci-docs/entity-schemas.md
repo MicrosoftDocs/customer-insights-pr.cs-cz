@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645804"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757424"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémata entit v Common Data Model
 
@@ -23,7 +23,7 @@ ms.locfileid: "8645804"
 
 Tento sdílený datový model umožňuje aplikacím a datovým integrátorům snadnější spolupráci tím, že poskytuje jednotnou definici dat. Common Data Model zahrnuje bohatý systém metadat se standardními entitami, vztahy, hierarchiemi, zvláštnostmi a další. Pochází z aplikací Dynamics 365 a jeho veřejný zdrojový kód je k dispozici na GitHubu s více než 260 standardními entitami. Rozsáhlý systém interních a externích partnerů přispívá koncepty Common Data Model pro jednotlivá odvětví.
 
-Common Data Model dnes implementuje více systémů a platforem, včetně datových toků Power BI a Azure Data Services. Už je podporováno v Microsoft Dataverse, Dynamics 365, Power Apps, Power BI a nadcházející datové služby Azure, přímo zvyšující hodnotu vůči [Otevřené datové iniciativě](https://www.microsoft.com/open-data-initiative).
+Common Data Model dnes implementuje více systémů a platforem, včetně datových toků Power BI a Azure Data Services. Už je podporováno v Microsoft Dataverse, Dynamics 365, Power Apps, Power BI a nadcházející datové služby Azure, přímo zvyšující hodnotu vůči [Otevřené datové iniciativě](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Schémata entit Customer Insights
 

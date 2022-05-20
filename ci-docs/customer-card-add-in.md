@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645736"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755628"
 ---
 # <a name="customer-card-add-in-preview"></a>Doplněk karty zákazníka (preview)
-
-
 
 Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dynamics 365. Když je v podporované aplikaci Dynamics 365 nainstalován doplněk Zákaznická karta, můžete se rozhodnout zobrazovat pole profilu zákazníka, přehledy a časovou osu aktivity. Doplněk načte data z Customer Insights bez ovlivnění dat v připojené aplikaci Dynamics 365.
 
@@ -31,7 +29,7 @@ Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dyna
 ## <a name="prerequisites"></a>Požadavky
 
 - Doplněk funguje pouze s modelem řízenými aplikacemi Dynamics 365, jako je Sales nebo Customer Service, verze 9.0 a novější.
-- Aby byla vaše data Dynamics 365 mapována na profily zákazníků Customer Insights, doporučujeme je [přijímat z aplikace Dynamics 365 pomocí konektoru Microsoft Dataverse](connect-power-query.md). Pokud pro přijímání kontaktů (nebo obchodních vztahů) Dynamics 365 používáte jinou metodu, musíte se ujistit, že pole `contactid` (nebo `accountid`) je nastaveno jako [primární klíč pro tento zdroj dat v kroku mapování v rámci procesu sjednocení dat](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Aby byla vaše data Dynamics 365 mapována na profily zákazníků Customer Insights, doporučujeme je [přijímat z aplikace Dynamics 365 pomocí konektoru Microsoft Dataverse](connect-power-query.md). Pokud pro přijímání kontaktů (nebo obchodních vztahů) Dynamics 365 používáte jinou metodu, musíte se ujistit, že pole `contactid` (nebo `accountid`) je nastaveno jako [primární klíč pro tento zdroj dat v kroku mapování v rámci procesu sjednocení dat](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Všichni uživatelé Dynamics 365 doplňku Zákaznické karty musí být [přidáni jako uživatelé](permissions.md) v Customer Insights, aby viděli data.
 - [Nakonfigurované možnosti vyhledávání a filtrování](search-filter-index.md) v Customer Insights jsou vyžadovány, aby vyhledávání dat fungovalo.
 - Každý ovládací prvek doplňku závisí na konkrétních datech v Customer Insights. Některá data a ovládací prvky jsou k dispozici pouze v prostředích konkrétních typů. Konfigurace doplňku vás bude informovat, pokud ovládací prvek není k dispozici kvůli vybranému typu prostředí. Další informace o [případech použití prostředí](work-with-business-accounts.md).
@@ -132,16 +130,16 @@ I při správně nakonfigurovaných polích ID nemohou ovládací prvky najít d
 
 **Řešení**
 
-1. Ujistěte se, že jste nakonfigurovali doplněk Karta podle pokynů: [Nakonfigurujte doplněk Zákaznická karta](#configure-the-customer-card-add-in) 
+1. Ujistěte se, že jste nakonfigurovali doplněk Karta podle pokynů: [Nakonfigurujte doplněk Zákaznická karta](#configure-the-customer-card-add-in)
 
-1. Zkontrolujte konfiguraci příjmu dat. Upravte zdroj dat pro systém Dynamics 365, který obsahuje GUID ID kontaktu. Pokud je ID kontaktu GUID zobrazeno s velkými písmeny v editoru Power Query, zkuste následující: 
+1. Zkontrolujte konfiguraci příjmu dat. Upravte zdroj dat pro systém Dynamics 365, který obsahuje GUID ID kontaktu. Pokud je ID kontaktu GUID zobrazeno s velkými písmeny v editoru Power Query, zkuste následující kroky:
     1. Upravte zdroj dat a otevřete zdroj dat v editoru Power Query.
     1. Vyberte sloupec ID kontaktu.
     1. Vyberte **Transformovat** v panelu záhlaví a zobrazíte dostupné akce.
     1. Vyberte **malá písmena**. Ověřte, zda jsou GUID v tabulce nyní malá písmena.
     1. Uložte zdroj dat.
-    1. Spusťte příjem dat, sjednocení a následné procesy k šíření změn do GUID. 
+    1. Spusťte příjem dat, sjednocení a následné procesy k šíření změn do GUID.
 
-Po dokončení úplné aktualizace by ovládací prvky doplňku Zákaznické karty měly zobrazovat očekávaná data. 
+Poté, co systém dokončí úplnou aktualizaci, by ovládací prvky doplňku Zákaznické karty měly zobrazovat očekávaná data.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

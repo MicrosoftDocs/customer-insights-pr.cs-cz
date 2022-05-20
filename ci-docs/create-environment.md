@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645739"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712894"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Vytvoření prostředí v Customer Insights
 
@@ -63,8 +63,7 @@ Budete mít dvě možnosti: **Úložiště Customer Insights** (datové jezero A
 Uložením dat do Azure Data Lake Storage souhlasíte s tím, že data budou přenesena a uložena v příslušném geografickém umístění pro daný účet úložiště Azure. Toto umístění se může lišit od místa, kde jsou uložena data Dynamics 365 Customer Insights. Další informace naleznete v [centru zabezpečení Microsoft](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights aktuálně podporuje následující:
-> - Požité entity z toků dat Power BI, které jsou uloženy v souboru Microsoft Dataverse - spravované Data Lake.  
+> Customer Insights aktuálně podporuje následující:  
 > - Účty Azure Data Lake Storage ze stejné oblasti Azure, kterou jste vybrali při vytváření prostředí.
 > - Účty Azure Data Lake Storage, které jsou Gen2 a které mají povolený *hierarchický obor názvů*. Účty úložiště Azure Data Lake Gen1 nejsou podporovány.
 
@@ -80,7 +79,7 @@ Krok **Microsoft Dataverse** vám umožní propojit Customer Insights s vaším 
 
 Poskytněte své vlastní prodtředí Microsoft Dataverse pro sdílení dat (profilů a přehledů) s podnikovými aplikacemi založenými na Dataverse, jako je Dynamics 365 Marketing nebo modelem řízené aplikace v Power Apps. Pokud nemáte vlastní prostředí Dataverse, nechte toto pole prázdné a my vám ho vytvoříme.
 
-Připojení k prostředí Dataverse vám také umožňuje [ingestovat data z místních zdrojů dat pomocí datových toků a bran platformy Power Platform](data-sources.md#add-data-from-on-premises-data-sources). Můžete také použít [vestavěné modely predikce](predictions-overview.md?tabs=b2c#out-of-box-models) připojením k prostředí Dataverse.
+Připojení k prostředí Dataverse vám také umožňuje [ingestovat data z místních zdrojů dat pomocí datových toků a bran platformy Power Platform](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Customer Insights a Dataverse musí být ve stejné oblasti, aby bylo možné sdílet data.

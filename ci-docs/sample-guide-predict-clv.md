@@ -1,19 +1,19 @@
 ---
 title: Predikce celoživotní hodnoty zákazníka – ukázkový průvodce
 description: Pomocí tohoto ukázkového průvodce můžete vyzkoušet model predikce celoživotní hodnoty zákazníka.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645876"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740803"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Predikce celoživotní hodnoty zákazníka (CLV) – ukázkový průvodce
 
@@ -102,64 +102,7 @@ Prohlédněte si články [o přijímání dat](data-sources.md) a [importu dato
 
 ## <a name="task-2---data-unification"></a>Úkol 2 – Sjednocení dat
 
-Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jednotný profil zákazníka. Další informace naleznete v tématu [Sjednocení dat](data-unification.md).
-
-### <a name="map"></a>Mapovat
-
-1. Po ingestaci dat namapujte kontakty z eCommerce a věrnostní data na běžné datové typy. Přejděte na **Data** > **Sjednocení** > **Mapování**.
-
-1. Vyberte entity, které představují profil zákazníka – **eCommerceContacts** a **loyCustomers**. Potom vyberte **Použít**.
-
-   ![Sjednocení zdrojů dat eCommerce a věrnostních bodů.](media/unify-ecommerce-loyalty.png)
-
-1. Vyberte **ContactId** jako primární klíč pro **eCommerceContatcs** a **LoyaltyID** jako primární klíč pro **loyCustomers**.
-
-   ![Sjednocení LoyaltyId jako primární klíč.](media/unify-loyaltyid.png)
-
-1. Zvolte **Uložit**.
-
-### <a name="match"></a>Párování
-
-1. Přejděte na kartu **Párování** a vyberte **Nastavit pořadí**.
-
-1. V **primárním** rozevíracím seznamu zvolte jako primární zdroj **eCommerceContacts : eCommerce** a zahrňte všechny záznamy.
-
-1. V rozevíracím seznamu **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všechny záznamy.
-
-   ![Sjednocení párování dat eCommerce a věrnostních bodů.](media/unify-match-order.png)
-
-1. Vyberte položku **Přidat pravidlo**
-
-1. Přidejte svou první podmínku pomocí FullName.
-
-   - Pro eCommerceContacts vyberte **Celé jméno** v rozevírací nabídce.
-   - Pro loyCustomers vyberte **Celé jméno** v rozevírací nabídce.
-   - Vyberte rozevírací seznam **Normalizovat** a zvolte **Typ (Telefon, Jméno, Adresa, ...)**.
-   - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
-
-1. Zadejte jméno **Celé jméno, e-mail** pro nové pravidlo.
-
-   - Přidejte druhou podmínku pro e-mailovou adresu výběrem **Přidat podmínku**
-   - Pro entitu eCommerceContacts zvolte **EMail** v rozevírací nabídce.
-   - Pro entitu loyCustomers zvolte **EMail** v rozevírací nabídce.
-   - Ponechejte pole Noramlizovat prázdné.
-   - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
-
-   ![Sjednocení pravidla párování pro jméno a e-mail.](media/unify-match-rule.png)
-
-1. Vyberte **Hotovo**.
-
-1. Zvolte **Uložit** a **Spustit**.
-
-### <a name="merge"></a>Sloučení
-
-1. Přejděte na kartu **Sloučení**.
-
-1. V **ContactId** pro entitu **loyCustomers** změňte zobrazované jméno na **ContactIdLOYALTY**, abyste jej odlišili od ingestovaných ID.
-
-   ![Přejmenování contactid z věrnostního ID.](media/unify-merge-contactid.png)
-
-1. Vyberte **Uložit** a **Spustit sloučení a podřízené procesy**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Úkol 3 - Konfigurace predikce celoživotní hodnoty zákazníka
 

@@ -1,25 +1,25 @@
 ---
 title: Predikce doporučení produktů
 description: Predikujte produkty, které si zákazník pravděpodobně zakoupí nebo s nimž bude interagovat.
-ms.date: 01/13/2022
+ms.date: 05/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fe6c0e8ba8236243682a4105535a0026c4343c3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9b3e60c49d294d031f43ef0594cb69707bb64019
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646407"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762724"
 ---
 # <a name="product-recommendation-prediction"></a>Predikce doporučení produktů
 
 Model doporučení produktů vytváří sady prediktivních doporučení produktů. Doporučení jsou založena na předchozím nákupním chování a zákaznících s podobnými nákupními vzory. Nové predikce doporučení produktů můžete vytvořit na stránce **Analytické nástroje** > **Predikce**. Volbou **Moje predikce** zobrazíte ostatní predikce, které jste vytvořili.
 
-Doporučení produktů mohou podléhat místním zákonům a předpisům a očekáváním zákazníků, které model na základě svého sestavení nezohledňuje.  Jako uživatel této prediktivní schopnosti **musíte před doručením vašim zákazníkům zkontrolovat doporučení** k zajištění, že dodržujete všechny příslušné zákony nebo předpisy a očekávání zákazníků ohledně toho, co můžete doporučit. 
+Doporučení produktů mohou podléhat místním zákonům a předpisům a očekáváním zákazníků, které model na základě svého sestavení nezohledňuje.  Jako uživatel této prediktivní schopnosti **musíte před doručením vašim zákazníkům zkontrolovat doporučení** k zajištění, že dodržujete všechny příslušné zákony nebo předpisy a očekávání zákazníků ohledně toho, co můžete doporučit.
 
 Kromě toho vám výstup tohoto modelu poskytne doporučení založená na ID produktu. Váš doručovací mechanismus bude muset namapovat předpokládaná ID produktu na vhodný obsah pro vaše zákazníky, aby zohledňoval lokalizaci, obsah obrázku a další obsah nebo chování specifické pro firmy.
 
@@ -33,29 +33,31 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 
 - Obchodní znalosti, abyste rozuměli různým typům produktů pro vaše podnikání a jak s nimi zákazníci interagují. Podporujeme doporučení produktů, které si vaši zákazníci dříve zakoupili, nebo doporučení pro nové produkty.
 
+- Vaše prostředí musí být nakonfigurováno pro primární cílovou skupinu **jednotlivých spotřebitelů**.
+
 - Údaje o transakcích a nákupech a jejich historie:
-    - Identifikátory transakcí k rozlišení nákupů nebo transakcí.
-    - Identifikátory zákazníků pro mapování transakcí na vaše zákazníky.
-    - Data událostí, kdy došlo k transakcím.
-    - Informace o ID produktu pro transakci.
-    - (Volitelné) Datová entita katalogu produktů pro použití filtru produktu.
-    - (Volitelně) Zda je transakce vratka nebo ne.
-    - Schéma sémantických dat vyžaduje následující informace:
-        - **ID transakce:** Jedinečný identifikátor nákupu nebo transakce.
-        - **Datum transakce:** Datum nákupu nebo transakce.
-        - **Hodnota transakce:** Číselná hodnota nákupu nebo transakce.
-        - **Jedinečné ID produktu:** ID zakoupeného produktu nebo služby, pokud jsou vaše data na úrovni řádkové položky.
-        - (Volitelný) **Nákup nebo vrácení:** Logické pole, kde hodnota *skutečný* identifikuje, že transakce byla vrácená. Pokud nejsou poskytnuty údaje o nákupu nebo vrácení, model **Hodnota transakce** je záporná, použijeme tyto informace také k odvození návratnosti.
+  - Identifikátory transakcí k rozlišení nákupů nebo transakcí.
+  - Identifikátory zákazníků pro mapování transakcí na vaše zákazníky.
+  - Data událostí, kdy došlo k transakcím.
+  - Informace o ID produktu pro transakci.
+  - (Volitelné) Datová entita katalogu produktů pro použití filtru produktu.
+  - (Volitelně) Zda je transakce vratka nebo ne.
+  - Schéma sémantických dat vyžaduje následující informace:
+    - **ID transakce:** Jedinečný identifikátor nákupu nebo transakce.
+    - **Datum transakce:** Datum nákupu nebo transakce.
+    - **Hodnota transakce:** Číselná hodnota nákupu nebo transakce.
+    - **Jedinečné ID produktu:** ID zakoupeného produktu nebo služby, pokud jsou vaše data na úrovni řádkové položky.
+    - (Volitelný) **Nákup nebo vrácení:** Logické pole, kde hodnota *skutečný* identifikuje, že transakce byla vrácená. Pokud nejsou poskytnuty údaje o nákupu nebo vrácení, model **Hodnota transakce** je záporná, použijeme tyto informace také k odvození návratnosti.
 - Navrhované vlastnosti dat:
-    - Dostatečné historické údaje: Nejméně jeden rok transakčních údajů, nejlépe dva až tři roky, aby zahrnovaly určitou sezónnost.
-    - Vícenásobné nákupy na zákazníka: Tři nebo více transakcí na ID zákazníka
-    - Počet zákazníků: Nejméně 100 zákazníků, nejlépe více než 10 000 jedinečných zákazníků. Model selže s méně než 100 zákazníky.
+  - Dostatečné historické údaje: Nejméně jeden rok transakčních údajů, nejlépe dva až tři roky, aby zahrnovaly určitou sezónnost.
+  - Vícenásobné nákupy na zákazníka: Tři nebo více transakcí na ID zákazníka
+  - Počet zákazníků: Nejméně 100 zákazníků, nejlépe více než 10 000 jedinečných zákazníků. Model selže s méně než 100 zákazníky.
 
 > [!NOTE]
+>
 > - Model vyžaduje historii transakcí vašich zákazníků. Definice transakce je poměrně flexibilní. Jakákoli data, která popisují interakci uživatele a produktu, mohou fungovat jako vstup. Například nákup produktu, absolvování kurzu nebo účast na události.
 > - Aktuálně lze konfigurovat pouze jednu entitu historie transakcí. Pokud existuje více entit nákupu, sjednoťte je před příjmem dat v Power Query.
 > - Pokud jsou objednávka a podrobnosti objednávky různé entity, připojte se k nim před použitím v modelu. Model v entitě nefunguje pouze s ID objednávky nebo ID příjmu.
-
 
 ## <a name="create-a-product-recommendation-prediction"></a>Vytvoření predikce doporučení produktů
 
@@ -76,7 +78,7 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 ### <a name="define-product-recommendation-configuration"></a>Definování konfigurace doporučení produktů
 
 1. Nastavte **Počet produktů**, kolik chcete doporučit zákazníkovi. Tato hodnota závisí na tom, jak váš způsob doručení vyplňuje data. Pokud můžete doporučit tři produkty, nastavte tuto hodnotu odpovídajícím způsobem.
-   
+
    >[!TIP]
    > Kdykoliv můžete volbou **Uložit koncept** uložit predikci jako koncept. Koncept predikce najdete na kartě **Moje predikce**.
 
@@ -98,14 +100,13 @@ Pokud máte zájem o vyzkoušení této funkce, ale nemáte data k splnění ní
 
    :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Typ aktivity nastavení stránky.":::
 
-1. Po namapování aktivity na odpovídající sémantický typ pokračujte výběrem možosti **Další**. 
- 
+1. Po namapování aktivity na odpovídající sémantický typ pokračujte výběrem možnosti **Další**.
+
 1. Namapujte sémantické atributy na pole, která jsou nutná ke spuštění modelu.
 
 1. Zvolte **Uložit**.
 
 1. Vyberte **Další**.
-
 
 ### <a name="configure-product-filters"></a>Konfigurace filtrů produktu
 
@@ -113,11 +114,11 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
 
 1. V kroku **Přidat informace o produktu** přidejte svůj katalog produktů s informacemi o každém produktu. Mapujte požadované informace výběrem možnosti **Další**.
 
-3. V kroku **Filtry produktů** vyberte z následujících možností.
+1. V kroku **Filtry produktů** vyberte z následujících možností.
 
-   * **Žádné filtry**: Použijte všechny produkty v predikci doporučení produktu.
+   - **Žádné filtry**: Použijte všechny produkty v predikci doporučení produktu.
 
-   * **Definovat konkrétní filtry produktu**: Použijte konkrétní produkty v predikci doporučení produktu.
+   - **Definovat konkrétní filtry produktu**: Použijte konkrétní produkty v predikci doporučení produktu.
 
 1. Vyberte **Další**.
 
@@ -126,7 +127,7 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
    :::image type="content" source="media/product-filters-sidepane.png" alt-text="Postranní podokno zobrazující atributy v entitě katalogu produktů, které chcete vybrat pro filtry produktů.":::
 
 1. Vyberte, zda má produktový filtr použít konektory **and** pro logickou kombinaci vašeho výběru atributů z katalogu produktů.
-   
+
    :::image type="content" source="media/product-filters-sample.png" alt-text="Ukázková konfigurace produktových filtrů kombinovaná s logickými spojkami AND.":::
 
 1. Vyberte **Další**.
@@ -150,7 +151,7 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
 1. Vyberte předpověď, kterou chcete zkontrolovat.
    - **Název predikce:** Název predikce zadaný při jejím vytvoření.
    - **Typ predikce:** Typ modelu použitého pro predikci.
-   - **Výstupní entita:** Název entity pro uložení výstupu predikce. Můžete najít entitu s tímto názvem v umístění **Data** > **Entity**.    
+   - **Výstupní entita:** Název entity pro uložení výstupu predikce. Můžete najít entitu s tímto názvem v umístění **Data** > **Entity**.
       *Skóre* ve výstupní entitě je kvantitativní měřítko doporučení. Model doporučuje produkty s vyšším skóre než produkty s nižším skóre.
    - **Predikované pole:** Toto pole je vyplněno pouze pro některé typy predikcí a nepoužívá se v predikci doporučení produktu.
    - **Stav:** Aktuální stav běhu predikce.
@@ -171,28 +172,27 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
             - **A** Kvalita modelu bude ohodnocena známkou **A**, pokud je metrika „Úspěch @ K“ alespoň o 10 % vyšší než základ. 
             - **B** Kvalita modelu bude ohodnocena známkou **B**, pokud je metrika „Úspěch @ K“ o 0 % až 10 % vyšší než základ.
             - **C** Kvalita modelu bude ohodnocena známkou **C**, pokud je metrika „Úspěch @ K“ nižší než základ.
-               
+
                > [!div class="mx-imgBorder"]
                > ![Zobrazení výsledku výkonu modelu.](media/product-recommendation-modelperformance.PNG "Zobrazení výsledku výkonu modelu")
             - **Základ**: Model převezme nejvíce doporučované produkty podle počtu nákupů u všech zákazníků a na základě naučených pravidel rozpoznaných modelem vytvoří sadu doporučení pro zákazníky. Predikce jsou poté porovnány s nejlepšími produkty, které byly vypočítány podle počtu zákazníků, kteří si produkty koupili. Pokud má zákazník v doporučených produktech alespoň jeden produkt, který byl také mezi nejprodávanějšími produkty, považuje se za součást základu. Pokud by 10 z těchto zákazníků mělo zakoupený doporučený produkt ze 100 celkových zákazníků, byl by základ 10 %.
             - **Úspěch @ K.**: Pomocí ověřovací sady časového období transakcí se vytvoří doporučení pro všechny zákazníky a porovnají se s ověřovací sadou transakcí. Například v období 12 měsíců může být měsíc 12 vyčleněn jako ověřovací sada dat. Pokud model predikuje alespoň jednu věc, kterou byste si koupili v 12. měsíci na základě toho, co se dozvěděl z předchozích 11 měsíců, zákazník by zvýšil metriku „Úspěch @ K“.
-    
+
     1. **Nejvíce doporučované produkty (se shodou):** Prvních pět produktů, které byly predikovány vašim zákazníkům.
        > [!div class="mx-imgBorder"]
        > ![Graf zobrazující prvních 5 nejdoporučovanějších produktů.](media/product-recommendation-topproducts.PNG "Graf zobrazující prvních 5 nejdoporučovanějších produktů")
-    
+
     1. **Klíčové faktory doporučení:** Model používá k provádění doporučení produktů historii transakcí zákazníků. Učí se vzory založené na minulých nákupech a hledá podobnosti mezi zákazníky a produkty. Tyto podobnosti se pak využijí ke generování doporučení produktů.
-    Následují faktory, které by mohly ovlivnit doporučení produktu generované modelem. 
-        - **Minulé transakce**: Vzorce nákupu v minulosti využíval model ke generování doporučení produktu. Model může například doporučit _Povrchovou obloukovou myš_, pokud někdo nedávno koupil _Povrchovou knihu 3_ a _Povrchové pero_. Model se dozvěděl, že historicky si mnoho zákazníků koupilo _Povrchovou obloukovou myš_ po zakoupení _Povrchové knihy 3_ a _Povrchového pera_.
-        - **Podobnost zákazníka**: Doporučený produkt byl historicky zakoupen jinými zákazníky, kteří vykazují podobné vzorce nákupu. Například Johnovi byla doporučena _Povrchová sluchátka 2_, protože Jennifer a Brad nedávno zakoupili _Povrchová sluchátka 2_. Model věří, že John je podobný Jennifer a Bradovi, protože historicky měli podobné nákupní vzorce.
-        - **Podobnost produktu**: Doporučený produkt je podobný ostatním produktům, které si zákazník dříve zakoupil. Model považuje dva výrobky za podobné, pokud byly zakoupeny společně nebo podobnými zákazníky. Například někdo dostane doporučení pro _Úložiště USB_, protože dříve zakoupili _Adaptér USB-C na USB_ a model věří, že _Úložiště USB_ je podobné _Adaptéru USB-C na USB_ založenému na historických vzorcích nákupu.
+    Následují faktory, které by mohly ovlivnit doporučení produktu generované modelem.
+        - **Minulé transakce**: Vzorce nákupu v minulosti využíval model ke generování doporučení produktu. Model může například doporučit *Povrchovou obloukovou myš*, pokud někdo nedávno koupil *Povrchovou knihu 3* a *Povrchové pero*. Model se dozvěděl, že historicky si mnoho zákazníků koupilo *Povrchovou obloukovou myš* po zakoupení *Povrchové knihy 3* a *Povrchového pera*.
+        - **Podobnost zákazníka**: Doporučený produkt byl historicky zakoupen jinými zákazníky, kteří vykazují podobné vzorce nákupu. Například Johnovi byla doporučena *Povrchová sluchátka 2*, protože Jennifer a Brad nedávno zakoupili *Povrchová sluchátka 2*. Model věří, že John je podobný Jennifer a Bradovi, protože historicky měli podobné nákupní vzorce.
+        - **Podobnost produktu**: Doporučený produkt je podobný ostatním produktům, které si zákazník dříve zakoupil. Model považuje dva výrobky za podobné, pokud byly zakoupeny společně nebo podobnými zákazníky. Například někdo dostane doporučení pro *Úložiště USB*, protože dříve zakoupili *Adaptér USB-C na USB* a model věří, že *Úložiště USB* je podobné *Adaptéru USB-C na USB* založenému na historických vzorcích nákupu.
 
         Každé doporučení produktu je ovlivněno jedním nebo více z těchto faktorů. Procento doporučení, kde každý ovlivňující faktor hrál roli, je zobrazeno v grafu. V následujícím příkladu bylo 100 % doporučení ovlivněno minulými transakcemi, 60 % podobností zákazníků a 22 % podobností produktů. Umístěním kurzoru myši nad pruhy v grafu zobrazíte přesné procento, kam přispěly ovlivňující faktory.
 
         > [!div class="mx-imgBorder"]
         > ![Klíčové faktory doporučení.](media/product-recommendation-keyrecommendationfactors.png "Klíčové faktory doporučení, které model získal při generování doporučení produktu")
-       
-     
+
    1. **Statistika údajů**: Poskytuje přehled počtu transakcí, zákazníků a produktů, které model zvažuje. Je založen na vstupních datech, která byla použita k osvojení vzorů a generování doporučení produktů.
 
       > [!div class="mx-imgBorder"]
@@ -208,6 +208,5 @@ Pro typ predikce, který vytvoříte, jsou někdy výhodné nebo vhodné pouze u
 ## <a name="manage-predictions"></a>Správa predikcí
 
 Predikce můžete optimalizovat, odstraňovat jejich problémy, aktualizovat nebo odstranit. Projděte si sestavu použitelnosti vstupních dat a zjistěte v ní, jak zajistit, aby predikce byla rychlejší a spolehlivější. Další informace naleznete v tématu [Správa predikcí](manage-predictions.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

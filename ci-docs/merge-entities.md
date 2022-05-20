@@ -1,188 +1,168 @@
 ---
-title: Sloučení entit ve sjednocení dat
+title: Sjednocení polí zákazníka nebo obchodního vztahu
 description: Sloučením entit můžete vytvořit sjednocené profily zákazníků.
-ms.date: 01/28/2022
+recommendations: false
+ms.date: 05/04/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
-- ci-match
 - ci-merge
+- ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 978a7c9bc440398fa39e9fa1d366d74e5c7aaea0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646417"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740849"
 ---
-# <a name="merge-entities"></a>Správa entit
+# <a name="unify-customer-fields"></a>Sjednocení polí zákazníka
 
-Fáze sloučení je poslední fází v procesu sjednocení dat. Jeho účelem je slazování protichůdných údajů. Příklady konfliktních dat mohou zahrnovat jméno zákazníka, které se nachází ve dvou vašich datových sadách, ale v každé z nich se zobrazuje trochu jinak ("Grant Marshall" versus "Grant Marshal") nebo telefonní číslo, které se liší ve formátu (617-803-091X versus 617803091X). Sloučení těchto konfliktních datových bodů se provádí na základě atribut - atribut.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-:::image type="content" source="media/merge-fields-page.png" alt-text="Stránka sloučení v procesu sjednocení dat zobrazující tabulku se sloučenými poli, která definují sjednocený profil zákazníka.":::
+V tomto kroku procesu sjednocení vyberte a vylučte atributy, které chcete sloučit v rámci entity sjednoceného profilu. Pokud například tři entity měly e-mailová data, můžete si ponechat všechna tři samostatná pole e-mailu nebo je sloučit do jednoho pole e-mailu pro sjednocený profil. Některé atributy jsou systémem automaticky kombinovány. Můžete vytvořit stabilní a jedinečná ID zákazníků a seskupovat související profily do clusteru.
 
-Po dokončení [fáze párování](match-entities.md) můžete zahájit fázi sloučení výběrem dlaždice **Sloučit** na stránce **Sjednotit**.
+:::image type="content" source="media/m3_unify.png" alt-text="Stránka sloučení v procesu sjednocení dat zobrazující tabulku se sloučenými poli, která definují sjednocený profil zákazníka.":::
 
-## <a name="review-system-recommendations"></a>Zkkontrolovat systémová doporučení
+## <a name="review-and-update-the-customer-fields"></a>Kontrola a aktualizace polí zákazníka
 
-V části **Data** > **Sjednotit** > **Sloučit** vybíráte a vylučujete atributy ke sloučení v rámci entity sjednoceného profilu zákazníka. Sjednocený profil zákazníka je výsledkem procesu sjednocení dat. Některé atributy jsou systémem automaticky sloučeny.
+1. Zkontrolujte seznam polí, která budou sjednocena na kartě **Zákaznická pole** tabulky. Proveďte případné změny.
 
-Chcete-li zobrazit atributy, které jsou zahrnuty v jednom z vašich automaticky sloučených atributů, vyberte tento sloučený atribut na kartě **Zákaznická pole** tabulky. Atributy, které tvoří tento sloučený atribut, se zobrazí ve dvou nových řádcích pod sloučeným atributem.
+   1. Pro jakákoli kombinovaná pole můžete provést tyto akce:
+      - [Úpravy](#edit-a-merged-field)
+      - [Přejmenovat](#rename-fields)
+      - [Oddělit](#separate-merged-fields)
+      - [Vyloučit](#exclude-fields)
+      - [Posunutí nahoru nebo dolů](#change-the-order-of-fields)
 
-## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Oddělení, přejmenování, vyloučení a úprava sloučených polí
+   1. Pro jakákoli jednotlivá pole můžete provést tyto akce:
+      - [Zkombinovat pole](#combine-fields-manually)
+      - [Kombinace skupiny polí](#combine-a-group-of-fields)
+      - [Přejmenovat](#rename-fields)
+      - [Vyloučit](#exclude-fields)
+      - [Posunutí nahoru nebo dolů](#change-the-order-of-fields)
 
-Můžete změnit způsob, jakým systém zpracovává sloučené atributy, aby vygeneroval sjednocený profil zákazníka. Vyberte **Zobrazit více** a zvolte, co chcete změnit.
+1. Volitelně [vygenerovat konfiguraci ID zákazníka](#configure-customer-id-generation).
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Možnosti v rozevírací nabídce Zobrazit více pro správu sloučených atributů.":::
+1. Volitelně [seskupte profily do domácností nebo clusterů](#group-profiles-into-households-or-clusters).
 
-Další informace naleznete v následujících částech.
+> [!div class="nextstepaction"]
+> [Další krok: Zkontrolujte sjednocení](review-unification.md)
 
-## <a name="separate-merged-fields"></a>Oddělení sloučených polí
+### <a name="edit-a-merged-field"></a>Úprava sloučeného pole
 
-Chcete-li oddělit sloučená pole, vyhledejte atribut v tabulce. Oddělená pole se zobrazují jako jednotlivé datové body ve sjednoceném profilu zákazníka. 
+1. Vyberte sloučené pole a zvolte **Upravit**. Zobrazí se podokno Kombinovat pole.
 
-1. Vyberte sloučené pole.
-  
-1. Vyberte **Zobrazit více** a zvolte **Oddělená pole**.
- 
-1. Oddělení potvrďte.
-
-1. Vyberte **Uložit** a **Spustit** ke zpracování změn.
-
-## <a name="rename-merged-fields"></a>Přejmenování sloučených polí
-
-Změňte zobrazované jméno sloučených atributů. Název výstupní entity nelze změnit.
-
-1. Vyberte sloučené pole.
-  
-1. Vyberte **Zobrazit více** a zvolte **Přejmenovat**.
-
-1. Potvrďte změněné zobrazované jméno. 
-
-1. Vyberte **Uložit** a **Spustit** ke zpracování změn.
-
-## <a name="exclude-merged-fields"></a>Vyloučit sloučená pole
-
-Vylučte atribut ze sjednoceného profilu zákazníka. Pokud se pole používá v jiných procesech, například v segmentu, před vyloučením z profilu zákazníka jej z těchto procesů odstraňte. 
-
-1. Vyberte sloučené pole.
-  
-1. Vyberte **Zobrazit více** a zvolte **Vyloučit**.
-
-1. Potvrďte vyloučení.
-
-1. Vyberte **Uložit** a **Spustit** ke zpracování změn. 
-
-Na stránce **Sloučit** vyberte **Vyloučit pole** pro zobrazení seznamu všech vyloučených polí. V tomto podokně je možné přidat vyloučená pole zpět.
-
-## <a name="edit-a-merged-field"></a>Úprava sloučeného pole
-
-1.  Vyberte sloučené pole.
-
-1.  Vyberte **Zobrazit více** a zvolte **Upravit**.
-
-1.  Určete, jak kombinovat nebo sloučit pole jednou ze tří možností:
+1. Určete, jak kombinovat nebo sloučit pole jednou ze tří možností:
     - **Důležitost**: Identifikuje hodnotu vítěze na základě pořadí důležitosti specifikovaného pro zúčastněná pole. Toto je výchozí možnost sloučení. Vyberte **Přesunout nahoru/dolů** a nastavte pořadí důležitosti.
-    :::image type="content" source="media/importance-merge-option.png" alt-text="Možnost důležitosti v dialogovém okně sloučení polí."::: 
+
+      :::image type="content" source="media/importance-merge-option.png" alt-text="Možnost důležitosti v dialogovém okně sloučení polí.":::
+
     - **Nejnovější**: Identifikuje vítěznou hodnotu na základě aktuálnosti. K definování aktuálnosti vyžaduje datum nebo číselné pole pro každou zúčastněnou entitu v rozsahu sloučených polí.
-    :::image type="content" source="media/recency-merge-option.png" alt-text="Možnost aktuálnosti v dialogovém okně sloučení polí.":::
+
+      :::image type="content" source="media/recency-merge-option.png" alt-text="Možnost aktuálnosti v dialogovém okně sloučení polí.":::
+
     - **Nejstarší**: Identifikuje vítěznou hodnotu na základě nejstarší aktuálnosti. K definování aktuálnosti vyžaduje datum nebo číselné pole pro každou zúčastněnou entitu v rozsahu sloučených polí.
 
-1.  Chcete -li se účastnit procesu sloučení, můžete přidat další pole.
+1. Chcete -li se účastnit procesu sloučení, můžete přidat další pole.
 
-1.  Sloučené pole můžete přejmenovat.
+1. Sloučené pole můžete přejmenovat.
 
 1. Výběrem možnosti **Hotovo** se vaše změny použijí.
 
-1. Vyberte **Uložit** a **Spustit** ke zpracování změn. 
+### <a name="rename-fields"></a>Přejmenovat pole
 
-## <a name="combine-fields-manually"></a>Ruční kombinace polí
+Změňte zobrazované jméno sloučených nebo samostatných polí. Název výstupní entity nelze změnit.
 
-Ručně zadejte sloučený atribut.
+1. Vyberte pole a zvolte **Přejmenovat**.
 
-1. Na stránce **Sloučit** vyberte **Kombinovat**.
+1. Zadejte nový zobrazovaný název.
 
-1. Vyberte možnost **Pole**.
+1. Vyberte **Hotovo**.
+
+### <a name="separate-merged-fields"></a>Oddělení sloučených polí
+
+Chcete-li oddělit sloučená pole, vyhledejte atribut v tabulce. Oddělená pole se zobrazují jako jednotlivé datové body ve sjednoceném profilu zákazníka.
+
+1. Vyberte sloučené pole a vyberte **Samostatná pole**.
+
+1. Oddělení potvrďte.
+
+### <a name="exclude-fields"></a>Vyloučení polí
+
+Vylučte sloučené nebo samostatné pole ze sjednoceného profilu zákazníka. Pokud se pole používá v jiných procesech, například v segmentu, před vyloučením z profilu zákazníka jej z těchto procesů odstraňte.
+
+1. Vyberte sloučené pole a zvolte **Vyloučit**.
+
+1. Potvrďte vyloučení.
+
+Chcete-li zobrazit seznam všech vyloučených polí, vyberte **Vyloučená pole**. V případě potřeby můžete vyloučené pole přečíst.
+
+### <a name="change-the-order-of-fields"></a>Změna pořadí polí
+
+Některé entity obsahují více podrobností než jiné. Pokud entita obsahuje nejnovější data o poli, můžete ji při slučování hodnot upřednostnit před jinými entitami.
+
+1. Vyberte pole.
+  
+1. Vyberte **Posunout nahoru/dolů** pro nastavení pořadí nebo je přetáhněte na požadované místo.
+
+### <a name="combine-fields-manually"></a>Ruční kombinace polí
+
+Spojením oddělených polí vytvořte sloučený atribut.
+
+1. Vyberte **Kombinovat** > **Pole**. Zobrazí se podokno Kombinovat pole.
 
 1. Upřesněte vítěznou zásadu sloučení v rozevíracím seznamu **Kombinovat pole podle**.
 
-1. Vyberte pole k přidání. Vyberte **Přidat pole** ke zkombinování více polí.
+1. Vyberte **Přidat pole** ke zkombinování více polí.
 
 1. Zadejte **Název** a **Název výstupního pole**.
 
 1. Výběrem možnosti **Hotovo** se změny použijí.
 
-1. Vyberte **Uložit** a **Spustit** ke zpracování změn. 
+### <a name="combine-a-group-of-fields"></a>Kombinace skupiny polí
 
-## <a name="combine-a-group-of-fields"></a>Kombinace skupiny polí
+Zacházejte se skupinou polí jako s jednou jednotkou. Pokud například naše záznamy obsahují pole Adresa1, Adresa2, Město, Stát a PSČ, nechceme je sloučit do adresy2 jiného záznamu, protože si myslíme, že by tím byla naše data úplnější.
 
-Zacházejte se skupinou polí jako s jednou jednotkou. Například když naše záznamy obsahují pole Adresa1, Adresa2, Město, Stát a PSČ. Pravděpodobně nechceme sloučit adresu2 do jiného záznamu kvůli tomu, že by to udělalo naše data úplnější
-
-1. Na stránce **Sloučit** vyberte **Kombinovat**.
-
-1. Vyberte možnost **Skupina polí**.
+1. Vyberte **Kombinovat** > **Skupina polí**.
 
 1. Upřesněte vítěznou zásadu sloučení v rozevíracím seznamu **Seřadit skupiny podle**.
 
-1. Vyberte možnost **Přidat** a zvolte, zda chcete k polím přidat další pole nebo další skupiny.
+1. Vyberte možnost **Přidat** a zvolte, zda chcete k polím přidat pole nebo skupiny do polí.
 
 1. Zadejte **Název** a **Název výstupu** pro každé kombinované pole.
 
-1. Zadejte **Název** pro skupinu polí. 
+1. Zadejte **Název** pro skupinu polí.
 
 1. Výběrem možnosti **Hotovo** se změny použijí.
 
-1. Vyberte **Uložit** a **Spustit** ke zpracování změn.
+## <a name="configure-customer-id-generation"></a>Konfigurace generování ID zákazníka
 
-## <a name="change-the-order-of-fields"></a>Změna pořadí polí
+Definujte, jak generovat hodnoty ID zákazníka, jedinečné identifikátory profilu zákazníka. Krok sjednocení polí v procesu sjednocení dat vygeneruje jedinečný identifikátor profilu zákazníka. Identifikátor je *CustomerId* v entitě *Zákazník*, která je výsledkem procesu sjednocení dat.
 
-Některé entity obsahují více podrobností než jiné. Pokud entita obsahuje nejnovější data o poli, můžete ji při slučování hodnot upřednostnit před jinými entitami.
-
-1. Vyberte sloučené pole.
-  
-1. Vyberte **Zobrazit více** a zvolte **Upravit**.
-
-1. V podokně **Zkombinovat pole** vyberte **Přesunout nahoru / dolů** k nastavení pořadí nebo je přetáhněte na požadované místo.
-
-1. Změnu potvrďte.
-
-1. Vyberte **Uložit** a **Spustit** ke zpracování změn.
-
-## <a name="configure-customer-id-generation"></a>Konfigurace generování ID zákazníka 
-
-Po konfiguraci slučování polí můžete definovat, jak generovat hodnoty CustomerId, jedinečné identifikátory profilu zákazníka. Krok sloučení v procesu sjednocení dat generuje jedinečný identifikátor profilu zákazníka. Identifikátor je CustomerId v entitě *Zákazník*, která je výsledkem procesu sjednocení dat. 
-
-Entita CustomerIdin v entitě Zákazník je založena na hašování první hodnoty vítězných nenulových primárních klíčů. Tyto klíče pocházejí z entit použitých ve fázi shody a sloučení a jsou ovlivněny pořadím shody.Vygenerované CustomerID se tedy může změnit, když se změní hodnota primárního klíče v primární entitě pořadí shody. Hodnota primárního klíče tedy nemusí vždy představovat stejného zákazníka.
+*CustomerId*  se zakládá na algoritmu hash první hodnoty nenulových primárních klíčů vítěze. Tyto klíče pocházejí z entit používaných při sjednocování dat a jsou ovlivněny pořadím shody.Vygenerované ID zákazníka se tedy může změnit, když se změní hodnota primárního klíče v primární entitě odpovídající objednávky. Hodnota primárního klíče nemusí vždy představovat stejného zákazníka.
 
 Konfigurace stabilního ID zákazníka vám umožní vyhnout se tomuto chování.
 
-**Konfigurovat jedinečné ID zákazníka**
+1. Vyberte kartu **Klíče**.
 
-1. Přejděte na **Sjednotit** > **Sloučit**.
-
-1. Vyberte kartu **Klíče**. 
-
-1. Najeďte myší na řádek **CustomerId** a vyberte možnost **Konfigurovat**.
+1. Najeďte myší na řádek **CustomerId** a vyberte **Konfigurovat**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Ovládací prvek pro přizpůsobení generování ID.":::
 
 1. Vyberte až pět polí, která budou obsahovat jedinečné ID zákazníka a jsou stabilnější. Záznamy, které neodpovídají vaší konfiguraci, používají místo toho ID nakonfigurované systémem.  
 
-1. Vyberte **Hotovo** a spusťte proces sloučení, abyste použili změny.
+1. Vyberte **Hotovo**.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Seskupení profilů do domácností nebo clusterů
 
-V rámci procesu konfigurace generování profilu zákazníka můžete definovat pravidla pro seskupování souvisejících profilů do clusteru. V současné době jsou k dispozici dva typy clusterů - clustery domácnosti a vlastní clustery. Systém automaticky vybere domácnost s předdefinovanými pravidly, pokud entita *Zákazník* obsahuje sémantická pole *Osoba. Příjmení* a *Umístění. Adresa*. Můžete také vytvořit cluster s vlastními pravidly a podmínkami, podobně jako [pravidla porovnání](match-entities.md#define-rules-for-match-pairs).
+Můžete definovat pravidla pro seskupení souvisejících profilů do clusteru. V současné době jsou k dispozici dva typy clusterů - clustery domácnosti a vlastní clustery. Systém automaticky vybere domácnost s předdefinovanými pravidly, pokud entita *Zákazník* obsahuje sémantická pole *Osoba. Příjmení* a *Umístění. Adresa*. Můžete také vytvořit cluster s vlastními pravidly a podmínkami, podobně jako [pravidla porovnání](match-entities.md#define-rules-for-match-pairs).
 
-**Definování domácnosti nebo clusteru**
-
-1. Přejděte na **Sjednotit** > **Sloučit**.
-
-1. Na kartě **Sloučit** vyberte **Upřesnit** > **Vytvořit cluster**.
+1. Vyberte **Pokročilé** > **Vytvořit cluster**.
 
    :::image type="content" source="media/create-cluster.png" alt-text="Ovládací prvek pro vytvoření nového clusteru.":::
 
@@ -194,31 +174,9 @@ V rámci procesu konfigurace generování profilu zákazníka můžete definovat
 
 1. Zadejte pravidla a podmínky pro definování clusteru.
 
-1. Vyberte **Spustit** ke spuštění procesu sloučení a vytvoření clusteru.
+1. Vyberte **Hotovo**. Cluster se vytvoří po dokončení procesu sjednocení. Identifikátory clusteru jsou přidány jako nová pole do entity *Zákazník*.
 
-Po spuštění procesu sloučení jsou identifikátory clusteru přidány jako nová pole do entity *Zákazník*.
-
-## <a name="run-your-merge"></a>Spuštění sloučení
-
-Ať už ručně sloučíte atributy nebo necháte systém je sloučit, můžete vždy spustit sloučení. Vyberte **Spustit** na stránce **Sloučení**, chcete-li zahájit proces.
-
-> [!div class="mx-imgBorder"]
-> ![Ukládání a spuštění sloučení dat.](media/configure-data-merge-save-run.png "Ukládání a spuštění sloučení dat")
-
-Zvolte **Spustit pouze sloučení**, pokud chcete vidět pouze výstup odražený v entitě sjednoceného zákazníka. Následné procesy budou aktualizovány jako [definované v plánu aktualizací](system.md#schedule-tab).
-
-Zvolte **Spustit procesy sloučení a následné procesy** k aktualizaci systému změnami. Všechny procesy, včetně obohacení, segmentů a opatření, se znovu spustí automaticky. Po dokončení všech následných procesů budou profily zákazníků odrážet všechny provedené změny.
-
-Chcete-li provést další změny a znovu spustit krok, můžete zrušit probíhající sloučení. Vyberte text **Aktualizace** a vyberte **Zrušit úlohu** v postranním podokně, které se objeví.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-:::image type="content" source="media/process-detail-path.png" alt-text="Podrobná cesta k získání podrobností o zpracování z odkazu na stav úkolu.":::
-
-## <a name="next-step"></a>Další krok
-
-Konfigurujte [Aktivity](activities.md), [obohacení](enrichment-hub.md) nebo [Vztahy](relationships.md) pro další přehledy o zákaznících.
-
-Pokud jste již nakonfigurovali aktivity, obohacení nebo segmenty, budou automaticky zpracovány, aby používaly nejnovější údaje o zákaznících.
+> [!div class="nextstepaction"]
+> [Další krok: Zkontrolujte sjednocení](review-unification.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

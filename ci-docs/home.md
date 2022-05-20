@@ -1,7 +1,7 @@
 ---
 title: Domovská stránka v Customer Insights
 description: Začněte s průzkumem aplikace na domovské stránce.
-ms.date: 04/12/2022
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,38 +11,55 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: ebc5eb6b2dfaa9b013cfa0c9ce60c8a0a57a065d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
+ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645900"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "8743405"
 ---
 # <a name="explore-customer-insights"></a>Prozkoumejte Customer Insights
 
-Můžete [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) na následující adrese URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+Můžete přejít na [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) na následující adrese URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-**Domovská stránka** zobrazí přehled segmentů, měr a dat rozšíření (pokud jsou nakonfigurována) po dokončení fází [mapování](map-entities.md), [párování](match-entities.md) a [sloučení](merge-entities.md).
+Stránka **Domů** vás provede procesem konfigurace pro klíčové funkce a poskytuje přehled segmentů, měření a údajů o obohacení.
 
 :::image type="content" source="media/home-page.png" alt-text="Screenshot domovské obrazovky se ukázkovými náhledy.":::
 
-Klíčové ovládací prvky v Customer Insights:
+## <a name="left-side-pane"></a>Podokno vlevo
 
-- Levé podokno: Přepínání mezi primární cílovou skupinou, pokud máte prostředí B2C a B2B
+Pomocí levého podokna můžete procházet různými oblastmi Customer Insights. 
 
-- Levé podokno: Přecházejte mezi různými oblastmi a výběru primární cílové skupiny
+Pokud pracujete s firemními účty a jednotlivými spotřebiteli, můžete si vybrat svou primární cílovou skupinu a podle toho nastavit své zaměření. 
 
-- Hlavička: Měňte prostředí, ve kterém pracujete, a spravovujte prostředí jako správce
+## <a name="application-header"></a>Hlavička aplikace
 
-- Hlavička: Zadejte osobní nastavení pro Customer Insights a získejte možnosti nápovědy
+Výběr **prostředí** ukazuje prostředí, ve kterém pracujete, a umožňuje vytvářet nebo spravovat prostředí jako správce.
 
-Nyní můžete na domovské stránce zobrazit následující sekce:
+Ikona smajlíka je kontrola **Zpětné vazby**. Vyberte ji, chcete-li nám sdělit své zkušenosti s Customer Insights. Aktivně nasloucháme vaší zpětné vazbě a předem děkujeme, že nám dáte vědět, co se vám líbí a jak bychom se mohli zlepšit.
 
-- Sekce **Nedávné segmenty** zobrazuje skupiny zákazníků na základě demografických, behaviorálních nebo transakčních atributů, které jste definovali. [Vytváření segmentů](segments.md) vám pomůže seskupit vaši zákaznickou základnu a lépe zacílit vaše obchodní aktivity.
+Ovládací prvek **Nastavení**, reprezentovaný ikonou ozubeného kola, vám umožní získat podrobnosti o relaci pro Customer Insights a nakonfigurovat Globální nastavení profilu Microsoft 365. 
 
-- **Nedávná obchodní opatření** zobrazuje dlaždice s [klíčovými ukazateli výkonu (KPI)](measures.md), které jste definovali. Například průměrná pravděpodobnost odchodu zákazníků nebo průměrné online útraty na zákazníka.
+Možnosti **nápovědy**, vizualizované ikonou otazníku, poskytují odkazy na kontextovou nápovědu a další užitečné zdroje.
 
-- Sekce **Nedávná rozšíření** uvádí výsledky nedávno dokončených běhů rozšíření. [Rozšíření](enrichment-hub.md) přidává informace o vaší zákaznické základně. Například porozuměním zájmům a značkám, ke kterým mají vztah.
+Otevře se váš profilový obrázek **Správce účtu** pro váš profil Microsoft 365. Vyberte **Můj účet** ke správě vašich osobních nastavení.
+
+## <a name="getting-started-with-customer-insights-section"></a>Začínáme s částí Customer Insights
+
+Tato část obsahuje karty, které vám pomohou projít procesem nastavení prostředí Customer Insights. 
+
+1. Karte **Přidat data** vám pomůže s importem dat. Podpora Customer Insights [několik možností, jak získat údaje o vašich zákaznících](data-sources.md). Začněte výběrem **Přidat zdroje dat**.
+1. Jakmile bude počáteční import dat úspěšně dokončen, můžete použít kartu **Sjednotit data** k harmonizaci údajů a [vytvoření jednotných profilů zákazníků](data-unification.md) z různých zdrojů. 
+1. Po zavedení sjednocených zákaznických profilů je čas na revizi možnosti **Analyzujte data** a získání dalších informací. Zkuste vytvořit [obchodní míry](measures.md) ke sledování KPI, [definování segmentů](segments.md) k oslovení konkrétní cílové skupiny nebo [konfiguraci předpovědí](predictions-overview.md) pomocí AI.
+1. Nyní, když jsou vaše zákaznická data importována, sjednocena a úhledně strukturována, použijte naše [různé exportní destinace](export-destinations.md) k podniknutí akce u údajů. Vyberte **Přidat připojení** pro připojení vašich oblíbených služeb. Například exportujte data do Dynamics 365 Marketing a vytvořte odchozí marketingové kampaně nebo sestavte cesty zákazníků. 
+
+## <a name="your-customer-insights-section"></a>Část Vaše přehledy o zákaznících
+
+- Oddíl **Segmenty** zobrazuje skupiny zákazníků na základě demografických, behaviorálních nebo transakčních atributů, které jste definovali. [Vytváření segmentů](segments.md) vám pomůže seskupit vaši zákaznickou základnu a lépe zacílit vaše obchodní aktivity.
+
+- **Obchodní opatření** zobrazuje dlaždice s [klíčovými ukazateli výkonu (KPI)](measures.md), které jste definovali. Například průměrná pravděpodobnost odchodu zákazníků nebo průměrné online útraty na zákazníka.
+
+- **Obohacení** uvádí výsledky nedávno dokončených běhů rozšíření. [Rozšíření](enrichment-hub.md) přidává informace o vaší zákaznické základně. Například porozuměním zájmům a značkám, ke kterým mají vztah.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

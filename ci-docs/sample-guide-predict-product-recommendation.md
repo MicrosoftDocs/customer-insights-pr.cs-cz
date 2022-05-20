@@ -1,7 +1,7 @@
 ---
 title: Průvodce ukázkami predikce doporučení produktů
 description: Pomocí tohoto průvodce ukázkami můžete vyzkoušet dodávaný model predikce doporučení produktů.
-ms.date: 02/10/2021
+ms.date: 05/16/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 1115bab13bdca4a308a8d9eb5a1dc270801d16be
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645871"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762678"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Průvodce ukázkami predikce doporučení produktů
 
@@ -40,7 +40,7 @@ Prohlédněte si články [o přijímání dat](data-sources.md) a [importu dato
 
 1. Vytvořte zdroj dat **eCommerce**, vyberte možnost importu a vyberte konektor **Text/CSV**.
 
-1. Zadejte adresu URL pro kontakty eCommerce https://aka.ms/ciadclasscontacts.
+1. Zadejte adresu URL pro kontakty eCommerce: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
 
 1. Během úpravy dat vyberte **Transformovat** a pak **Použít první řádek jako záhlaví**.
 
@@ -50,15 +50,15 @@ Prohlédněte si články [o přijímání dat](data-sources.md) a [importu dato
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformace data narození na datum.":::
 
-5. V poli „Název“ v pravém podokně přejmenujte svůj zdroj dat z **Query** na **eCommerceContacts**.
+1. V poli „Název“ v pravém podokně přejmenujte svůj zdroj dat z **Query** na **eCommerceContacts**.
 
-6. **Uložte** zdroj dat.
+1. **Uložte** zdroj dat.
 
 ### <a name="ingest-online-purchase-data"></a>Ingestace dat online nákupu
 
 1. Přidejte další datovou sadu do stejného zdroje dat **eCommerce**. Znovu vyberte konektor **Text/CSV**.
 
-1. Zadejte adresu URL pro data **Online nákupy** https://aka.ms/ciadclassonline.
+1. Zadejte adresu URL pro data **Online nákupy** [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
 
 1. Během úpravy dat vyberte **Transformovat** a pak **Použít první řádek jako záhlaví**.
 
@@ -70,12 +70,11 @@ Prohlédněte si články [o přijímání dat](data-sources.md) a [importu dato
 
 1. **Uložte** zdroj dat.
 
-
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingestace zákaznických dat z věrnostního schématu
 
 1. Vytvořte zdroj dat **LoyaltyScheme**, vyberte možnost importu a vyberte konektor **Text/CSV**.
 
-1. Zadejte adresu URL pro kontakty eCommerce https://aka.ms/ciadclasscustomerloyalty.
+1. Zadejte adresu URL pro kontakty eCommerce: [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
 
 1. Během úpravy dat vyberte **Transformovat** a pak **Použít první řádek jako záhlaví**.
 
@@ -90,64 +89,11 @@ Prohlédněte si články [o přijímání dat](data-sources.md) a [importu dato
 
 ## <a name="task-2---data-unification"></a>Úkol 2 – Sjednocení dat
 
-Po příjmu dat nyní zahájíme proces sjednocení dat, abychom vytvořili jednotný profil zákazníka. Další informace naleznete v tématu [Sjednocení dat](data-unification.md).
-
-### <a name="map"></a>Mapovat
-
-1. Po ingestaci dat namapujte kontakty z eCommerce a věrnostní data na běžné datové typy. Přejděte na **Data** > **Sjednocení** > **Mapování**.
-
-2. Vyberte entity, které představují profil zákazníka – **eCommerceContacts** a **loyCustomers**.
-
-   ![Sjednocení zdrojů dat eCommerce a věrnostních bodů.](media/unify-ecommerce-loyalty.png)
-
-3. Vyberte **ContactId** jako primární klíč pro **eCommerceContatcs** a **LoyaltyID** jako primární klíč pro **loyCustomers**.
-
-   ![Sjednocení LoyaltyId jako primární klíč.](media/unify-loyaltyid.png)
-
-### <a name="match"></a>Párování
-
-1. Přejděte na kartu **Párování** a vyberte **Nastavit pořadí**.
-
-2. V **primárním** rozevíracím seznamu zvolte jako primární zdroj **eCommerceContacts : eCommerce** a zahrňte všechny záznamy.
-
-3. V rozevíracím seznamu **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všechny záznamy.
-
-   ![Sjednocení párování dat eCommerce a věrnostních bodů.](media/unify-match-order.png)
-
-4. Vyberte **Vytvořit nové pravidlo**
-
-5. Přidejte svou první podmínku pomocí FullName.
-
-   - Pro eCommerceContacts vyberte **Celé jméno** v rozevírací nabídce.
-   - Pro loyCustomers vyberte **Celé jméno** v rozevírací nabídce.
-   - Vyberte rozevírací seznam **Normalizovat** rozevírací seznam a vyberte **Typ (telefon, jméno, adresa, ...)**.
-   - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
-
-6. Zadejte jméno **Celé jméno, e-mail** pro nové pravidlo.
-
-   - Přidejte druhou podmínku pro e-mailovou adresu výběrem **Přidat podmínku**
-   - Pro entitu eCommerceContacts zvolte **EMail** v rozevírací nabídce.
-   - Pro entitu loyCustomers zvolte **EMail** v rozevírací nabídce.
-   - Ponechejte pole Noramlizovat prázdné.
-   - Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
-
-   ![Sjednocení pravidla párování pro jméno a e-mail.](media/unify-match-rule.png)
-
-7. Zvolte **Uložit** a **Spustit**.
-
-### <a name="merge"></a>Sloučení
-
-1. Přejděte na kartu **Sloučení**.
-
-1. V **ContactId** pro entitu **loyCustomers** změňte zobrazované jméno na **ContactIdLOYALTY**, abyste jej odlišili od ingestovaných ID.
-
-   ![Přejmenování contactid z věrnostního ID.](media/unify-merge-contactid.png)
-
-1. Volbami **Uložit** a **Spustit** zahájíte proces sloučení.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-product-recommendation-prediction"></a>Úkol 3 – Konfigurace predikce doporučení produktů
 
-Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikci úbytku předplatných.
+Se zavedenými sjednocenými zákaznickými profily nyní můžeme spustit predikci doporučení produktu.
 
 1. Přejděte na **Analytické nástroje** > **Predikce** a vyberte **Doporučení produktů**.
 
@@ -162,27 +108,36 @@ Se zavedenými sjednocenými profily zákazníků nyní můžeme spustit predikc
    - **Očekávány opakované nákupy**: Vyberte **Ano**, čímž naznačíte, že chcete do doporučení zahrnout produkty, které vaši zákazníci zakoupili dříve.
 
    - **Okno ohlédnutí:** Vyberte alespoň **365 dní**. Toto nastavení definuje, jak daleko do minulosti má model prozkoumat aktivitu zákazníka, aby ji použil jako zdroj pro doporučení.
-   
+
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Předvolby modelu pro model doporučení produktů.":::
 
-1. Vyberte **Požadovaná data** a vyberte **Přidat data** pro historii nákupů.
+1. V kroku **Přidat požadovaná data** vyberte možnost **Přidat data**.
 
-1. Přidejte entitu **eCommercePurchases : eCommerce** entita a mapujte pole z eCommerce na odpovídající pole požadovaná modelem.
+1. V podokně **Přidat data** vyberte **SalesOrderLine** jako entitu historie nákupů. V tuto chvíli pravděpodobně ještě není nakonfigurován. Otevřete odkaz v podokně a vytvořte aktivitu pomocí následujících kroků:
+   1. Zadejte **Název aktivity** a zvolte *eCommerceNákupy:eCommerce* jako **Subjekt aktivity**. **Primární klíč** je *ID nákupu*.
+   1. Definujte a pojmenujte vztah k *entitě eCommerceContacts:Commerce* a zvolte **ContactId** jako cizí klíč.
+   1. Pro sjednocení aktivity nastavte **Aktivita události** jako *TotalPrice* a časové razítko na *PurchasedOn*. Můžete zadat více polí, jak je uvedeno v [Aktivity zákazníka](activities.md).
+   1. Jako **Typ aktivity** vyberte *SalesOrderLine*. Namapujte následující pole aktivity.
+      - ID řádku objednávky: PurchaseId
+      - ID objednávky: PurchaseId
+      - Datum objednávky: PurchasedOn
+      - ID produktu: ProductId
+      - Částka: TotalPrice
+   1. Než se vrátíte ke konfiguraci modelu, zkontrolujte a dokončete aktivitu.
 
-1. Připojte se k entitě **eCommercePurchases: eCommerce** pomocí **eCommerceContacts: eCommerce**.
+1. Až se vrátíte ke kroku **Vyberte aktivity**, vyberte nově vytvořenou aktivitu v sekci **Aktivity**. Vyberte **Další** a mapování atributů je již vyplněno. Vyberte **Uložit**.
 
-   ![Připojení se k entitám eCommerce.](media/model-purchase-join.png)
+1. V tomto vzorovém průvodci přeskočíme nastavení **Přidejte informace o produktu** a **Filtry produktu**, protože nemáme informace o produktech.
 
-1. Vyberte **Další** pro nastavení plánu modelu.
+1. V kroku **Aktualizace dat** nastavte plán modelu.
 
    Model musí pravidelně trénovat, aby se naučil nové vzory, když jsou přijímána nová data. V tomto příkladu vyberte položku **Měsíčně**.
 
-1. Po kontrole všech podrobností vyberte **Uložit a spustit**.
-
+1. Po kontrole všech podrobností vyberte **Uložit a spustit**. První spuštění modelu bude trvat několik minut.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Úkol 4 – Kontrola výsledků modelu a vysvětlení
 
-Nechte model dokončit cvičení a bodování dat. Nyní si můžete prohlédnout vysvětlení modelu doporučení produktů. Další informace viz [Kontrola stavu a výsledků predikce](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Nechte model dokončit cvičení a bodování dat. Nyní si můžete prohlédnout vysvětlení modelu doporučení produktů. Další informace viz [Kontrola stavu a výsledků predikce](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-purchased-products"></a>Úkol 5 – Vytvoření segmentu často kupovaných produktů
 
@@ -190,21 +145,19 @@ Spuštěním produkčního modelu se vytvoří nová entita, ve které se může
 
 Můžete vytvořit nový segment na základě entity vytvořené modelem.
 
-1. Jděte na **Segmenty**. Vyberte **Nový** a vyberte **Vytvořit z** > **Analytické nástroje**.
+1. Jděte na **Segmenty**. Vyberte **Nový** a vyberte **Vytvořit z analytických nástrojů.**
 
    ![Vytvoření segmentu s výstupem modelu.](media/segment-intelligence.png)
 
 1. Vyberte koncový bod **ModelPredikceDoporuceniProduktuOOB** a definujte segment:
 
    - Pole: ProductID
-   - Operátor: Hodnota
    - Hodnota: Vyberte první tři ID produktů
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Vytvoření segmentu z výsledků modelu.":::
 
-Nyní máte segment, který se dynamicky aktualizuje a který identifikuje zákazníky, kteří jsou ochotnější zakoupit tři nejdoporučovanější produkty. 
+Nyní máte segment, který se dynamicky aktualizuje a který identifikuje zákazníky, kteří by mohli mít zájem o nákup tří nejvíce doporučovaných produktů.
 
 Další informace najdete v tématu o [vytváření a správě segmentů](segments.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

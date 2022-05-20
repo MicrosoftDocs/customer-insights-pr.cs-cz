@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645724"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755254"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Přesměrování protokolů v Dynamics 365 Customer Insights s Azure Monitor (Preview)
 
@@ -27,7 +27,7 @@ Customer Insights odesílá následující protokoly událostí:
 - **Událostí auditu**
   - **APIEvent** – umožňuje sledování změn prostřednictvím uživatelského rozhraní Dynamics 365 Customer Insights.
 - **Provozní události**
-  - **WorkflowEvent** – pracovní postup umožňuje uživateli nastavit [zdroje dat](data-sources.md), [sjednotit](data-unification.md) a [rozšířit](enrichment-hub.md) a nakonec [exportovat](export-destinations.md) data do jiných systémů. Všechny tyto kroky lze provést jednotlivě (např. aktivovat jeden export) nebo orchestrovaně (např. aktualizace dat ze zdrojů dat aktivuje proces sjednocení, který přinese další rozšíření a po dokončení exportuje data do jiného systému). Další informace viz [Schéma WorkflowEvent](#workflow-event-schema).
+  - **WorkflowEvent** – tento pracovní postup vám umožní nastavit [zdroje dat](data-sources.md), [sjednotit](data-unification.md) a [rozšířit](enrichment-hub.md) a nakonec [exportovat](export-destinations.md) data do jiných systémů. Všechny tyto kroky lze provést jednotlivě (například spustit jeden export). Může také běžet organizovaně (například obnova dat z datových zdrojů, která spustí proces sjednocení, který přitáhne obohacení a po dokončení exportuje data do jiného systému). Další informace viz [Schéma WorkflowEvent](#workflow-event-schema).
   - **APIEvent** – všechna volání rozhraní API do instance zákazníků do Dynamics 365 Customer Insights. Další informace viz [Schéma APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Nastavení diagnostiky
@@ -182,7 +182,7 @@ Objekt JSON `identity` má následující strukturu
 
 ### <a name="workflow-event-schema"></a>Schéma události pracovního postupu
 
-Pracovní postup obsahuje několik kroků. [Ingestace zdrojů dat](data-sources.md), [sjednocení](data-unification.md), [rozšíření](enrichment-hub.md) a [export](export-destinations.md) dat. Všechny tyto kroky mohou běžet jednotlivě nebo orchestrovaně s následujícími procesy. 
+Pracovní postup obsahuje několik kroků. [Ingestace zdrojů dat](data-sources.md), [sjednocení](data-unification.md), [rozšíření](enrichment-hub.md) a [export](export-destinations.md) dat. Všechny tyto kroky mohou běžet jednotlivě nebo orchestrovaně s následujícími procesy.
 
 #### <a name="operation-types"></a>Typy operace
 
@@ -215,7 +215,7 @@ Pracovní postup obsahuje několik kroků. [Ingestace zdrojů dat](data-sources.
 | `time`          | Časové razítko | Požaduje se          | Časové razítko události (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Požaduje se          | ResourceId instance, která událost vyslala.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Požaduje se          | Název operace představované touto událostí. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Viz [typy operací](#operation-types) pro referenci. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Požaduje se          | Kategorie protokolu události. Vždy `Operational` pro události pracovního postupu                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Požaduje se          | Kategorie protokolu události. Vždy `Operational` pro události pracovního postupu                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Požaduje se          | Stav události. `Running`, `Skipped`, `Successful`, `Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Dlouhé celé číslo      | Volitelné          | Doba trvání operace v milisekundách.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Volitelné          | Objekt JSON s více vlastnostmi pro konkrétní kategorii událostí.                                                                                        | Viz podsekce [vlastnosti pracovního postupu](#workflow-properties-schema)                                                                                                       |

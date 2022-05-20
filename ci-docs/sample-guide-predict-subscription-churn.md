@@ -1,8 +1,8 @@
 ---
 title: Průvodce ukázkami predikce úbytku předplatných
 description: Pomocí tohoto průvodce ukázkami můžete vyzkoušet dodávaný model predikce úbytku předplatných.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645870"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741403"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Průvodce ukázkami predikce úbytku předplatných
 
@@ -112,61 +112,7 @@ Prohlédněte si články [o přijímání dat](data-sources.md) a [importu dato
 
 ## <a name="task-2---data-unification"></a>Úkol 2 – Sjednocení dat
 
-Po ingestaci dat nyní začínáme s procesem **Mapování, párování, sloučení** pro vytvoření sjednoceného profilu zákazníka. Další informace naleznete v tématu [Sjednocení dat](data-unification.md).
-
-### <a name="map"></a>Mapovat
-
-1. Po ingestaci dat namapujte kontakty z eCommerce a věrnostní data na běžné datové typy. Přejděte na **Data** > **Sjednocení** > **Mapování**.
-
-1. Vyberte entity, které představují profil zákazníka – **eCommerceContacts** a **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Sjednocení zdrojů dat eCommerce a věrnostních bodů.":::
-
-1. Vyberte **ContactId** jako primární klíč pro **eCommerceContatcs** a **LoyaltyID** jako primární klíč pro **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Sjednocení LoyaltyId jako primární klíč.":::
-
-### <a name="match"></a>Párování
-
-1. Přejděte na kartu **Párování** a vyberte **Nastavit pořadí**.
-
-1. V **primárním** rozevíracím seznamu zvolte jako primární zdroj **eCommerceContacts : eCommerce** a zahrňte všechny záznamy.
-
-1. V rozevíracím seznamu **Entita 2** vyberte **loyCustomers: LoyaltyScheme** a zahrňte všechny záznamy.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Sjednocení párování dat eCommerce a věrnostních bodů.":::
-
-1. Vyberte **Vytvořit nové pravidlo**
-
-1. Přidejte svou první podmínku pomocí FullName.
-
-   * Pro eCommerceContacts vyberte **Celé jméno** v rozevírací nabídce.
-   * Pro loyCustomers vyberte **Celé jméno** v rozevírací nabídce.
-   * Vyberte rozevírací seznam **Normalizovat** rozevírací seznam a vyberte **Typ (telefon, jméno, adresa, ...)**.
-   * Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
-
-1. Zadejte jméno **Celé jméno, e-mail** pro nové pravidlo.
-
-   * Přidejte druhou podmínku pro e-mailovou adresu výběrem **Přidat podmínku**
-   * Pro entitu eCommerceContacts zvolte **EMail** v rozevírací nabídce.
-   * Pro entitu loyCustomers zvolte **EMail** v rozevírací nabídce. 
-   * Ponechejte pole Noramlizovat prázdné. 
-   * Nastavte **Úroveň přesnosti**: **Základní** a **Hodnota**: **Vysoká**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Sjednocení pravidla párování pro jméno a e-mail.":::
-
-7. Zvolte **Uložit** a **Spustit**.
-
-### <a name="merge"></a>Sloučení
-
-1. Přejděte na kartu **Sloučení**.
-
-1. V **ContactId** pro entitu **loyCustomers** změňte zobrazované jméno na **ContactIdLOYALTY**, abyste jej odlišili od ingestovaných ID.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Přejmenování contactid z věrnostního ID.":::
-
-1. Volbami **Uložit** a **Spustit** zahájíte proces sloučení.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Úkol 3 – Konfigurace predikce úbytku předplatných
 
