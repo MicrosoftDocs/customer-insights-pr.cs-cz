@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641508"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808538"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žádosti o práva subjektu údajů (DSR) v rámci GDPR
 
@@ -41,7 +41,7 @@ Správce Customer Insights může podle těchto kroků odebrat zákaznická data
 1. Přihlaste se ke službě Dynamics 365 Customer Insights.
 2. Přejděte na **Data** > **Zdroje dat**
 3. Pro každý zdroj dat v seznamu, který obsahuje odstraněná zákaznická data:
-   1. Vyberte (...) a poté volbu **Aktualizovat**.
+   1. Vyberte vertikální tři tečky (&vellip;) a poté vyberte **Obnovit**.
    2. Zkontrolujte stav zdroje dat ve volbě **Stav**. Zaškrtnutí znamená, že aktualizace proběhla úspěšně. Výstražný trojúhelník znamená, že se něco pokazilo. Pokud se zobrazí výstražný trojúhelník, kontaktujte D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Správce Customer Insights může podle těchto kroků odebrat zákaznická data
 Správce Customer Insights může odstranit údaje o uživatelích Customer Insights podle těchto kroků:
 
 1. Přihlaste se ke službě Dynamics 365 Customer Insights.
-2. Přejít na **Správce** > **Oprávnění**.
+2. Přejděte na **Správce** > **Zabezpečení** > **Oprávnění**.
 3. Zaškrtněte políčko pro uživatele, kterého chcete smazat.
 4. Vyberte **Odstranit**.
 

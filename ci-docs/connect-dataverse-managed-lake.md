@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645740"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800160"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Připojte se k datům ve spravovaném datovém jezeru Microsoft Dataverse
 
@@ -62,7 +62,7 @@ Chcete -li se připojit k jinému datovému jezeru Dataverse, [vytvořte nový z
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
-2. Vedle zdroje dat, který chcete aktualizovat, vyberte tři tečky.
+2. Vedle zdroj dat, který chcete aktualizovat, vyberte vertikální tři tečky (&vellip;).
 
 3. V seznamu vyberte volbu **Upravit**.
 

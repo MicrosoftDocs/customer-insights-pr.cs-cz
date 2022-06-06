@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700929"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833622"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v řešení Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ Společnost LiveRamp poskytuje rozlišení identity a konsolidaci zákaznických
 Více informací viz téma [Rozšíření profilů zákazníků daty identity z LiveRamp (Preview)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Uspořádání segmentů a měr pomocí značek a filtrů
+
 Pokud vaše organizace udržuje mnoho segmentů nebo měr, někdy může být obtížné najít ten správný nebo správnou. Tato nová funkce umožňuje uspořádat seznamy pomocí značek a sloupců. Pomáhá rychle a snadno vyhledat data a přizpůsobit zobrazení.
 
 Další informace najdete v tématu [Práce se značkami a sloupci](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Další informace najdete v tématu [Práce se značkami a sloupci](work-with-ta
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Povolení sdílení dat s Dataverse při použití vlastního účtu úložiště
 
 Pokud vaše prostředí používá Azure Data Lake Storage k uchovávání dat Customer Insights, sdílení dat s Microsoft Dataverse vyžaduje zvláštní konfiguraci.
-Dříve bylo možné povolit sdílení dat s Dataverse, pouze když byla data uložena v našem spravovaném datovém jezeře. 
+Dříve bylo možné povolit sdílení dat s Dataverse, pouze když byla data uložena v našem spravovaném datovém jezeře.
 
-Další informace viz [Povolení sdílení dat s Dataverse z vlastního úložiště Azure Data Lake Storage (Preview)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Další informace viz [Povolení sdílení dat s Dataverse z vlastního úložiště Azure Data Lake Storage (Preview)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Nové cíle exportu: Iterable a Braze
 
@@ -81,7 +82,6 @@ Změna rozhraní API v připojených službách způsobila aktualizaci konektor�
 
 - Google Ads: Nová verze exportního konektoru Google Ads zjednodušuje ověřování a nyní umožňuje automaticky vytvářet nové cílové skupiny Google Ads. 
 - Marketo: Nová verze exportního konektoru Marketo poskytuje podporu pro Marketo ID, což vám umožňuje vyhnout se duplicitě dat, aktualizovat stávající záznamy a vytvářet nové záznamy v Marketo. 
-
 
 ## <a name="february-2022-updates"></a>Aktualizace z února 2022
 

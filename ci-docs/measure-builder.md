@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646368"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800318"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Pomocí nástroje pro tvorbu míry vytvořte míry od začátku
 
@@ -88,7 +88,7 @@ Můžete vytvářet míry na úrovni jednotlivých zákazníků (atribut zákazn
 
 1. Chcete-li přidat další výpočty pro míru, vyberte **Nový výpočet**. Pro nové výpočty můžete použít pouze entity na stejné cestě entity. Další výpočtu se v entitě výstupu míry zobrazí jako nové sloupce.
 
-1. Vyberte **...** na výpočtu, abyste **duplikovali**, **přejmenovali** nebo **odstranili** výpočet z míry.
+1. Vyberte vertikální tři tečky (&vellip;) při výpočtu na **Duplicita**, **Přejmenovat**, nebo **Odstraňte** výpočet z míry.
 
 1. V oblasti **Náhled** uvidíte schéma dat pro entitu výstupu míry, včetně filtrů a dimenzí. Náhled dynamicky reaguje na změny v konfiguraci.
 
@@ -158,7 +158,7 @@ Můžete vytvářet míry na úrovni jednotlivých obchodích vztahů (míra zá
    1. Vyberte **Vztahová cesta** a vyberte cestu entity, která by měla být použita k identifikaci vaší míry. Pokud existuje pouze jedna cesta k entitě *Zákazník*, tento ovládací prvek se nezobrazí.
    1. Volbou **Hotovo** použijete svůj výběr.
 
-1. Vyberte **...** na výpočtu, abyste **duplikovali**, **přejmenovali** nebo **odstranili** výpočet z míry.
+1. Vyberte vertikální tři tečky (&vellip;) při výpočtu na **Duplicita**, **Přejmenovat**, nebo **Odstraňte** výpočet z míry.
 
 1. V oblasti **Náhled** uvidíte schéma dat pro entitu výstupu míry, včetně filtrů a dimenzí. Náhled dynamicky reaguje na změny v konfiguraci.
 

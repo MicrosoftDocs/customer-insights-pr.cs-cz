@@ -1,7 +1,7 @@
 ---
 title: Připojení dat Common Data Model k účtu Azure Data Lake
 description: Práce s daty Common Data Model pomocí Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645788"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833348"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Připojení ke složce Common Data Model prostřednictvím účtu Azure Data Lake
 
@@ -46,16 +46,16 @@ Tento článek poskytuje informace o tom, jak ingestovat data do Dynamics 365 Cu
 
 1. Vyberte **Azure Data Lake Storage**, vložte **Název** zdroje dat a poté vyberte **Další**.
 
-   - Pokud budete vyzváni, vyberte jednu z ukázkových datových sad, které se týkají vašeho odvětví, a poté vyberte **Další**. 
+   - Pokud budete vyzváni, vyberte jednu z ukázkových datových sad, které se týkají vašeho odvětví, a poté vyberte **Další**.
 
 1. Můžete si vybrat mezi použitím možnosti založené na prostředku a možnosti založené na předplatném ověřování. Více informací viz [Připojení k účtu Azure Data Lake Storage Gen2 pomocí instančního objektu Azure](connect-service-principal.md). Zadejte **Adresu serveru**, vyberte **Přihlásit se** a poté vyberte **Další**.
    > [!div class="mx-imgBorder"]
    > ![Dialogové okno pro zadání nových podrobností o připojení pro Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Abyste se mohli připojit a vytvořit zdroj dat, potřebujete jednu z následujících rolí pro kontejner nebo výše uvedený účet úložiště:
-   >  - Čtenář dat objektů blob úložiště
-   >  - Vlastník dat objektů blob úložiště
-   >  - Přispěvatel dat objektů blob úložiště
+   > Potřebujete jednu z následujících rolí buď ke kontejneru na účtu úložiště a vytvoření zdroj dat:
+   >
+   >  - Čtenář dat objektu blob úložiště stačí ke čtení z účtu úložiště a příjmu dat do Customer Insights. 
+   >  - Chcete-li soubory manifestu upravovat přímo v Customer Insights, jsou vyžadovány role přispěvatele nebo vlastníka dat objektů blob úložiště.
 
 1. V dialogovém okně **Vybrat složku modelu Common Data Model** vyberte soubor model.json nebo manifest.json, ze kterého chcete importovat data, a vyberte **Další**.
    > [!NOTE]
@@ -65,11 +65,11 @@ Tento článek poskytuje informace o tom, jak ingestovat data do Dynamics 365 Cu
    > [!div class="mx-imgBorder"]
    > ![Dialogové okno zobrazující seznam entit ze souboru model.json.](media/review-entities.png)
 
-8. Označte, pro které datové entity chcete povolit profilování dat, a poté vyberte **Uložit**. Profilování dat umožňuje analýzy a další funkce. Můžete vybrat celou entitu, čímž vyberete všechny atributy z entity, nebo můžete vybrat jen některé atributy dle vaší preference. Ve výchozím nastavení není pro profilování dat povolena žádná entita.
+1. Označte, pro které datové entity chcete povolit profilování dat, a poté vyberte **Uložit**. Profilování dat umožňuje analýzy a další funkce. Můžete vybrat celou entitu, čímž vyberete všechny atributy z entity, nebo můžete vybrat jen některé atributy dle vaší preference. Ve výchozím nastavení není pro profilování dat povolena žádná entita.
    > [!div class="mx-imgBorder"]
    > ![Dialogové okno zobrazující profilování dat.](media/dataprofiling-entities.png)
 
-9. Po uložení vašich výběrů se otevře stránka **Zdroje dat**. Nyní byste měli vidět připojení ke složce Common Data Model jako zdroj dat.
+1. Po uložení vašich výběrů se otevře stránka **Zdroje dat**. Nyní byste měli vidět připojení ke složce Common Data Model jako zdroj dat.
 
 > [!NOTE]
 > Soubor model.json nebo manifest.json lze přidružit pouze k jednomu zdroji dat ve stejném prostředí. Stejný soubor model.json nebo manifest.json však lze použít pro zdroje dat ve více prostředích.
@@ -80,7 +80,7 @@ Můžete aktualizovat přístupový klíč pro účet úložiště obsahující 
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
-2. Vedle zdroje dat, který chcete aktualizovat, vyberte tři tečky.
+2. Vedle zdroj dat, který chcete aktualizovat, vyberte vertikální tři tečky (&vellip;).
 
 3. V seznamu vyberte volbu **Upravit**.
 
@@ -93,13 +93,6 @@ Můžete aktualizovat přístupový klíč pro účet úložiště obsahující 
 
    > ![Dialogové okno pro zadání podrobností o připojení k existujícímu účtu úložiště Azure Data Lake.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > Abyste se mohli připojit a vytvořit zdroj dat, potřebujete jednu z následujících rolí pro kontejner nebo výše uvedený účet úložiště:
-   >  - Čtenář dat objektů blob úložiště
-   >  - Vlastník dat objektů blob úložiště
-   >  - Přispěvatel dat objektů blob úložiště
-
-
 6. Volitelně vyberte z kontejneru jiný soubor model.json nebo manifest.json s jinou sadou entit.
 
 7. Volitelně můžete vybrat další entity, které chcete ingestovat. Pokud již neexistují žádné závislosti, můžete také odebrat všechny již vybrané entity.
@@ -107,7 +100,6 @@ Můžete aktualizovat přístupový klíč pro účet úložiště obsahující 
    > [!IMPORTANT]
    > Pokud existují závislosti na existujícím souboru model.json nebo manifest.json a sadě entit, zobrazí se chybová zpráva a nelze vybrat jiný soubor model.json nebo manifest.json. Odeberte tyto závislosti před změnou souboru model.json nebo manifest.json nebo vytvořte nový zdroj dat se souborem model.json nebo manifest.json, který chcete použít, abyste nemuseli závislosti odebrat.
 
-8. Volitelně můžete vybrat další atributy nebo entity a povolit profilování dat, nebo deaktivovat již vybrané.   
-
+8. Volitelně můžete vybrat další atributy nebo entity a povolit profilování dat, nebo deaktivovat již vybrané.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

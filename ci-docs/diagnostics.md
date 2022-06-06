@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755254"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807573"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Přesměrování protokolů v Dynamics 365 Customer Insights s Azure Monitor (Preview)
 
@@ -38,7 +38,7 @@ Chcete -li konfigurovat diagnostiku v Customer Insights, musí být splněny ná
 
 - Máte aktivní [předplatné Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Máte oprávnění [správce](permissions.md#admin) v Customer Insights.
-- Máte roli **Přispěvatel** a **Správce přístupu uživatelů** v cílovém prostředku v Azure. Prostředkem může být účet Azure Storage, centrum událostí Azure nebo pracovní prostor Azure Log Analytics. Další informace najdete v části [Přidání nebo odebrání přiřazení rolí Azure pomocí Azure Portal](/azure/role-based-access-control/role-assignments-portal).
+- Máte roli **Přispěvatel** a **Správce přístupu uživatelů** v cílovém prostředku v Azure. Prostředkem může být účet Azure Data Lake Storage, centrum událostí Azure nebo pracovní prostor Azure Log Analytics. Další informace najdete v části [Přidání nebo odebrání přiřazení rolí Azure pomocí Azure Portal](/azure/role-based-access-control/role-assignments-portal). Toto oprávnění je nutné při konfiguraci diagnostických nastavení v Customer Insights. Po úspěšném nastavení je lze změnit.
 - Splněny [požadavky na cíl](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pro Azure Storage, centrum událostí Azure nebo Azure Log Analytics.
 - Máte alespoň roli **Čtenář** ve skupině prostředků, do které prostředek patří.
 

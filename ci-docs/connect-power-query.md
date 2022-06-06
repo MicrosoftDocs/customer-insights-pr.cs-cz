@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645799"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800136"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Připojení ke zdroji dat Power Query
 
@@ -76,7 +76,7 @@ Konektory se zaškrtnutím ve sloupci **Customer Insights (Datové toky)** jsou 
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
-2. Vyberte svislé tlačítko se třemi tečkami vedle zdroje dat, který chcete změnit, a v rozevírací nabídce vyberte **Upravit**.
+2. Vyberte svislé tlačítko se třemi tečkami (&vellip;) vedle zdroje dat, který chcete změnit, a v rozevírací nabídce vyberte **Upravit**.
 
    > [!div class="mx-imgBorder"]
    > ![Upravit možnost.](media/edit-option-data-sources.png "Upravit možnost")

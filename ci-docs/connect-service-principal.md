@@ -1,7 +1,7 @@
 ---
 title: Připojení k účtu Azure Data Lake Storage pomocí instančního objektu
 description: Pro připojení k vašemu vlastnímu datovému jezeru použijte instanční objekt Azure.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739154"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833377"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Připojení k účtu Azure Data Lake Storage pomocí instančního objektu Azure
 
-Tento článek popisuje, jak propojit Dynamics 365 Customer Insights s účtem Azure Data Lake Storage pomocí instančního objektu Azure namísto klíčů účtu úložiště. 
+Tento článek popisuje, jak propojit Dynamics 365 Customer Insights s účtem Azure Data Lake Storage pomocí instančního objektu Azure namísto klíčů účtu úložiště.
 
 Automatizované nástroje, které používají služby Azure, by vždy měly mít omezená oprávnění. Místo toho, aby se aplikace přihlašovaly jako plně privilegovaný uživatel, Azure nabízí instanční objekty. Pomocí instančních objektů můžete bezpečně [přidat nebo upravit složku Common Data Model jako zdroj dat](connect-common-data-model.md) nebo [vytvořit nebo aktualizovat prostředí](create-environment.md).
 
 > [!IMPORTANT]
+>
 > - Účet Data Lake Storage, který bude používat instanční objekt, musí být Gen2 a musí mít [povolený hierarchický obor názvů](/azure/storage/blobs/data-lake-storage-namespace). Účty úložiště Azure Data Lake Gen1 nejsou podporovány.
-> - K vytvoření instančního objektu potřebujete oprávnění správce pro své předplatné Azure.
+> - K vytvoření instančního objektu potřebujete oprávnění správce pro klienta Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Vytvoření instančního objektu Azure pro Customer Insights
 
@@ -38,29 +39,15 @@ Před vytvořením nového instančního objektu pro Customer Insights zkontrolu
 
 2. Ze **služeb Azure** vyberte **Azure Active Directory**.
 
-3. Pod **Spravovat** vyberte **Podnikové aplikace**.
+3. V možnosti **Spravovat** vyberte **Aplikace Microsoft**.
 
 4. Přidání filtru pro **ID aplikace začíná** `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` nebo vyhledejte jméno `Dynamics 365 AI for Customer Insights`.
 
-5. Pokud najdete odpovídající záznam, znamená to, že instanční objekt již existuje. 
-   
+5. Pokud najdete odpovídající záznam, znamená to, že instanční objekt již existuje.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Snímek obrazovky zobrazující existující instanční objekt.":::
-   
-6. Pokud nejsou vráceny žádné výsledky, vytvořte nový instanční objekt.
 
-### <a name="create-a-new-service-principal"></a>Vytvoření nového instančního objektu
-
-1. Nainstalujte nejnovější verzi Azure Active Directory PowerShell pro Graph. Další informace najdete v části [Instalace Azure Active Directory PowerShell pro Graph](/powershell/azure/active-directory/install-adv2).
-
-   1. Na počítači vyberte klávesu Windows na klávesnicivy, hledejte **Windows PowerShell** a vyberte **Spustit jako správce**.
-   
-   1. V okně PowerShell, které se otevře, zadejte `Install-Module AzureAD`.
-
-2. Vytvořte instanční objekt pro Customer Insights pomocí modulu Azure AD PowerShell.
-
-   1. V okně PowerShell, zadejte `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Nahraďte *[ID vašeho adresáře]* skutečným ID adresáře vašeho předplatného Azure, kde chcete vytvořit instanční objekt. Parametr názvu prostředí `AzureEnvironmentName` je volitelný.
-  
-   1. Zadejte `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Tento příkaz vytvoří instanční objekt pro Customer Insights ve vybraném předplatném Azure. 
+6. Pokud nejsou vráceny žádné výsledky, můžete [vytvořit nový instanční objekt](#create-a-new-service-principal). Ve většině případů již existuje a pro přístup k účtu úložiště musíte pouze udělit oprávnění pro instanční objekt.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Udělení oprávnění instančnímu objektu pro přístup k účtu úložiště
 
@@ -77,9 +64,9 @@ Přejděte na Azure Portal a udělte oprávnění instančnímu objektu pro úč
 1. V podokně **Přidat přiřazení rolí** nastavte následující vlastnosti:
    - Role: **Přispěvatel dat objektů blob úložiště**
    - Přiřaďte přístup pro: **Uživatel, skupina nebo instanční objekt**
-   - Vyberte členy: **Dynamics 365 AI pro Customer Insights** ([instanční objekt](#create-a-new-service-principal), který jste vytvořili dříve v tomto postupu)
+   - Vyberte členy: **Dynamics 365 AI pro Customer Insights** ([instanční objekt](#create-a-new-service-principal), který jste vyhledali dříve v tomto postupu)
 
-1.  Vyberte **Zkontrolovat + přiřadit**.
+1. Vyberte **Zkontrolovat + přiřadit**.
 
 Změny se mohou projevit až za 15 minut.
 
@@ -91,7 +78,7 @@ Změny se mohou projevit až za 15 minut.
 
 1. Přejděte na [portál pro správu Azure](https://portal.azure.com), přihlaste se k předplatnému a otevřete účet úložiště.
 
-1. V levém podokně přejděte na **Nastavení** > **Vlastnosti**.
+1. V levém podokně přejděte na **Nastavení** > **Koncové body**.
 
 1. Zkopírujte hodnotu ID prostředku účtu úložiště.
 
@@ -115,5 +102,18 @@ Změny se mohou projevit až za 15 minut.
 
 1. Pokračujte zbývajícími kroky v Customer Insights a připojte účet úložiště.
 
+### <a name="create-a-new-service-principal"></a>Vytvoření nového instančního objektu
+
+1. Nainstalujte nejnovější verzi Azure Active Directory PowerShell pro Graph. Další informace najdete v části [Instalace Azure Active Directory PowerShell pro Graph](/powershell/azure/active-directory/install-adv2).
+
+   1. Na počítači stiskněte klávesu Windows na klávesnici a vyhledejte **Windows PowerShell** a vyberte **Spustit jako správce**.
+
+   1. V okně PowerShell, které se otevře, zadejte `Install-Module AzureAD`.
+
+2. Vytvořte instanční objekt pro Customer Insights pomocí modulu Azure AD PowerShell.
+
+   1. V okně PowerShell, zadejte `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Nahraďte *[ID vašeho adresáře]* skutečným ID adresáře vašeho předplatného Azure, kde chcete vytvořit instanční objekt. Parametr názvu prostředí `AzureEnvironmentName` je volitelný.
+  
+   1. Zadejte `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Tento příkaz vytvoří instanční objekt pro Customer Insights ve vybraném předplatném Azure.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

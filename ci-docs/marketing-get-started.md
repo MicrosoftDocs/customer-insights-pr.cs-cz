@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653720"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833300"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Práce s jednotnými profily zákazníků v Dynamics 365 Marketing
 
@@ -23,7 +23,6 @@ Propojením dat Customer Insights s aplikací Marketing můžete:
 - Založit dynamický obsah (například personalizované tokeny) v e-mailech, SMS a nabízených oznámeních v opatřeních, jako je věrnostní status, datum obnovení předplatného, nadřazený obchodní vztah nebo jakékoli jiné opatření, které jste zachytili v jednotném profilu Customer Insights.
 - Načítat data z Marketingu do Customer Insights a kombinovat je s daty zákazníků z jiných zdrojů.
 - Používat čištění dat Customer Insights, rozšíření a nástroje pro přibližné shody.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Používání bohatých zákaznických profilů v marketingu v reálném čase
 
@@ -41,4 +40,4 @@ Další informace: [Použití segmentů z Dynamics 365 Customer Insights s Dynam
 
 Pokud chcete používat data Customer Insights spolu s aplikací Marketing, nejste omezeni na cloudové úložiště. Pokud už máte nastaven vlastní Azure Data Lake Storage, můžete se připojit pomocí Customer Insights a pak sdílet data s aplikací Marketing stejně jako u cloudového nastavení.
 
-Další informace: [Povolení sdílení dat s Dataverse z vlastní Azure Data Lake Storage](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Další informace: [Povolení sdílení dat s Dataverse z vlastní Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

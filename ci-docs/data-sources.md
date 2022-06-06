@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739200"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800458"
 ---
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
@@ -76,7 +76,7 @@ Chcete-li aktualizovat zdroj dat na vyžádání, postupujte takto:
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
-2. Vyberte svislé tlačítko se třemi tečkami vedle zdroje dat, který chcete aktualizovat, a v rozevíracím seznamu vyberte **Aktualizovat**.
+2. Vyberte vertikální tři tečky (&vellip;) vedle zdroje dat, který chcete aktualizovat, a v rozevíracím seznamu vyberte **Obnovit**.
 
 3. Zdroj dat je nyní spuštěn pro ruční aktualizaci. Aktualizací zdroj dat aktualizujete schéma entity i data pro všechny entity uvedené ve zdroji dat.
 
@@ -86,7 +86,7 @@ Chcete-li aktualizovat zdroj dat na vyžádání, postupujte takto:
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
-2. Vyberte svislé tlačítko se třemi tečkami vedle zdroje dat, který chcete odebrat, a v rozevírací nabídce vyberte **Odstranit**.
+2. Vyberte svislé tlačítko se třemi tečkami (&vellip;) vedle zdroje dat, který chcete odebrat, a v rozevírací nabídce vyberte **Odstranit**.
 
 3. Odstranění potvrďte.
 

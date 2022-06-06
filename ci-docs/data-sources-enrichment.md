@@ -1,19 +1,19 @@
 ---
 title: Rozšíření zdroje dat
 description: Před procesem sjednocení dat rozšiřte zdroje dat.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755678"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800273"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Rozšíření zdrojů dat (Preview)
 
@@ -27,7 +27,7 @@ K vytváření nebo úpravě rozšíření musíte mít roli Přispěvatel nebo 
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
-1. Vyberte svislý výpustek vedle zdroje dat, který chcete rozšířit, a vyberte příkaz **Rozšířit**.
+1. Vyberte vertikální tři tečky (&vellip;) vedle zdroje dat, který chcete rozšířit, a vyberte příkaz **Rozšířit**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stránka Rozšíření zdroje dat.":::
 
@@ -41,11 +41,12 @@ Pro datové zdroje jsou momentálně dostupné následující rozšíření. Př
 
 - [Rozšířené adresy](enrichment-enhanced-addresses.md)
 - [Vylepšená data společnosti](enrichment-enhanced-company-data.md)
+- [Data identity ze služby LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Správa stávajících rozšíření zdrojů dat
 
 Jděte na kartu **Moje rozšíření**, kde zobrazíte všechna nakonfigurovaná rozšíření.
 
-Výběrem rozšíření zobrazíte dostupné možnosti. Můžete také vybrat tři tečky (...) na položce seznamu a zobrazit možnosti. Pokud jste nakonfigurovali několik rozšíření, můžete je rychle najít pomocí vyhledávacího pole.
+Výběrem rozšíření zobrazíte dostupné možnosti. Můžete také vybrat vertikální tři tečky (&vellip;) na položce seznamu, abyste viděli možnosti. Pokud jste nakonfigurovali několik rozšíření, můžete je rychle najít pomocí vyhledávacího pole.
 
 Rozšíření zdrojů dat můžete zobrazit, upravit, spustit nebo odstranit. Další informace naleznete v tématu [Správa existujících rozšíření](enrichment-hub.md).

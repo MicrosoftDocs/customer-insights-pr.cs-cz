@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641800"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833760"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Nejčastější otázky ke zkušební verzi Dynamics 365 Customer Insights
 
@@ -62,9 +62,9 @@ Zkušební verzi můžete v aplikaci prodloužit přímo. Zkušební verzi můž
 
 Při upgradu na placenou verzi Customer Insights obecně doporučujeme začít s novými daty. 
 
-Pokud volitelně používáte pouze Customer Insights, můžete si data zkopírovat ze zkušebního prostředí, pokud si zakoupíte Customer Insights. Musíte být správcem zkušební verze Customer Insights a globálním správcem svého klienta Microsoft 365 nebo správcem Dynamics 365 ve vaší organizaci k migraci nastavení ze zkušebního prostředí do placeného prostředí. 
+Pokud volitelně používáte pouze Customer Insights, můžete si data zkopírovat ze zkušebního prostředí, pokud si zakoupíte Customer Insights. Musíte být správcem zkušební verze Customer Insights a globálním správcem svého klienta Microsoft 365 nebo správcem Dynamics 365 ve vaší organizaci k migraci nastavení ze zkušebního prostředí do placeného prostředí.
 
-Po prvním přihlášení k placené instanci Customer Insights budete požádáni o vytvoření nového prostředí. V tomto procesu se můžete rozhodnout zkopírovat konfiguraci z existujícího prostředí a migrovat většinu nastavení. Pokud máte výše uvedená oprávnění, zkušební prostředí se zobrazí v tomto seznamu. Další informace viz [Kopírování konfigurace prostředí](manage-environments.md#copy-the-environment-configuration).
+Po prvním přihlášení k placené instanci Customer Insights budete požádáni o vytvoření nového prostředí. V tomto procesu se můžete rozhodnout zkopírovat konfiguraci z existujícího prostředí a migrovat většinu nastavení. Pokud máte výše uvedená oprávnění, zkušební prostředí se zobrazí v tomto seznamu. Další informace viz [Kopírování konfigurace prostředí](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Jaké jsou limity a kvóty zkušební verze?
 
@@ -81,9 +81,10 @@ Po přihlášení ke zkušební verzi se dostanete na hlavní obrazovku aplikace
 
 Většina funkcí funkcí Customer Insights je k dispozici ve zkušební verzi.
 
-Následující funkce **nejsou k dispozici**: 
+Následující funkce **nejsou k dispozici**:
+
 - Nemůžete vytvářet nová prostředí, která používají váš vlastní účet úložiště Azure Data Lake.
-- Prostředí zkušební verze není možné odstranit. 
+- Prostředí zkušební verze není možné odstranit.
 
 ### <a name="how-long-does-the-trial-last"></a>Jak dlouho zkušební verze platí?
 

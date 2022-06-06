@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743405"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768342"
 ---
 # <a name="explore-customer-insights"></a>Prozkoumejte Customer Insights
 
@@ -28,9 +28,9 @@ Stránka **Domů** vás provede procesem konfigurace pro klíčové funkce a pos
 
 ## <a name="left-side-pane"></a>Podokno vlevo
 
-Pomocí levého podokna můžete procházet různými oblastmi Customer Insights. 
+Pomocí levého podokna můžete procházet různými oblastmi Customer Insights.
 
-Pokud pracujete s firemními účty a jednotlivými spotřebiteli, můžete si vybrat svou primární cílovou skupinu a podle toho nastavit své zaměření. 
+Pokud pracujete s firemními účty a jednotlivými spotřebiteli, můžete si vybrat svou primární cílovou skupinu a podle toho nastavit své zaměření.
 
 ## <a name="application-header"></a>Hlavička aplikace
 
@@ -38,7 +38,7 @@ Výběr **prostředí** ukazuje prostředí, ve kterém pracujete, a umožňuje 
 
 Ikona smajlíka je kontrola **Zpětné vazby**. Vyberte ji, chcete-li nám sdělit své zkušenosti s Customer Insights. Aktivně nasloucháme vaší zpětné vazbě a předem děkujeme, že nám dáte vědět, co se vám líbí a jak bychom se mohli zlepšit.
 
-Ovládací prvek **Nastavení**, reprezentovaný ikonou ozubeného kola, vám umožní získat podrobnosti o relaci pro Customer Insights a nakonfigurovat Globální nastavení profilu Microsoft 365. 
+Ovládací prvek **Nastavení**, reprezentovaný ikonou ozubeného kola, vám umožní získat podrobnosti o relaci pro Customer Insights a nakonfigurovat Globální nastavení profilu Microsoft 365.
 
 Možnosti **nápovědy**, vizualizované ikonou otazníku, poskytují odkazy na kontextovou nápovědu a další užitečné zdroje.
 
@@ -46,7 +46,7 @@ Otevře se váš profilový obrázek **Správce účtu** pro váš profil Micros
 
 ## <a name="getting-started-with-customer-insights-section"></a>Začínáme s částí Customer Insights
 
-Tato část obsahuje karty, které vám pomohou projít procesem nastavení prostředí Customer Insights. 
+Tato část obsahuje karty, které vám pomohou projít procesem nastavení prostředí Customer Insights.
 
 1. Karte **Přidat data** vám pomůže s importem dat. Podpora Customer Insights [několik možností, jak získat údaje o vašich zákaznících](data-sources.md). Začněte výběrem **Přidat zdroje dat**.
 1. Jakmile bude počáteční import dat úspěšně dokončen, můžete použít kartu **Sjednotit data** k harmonizaci údajů a [vytvoření jednotných profilů zákazníků](data-unification.md) z různých zdrojů. 

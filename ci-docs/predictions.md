@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740711"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800642"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Doplňte svá dílčí data o predikce (zastaralé)
 
@@ -95,7 +95,7 @@ V rámci tohoto toku si vyberete konkrétní atribut, který bude základem vaš
 
 2. Vyberte předpověď, kterou chcete zkontrolovat.
 
-3. Vyberte elipsu ve sloupci **Akce** a zvolte **Zobrazit**.
+3. Vyberte vertikální tři tečky (&vellip;) ve sloupci **Akce** a vyberte **Zobrazení**.
 
 4. Uvidíte několik datových bodů v zobrazení vaší predikce.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Poté, co vytvoříte predikce, můžete upravit model v AI Builderu pro zvýše
 
 2. Vyberte předpověď, kterou chcete upravit.
 
-3. Vyberte elipsu ve sloupci **Akce** a zvolte **Zobrazit**.
+3. Vyberte vertikální tři tečky (&vellip;) ve sloupci **Akce** a vyberte **Zobrazení**.
 
 4. Vyberte **Přizpůsobit v AI Builderu**.
 
@@ -139,7 +139,7 @@ Příští spuštění vaší predikce použije aktualizovaný model, který jst
 
 2. Vyberte předpověď, kterou chcete odstranit.
 
-3. Vyberte elipsu ve sloupci **Akce** a zvolte **Odstranit**.
+3. Vyberte vertikální tři tečky (&vellip;) ve sloupci **Akce** a vyberte **Odstranit**.
 
 4. Potvrďte odstranění.
 
@@ -153,7 +153,7 @@ Pokud nemůžete dokončit připojení procesu Dataverse kvůli chybě, můžete
 - Oprávnění k aplikaci nejsou udělena.
     1. Přejděte na [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Vyberte **Prostředí**.
-    1. Vyberte tlačítko se třemi vedle prostředí, do kterého chcete přidat oprávnění, a vyberte **Nastavení**.
+    1. Vyberte vertikální tři tečky (&vellip;) vedle prostředí, do kterého chcete přidat oprávnění, a vyberte **Nastavení**.
     1. Rozbalte **Uživatelé + oprávnění** a vyberte **Uživatelé**.
     1. Vyberte **+ Nový** a vyberte **Uživatel**.
     1. Vyberte možnost **Uživatel aplikace**, pokud ještě není vybrána, a zadejte následující informace:

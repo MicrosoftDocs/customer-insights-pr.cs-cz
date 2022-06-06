@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Katalog výukových materiálů
   items:
-    - name: Seznámení
+    - name: Certifkace Microsoft Customer Data Platform Specialist
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Začínáme s Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
     - name: Ingestace dat
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Zahájení placenou licencí
       href: paid-license.md
-    - name: Vytvořit nové prostředí
-      href: create-environment.md
     - name: Prozkoumejte Customer Insights
       href: home.md
     - name: Práce se značkami a sloupci
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Constant Contact
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Kontrola schémat entit v Common Data Model
       href: entity-schemas.md
-    - name: Data Customer Insights v Dataverse
-      href: customer-insights-dataverse.md
     - name: Budování vztahů a propojených entit
       href: relationships.md
     - name: Definování sémantických mapování
       href: semantic-mappings.md
+- name: Prostředí
+  items:
+    - name: Vytvořit nové prostředí
+      href: create-environment.md
+    - name: Připojení k Microsoft Dataverseu
+      href: customer-insights-dataverse.md
+    - name: Použití vlastního Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: Správa nastavení prostředí
+      href: manage-environments.md
+    - name: Připojení k účtu úložiště pomocí instančního objektu
+      href: connect-service-principal.md
 - name: Správa
   items:
     - name: Nastavení konfigurace systému
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Přiřadit uživatelská oprávnění
       href: permissions.md
-    - name: Přehled připojení
-      href: connections.md
-    - name: Správa více prostředí
-      href: manage-environments.md
     - name: Přineste si vlastní trezor klíčů
       href: use-azure-key-vault.md
-    - name: Připojení k účtu úložiště pomocí instančního objektu
-      href: connect-service-principal.md
     - name: Export diagnostických protokolů
       href: diagnostics.md
-    - name: Omezení služby
-      href: service-limits.md
-    - name: Práva a požadavky DSR
-      href: dsr-rights-requests.md
+    - name: Přehled připojení
+      href: connections.md
 - name: Rozhraní API
   items:
     - name: "Práce s\_API"
@@ -324,5 +328,9 @@
       items:
         - name: Vytváření predikcí s daty souhlasu
           href: consent-management/predictions-consent-data.md
+- name: Omezení služby
+  href: service-limits.md
+- name: Práva a požadavky DSR
+  href: dsr-rights-requests.md
 - name: Získání podpory
   href: /power-platform/admin/get-help-support
