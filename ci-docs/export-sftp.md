@@ -1,19 +1,19 @@
 ---
 title: Export dat Customer Insights do hostitelů SFTP (obsahuje video)
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do umístění SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645768"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947176"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Export segmentů a dalších dat do SFTP (preview)
 
@@ -28,8 +28,8 @@ Využijte svá zákaznická data v aplikacích třetích stran a exportujte je d
 ## <a name="known-limitations"></a>Známá omezení
 
 - Cíle SFTP za branami firewall v současnosti nejsou podporovány. 
-- Běh exportu závisí na výkonu vašeho systému. Jako minimální konfiguraci vašeho serveru doporučujeme dvě jádra CPU a 1 GB paměti. 
-- Export entit s až 100 miliony zákaznických profilů může trvat 90 minut při použití doporučené minimální konfigurace dvou jader CPU a 1 GB paměti. 
+- Běh exportu závisí na výkonu vašeho systému. Jako minimální konfiguraci vašeho serveru doporučujeme dvě jádra CPU a 1 GB paměti.
+- Export entit s až 100 miliony zákaznických profilů může trvat 90 minut při použití doporučené minimální konfigurace dvou jader CPU a 1 GB paměti.
 
 ## <a name="set-up-connection-to-sftp"></a>Nastavení propojení k SFTP
 
@@ -64,13 +64,17 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 1. Vyberte entity, například segmenty, které chcete exportovat.
 
    > [!NOTE]
-   > Každá vybraná entita bude při exportu rozdělena až na pět výstupních souborů. 
+   > Každá vybraná entita bude při exportu rozdělena až na pět výstupních souborů.
 
 1. Zvolte **Uložit**.
 
 Uložení exportu nespustí export okamžitě.
 
-Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
+Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab).
+Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Export entit, které obsahují velké množství dat, může vést k více souborům CSV ve stejné složce pro každý export. K rozdělení exportů dochází z důvodu výkonu, aby se minimalizovala doba potřebná k dokončení exportu.
 
 ## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
 

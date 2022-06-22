@@ -1,19 +1,19 @@
 ---
 title: Export údajů ze služby Customer Insights do služby Snapchat
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do služby Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645883"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947268"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Export segmentů do služby Snapchat (preview)
 
@@ -21,7 +21,8 @@ Exportujte segmenty sjednocených profilů zákazníků do služby Snapchat a po
 
 ## <a name="prerequisites-for-a-connection"></a>Předpoklady pro připojení
 
--   Máte [účet Snapchat Business](https://business.snapchat.com/), [účet Snapchat Ads](https://ads.snapchat.com/) a odpovídající přihlašovací údaje správce.
+-   Máte [účet Snapchat Business](https://business.snapchat.com/), [účet Snapchat Ads](https://ads.snapchat.com/) a odpovídající přihlašovací údaje správce. Musíte být alespoň členem obchodního vztahu organizace a správcem dat konkrétního účtu reklamy. 
+-   Ve Správci cílové skupiny Snapchat máte alespoň jednu cílovou skupinu typu SAM (Snap Audience Match). 
 -   [Nakonfigurovali jste segmenty](segments.md) v Customer Insights.
 -   Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
 
@@ -60,7 +61,7 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. V poli **propojení pro export** vyberte propojení v části Snapchat. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
 
-1. Zadejte [**ID cílové skupiny Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Zadejte [**ID segmentu Snapchat / cílové skupiny**](https://businesshelp.snapchat.com/s/article/custom-audiences). ID cílové skupiny lze nalézt v adrese URL po výběru cílové skupiny ve správci cílové skupiny Snapchat. 
 
 1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je nutné exportovat segmenty do Snapchatu.
 

@@ -1,7 +1,7 @@
 ---
 title: Zobrazení profilů zákazníků
 description: Získejte kombinované zobrazení sjednocených údajů o zákaznících.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755774"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947038"
 ---
 # <a name="customer-profiles"></a>Profily zákazníků
 
@@ -55,9 +55,9 @@ Zákazníky můžete filtrovat podle polí entity *Zákazník*. Podobně jako p�
 
 Vyberte některou z dlaždic zákazníků a otevřete **stránku podrobností zákazníka**. Toto zobrazení obsahuje jednotné informace o vybraném zákazníkovi. Podrobnosti o zákazníkovi zahrnují následující obsah:
 
-**Dlaždice profilu zákazníka**: Tato dlaždice zobrazuje různé hodnoty ze sjednocené entity *Zákazník*. Pokud pole pro vybraný zákaznický profil nemá žádnou hodnotu, nezobrazí se. Dlaždice je strukturována do sekcí:
+**Dlaždice profilu zákazníka**: Tato dlaždice zobrazuje různé hodnoty ze sjednocené entity *Zákazník*. Pokud pole pro vybraný zákaznický profil nemá žádnou hodnotu, nezobrazí se kromě pole adresy. Dlaždice je strukturována do sekcí:
 
-- První část ukazuje předdefinovanou sadu polí a za ní všechna pole, která jsou součástí indexu vyhledávání a filtrování. Všechna pole související s adresou jsou sloučena do jednoho řádku, pokud profil taková pole obsahuje.
+- První část ukazuje předdefinovanou sadu polí a za ní všechna pole, která jsou součástí indexu vyhledávání a filtrování. Všechna pole související s adresou jsou sloučena do jednoho řádku, který ukazuje, pokud profil neobsahuje žádné informace o adrese.
 - **Kontakty na tohoto zákazníka**: V prostředích pro firemní zákaznické účty uvidíte všechny související kontakty tohoto zákazníka jako druhou sekci. Každý kontakt je zobrazen se svými poli. Prázdná pole jsou skrytá.
 - **Další pole**: Zobrazí zbývající pole vybraného zákazníka kromě ID.
 - **ID**: Uvádí všechna ID pod odpovídajícím názvem entity. Pole jsou identifikována jako ID svou sémantikou, která je podle toho kategorizuje.

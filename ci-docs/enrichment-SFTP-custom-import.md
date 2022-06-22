@@ -1,19 +1,19 @@
 ---
 title: Rozšíření pomocí vlastního importu SFTP
 description: Obecné informace o rozšíření pomocí vlastního importu SFTP.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f52d24cbe793bee7948ad2af31059cd3edf40f94
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645723"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953711"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Rozšíření profilů zákazníků o vlastní data (Preview)
 
@@ -21,54 +21,13 @@ Vlastní import prostřednictvím protokolu SFTP (Secure File Transfer Protocol)
 
 ## <a name="prerequisites"></a>Předpoklady
 
-Chcete-li nakonfigurovat vlastní import SFTP, musíte splnit následující předpoklady:
+- Je znám název souboru a umístění (cesta) souboru, který má být importován na hostitele SFTP.
 
-- Máte název souboru a umístění (cestu) souboru, který se má importovat do hostitele SFTP.
-- Tady je soubor *model.json*, který určuje [schéma Common Data Model](/common-data-model/) pro data k importu. Tento soubor musí být ve stejném adresáři jako soubor, který chcete importovat.
-- Správce již nakonfiguroval připojení SFTP *nebo* máte oprávnění [správce](permissions.md#admin). Budete potřebovat přihlašovací údaje uživatele, adresu URL a číslo portu pro umístění SFTP, ze kterého chcete importovat data.
+- Soubor *model.json*, který specifikuje schéma Common Data Model pro data, která mají být importována. Tento soubor musí být ve stejném adresáři jako soubor, který chcete importovat.
 
+- SFTP [připojení](connections.md) je [nakonfigurováno](#configure-the-connection-for-sftp-custom-import).
 
-## <a name="configure-the-import"></a>Konfigurace importu
-
-1. Přejděte na **Data** > **Rozšíření** a vyberte kartu **Objevit**.
-
-1. V **dlaždici Vlastní import SFTP** vyberte **Rozšířit moje údaje** a pak vyberte **Začínáme**.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Dlaždice vlastního importu SFTP":::
-
-1. V rozevíracím seznamu vyberte [připojení](connections.md). Pokud není k dispozici propojení , kontaktujte správce. Pokud jste správce, můžete vytvořit připojení výběrem **Přidat připojení** a výběrem **Vlastní import SFTP** z rozevíracího seznamu.
-
-1. Vybrané připojení potvrďte výběrem **Propojit s Custom Import**.
-
-1.  Vyberte **Další** a zadejte **Cesta** a **Název souboru** datového souboru, který chcete importovat.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Screenshot při zadávání datového umístění.":::
-
-1. Vyberte **Další** a zvolte datovou sadu zákazníka. Mohou to být buď všechny zákaznické profily, nebo segment.
-
-1. Vyberte **Další** a zadejte název rozšíření a název výstupní entity. 
-
-1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfigurace připojení pro vlastní import SFTP 
-
-Abyste mohli konfigurovat propojení, musíte být správce. Při konfiguraci rozšíření vyberte **Přidat připojení** *nebo* přejděte na **Správce** > **Připojení** a v dlaždici Vlastní import vyberte **Nastavit**.
-
-1. Do pole **Zobrazované jméno** zadejte jméno.
-
-1. Zadejte platné uživatelské jméno, heslo a adresu URL hostitele pro server SFTP, na kterém se nacházejí importovaná data.
-
-1. Projděte si a poskytněte svůj souhlas s **Ochranou osobních údajů a dodržování předpisů** výběrem zaškrtávacího políčka **Souhlasím**.
-
-1. Vyberte **Ověřit** k ověření konfigurace.
-
-1. Po dokončení ověření lze připojení uložit výběrem **Uložit**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Stránka konfigurace připojení Experian.](media/enrichment-SFTP-connection.png "Stránka konfigurace připojení Experian")
-
-
-## <a name="defining-field-mappings"></a>Definování mapování polí 
+## <a name="file-schema-example"></a>Příklad schématu souboru
 
 Adresář obsahující soubor, který se má importovat na server SFTP, musí také obsahovat soubor *model.json*. Tento soubor definuje schéma, které se má použít pro import dat. Schéma musí používat [Common Data Model](/common-data-model/) ke specifikaci mapování pole. Jednoduchý příklad souboru model.json vypadá takto:
 
@@ -82,12 +41,12 @@ Adresář obsahující soubor, který se má importovat na server SFTP, musí ta
             "attributes": [
                 {
                     "name": "CustomerId",
-                    "friendlyName": "Client id",
+                    "friendlyName": "Client ID",
                     "dataType": "string"
                 },
                 {
                     "name": "PreferredCity",
-                    "friendlyName": "Preferred City for vacation",
+                    "friendlyName": "Preferred city for vacation",
                     "dataType": "string"
                 },
                 {
@@ -114,13 +73,56 @@ Adresář obsahující soubor, který se má importovat na server SFTP, musí ta
 }
 ```
 
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfigurace připojení pro vlastní import SFTP
+
+Musíte být [správce](permissions.md#admin) v Customer Insights a mít přihlašovací údaje uživatele, adresu URL a číslo portu pro umístění SFTP, ze kterého chcete importovat data.
+
+1. Při konfiguraci rozšíření vyberte **Přidat připojení** nebo přejděte na **Správce** > **Připojení** a v dlaždici **Vlastní import** vyberte Nastavit.
+
+   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Stránka konfigurace připojení vlastního importu":::
+
+1. Zadejte název připojení.
+
+1. Zadejte platné uživatelské jméno, heslo a adresu URL hostitele pro server SFTP, na kterém se nacházejí importovaná data.
+
+1. Zkontrolujte a poskytněte svůj souhlas s [ochranou osobních údajů a dodržováním předpisů](#data-privacy-and-compliance) výběrem **souhlasím**.
+
+1. Zvolte **Ověřit** pro ověření konfigurace a poté vyberte **Uložit**.
+
+### <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
+
+Když povolíte aplikaci Dynamics 365 Customer Insights přenos dat pomocí vlastního importu, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft taková data přenese na váš pokyn, ale vy jste odpovědní za zajištění toho, že data splňují veškeré vaše případné povinnosti týkající se ochrany soukromí nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
+Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+
+## <a name="configure-the-import"></a>Konfigurace importu
+
+1. Přejděte na **Data** > **Rozšíření** a vyberte kartu **Objevit**.
+
+1. Vyberte příkaz **Rozšířit moje data** na dlaždici **Vlastní import SFTP**.
+
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Dlaždice vlastního importu SFTP":::
+
+1. Zkontrolujte přehled a poté vyberte **Další**.
+
+1. Vyberte připojení. Pokud není k dispozici správce, obraťte se na něj.
+
+1. Vyberte **Sada údajů o zákazníkovi** a zvolte profil nebo segment, které chcete rozšířit. Entita *Zákazník* rozšíří všechny profily vašich zákazníků zatímco segment rozšíří pouze profily zákazníků obsažené v tomto segmentu.
+
+1. Vyberte **Další**.
+
+1. Zadejte **Cesta** a **Název souboru** datového souboru, který chcete importovat.
+
+1. Vyberte **Další**.
+
+1. Zadejte **Název** rozšíření a **název výstupní entity**.
+
+1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
+
+1. Vyberte **Spustit** k zahájení procesu obohacování nebo blízko k návratu na stránku **Rozšíření**.
+
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
-Chcete-li zahájit proces rozšíření, vyberte **Spustit** z panelu příkazů. Můžete také nechat systém automaticky spustit rozšíření jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování bude záviset na velikosti dat, která mají být importována, a na připojení k serveru SFTP.
-
-Po dokončení procesu rozšíření můžete zkontrolovat nově importovaná data v sekci **Moje rozšíření**. Dále najdete čas poslední aktualizace a počet rozšířených profilů.
-
-Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobnému zobrazení každého rozšířeného profilu.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Další kroky
 

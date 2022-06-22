@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645772"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947222"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Export seznamu segmentů a dalších dat do Azure Data Lake Storage Gen2 (náhled)
 
@@ -21,11 +21,9 @@ Uložte si data Customer Insights v účtu Data Lake Storage Gen2, nebo ho použ
 
 ## <a name="known-limitations"></a>Známá omezení
 
-1. Pro Azure Data Lake Storage Gen2 si můžete vybrat mezi [úrovní standardního a prémiového výkonu](/azure/storage/blobs/create-data-lake-storage-account), když vytváříte účet úložiště pro vaše datové jezero. Pokud zvolíte úroveň výkonu Premium, vyberte jako typ účtu objekty blob prémiového bloku. 
+1. Pro Azure Data Lake Storage Gen2 si můžete vybrat mezi [úrovní standardního a prémiového výkonu](/azure/storage/blobs/create-data-lake-storage-account), když vytváříte účet úložiště pro vaše datové jezero. Pokud zvolíte úroveň výkonu Premium, vyberte jako typ účtu objekty blob prémiového bloku.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nastavení připojení pro Azure Data Lake Storage Gen2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nastavení připojení pro Azure Data Lake Storage Gen2
 
 1. Přejděte na **Správce** > **Propojení**.
 
@@ -39,7 +37,7 @@ Uložte si data Customer Insights v účtu Data Lake Storage Gen2, nebo ho použ
     - Chcete-li vědět, jak vytvořit účet úložiště pro použití se službou Azure Data Lake Storage Gen2, projděte si téma [Vytvoření účtu úložiště](/azure/storage/blobs/create-data-lake-storage-account). 
     - Další informace o názvu účtu úložiště Azure Data Lake Gen2 a klíči účtu najdete v tématu [Správa nastavení účtu úložiště na webu Azure Portal](/azure/storage/common/storage-account-manage).
 
-1. Dokončete propojení výběrem možnosti **Uložit**. 
+1. Dokončete propojení výběrem možnosti **Uložit**.
 
 ## <a name="configure-an-export"></a>Konfigurace exportu
 
@@ -57,8 +55,12 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 Uložení exportu nespustí export okamžitě.
 
-Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
+Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab).
+Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand).
 
-Exportovaná data jsou uložena v kontejneru úložiště Azure Data Lake Gen 2, který jste nakonfigurovali. 
+Exportovaná data jsou uložena v kontejneru úložiště Azure Data Lake Gen 2, který jste nakonfigurovali.
+
+> [!TIP]
+> Export entit, které obsahují velké množství dat, může vést k více souborům CSV ve stejné složce pro každý export. K rozdělení exportů dochází z důvodu výkonu, aby se minimalizovala doba potřebná k dokončení exportu.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800273"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011465"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Rozšíření zdrojů dat (Preview)
 
@@ -29,9 +29,11 @@ K vytváření nebo úpravě rozšíření musíte mít roli Přispěvatel nebo 
 
 1. Vyberte vertikální tři tečky (&vellip;) vedle zdroje dat, který chcete rozšířit, a vyberte příkaz **Rozšířit**.
 
-   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stránka Rozšíření zdroje dat.":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Stránka Zdroje dat se zvýrazněným rozšiřováním":::
 
    Karta **Zjistit** zobrazuje [podporované možnosti rozšíření zdroje dat](#supported-data-source-enrichments).
+
+   :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stránka Rozšíření zdroje dat.":::
 
 1. Vyberte příkaz **Rozšířit moje data** a zahajte tak konfiguraci rozšíření zdroje dat. Název výstupní entity je automaticky vyplněn.
 

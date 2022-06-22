@@ -3,17 +3,17 @@ title: Použití vlastního účtu Azure Data Lake Storage Gen2
 author: mukeshpo
 description: Přečtěte si o požadavcích na použití vlastního účtu Azure Data Lake Storage pro ukládání dat Customer Insights.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833916"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011925"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Použití vlastního účtu Azure Data Lake Storage Gen2
 
@@ -37,6 +37,7 @@ Když vytváříte nové prostředí, ujistěte se, že existuje účet Data Lak
 1. Vyberte si, jak **Připojit úložiště**. Pro ověřování si můžete vybrat mezi možností založenou na zdrojích a možností založenou na předplatném. Více informací viz [Připojení k účtu Azure Data Lake Storage pomocí instančního objektu Azure](connect-service-principal.md).
    - Pro **Předplatné Azure** vyberte **Předplatné**, **Skupina zdrojů** a **Účet úložiště**, která obsahuje kontejner `customerinsights`.
    - Pro **Klíč účtu** zadejte **Název účtu** a **Klíč účtu** pro účet Data Lake Storage. Použití této metody ověřování znamená, že jste informováni, pokud vaše organizace otočí klíče. Musíte [aktualizovat konfiguraci prostředí](manage-environments.md#edit-an-existing-environment) o nový klíč, když je otočen.
+1. Vyberte, zda chcete pro připojení k účtu úložiště použít Azure Private Link a [vytvořit připojení k Private Link](security-overview.md#private-links-tab) s dvoufázovým procesem.
 
 Po dokončení systémových procesů, jako je například příjem dat, systém vytvoří odpovídající složky v účtu úložiště. Datové soubory a soubory *model.json* se vytvářejí a přidávají do složek na základě názvu procesu.
 

@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800160"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011695"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Připojte se k datům ve spravovaném datovém jezeru Microsoft Dataverse
 
-Tento článek poskytuje informace, jak se uživatelé Dataverse mohou rychle připojit k analytickým entitám ve spravovaném jezeru Microsoft Dataverse. 
+Uživatelé Microsoft Dataverse se mohou rychle připojit k analytickým entitám v jezeře spravovaném Microsoft Dataverse.
 
 > [!NOTE]
 > Musíte být správcem organizace Dataverse, abyste mohli pokračovat a zobrazit seznam entit dostupných ve spravovaném jezeře.
@@ -32,40 +32,34 @@ Tento článek poskytuje informace, jak se uživatelé Dataverse mohou rychle p�
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Připojení k datovému jezeru spravovaném pomocí Dataverse
 
-1. V Customer Insights přejděte na **Data** > **Zdroje dat**.
+1. Přejděte na **Data** > **Zdroje dat**.
 
-2. Vyberte **Přidat zdroj dat**.
+1. Vyberte **Přidat zdroj dat**.
 
-3. Vyberte **Microsoft Dataverse** a pak **Další**.
+1. Vyberte možnost **Microsoft Dataverse**.
 
-4. Zadejte **Název** zdroje dat vyberte **Další**. 
+1. Zadejte **Název** zdroje dat a volitelně **Popis**.
 
-5. Poskytněte **Adresu serveru** pro organizaci Dataverse a vyberte **Přihlásit se**.
+1. Poskytněte **Adresu serveru** pro organizaci Dataverse a vyberte **Přihlásit se**.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Obrazovka v kroku příjmu dat, kde uživatel může zadat adresu URL prostředí Dataverse.":::
-
-6. Z dostupného seznamu vyberte tabulky, které chcete ingestovat jako entity do Customer Insights.    
+1. Z dostupného seznamu vyberte tabulky, které chcete ingestovat jako entity do Customer Insights.
 
    > [!NOTE]
    > Pokud jsou některé tabulky již vybrány, mohou je používat jiné aplikace Dynamics 365 (například Dynamics 365 Sales Insights nebo Customer Service Insights). Tento výběr nelze změnit. Tyto tabulky budou k dispozici jako entity po vytvoření zdroje dat.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialogové okno zobrazující seznam entit v prostředí Dataverse.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dialogové okno zobrazující seznam entit v prostředí Dataverse.":::
 
-7. Uložením výběru spustíte synchronizaci vybraných tabulek Dataverse. Nově přidané připojení najdete na stránce **Zdroje dat**. Bude ve frontě k aktualizaci a zobrazí počet entit jako 0, dokud nebudou synchronizovány všechny vybrané tabulky.
+1. Uložením výběru spustíte synchronizaci vybraných tabulek Dataverse. Nově přidané připojení najdete na stránce **Zdroje dat**. Bude ve frontě k aktualizaci a zobrazí počet entit jako 0, dokud nebudou synchronizovány všechny vybrané tabulky.
 
 Pouze jeden zdroj dat prostředí může současně používat totéž spravované jezero Dataverse.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Úprava zdroje dat datového jezera spravovaného pomocí Dataverse
 
-Výběr entit můžete upravit až po vytvoření zdroje dat. Například pokud byly přidány další entity do Dataverse a chcete je také importovat.    
+Výběr entit můžete upravit až po vytvoření zdroje dat. Například pokud byly přidány další entity do Dataverse a chcete je také importovat.
 Chcete -li se připojit k jinému datovému jezeru Dataverse, [vytvořte nový zdroj dat](#connect-to-a-dataverse-managed-lake).
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
-2. Vedle zdroj dat, který chcete aktualizovat, vyberte vertikální tři tečky (&vellip;).
+1. Vedle zdroje dat, který chcete aktualizovat, vyberte **Upravit**.
 
-3. V seznamu vyberte volbu **Upravit**.
-
-4. Vyberte další entity z dostupného seznamu entit a vyberte **Uložit**.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Vyberte další entity z dostupného seznamu entit a vyberte **Uložit**.

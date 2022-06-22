@@ -1,7 +1,7 @@
 ---
 title: Obohacení firemních profilů o Dun & Bradstreet
 description: Obecné informace o rozšíření třetí strany Dun & Bradstreet.
-ms.date: 04/26/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c738c2657d4cda213342629156ddc8104366bd8a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755392"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953883"
 ---
 # <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Obohacení firemních profilů o Dun & Bradstreet (Preview)
 
@@ -22,16 +22,14 @@ Dun & Bradstreet poskytuje obchodní data, analýzy a statistiky pro podniky. Um
 
 ## <a name="prerequisites"></a>Předpoklady
 
-Abyste mohli konfigurovat rozšíření Dun & Bradstreet, je třeba splnit následující předpoklady:
+- Aktivní licence [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights).
+- [Sjednocené profily zákazníků](customer-profiles.md) pro firmy.
+- [Projekt](#set-up-your-dun--bradstreet-project) Dun & Bradstreet je nastaven.
+- Dun & Bradstreet [připojení](connections.md) je [nakonfigurováno](#configure-a-connection-for-dun--bradstreet) správcem.
 
-- Máte aktivní licenci [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights).
-- Máte [sjednocené profily zákazníků](customer-profiles.md) pro společnosti.
-- Dun & Bradstreet [připojení](connections.md) je nakonfigurováno správcem. Můžete si ho vytvořit, pokud máte oprávnění [správce](permissions.md#admin) a přihlašovací údaje z Dun & Bradstreet Connect.
-
-## <a name="setting-up-your-dun--bradstreet-project"></a>Nastavení vašeho projektu Dun & Bradstreet
+## <a name="set-up-your-dun--bradstreet-project"></a>Nastavení projektu Dun & Bradstreet
 
 Jako licencovaný uživatel Dun & Bradstreet můžete nastavit projekt v [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights).
-
 
 1. Připojte se k [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights). Chcete-li získat přihlašovací údaje, [obnovte své heslo](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights).
 
@@ -47,66 +45,69 @@ Jako licencovaný uživatel Dun & Bradstreet můžete nastavit projekt v [Dun & 
 
    :::image type="content" source="media/enrichment-dnb-s3info.png" alt-text="Snímek obrazovky výběru informací s3 v projektu Dun & Bradstreet.":::
 
-## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
-
-1. Přejděte na **Data** > **Rozšíření**.
-
-1. Vyberte **Rozšířit moje data** na dlaždici Dun & Bradstreet a vyberte **Začít**.
-
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Snímek obrazovky dlaždice Dun & Bradstreet.":::
-
-1. V rozevíracím seznamu vyberte [připojení](connections.md). Pokud není k dispozici propojení , kontaktujte správce. Pokud jste správce, můžete vytvořit připojení. Vyberte **Přidat připojení** a vyberte **Dun & Bradstreet**.
-
-1. Vyberte **Připojte se k Dun & Bradstreet** pro potvrzení připojení.
-
-1. Vyberte **Další** a zvolte **Sadu zákaznických dat**, kterou chcete rozšířit o data společnosti od společnosti Dun & Bradstreet. Můžete vybrat entitu **Zákazník** a rozšířit všechny profily vašich zákazníků, nebo vyberte entitu segmentu a rozšiřte pouze sjednocené profily zákazníků obsažené v tomto segmentu.
-
-1. Vyberte **Další** a definujte, který typ polí z vašich sjednocených profilů se používají k hledání odpovídajících dat společnosti od Dun & Bradstreet. Vyžadována jsou pole **Číslo DUNS** nebo **Název společnosti** a **Země**. Pole země podporuje [dvou nebo třípísmenné kódy zemí](https://www.iso.org/iso-3166-country-codes.html), název země v angličtině, název země v rodném jazyce a telefonní předvolbu. Některé běžné varianty zemí zahrnují:
-
-- USA: Spojené státy americké, Spojené státy, USA, Amerika.
-- CA: Kanada.
-- GB: Spojené království, UK, Velká Británie, GB, Spojené království Velké Británie a Severního Irska, Spojené království Velké Británie.
-- AU: Austrálie, Australské společenství.
-- FR: Francie, Francouzská republika
-- DE: Německo, Německý, Deutschland, Allemagne, Spolková republika Německo, Německá republika.
-
-   :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Panel mapování polí Dun & Bradstreet.":::
-
-1. Výběrem možnosti **Další** dokončete mapování polí.
-
-1. Zadejte název rozšíření a po přezkoumání vašich voleb vyberte **Uložit rozšíření**.
-
 ## <a name="configure-a-connection-for-dun--bradstreet"></a>Nakonfigurujte připojení pro Dun & Bradstreet
 
-Abyste mohli konfigurovat propojení, musíte být správce. Vyberte příkaz **Přidat připojení** při konfiguraci rozšíření *nebo* přejděte na **Správa** > **Připojení** a vyberte **Nastavit** na dlaždici Dun & Bradstreet.
+Musíte být [správce](permissions.md#admin) v Customer Insights a mít přihlašovací údaje z Dun & Bradstreet Connect.
 
-1. Vyberte **Začínáme**.
+1. Vyberte příkaz **Přidat připojení** při konfiguraci rozšíření nebo přejděte na **Správa** > **Připojení** a vyberte **Nastavit** na dlaždici Dun & Bradstreet.
 
-1. Do pole **Zobrazované jméno** zadejte jméno.
+1. Zadejte název připojení.
 
-1. Poskytněte platné přihlašovací údaje Dun & Bradstreet a podrobnosti o projektu Dun & Bradstreet *Region, Drop folder path a Drop folder name*. [Tyto informace získáte](#setting-up-your-dun--bradstreet-project) z projektu Dun & Bradstreet.
+1. Poskytněte platné přihlašovací údaje Dun & Bradstreet a podrobnosti o projektu Dun & Bradstreet *Region, Drop folder path a Drop folder name*. [Tyto informace získáte](#set-up-your-dun--bradstreet-project) z projektu Dun & Bradstreet.
 
-1. Zkontrolujte a poskytněte svůj souhlas s **ochranou osobních údajů a dodržováním předpisů** výběrem **souhlasím**.
+1. Zkontrolujte a poskytněte svůj souhlas s [ochranou osobních údajů a dodržováním předpisů](#data-privacy-and-compliance) výběrem **souhlasím**.
 
-1. Vyberte **Ověřit** k ověření konfigurace.
-
-1. Po dokončení ověření vyberte **Uložit**.
+1. Zvolte **Ověřit** pro ověření konfigurace a poté vyberte **Uložit**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Stránka konfigurace připojení Dun & Bradstreet":::
 
+### <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
+
+Když povolíte aplikaci Dynamics 365 Customer Insights přenos dat do Dun & Bradstreet, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft taková data přenese na váš pokyn, ale vy jste odpovědní za zajištění toho, že Dun & Bradstreet splňuje veškeré vaše případné povinnosti týkající se ochrany soukromí nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
+Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+
+## <a name="supported-countries-or-regions"></a>Podporované země nebo regiony
+
+V současné době podporujeme následující možnosti země/oblasti: Kanada (angličtina) nebo Spojené státy americké (angličtina).
+
+## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
+
+1. Přejděte na **Data** > **Rozšíření** a vyberte kartu **Objevit**.
+
+1. Vyberte **Rozšířit moje data** v **Data společnosti** z dlaždice Dun & Bradstreet.
+
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Snímek obrazovky dlaždice Dun & Bradstreet.":::
+
+1. Zkontrolujte přehled a poté vyberte **Další**.
+
+1. Vyberte připojení a potvrďte. Pokud není k dispozici správce, obraťte se na něj.
+
+1. Vyberte **Další**.
+
+1. Vyberte **Sada údajů o zákazníkovi** a zvolte profil nebo segment, které chcete obohatit o data společnosti z Dun & Bradstreet. Entita *Zákazník* rozšíří všechny profily vašich zákazníků zatímco segment rozšíří pouze profily zákazníků obsažené v tomto segmentu.
+
+1. Definujte, který typ polí z vašich sjednocených profilů se má použít pro porovnávání dat společnosti z Dun & Bradstreet. Požaduje se alespoň jedno z polí **Jméno a adresa**, **Telefon** nebo **E-mail**.
+
+1. Vyberte **Další**.
+
+1. Namapujte pole vaší společnosti na firemní data od společnosti Dun & Bradstreet. Vyžadována jsou pole **Číslo DUNS** nebo **Název společnosti** a **Země**.
+
+      :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Panel mapování polí Dun & Bradstreet.":::
+
+1. Výběrem možnosti **Další** dokončete mapování polí.
+
+1. Zadejte **Název** rozšíření a **název výstupní entity**.
+
+1. Po kontrole vašich voleb vyberte **Uložit rozšíření**.
+
+1. Vyberte **Spustit** k zahájení procesu obohacování nebo blízko k návratu na stránku **Rozšíření**.
+
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
-Po aktualizaci rozšíření si můžete prohlédnout nově rozšířená firemní data v části [Moje rozšíření](enrichment-hub.md). Najdete čas poslední aktualizace a počet rozšířených profilů.
-
-Výběrem volby **Zobrazit rozšířená data** získáte přístup k podrobnému zobrazení každého rozšířeného profilu.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Další kroky
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
-
-Když povolíte aplikaci Dynamics 365 Customer Insights přenos dat do Dun & Bradstreet, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft taková data přenese na váš pokyn, ale vy jste odpovědní za zajištění toho, že Dun & Bradstreet splňuje veškeré vaše případné povinnosti týkající se ochrany soukromí nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
-Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

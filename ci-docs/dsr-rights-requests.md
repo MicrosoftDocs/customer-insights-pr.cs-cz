@@ -1,19 +1,19 @@
 ---
 title: Žádosti o práva subjektu údajů (DSR) v rámci GDPR | Microsoft Docs
 description: Odpověď na žádosti o práva subjektu údajů Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808538"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947360"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Žádosti o práva subjektu údajů (DSR) v rámci GDPR
 
@@ -77,11 +77,5 @@ Správce klienta může exportovat údaje pomocí následujícího postupu:
 1. Pošlete e-mail na adresu D365CI@microsoft.com a určete e-mailovou adresu uživatele v žádosti. Tým Customer Insights zašle e-mail na zaregistrovanou e-mailovou adresu klienta s žádostí o potvrzení exportu dat.
 2. Potvrďte potvrzení pro export dat pro požadovaného uživatele.
 3. Exportovaná data obdržíte prostřednictvím e-mailové adresy správce klienta.
-
-## <a name="consent-management-preview"></a>Správa souhlasu (Preview)
-
-Funkce správy souhlasu neshromažďuje uživatelská data přímo. Importuje a zpracovává pouze data souhlasu poskytnuté uživateli v jiných aplikacích.
-
-Chcete-li odebrat data souhlasu konkrétních uživatelů, odstraňte je ze zdrojů dat ingestovaných funkcí správy souhlasu. Po aktualizaci zdroje dat budou odebraná data odstraněna také v Centru souhlasu. Aplikace, které používají entitu souhlasu, odstraní také data, která byla odstraněna ze zdroje po [aktualizaci](system.md#refresh-processes). Zdroje dat doporučujeme aktualizovat krátce po reakci na žádost subjektu údajů o odebrání dat uživatele ze všech ostatních procesů a aplikací.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

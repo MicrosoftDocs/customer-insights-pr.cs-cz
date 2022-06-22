@@ -6,22 +6,22 @@ ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641892"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947084"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Přehled produktu Dynamics 365 Customer Insights
 
 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je platforma pro zákaznická data (CDP) společnosti Microsoft, která pomáhá poskytovat personalizované zákaznické zkušenosti. Aplikace poskytuje holistický pohled na zákazníky s bezkonkurenčním časem na pochopení. Získejte nejkomplexnější pohled na své zákazníky sjednocením zákaznických dat s provozními a IoT daty v reálném čase. Obohaťte profily zákazníků o zdroje dat první a třetí strany. 
 
 Customer Insights vám pomůže přeměnit vaši firmu na organizaci zaměřenou na zákazníka tím, že umožní vašim marketingovým, prodejním a servisním profesionálům přizpůsobit interakce 1:1 na míru. Integrace na klíč s Microsoftem a aplikacemi třetích stran lze použít k aktivaci přehledů v reálném čase, které vedou k smysluplným akcím.
- 
+
 Propojte data z transakčních, behaviorálních a demografických zdrojů dat a vytvořte 360stupňové pohledy zákazníků. Získejte okamžité přehledy s předem sestavenými modely AI nebo rychle sestavujte, testujte a nasazujte vlastní modely AI/ML pomocí pokročilých analytických řešení v neomezeném měřítku.
 
-Udržujte plnou kontrolu nad svými zákaznickými daty, abyste zajistili nejvyšší úroveň správy dat a soulad se samoobslužným, podnikovým CDP založeným na Microsoft Azure. Podporujte obecné nařízení o ochraně osobních údajů (GDPR) a další legislativní požadavky a průmyslové standardy prostřednictvím vestavěných nástrojů pro ochranu soukromí, zabezpečení a správu a správu souhlasu.
+Udržujte plnou kontrolu nad svými zákaznickými daty, abyste zajistili nejvyšší úroveň správy dat a soulad se samoobslužným, podnikovým CDP založeným na Microsoft Azure. Podporujte obecné nařízení o ochraně osobních údajů (GDPR) a další legislativní požadavky a průmyslové standardy prostřednictvím vestavěných nástrojů pro ochranu soukromí a nástroje pro zásady správného řízení.
 
 ## <a name="pricing-and-licensing"></a>Ceny a licence
 Customer Insights je licencován na klienta a zahrnuje funkce typu business-to-consumer (B2C) i business-to-business (B2B). Můžete si zakoupit další kapacitu s doplňkovými licencemi a zvýšit tak počet profilů a účtů.

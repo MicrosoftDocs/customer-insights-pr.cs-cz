@@ -1,7 +1,7 @@
 ---
 title: Aktualizace nastavení sjednocení
 description: Aktualizujte duplicitní pravidla, pravidla shody nebo sjednocená pole v nastavení sjednocení.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755582"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844032"
 ---
 # <a name="update-the-unification-settings"></a>Aktualizace nastavení sjednocení
 
@@ -43,8 +43,9 @@ Chcete-li zkontrolovat nebo změnit nastavení sjednocení po vytvoření sjedno
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Snímek obrazovky stránky Sjednocení dat se zvýrazněnými možnostmi sjednocení.":::
 
-   - Chcete-li aktualizovat sjednocený profil zákazníka (se závislostmi nebo bez nich), získáte informace v části [Spuštění aktualizací profilu zákazníka](#run-updates-to-the-unified-customer-profile).
-   - Chcete-li vyhodnotit kvalitu vašich odpovídajících podmínek bez aktualizace sjednoceného profilu, získáte informace v části [Spuštění podmínek shody](#run-matching-conditions). Možnost **Spustit pouze podmínky shody** se nezobrazuje pro jednu entitu.
+   - [Spusťte podmínky shody](#run-matching-conditions) pro rychlé vyhodnocení kvality vašich odpovídajících podmínek bez aktualizace sjednoceného profilu (pravidla deduplicace a shody). Možnost **Spustit pouze podmínky shody** se nezobrazuje pro jednu entitu.
+   - [Sjednoťte profily zákazníků](#run-updates-to-the-unified-customer-profile), abyste mohli spustit podmínky shody a aktualizovat entitu sjednoceného profilu zákazníka bez ovlivnění závislostí (jako jsou obohacení, segmenty nebo opatření). Závislé procesy nejsou spuštěny, ale budou aktualizovány jako [definované v plánu aktualizací](system.md#schedule-tab).
+   - [Sjednoťte profily zákazníků a závislosti](#run-updates-to-the-unified-customer-profile), abyste mohli spustit podmínky shody a aktualizovat entitu sjednoceného profilu zákazníka a všechny závislosti (jako jsou obohacení, segmenty nebo opatření). Všechny procesy jsou automaticky znovu spuštěny.
 
 ## <a name="edit-source-fields"></a>Upravit zdrojová pole
 
@@ -135,11 +136,13 @@ Většinu parametrů párování můžete překonfigurovat a doladit. Nemůžete
 
 ## <a name="run-matching-conditions"></a>Spuštění podmínek shody
 
+Spuštění podmínek shody spustí pouze pravidla deduplikace a shody a aktualizuje entity *Deduplication_* a *ConflationMatchPair*.
+
 1. Na stránce **Data** > **Sjednotit** vyberte **Spustit pouze podmínky shody**.
 
-   Dlaždice **Duplicitní záznamy** a **Podmínky shody** ukazují **Ve frontě** nebo **Aktualizace**.
+   Dlaždice **Duplicitní záznamy** a **Podmínky shody** ukazují stav **Ve frontě** nebo **Aktualizace**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Po dokončení procesu přiřazování vyberte **Upravit** na dlaždici **Podmínky shody**.
 
@@ -153,10 +156,12 @@ Většinu parametrů párování můžete překonfigurovat a doladit. Nemůžete
 
 1. Na stránce **Data** > **Sjednotit** vyberte:
 
-   - **Sjednocené profily zákazníků**: Aktualizuje entitu sjednoceného profilu zákazníka bez ovlivnění závislostí (jako jsou obohacení, segmenty nebo opatření). Závislé procesy nejsou spuštěny, ale budou aktualizovány jako [definované v plánu aktualizací](system.md#schedule-tab).
+   - **Sjednotit profily zákazníků**: Spustí podmínky shody a aktualizuje entitu sjednoceného profilu zákazníka bez ovlivnění závislostí (jako jsou obohacení, segmenty nebo opatření). Závislé procesy nejsou spuštěny, ale budou aktualizovány jako [definované v plánu aktualizací](system.md#schedule-tab).
 
-   - **Sjednocení profilů a závislostí zákazníků**: Aktualizuje sjednocený profil a všechny závislosti. Všechny procesy jsou automaticky znovu spuštěny. Po dokončení všech navazujících procesů se v profilu zákazníka promítnou aktualizované údaje.
+   - **Sjednotit profily zákazníků a závislosti**: Spustí spustit podmínky shody a aktualizuje entitu sjednoceného profilu zákazníka a všechny závislosti. Všechny procesy jsou automaticky znovu spuštěny. Po dokončení všech navazujících procesů se v profilu zákazníka promítnou aktualizované údaje.
 
-   Dlaždice **Duplicitní záznamy**, **Podmínky shody** a dlaždice **Sjednocená zákaznická pole** ukazují **Ve frontě** nebo **Aktualizuje se**.
+   Dlaždice **Duplicitní záznamy**, **Podmínky shody** a dlaždice **Sjednocená zákaznická pole** ukazují stav **Ve frontě** nebo **Aktualizuje se**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Výsledky úspěšného běhu se zobrazí na stránce **Sjednotit** zobrazující počet sjednocených zákaznických profilů.

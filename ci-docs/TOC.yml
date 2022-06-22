@@ -48,14 +48,14 @@
   items:
     - name: Přehled zdrojů dat
       href: data-sources.md
+    - name: Připojení k datům v Azure Data Lake Storageu
+      href: connect-common-data-model.md
+    - name: Připojení k Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Připojte se k datům ve spravovaném datovém jezeru Microsoft Dataverse
+      href: connect-dataverse-managed-lake.md
     - name: Přidejte zdroje pomocí konektorů Power Query
       href: connect-power-query.md
-    - name: Přidání složky Common Data Model jako zdroje dat
-      href: connect-common-data-model.md
-    - name: Přidání datového jezera spravovaného Dataverse
-      href: connect-dataverse-managed-lake.md
-    - name: Přidání Azure Synapse Analytics
-      href: connect-synapse.md
     - name: Rozšíření zdrojů dat
       href: data-sources-enrichment.md
     - name: Přírůstková aktualizace pro zdroje dat
@@ -82,27 +82,27 @@
   items:
     - name: Rozšíření profilů zákazníků
       href: enrichment-hub.md
+    - name: Obchodní vztahy z dat Office 365
+      href: enrichment-office.md
     - name: Značky a zájmy
       href: enrichment-microsoft.md
+    - name: Firemní data z Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Firemní data od Leadspace
+      href: enrichment-leadspace.md
+    - name: Demografické údaje U Experian
+      href: enrichment-experian.md
     - name: Rozšířené adresy
       href: enrichment-enhanced-addresses.md
     - name: Vylepšená data společnosti
       href: enrichment-enhanced-company-data.md
-    - name: Přidejte si Azure Maps
-      href: enrichment-azure-maps.md
-    - name: Rozšíření pomocí Dun & Bradstreet
-      href: enrichment-dnb.md
-    - name: Rozšíření dat od společnosti HERE Technologies
-      href: enrichment-here.md
-    - name: Rozšíření o Leadspace
-      href: enrichment-leadspace.md
-    - name: Rozšíření pomocí LiveRamp
+    - name: Identita s LiveRamp
       href: enrichment-liveramp.md
-    - name: Rozšíření pomocí Experian
-      href: enrichment-experian.md
-    - name: Rozšíření pomocí dat Office 365
-      href: enrichment-office.md
-    - name: Rozšíření pomocí vlastního importu SFTP
+    - name: Poloha z Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Poloha z HERE Technologies
+      href: enrichment-here.md
+    - name: Vlastní import SFTP
       href: enrichment-SFTP-custom-import.md
 - name: Sjednocené profily
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Definování aktivit zákazníka
       href: activities.md
+    - name: Správa souhlasu pro Customer Insights
+      href: consent-management.md
 - name: Segments
   items:
     - name: Přehled segmentů
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: Vzorové dotazy OData
       href: odata-examples.md
-- name: Správa souhlasu (Preview)
-  items:
-    - name: Centrum nápovědy
-      href: consent-management/index.yml
-    - name: Přehled možností
-      href: consent-management/overview.md
-    - name: Seznámení
-      items:
-        - name: Seznámení
-          href: consent-management/get-started.md
-        - name: Koncepty a terminologie
-          href: consent-management/glossary.md
-    - name: Importovat data souhlasu
-      items:
-        - name: Importovat data souhlasu
-          href: consent-management/import-consent-data.md
-        - name: Nastavení dat souhlasu a použití předvoleb souhlasu
-          href: consent-management/set-consent-rules.md
-    - name: Správa dat souhlasu
-      items:
-        - name: Povolte pravidla souhlasu v Customer Insights
-          href: activate-consent.md
-        - name: Spravovat výchozí pravidla souhlasu v segmentech Customer Insights
-          href: change-default-consent-rules.md
-    - name: Správa nastavení a uživatelů
-      items:
-        - name: Konfigurace nastavení systému
-          href: consent-management/system-settings.md
-        - name: Správa uživatelů a oprávnění
-          href: consent-management/manage-users.md
-    - name: Použití dat souhlasu
-      items:
-        - name: Vytváření predikcí s daty souhlasu
-          href: consent-management/predictions-consent-data.md
 - name: Omezení služby
   href: service-limits.md
 - name: Práva a požadavky DSR

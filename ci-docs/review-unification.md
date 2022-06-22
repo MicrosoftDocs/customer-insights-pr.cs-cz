@@ -1,7 +1,7 @@
 ---
 title: Zkontrolujte sjednocení dat
 description: Zkontrolujte kroky sjednocení dat, vytvořte jednotné profily zákazníků a zkontrolujte výsledky
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741626"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844078"
 ---
 # <a name="review-data-unification"></a>Zkontrolujte sjednocení dat
 
@@ -32,11 +32,13 @@ Tento poslední krok v procesu sjednocení zobrazuje souhrn kroků v procesu a p
 
 1. Vyberte **Upravit** na kterémkoli z kroků sjednocení dat ke kontrole a provedení jakýchkoli změn.
 
-1. Pokud jste se svým výběrem spokojeni, vyberte **Vytvořit profily zákazníků**. Stránka **Sjednotit** se zobrazí při vytváření jednotného profilu zákazníka. Dokončení sjednocovacího algoritmu nějakou dobu trvá a konfiguraci nelze změnit, dokud nebude dokončena.
+1. Pokud jste se svým výběrem spokojeni, vyberte **Vytvořit profily zákazníků**. Stránka **Sjednotit** se zobrazí při vytváření jednotného profilu zákazníka. Všechny dlaždice kromě **Zdrojová pole** ukazují stav **Ve frontě** nebo **Aktualizuje se**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Screenshot stránky Unify s dlaždicemi Ve frontě nebo Aktualizuje se.":::
 
-Po dokončení procesu sjednocení je entita sjednoceného profilu zákazníka nazvaná *Zákazník* uvedena na stránce **Entity** v sekci **Profily**. První úspěšný běh sjednocení vytvoří sjednocenou entitu *Zákazník*. Všechny následující běhy tuto entitu rozšiřují.
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Dokončení sjednocovacího algoritmu nějakou dobu trvá a konfiguraci nelze změnit, dokud nebude dokončena. Po dokončení procesu sjednocení je entita sjednoceného profilu zákazníka nazvaná *Zákazník* uvedena na stránce **Entity** v sekci **Profily**. První úspěšný běh sjednocení vytvoří sjednocenou entitu *Zákazník*. Všechny následující běhy tuto entitu rozšiřují.
 
 ## <a name="review-the-results-of-data-unification"></a>Projděte si výsledky sjednocení dat
 

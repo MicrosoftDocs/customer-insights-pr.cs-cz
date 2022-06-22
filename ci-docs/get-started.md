@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833531"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011971"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Seznámení s aplikací Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Při prvním přihlášení do Customer Insights nakonfigurujte nastavení a pro
 
 Sjednocené profily jsou základem pro získávání přehledů a přijímání opatření v souvislosti s daty. Přineste data z různých zdrojů a spusťte proces sjednocení dat, abyste mohli kombinovat sjednocené profily. Mezi přijatými entitami určete vztahy a použijte funkce obohacení k přidání informací do profilů.
 
-1. Ingestujte data vytvářením zdrojů dat z více možností. Vyberte mezi [konektory Power Query](connect-power-query.md) a [složkou Common Data Model](connect-common-data-model.md), nebo [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Ingestujte data vytvářením zdrojů dat z více možností. Zvolte mezi [Azure Data Lake Storage, včetně Common Data Model](connect-common-data-model.md), [Azure Synapse Analytics](connect-synapse.md), [Microsoft Dataverse](connect-dataverse-managed-lake.md) nebo [konektory Power Query](connect-power-query.md).
 
 1. Spusťte [proces sjednocení dat](data-unification.md) identifikací [zdrojových polí](map-entities.md), odstraněním [duplicit](remove-duplicates.md), [odpovídající podmínky](match-entities.md) a [sjednocující pole](merge-entities.md).
 

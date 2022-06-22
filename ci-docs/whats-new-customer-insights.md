@@ -1,19 +1,19 @@
 ---
-title: Nové a připravované funkce
+title: Nové a aktualizované funkce
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833622"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843339"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v řešení Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Aktualizace z května 2022
+
+Aktualizace v květnu 2022 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="updated-data-unification-experience"></a>Aktualizováno prostředí sjednocení dat
+
+ Sjednocení dat vám umožňuje sjednotit kdysi nesourodé zdroje dat do jediné hlavní datové sady, která poskytuje jednotný pohled na tato data. Data mohou být sjednocena na jedné entitě nebo více entitách. Nejprve [vyberte entity a zdrojová pole](map-entities.md), [odeberte duplicitní záznamy](remove-duplicates.md), určete pravidla pro [podmínky shody](match-entities.md), a definujte, která [pole zahrnout do sjednocených profilů zákazníků](merge-entities.md).
+
+Další informace získáte v [přehledu sjednocení dat](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Aktualizovaná domovská stránka v Customer Insights
+
+**Domů** vás provede procesem konfigurace pro klíčové funkce a poskytuje přehled segmentů, měření a údajů o obohacení. Aktualizovali jsme prostředí, abychom na první pohled poskytovali relevantnější informace.
+
+Další informace viz [Prozkoumání Customer Insights](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Sledování využití segmentu
+
+Nyní můžete [sledovat použití segmentu](segments.md#track-usage-of-a-segment) v aplikacích založených na organizaci Dataverse, která je propojená s Customer Insights. U [segmentů Customer Insights používané v cestách zákazníků Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile) vás systém informuje o využití daného segmentu.
+
+### <a name="export-to-criteo"></a>Export do Criteo
+
+Criteo je online platforma, která uživatelům pomáhá spravovat digitální reklamu. Můžete exportovat segmenty jednotných zákaznických profilů pro generování kampaní, e-mailový marketing a využívání specifických skupin zákazníků pomocí služby Criteo.
+
+Další informace naleznete v části [Export segmentů do Criteo (preview)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Propracovaná struktura dokumentace pro tvorbu prostředí
+
+Znovu jsme navštívili dokumenty nápovědy týkající se vytváření a správy prostředí v Customer Insights. Články jsou nyní seskupeny pod uzlem Prostředí v obsahu. Restrukturalizované články poskytují více vodítek pro různé způsoby nastavení prostředí a mají jasnější strukturu. Pokud se chcete podělit o zpětnou vazbu, dejte nám vědět pomocí ovládacích prvků na konci článků nápovědy.
+
+Další informace naleznete v tématu [Postup: Vytvoření nového prostředí](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Aktualizace z dubna 2022
 

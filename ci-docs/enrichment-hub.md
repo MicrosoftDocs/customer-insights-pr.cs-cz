@@ -1,7 +1,7 @@
 ---
 title: Rozšíření sjednocených profilů zákazníka
 description: Využijte možnosti rozšíření svých zákaznických dat.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800597"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954033"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Rozšíření profilů zákazníků (náhled)
 
@@ -35,29 +35,29 @@ Na kartě **Objevit** najdete všechny podporované možnosti rozšíření.
 
 # <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 
+- [Identitu AbiliTec](enrichment-liveramp.md) poskytuje společnost LiveRamp AbiliTec
 - [Značky](enrichment-microsoft.md) poskytované společností Microsoft
-- [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft
-- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft 
 - [Demografické údaje](enrichment-experian.md) poskytované společností Experian
-- [Vlastní data](enrichment-SFTP-custom-import.md) prostřednictvím vlastního importu protokolu (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) poskytuje společnost Microsoft
-- [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies 
-- [Identitu](enrichment-liveramp.md) poskytuje společnost LiveRamp AbiliTec
+- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft
+- [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft
+- [Údaje o poloze](enrichment-azure-maps.md) poskytuje Microsoft Azure Maps
+- [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies
+- [Vlastní data SFTP](enrichment-SFTP-custom-import.md) skrze Secure File Transfer Protocol (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
-- [Údaje o společnosti](enrichment-leadspace.md) poskytované společností Leadspace
-- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft 
-- [Vylepšená data společnosti](enrichment-enhanced-company-data.md) poskytnutá společností Microsoft
-- [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies 
-- [Vlastní data](enrichment-SFTP-custom-import.md) prostřednictvím vlastního importu protokolu (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) poskytuje společnost Microsoft
-- [Firemní data](enrichment-dnb.md) z Dun & Bradstreet
 - [Data o zapojení obchodního vztahu](enrichment-office.md) poskytované společností Microsoft
+- [Firemní data](enrichment-dnb.md) z Dun & Bradstreet
+- [Údaje o společnosti](enrichment-leadspace.md) poskytované společností Leadspace
+- [Vylepšené adresy](enrichment-enhanced-addresses.md) poskytované společností Microsoft
+- [Vylepšená data společnosti](enrichment-enhanced-company-data.md) poskytnutá společností Microsoft
+- [Údaje o poloze](enrichment-azure-maps.md) poskytuje Microsoft Azure Maps
+- [Údaje o poloze](enrichment-here.md) poskytované společností HERE Technologies
+- [Vlastní data SFTP](enrichment-SFTP-custom-import.md) skrze Secure File Transfer Protocol (SFTP)
 
 ---
 
-Na kartě **Moje rozšíření** se můžete podívat na rozšíření, která jste nakonfigurovali, a upravit jejich vlastnosti.
+Na kartě **Moje rozšíření** se můžete podívat na rozšíření, která jste nakonfigurovali, a upravit jejich vlastnosti. Můžete také vytvořit [segmenty](segments.md) nebo [míry](measures.md) z rozšíření.
 
 ## <a name="manage-existing-enrichments"></a>Správa existujících rozšíření
 
@@ -81,36 +81,45 @@ Rozšíření třetích stran se konfigurují pomocí [připojení](connections.
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Více rozšíření stejného typu
 
-Entita, kterou chcete rozšířit, je zadána během konfigurace rozšíření, což vám umožní rozšířit pouze podmnožinu vašich profilů. Například rozšiřte data pouze pro konkrétní segment. Můžete nakonfigurovat několik rozšíření stejného typu a znovu použít stejné propojení . Některá rozšíření budou mít rozšíření počtu rozšíření stejného typu, které lze vytvořit. Limity a současné použití lze zobrazit na stránce **Rozšíření**.
+Entita, kterou chcete rozšířit, je zadána během konfigurace rozšíření, což vám umožní rozšířit pouze podmnožinu vašich profilů. Například rozšiřte data pouze pro konkrétní segment. Můžete nakonfigurovat několik rozšíření stejného typu a znovu použít stejné propojení . Některá rozšíření budou mít rozšíření počtu rozšíření stejného typu, které lze vytvořit. Limity a aktuální využití lze vidět na každé dlaždici na kartě **Zjistit** stránky **Rozšíření**.
 
 ## <a name="enrich-data-sources-before-unification"></a>Rozšíření zdrojů dat před sjednocením
 
 Před sjednocením dat můžete rozšířit zákaznická data, abyste zvýšili kvalitu shody dat. Další informace najdete v tématu [Rozšíření zdroje dat](data-sources-enrichment.md).
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Podívejte se na průběh procesu rozšíření
+## <a name="run-or-refresh-enrichments"></a>Spuštění nebo aktualizace rozšíření
+
+1. Vyberte **Spustit** pro zahájení procesu rozšíření. Nebo můžete také nechat systém automaticky spustit rozšíření jako součást [plánované aktualizace](system.md#schedule-tab). Doba zpracování závisí na velikosti vašich zákaznických dat.
+
+1. Volitelně [viz pokrok procesu rozšíření](#see-the-progress-of-the-enrichment-process).
+
+1. Po dokončení procesu rozšíření přejděte na **Moje rozšíření** a zkontrolujte data nově rozšířených zákaznických profilů, čas poslední aktualizace a počet rozšířených profilů.
+
+1. Vyberte rozšíření, které chcete zobrazit [výsledky rozšíření](#enrichment-results).
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Podívejte se na průběh procesu rozšíření
 
 Můžete najít podrobnosti o zpracování rozšíření, včetně jeho stavu a potenciálních problémů, v průběhu obnovování nebo po dokončení aktualizace. Pochopte, které procesy jsou zahrnuty pro aktualizaci rozšíření, a jak dlouho trvalo spuštění procesů. Stav rozšíření je podporován pro Experian, Leadspace, HERE Technologies, SFTP Import a Azure Maps.
 
-Chcete -li zobrazit stav rozšíření
-
-1. Přejděte na **Data** > **Rozšíření**. 
-1. Na karě **Moje rozšíření** vyberte stav rozšíření a otevřete boční panel. 
-1. V podokně **Podrobnosti o průběhu** rozbalte část **Rozšíření**. 
-1. Pod rozšířením, pro které chcete vidět průběh, vyberte **Zobrazit podrobnosti**. 
-1. V podokně **Podrobnosti o úkolu** vyberte **Zobrazit podrobnosti** a zobrazte procesy, které se podílejí na aktualizaci rozšíření, a jejich stav. 
+1. Přejděte na **Data** > **Rozšíření**.
+1. Na záložce **Moje rozšíření** vyberte stav rozšíření a otevřete boční panel.
+1. V podokně **Podrobnosti o průběhu** rozbalte část **Rozšíření**.
+1. Pod rozšířením, pro které chcete vidět průběh, vyberte **Zobrazit podrobnosti**.
+1. V podokně **Podrobnosti o úkolu** vyberte **Zobrazit podrobnosti** a zobrazte procesy, které se podílejí na aktualizaci rozšíření, a jejich stav.
 
 ## <a name="enrichment-results"></a>Výsledky rozšíření
 
 Po dokončení rozšíření můžete zkontrolovat jeho výsledky.
 
-1. Přejděte na **Data** > **Rozšíření**. 
-1. Vyberte rozšíření, o kterém chcete informace.
+1. Přejděte na **Data** > **Rozšíření**.
+1. Na záložce **Moje rozšíření** vyberte rozšíření, o kterém chcete získat informace.
 
-Všechna rozšíření ukazují základní informace, jako je počet rozšířených profilů, náhled generované entity rozšíření a počet rozšířených profilů v průběhu času. Pokud je k dispozici možnost **Počet zákazníků obohacených o pole**, můžete procházet k podrobnostem pokrytí každého rozšířeného pole.
+Všechna rozšíření ukazují základní informace, jako je počet rozšířených profilů a počet rozšířených profilů v průběhu času. Dlaždice **Náhled rozšířených zákazníků** ukazuje vzorek generované entity rozšíření. Pokud chcete zobrazit podrobné zobrazení, vyberte možnost **Další informace** a vyberte kartu **Data**.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Stránka s výsledky rozšíření.":::
 
-Některá rozšíření také zobrazují informace specifické pro typ rozšíření. Další informace naleznete v dokumentaci k příslušnému rozšíření.
+Pokud je k dispozici možnost **Počet zákazníků obohacených o pole**, můžete procházet k podrobnostem pokrytí každého rozšířeného pole.
 
+Některá rozšíření také zobrazují informace specifické pro typ rozšíření. Další informace naleznete v související dokumentaci.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

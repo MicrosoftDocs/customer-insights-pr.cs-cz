@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833377"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011833"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Připojení k účtu Azure Data Lake Storage pomocí instančního objektu Azure
 
@@ -51,7 +51,13 @@ Před vytvořením nového instančního objektu pro Customer Insights zkontrolu
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Udělení oprávnění instančnímu objektu pro přístup k účtu úložiště
 
-Přejděte na Azure Portal a udělte oprávnění instančnímu objektu pro účet úložiště, který chcete použít v Customer Insights.
+Přejděte na Azure Portal a udělte oprávnění instančnímu objektu pro účet úložiště, který chcete použít v Customer Insights. K účtu úložiště nebo kontejneru musí být přiřazena jedna z následujících rolí:
+
+|Přihlašovací údaje|Požadavky|
+|----------|------------|
+|Aktuálně přihlášený uživatel|**Role**: Storage Blob Data Čtenář, Storage Blob přispěvatel nebo Storage Blob Vlastník.<br>**Úroveň**: Oprávnění lze udělit účtu úložiště nebo kontejneru.</br>|
+|Instanční objekt Customer Insights -<br>Používání Azure Data Lake Storage jako zdroje dat</br>|Možnost 1<ul><li>**Role**: Storage Blob Data Čtenář, Storage Blob Data přispěvatel nebo Storage Blob Data Vlastník.</li><li>**Úroveň**: Oprávnění by se mělo udělit účtu úložiště nebo kontejneru.</li></ul>Možnost 2 *(bez sdílení přístupu Principal Service k účtu úložiště)*<ul><li>**Role 1**: Storage Blob Data Čtenář, Storage Blob Data přispěvatel nebo Storage Blob Data Vlastník.</li><li>**Úroveň**: Oprávnění by se mělo udělit kontejneru.</li><li>**Role 2**: Delegátor dat Storage Blob.</li><li>**Úroveň**: Oprávnění by se mělo udělit účtu úložiště nebo kontejneru.</li></ul>|
+|Instanční objekt Customer Insights - <br>Použití Azure Data Lake Storage jako výstupu nebo cíle</br>|Možnost 1<ul><li>**Role**: Storage Blob Data přispěvatel nebo Storage Blob Vlastník.</li><li>**Úroveň**: Oprávnění by se mělo udělit účtu úložiště nebo kontejneru.</li></ul>Možnost 2 *(bez sdílení přístupu Principal Service k účtu úložiště)*<ul><li>**Role**: Storage Blob Data přispěvatel nebo Storage Blob Vlastník.</li><li>**Úroveň**: Oprávnění by se mělo udělit kontejneru.</li><li>**Role 2**: Storage Blob Delegátor.</li><li>**Úroveň**: Oprávnění by se mělo udělit účtu úložiště nebo kontejneru.</li></ul>|
 
 1. Přejděte na [portál pro správu Azure](https://portal.azure.com) a přihlaste se do své organizace.
 
@@ -62,7 +68,7 @@ Přejděte na Azure Portal a udělte oprávnění instančnímu objektu pro úč
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Snímek obrazovky ukazující portál Azure při přidávání přiřazení role.":::
 
 1. V podokně **Přidat přiřazení rolí** nastavte následující vlastnosti:
-   - Role: **Přispěvatel dat objektů blob úložiště**
+   - Role: Storage Blob Data Čtenář, Storage Blob Data přispěvatel nebo Storage Blob Data Vlastník na základě výše uvedených přihlašovacích údajů.
    - Přiřaďte přístup pro: **Uživatel, skupina nebo instanční objekt**
    - Vyberte členy: **Dynamics 365 AI pro Customer Insights** ([instanční objekt](#create-a-new-service-principal), který jste vyhledali dříve v tomto postupu)
 

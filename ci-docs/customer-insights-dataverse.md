@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833668"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011512"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práce s daty Customer Insights v Microsoft Dataverse
 
 Customer Insights poskytuje možnost zpřístupnit výstupní entity jako [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Tato integrace umožňuje snadné sdílení dat a vlastní vývoj prostřednictvím přístupu s žádným nebo minimálním množstvím kódu. [Výstupní entity](#output-entities) jsou k dispozici jako tabulky v prostředí Dataverse. Data můžete použít pro jakoukoli jinou aplikaci založenou na tabulkách Dataverse. Tyto tabulky umožňují scénáře, jako jsou automatizované pracovní postupy prostřednictvím Power Automate nebo vytváření aplikací pomocí Power Apps.
 
-Připojení k prostředí Dataverse vám také umožňuje [ingestovat data z místních zdrojů dat pomocí datových toků a bran platformy Power Platform](data-sources.md#add-data-from-on-premises-data-sources).
+Připojení k prostředí Dataverse vám také umožňuje [ingestovat data z místních zdrojů dat pomocí datových toků a bran platformy Power Platform](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Předpoklady
 
@@ -57,7 +57,7 @@ Povolení sdílení dat s Microsoft Dataverse, když vaše prostředí [použív
 Při používání Dataverse s vlastním účetem Azure Data Lake Storage jsou dvě omezení:
 
 - Existuje mapování jedna ku jedné mezi organizací Dataverse a účtem Azure Data Lake Storage. Jakmile je organizace Dataverse připojena k účtu úložiště, nemůže se připojit k jinému účtu úložiště. Toto omezení brání tomu, aby Dataverse naplnil více účtů úložiště.
-- Sdílení dat nebude fungovat, pokud je pro přístup k vašemu účtu úložiště Azure Data Lake potřeba nastavení Azure Private Link, protože je za firewallem. Dataverse aktuálně nepodporuje připojení k privátním koncovým bodům prostřednictvím Private Link.
+- Sdílení dat nebude fungovat, pokud je pro přístup k vašemu účtu Azure Data Lake Storage potřeba nastavení Azure Private Link, protože je za firewallem. Dataverse aktuálně nepodporuje připojení k privátním koncovým bodům prostřednictvím Private Link.
 
 ### <a name="set-up-powershell"></a>Nastavení PowerShell
 

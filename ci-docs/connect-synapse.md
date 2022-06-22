@@ -1,7 +1,7 @@
 ---
 title: Ingestování dat z Azure Synapse Analytics
 description: Použijte databázi v Azure Synapse jako zdroj dat v Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645793"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011419"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Připojení datového zdroje dat Azure Synapse (Preview)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Připojení datového zdroje dat Azure Synapse Analytics (Preview)
 
 Azure Synapse Analytics je podniková analytická služba, která urychluje čas potřebný k získání přehledů napříč datovými sklady a velkými datovými systémy. Azure Synapse Analytics spojuje to nejlepší z technologií SQL používaných v podnikových datových skladech, technologie Spark používané pro velká data, průzkumníka dat pro analýzu protokolů a časových řad, kanály pro integraci dat a ETL/ELT a hlubokou integraci s dalšími službami Azure, jako je např Power BI, Cosmos DB a AzureML.
 
@@ -24,16 +24,14 @@ Další informace naleznete v tématech [Přehled Azure Synapse](/azure/synapse-
 
 ## <a name="prerequisites"></a>Předpoklady
 
-Je třeba splnit následující předpoklady, abyste mohli nakonfigurovat připojení z Dynamics 365 Customer Insights do Azure Synapse.
-
 > [!IMPORTANT]
 > Nezapomeňte nastavit všechna **přiřazení rolí**, jak je popsáno.  
 
-## <a name="prerequisites-in-customer-insights"></a>Předpoklady v Customer Insights
+**V Customer Insights**:
 
 * Máte roli **správce** v Customer Insights. Více informací o [oprávněních uživatele v Customer Insights](permissions.md#assign-roles-and-permissions).
 
-V Azure: 
+**V Azure**:
 
 - Aktivní předplatné Azure.
 
@@ -47,7 +45,7 @@ V Azure:
 
 - V aplikaci Azure Synapse workspace musí mít *instanční objekt pro Customer Insights* přiřazenu roli **Správce Synapse**. Další informace viz [Jak nastavit řízení přístupu pro pracovní prostor Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Připojení k databázím datových jezer v Azure Synapse Analytics
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Připojení k databázím datových jezer v Azure Synapse Analytics
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
@@ -55,14 +53,16 @@ V Azure:
 
 1. Vyberte metodu **Azure Synapse Analytics (Preview)**.
 
-1. Uveďte **Název** pro zdroj dat a vyberte **Další** k vytvoření zdroje dat. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Dialogové okno pro připojení k datům Synapse Analytics":::
+  
+1. Zadejte **Název** zdroje dat a volitelně **Popis**.
 
 1. Zvolte [dostupné připojení](connections.md) do Azure Synapse Analytics nebo vytvořte nové.
 
-1. Vyberte **Databáze jezera** z pracovního prostoru připojeného ve vybraném připojení Azure Synapse Analytics a vyberte **Další**.
+1. Vyberte **Databáze** z pracovního prostoru připojeného ve vybraném připojení Azure Synapse Analytics a vyberte **Další**.
 
-1. Vyberte entity k ingestaci z připojené databáze. 
+1. Vyberte entity k příjmu z připojené databáze a vyberte **Další**.
 
-1. Volitelně vyberte datové entity, pro které chcete profilování dat povolit. 
+1. Volitelně vyberte datové entity, pro které chcete profilování dat povolit.
 
-1. Vyberte **Uložit**, použijte svůj výběr a zahajte zpracování dat z nově vytvořeného zdroje dat propojeného s tabulkami databáze jezera v Azure Synapse Analytics.
+1. Vyberte **Uložit**, použijte svůj výběr a zahajte zpracování dat z nově vytvořeného zdroje dat propojeného s tabulkami databáze jezera v Azure Synapse Analytics. Otevře se stránka **Zdroje dat** s novým zdrojem dat se stavem **Aktualizace**.
