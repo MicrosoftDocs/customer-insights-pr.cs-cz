@@ -1,5 +1,5 @@
 ---
-title: Obohacení firemních profilů o Dun & Bradstreet
+title: Obohacení firemních profilů o Dun & Bradstreet (Preview)
 description: Obecné informace o rozšíření třetí strany Dun & Bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953883"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080890"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Obohacení firemních profilů o Dun & Bradstreet (Preview)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Obohacení firemních profilů o Dun & Bradstreet (Preview)
 
 Dun & Bradstreet poskytuje obchodní data, analýzy a statistiky pro podniky. Umožňuje zákazníkům s jednotnými profily zákazníků rozšiřovat data společností. Rozšíření obsahují atributy, jako je číslo DUNS, velikosti společnosti, místa, odvětví a další.
 
@@ -102,7 +102,7 @@ V současné době podporujeme následující možnosti země/oblasti: Kanada (a
 
 1. Vyberte **Spustit** k zahájení procesu obohacování nebo blízko k návratu na stránku **Rozšíření**.
 
-## <a name="enrichment-results"></a>Výsledky rozšíření
+## <a name="view-enrichment-results"></a>Zobrazení výsledků rozšiřování
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

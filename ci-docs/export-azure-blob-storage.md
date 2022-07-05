@@ -1,5 +1,5 @@
 ---
-title: Export dat Customer Insights do služby Azure Blob Storage
+title: Export dat do Azure Blob Storage (preview)
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Blob Storage.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947130"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055482"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Export seznamu segmentů a dalších dat do služby Azure Blob Storage (náhled)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Export dat do Azure Blob Storage (preview)
 
 Uložte si data Customer Insights do služby Azure Blob Storage nebo je použijte k přenosu dat do jiných aplikací.
 

@@ -1,5 +1,5 @@
 ---
-title: Export dat Customer Insights do hostitelů SFTP (obsahuje video)
+title: Export dat do hostitelů SFTP (Preview) (obsahuje video)
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do umístění SFTP.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947176"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080920"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>Export segmentů a dalších dat do SFTP (preview)
+# <a name="export-data-to-sftp-preview"></a>Export dat do SFTP (Preview)
 
 Využijte svá zákaznická data v aplikacích třetích stran a exportujte je do umístění Secure File Transfer Protocol (SFTP).
 

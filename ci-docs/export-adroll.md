@@ -1,5 +1,5 @@
 ---
-title: Export dat Customer Insights do AdRoll
+title: Export segmentů do služby AdRoll (preview)
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do AdRoll.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645756"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080931"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Export segmentů do služby AdRoll (preview)
 
@@ -21,9 +21,9 @@ Exportujte segmenty sjednocených profilů zákazníků do služby AdRoll a pou�
 
 ## <a name="prerequisites-for-a-connection"></a>Předpoklady pro připojení
 
--   Máte [účet AdRoll](https://www.adroll.com/) a odpovídající přihlašovací údaje správce.
--   [Nakonfigurovali jste segmenty](segments.md) v Customer Insights.
--   Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
+- Máte [účet AdRoll](https://www.adroll.com/) a odpovídající přihlašovací údaje správce.
+- [Nakonfigurovali jste segmenty](segments.md) v Customer Insights.
+- Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
 
 ## <a name="known-limitations"></a>Známá omezení
 

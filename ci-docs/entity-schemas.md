@@ -1,5 +1,5 @@
 ---
-title: Schéma entit Customer Insights v definici Common Data Model
+title: Schémata entit v Common Data Model
 description: Práce s entitami v Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757424"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054746"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Schémata entit v Common Data Model
-
-
 
 [Common Data Model](/common-data-model/) je deklarativní specifikace a definice standardních entit, která představuje běžně používané koncepce a aktivity v různých obchodních a produktivních aplikacích. Tento model se rozšiřuje také na pozorovací a analytická data. Common Data Model poskytuje jasně definované, modulární a rozšiřitelné obchodní entity (například Účet, Obchodní jednotka, Případ, Kontakt, Zájemce, Příležitost a Produkt) a také interakce a vztahy mezi dodavateli, pracovníky a zákazníky, například aktivity a smlouvy o úrovni služeb. Kdokoli může stavět a rozšiřovat definice Common Data Model, aby zahrnul další podnikatelské nápady.
 

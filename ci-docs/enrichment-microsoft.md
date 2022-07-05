@@ -1,5 +1,5 @@
 ---
-title: Obohaťte profily zákazníků o údaje o značkách a zájmech od společnosti Microsoft
+title: Obohaťte profily zákazníků o údaje o značkách a zájmech od společnosti Microsoft (Preview)
 description: Použijte proprietární data od společnosti Microsoft k rozšíření vašich zákaznických údajů o afinitách a podílu na sledovanosti.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953757"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080913"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Rozšiřte profily zákazníků o afinity a podíl na sledovanosti (Preview)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Obohaťte profily zákazníků o údaje o značkách a zájmech od společnosti Microsoft (Preview)
 
 Použijte proprietární data Microsoftu k rozšíření vašich zákaznických dat o afinity značky, afinity zájmu a podílu na sledovanosti. Tyto afinity a podíl na sledovanosti jsou založeny na datech od lidí s demografickými údaji podobnými vašim zákazníkům. Tyto informace vám pomohou lépe porozumět a segmentovat vaše zákazníky na základě jejich afinity nebo podílu sledovanosti vzhledem ke konkrétním značkám a zájmům.
 
@@ -104,7 +104,7 @@ V současné době podporujeme následující země/oblasti: Austrálie, Kanada 
 
    Při rozšíření profilů rozšíříme všechny profily zákazníků, pro které získáváme data pro vybrané značky a zájmy, včetně profilů, které nejsou ve vybrané zemi nebo oblasti. Pokud jste například vybrali Německo, rozšíříme profily nacházející se ve Spojených státech, pokud máme k dispozici údaje o vybraných značkách a zájmech v USA.
 
-## <a name="enrichment-results"></a>Výsledky rozšíření
+## <a name="view-enrichment-results"></a>Zobrazení výsledků rozšiřování
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Rozšíření profilů zákazníků o data z Microsoft Office 365
+title: Rozšíření profilů zákazníků o data z Microsoft Office 365 (preview)
 description: Pomocí vlastnických dat z Microsoft Office můžete rozšířit vaše zákaznické profily o data o zapojení.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954125"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055666"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Rozšíření profilů zákazníků o data o zapojení (Preview)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Rozšíření profilů zákazníků o data z Microsoft Office 365 (preview)
 
 Pomocí dat z Microsoft Office 365 můžete rozšířit profily vašich zákaznických účtů o přehledy o zapojení prostřednictvím aplikací Office 365. Data o zapojení se skládají z aktivit e-mailů a schůzek, které jsou agregovány na úrovni účtu. Například počet e-mailů z obchodního účtu nebo počet schůzek s obchodním vztahem. Nejsou k dispozici žádné údaje o jednotlivých uživatelích.
 
@@ -75,7 +75,7 @@ Vyberte **Spustit** pro zahájení procesu rozšíření.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Výsledky rozšíření
+## <a name="view-enrichment-results"></a>Zobrazení výsledků rozšiřování
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] To je entita *Office*. Entita *Office_UserEntity*, která obsahuje ID služby Active Directory pro e-mailové adresy, které byly vybrány během konfigurace rozšíření.
 

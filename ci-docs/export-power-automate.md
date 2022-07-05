@@ -1,5 +1,5 @@
 ---
-title: Konektor Power Automate | Microsoft Docs
+title: Konektor Power Automate (preview) | Microsoft Docs
 description: Vytváření toků v Microsoft Power Automate z Dynamics 365 Customer Insights.
 ms.date: 06/24/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741171"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080877"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (preview)
 
-Služba Power Automate podporuje automatické spouštění vybraných událostí při změně dat nebo přímou správu složitějších toků v [Power Automate](https://flow.microsoft.com/).
+Služba Power Automate podporuje automatické spouštění vybraných událostí při změně dat nebo přímou správu složitějších toků v [Microsoft Power Automate](https://flow.microsoft.com/).
 
 ## <a name="known-limitations"></a>Známá omezení
 

@@ -1,5 +1,5 @@
 ---
-title: Navrhované segmenty na základě aktivity.
+title: Navrhované segmenty na základě aktivity (náhled)
 description: Nechte strojové učení, aby vám našlo nové a zajímavé segmenty založené na aktivitě zákazníků.
 ms.date: 05/11/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 85c3cef3a8d531b31b64a7e5decbdc122c4383fc
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8645852"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054332"
 ---
 # <a name="suggested-segments-based-on-activity-data-preview"></a>Navrhované segmenty na základě dat aktivity (náhled)
 

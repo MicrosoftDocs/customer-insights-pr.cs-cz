@@ -1,5 +1,5 @@
 ---
-title: Konektor pro Power Apps
+title: Konektor Power Apps (preview)
 description: Propojení aplikací Power Apps a Power Automate.
 ms.date: 10/01/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e99d7d4f231eb2ade67f27c9e52c61af3a21b99d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 0b71f723d1e491d422d24b1be6616d2f33c95d40
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646458"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055252"
 ---
-# <a name="microsoft-power-apps-connector-preview"></a>Konektor Microsoft Power Apps (preview)
+# <a name="power-apps-connector-preview"></a>Konektor Power Apps (preview)
 
-Přeneste sjednocené zákaznické profily do svých přizpůsobených aplikací pomocí Power Apps.
+Přeneste sjednocené zákaznické profily do svých přizpůsobených aplikací pomocí Microsoft Power Apps.
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Propojení aplikací Power Apps a Dynamics 365 Customer Insights
 

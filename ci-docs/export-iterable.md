@@ -1,5 +1,5 @@
 ---
-title: Export dat Customer Insights do Iterable
+title: Export segmentů do Iterable (Preview)
 description: Zjistěte, jak nakonfigurovat připojení a export do Iterable.
 ms.date: 03/29/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 714a1323521be7d2f29ccaacd7799b2174e2937d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 98d5aeab6b0e932d291213053d509ec72da82e47
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646437"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052227"
 ---
-# <a name="export-segment-lists-to-iterable-preview"></a>Export seznamů segmentů do Iterable (Preview)
+# <a name="export-segments-to-iterable-preview"></a>Export segmentů do Iterable (Preview)
 
 Zjistěte, jak exportovat segmenty profilů Unified Customer Profile do Iterable a použít je pro marketingové aktivity.
 

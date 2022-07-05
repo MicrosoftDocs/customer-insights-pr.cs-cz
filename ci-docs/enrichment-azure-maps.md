@@ -1,5 +1,5 @@
 ---
-title: Rozšíření profilů zákazníků pomocí údaje o poloze z Azure Maps
+title: Rozšíření profilů zákazníků o údaje o poloze z Azure Maps (Preview)
 description: Obecné informace o rozšíření první strany Azure Maps.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953620"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052599"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Rozšíření zákaznických profilů o Azure Maps (Preview)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Rozšíření profilů zákazníků o údaje o poloze z Azure Maps (Preview)
 
 Azure Maps poskytují data a služby zaměřené na umístění, aby poskytovaly zkušenosti založené na geoprostorových datech s vestavěnou informací o poloze. Služby rozšíření dat o Azure Maps zlepšují přesnost informací o poloze vašich zákazníků. Přináší možnosti, jako je normalizace adres a extrakce zeměpisné šířky a délky do Dynamics 365 Customer Insights.
 
@@ -82,7 +82,7 @@ Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 
 
 1. Vyberte **Spustit** k zahájení procesu obohacování nebo blízko k návratu na stránku **Rozšíření**.
 
-## <a name="enrichment-results"></a>Výsledky rozšíření
+## <a name="view-enrichment-results"></a>Zobrazení výsledků rozšiřování
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

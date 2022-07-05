@@ -1,5 +1,5 @@
 ---
-title: Doplněk karty zákazníka pro aplikace Dynamics 365 (obsahuje video)
+title: Doplněk karty zákazníka pro aplikace Dynamics 365 (Preview) (obsahuje video)
 description: Pomocí tohoto doplňku zobrazte data profilu zákazníků z Customer Insights v aplikacích Dynamics 365.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755628"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080845"
 ---
-# <a name="customer-card-add-in-preview"></a>Doplněk karty zákazníka (preview)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Doplněk karty zákazníka pro aplikace Dynamics 365 (Preview)
 
 Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dynamics 365. Když je v podporované aplikaci Dynamics 365 nainstalován doplněk Zákaznická karta, můžete se rozhodnout zobrazovat pole profilu zákazníka, přehledy a časovou osu aktivity. Doplněk načte data z Customer Insights bez ovlivnění dat v připojené aplikaci Dynamics 365.
 

@@ -1,5 +1,5 @@
 ---
-title: Rozšíření firemních profilů od třetí strany Leadspace
+title: Obohacení firemních profilů s Leadspace (Preview)
 description: Obecné informace o rozšíření od třetí strany Leadspace.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954171"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080868"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Rozšíření profilů společnosti o Leadspace (náhled)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Obohacení firemních profilů s Leadspace (Preview)
 
 Leadspace je společnost zabývající se vědou o datech, která poskytuje platformu zákaznických dat B2B. Umožňuje prostředí s jednotnými profily zákazníků založenými na účtech rozšiřovat jejich data. Rozšiřte *Profily zákazníků* o atributy, jako je velikost společnosti, umístění nebo odvětví. Rozšiřte *Kontaktní profily* o atributy, jako je titul, osobnost nebo ověření e -mailem.
 
@@ -82,7 +82,7 @@ Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 
 
 1. Vyberte **Spustit** k zahájení procesu obohacování nebo blízko k návratu na stránku **Rozšíření**.
 
-## <a name="enrichment-results"></a>Výsledky rozšíření
+## <a name="view-enrichment-results"></a>Zobrazení výsledků rozšiřování
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

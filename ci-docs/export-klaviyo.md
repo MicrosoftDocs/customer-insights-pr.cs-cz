@@ -1,5 +1,5 @@
 ---
-title: Export údajů ze služby Customer Insights do Klaviyo
+title: Export segmentů do Klaviyo (Preview)
 description: Naučte se, jak nakonfigurovat propojení a exportovat ho do Klaviyo.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: aa6d43884e5e57af4627b7d5a857d3043abcd026
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2b60d9818a753e81e69f2bee6b1663e1840cb10
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646377"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051307"
 ---
-# <a name="export-segment-lists-to-klaviyo-preview"></a>Export seznamů segmentů do Klaviyo (Preview)
+# <a name="export-segments-to-klaviyo-preview"></a>Export segmentů do Klaviyo (Preview)
 
 Exportujte segmenty sjednocených profilů zákazníků do Klaviyo a použijte je pro marketingové aktivity.
 

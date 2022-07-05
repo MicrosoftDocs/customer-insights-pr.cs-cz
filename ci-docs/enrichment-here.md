@@ -1,5 +1,5 @@
 ---
-title: Rozšíření pomocí rozšíření třetí strany HERE Technologies
+title: Rozšíření profilů zákazníků s HERE Technologies (Preview)
 description: Obecné informace o rozšíření od třetí strany HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953665"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052043"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Rozšíření profilů zákazníků od HERE Technologies (Preview)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Rozšíření profilů zákazníků s HERE Technologies (Preview)
 
 HERE Technologies je společnost postavená na lokalizační platformě, která poskytuje data a služby týkající se umístění. Služby obohacování dat společnosti HERE Technologies zlepšují přesnost informací o poloze vašich zákazníků. Poskytuje normalizaci adres, extrakci zeměpisné šířky a délky a další.
 
@@ -72,7 +72,7 @@ Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 
 
 1. Vyberte **Spustit** k zahájení procesu obohacování nebo blízko k návratu na stránku **Rozšíření**.
 
-## <a name="enrichment-results"></a>Výsledky rozšíření
+## <a name="view-enrichment-results"></a>Zobrazení výsledků rozšiřování
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

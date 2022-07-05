@@ -1,19 +1,19 @@
 ---
-title: Export údajů ze služby Customer Insights do Azure Synapse Analytics
+title: Export dat do Azure Synapse Analytics (Preview)
 description: Zjistěte, jak nakonfigurovat připojení do Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741495"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081147"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Export dat do Azure Synapse Analytics (Preview)
 
@@ -72,13 +72,13 @@ Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto
 
 1. V poli **Připojení pro export** vyberte propojení v části **Azure Synapse Analytics**. Pokud nevidíte název této sekce, nemáte k dispozici žádná [připojení tohoto typu](connections.md).
 
-1. Poskytují rozpoznatelné **zobrazované jméno** pro váš export a **název databáze**.
+1. Poskytují rozpoznatelné **zobrazované jméno** pro váš export a **název databáze**. Export vytvoří novou [databázi jezera Azure Synapse](/azure/synapse-analytics/database-designer/concepts-lake-database) v pracovním prostoru definovaném v připojení.
 
 1. Vyberte entity, do kterých chcete exportovat do Azure Synapse Analytics.
    > [!NOTE]
    > Zdroje dat založené na [složce Common Data Model](connect-common-data-model.md) nejsou podporovány.
 
-2. Zvolte **Uložit**.
+1. Zvolte **Uložit**.
 
 Uložení exportu nespustí export okamžitě.
 

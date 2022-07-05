@@ -1,5 +1,5 @@
 ---
-title: Rozšíření pomocí vlastního importu SFTP
+title: Rozšíření profilů zákazníků s vlastním importem SFTP (Preview)
 description: Obecné informace o rozšíření pomocí vlastního importu SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953711"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9080864"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Rozšíření profilů zákazníků o vlastní data (Preview)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Rozšíření profilů zákazníků s vlastním importem SFTP (Preview)
 
 Vlastní import prostřednictvím protokolu SFTP (Secure File Transfer Protocol) umožňuje importovat data, která nemusí projít procesem sjednocení dat. Je to flexibilní, bezpečný a snadný způsob, jak přenést svá data. Vlastní import SFTP lze použít v kombinaci s [exportem SFTP](export-sftp.md), který vám umožní exportovat data profilu zákazníka, která jsou potřebná pro rozšíření. Data lze poté zpracovat a obohatit a pomocí vlastního importu SFTP lze obohacená data vrátit zpět do Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 
 
 1. Vyberte **Spustit** k zahájení procesu obohacování nebo blízko k návratu na stránku **Rozšíření**.
 
-## <a name="enrichment-results"></a>Výsledky rozšíření
+## <a name="view-enrichment-results"></a>Zobrazení výsledků rozšiřování
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
