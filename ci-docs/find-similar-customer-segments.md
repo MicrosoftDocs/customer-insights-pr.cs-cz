@@ -12,69 +12,59 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 09fe36a4da45d114cbfccf8dad1e7b80b4b7e320
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054793"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170719"
 ---
 # <a name="find-similar-customers-with-ai-preview"></a>Hledání podobných zákazníků pomocí AI (Preview)
 
-Tato funkce vám umožní najít podobné zákazníky ve vaší zákaznické základně pomocí umělé inteligence. Abyste mohli tuto funkci používat, musíte mít vytvořen alespoň jeden segment. Rozšíření kritérií existujícího segmentu pomůže najít zákazníky podobné tomuto segmentu.
+Najděte podobné zákazníky ve své zákaznické základně pomocí umělé inteligence. Abyste mohli tuto funkci používat, musíte mít vytvořen alespoň jeden segment. Rozšíření kritérií existujícího segmentu pomůže najít zákazníky podobné tomuto segmentu.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Najděte podobné zákazníky* používá automatizované prostředky k vyhodnocování údajů a vytváření předpovědí na základě těchto údajů, a proto má schopnost být použita jako metoda profilování, protože tento pojem je definován obecným nařízením o ochraně údajů („GDPR“). Použití této funkce zákazníkem ke zpracování dat může podléhat GDPR nebo jiným zákonům nebo předpisům. Zodpovídáte za to, že použití Dynamics 365 Customer Insights, včetně predikcí, je v souladu se všemi příslušnými zákony a předpisy, včetně zákonů týkajících se soukromí, osobních údajů, biometrických údajů, ochrany údajů a důvěrnosti komunikace.
+> Funkce *Najít podobné zákazníky* využívá automatizované prostředky k vyhodnocování dat a vytváření predikcí na základě těchto dat. Proto ji lze použít jako metodu profilování, jak je tento pojem definován obecným nařízením o ochraně osobních údajů („GDPR“). Použití této funkce zákazníkem ke zpracování dat může podléhat GDPR nebo jiným zákonům nebo předpisům. Zodpovídáte za to, že použití Dynamics 365 Customer Insights, včetně predikcí, je v souladu se všemi příslušnými zákony a předpisy, včetně zákonů týkajících se soukromí, osobních údajů, biometrických údajů, ochrany údajů a důvěrnosti komunikace.
 
-## <a name="finding-similar-customers"></a>Najít podobné zákazníky
+## <a name="find-similar-customers"></a>Najít podobné zákazníky
 
 1. Přejděte na **Segmenty** a vyberte segment, na kterém chcete založit nový segment. To je váš *zdrojový segment*.
 
-1. Na panelu akcí vyberte **Najděte podobné zákazníky**.
+1. Vyberte **Najít podobné zákazníky**.
 
 1. Zkontrolujte navrhované jméno nového segmentu a v případě potřeby jej změňte.
 
 1. Volitelně přidejte [značky](work-with-tags-columns.md#manage-tags) do nového segmentu.
 
-1. Zkontrolujte pole, která definují váš nový segment. Tato pole definují základ, na kterém se systém pokusí najít podobné zákazníky ve vašem zdrojovém segmentu. Systém ve výchozím nastavení vybere doporučená pole.
+1. Zkontrolujte pole, která definují váš nový segment. Tato pole definují základ, na kterém se systém pokusí najít podobné zákazníky ve vašem zdrojovém segmentu. Systém ve výchozím nastavení vybere doporučená pole. V případě potřeby přidejte další pole.
   Pole, která mohou výrazně snížit výkon modelu, jsou automaticky vyloučena:
   
    - Pole s následujícími typy dat: StringType, BooleanType, CharType, LongType, IntType, DoubleType, FloatType, ShortType
    - Pole s mohutností (počet prvků v poli) menší než 2 nebo více než 30
 
-1. Zvolte, zda chcete zahrnout **Všichni zákazníci** nebo pouze zákazníci v **Specifickém existujícím segmentu** ve vašem novém segmentu.
+1. Zvolte, zda chcete do svého nového segmentu zahrnout **Všechny zákazníky** kromě zdrojového segmentu nebo pouze zákazníky v **jiném segmentu**.
 
 1. Ve výchozím nastavení systém navrhuje zahrnout do výstupu pouze 20% z velikosti cílové skupiny. Upravte tuto mezní hodnotu podle potřeby. Zvýšení mezní hodnoty sníží přesnost.
 
 1. Zaškrtnutím políčka **K zákazníkům s podobnými atributy přidat členy ze zdrojového segmentu** zahrnete zákazníky do zdrojového segmentu.
 
-1. Vyberte **Spustit** ve spodní části stránky a spusťte úlohu binární klasifikace (metoda strojového učení), která analyzuje datový soubor.
+1. Vyberte **Spustit** ve spodní části stránky a spusťte [úlohu binární klasifikace](#about-similarity-scores) (metoda strojového učení), která analyzuje datový soubor.
 
 ## <a name="view-the-similar-segment"></a>Zobrazit podobný segment
 
-Po zpracování podobného segmentu najdete nový segment uvedený v seznamu na stránce **Segmenty**.
+Po zpracování podobného segmentu najdete nový segment uvedený v seznamu na stránce **Segmenty** s typem **Rozšíření**.
 
-> [!div class="mx-imgBorder"]
-> ![Podobný segment zákazníků.](media/expanded-segment.png "Podobný segment zákazníků")
+Vyberte **Zobrazit**, čímž zobrazíte distribuci výsledků napříč [skóre podobnosti](#about-similarity-scores) a hodnotami skóre podobnosti v sekci **Náhled členů segmentu**.
 
-Vyberte **Pohled** na panelu akcí a otevřete detail segmentu. Toto zobrazení obsahuje informace o distribuci výsledků napříč [skórem podobnosti](#about-similarity-scores). Hodnoty skóre podobnosti najdete také v **Náhledu členů segmentu**.
+:::image type="content" source="media/expanded-segment.png" alt-text="Podobný segment zákazníků.":::
 
-## <a name="use-the-output-of-a-similar-segment"></a>Použijte výstup podobného segmentu
+## <a name="manage-a-similar-segment"></a>Správa podobného segmentu
 
-Můžete [pracovat s výstupem podobného segmentu](segments.md) stejně jako u jiných segmentů. Například exportujte segment nebo vytvořte měřítko.
+[Pracujte a spravujte podobný segment](segments.md#manage-existing-segments) jako u jiných segmentů. Například exportujte segment nebo vytvořte měřítko.
 
-## <a name="refresh-and-edit-a-similar-segment"></a>Aktualizujte a upravte podobný segment
-
-Chcete-li obnovit podobný segment, vyberte jej na stránce **Segmenty** a vyberte **Obnovit** na panelu akcí.
-
-Úpravy podobného segmentu znovu zpracují vaše data. Dříve vytvořený segment se aktualizuje aktualizovanými daty.
-Chcete-li upravit podobný segment, vyberte jej na stránce **Segmenty** a vyberte **Upravit** na panelu akcí. Použijte své změny a vyberte **Spustit** pro zahájení zpracování.
-
-## <a name="delete-a-similar-segment"></a>Odstranit podobný segment
-
-Vyberte segment an stránce **Segmenty** a vyberte **Odstranit** na panelu akcí. Pak podvrďte odstranění.
+Upravte, aktualizujte, přejmenujte, stáhněte a odstraňte podobný segment. Úpravy podobného segmentu znovu zpracují vaše data. Dříve vytvořený segment se aktualizuje aktualizovanými daty.
 
 ## <a name="about-similarity-scores"></a>O skóre podobnosti
 

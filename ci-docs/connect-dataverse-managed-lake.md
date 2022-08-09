@@ -1,7 +1,7 @@
 ---
 title: Připojte se k datům ve spravovaném datovém jezeru Microsoft Dataverse
 description: Importovat data ze spravovaného datového jezera Microsoft Dataverse.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,24 +11,25 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 9ae0b964d8d39835715b7ddadc712e2338b855af
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080848"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206945"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Připojte se k datům ve spravovaném datovém jezeru Microsoft Dataverse
 
-Uživatelé Microsoft Dataverse se mohou rychle připojit k analytickým entitám v jezeře spravovaném Microsoft Dataverse.
+Uživatelé Microsoft Dataverse se mohou rychle připojit k analytickým entitám v jezeře spravovaném Microsoft Dataverse. Pouze jeden zdroj dat prostředí může současně používat totéž spravované jezero Dataverse.
 
 > [!NOTE]
 > Musíte být správcem organizace Dataverse, abyste mohli pokračovat a zobrazit seznam entit dostupných ve spravovaném jezeře.
 
-## <a name="important-considerations"></a>Důležitá poznámka
+## <a name="prerequisites"></a>Předpoklady
 
-1. Data uložená v online službách, například Azure Data Lake Storage, mohou být uloženy na jiném místě, než kde jsou zpracovávána nebo ukládána data Dynamics 365 Customer Insights. Importem nebo připojením k datům uloženým v online službách souhlasíte s tím, že data lze přenášet a ukládat pomocí Dynamics 365 Customer Insights. [Další informace naleznete v Microsoft Trust Center](https://www.microsoft.com/trust-center).
-2. Viditelné jsou pouze entity Dataverse se zapnutým [sledováním změn](/power-platform/admin/enable-change-tracking-control-data-synchronization). Tyto entity lze exportovat do datového jezera spravovaného pomocí Dataverse a použít v Customer Insights. Předpřipravené tabulky Dataverse mají ve výchozím nastavení povoleno sledování změn. U vlastních tabulek musíte sledování změn zapnout. Chcete-li zkontrolovat, zda je u tabulky Dataverse povoleno sledování změn, přejděte na [Power Apps](https://make.powerapps.com) > **Data** > **Tabulky**. Vyhledejte tabulku, která vás zajímá, a vyberte ji. Jděte na **Nastavení** > **Upřesnit možnosti** a zkontrolujte nastavení **Sledovat změny**.
+- Data uložená v online službách, například Azure Data Lake Storage, mohou být uloženy na jiném místě, než kde jsou zpracovávána nebo ukládána data Dynamics 365 Customer Insights. Importem nebo připojením k datům uloženým v online službách souhlasíte s tím, že data lze přenášet a ukládat pomocí Dynamics 365 Customer Insights. [Další informace naleznete v Microsoft Trust Center](https://www.microsoft.com/trust-center).
+
+- Viditelné jsou pouze entity Dataverse se zapnutým [sledováním změn](/power-platform/admin/enable-change-tracking-control-data-synchronization). Tyto entity lze exportovat do datového jezera spravovaného pomocí Dataverse a použít v Customer Insights. Předpřipravené tabulky Dataverse mají ve výchozím nastavení povoleno sledování změn. U vlastních tabulek musíte sledování změn zapnout. Chcete-li zkontrolovat, zda je u tabulky Dataverse povoleno sledování změn, přejděte na [Power Apps](https://make.powerapps.com) > **Data** > **Tabulky**. Vyhledejte tabulku, která vás zajímá, a vyberte ji. Jděte na **Nastavení** > **Upřesnit možnosti** a zkontrolujte nastavení **Sledovat změny**.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Připojení k datovému jezeru spravovaném pomocí Dataverse
 
@@ -51,7 +52,9 @@ Uživatelé Microsoft Dataverse se mohou rychle připojit k analytickým entitá
 
 1. Uložením výběru spustíte synchronizaci vybraných tabulek Dataverse. Nově přidané připojení najdete na stránce **Zdroje dat**. Bude ve frontě k aktualizaci a zobrazí počet entit jako 0, dokud nebudou synchronizovány všechny vybrané tabulky.
 
-Pouze jeden zdroj dat prostředí může současně používat totéž spravované jezero Dataverse.
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Načítání dat může nějakou dobu trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce [**Entity**](entities.md).
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Úprava zdroje dat datového jezera spravovaného pomocí Dataverse
 
@@ -62,4 +65,10 @@ Chcete -li se připojit k jinému datovému jezeru Dataverse, [vytvořte nový z
 
 1. Vedle zdroje dat, který chcete aktualizovat, vyberte **Upravit**.
 
-1. Vyberte další entity z dostupného seznamu entit a vyberte **Uložit**.
+1. Vyberte další entity z dostupného seznamu entit.
+
+1. Klikněte na **Uložit** pro použití změny a návrat na stránku **Zdroje dat**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080845"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194915"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Doplněk karty zákazníka pro aplikace Dynamics 365 (Preview)
 
@@ -26,23 +26,27 @@ Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dyna
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-- Doplněk funguje pouze s modelem řízenými aplikacemi Dynamics 365, jako je Sales nebo Customer Service, verze 9.0 a novější.
-- Aby byla vaše data Dynamics 365 mapována na profily zákazníků Customer Insights, doporučujeme je [přijímat z aplikace Dynamics 365 pomocí konektoru Microsoft Dataverse](connect-power-query.md). Pokud pro přijímání kontaktů (nebo obchodních vztahů) Dynamics 365 používáte jinou metodu, musíte se ujistit, že pole `contactid` (nebo `accountid`) je nastaveno jako [primární klíč pro tento zdroj dat v kroku mapování v rámci procesu sjednocení dat](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Modelem řízené aplikace Dynamics 365, jako je Sales nebo Customer Service, verze 9.0 a novější.
+- Aby byla vaše data Dynamics 365 mapována na profily zákazníků Customer Insights, doporučujeme je [přijímat z aplikace Dynamics 365 pomocí konektoru Microsoft Dataverse](connect-power-query.md). Pokud pro přijímání kontaktů (nebo obchodních vztahů) Dynamics 365 používáte jinou metodu, musíte nastavit pole `contactid` (nebo `accountid`) jako [primární klíč pro tento zdroj dat v rámci procesu sjednocení dat](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Všichni uživatelé Dynamics 365 doplňku Zákaznické karty musí být [přidáni jako uživatelé](permissions.md) v Customer Insights, aby viděli data.
-- [Nakonfigurované možnosti vyhledávání a filtrování](search-filter-index.md) v Customer Insights jsou vyžadovány, aby vyhledávání dat fungovalo.
+- [Konfigurované možnosti vyhledávání a filtrování](search-filter-index.md) v Customer Insights.
 - Každý ovládací prvek doplňku závisí na konkrétních datech v Customer Insights. Některá data a ovládací prvky jsou k dispozici pouze v prostředích konkrétních typů. Konfigurace doplňku vás bude informovat, pokud ovládací prvek není k dispozici kvůli vybranému typu prostředí. Další informace o [případech použití prostředí](work-with-business-accounts.md).
-  - **Kontrola měření**: Vyžaduje [nakonfigurované míry](measures.md) atributů typu zákazníka.
-  - **Ovládání analytických nástrojů**: Vyžaduje data generovaná pomocí [predikcí nebo vlastních modelů](predictions-overview.md).
-  - **Kontrola podrobností zákazníka**: Všechna pole z profilu jsou k dispozici v jednotném zákaznickém profilu.
-  - **Kontrola rozšíření:** Vyžaduje aktivní [rozšíření](enrichment-hub.md) aplikované na profily zákazníků. Doplněk karty podporuje tato rozšíření: [Značky](enrichment-microsoft.md) poskytované společností Microsoft, [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft a [Data Office o zapojení](enrichment-office.md) poskytované společností Microsoft.
-  - **Ovládání kontaktů**: Vyžaduje definici sémantické entity kontaktů typu.
-  - **Ovládací prvek časové osy**: Vyžaduje [konfigurované aktivity](activities.md).
+  - **Ovládací prvek měření**: Vyžaduje [nakonfigurované míry atributu zákazníka](measures.md).
+  - **Ovládací prvek analytických nástrojů**: Vyžaduje data generovaná pomocí [predikcí nebo vlastních modelů](predictions-overview.md).
+  - **Ovládací prvek podrobností zákazníka** zobrazuje všechna pole z profilu, která jsou k dispozici ve sjednoceném zákaznickém profilu.
+  - **Ovládací prvek rozšíření** vyžaduje aktivní [rozšíření](enrichment-hub.md) použitá na profily zákazníků. Doplněk karty podporuje tato rozšíření: [Značky](enrichment-microsoft.md) poskytované společností Microsoft, [Zájmy](enrichment-microsoft.md) poskytované společností Microsoft a [Data Office o zapojení](enrichment-office.md) poskytované společností Microsoft.
+  - **Ovládací prvek kontaktů** vyžaduje typ sémantické entity kontaktu.
+  - **Ovládací prvek časové osy** vyžaduje [konfigurované aktivity](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalace doplňku karty zákazníka
 
-Doplněk karty zákazníka je řešení pro aplikace pro zapojení zákazníků v Dynamics 365. Chcete-li nainstalovat řešení, přejděte na AppSource a vyhledejte **Kartu zákazníka Dynamics**. Vyberte [Doplněk karty zákazníka v AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) a vyberte **Získat**.
+Doplněk karty zákazníka je řešení pro aplikace pro zapojení zákazníků v Dynamics 365. Instalace řešení:
+
+1. Přejděte do AppSource a vyhledejte **Kartu zákazníka Dynamics**.
+
+1. Vyberte [Doplněk karty zákazníka v AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) a vyberte **Získat**.
 
 K instalaci řešení se možná budete muset přihlásit pomocí svých přihlašovacích údajů pro aplikaci Dynamics 365. Instalace řešení do vašeho prostředí může nějakou dobu trvat.
 

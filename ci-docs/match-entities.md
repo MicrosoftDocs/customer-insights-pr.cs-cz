@@ -14,16 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080872"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139689"
 ---
 # <a name="match-conditions-for-data-unification"></a>Podmínky shody pro sjednocení dat
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Tento krok sjednocení definuje pořadí párování a pravidla pro párování mezi entitami. Tento krok vyžaduje alespoň dvě entity.
 

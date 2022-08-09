@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080844"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207175"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Rozšíření zdrojů dat (Preview)
 
@@ -21,9 +21,9 @@ Použijte data ze zdrojů, jako je Microsoft a další partneři, abyste rozší
 
 ## <a name="enrich-a-data-source"></a>Rozšíření zdroje dat
 
-K vytváření nebo úpravě rozšíření musíte mít roli Přispěvatel nebo Správce. Další informace naleznete v části [Oprávnění](permissions.md).  
+K vytváření nebo úpravě rozšíření musíte mít [oprávnění](permissions.md) Přispěvatel nebo Správce.  
 
-1. Přejděte na **Data** > **Sjednotit**. Vyberte entitu, kterou chcete rozšířit, a vyberte jeden atribut jako primární klíč pro entitu. Více informací viz část [Výběr primárního klíče](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Přejděte na **Data** > **Sjednotit**. Vyberte entitu, kterou chcete rozšířit, a vyberte jeden atribut jako [primární klíč](map-entities.md#select-primary-key-and-semantic-type-for-attributes) pro entitu.
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
@@ -47,8 +47,8 @@ Pro datové zdroje jsou momentálně dostupné následující rozšíření. Př
 
 ## <a name="manage-existing-data-source-enrichments"></a>Správa stávajících rozšíření zdrojů dat
 
-Jděte na kartu **Moje rozšíření**, kde zobrazíte všechna nakonfigurovaná rozšíření.
+Přejděte na **Data** > **Rozšíření**. Na záložce **Moje rozšíření** zobrazte nakonfigurovaná rozšíření, jejich stav, počet rozšířených zákazníků a čas poslední aktualizace dat. Seznam rozšiřování můžete seřadit podle libovolného sloupce nebo pomocí vyhledávacího pole najít rozšiřování, které chcete spravovat.
 
-Výběrem rozšíření zobrazíte dostupné možnosti. Můžete také vybrat vertikální tři tečky (&vellip;) na položce seznamu, abyste viděli možnosti. Pokud jste nakonfigurovali několik rozšíření, můžete je rychle najít pomocí vyhledávacího pole.
+Výběrem rozšíření zobrazíte dostupné možnosti. Můžete také vybrat vertikální tři tečky (&vellip;) na položce seznamu, abyste viděli možnosti.
 
-Rozšíření zdrojů dat můžete zobrazit, upravit, spustit nebo odstranit. Další informace naleznete v tématu [Správa existujících rozšíření](enrichment-hub.md).
+Rozšíření zdrojů dat můžete zobrazit, upravit, spustit nebo odstranit. Další informace naleznete v tématu [Správa existujících rozšíření](enrichment-hub.md#manage-existing-enrichments).

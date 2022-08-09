@@ -1,7 +1,7 @@
 ---
 title: Připojení ke složce Common Data Model prostřednictvím účtu Azure Data Lake
 description: Práce s daty Common Data Model pomocí Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080857"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206991"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Připojení k datům v Azure Data Lake Storageu
 
@@ -82,7 +82,7 @@ Příjem dat do Dynamics 365 Customer Insights pomocí účtu Azure Data Lake St
    :::image type="content" source="media/ADLS_required.png" alt-text="Dialogové okno zobrazující Vyžadováno pro primární klíč":::
 
    > [!TIP]
-   > Chcete-li entity upravit v rozhraní pro úpravy JSON, vyberte **Zobrazit více** > **Upravit soubor schématu**. Udělejte potřebné změny a vyberte **Uložit**.
+   > Chcete-li upravit entitu v rozhraní pro úpravy JSON, vyberte ji a poté vyberte **Upravit soubor schématu**. Udělejte potřebné změny a vyberte **Uložit**.
 
 1. U vybraných entit, které vyžadují přírůstkové zpracování, se pod možností **Přírůstkové obnovení** zobrazuje **Požadováno**. Pro každou z těchto entit získáte informace v části [Konfigurace přírůstkové aktualizace pro zdroje dat Azure Data Lake](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Příjem dat do Dynamics 365 Customer Insights pomocí účtu Azure Data Lake St
    1. Vyberte **Hotovo**.
 
 1. Vyberte **Uložit**. Otevře se stránka **Zdroje dat** s novým zdrojem dat se stavem **Aktualizace**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Načítání dat může nějakou dobu trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce [**Entity**](entities.md).
 
 ### <a name="create-a-new-schema-file"></a>Vytvořte nový soubor schématu.
 
@@ -148,6 +152,9 @@ Příjem dat do Dynamics 365 Customer Insights pomocí účtu Azure Data Lake St
 
 1. Vyberte **Uložit**. Otevře se stránka **Zdroje dat** s novým zdrojem dat se stavem **Aktualizace**.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Načítání dat může nějakou dobu trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce [**Entity**](entities.md).
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Úprava zdroje dat Azure Data Lake Storage
 
@@ -179,8 +186,16 @@ Můžete aktualizovat volbu *Připojte se k účtu úložiště pomocí*. Více 
       > [!IMPORTANT]
       > Pokud existují závislosti na existujícím souboru model.json nebo manifest.json a sadě entit, zobrazí se chybová zpráva a nelze vybrat jiný soubor model.json nebo manifest.json. Odeberte tyto závislosti před změnou souboru model.json nebo manifest.json nebo vytvořte nový zdroj dat se souborem model.json nebo manifest.json, který chcete použít, abyste nemuseli závislosti odebrat.
    - Chcete-li změnit umístění datového souboru nebo primární klíč, vyberte **Upravit**.
-   - Chcete-li změnit data přírůstkového příjmu, viz [Konfigurace přírůstkové aktualizace pro zdroje dat Azure Data Lake](incremental-refresh-data-sources.md)
+   - Chcete-li změnit data přírůstkového příjmu, viz [Konfigurace přírůstkové aktualizace pro zdroje dat Azure Data Lake](incremental-refresh-data-sources.md).
+   - Jen změňte název entity tak, aby odpovídal názvu entity v souboru .json.
+
+     > [!NOTE]
+     > Název entity v Customer Insights vždy po zpracování ponechejte stejný jako název entity v souboru model.json nebo manifest.json. Customer Insights ověřuje všechny názvy entit podle souboru model.json nebo manifest.json během každé aktualizace systému. Pokud se změní název entity buď v řešení Customer Insights nebo mimo něj, dojde k chybě, protože Customer Insights nemůže najít nový název entity v souboru .json. Pokud byl název ingestované entity náhodně změněn, upravte jej v Customer Insights tak, aby odpovídal názvu v souboru .json.
 
 1. Vyberte **Atributy** pro přidání nebo změnu atributů nebo povolení profilování dat. Pak vyberte **Hotovo**.
 
 1. Klikněte na **Uložit** pro použití změny a návrat na stránku **Zdroje dat**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

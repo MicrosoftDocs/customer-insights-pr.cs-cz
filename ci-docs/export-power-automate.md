@@ -1,19 +1,19 @@
 ---
 title: Konektor Power Automate (preview) | Microsoft Docs
 description: Vytváření toků v Microsoft Power Automate z Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080877"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196110"
 ---
 # <a name="power-automate-connector-preview"></a>Konektor Power Automate (preview)
 
@@ -21,18 +21,18 @@ Služba Power Automate podporuje automatické spouštění vybraných událostí
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Za 60 sekund můžete uskutečnit maximálně 100 hovorů. Pomocí parametru $skip můžete volat API koncový bod vícekrát. [Další informace o parametru $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Maximálně 100 hovorů za 60 sekund. Pomocí [parametru $skip](/connectors/customerinsights/#get-items-from-an-entity) můžete volat koncový bod rozhraní API vícekrát.
 
 ## <a name="power-automate-triggers"></a>Triggery Power Automate
 
-Pomocí triggerů můžete vytvářet cloudové toky a automatizovat opakující se úlohy, jako jsou oznámení nebo pokročilé akce.
+Pomocí triggerů můžete vytvářet cloudové toky a automatizovat opakující se úlohy, jako jsou oznámení nebo pokročilé akce. Používejte triggery, když:
 
-- Spustí se, když selže aktualizace zdroje dat.
-- Spustí se, když uspěje aktualizace zdroje dat.
-- Spustí se, když je v segmentu překročena prahová hodnota. Trigger je omezen na překročení nad prahovou hodnotu.
-- Spustí se, když je v obchodní míře překročena prahová hodnota. Jsou podporovány pouze firemní míry bez dimenze. Trigger je omezen na překročení nad prahovou hodnotu.
-- Spustí se, když je dokončena úplná aktualizace (zdroje dat, segmenty, míry, ...).
-- Aktivovat, když je dokončena aktualizace procesu sjednocení.
+- Aktualizace zdroje dat selže.
+- Aktualizace zdroje dat uspěje.
+- V segmentu je překročena prahová hodnota. Trigger je omezen na překročení nad prahovou hodnotu.
+- V obchodní míře je překročena prahová hodnota. Jsou podporovány pouze firemní míry bez dimenze. Trigger je omezen na překročení nad prahovou hodnotu.
+- Kompletní plánovaná aktualizace je dokončena. Tento trigger nefunguje pro ručně spuštěné aktualizace.
+- Je dokončena aktualizace procesu sjednocení.
 
 [Konfigurace triggerů v Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Konektor Power Automate poskytuje jiné akce než dostupné triggery. Další in
 
 ## <a name="create-a-power-automate-flow"></a>Vytvoření toku Power Automate
 
-1. Přejděte na **Správce** > **Cíle exportu**.
+1. Přejděte na **Správce** > **Propojení**.
 
 1. Na dlaždici **Power Automate** vyberte **Nastavit**.
 
@@ -53,7 +53,5 @@ Konektor Power Automate poskytuje jiné akce než dostupné triggery. Další in
 Příklady použití toků: 
 - Odeslání zprávy do kanálu Microsoft Teams, pokud selže aktualizace zdroje dat. 
 - Odeslání e-mailu vlastníkům dat po překročení prahové hodnoty v segmentu.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

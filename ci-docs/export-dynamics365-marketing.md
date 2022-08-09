@@ -1,7 +1,7 @@
 ---
 title: Export segmentů do Dynamics 365 Marketing (Preview)
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do Dynamics 365 Marketing.
-ms.date: 08/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -11,35 +11,37 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: fed4ae1b017cca2b6060c4dda155859cd77e0daf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 123b565421a7d096e7341a8f600f91e59aefe8d0
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054608"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196616"
 ---
 # <a name="export-segments-to-dynamics-365-marketing-preview"></a>Export segmentů do Dynamics 365 Marketing (Preview)
 
-Použití [segmentů](segments.md) pro generování kampaní a kontaktování konkrétní skupiny zákazníků pomocí Dynamics 365 Marketing. Další informace získáte v tématu [Použití segmentů z Dynamics 365 Customer Insights s Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+Použití [segmentů](segments.md) pro generování kampaní a kontaktování konkrétní skupiny zákazníků pomocí [Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
 
 Pokud používáte nové funkce Dynamics 365 Marketing pro orchestraci cesty zákazníka v reálném čase v organizaci Dataverse, nemusíte vytvářet standardní export do Dynamics 365 Marketing. Kontakty a segmenty ze Customer Insights jsou dostupné přímo v Dynamics 365 Marketing po propojení Marketing a Customer Insights. Před odstraněním existujících exportů si prostudujte dokumentaci o tom, [jak propojit Customer Insights a orchestraci cesty zákazníka Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile).
 
-## <a name="prerequisite-for-a-connection"></a>Předpoklad pro propojení
+## <a name="prerequisite"></a>Požadavek
 
-- Než budete moci exportovat segment z Customer Insights do aplikace Marketing, musí se v Dynamics 365 Marketing nacházet záznamy kontaktu. Přečtěte si, jak ingestovat kontakty v [Dynamics 365 Marketing pomocí Microsoft Dataverse](connect-dataverse-managed-lake.md).
+Než budete moci exportovat segment z Customer Insights do aplikace Marketing, musí se v Dynamics 365 Marketing nacházet záznamy kontaktu. Přečtěte si, jak ingestovat kontakty v [Dynamics 365 Marketing pomocí Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
-  > [!NOTE]
-  > Export segmentů z Customer Insights do Marketing nevytvoří nové záznamy kontaktů v instancích Marketing. Záznamy kontaktů z Marketingu musí být zpracovány v Customer Insights a použity jako zdroj dat. Než je možné segmenty exportovat, rovněž je třeba záznamy kontaktů zahrnout do sjednocené entity zákazníka, aby bylo možné mapovat ID zákazníků na ID kontaktů.
+> [!NOTE]
+> Export segmentů z Customer Insights do Marketing nevytvoří nové záznamy kontaktů v instancích Marketing. Záznamy kontaktů z Marketingu musí být zpracovány v Customer Insights a použity jako zdroj dat. Než je možné segmenty exportovat, rovněž je třeba záznamy kontaktů zahrnout do sjednocené entity zákazníka, aby bylo možné mapovat ID zákazníků na ID kontaktů.
 
 ## <a name="set-up-connection-to-marketing"></a>Nastavení propojení s aplikací Marketing
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Přejděte na **Správce** > **Propojení**.
 
-1. Vyberte **Přidat připojení** a zvolte **Dynamics 365 Marketing** pro konfiguraci připojení.
+1. Vyberte **Přidat připojení** a vyberte **Dynamics 365 Marketing**.
 
 1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
 
-1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Zvolte, kdo může toto připojení používat. Ve výchozím nastavení jsou to pouze správci. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Zadejte marketingovou adresu URL vaší organizace do pole **Adresa serveru**.
 
@@ -47,24 +49,28 @@ Pokud používáte nové funkce Dynamics 365 Marketing pro orchestraci cesty zá
 
 1. Namapujte pole ID kontaktu v entitě Zákazník na ID kontaktu Dynamics 365.
 
-1. Dokončete propojení výběrem možnosti **Uložit**. 
+1. Zkontrolujte část [Ochrana osobních údajů a dodržování předpisů](connections.md#data-privacy-and-compliance) a vyberte **Souhlasím**.
+
+1. Dokončete propojení výběrem možnosti **Uložit**.
 
 ## <a name="configure-an-export"></a>Konfigurace exportu
 
-Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Přejděte na **Data** > **Exporty**.
 
-1. Pokud chcete vytvořit nový export, vyberte **Přidat cíl**.
+1. Vyberte **Přidat export**.
 
-1. V poli **Propojení pro export** vyberte propojení v části Dynamics 365 Marketing. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
+1. V poli **Propojení pro export** vyberte propojení v části Dynamics 365 Marketing. Pokud není k dispozici propojení , kontaktujte správce.
 
-1. Vyberte jeden nebo více segmentů.
+1. Zadejte název exportu.
 
-1. Zvolte **Uložit**.
+1. Vyberte pole ID kontaktu v entitě Zákazník, které odpovídá ID kontaktu Dynamics 365.
 
-Uložení exportu nespustí export okamžitě.
+1. Vyberte segmenty, které chcete exportovat.
 
-Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
+1. Vyberte **Uložit**.
+
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Konektor Power Apps (preview)
 description: Propojení aplikací Power Apps a Power Automate.
-ms.date: 10/01/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 0b71f723d1e491d422d24b1be6616d2f33c95d40
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 8807e82e65ea20d1a7f7dc07552229f377927eed
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055252"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196892"
 ---
 # <a name="power-apps-connector-preview"></a>Konektor Power Apps (preview)
 
@@ -37,41 +37,38 @@ Po přidání Customer Insights jako datového připojení si můžete v systém
 
 ### <a name="retrievable-entities"></a>Vyhledatelné entity
 
-Můžete načíst pouze entity **Customer**, **UnifiedActivity**, **Segments** a **ContactProfile** prostřednictvím konektoru Power Apps. Entita ContactProfile je k dispozici pouze v instanci Customer Insights pro obchodní účty. Jsou zobrazeny další entity, protože podkladový konektor je podporuje prostřednictvím spouštěčů v Power Automate.
+Můžete načíst pouze entity **Customer**, **UnifiedActivity**, **Segments** a **ContactProfile** prostřednictvím konektoru Power Apps. Entita ContactProfile je k dispozici pouze v prostředích Customer Insights pro obchodní účty. Jsou zobrazeny další entity, protože podkladový konektor je podporuje prostřednictvím spouštěčů v Power Automate.
 
 Za 60 sekund můžete uskutečnit maximálně 100 hovorů. Pomocí parametru $skip můžete volat API koncový bod vícekrát. [Další informace o parametru $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Delegování
 
-Delegování funguje pro entitu **Customer** a **UnifiedActivity** . 
+Delegování funguje pro entitu **Customer** a **UnifiedActivity** .
 
 - Delegace pro entitu **Zákazník**: Chcete-li použít delegování pro tuto entitu, je třeba indexovat pole v části [Index hledání a filtrování](search-filter-index.md).  
 - Delegace pro **UnifiedActivity**: Delegace pro tuto entitu funguje pouze pro pole **ActivityId** a **CustomerId**.  
 - Delegování pro **ContactProfile**: Delegování pro tuto entitu funguje pouze pro pole **ContactId** a **CustomerId**. Entita ContactProfile je k dispozici pouze v prostředích Customer Insights pro obchodní účty.
 
-Další informace o delegování najdete v [delegovatelných funkcích a operacích Power Apps](/powerapps/maker/canvas-apps/delegation-overview). 
+Další informace o delegování najdete v [delegovatelných funkcích a operacích Power Apps](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="example-gallery-control"></a>Příklad ovládání galerie
 
-Profily zákazníků můžete přidat do souboru [ovládacího prvku galerie](/powerapps/maker/canvas-apps/add-gallery).
+Volitelně můžete přidat zákaznické profily do [ovládacího prvku galerie](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Přidejte ovládací prvek **Galerie** do aplikace, kterou vytváříte.
+  
+   :::image type="content" source="media/connector-powerapps9.png" alt-text="Přidat prvek galerie.":::
 
-    > [!div class="mx-imgBorder"]
-    > ![Přidat prvek galerie.](media/connector-powerapps9.png "Přidejte prvek galerie.")
+1. Vyberte **Zákazník** jako zdroj dat pro položky.
 
-2. Vyberte **Zákazník** jako zdroj dat pro položky.
+   :::image type="content" source="media/choose-datasource-powerapps.png" alt-text="Vyberte zdroj dat.":::
 
-    > [!div class="mx-imgBorder"]
-    > ![Vyberte zdroj dat.](media/choose-datasource-powerapps.png "Vyberte zdroj dat.")
+1. Panel dat změníte vpravo a vybrat pole pro entitu Zákazník, které se má zobrazit v galerii.
 
-3. Panel dat můžete změnit vpravo a vybrat pole pro entitu Zákazník, které se má zobrazit v galerii.
-
-4. Chcete-li zobrazit libovolné pole od vybraného zákazníka v galerii, vyplňte vlastnost **Text** popisku pomocí **{Name_of_the_gallery}.Selected.{property_name}**  
+1. Chcete-li zobrazit libovolné pole od vybraného zákazníka v galerii, vyplňte vlastnost **Text** popisku pomocí **{Name_of_the_gallery}.Selected.{property_name}**  
     - Příklad: _Gallery1.Selected.address1_city_
 
-5. Chcete-li zobrazit jednotnou časovou osu pro zákazníka, přidejte element Galerie a přidejte vlastnost **Items** pomocí **Filtr('UnifiedActivity', CustomerId = {Customer_Id})**  
+1. Chcete-li zobrazit jednotnou časovou osu pro zákazníka, přidejte element Galerie a přidejte vlastnost **Items** pomocí **Filtr('UnifiedActivity', CustomerId = {Customer_Id})**  
     - Příklad: _Filtr('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

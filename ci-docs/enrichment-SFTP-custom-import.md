@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080864"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195788"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Rozšíření profilů zákazníků s vlastním importem SFTP (Preview)
 
@@ -104,7 +104,7 @@ Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 
 
 1. Zkontrolujte přehled a poté vyberte **Další**.
 
-1. Vyberte připojení. Pokud není k dispozici správce, obraťte se na něj.
+1. Vyberte připojení. Pokud není k dispozici propojení , kontaktujte správce.
 
 1. Vyberte **Sada údajů o zákazníkovi** a zvolte profil nebo segment, které chcete rozšířit. Entita *Zákazník* rozšíří všechny profily vašich zákazníků zatímco segment rozšíří pouze profily zákazníků obsažené v tomto segmentu.
 

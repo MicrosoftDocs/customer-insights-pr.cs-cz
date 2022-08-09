@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081207"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170812"
 ---
 # <a name="measures-overview"></a>Přehled měr
 
-Míry vám pomohou lépe porozumět chování zákazníků a výkonnosti podniku. Zaměřují se na relevantní hodnoty ze [sjednocených profilů](data-unification.md). Například firma chce vidět *celkové výdaje na zákazníka*, aby rozuměla historii nebo míře nákupu jednotlivého zákazníka nebo změřila *celkový prodej společnosti*, aby porozuměla agregovaným výnosům v celém podniku.  
+Míry vám pomohou lépe porozumět chování zákazníků a výkonnosti podniku. Zaměřují se na relevantní hodnoty ze [sjednocených profilů](data-unification.md). Například firma chce vidět *celkové výdaje na zákazníka*, aby rozuměla historii nebo míře nákupu jednotlivého zákazníka nebo změřila *celkový prodej společnosti*, aby porozuměla agregovaným výnosům v celém podniku.
 
-Míry jsou vytvářeny [pomocí nástroje pro tvorbu měr](measure-builder.md), což je platforma pro dotazování dat s různými operátory a možnostmi jednoduchého mapování. Umožňuje filtrovat data, seskupovat výsledky, detekovat [cesty vztahů mezi entitami](relationships.md) a zobrazovat náhledy výstupu. Můžete [používat předdefinované šablony](measure-templates.md) pro efektivní konfiguraci běžně používaných měr.
+Vytváření měr umožňuje plánovat obchodní aktivity dotazováním zákaznických dat a extrahováním přehledů. Například vytvoření míry *celkové výdaje na zákazníka* a *celková návratnost na zákazníka* pomáhá identifikovat skupinu zákazníků s vysokými výdaji, ale s vysokou návratností. Poté můžete [vytvořit segment](segments.md) na základě těchto měr a řídit další nejlepší akce.
 
-Pomocí nástroje pro tvorbu měr můžete plánovat obchodní aktivity dotazováním zákaznických dat a extrahováním přehledů. Například vytvoření míry *celkové výdaje na zákazníka* a *celková návratnost na zákazníka* pomáhá identifikovat skupinu zákazníků s vysokými výdaji, ale s vysokou návratností. Můžete [vytvořit segment](segments.md) na základě těchto měr a řídit další nejlepší akce.
+## <a name="create-a-measure"></a>Vytvořit nové opatření
 
-## <a name="manage-your-measures"></a>Správa opatření
+Vyberte, jak vytvořit míru na základě vaší cílové skupiny.
 
-Seznam měr naleznete na stránce **Míry**.
+# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
 
-Najdete informace o typu, tvůrci, datu vytvoření, statusu a stavu míry. Když vyberete míru ze seznamu, můžete zobrazit náhled výstupu a stáhnout soubor CSV.
+- Od začátku v tvůrci měr: [Sestavte si vlastní](measure-builder.md).
+- Z běžně používaných měr: [Použití předdefinovaných šablon](measure-templates.md).
+
+# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
+
+Od začátku v tvůrci měr: [Sestavte si vlastní](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Správa existujících měr
+
+Jděte na stránku **Míry**, kde uvidíte vámi vytvořené míry s jejich stavem, typem a časem poslední aktualizace dat. Seznam měr můžete seřadit podle libovolného sloupce nebo pomocí vyhledávacího pole najít míry, které chcete spravovat.
+
+Výběrem vedle míry zobrazíte dostupné akce. Výběrem názvu míry zobrazíte náhled výstupu a můžete si stáhnout soubor CSV.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Akce ke správě jednotlivých opatření."lightbox="media/measures-actions.png":::
 
-Po výběru míry jsou k dispozici následující akce:
-
-- **Upravte** konfiguraci míry.
-- Na míru použijte možnost **Duplikovat**. Můžete se rozhodnout upravit její vlastnosti hned nebo duplicitu jednoduše uložit.
-- **Aktualizujte** míru na základě nejnovějších údajů. Chcete-li aktualizovat všechny míry najednou, vyberte všechny míry a poté zvolte možnost **Aktualizovat**.
+- Volbou **Upravit** změníte vlastnosti míry.
+- Volbou **Aktualizovat** do míry zahrnete nejnovější data.
 - **Přejmenujte** míru.
-- **Aktivujte** nebo **deaktivujte**. Neaktivní míry se během [plánované aktualizace](system.md#schedule-tab) neaktualizují.
-- Volbou **Značka** můžete [spravovat značky](work-with-tags-columns.md#manage-tags) pro segment.
+- **Aktivujte** nebo **deaktivujte** míru. Neaktivní míry se neaktualizují během [plánované aktualizace](system.md#schedule-tab) a mají **Stav** uveden jako **Přeskočeno**, což označuje, že u nich neproběhl ani pokus o aktualizaci.
+- Volbou **Značka** můžete [spravovat značky](work-with-tags-columns.md#manage-tags) pro míru.
 - **Odstraňte** míry.
+- **Sloupce** pro [přizpůsobení sloupců](work-with-tags-columns.md#customize-columns), které se zobrazí.
+- **Filtrovat** pro [filtrování podle značek](work-with-tags-columns.md#filter-on-tags).
+- **Hledat název** pro vyhledání podle názvu míry.
+
+## <a name="refresh-measures"></a>Aktualizace měr
+
+Míry lze aktualizovat podle automatického plánu nebo ručně na vyžádání. Chcete-li ručně obnovit jednu nebo více měr, vyberte ji a vyberte **Aktualizovat**. Na záložce [naplánovat automatické obnovení](system.md#schedule-tab) jděte na **Správce** > **Systém** > **Plán**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Další krok
-
-K vytváření můžete použít stávající míry [zákaznický segment](segments.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

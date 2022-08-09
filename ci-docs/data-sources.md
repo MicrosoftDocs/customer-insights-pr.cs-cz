@@ -1,7 +1,7 @@
 ---
 title: Přehled zdrojů dat
 description: Naučte se importovat nebo ingestovat data z různých zdrojů.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,20 +12,20 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051445"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207083"
 ---
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
 Dynamics 365 Customer Insights poskytuje připojení k přinesení dat ze široké škály zdrojů. Připojení k zdroji dat se často označuje jako proces *příjmu dat*. Po přijetí dat můžete [sjednotit](data-unification.md), generovat statistiky a aktivovat data pro vytváření personalizovaných zážitků.
 
-## <a name="add-data-sources"></a>Přidat zdroje dat
+## <a name="add-or-edit-data-sources"></a>Přidání nebo úprava zdrojů dat
 
-Do Customer Insights můžete připojit nebo importovat zdroje dat. Níže uvedené odkazy poskytují pokyny k přidávání zdrojů dat.
+Do Customer Insights můžete připojit nebo importovat zdroje dat. Níže uvedené odkazy poskytují pokyny k přidávání a úpravám zdrojů dat.
 
 **Připojit zdroj dat**
 
@@ -50,13 +50,18 @@ Pokud bylo vaše prostředí nakonfigurováno pro použití úložiště Custome
 
 Pokud vaše prostředí nepoužívá datové toky Power Platform, strýnja **Zdroje dat** obsahuje pouze seznam všech zdrojů dat. Nezobrazují se žádné sekce.
 
-Jděte na **Data** > **Zdroje dat** pro zobrazení názvu každého zpracovaného zdroj dat, jeho stavu a poslední aktualizace dat pro daný zdroj. Seznam zdrojů dat můžete seřadit podle každého sloupce.
+## <a name="manage-existing-data-sources"></a>Správa existujících zdrojů dat
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Přidaný zdroj dat.":::
+Jděte na **Data** > **Zdroje dat** pro zobrazení názvu každého zpracovaného zdroj dat, jeho stavu a poslední aktualizace dat pro daný zdroj. Seznam zdrojů dat můžete seřadit podle libovolného sloupce nebo pomocí vyhledávacího pole najít zdroj dat, který chcete spravovat.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Výběrem zdroje dat zobrazíte dostupné akce.
 
-Načítání dat může nějakou dobu trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce **Entity**. Další informace najdete v tématu [Entity](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Přidaný zdroj dat.":::
+
+- [**Úpravou**](#add-or-edit-data-sources) zdroje dat změníte jeho vlastnosti.
+- [**Aktualizací**](#refresh-data-sources) zdroje dat zahrnete nejnovější data.
+- [**Rozšiřte**](data-sources-enrichment.md) zdroj dat před sjednocením.
+- **Odstraňte** zdroj dat. Zdroj dat lze smazat pouze v případě, že data nejsou použita při žádném zpracování, jako je sjednocení, statistiky, aktivace nebo exporty.
 
 ## <a name="refresh-data-sources"></a>Aktualizovat zdroje dat
 
@@ -64,23 +69,12 @@ Zdroje dat lze aktualizovat podle automatického plánu nebo ručně na vyžád�
 
 Jděte na **Admin** > **Systém** > [**Plán**](system.md#schedule-tab) ke konfiguraci systémově naplánovaných aktualizací vašich zpracovaných datových zdrojů.
 
-Chcete-li aktualizovat zdroj dat na vyžádání, postupujte takto:
+Chcete-li aktualizovat zdroj dat na vyžádání:
 
 1. Přejděte na **Data** > **Zdroje dat**.
 
-1. Vyberte vertikální tři tečky (&vellip;) vedle zdroje dat, který chcete aktualizovat, a v rozevíracím seznamu vyberte **Obnovit**. Zdroj dat je nyní spuštěn pro ruční aktualizaci. Aktualizací zdroj dat aktualizujete schéma entity i data pro všechny entity uvedené ve zdroji dat.
+1. Vyberte zdroj dat, který chcete aktualizovat, a vyberte **Aktualizovat**. Zdroj dat je nyní spuštěn pro ruční aktualizaci. Aktualizací zdroj dat aktualizujete schéma entity i data pro všechny entity uvedené ve zdroji dat.
 
-1. Vyberte **Zastavit aktualizaci**, pokud chcete zrušit existující aktualizaci a zdroj dat se vrátí do svého posledního stavu aktualizace.
-
-## <a name="delete-a-data-source"></a>Odstranit datový zdroj
-
-Zdroj dat lze smazat pouze v případě, že data nejsou použita při žádném zpracování, jako je sjednocení, statistiky, aktivace nebo exporty.
-
-1. Přejděte na **Data** > **Zdroje dat**.
-
-2. Vyberte svislé tlačítko se třemi tečkami (&vellip;) vedle zdroje dat, který chcete odebrat, a v rozevírací nabídce vyberte **Odstranit**.
-
-3. Odstranění potvrďte.
-
+1. Výběrem stavu otevřete podokno **Podrobnosti o průběhu** a zobrazíte průběh. Chcete-li úlohu zrušit, vyberte **Zrušit úlohu** ve spodní části panelu.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

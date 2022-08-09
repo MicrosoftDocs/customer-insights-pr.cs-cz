@@ -1,7 +1,7 @@
 ---
 title: Připojení ke zdroji dat Power Query (obsahuje video)
 description: Příjem dat přes konektor Power Query (obsahuje video).
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080849"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207037"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Připojení ke zdroji dat Power Query
 
@@ -41,22 +41,29 @@ Přidávání zdrojů dat na základě konektorů Power Query se obecně řídí
 
 1. Zadejte požadované podrobnosti do **Nastavení připojení** pro vybraný konektor a vyberte **Další** pro zobrazení náhledu dat.
 
-1. Vyberte **Transformovat data**. V tomto kroku přidáte entity do zdroj dat. Entity jsou datové sady. Pokud máte databázi, která obsahuje více datových sad, je každá datová sada vlastní entitou.
+1. Vyberte **Transformovat data**.
 
 1. Dialogové okno **Power Query - Upravit dotazy** umožňuje zkontrolovat a upřesnit data. V levém podokně se zobrazí entity, které systémy identifikované ve vybraném zdroj dat.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Dialog Upravit dotazy":::
 
-1. Data lze rovněž transformovat. Vyberte entitu, kterou chcete upravit nebo transformovat. Použijte možnosti v okně Power Query pro použití transformací. Každá transformace je uvedena v části **Použité kroky**. Power Query poskytuje řadu předpřipravených možností transformace. Další informace najdete v [Transformacích Power Query](/power-query/power-query-what-is-power-query#transformations).
+1. Data lze rovněž transformovat. Vyberte entitu, kterou chcete upravit nebo transformovat. Použijte možnosti v okně Power Query pro použití transformací. Každá transformace je uvedena v části **Použité kroky**. Power Query poskytuje řadu [předpřipravených možností transformace](/power-query/power-query-what-is-power-query#transformations).
 
    Doporučujeme použít následující transformace:
 
    - Pokud přijímáte data ze souboru CSV, první řádek často obsahuje záhlaví. Přejděte na **Transformovat** a vyberte **Použijte první řádek jako záhlaví**.
    - Zajistěte, aby byl datový typ nastaven správně. Například pro datová pole vyberte typ dat.
 
-1. Chcete-li přidat další entity do zdroje dat v dialogu **Upravit dotazy**, přejděte na **Domů** a vyberte **Získat data**. Opakujte kroky 6-10, dokud nepřidáte všechny entity pro toto zdroj dat.
+1. Chcete-li přidat další entity do zdroje dat v dialogu **Upravit dotazy**, přejděte na **Domů** a vyberte **Získat data**. Opakujte kroky 5-10, dokud nepřidáte všechny entity pro toto zdroj dat. Pokud máte databázi, která obsahuje více datových sad, je každá datová sada vlastní entitou.
 
 1. Vyberte **Uložit**. Otevře se stránka **Zdroje dat** s novým zdrojem dat se stavem **Aktualizace**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Načítání dat může nějakou dobu trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce [**Entity**](entities.md).
+
+> [!CAUTION]
+> Zdroj dat na základě Power Query vytvoří [tok dat v Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Neměňte název datového toku v centru pro správu Power Platform, který se používá v Customer Insights. Přejmenování toku dat způsobuje problémy s odkazy mezi zdrojem dat Customer Insights a datovým tokem Dataverse.
 
 ### <a name="available-power-query-data-sources"></a>Dostupné zdroje dat Power Query
 
@@ -70,15 +77,17 @@ Zpracování dat ze zdrojů dat místní je podporováno na základě datových 
 
 Zdroje dat, které jsou vytvořeny po přidružení prostředí Dataverse ke Customer Insights, standardně používají [datové toky Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datové toky podporují místní připojení pomocí datové brány. Zdroje dat, které existovaly před přidružením prostředí Dataverse, můžete odebrat a znovu vytvořit [pomocí místní bran dat](/data-integration/gateway/service-gateway-app).
 
-Datové brány z existujícího prostředí Power BI nebo Power Apps bude viditelné a můžete jej znovu použít ve službě Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy, na které chcete přejít v prostředí Microsoft Power Platform, kde můžete prohlížet a konfigurovat místní datové brány.
+Datové brány z existujícího prostředí Power BI nebo Power Apps budou viditelné a můžete je znovu použít v Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy, na které chcete přejít v prostředí Microsoft Power Platform, kde můžete prohlížet a konfigurovat místní datové brány.
 
 > [!IMPORTANT]
 > Ujistěte se, že jsou vaše brány aktualizovány na nejnovější verzi. Můžete nainstalovat aktualizaci a překonfigurovat bránu přímo z výzvy zobrazené na obrazovce brány nebo [stáhnout nejnovější verzi](https://powerapps.microsoft.com/downloads/). Pokud nepoužíváte nejnovější verzi brány, aktualizace toku dat selže s chybovými zprávami, například **Klíčové slovo není podporováno: vlastnosti konfigurace. Název parametru: klíčové slovo**.
+>
+> Chyby místních datových bran v Customer Insights jsou často způsobeny problémy s konfigurací. Další informace o řešení problémů s bránami dat naleznete na stránce [Řešení problémů s místní bránou dat](/data-integration/gateway/service-gateway-tshoot).
 
 ## <a name="edit-power-query-data-sources"></a>Upravte zdroje dat Power Query
 
 > [!NOTE]
-> Pravděpodobně nebude možné provést změny ve zdrojích dat, které se aktuálně používají v jednom z procesů aplikace (např. *segmentace*, *shoda* nebo *sloučit*).
+> Pravděpodobně nebude možné provést změny ve zdrojích dat, které se aktuálně používají v jednom z procesů aplikace (např. segmentace nebo sjednocení dat).
 >
 > Na stránce **Nastavení** můžete sledovat průběh každého z aktivních procesů. Po dokončení procesu se můžete vrátit na stránku **Zdroje dat** stránku a provést změny.
 
@@ -86,8 +95,10 @@ Datové brány z existujícího prostředí Power BI nebo Power Apps bude vidite
 
 1. Vedle zdroje dat, který chcete aktualizovat, vyberte **Upravit**.
 
-   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
 1. Použijte změny a transformace v dialogu **Power Query - Upravit dotazy**, jak je popsáno v sekci [Vytvořte nový zdroj dat](#create-a-new-data-source).
 
-1. Vyberte **Uložit** v Power Query po dokončení úprav pro uložení změn.
+1. Volbou **Uložit** použijete změny a návrat na stránku **Zdroje dat**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

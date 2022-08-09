@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081218"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195650"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Příjem dat v reálném čase (náhled)
 
@@ -28,7 +28,7 @@ Tato funkce v reálném čase poskytuje data okamžitě ke spotřebě, dokud ná
 
 Aktualizace v reálném čase mají čas vypršení platnosti, po kterém již nepřepisují hodnotu ze zdroje dat:
 
-- Aktualizace profilu bude zachována po dobu 4 hodin
+- Aktualizace profilu bude zachována po dobu čtyř hodin
 - Činnosti budou udržovány po dobu 30 dnů
 
 Tyto hodnoty jsou parametry volání API, které můžete změnit. Jejich cílem je zajistit, aby vaše zdrojová data zůstala vaším důvěryhodným zdrojem. Pokud chcete, aby byly aktualizace v reálném čase uchovány déle, musíte je přidat do zdroje dat, aby se stáhly během příští plánované aktualizace.

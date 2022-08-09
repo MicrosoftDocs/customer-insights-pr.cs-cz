@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081217"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121554"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Příklady dotazů OData pro rozhraní API Customer Insights
 
@@ -23,7 +23,7 @@ Tento článek uvádí některé často požadované vzorové dotazy, které vá
 
 Ukázky dotazů musíte upravit, aby fungovaly v cílových prostředích: 
 
-- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}`, kde {instanceId} je GUID prostředí Customer Insights, na které se chcete dotazovat. [Operace ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vám umožní najít {InstanceId}, k níž máte přístup.
+- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data`, kde {instanceId} je GUID prostředí Customer Insights, na které se chcete dotazovat. [Operace ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vám umožní najít {InstanceId}, k níž máte přístup.
 - {CID}: GUID sjednoceného záznamu zákazníka. Příklad: `ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: Identifikátor primárního klíče záznamu zákazníka ve zdroji dat. Příklad: `CNTID_1002`
 - {DSname}: Řetězec s názvem entity zdroje dat, který se zpracovává v Customer Insights. Příklad: `Website_contacts`.
@@ -39,9 +39,10 @@ Následující tabulka obsahuje sadu vzorových dotazů pro entitu *Zákazník*.
 |Alternativní klíč    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Alternativní klíče přetrvávají ve sjednocené entitě zákazníka       |
 |Výběrem   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |v    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Alternativní klíč + v   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Alternativní klíč + v   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Vyhledávat  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Vrátí 10 nejlepších výsledků pro hledaný řetězec      |
 |Členství v segmentu  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Vrátí přednastavený počet řádků z entity segmentace.      |
+|Členství zákazníka v segmentu | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Vrátí profil zákazníka, pokud je členem daného segmentu     |
 
 ## <a name="unified-activity"></a>Sjednocená aktivita
 

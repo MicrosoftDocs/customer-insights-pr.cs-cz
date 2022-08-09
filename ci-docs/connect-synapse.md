@@ -1,7 +1,7 @@
 ---
 title: Připojení datového zdroje dat Azure Synapse (Preview)
 description: Použijte databázi v Azure Synapse jako zdroj dat v Dynamics 365 Customer Insights.
-ms.date: 03/25/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: c4ae65613a02df38a30f907dae72d413bf1a702f
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052691"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9206899"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Připojení datového zdroje dat Azure Synapse Analytics (Preview)
 
@@ -66,3 +66,9 @@ Další informace naleznete v tématech [Přehled Azure Synapse](/azure/synapse-
 1. Volitelně vyberte datové entity, pro které chcete profilování dat povolit.
 
 1. Vyberte **Uložit**, použijte svůj výběr a zahajte zpracování dat z nově vytvořeného zdroje dat propojeného s tabulkami databáze jezera v Azure Synapse Analytics. Otevře se stránka **Zdroje dat** s novým zdrojem dat se stavem **Aktualizace**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Načítání dat může nějakou dobu trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce [**Entity**](entities.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646397"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171041"
 ---
 # <a name="subscription-churn-prediction"></a>Predikce ukončení předplatného
 
@@ -121,7 +121,7 @@ Predikce odchodu předplatitelů pomáhá predikovat, zda hrozí odchod zákazn�
    - **Název predikce:** Název predikce zadaný při jejím vytvoření.
    - **Typ predikce:** Typ modelu použitého pro predikci.
    - **Výstupní entita:** Název entity pro uložení výstupu predikce. Můžete najít entitu s tímto názvem v umístění **Data** > **Entity**.    
-     Ve výstupní entitě *ChurnScore* je předpokládaná pravděpodobnost odchodu zákazníků a *IsChurn* je binární štítek založený na *ChurnScore* s prahovou hodnotou 0,5. Výchozí prahová hodnota nemusí ve vašem scénáři fungovat. [Vytvořte nový segment](segments.md#create-a-new-segment) s vaší preferovanou prahovou hodnotou.
+     Ve výstupní entitě *ChurnScore* je předpokládaná pravděpodobnost odchodu zákazníků a *IsChurn* je binární štítek založený na *ChurnScore* s prahovou hodnotou 0,5. Výchozí prahová hodnota nemusí ve vašem scénáři fungovat. [Vytvořte nový segment](segments.md#create-a-segment) s vaší preferovanou prahovou hodnotou.
    - **Predikované pole:** Toto pole je vyplněno pouze u některých typů predikcí a nepoužívá se při predikci odchodu předplatitelů.
    - **Stav:** Aktuální stav běhu predikce.
         - **Ve frontě:** Predikce aktuálně čeká na spuštění dalších procesů.

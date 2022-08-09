@@ -1,5 +1,5 @@
 ---
-title: Navrhované segmenty (Preview)
+title: Navrhované segmenty na základě měr (Preview)
 description: Nechte strojové učení vyhledat nové a zajímavé segmenty na základě atributů zákazníků.
 ms.date: 10/15/2021
 ms.reviewer: mhart
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: 9229bef1c5df06de973aa671ca70c6c8462d51cf
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3f504827029afa12c65ec6f065a62606aaa823f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080919"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170949"
 ---
-# <a name="suggested-segments-preview"></a>Navrhované segmenty (Preview)
+# <a name="suggested-segments-based-on-measures-preview"></a>Navrhované segmenty na základě měr (Preview)
 
-Objevte zajímavé segmenty svých zákazníků pomocí modelu AI. Tato funkce využívající strojové učení navrhuje segmenty na základě měr nebo atributů zákazníka. Může pomoci zlepšit vaše ukazatele KPI nebo lépe porozumět vlivu atributů v kontextu jiných atributů. 
+Objevte zajímavé segmenty svých zákazníků pomocí modelu AI. Tato funkce využívající strojové učení navrhuje segmenty na základě měr nebo atributů zákazníka. Může pomoci zlepšit vaše klíčové ukazatele výkonu (KPI) nebo lépe porozumět vlivu atributů v kontextu jiných atributů.
 
 > [!NOTE]
-> Funkce navrhovaných segmentů používá automatizované prostředky k vyhodnocení dat a vytváření predikcí na základě těchto dat, a proto může být použita jako metoda profilování, jak je tento pojem definován obecným nařízením o ochraně osobních údajů („GDPR“). Vaše použití této funkce ke zpracování dat může podléhat GDPR nebo jiným zákonům či předpisům. Zodpovídáte za to, že použití Dynamics 365 Customer Insights, včetně této funkce, je v souladu se všemi příslušnými zákony a předpisy, včetně zákonů týkajících se soukromí, osobních údajů, biometrických údajů, ochrany údajů a důvěrnosti komunikace.
+> Funkce navrhovaných segmentů využívá automatizované prostředky k vyhodnocování dat a vytváření predikcí na základě těchto dat. Proto ji lze použít jako metodu profilování, jak je tento pojem definován obecným nařízením o ochraně osobních údajů („GDPR“). Vaše použití této funkce ke zpracování dat může podléhat GDPR nebo jiným zákonům či předpisům. Zodpovídáte za to, že použití Dynamics 365 Customer Insights, včetně této funkce, je v souladu se všemi příslušnými zákony a předpisy, včetně zákonů týkajících se soukromí, osobních údajů, biometrických údajů, ochrany údajů a důvěrnosti komunikace.
 
 :::image type="content" source="media/suggested-segments.png" alt-text="Stránka s navrhovanými segmenty, která obsahuje podrobnosti o návrhu v postranním panelu.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Navrhované segmenty pro zlepšení vašich ukazatelů KPI
 
-Jako uživatel Customer Insights pravděpodobně máte řadu [vytvořených opatření](measures.md), které pomáhají sledovat vaše klíčové ukazatele výkonu (KPI). Je důležité pochopit, jak určité atributy ovlivňují tento ukazatel KPI při vytváření segmentů a provádění vysoce cílené kampaně.   
-Například sledujete míru s názvem *TotalSpendPerCustomer* (Celková útrata na zákazníka). Jako firma byste chtěli, aby toto číslo rostlo. Výběr míry jako primárního atributu vám umožní vybrat atributy, které chcete posoudit z hlediska vlivu. Řekněme *úroveň členství*, *období členství* a *povolání*. Aplikace Customer Insights pak může navrhnout segment, který vám řekne, kdo má největší vliv na tuto míru. Například *Účetní*, kteří jsou *zlatými* členy a kteří jsou ve styku s vaší firmou *alespoň pět let*, mají největší vliv na hodnotu *TotalSpendPerCustomer*. Pro každý návrh získáte odhadovanou velikost segmentu. Tyto informace můžete použít k vytvoření kampaní pro cílové publikum.
+Pokud použijete [vytvořené míry](measures.md) pro sledování svých klíčových ukazatelů výkonu, vytvořením segmentů zobrazíte vlivy na klíčové ukazatele výkonu. Tyto informace můžete použít k vedení vysoce cílené kampaně.
+
+Například sledujete míru s názvem *TotalSpendPerCustomer* (Celková útrata na zákazníka). Jako firma byste chtěli, aby toto číslo rostlo. Výběr míry jako primárního atributu umožňuje vybrat atributy, které chcete posoudit z hlediska vlivu. Řekněme *úroveň členství*, *období členství* a *povolání*. Aplikace Customer Insights pak může navrhnout segment, který vám řekne, kdo má největší vliv na tuto míru. Například *Účetní*, kteří jsou *zlatými* členy a kteří jsou ve styku s vaší firmou *alespoň pět let*, mají největší vliv na hodnotu *TotalSpendPerCustomer*. Pro každý návrh získáte odhadovanou velikost segmentu. Tyto informace můžete použít k vytvoření kampaní pro cílové publikum.
 
 ## <a name="understand-what-influences-a-customer-attribute"></a>Co ovlivňuje atribut zákazníka
 
-Jako primární atribut můžete místo míry zvolit atribut zákazníka. Na základě vašeho výběru ovlivňujících atributů vytvoří model AI řadu návrhů, které ukazují, jak vybrané atributy ovlivňují primární atribut.   
-Například vyberete *Člen odměn (ano/ne)* jako primární atribut. *Udržení*, *Povolání* a *Počet lístků podpory* jsou nastaveny jako další ovlivňující atributy. Model AI by mohl navrhnout segmenty, které udávají, že členy odměn jsou většinou IT profesionálové s udržením přes dva roky. Další návrh by mohl zdůraznit, že účetní, kteří byli udrženi déle než jeden rok a mají méně než tři lístky podpory, jsou členy odměn. 
+Jako primární atribut můžete místo míry zvolit atribut zákazníka. Na základě vašeho výběru ovlivňujících atributů vytvoří model AI řadu návrhů, které ukazují, jak vybrané atributy ovlivňují primární atribut.
+
+Například vyberete *Člen odměn (ano/ne)* jako primární atribut. *Udržení*, *Povolání* a *Počet lístků podpory* jsou nastaveny jako další ovlivňující atributy. Model AI by mohl navrhnout segmenty, které udávají, že členy odměn jsou většinou IT profesionálové s udržením přes dva roky. Další návrh by mohl zdůraznit, že účetní, kteří byli udrženi déle než jeden rok a mají méně než tři lístky podpory, jsou členy odměn.
 
 ## <a name="artificial-intelligence-usage"></a>Využití umělé inteligence
 
@@ -43,7 +45,7 @@ Pomocí primárního atributu a ovlivňujících atributů navrhuje algoritmus r
 
 ### <a name="responsible-ai"></a>Zodpovědná AI
 
-Navrhované segmenty vám umožňují vybrat atributy k vytvoření nových segmentů a zpracování vybraných dat. Při výběru atributů, včetně citlivých atributů, jako je rasa, sexuální orientace nebo pohlaví, musíte zajistit, abyste jste tato data mohli zpracovávat. Odpovídáte za dodržování veškerých zákonů platných pro vaši organizaci a za dodržování principů a zásad ochrany osobních údajů vaší organizace.
+Navrhované segmenty umožňují vybrat atributy k vytvoření nových segmentů a zpracování vybraných dat. Při výběru atributů, včetně citlivých atributů, jako je rasa, sexuální orientace nebo pohlaví, musíte zajistit, abyste jste tato data mohli zpracovávat. Odpovídáte za dodržování veškerých zákonů platných pro vaši organizaci a za dodržování principů a zásad ochrany osobních údajů vaší organizace.
 
 ### <a name="different-results-for-primary-attributes-with-categorical-and-numeric-values"></a>Různé výsledky pro primární atributy s kategorickými a číselnými hodnotami
 
@@ -58,53 +60,36 @@ Z kategorického atributu jako *spokojenost zákazníků* nastaveného jako prim
 
 ## <a name="generate-suggested-segments"></a>Generování doporučovaných segmentů
 
-1. Jděte na **Segmenty**.
+1. Přejděte na **Segmenty** a vyberte kartu **Návrhy (Preview)**.
 
-1. Vyberte kartu **Návrhy (preview)**.
+1. Vyberte **Najít nové návrhy** a vyberte **Zlepšení míry/metriky**. Vyberte **Spustit**.
 
-1. Volbou **Získejte nové návrhy** spusťte průvodce.
+   :::image type="content" source="media/suggested-segments-measure.png" alt-text="Výběr zlepšení míry pro navrhované segmenty.":::
 
-1. Jako primární atribut uvolte míru nebo atribut zákazníka a vyberte **Další**.
+1. Jako primární atribut zvolte míru nebo atribut zákazníka a vyberte **Další**.
 
-   :::image type="content" source="media/suggested-segments-primary-attribute.png" alt-text="Výběr primárního atributu pro návrhy segmentů.":::
+1. Vyberte ovlivňující atributy a vyberte **Spustit**.
 
-1. Vyberte ovlivňující atributy a vyberte **Uložit**.
-   
    > [!TIP]
    > Výběr více ovlivňujících atributů zvyšuje šance na vyhodnocení, jak ovlivňují primární atribut. Nezahrnujte atributy, které nemají žádný vliv na primární atribut. Pokud jsou například všichni vaši zákazníci z konkrétní země, nezahrnujte atribut *země*, protože to nebude mít žádný dopad na výstup.
 
-1. V závislosti na počtu profilů zákazníků a vybraných atributů může zpracování vybraných atributů trvat několik minut. 
+V závislosti na počtu profilů zákazníků a vybraných atributů může zpracování vybraných atributů trvat několik minut.
 
-## <a name="view-details-of-a-suggested-segment"></a>Zobrazení podrobností navrhovaného segmentu
+## <a name="manage-suggested-segments"></a>Správa doporučovaných segmentů
 
-Jakmile model AI vygeneruje návrhy, najdete je v seznamu **Segmenty** > **Návrhy (Preview)**.
- 
-Vyberte navrhovaný segment a zkontrolujte podrobnosti tohoto návrhu. Můžete také zkontrolovat hodnoty atributů nebo pravidla, která se model AI naučil, aby navrhl vybraný segment.
+Jděte do sekce **Segmenty** a vyberte katu **Návrhy (Preview)**. V sekci **Návrhy segmentů založené na atributech** vyberte navrhovaný segment pro zobrazení dostupných akcí.
 
-## <a name="save-a-suggestion-as-a-segment"></a>Uložení návrhu jako segmentu
-
-1. Jděte na **Segmenty** > **Návrhy (Preview)**.
-
-1. Vyberte segment, který chcete uložit. 
-
-1. V postranním panelu vyberte **Uložit jako segment**. 
-
-1. Po uložení se segment zobrazí v seznamu segmentů na kartě **Všechny segmenty**. Nyní jej lze [aktualizovat, upravit nebo odstranit jako jakýkoli jiný segment](segments.md).
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Aktualizace nebo úprava sadu návrhů
-
-1. Jděte na **Segmenty** > **Návrhy (Preview)**.
-
-1. Volbou **Aktualizovat návrhy** aktualizujete návrhy při zachování konfigurovaných atributů. Nebo vyberte **Upravit atributy**, abyste upravili nakonfigurované atributy. Systém znovu spustí model AI, vygeneruje návrhy segmentů na základě nejnovějších dat a nahradí aktuální návrhy.
+- **Zobrazte** podrobnosti navrhovaného segmentu a hodnoty atributů nebo pravidla, která se model AI naučil.
+- Volbou **Uložit jako segment** uložíte návrh jako segment. Zobrazí se na kartě **Všechny segmenty** a může být [aktualizován, upraven nebo odstraněn](segments.md).
+- Volbou **Upravit atributy** upravíte nakonfigurované atributy, které nahradí aktuální návrhy.
+- Volbou **Aktualizovat návrhy** aktualizujete návrhy při zachování konfigurovaných atributů.
 
 ## <a name="limitations"></a>Omezení
 
 1. Odhadovaná neshoda velikosti segmentu: Pokud zvolíte primární atribut, který obsahuje prázdné hodnoty, může to ovlivnit odhadovanou velikost segmentu v návrzích segmentů. Při ukládání takového segmentu se skutečná velikost segmentu může lišit od původního odhadu.
- 
+
 2. Primární atributy typu Boolean nefungují: V současné době podporujeme jako primární atribut pouze řetězcové a číselné typy dat.
 
 3. Navrhované segmenty nejsou dostatečně odlišné: Mějte na paměti, že vybrané atributy a rozdělení hodnot těchto atributů ovlivňuje výsledky. Chcete-li dosáhnout různých výsledků, můžete změnit své ovlivňující atributy nebo dokonce svůj primární atribut.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 62969527ceed906ff06fb9be90b972496323ce0a
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
+ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052737"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9142811"
 ---
 # <a name="how-to-create-a-new-environment"></a>Návod: Vytvoření nového prostředí
 
@@ -67,7 +67,6 @@ Můžete si zvolit ze dvou možností:
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>Krok 3: Připojení k Microsoft Dataverse
 
 Krok **Microsoft Dataverse** vám umožní propojit Customer Insights s vaším prostředím Dataverse. Sdílejte data s Dataverse a používejte je v podnikových aplikacích založených na Dataverse, jako je Dynamics 365 Marketing nebo aplikace řízené modelem v Power Apps.
-
 
 Pokud nemáte vlastní prostředí Dataverse, nechte toto pole prázdné a my vám ho vytvoříme.
 

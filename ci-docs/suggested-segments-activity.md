@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: e98aea3b3f3a2c4788346deab1b7ad7d1167110d
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: df4f5f4b5c9a3ad66d57a6b349e18a0d714aff62
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054332"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170581"
 ---
-# <a name="suggested-segments-based-on-activity-data-preview"></a>Navrhované segmenty na základě dat aktivity (náhled)
+# <a name="suggested-segments-based-on-activity-preview"></a>Navrhované segmenty na základě aktivity (náhled)
 
 Objevte zajímavé segmenty svých zákazníků na základě údajů o aktivitě zákazníků, které jsou předány do Customer Insights. Příkladem údajů o aktivitě jsou transakce, doba trvání podpory hovoru, nákupy nebo vrácení. Chcete-li navrhnout segmenty, data aktivity se analyzují z hlediska aktuálnosti, frekvence a peněžní hodnoty (nebo trvání). Případně můžete generovat [navrhované segmenty ke zlepšení míry nebo lepšímu pochopení toho, co ovlivňuje atribut](suggested-segments.md).
 
@@ -35,33 +35,31 @@ S volbou [údaje o aktivitě](activities.md) dostupnou v Customer Insights můž
 - zákazníci, kteří často komunikují s vaší firmou  
 
 Pokud podnikáte v maloobchodě, můžete zjistit, kteří zákazníci generují největší tržby, a odměnit je kupónem. Nebo můžete identifikovat příležitostné zákazníky a nabídnout jim, aby se připojili k programu odměn, aby vaši firmu navštěvovali častěji.
-Pokud podnikáte ve zdravotnictví a poskytujete veřejnou zdravotní péči, je vaším cílem minimalizovat výdaje jednotlivých pacientů. Způsobem, jak toho dosáhnout, může být snížení opakujících se návštěv poskytováním nejlepší možné péče při co nejmenším počtu návštěv. V tomto případě je vaším cílem udržet nízkou frekvenci návštěv a minimalizovat opakující se náklady pro pacienty. Nebo můžete identifikovat segmenty pacientů, kteří mají časté schůzky a vysoké opakující se náklady, a analyzovat tyto případy s cílem zlepšit léčbu jednotlivce. 
+Pokud poskytujete veřejnou zdravotní péči a vaším cílem je minimalizovat náklady na jednotlivé pacienty, můžete se pokusit omezit opakované návštěvy tím, že poskytnete nejlepší možnou péči při co nejmenším počtu návštěv. V tomto případě je vaším cílem udržet nízkou frekvenci návštěv a minimalizovat opakující se náklady pro pacienty. Nebo můžete identifikovat segmenty pacientů, kteří mají časté schůzky a vysoké opakující se náklady, a analyzovat tyto případy s cílem zlepšit léčbu jednotlivce.
 
 ## <a name="required-data"></a>Požadovaná data
 
-Návrhy se generují na základě vybraných vstupních údajů. 
+Návrhy se generují na základě vybraných vstupních údajů.
 
-- Profily zákazníků: Všichni zákazníci nebo členové konkrétního segmentu. 
+- Profily zákazníků: Všichni zákazníci nebo členové konkrétního segmentu.
 
 - Časové období: minulý měsíc, minulý rok nebo jakýkoli vlastní časový rámec.
 
 - Typ aktivity: nákupy, maloobchodní transakce, online transakce, případy zákaznické podpory, předplatné atd.  
 
-- Entita v Customer Insights, která obsahuje data aktivity: entita UnifiedActivity nebo entita pro konkrétní aktivitu. 
+- Entita v Customer Insights, která obsahuje data aktivity: entita UnifiedActivity nebo entita pro konkrétní aktivitu.
 
 - Zahrnuté dimenze: Aktuálnost, frekvence nebo peněžní dimenze, v závislosti na vašich obchodních požadavcích.
 
 ## <a name="generate-suggested-segments"></a>Generování doporučovaných segmentů
 
-1. Jděte na **Segmenty**.
+1. Přejděte na **Segmenty** a vyberte kartu **Návrhy (Preview)**.
 
-1. Vyberte kartu **Návrhy (preview)**.
-
-1. Vyberte **Najít nové návrhy** a vyberte **Zobrazit nebo očekávat chování zákazníků**. Vyberte **Start** ke spuštění řízeného prostředí.
+1. Vyberte **Najít nové návrhy** a vyberte **Zobrazit nebo očekávat chování zákazníků**. Vyberte **Spustit**.
 
    :::image type="content" source="media/suggested-segments-activity-wizard.png" alt-text="První krok průvodce konfigurací pro navrhovaný segment na základě aktivity.":::
 
-1. Zadejte požadovaná vstupní data a pokračujte výběrem **Další**.
+1. Zadejte požadovaná vstupní data a vyberte **Další**.
 
    - Vyberte zákazníky: Zahrňte všechny zákazníky nebo konkrétní segment.
    - Zvolte aktivitu: Vyberte typ aktivity a entity popisující aktivitu.
@@ -69,32 +67,17 @@ Návrhy se generují na základě vybraných vstupních údajů.
 
 1. Zkontrolujte svůj vstup a vyberte **Spustit** ke spuštění modelu a generování návrhů.
 
-1. V závislosti na počtu profilů zákazníků a vybraných aktivit může dokončení trvat několik minut. 
+V závislosti na počtu profilů zákazníků a vybraných aktivit může dokončení trvat několik minut.
 
-Po vygenerování návrhů je můžete filtrovat podle dimenze nebo hodnoty, která vás nejvíce zajímá. 
+Po vygenerování návrhů je můžete filtrovat podle dimenze nebo hodnoty, která vás nejvíce zajímá.
 
-## <a name="view-details-of-a-suggested-segment"></a>Zobrazení podrobností navrhovaného segmentu
+## <a name="manage-suggested-segments"></a>Správa doporučovaných segmentů
 
-Jakmile jsou návrhy vygenerovány, najdete je v seznamu **Segmenty** > **Návrhy (náhled)** v sekci **Návrhy založené na aktivitě**.
+Jděte do sekce **Segmenty** a vyberte katu **Návrhy (Preview)**. V sekci **Návrhy segmentů založené na aktivitách** vyberte navrhovaný segment pro zobrazení dostupných akcí.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Rozšířený boční panel zobrazující podrobná data navrhovaného segmentu.":::
-
-Vyberte **Zobrazit návrh** v navrhovaném segmentu pro zobrazení podrobností o tomto segmentu. Postranní panel poskytuje podrobnosti, jako je rozsah každé dimenze ve srovnání s cílovou skupinou. Rovněž zdůrazňuje počet potenciálních prvků v segmentu a odpovídající procento z celkového počtu zákazníků. Pokud si chcete ponechat návrh jako segment, vyberte **Vytvořit segment**.    
-
-## <a name="save-a-suggestion-as-a-segment"></a>Uložení návrhu jako segmentu
-
-1. Jděte na **Segmenty** > **Návrhy (Preview)**.
-
-1. Vyberte segment, který chcete uložit. 
-
-1. V postranním panelu vyberte **Vytvořit segment**. 
-
-1. Po uložení segmentu se zobrazí v seznamu segmentů na kartě **Všechny segmenty**. Nyní to může být [obnoveno nebo odstraněno jako jakýkoli jiný segment](segments.md). Nelze upravit podrobnosti segmentu. Můžete však změnit vstupní kritéria pro návrhy a generovat různé návrhy.
-
-## <a name="refresh-or-edit-a-set-of-suggestions"></a>Aktualizace nebo úprava sadu návrhů
-
-1. Jděte na **Segmenty** > **Návrhy (náhled)** a vyhledejte segment v části **Návrhy na základě aktivity**.
-
-1. Volbou **Aktualizovat návrhy** aktualizujete návrhy při zachování konfigurovaných atributů. Nebo vyberte **Upravit návrhy** pro úpravu nakonfigurovaných atributů. Systém proces znovu spustí, vygeneruje návrhy segmentů na základě nejnovějších dat a nahradí aktuální návrhy.
+- Volbou **Zobrazit návrh** zobrazíte podrobnosti daného segmentu, jako je rozsah každé dimenze ve srovnání s cílovou skupinou. Rovněž zdůrazňuje počet potenciálních prvků v segmentu a odpovídající procento z celkového počtu zákazníků.
+- Volbou **Vytvořit segment** uložíte návrh jako segment. Zobrazí se na kartě **Všechny segmenty** a může být [aktualizován nebo odstraněn](segments.md). Nelze upravit podrobnosti segmentu. Můžete však změnit vstupní kritéria pro návrhy a generovat různé návrhy.
+- Volbou **Upravit návrhy** upravíte nakonfigurované atributy, které nahradí aktuální návrhy.
+- Volbou **Aktualizovat návrhy** aktualizujete návrhy při zachování konfigurovaných atributů.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

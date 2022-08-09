@@ -1,52 +1,54 @@
 ---
 title: Export segmentů do Klaviyo (Preview)
 description: Naučte se, jak nakonfigurovat propojení a exportovat ho do Klaviyo.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e2b60d9818a753e81e69f2bee6b1663e1840cb10
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051307"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196754"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Export segmentů do Klaviyo (Preview)
 
 Exportujte segmenty sjednocených profilů zákazníků do Klaviyo a použijte je pro marketingové aktivity.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
--   Máte [účet Klaviyo](https://www.klaviyo.com/) a odpovídající pověření správce.
--   [Nakonfigurovali jste segmenty](segments.md) v Customer Insights.
--   Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
+- [Účet Klaviyo](https://www.klaviyo.com/) a odpovídající pověření správce.
+- [Klíč rozhraní API služby Klaviyo](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys).
+- [ID seznamu Klaviyo](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).
+- [Nakonfigurované segmenty](segments.md) v Customer Insights.
+- Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Do Klaviyo můžete najednou exportovat až 100 000 zákaznických profilů.
-- Export do Klaviyo je omezen na segmenty.
-- Export až 1 milionu zákaznických profilů do Klaviyo může trvat až 20 minut. 
-- Počet zákaznických profilů, které můžete exportovat do Klaviyo, závisí na vaší smlouvě s Klaviyo a je jí omezen.
+- Až 1 milion zákaznických profilů na export do služby Klaviyo, což může trvat až 20 minut. Počet zákaznických profilů, které můžete exportovat do služby Klaviyo, závisí na vaší smlouvě s Klaviyo.
+- Pouze segmenty.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Nastavení připojení ke Klaviyo
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Přejděte na **Správce** > **Propojení**.
 
-1. Vyberte **Přidat připojení** a zvolte **Klaviyo** pro konfiguraci připojení.
+1. Vyberte **Přidat připojení** a vyberte **Klaviyo**.
 
 1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
 
-1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Zvolte, kdo může toto připojení používat. Ve výchozím nastavení jsou to pouze správci. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Poskytněte svůj [klíč API rozhraní Klaviyo](https://help.klaviyo.com/hc/articles/115005062267-How-to-Manage-Your-Account-s-API-Keys) a pokračujte k přihlášení. 
+1. Poskytněte svůj klíč API rozhraní Klaviyo a pokračujte k přihlášení.
 
-1. Vyberte **Souhlasím** pro potvrzení **Ochrany osobních údajů a dodržování předpisů**.
+1. Zkontrolujte část [Ochrana osobních údajů a dodržování předpisů](connections.md#data-privacy-and-compliance) a vyberte **Souhlasím**.
 
-1. Vyberte **Připojit** k inicializaci připojení ke Klaviyo.
+1. Volbou **Připojit** inicializujte připojení ke službě Braze.
 
 1. Vyberte **Ověřit pomocí Klaviyo** a zadejte své přihlašovací údaje správce pro Klaviyo.
 
@@ -56,27 +58,24 @@ Exportujte segmenty sjednocených profilů zákazníků do Klaviyo a použijte j
 
 ## <a name="configure-an-export"></a>Konfigurace exportu
 
-Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Přejděte na **Data** > **Exporty**.
 
-1. Pokud chcete vytvořit nový export, vyberte **Přidat cíl**.
+1. Vyberte **Přidat export**.
 
-1. V poli **Připojení pro export** zvolte připojení z části Klaviyo. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
+1. V poli **Připojení pro export** zvolte připojení z části Klaviyo. Pokud není k dispozici propojení , kontaktujte správce.
 
-1. Zadejte [**ID seznamu Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
+1. Zadejte název exportu.
 
-3. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je potřeba pro export segmentů do Klaviyo.
+1. Zadejte **ID seznamu Klaviyo**.
 
-1. Zvolte **Uložit**.
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka.
 
-Uložení exportu nespustí export okamžitě.
+1. Vyberte segmenty, které chcete exportovat.
 
-Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
+1. Vyberte **Uložit**.
 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
-
-Když povolíte Dynamics 365 Customer Insights přenášet data do Klaviyo, povolíte tím přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese takové údaje podle vašeho pokynu, ale vy jste zodpovědní za zajištění, že Klaviyo bude splňovat veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Tuto funkci cíle exportu může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

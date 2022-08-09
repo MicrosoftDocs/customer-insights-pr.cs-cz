@@ -1,7 +1,7 @@
 ---
 title: Práce s daty Customer Insights v Microsoft Dataverse
 description: Přečtěte si, jak propojit Customer Insights a Microsoft Dataverse a porozumějte výstupním entitám, které jsou exportovány do Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011512"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153396"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práce s daty Customer Insights v Microsoft Dataverse
 
@@ -31,13 +31,25 @@ Připojení k prostředí Dataverse vám také umožňuje [ingestovat data z mí
 - K prostředí Dataverse, které chcete připojit, již není přiřazeno žádné jiné prostředí Customer Insights. Naučte se, jak [odebrat existující připojení k prostředí Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
 - Prostředí Microsoft Dataverse se může připojit pouze k jednomu účtu úložiště. Platí pouze v případě, že nakonfigurujete prostředí k [použití Azure Data Lake Storage](own-data-lake-storage.md).
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Nárok kapacity úložiště Dataverse
+
+Předplatné Customer Insights vás opravňuje k dodatečné kapacitě pro stávající [kapacitu úložiště Dataverse](/power-platform/admin/capacity-storage) vaší organizace. Přidaná kapacita závisí na počtu profilů, které vaše předplatné používá.
+
+**Příklad:**
+
+Předpokládejme, že získáte 15 GB úložiště databáze a 20 GB úložiště souborů na 100 000 zákaznických profilů. Pokud vaše předplatné zahrnuje 300 000 zákaznických profilů, celkovou kapacitu úložiště bude tvořit 45 GB (3 x 15 GB) úložiště databáze a 60 GB (3 x 20 GB) úložiště souborů. Podobně pokud máte B2B předplatné s 30 000 účty, bude celkovou kapacitu tvořit 45 GB (3 x 15 GB) úložiště databáze a 60 GB (3 x 20 GB) úložiště souborů.
+
+Kapacita protokolů není pro vaši organizaci přírůstková a pevná.
+
+Další podrobné informace o nárocích na kapacitu najdete v [příručce licencování Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Připojení prostředí Dataverse ke Customer Insights
 
 Krok **Microsoft Dataverse** vám umožní propojit Customer Insights s vaším prostředím Dataverse, když [vytváříte prostředí Customer Insights](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="sdílení dat s Microsoft Dataverse automaticky povolenémo pro nové prostředí sítě.":::
 
-Správci mohou nakonfigurovat Customer Insights pro připojení existujícího prostředí Dataverse. Poskytnutím adresy URL k prostředí Dataverse připojuje se k jejich novému prostředí Customer Insights.
+Správci mohou nakonfigurovat Customer Insights pro připojení existujícího prostředí Dataverse. Poskytnutím adresy URL k prostředí Dataverse jej připojí k novému prostředí Customer Insights. Po navázání spojení mezi Customer Insights a Dataverse neměňte název organizace pro prostředí Dataverse. Název organizace je použit v adrese URL pro Dataverse a změněný název přeruší spojení s Customer Insights.
 
 Pokud nechcete použít existující prostředí Dataverse, systém vytvoří nové prostředí pro data Customer Insights ve vašem klientovi. [Správci Power Platform mohou kontrolovat, kdo může vytvářet prostředí](/power-platform/admin/control-environment-creation). Pokud nastavujete nové prostředí Customer Insights a správce zakázal vytváření prostředí Dataverse pro všechny kromě správců, nemusí se vám podařit vytvořit nové prostředí.
 
@@ -84,7 +96,7 @@ Chcete-li spustit skripty PowerShellu, musíte nejprve odpovídajícím způsobe
 
     2. `ByolSetup.ps1`
         - Pro spuštění tohoto skriptu potřebujete oprávnění *Vlastník dat v objektech blob služby Storage* na úrovni účtu úložiště / kontejneru nebo vám jej tento skript vytvoří. Přiřazení vaší role lze po úspěšném spuštění skriptu ručně odebrat.
-        - Tento skript PowerShell přidá požadované řízení přístupu založené na roli (RBAC) pro službu Microsoft Dataverse a všechny podnikové aplikace Dataverse. Aktualizuje také seznam řízení přístupu (ACL) v kontejneru CustomerInsights pro skupiny zabezpečení vytvořené pomocí skriptu `CreateSecurityGroups.ps1`. Skupina Přispěvatel bude mít oprávnění *rwx* a skupina Čtenář bude mít pouze oprávnění *rx*.
+        - Tento skript PowerShell přidá požadované řízení přístupu založené na roli pro službu Microsoft Dataverse a všechny podnikové aplikace Dataverse. Aktualizuje také seznam řízení přístupu (ACL) v kontejneru CustomerInsights pro skupiny zabezpečení vytvořené pomocí skriptu `CreateSecurityGroups.ps1`. Skupina Přispěvatel bude mít oprávnění *rwx* a skupina Čtenář bude mít pouze oprávnění *rx*.
         - Spusťte tento skript PowerShell v prostředí Windows PowerShell zadáním ID předplatného Azure obsahujícího vaše úložiště Azure Data Lake Storage, název účtu úložiště, název skupiny zdrojů a hodnoty ID skupin zabezpečení Čtenář a Přispěvatel. Otevřete skript PowerShell v editoru a prohlédněte si další informace a implementovanou logiku.
         - Po úspěšném spuštění skriptu zkopírujte výstupní řetězec. Výstupní řetězec vypadá takto: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 

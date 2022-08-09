@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646477"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171087"
 ---
 # <a name="transaction-churn-prediction"></a>Predikce úbytku transakcí
 
@@ -240,7 +240,7 @@ Přidejte seznam svých firemních zákazníků a účtů, které chcete použí
    - **Název predikce**: Název predikce poskytnutý při jeho vytvoření.
    - **Typ predikce**: Typ modelu použitého pro predikci
    - **Výstupní entita**: Název entity pro uložení výstupu predikce. Můžete najít entitu s tímto názvem v umístění **Data** > **Entity**.
-     Ve výstupní entitě *ChurnScore* je předpokládaná pravděpodobnost odchodu zákazníků a *IsChurn* je binární štítek založený na *ChurnScore* s prahovou hodnotou 0,5. Výchozí prahová hodnota nemusí ve vašem scénáři fungovat. [Vytvořte nový segment](segments.md#create-a-new-segment) s vaší preferovanou prahovou hodnotou.
+     Ve výstupní entitě *ChurnScore* je předpokládaná pravděpodobnost odchodu zákazníků a *IsChurn* je binární štítek založený na *ChurnScore* s prahovou hodnotou 0,5. Výchozí prahová hodnota nemusí ve vašem scénáři fungovat. [Vytvořte nový segment](segments.md#create-a-segment) s vaší preferovanou prahovou hodnotou.
      Ne všichni zákazníci jsou nutně aktivní zákazníci. Někteří z nich možná dlouho neměli žádnou aktivitu a jsou považováni za ty, u nichž došlo k úbytku, již na základě vaší definice úbytku. Předpovídání rizika úbytku zákazníků, kteří již ubyli, není užitečné, protože nejsou cílová skupina, který nás zajímá.
    - **Predikované pole**: Toto pole je vyplněno pouze pro některé typy predikcí a nepoužívá se v predikci odchodu zákazníků.
    - **Stav**: Stav spuštění predikce.

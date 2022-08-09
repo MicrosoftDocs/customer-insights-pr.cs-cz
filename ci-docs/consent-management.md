@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947493"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188039"
 ---
 # <a name="use-customer-consent"></a>Použití souhlasu zákazníka
 
@@ -50,13 +50,13 @@ Příklad tabulky jednoduché databáze souhlasů s více možnostmi souhlasu:
 
 ## <a name="import-and-unify-consent-data"></a>Import a sjednocení údajů o souhlasu
 
-Údaje o souhlasu můžete importovat stejným způsobem, jakým zpracováváte jiné zdroje dat do Customer Insights. Další informace o podporovaných zdrojích dat a způsobu jejich importu naleznete v části [Přehled zdrojů dat](data-sources.md).
+Údaje o souhlasu importujete stejným způsobem, jakým zpracováváte jiné zdroje dat do Customer Insights. Další informace o podporovaných zdrojích dat a způsobu jejich importu naleznete v části [Přehled zdrojů dat](data-sources.md).
 
 Další informace o sjednocení zdrojů dat naleznete v části [Přehled sjednocení dat](data-unification.md).
 
 ## <a name="use-consent-data"></a>Použití dat souhlasu
 
-Jakmile budou údaje o vašem souhlasu součástí vašich sjednocených zákaznických profilů, můžete je použít v Customer Insights. Vytvořte například segment s pravidlem, které zajistí, že budete respektovat preference ochrany soukromí a dat vašich zákazníků. Pravidla podporující předvolby souhlasu se používají k vyloučení uživatelů ze segmentu na základě atributů profilu. Přidání pravidla do segmentu, který vylučuje profily zákazníků, kteří neposkytli souhlas s kontaktováním.
+Jakmile budou údaje o vašem souhlasu součástí vašich sjednocených zákaznických profilů, můžete je použít v Customer Insights. Vytvořte například segment s pravidlem, které zajistí, že budete respektovat preference ochrany soukromí a dat vašich zákazníků. Pravidla podporující předvolby souhlasu se používají k vyloučení uživatelů ze segmentu na základě atributů profilu. Přidejte pravidlo do segmentu, který vylučuje profily zákazníků, kteří neposkytli souhlas s kontaktováním.
 
 S odkazem na ukázkovou tabulku výše by segment mohl obsahovat toto pravidlo: `Consent option=Newsletter & Consent value=True`. Výsledkem této konfigurace je segment, který respektuje předvolby kontaktu pro zasílání zpravodaje.
 
@@ -71,3 +71,5 @@ Je důležité udržovat stav souhlasu pro vaše zákazníky aktuální. Plánov
 Jinými slovy, ujistěte se, že zdrojová data, která se importují do Customer Insights, mají vždy nejnovější informace.
 
 Více informací viz [Ruční obnovení segmentů](segments.md#refresh-segments) nebo [konfigurace plánované aktualizace](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

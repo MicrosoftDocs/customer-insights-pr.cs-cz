@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051675"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170765"
 ---
 # <a name="create-measures-from-templates"></a>Vytvoření měr ze šablon
 
-K jejich vytváření můžete použít předdefinované šablony běžně používaných [měr](measures.md). Podrobné popisy šablon a průvodce vám pomohou s efektivním vytvořením míry. Šablony vycházejí z mapovaných dat entity *Sjednocená aktivita*. Ujistěte se tedy, že jste nakonfigurovali [aktivity zákazníků](activities.md) před vytvořením míry ze šablony.
+K jejich vytváření můžete použít předdefinované šablony běžně používaných [měr](measures.md). Šablony vycházejí z mapovaných dat entity *Sjednocená aktivita*. Ujistěte se tedy, že jste nakonfigurovali [aktivity zákazníků](activities.md) před vytvořením míry ze šablony.
 
-Chcete-li vytvořit vlastní míry, podívejte se do části [Pomocí nástroje pro tvorbu míry vytvořte míry od začátku](measure-builder.md).
+Šablony měr jsou podporovány pouze v prostředích pro **jednotlivé zákazníky**. Chcete-li vytvořit vlastní míry nebo vytvořit míry pro B2B, podívejte se do části [Použití tvůrce měr](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Jednotliví spotřebitelé (B2C)](#tab/b2c)
-
-Dostupné šablony měr: 
+Dostupné šablony měr:
 - Průměrná hodnota transakce
 - Celková hodnota transakce
 - Průměrné denní výnosy
+- Průměrné měsíční výnosy
 - Průměrné roční výnosy
 - Počet transakcí
 - Získané věrnostní body
@@ -57,21 +56,22 @@ Dostupné šablony měr:
 
 1. Vyberte **Hotovo**.
 
-1. V části **Nastavit časové období** definujte časový rámec dat, která se mají použít. Vyberte, zda má nová míra pokrývat celou datovou sadu, výběrem **Kdykoli**, nebo zda se má zaměřovat na **Specifické časové období**.
+1. V části **Nastavit časové období** definujte časový rámec dat. Vyberte, zda má nová míra pokrývat celou datovou sadu, výběrem **Kdykoli**, nebo zda se má zaměřovat na **Specifické časové období**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Screenshot zobrazující část časového období při konfiguraci míry ze šablony.":::
 
 1. V další části vyberte **Přidat data** pro výběr aktivit a namapování příslušných dat z entity *Sjednocená aktivita*.
 
-    1. Krok 1 ze 2: V části **Typ aktivity** vyberte typ entity, kterou chcete použít. Pro **Aktivity** vyberte entity, které chcete mapovat.
-    1. Krok 2 ze 2: Vyberte atribut z entity *Sjednocená aktivita* pro komponentu požadovanou vzorcem. Například pro průměrnou hodnotu transakce je to atribut představující hodnotu transakce. Pro **Časové razítko aktivity** vyberte atribut z entity Unified Activity, která představuje datum a čas aktivity.
-   
-1. Jakmile je mapování dat úspěšné, můžete vidět stav jako **Kompletní** a název mapovaných aktivit a atributů.
+    1. Krok 1 ze 2: V části **Typ aktivity** vyberte typ entity, kterou chcete použít. Pro **Aktivity** vyberte entity, které chcete mapovat, a poté vyberte **Další**.
+    1. Krok 2 ze 2: Vyberte atribut z entity *Sjednocená aktivita* pro komponentu požadovanou vzorcem. Například pro průměrnou hodnotu transakce je to atribut představující hodnotu transakce. Pro **Časové razítko aktivity** vyberte atribut z entity *Sjednocená aktivita*, která představuje datum a čas aktivity.
+    1. Vyberte **Uložit**.
 
-1. Nyní můžete vybrat **Spustit** k výpočtu výsledků míry. Chcete-li to upřesnit později, vyberte **Uložit koncept**.
+    Když je mapování dat úspěšné, stav se zobrazí jako **Kompletní** a zobrazí se název mapovaných aktivit a atributů.
 
-# <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
+1. Vyberte **Spustit** k výpočtu výsledků míry. Vyberte **Uložit koncept**, chcete-li zachovat aktuální konfiguraci a spustit míru později. Zobrazí se stránka **Míry**.
 
-Tato funkce je k dispozici pouze pro míry vytvořené v prostředích s individuálním zákazníkem jako primární cílovou skupinou.
+## <a name="next-step"></a>Další krok
 
----
+Pomocí existujících měr vytvoříte [segment zákazníka](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

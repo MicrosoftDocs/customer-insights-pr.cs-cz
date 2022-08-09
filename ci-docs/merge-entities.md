@@ -14,16 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081167"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139649"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Sjednocení zákaznických polí pro sjednocení dat
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 V tomto kroku procesu sjednocení vyberte a vylučte atributy, které chcete sloučit v rámci entity sjednoceného profilu. Pokud například tři entity měly e-mailová data, můžete si ponechat všechna tři samostatná pole e-mailu nebo je sloučit do jednoho pole e-mailu pro sjednocený profil. Některé atributy jsou systémem automaticky kombinovány. Můžete vytvořit stabilní a jedinečná ID zákazníků a seskupovat související profily do clusteru.
 

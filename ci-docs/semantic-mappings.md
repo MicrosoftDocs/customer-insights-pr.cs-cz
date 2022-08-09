@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081208"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183623"
 ---
 # <a name="semantic-mappings-preview"></a>Sémantická mapování (Preview)
 
@@ -32,13 +32,13 @@ Sémantická mapování vám umožňují mapovat data o vaší neaktivitě na p�
 
 1. V kroku **Data entity** nastavte hodnoty pro následující pole:
 
-   - **Název mapování sémantické entity**: Zadejte název pro mapování sémantické entity.
-   - **Zdrojová entita**: Vyberte entitu, která obsahuje kontaktní údaje.
-   - **Primární klíč**: Umožňuje vybrat pole, které jedinečně identifikuje záznam kontaktu. Nemělo by obsahovat žádné duplicitní hodnoty, prázdné hodnoty nebo chybějící hodnoty.
+   - **Název mapování sémantické entity**: Název mapování sémantické entity.
+   - **Zdrojová entita**: Entita, která obsahuje kontaktní údaje.
+   - **Primární klíč**: Pole, které jedinečně identifikuje záznam kontaktu. Nemělo by obsahovat žádné duplicitní hodnoty, prázdné hodnoty nebo chybějící hodnoty.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard1.png" alt-text="Nastavte mapování sémantických entit pomocí názvu, zdrojové entity a primárního klíče.":::
 
-1. Pokračujte kliknutím na tlačítko **Další**.
+1. Vyberte **Další**.
 
 1. V kroku **Vztahy** nakonfigurujte podrobnosti tak, aby se data o vašem kontaktu připojila k odpovídajícímu záznamu zákaznického účtu. Tento krok vizualizuje spojení mezi entitami.  
 
@@ -46,7 +46,7 @@ Sémantická mapování vám umožňují mapovat data o vaší neaktivitě na p�
 
    1. Výběrem možnosti **Přidat vztah** nakonfigurujte vztah.
    1. Vyberte atribut ze své zdrojové entity, která spojuje vaši kontaktní entitu s jinou entitou.
-   1. Vyberte entitu, ke které chcete připojit svou kontaktní entitu. Entitu si můžete vybrat v sekci **Účetní entity** nebo **Zprostředkující entita**. Pokud vyberete zprostředkující entitu, musíte definovat druhý vztah pro připojení k vaší cílové entitě účtu.
+   1. Vyberte entitu, ke které chcete připojit svou kontaktní entitu. Vyberte entitu v sekci **Entity obchodního vztahu** nebo **Zprostředkující entita**. Pokud vyberete zprostředkující entitu, definujte druhý vztah pro připojení k vaší cílové entitě účtu.
 
       :::image type="content" source="media/Semantic_Mapping_Wizard2.png" alt-text="Vyberte buď entitu účtu, nebo zprostředkující entitu.":::
 
@@ -55,43 +55,38 @@ Sémantická mapování vám umožňují mapovat data o vaší neaktivitě na p�
 
    > [!NOTE]
    > Můžete nakonfigurovat více vztahů mezi entitou kontaktu a jinými entitami účtu se zprostředkujícími entitami.
-   >  :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Vizualizace různých vztahů propojuje entity kontaktu s entitami účtu.":::
+   
+     :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Vizualizace různých vztahů propojuje entity kontaktu s entitami účtu.":::
 
-1. Vyberte **Další**, až budete s konfigurací vztahu hotovi.
+1. Vyberte **Další**.
 
 1. V kroku **Nastavit sémantický typ** vyberte **Sémantický typ**. V současné době existuje jeden **Sémantický typ** nazvaný *ContactProfile*.
 
-1. Namapujte data na *sémantický typ* **ContactProfile** pro zobrazená pole.
-   - Povinné pole: Contact ID
-   - Volitelná pole: Křestní jméno, Příjmení, Datum narození, Pohlaví, Primární e-mail a Primární telefon
+1. Namapujte své ID kontaktu na sémantický typ *ContactProfile* **ID kontaktu**. Volitelně namapujte další pole, například křestní jméno, příjmení, pohlaví nebo e-mail.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard5.png" alt-text="Namapujte atributy svých kontaktních údajů na zadaná povinná a volitelná pole.":::
 
-1. Pokračujte kliknutím na tlačítko **Další**.
+1. Vyberte **Další**.
 
-1. V kroku **Recenze** se podívejte na konfiguraci sémantického mapování. Vyyberte **Upravit** pro odpovídající sekci k provedení změn.
+1. V kroku **Kontrola** zkontrolujte konfiguraci sémantického mapování. Chcete-li provést změny, vyberte **Upravit** pro odpovídající sekci.
 
-1. Vyberte **Uložit** pro uložení nového **Sémantického mapování**.
+1. Vyberte **Uložit**.
 
-1. Po uložení můžete vybrat proces **Spustit** ke zpracování sémantického mapování nebo můžete vybrat **Zavřít** pro uložení sémantického mapování bez zpracování.
-
-1. Chcete -li sémantické mapování spustit později, vyberte sémantické mapování a vyberte **Obnovit**.
+1. Pro zpracování sémantického mapování vyberte **Spustit**. Nebo volbou **Zavřít** uložte vaše sémantické mapování bez jeho zpracování. Chcete-li jej spustit později, vyberte sémantické mapování a vyberte **Aktualizovat**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Správa stávajících sémantických mapování
 
-Na kartě **Data** > **Sémantická mapování (náhled)** můžete zobrazit všechna uložená sémantická mapování a spravovat je. Každé sémantické mapování je reprezentováno samostatným řádkem. Najdete podrobnosti o zdrojové entitě, sémantickém typu, typu mapování a jeho stavu.
+Jděte na **Data** > **Sémantická mapování (Preview)** pro zobrazení uložených sémantických mapování, jejich zdrojových entit, sémantického typu, typu mapování a stavu.
 
 :::image type="content" source="media/semantic-mapping-options.png" alt-text="Možnosti správy sémantických mapování.":::
 
-- **Upravit**: Otevře konfiguraci nastavení sémantického mapování v kroku přezkoumání. Aktuální konfiguraci můžete změnit. Vyberte **Uložit** a **Spustit** ke zpracování změn.
-
-- **Obnovit**: Obnoví vybrané sémantické mapování nejaktuálnějšími daty z entit, které jsou součástí jeho konfigurace. Obnovením jakéhokoli daného sémantického mapování se obnoví všechna sémantická mapování stejného typu.
-
-- **Přejmenovat**: Otevře dialog, kde můžete zadat jiný název pro vybrané sémantické mapování. Výběrem možnosti **Uložit** se vaše změny uplatní.
-
-- **Odstranit**: Otevře dialog pro potvrzení odstranění vybraného sémantického mapování. Můžete také odstranit více než jedno sémantické mapování najednou výběrem sémantického mapování a ikonou odstranění. Vyberte **Odstranit** pro potvrzení odstranění.
+Vyberte sémantické mapování pro zobrazení dostupných akcí.
+- **Upravte** aktuální konfiguraci. Vyberte **Uložit** a **Spustit** ke zpracování změn.
+- **Aktualizujte** sémantické mapování, aby obsahovalo nejnovější data. Obnovením jakéhokoli daného sémantického mapování se obnoví všechna sémantická mapování stejného typu.
+- **Odeberte** sémantické mapování. Vyberte **Uložit**.
+- **Odstraňte** sémantické mapování. Chcete-li odstranit více než jedno sémantické mapování najednou, vyberte sémantické mapování a ikonu odstranění. Vyberte **Odstranit** pro potvrzení odstranění.
 
 ## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Pomocí mapování sémantické entity ContactProfile vytvořte aktivity na úrovni kontaktu
 
@@ -100,7 +95,7 @@ Po vytvoření mapování sémantické entity *ContactProfile*, můžete zachyti
    > [!NOTE]
    > Aby aktivity na úrovni kontaktu fungovaly, musíte mít oba atributy **AccountID** a **ContactID** pro každý záznam v datech aktivity.
 
-1. [Definujte mapování sémantické entity *ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) a spusťte sémantické mapování.
+1. [Definujte sémantické mapování entity *ContactProfile*](#define-a-contactprofile-semantic-entity-mapping) a spusťte sémantické mapování.
 
 1. Přejděte na **Data** > **Aktivity**.
 
@@ -119,14 +114,14 @@ Po vytvoření mapování sémantické entity *ContactProfile*, můžete zachyti
 
 1. Spusťte mapování aktivit.
 
-1. Vaše aktivity na úrovni kontaktu budou nyní viditelné na časové ose zákazníka.
+1. Po spuštění mapování aktivity na úrovni kontaktu vyberte **Zákazníci**. Aktivity na úrovni kontaktu se zobrazí na časové ose zákazníka.
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Konečný výsledek po konfiguraci kontaktních aktivit":::
 
 ### <a name="contact-level-activity-timeline-filtering"></a>Filtrování časové osy aktivity na úrovni kontaktu
 
-Po konfiguraci mapování aktivity na úrovni kontaktu a jejím spuštění se aktualizuje časová osa aktivit vašich zákazníků. Obsahuje jejich ID nebo jména v závislosti na konfiguraci entity *ContactProfile* pro aktivity, které prováděli. Aktivity můžete filtrovat podle kontaktů na časové ose, abyste viděli konkrétní kontakty, které vás zajímají. Kromě toho můžete zobrazit všechny aktivity, které nejsou přiřazeny ke konkrétnímu kontaktu, výběrem možnosti **Aktivity, které nejsou mapovány na kontakt**.
+Časová osa aktivity vašich zákazníků obsahuje jejich ID nebo jména v závislosti na konfiguraci entity *ContactProfile* pro aktivity, které prováděli. Aktivity můžete filtrovat podle kontaktů na časové ose, abyste viděli konkrétní kontakty, které vás zajímají. Chcete-li zobrazit všechny aktivity, které nejsou přiřazeny ke konkrétnímu kontaktu, vyberte možnost **Aktivity, které nejsou mapovány na kontakt**.
 
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Možnosti filtrování dostupné pro aktivity na úrovni kontaktu.":::
+:::image type="content" source="media/Contact_Activities3.png" alt-text="Možnosti filtrování dostupné pro aktivity na úrovni kontaktu.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,51 +1,51 @@
 ---
 title: Export segmentů do služby RollWorks (preview)
 description: Zjistěte, jak nakonfigurovat propojení a exportovat je do služby RollWorks.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 83c3f2437b9822d29d1d2f99ead96815b1b0881a
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055160"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195604"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Export segmentů do služby RollWorks (preview)
 
-Exportujte segmenty sjednocených profilů zákazníků do služby RollWorks a použijte je pro reklamu. 
+Exportujte segmenty sjednocených profilů zákazníků do služby RollWorks a použijte je pro reklamu.
 
-## <a name="prerequisites-for-a-connection"></a>Předpoklady pro připojení
+## <a name="prerequisites"></a>Předpoklady
 
--   Máte [účet RollWorks](https://www.rollworks.com/) a odpovídající přihlašovací údaje správce.
--   [Nakonfigurovali jste segmenty](segments.md) v Customer Insights.
--   Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
+- [Účet RollWorks](https://www.rollworks.com/) a odpovídající přihlašovací údaje správce.
+- [ID inzerenta RollWorks](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+- [Nakonfigurované segmenty](segments.md) v Customer Insights.
+- Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Do RollWorks můžete najednou exportovat až 250 000 zákaznických profilů.
-- Do RollWorks nemůžete exportovat segmenty s méně než 100 zákaznickými profily. 
-- Export do RollWorks je omezen na segmenty.
-- Export až 250,000 milionu zákaznických profilů do RollWorks může trvat až 10 minut. 
-- Počet zákaznických profilů, které můžete exportovat do RollWorks, závisí na vaší smlouvě s RollWorks a je jí omezen.
+- Až 250 000 zákaznických profilů na jeden export do služby RollWorks, což může trvat až 10 minut. Počet zákaznických profilů, které můžete exportovat do služby RollWorks, závisí na vaší smlouvě s RollWorks.
+- Pouze segmenty.
 
 ## <a name="set-up-connection-to-rollworks"></a>Nastavení propojení s aplikací RollWorks
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Přejděte na **Správce** > **Propojení**.
 
-1. Vyberte **Přidat připojení** a zvolte **RollWorks** pro konfiguraci připojení.
+1. Vyberte **Přidat připojení** a vyberte **RollWorks**.
 
 1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
 
-1. Zvolte, kdo může toto připojení používat. Pokud neprovedete žádnou akci, výchozí bude Aministrátoři. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Zvolte, kdo může toto připojení používat.  Ve výchozím nastavení jsou to pouze správci. Další informace viz [Umožnění přispěvatelům použít připojení pro export](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Vyberte **Souhlasím** pro potvrzení **Ochrany osobních údajů a dodržování předpisů**.
+1. Zkontrolujte část [Ochrana osobních údajů a dodržování předpisů](connections.md#data-privacy-and-compliance) a vyberte **Souhlasím**.
 
-1. K inicializaci propojení se službou RollWorks vyberte **Připojit**.
+1. Volbou **Připojit** inicializujte připojení ke službě Braze.
 
 1. Vyberte **Ověření pomocí RollWorks** a poskytněte své přihlašovací údaje pro RollWorks.
 
@@ -55,29 +55,24 @@ Exportujte segmenty sjednocených profilů zákazníků do služby RollWorks a p
 
 ## <a name="configure-an-export"></a>Konfigurace exportu
 
-Tento export můžete nakonfigurovat, pokud máte přístup k připojení tohoto typu. Další informace viz [Oprávnění potřebná ke konfiguraci exportu](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Přejděte na **Data** > **Exporty**.
 
-1. Pokud chcete vytvořit nový export, vyberte **Přidat cíl**.
+1. Vyberte **Přidat export**.
 
-1. V poli **propojení pro export** vyberte propojení v části RollWorks. Pokud nevidíte název této sekce, nemáte k dispozici žádná připojení tohoto typu.
+1. V poli **propojení pro export** vyberte propojení v části RollWorks. Pokud není k dispozici propojení , kontaktujte správce.
 
-1. Zadejte **RollWorks Advertiser ID** [RollWorks Advertisable](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Zadejte název exportu.
 
-1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka. Je nutné exportovat segmenty do RollWorks.
+1. Vložte své **ID inzerenta RollWorks**.
 
-1. Vyberte segmenty, které chcete exportovat. Vyberte segment s nejméně 100 členy. Menší segmenty nelze exportovat. Maximální velikost segmentu k exportu je navíc 250 000 členů na export. 
+1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka.
 
-1. Zvolte **Uložit**.
+1. Vyberte segmenty, které chcete exportovat.
 
-Uložení exportu nespustí export okamžitě.
+1. Vyberte **Uložit**.
 
-Export probíhá s každou [plánovanou aktualizací](system.md#schedule-tab). Můžete také [exportovat data na vyžádání](export-destinations.md#run-exports-on-demand). 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-
-## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
-
-Když povolíte Dynamics 365 Customer Insights k přenosu dat do RollWorks, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese tato data podle vašeho pokynu, ale vy jste zodpovědní za to, že RollWorks bude splňovat veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Tuto funkci cíle exportu může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

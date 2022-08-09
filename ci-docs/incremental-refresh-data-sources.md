@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012017"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207129"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Přírůstkové obnovení pro zdroje dat Power Query a Azure Data Lake
 
-Tento článek popisuje, jak nakonfigurovat přírůstkovou aktualizaci pro zdroje dat na základě Power Query nebo Azure Data Lake.
-
-Přírůstková aktualizace pro zdroje dat poskytuje následující výhody:
+Přírůstková aktualizace zdrojů dat na základě Power Query nebo Azure Data Lake poskytuje následující výhody:
 
 - **Rychlejší aktualizace** – Obnoví se pouze data, která se změnila. Můžete například obnovit pouze posledních pět dní historické množiny dat.
 - **Zvýšená spolehlivost** – U menších aktualizací nemusíte udržovat připojení k nestabilním zdrojovým systémům tak dlouho, což snižuje riziko problémů s připojením.
@@ -73,6 +71,7 @@ Customer Insights umožňuje přírůstkové obnovení pro zdroje dat připojen�
 
    1. Přejděte do kořenové složky, která obsahuje soubory .csv nebo .parquet, kde najdete úplná data, přírůstková data upserts a přírůstková data deletes.
    1. Zadejte příponu úplných dat a obou přírůstkových souborů (\.csv nebo \.parquet).
+   1. U souborů .csv vyberte oddělovač sloupců a chcete-li první řádek souboru jako záhlaví sloupce.
    1. Vyberte **Uložit**.
 
 1. Pro **Naposledy aktualizováno** vyberte atribut časového razítka.

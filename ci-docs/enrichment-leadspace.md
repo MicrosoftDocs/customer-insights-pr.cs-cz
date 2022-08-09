@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080868"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196202"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Obohacení firemních profilů s Leadspace (Preview)
 
@@ -54,7 +54,7 @@ Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 
 
 1. Zkontrolujte přehled a poté vyberte **Další**.
 
-1. Vyberte připojení. Pokud není k dispozici správce, obraťte se na něj.
+1. Vyberte připojení. Pokud není k dispozici propojení , kontaktujte správce.
 
 1. Vyberte **Další**.
 

@@ -13,16 +13,14 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 27dff3551ab411a12c273536d7431d651c48573e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741614"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139421"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Odstranění duplicit před sjednocením dat
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Tento krok sjednocení volitelně umožňuje nastavit pravidla pro zacházení s duplicitními záznamy v rámci entity. *Deduplikace* identifikuje duplicitní záznamy a sloučí je do jednoho záznamu. Zdrojové záznamy se propojí se sloučeným záznamem s alternativními ID. Pokud pravidla nejsou nakonfigurována, použijí se systémem definovaná pravidla.
 

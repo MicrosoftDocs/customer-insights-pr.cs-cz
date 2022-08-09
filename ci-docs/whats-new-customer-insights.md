@@ -1,19 +1,19 @@
 ---
 title: Novinky v řešení Dynamics 365 Customer Insights
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054010"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114238"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v řešení Dynamics 365 Customer Insights
 
@@ -23,6 +23,34 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Aktualizace z června 2022
+
+Aktualizace v červnu 2022 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Aktualizované uživatelské prostředí pro zdroje dat a ingestaci dat
+
+Import dat ze široké škály zdrojů dat je základem pro konsolidaci vašich zákaznických dat v Dynamics 365 Customer Insights. Přehodnotili jsme uživatelské prostředí pro import a připojení zdrojů dat. Cílem této aktualizace je usnadnit ingestaci dat do Customer Insights.
+
+Další informace získáte v části [Přehled zdrojů dat](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Export do InMobi
+
+InMobi pomáhá značkám porozumět, identifikovat, zaujmout a získat spotřebitele. Segmenty a další data můžete exportovat do služby InMobi prostřednictvím účtů Azure Blob Storage.
+
+Další informace naleznete v části [Export do InMobi (Preview)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Podpora Lockboxu v Customer Insights
+
+Customer Lockbox poskytuje rozhraní pro kontrolu a schválení (nebo zamítnutí) žádostí o přístup k datům. K těmto žádostem dochází, když je potřeba datový přístup k zákaznickým údajům k vyřešení případu podpory.
+
+Další informace viz [Bezpečný přístup k zákaznickým datům s Customer Lockbox (Preview)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Připojte se ke svým datům pomocí Azure Private Link
+
+Azure Private Link umožňuje propojit Customer Insights s účtem Azure Data Lake Storage přes soukromý koncový bod ve vaší virtuální síti. Pro data v účtu úložiště, která nejsou vystavena veřejnému internetu, umožňuje privátní propojení připojení k této omezené síti.
+
+Další informace viz [Použití privátního propojení v Customer Insights](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>Aktualizace z května 2022
 
