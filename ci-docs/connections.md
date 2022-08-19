@@ -1,7 +1,7 @@
 ---
 title: Přehled propojení (preview)
 description: Propojení k dalším službám z Customer Insights.
-ms.date: 04/09/2021
+ms.date: 08/04/2022
 ms.reviewer: nikeller
 ms.subservice: audience-insights
 ms.topic: overview
@@ -11,91 +11,89 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8580dc7d90c75f66f73efc15f8e38f5e10fbb8a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195166"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245503"
 ---
 # <a name="connections-preview-overview"></a>Přehled propojení (preview)
 
-Propojení jsou klíčem k povolení sdílení dat do a z Customer Insights. Každé propojení navazuje sdílení dat s konkrétní službou. Propojení jsou základem [konfigurace rozšíření třetích stran](enrichment-hub.md) a [konfigurace exportů](export-destinations.md). Stejné propojení lze použít vícekrát. Například jedno propojení k Dynamics 365 Marketing funguje pro více exportů a jedno propojení Leadspace lze použít pro několik rozšíření.
+Propojení jsou klíčem k povolení sdílení dat do a z Customer Insights. Každé propojení navazuje sdílení dat s konkrétní službou. Použití propojení ke [konfiguraci rozšíření třetích stran](enrichment-hub.md) a [konfigurace exportů](export-destinations.md). Stejné propojení lze použít vícekrát. Například jedno propojení k Dynamics 365 Marketing funguje pro více exportů a jedno propojení Leadspace lze použít pro několik rozšíření.
 
-Jděte na **Správce** > **Propojení** k vytvoření a zobrazení propojení.
+## <a name="export-connections"></a>Export připojení
 
-Na kartě **Propojení** se zobrazují všechna aktivní propojení. Seznam zobrazuje řádek pro každé propojení.
+Pouze správci mohou konfigurovat nová propojení, ale mohou [udělit přístup přispěvatelům](#allow-contributors-to-use-a-connection-for-exports) k použití stávajících propojení. Správci kontrolují, kam mohou data směřovat, přispěvatelé definují datovou část a frekvenci podle svých potřeb.
 
-Získejte rychlý přehled, popis a zjistěte, co můžete dělat s každou možností rozšiřitelnosti na kartě **Objev**.
-
-## <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
-
-Když aplikaci Dynamics 365 Customer Insights povolíte přenos dat do produktů třetích stran nebo spolčenosti Microsoft, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že třetí strana splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Tuto funkci připojení může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
-
-## <a name="exports"></a>Exporty
-
-Pouze správci mohou konfigurovat nová propojení, ale mohou udělit přístup přispěvatelům k použití stávajících propojení. Správci kontrolují, kam mohou data směřovat, přispěvatelé definují datovou část a frekvenci podle svých potřeb. Další informace viz [Umožnění přispěvatelům použít připojení pro export](#allow-contributors-to-use-a-connection-for-exports).
-
-## <a name="enrichments"></a>Rozšíření
+## <a name="enrichment-connections"></a>Připojení rozšiřování
 
 Jenom správci mohou konfigurovat nová propojení, ale vytvořená propojení jsou vždy k dispozici správcům i přispěvatelům. Správci spravují přihlašovací údaje a udělují souhlas s datovými přenosy. Následně mohou správci i přispěvatelé propojení použít.
 
 ## <a name="add-a-new-connection"></a>Přidat nové propojení
 
-Chcete-li přidat propojení, musíte mít [oprávnění správce](permissions.md). Pokud se připojíte k jiným službám společnosti Microsoft, předpokládáme, že jsou obě služby ve stejné organizaci.
+### <a name="prerequisites"></a>Předpoklady
 
-1. Přejděte na **Správce** > **Propojení (náhled)**.
+- [Oprávnění správce](permissions.md)
+- Další služby společnosti Microsoft, pokud existují, jsou ve stejné organizaci
 
-1. Výběrem možnosti **Přidat propojení** vytvořte nové propojení. Z rozbalovací nabídky vyberte, jaký typ připojení chcete vytvořit.
+1. Přejděte na **Správce** > **Propojení**.
 
-1. V podokně **Nastavení propojení** uveďte požadované podrobnosti.
-   1. Propojení popisuje **zobrazované jméno** a typ propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl tohoto propojení.
-   1. Přesná pole závisí na tom, ke které službě se připojujete. V článku o cílové službě se můžete dozvědět o podrobnostech konkrétního typu propojení.
-   1. Pokud [použijete vlastní trezor klíčů](use-azure-key-vault.md) k uložení tajných kódů, aktivujte **Použít trezor klíčů** a vyberte tajný kód ze seznamu.
+1. Vyberte možnost **Přidat připojení** a zvolte typ připojení, které chcete vytvořit. Nebo jděte na kartu **Zjistit** a na dlaždici připojení vyberte **Nastavení**.
 
-1. Pokud chcete vytvořit propojení, vyberte **Uložit**.
+1. Dejte propojení rozpoznatelný název do pole **Zobrazovaný název**. Název a typ propojení popisují toto propojení. Doporučujeme zvolit název, který vysvětluje účel a cíl propojení.
 
-Můžete také vybrat **Založit** na dlaždici na kartě **Objevit**.
+1. Zadejte požadované údaje. Přesná pole závisí na tom, ke které službě se připojujete. Podrobnosti o konkrétním typu připojení naleznete v článku o cílové službě.
 
-### <a name="allow-contributors-to-use-a-connection-for-exports"></a>Umožnit přispěvatelům použít propojení pro export
+1. Pokud [použijete vlastní trezor klíčů](use-azure-key-vault.md) k uložení tajných kódů, aktivujte **Použít trezor klíčů** a vyberte tajný kód ze seznamu.
 
-Při nastavování nebo úpravách propojení pro export si vyberete, kterým uživatelům je povoleno definovat toto konkrétní propojení [exporty](export-destinations.md). Ve výchozím nastavení je propojení k dispozici uživatelům s rolí správce. Toto nastavení můžete změnit v části **Vyberte, kdo může toto propojení použít** a umožnit uživatelům s rolí přispěvatel používat toto propojení.
+1. Zkontrolujte část Ochrana osobních údajů a dodržování předpisů a vyberte **Souhlasím**.
+
+1. Připojení vytvořte výběrem tlačítka **Uložit**.
+
+### <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
+
+Když aplikaci Dynamics 365 Customer Insights povolíte přenos dat do produktů třetích stran nebo spolčenosti Microsoft, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že třetí strana splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Tuto funkci připojení může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
+
+## <a name="allow-contributors-to-use-a-connection-for-exports"></a>Umožnit přispěvatelům použít propojení pro export
+
+Při nastavování nebo úpravách propojení pro export si vyberete, kterým uživatelům je povoleno definovat toto konkrétní propojení [exporty](export-destinations.md). Ve výchozím nastavení je propojení k dispozici uživatelům s rolí správce. Změňte nastavení **Vyberte, kdo může toto propojení použít** a umožněte tak uživatelům s rolí přispěvatel používat toto propojení.
 
 - Přispěvatelé nebudou moci propojení zobrazit ani upravit. Při vytváření exportu uvidí pouze zobrazované jméno a jeho typ.
 - Sdílením propojení umožňujete přispěvatelům propojení používat. Přispěvatelé uvidí sdílená propojení, když nastaví export. Mohou spravovat každý export, který používá toto konkrétní propojení.
 - Toto nastavení můžete změnit při zachování exportů, které již byly definovány přispěvateli.
 
-## <a name="edit-a-connection"></a>Úprava propojení
+## <a name="manage-existing-connections"></a>Správa existujících připojení
 
-1. Přejděte na **Správce** > **Propojení (náhled)**.
+1. Přejděte na **Správce** > **Propojení**.
 
-1. Přejde na kartu **Propojení**.
+1. Výběrem karty **Rozšiřování** nebo **Exporty** zobrazíte seznam obohacených nebo exportních připojení, typ připojení, kdy bylo vytvořeno a kdo má přístup. Seznam připojení můžete seřadit podle libovolného sloupce.
 
-1. Vyberte vertikální tři tečky (&vellip;) pro propojení, které chcete upravit.
+1. Vyberte připojení pro zobrazení dostupných akcí.
 
-1. Vyberte položku **Upravit**.
+   - **Upravte** připojení.
+   - [**Odeberte**](#remove-a-connection) připojení.
 
-1. Změňte hodnoty, které chcete aktualizovat, a vyberte **Uložit**.
-
-## <a name="remove-a-connection"></a>Odebrání propojení
+### <a name="remove-a-connection"></a>Odebrání propojení
 
 Pokud je připojení, které odstraňujete, používáno obohacením nebo exportem, musíte je nejprve odpojit nebo odebrat. Dialogové okno odebrání vás provede příslušným rozšířením nebo exportem.
 
-Oddělená rozšíření a exporty se stanou neaktivními. Znovu je aktivujete přidáním dalšího propojení na stránce [Rozšíření](enrichment-hub.md) nebo [Exporty](export-destinations.md).
+> [!TIP]
+> Deaktivovaná rozšiřování a odpojené exporty se stanou neaktivními. Znovu je aktivujete přidáním dalšího propojení na stránce [Rozšíření](enrichment-hub.md) nebo [Exporty](export-destinations.md).
 
-1. Přejděte na **Správce** > **Propojení (náhled)**.
+1. Přejděte na **Správce** > **Propojení**.
 
-1. Přejde na kartu **Propojení**.
+1. Vyberte kartu **rozšiřování** nebo **Exporty**.
 
-1. Vyberte vertikální tři tečky (&vellip;) pro propojení, které chcete odebrat.
+1. Vyberte připojení, které chcete odebrat.
 
 1. V rozevírací nabídce vyberte možnost **Odebrat**. Zobrazí se dialogové okno s potvrzením.
 
    1. Pokud existují rozšíření nebo exporty, která toto propojení používají, vyberte tlačítko a podívejte se, co propojení používá.
-      - **Exporty:** Můžete se rozhodnout buď odebrat nebo odpojit exporty, abyste mohli odebrat propojení. Pro odpojení exportu mohou správci použít akci **Odpojit**. Tato akce je k dispozici pro jednotlivé a více vybraných exportů. Odpojením zachováte exportní konfiguraci, ale nebude spuštěna, dokud k ní nebude přidáno další propojení.
-      - **Rozšíření:** Můžete se rozhodnout buď odebrat nebo deaktivovat rozšíření, abyste mohli odebrat propojení.
+      - **Exporty:** Vyberte buď **Odstranit** export nebo **Odpojit připojení**. Odpojením připojení zachováte exportní konfiguraci, ale nebude spuštěna, dokud k ní nebude přidáno další propojení.
+      - **Rozšiřování:** Vyberte si buď **Odstranit** nebo **Deaktivovat** rozšiřování.
    1. Jakmile propojení již nemá žádné závislosti, vraťte se zpět na **Správce** > **Propojení** a zkuste propojení znovu odebrat.
 
 1. Odstranění potvrďte výběrem **Odstranit**.

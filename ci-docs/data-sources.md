@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207083"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245641"
 ---
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
@@ -67,7 +67,7 @@ Výběrem zdroje dat zobrazíte dostupné akce.
 
 Zdroje dat lze aktualizovat podle automatického plánu nebo ručně na vyžádání. [On-premise zdroje dat](connect-power-query.md#add-data-from-on-premises-data-sources) se aktualizují podle vlastních plánů, které jsou nastaveny během příjmu dat. U připojených zdrojů dat přijímá zpracování dat nejnovější data dostupná z tohoto zdroje dat.
 
-Jděte na **Admin** > **Systém** > [**Plán**](system.md#schedule-tab) ke konfiguraci systémově naplánovaných aktualizací vašich zpracovaných datových zdrojů.
+Jděte na **Admin** > **Systém** > [**Plán**](schedule-refresh.md) ke konfiguraci systémově naplánovaných aktualizací vašich zpracovaných datových zdrojů.
 
 Chcete-li aktualizovat zdroj dat na vyžádání:
 

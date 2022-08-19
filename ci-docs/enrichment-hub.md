@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053856"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245871"
 ---
 # <a name="data-enrichment-preview-overview"></a>Přehled rozšíření dat (Preview)
 
@@ -76,7 +76,7 @@ Vyberte rozšiřování pro zobrazení dostupných akcí.
 - Možností **Zobrazit** zobrazíte podrobnosti o rozšíření s počtem rozšířených profilů zákazníků.
 - Možností **Upravit** upravíte konfiguraci rozšíření.
 - [**Spusťte**](#run-or-refresh-enrichments) rozšíření k aktualizaci profilů zákazníků o nejnovější data. Spusťte více rozšiřování najednou tak, že je vyberete v seznamu.
-- **Aktivujte** nebo **deaktivujte** rozšiřování. Neaktivní rozšiřování se během [plánovaného obnovení](system.md#schedule-tab) neaktualizuje.
+- **Aktivujte** nebo **deaktivujte** rozšiřování. Neaktivní rozšiřování se během [plánovaného obnovení](schedule-refresh.md) neaktualizuje.
 - **Odstraňte** rozšíření.
 
 Můžete také vytvořit [segmenty](segments.md) nebo [míry](measures.md) z rozšíření.
@@ -85,7 +85,7 @@ Můžete také vytvořit [segmenty](segments.md) nebo [míry](measures.md) z roz
 
 Po spuštění lze rozšiřování obnovovat podle automatického plánu nebo ručně na vyžádání.
 
-1. Chcete-li ručně obnovit jedno nebo více rozšiřování, vyberte je a vyberte **Spustit**. Na záložce [naplánovat automatické obnovení](system.md#schedule-tab) jděte na **Správce** > **Systém** > **Plán**. Doba zpracování závisí na velikosti vašich zákaznických dat.
+1. Chcete-li ručně obnovit jedno nebo více rozšiřování, vyberte je a vyberte **Spustit**. Na záložce [naplánovat automatické obnovení](schedule-refresh.md) jděte na **Správce** > **Systém** > **Plán**. Doba zpracování závisí na velikosti vašich zákaznických dat.
 
 1. Volitelně [viz pokrok procesu rozšíření](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Můžete najít podrobnosti o zpracování rozšíření, včetně jeho stavu a 
 1. V podokně **Podrobnosti o průběhu** rozbalte část **Rozšíření**.
 1. Pod rozšířením, pro které chcete vidět průběh, vyberte **Zobrazit podrobnosti**.
 1. V podokně **Podrobnosti o úkolu** vyberte **Zobrazit podrobnosti** a zobrazte procesy, které se podílejí na aktualizaci rozšíření, a jejich stav.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Zobrazení výsledků rozšiřování
 

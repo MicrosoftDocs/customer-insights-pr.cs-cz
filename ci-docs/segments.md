@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170673"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246285"
 ---
 # <a name="segments-overview"></a>Přehled segmentů
 
@@ -58,7 +58,7 @@ Výběrem segmentu zobrazíte dostupné akce.
 - **Upravit** segment změnit jeho vlastnosti.
 - **Vytvořit duplicitu** segmentu. Můžete se rozhodnout upravit jeho vlastnosti okamžitě nebo uložit duplicitu.
 - [**Aktualizujte**](#refresh-segments) segment a zahrňte nejnovější data.
-- **Aktivace** nebo **deaktivace** segmentu. Neaktivní segmenty se neaktualizují během [plánované aktualizace](system.md#schedule-tab) a mají **Stav** uveden jako **Přeskočeno**, což označuje, že u nich neproběhl ani pokus o aktualizaci. Aktivní segmenty se aktualizují na základě jejich typu: statické nebo dynamické.
+- **Aktivace** nebo **deaktivace** segmentu. Neaktivní segmenty se neaktualizují během [plánované aktualizace](schedule-refresh.md) a mají **Stav** uveden jako **Přeskočeno**, což označuje, že u nich neproběhl ani pokus o aktualizaci. Aktivní segmenty se aktualizují na základě jejich typu: statické nebo dynamické.
 - Volbami **Nastavit jako statický** nebo **Nastavit jako statický** nastavte typ segmentu. Statické segmenty musí být aktualizovány ručně. Dynamické segmenty jsou automaticky aktualizovány během aktualizací systému.
 - [**Vyhledat podobné zákazníky**](find-similar-customer-segments.md) ze segmentu.
 - **Přejmenovat** segment.
@@ -88,7 +88,7 @@ Spodní část obsahuje seznam členů segmentu.
 
 Segmenty lze aktualizovat podle automatického plánu nebo ručně na vyžádání. Chcete-li ručně aktualizovat jeden nebo více segmentů, vyberte je a zvolte **Aktualizovat**.
 
-Na záložce [naplánovat automatické obnovení](system.md#schedule-tab) jděte na **Správce** > **Systém** > **Plán**. Platí následující pravidla:
+Na záložce [naplánovat automatické obnovení](schedule-refresh.md) jděte na **Správce** > **Systém** > **Plán**. Platí následující pravidla:
 
 - Všechny segmenty s typem **Dynamický** nebo **Rozšíření** se automaticky aktualizují podle nastavené kadence. Po dokončení aktualizace **Stav** označuje, zda při aktualizaci segmentu došlo k nějakým problémům. **Poslední aktualizace** zobrazuje časové razítko poslední úspěšné aktualizace. Pokud dojde k chybě, výběrem chyby zobrazíte podrobnosti o tom, co se stalo.
 - Segmenty s typem **Statický** *nebudou* automaticky aktualizovány. **Poslední aktualizace** zobrazuje časové razítko posledního spuštění nebo ruční aktualizace statických segmentů.

@@ -2,7 +2,7 @@
 title: Odstranění duplicit před sjednocením dat
 description: Druhým krokem v procesu sjednocení je výběr záznamu, který se má zachovat, když jsou nalezeny duplikáty.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139421"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213619"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Odstranění duplicit před sjednocením dat
 
-Tento krok sjednocení volitelně umožňuje nastavit pravidla pro zacházení s duplicitními záznamy v rámci entity. *Deduplikace* identifikuje duplicitní záznamy a sloučí je do jednoho záznamu. Zdrojové záznamy se propojí se sloučeným záznamem s alternativními ID. Pokud pravidla nejsou nakonfigurována, použijí se systémem definovaná pravidla.
+Tento volitelný krok sjednocení umožňuje nastavit pravidla pro eliminaci duplicitních záznamů **v rámci** entity. Deduplikace identifikuje více záznamů pro zákazníka a vybere nejlepší záznam k uchování (na základě základních předvoleb sloučení) nebo sloučí záznamy do jednoho (na základě pokročilých předvoleb sloučení). Zdrojové záznamy se propojí se sloučeným záznamem s alternativními ID. Pokud pravidla nejsou nakonfigurována, použijí se systémem definovaná pravidla.
+
+## <a name="default-deduplication"></a>Výchozí deduplikace
+
+Pokud nejsou přidána žádná pravidla deduplikace, použijí se pravidla definovaná systémem.
+
+- Primární klíč je deduplikován.
+  U všech záznamů se stejným primárním klíčem vyhrává **nejvíce vyplněný** záznam (s nejmenším počtem hodnot null).
+- Na entitu se použijí všechna pravidla pro párování mezi entitami.
+  Například: V kroku shody, pokud je entita A porovnána s entitou B zapnutá u *FullName* a *DateofBirth*, pak je entita A také deduplikována pomocí *FullName* a *DateofBirth*. Protože *FullName* a *DateofBirth* jsou platné klíče pro identifikaci zákazníka v entitě A, tyto klíče jsou platné i pro identifikaci duplicitních odběratelů v entitě A.
 
 ## <a name="include-enriched-entities-preview"></a>Zahrnutí rozšířených entit (Preview)
 

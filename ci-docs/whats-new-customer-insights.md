@@ -1,19 +1,19 @@
 ---
 title: Novinky v řešení Dynamics 365 Customer Insights
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114238"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246003"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v řešení Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>Aktualizace z července 2022
+
+Aktualizace v červenci 2022 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="export-to-moengage"></a>Export do aplikace MoEngage
+
+Exportujte segmenty sjednocených profilů zákazníků do služby MoEngage a použijte je pro e-mailový marketing ve službě MoEngage.
+
+Další informace najdete v článku [Export segmentů do MoEngage](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>Podpora SSH pro exporty založené na SFTP
+
+Vyberte, zda se chcete pro připojení k cílům exportu SFTP ověřit pomocí SSH nebo uživatelského jména/hesla.
+
+Další informace naleznete v článku [Export dat do hostitelů SFTP](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Přizpůsobení zkušeností pomocí údajů o známých i neznámých uživatelích
+
+Správa zákaznických dat není novou výzvou, ale s tím, jak uživatelé procházejí různými digitálními kanály různých značek, je stále obtížnější. Uživatel, který je známý (ověřený) v jednom kanálu, se stává neznámým (neověřeným) v jiném, pokud není přihlášen. Problém je často v tom, že neověření (neznámí) uživatelé nemají stejné ID. To by se dalo použít pro přidružení důležitých atributů profilů a generování sjednocených profilů zákazníků. Customer Insights pomáhá tento problém řešit ingestováním dat z metod sledování ve zdrojových systémech.
+
+Více informací viz [Přizpůsobení zkušeností pomocí údajů o známých i neznámých uživatelích](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Aktualizace z června 2022
 
@@ -50,7 +72,7 @@ Další informace viz [Bezpečný přístup k zákaznickým datům s Customer Lo
 
 Azure Private Link umožňuje propojit Customer Insights s účtem Azure Data Lake Storage přes soukromý koncový bod ve vaší virtuální síti. Pro data v účtu úložiště, která nejsou vystavena veřejnému internetu, umožňuje privátní propojení připojení k této omezené síti.
 
-Další informace viz [Použití privátního propojení v Customer Insights](security-overview.md#private-links-tab).
+Další informace viz [Použití privátního propojení v Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Aktualizace z května 2022
 

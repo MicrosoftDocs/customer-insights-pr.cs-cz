@@ -1,19 +1,19 @@
 ---
 title: Obohacení firemních profilů s Leadspace (Preview)
 description: Obecné informace o rozšíření od třetí strany Leadspace.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: f45fabc036775e11fc439f69513678d0607729d0
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196202"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237942"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Obohacení firemních profilů s Leadspace (Preview)
 
@@ -35,14 +35,9 @@ Musíte být [správce](permissions.md#admin) v Customer Insights a mít „vě�
 
 1. Zadejte název připojení a platný token Leadspace.
 
-1. Zkontrolujte a poskytněte svůj souhlas s [ochranou osobních údajů a dodržováním předpisů](#data-privacy-and-compliance) výběrem **souhlasím**.
+1. Zkontrolujte část [Ochrana osobních údajů a dodržování předpisů](connections.md#data-privacy-and-compliance) a vyberte **Souhlasím**.
 
 1. Zvolte **Ověřit** pro ověření konfigurace a poté vyberte **Uložit**.
-
-### <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
-
-Když povolíte Dynamics 365 Customer Insights přenos dat společnosti Leadspace, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese tato data na váš pokyn, ale vy jste odpovědní za to, že společnost Leadspace splní veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
-Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
 
 ## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
 

@@ -1,7 +1,7 @@
 ---
 title: Obohacení firemních profilů o Dun & Bradstreet (Preview)
 description: Obecné informace o rozšíření třetí strany Dun & Bradstreet.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196018"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237896"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Obohacení firemních profilů o Dun & Bradstreet (Preview)
 
@@ -55,16 +55,11 @@ Musíte být [správce](permissions.md#admin) v Customer Insights a mít přihla
 
 1. Poskytněte platné přihlašovací údaje Dun & Bradstreet a podrobnosti o projektu Dun & Bradstreet *Region, Drop folder path a Drop folder name*. [Tyto informace získáte](#set-up-your-dun--bradstreet-project) z projektu Dun & Bradstreet.
 
-1. Zkontrolujte a poskytněte svůj souhlas s [ochranou osobních údajů a dodržováním předpisů](#data-privacy-and-compliance) výběrem **souhlasím**.
+1. Zkontrolujte část [Ochrana osobních údajů a dodržování předpisů](connections.md#data-privacy-and-compliance) a vyberte **Souhlasím**.
 
 1. Zvolte **Ověřit** pro ověření konfigurace a poté vyberte **Uložit**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Stránka konfigurace připojení Dun & Bradstreet":::
-
-### <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
-
-Když povolíte aplikaci Dynamics 365 Customer Insights přenos dat do Dun & Bradstreet, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft taková data přenese na váš pokyn, ale vy jste odpovědní za zajištění toho, že Dun & Bradstreet splňuje veškeré vaše případné povinnosti týkající se ochrany soukromí nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732).
-Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
 
 ## <a name="supported-countries-or-regions"></a>Podporované země nebo regiony
 

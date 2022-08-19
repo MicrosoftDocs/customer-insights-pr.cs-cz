@@ -1,7 +1,7 @@
 ---
-title: Přesměrování protokolů v Dynamics 365 Customer Insights s Azure Monitor (Preview)
+title: Export diagnostických protokolů (preview)
 description: Přečtěte si, jak odesílat protokoly do Microsoft Azure Monitor.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,87 +11,56 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052645"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245917"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Přesměrování protokolů v Dynamics 365 Customer Insights s Azure Monitor (Preview)
+# <a name="export-diagnostic-logs-preview"></a>Export diagnostických protokolů (preview)
 
-Dynamics 365 Customer Insights poskytuje přímou integraci s Azure Monitor. Protokoly prostředků Azure Monitor umožňují monitorovat a odesílat protokoly do [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) nebo je streamovat do [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
+Předávání protokolů z Customer Insights pomocí Azure Monitor: Protokoly prostředků Azure Monitor umožňují monitorovat a odesílat protokoly do [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) nebo je streamovat do [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights odesílá následující protokoly událostí:
 
 - **Událostí auditu**
   - **APIEvent** – umožňuje sledování změn prostřednictvím uživatelského rozhraní Dynamics 365 Customer Insights.
 - **Provozní události**
-  - **WorkflowEvent** – tento pracovní postup vám umožní nastavit [zdroje dat](data-sources.md), [sjednotit](data-unification.md) a [rozšířit](enrichment-hub.md) a nakonec [exportovat](export-destinations.md) data do jiných systémů. Všechny tyto kroky lze provést jednotlivě (například spustit jeden export). Může také běžet organizovaně (například obnova dat z datových zdrojů, která spustí proces sjednocení, který přitáhne obohacení a po dokončení exportuje data do jiného systému). Další informace viz [Schéma WorkflowEvent](#workflow-event-schema).
-  - **APIEvent** – všechna volání rozhraní API do instance zákazníků do Dynamics 365 Customer Insights. Další informace viz [Schéma APIEvent](#api-event-schema).
+  - **WorkflowEvent** – umožní nastavit [zdroje dat](data-sources.md), [sjednotit](data-unification.md) a [rozšířit](enrichment-hub.md) a nakonec [exportovat](export-destinations.md) data do jiných systémů. Tyto kroky lze provést jednotlivě (například spustit jeden export). Mohou také běžet organizovaně (například obnova dat z datových zdrojů, která spustí proces sjednocení, který přitáhne obohacení a po dokončení exportuje data do jiného systému). Další informace viz [Schéma WorkflowEvent](#workflow-event-schema).
+  - **APIEvent** – odešle všechna volání rozhraní API do instance zákazníků do Dynamics 365 Customer Insights. Další informace viz [Schéma APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Nastavení diagnostiky
 
 ### <a name="prerequisites"></a>Předpoklady
 
-Chcete -li konfigurovat diagnostiku v Customer Insights, musí být splněny následující předpoklady:
-
-- Máte aktivní [předplatné Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Máte oprávnění [správce](permissions.md#admin) v Customer Insights.
-- Máte roli **Přispěvatel** a **Správce přístupu uživatelů** v cílovém prostředku v Azure. Prostředkem může být účet Azure Data Lake Storage, centrum událostí Azure nebo pracovní prostor Azure Log Analytics. Další informace najdete v části [Přidání nebo odebrání přiřazení rolí Azure pomocí Azure Portal](/azure/role-based-access-control/role-assignments-portal). Toto oprávnění je nutné při konfiguraci diagnostických nastavení v Customer Insights. Po úspěšném nastavení je lze změnit.
+- Aktivní [předplatné Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- Oprávnění [správce](permissions.md#admin) v Customer Insights.
+- [Role Přispěvatel a Správce přístupu uživatelů](/azure/role-based-access-control/role-assignments-portal) v cílovém prostředku v Azure. Prostředkem může být účet Azure Data Lake Storage, centrum událostí Azure nebo pracovní prostor Azure Log Analytics. Toto oprávnění je nutné při konfiguraci diagnostických nastavení v Customer Insights, ale po úspěšném nastavení je lze změnit.
 - Splněny [požadavky na cíl](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pro Azure Storage, centrum událostí Azure nebo Azure Log Analytics.
-- Máte alespoň roli **Čtenář** ve skupině prostředků, do které prostředek patří.
+- Alespoň role **Čtenář** ve skupině prostředků, do které prostředek patří.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Nastavení diagnostiky pomocí Azure Monitor
 
-1. V Customer Insights volbou **Systém** > **Diagnostika** zobrazíte cíle diagnostiky nakonfigurované pro tuto instanci.
+1. V Customer Insights přejděte na **Správce** > **Systém** a vyberte kartu **Diagnostika**.
 
 1. Vyberte **Přidat cíl**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Připojení diagnostiky](media/diagnostics-pane.png "Připojení diagnostiky")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Připojení diagnostiky.":::
 
 1. Do pole **Název cíle diagnostiky** zadejte název diagnostiky.
 
-1. Vyberte **Klienta** předplatného Azure s cílovým prostředkem a vyberte **Přihlásit se**.
+1. Vyberte **Typ zdroje** (účet úložiště, centrum událostí nebo analytika protokolů).
 
-1. Vyberte **Typ prostředku** (účet úložiště, centrum událostí nebo analytika protokolů).
+1. Vyberte **Předplatné**, **Skupina zdrojů**, a **Zdroj** pro cílový zdroj. Informace o povolení a protokolu viz [Konfigurace v cílovém zdroji](#configuration-on-the-destination-resource).
 
-1. Pro cílový prostředek vyberte **Předplatné**.
-
-1. Pro cílový prostředek vyberte **Skupina prostředků**.
-
-1. Vyberte **Prostředek**.
-
-1. Potvrďte prohlášení o **ochraně osobních údajů a dodržování předpisů**.
+1. Zkontrolujte část [Ochrana osobních údajů a dodržování předpisů](connections.md#data-privacy-and-compliance) a vyberte **Souhlasím**.
 
 1. Volbou **Připojit k systému** se připojte k cílovému zdroji. Protokoly se začnou v cíli objevovat po 15 minutách, pokud je rozhraní API aktivní a generuje události.
 
-### <a name="remove-a-destination"></a>Odebrání cíle
-
-1. Přejděte na **Systém** > **Diagnostika**.
-
-1. V seznamu vyberte cíl diagnostiky.
-
-1. Ve sloupci **Akce** vyberte ikonu **Odstranit**.
-
-1. Potvrzením odstranění zastavíte přesměrování protokolu. Prostředek v předplatném Azure nebude odstraněn. Volbou odkazu ve sloupci **Akce** můžete otevřít Azure Portal pro vybraný prostředek a odstranit jej tam.
-
-## <a name="log-categories-and-event-schemas"></a>Kategorie protokolů a schémata událostí
-
-V současné době jsou podporovány [události rozhraní API](apis.md) a události pracovního postupu a platí následující kategorie a schémata.
-Schéma protokolu následuje [společné schéma Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
-
-### <a name="categories"></a>Kategorie
-
-Customer Insights nabízí dvě kategorie:
-
-- **Události auditu**: [Události rozhraní API](#api-event-schema) pro sledování změn konfigurace ve službě. Operace `POST|PUT|DELETE|PATCH` spadají do této kategorie.
-- **Provozní události**: [Události rozhraní API](#api-event-schema) nebo [události pracovního postupu](#workflow-event-schema) generované při používání služby.  Například požadavky `GET` nebo události provedení pracovního postupu.
-
 ## <a name="configuration-on-the-destination-resource"></a>Konfigurace cílového prostředku
 
-Na základě zvoleného typu prostředku se automaticky použijí následující kroky:
+Na základě zvoleného typu zdroje se automaticky provedou následující změny:
 
 ### <a name="storage-account"></a>Storage account
 
@@ -109,16 +78,41 @@ Instanční objekt Customer Insights získá oprávnění **Vlastník dat Azure 
 
 ### <a name="log-analytics"></a>Log Analytics
 
-Instanční objekt Customer Insights získá oprávnění **Přispěvatel Log Analytics** k prostředku. Protokoly budou dostupné v sekci **Protokoly** > **Tabulky** > **Správa protokolů** ve vybraném pracovním prostoru Log Analytics. Rozbalte řešení **Správa protokolů** a vyhledejte tabulky `CIEventsAudit` a `CIEventsOperational`.
+Instanční objekt Customer Insights získá oprávnění **Přispěvatel Log Analytics** k prostředku. Protokoly jsou dostupné v sekci **Protokoly** > **Tabulky** > **Správa protokolů** ve vybraném pracovním prostoru Log Analytics. Rozbalte řešení **Správa protokolů** a vyhledejte tabulky `CIEventsAudit` a `CIEventsOperational`.
 
 - `CIEventsAudit` obsahující **události auditu**
 - `CIEventsOperational` obsahující **provozní události**
 
 V okně **Dotazy** rozbalte řešení **Audit** a vyhledejte vzorové dotazy poskytnuté při hledání `CIEvents`.
 
+## <a name="remove-a-diagnostics-destination"></a>Odebrání cíle diagnostiky
+
+1. Jděte na **Správa** > **Systém** a vyberte kartu **Diagnostika**.
+
+1. V seznamu vyberte cíl diagnostiky.
+
+   > [!TIP]
+   > Odebráním cíle zastavíte předávání protokolu, ale neodstraníte zdroj v předplatném Azure. Pokud chcete odstranit zdroj v Azure, vyberte odkaz ve sloupci **Akce** k otevření Azure Portal pro vybraný zdroj a odstraňte jej tam. Pak odstraňte cíl diagnostiky.
+
+1. Ve sloupci **Akce** vyberte ikonu **Odstranit**.
+
+1. Potvrzením odstranění odstraníte cíl a zastavíte předávání protokolu.
+
+## <a name="log-categories-and-event-schemas"></a>Kategorie protokolů a schémata událostí
+
+V současné době jsou podporovány [události rozhraní API](apis.md) a události pracovního postupu a platí následující kategorie a schémata.
+Schéma protokolu následuje [společné schéma Azure Monitor](/azure/azure-monitor/platform/resource-logs-schema#top-level-common-schema).
+
+### <a name="categories"></a>Kategorie
+
+Customer Insights nabízí dvě kategorie:
+
+- **Události auditu**: [Události rozhraní API](#api-event-schema) pro sledování změn konfigurace ve službě. Operace `POST|PUT|DELETE|PATCH` spadají do této kategorie.
+- **Provozní události**: [Události rozhraní API](#api-event-schema) nebo [události pracovního postupu](#workflow-event-schema) generované při používání služby.  Například požadavky `GET` nebo události provedení pracovního postupu.
+
 ## <a name="event-schemas"></a>Schéma událostí
 
-Události rozhraní API a události pracovního postupu mají společnou strukturu a podrobnosti, kde se liší, viz [schéma události rozhraní API](#api-event-schema) nebo [schéma události pracovního postupu](#workflow-event-schema).
+Události rozhraní API a události pracovního postupu mají společnou strukturu, ale s několika rozdíly. Další informace viz [Schéma události API](#api-event-schema) nebo [schéma události pracovního postupu](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Schéma události rozhraní API
 
@@ -220,7 +214,6 @@ Pracovní postup obsahuje několik kroků. [Ingestace zdrojů dat](data-sources.
 | `durationMs`    | Dlouhé celé číslo      | Volitelné          | Doba trvání operace v milisekundách.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Volitelné          | Objekt JSON s více vlastnostmi pro konkrétní kategorii událostí.                                                                                        | Viz podsekce [vlastnosti pracovního postupu](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Požaduje se          | Úroveň závažnosti události.                                                                                                                                  | `Informational`, `Warning` nebo `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Schéma vlastností pracovního postupu
 
@@ -247,3 +240,5 @@ Události pracovního postupu mají následující vlastnosti.
 | `properties.additionalInfo.AffectedEntities` | No       | Ano  | Nepovinné. Pouze pro OperationType = `Export`. Obsahuje seznam konfigurovaných entit v exportu.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Ano  | Nepovinné. Pouze pro OperationType = `Export`. Podrobná zpráva pro export.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Ano  | Nepovinné. Pouze pro OperationType = `Segmentation`. Udává celkový počet členů segmentu.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

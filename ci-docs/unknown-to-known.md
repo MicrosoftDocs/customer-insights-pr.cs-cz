@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173788"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224287"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Přizpůsobte svá prostředí na základě dat o známých i neznámých uživatelích
 
-Správa zákaznických dat není novou výzvou, ale s tím, jak uživatelé procházejí různými digitálními kanály různých značek, je stále obtížnější. Uživatel, který je známý (ověřený) v jednom kanálu, se stává neznámým (neověřeným) v jiném, pokud není přihlášen. Problém je často v tom, že neověření (neznámí) uživatelé nemají stejné ID. To by se dalo použít pro přidružení důležitých atributů profilů a generování sjednocených profilů zákazníků. Customer Insights pomáhá tento problém řešit ingestováním dat z metod sledování ve zdrojových systémech. Konsolidované neznámé a známé profily poskytují organizacím kompletní přehled o aktuálních profilech a jejich historických transakcích, chování a demografických údajích. Naše řešení jde ještě o krok dále, protože poskytuje rozpoznání identity, které vám umožní sjednotit aktivitu zákazníků napříč více kanály, včetně vašeho webu, nákupu v obchodě, věrnostních programů a tak dále.
+Správa zákaznických dat není novou výzvou, ale s tím, jak uživatelé procházejí různými digitálními kanály různých značek, je stále obtížnější. Uživatel, který je známý (ověřený) v jednom kanálu, se stává neznámým (neověřeným) v jiném, pokud není přihlášen. Problém je často v tom, že neověření (neznámí) uživatelé nemají stejné ID. To by se dalo použít pro přidružení důležitých atributů profilů a generování sjednocených profilů zákazníků. Customer Insights pomáhá tento problém řešit ingestováním dat z metod sledování ve zdrojových systémech. Konsolidace neznámých a známých profilů poskytuje organizacím kompletní přehled o aktuálních profilech a jejich historických transakcích, chování a demografických údajích. Naše řešení jde ještě o krok dále, protože poskytuje rozpoznání identity, které vám umožní sjednotit aktivitu zákazníků napříč více kanály, včetně vašeho webu, nákupu v obchodě, věrnostních programů a tak dále.
 
 ## <a name="sample-scenario"></a>Ukázkový scénář
 

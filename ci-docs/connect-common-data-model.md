@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206991"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245779"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Připojení k datům v Azure Data Lake Storageu
 
@@ -56,8 +56,8 @@ Příjem dat do Dynamics 365 Customer Insights pomocí účtu Azure Data Lake St
 
 1. Vyberte jednu z následujících možností pro **Připojte své úložiště pomocí**. Více informací viz [Připojení Customer Insights k účtu Azure Data Lake Storage Gen2 pomocí instančního objektu Azure](connect-service-principal.md).
 
-   - **Zdroj Azure**: Zadejte **ID zdroje**. Volitelně, pokud chcete přijmout data z účtu úložiště prostřednictvím Azure Private Link, vyberte **Povolit private Link**. Další informace popisuje článek [Privátní propojení](security-overview.md#private-links-tab).
-   - **Předplatné Azure**: Vyberte **Předplatné** a pak **Skupina zdrojů** a **Účet úložiště**. Volitelně, pokud chcete přijmout data z účtu úložiště prostřednictvím Azure Private Link, vyberte **Povolit private Link**. Další informace popisuje článek [Privátní propojení](security-overview.md#private-links-tab).
+   - **Zdroj Azure**: Zadejte **ID zdroje**. Volitelně, pokud chcete přijmout data z účtu úložiště prostřednictvím Azure Private Link, vyberte **Povolit private Link**. Další informace popisuje článek [Privátní propojení](security-overview.md#set-up-an-azure-private-link).
+   - **Předplatné Azure**: Vyberte **Předplatné** a pak **Skupina zdrojů** a **Účet úložiště**. Volitelně, pokud chcete přijmout data z účtu úložiště prostřednictvím Azure Private Link, vyberte **Povolit private Link**. Další informace popisuje článek [Privátní propojení](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Potřebujete jednu z následujících rolí buď ke kontejneru na účtu úložiště a vytvoření zdroj dat:
@@ -176,7 +176,7 @@ Můžete aktualizovat volbu *Připojte se k účtu úložiště pomocí*. Více 
         > - Vlastník dat objektů blob úložiště
         > - Přispěvatel dat objektů blob úložiště
 
-   - **Povolit Private Link** pokud chcete přijmout data z účtu úložiště prostřednictvím Azure Private Link. Další informace popisuje článek [Privátní propojení](security-overview.md#private-links-tab).
+   - **Povolit Private Link** pokud chcete přijmout data z účtu úložiště prostřednictvím Azure Private Link. Další informace popisuje článek [Privátní propojení](security-overview.md#set-up-an-azure-private-link).
 
 1. Vyberte **Další**.
 1. Změňte jedno z následujících:

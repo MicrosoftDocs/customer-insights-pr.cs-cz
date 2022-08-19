@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206899"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259790"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Připojení datového zdroje dat Azure Synapse Analytics (Preview)
 
@@ -24,26 +24,30 @@ Další informace naleznete v tématech [Přehled Azure Synapse](/azure/synapse-
 
 ## <a name="prerequisites"></a>Předpoklady
 
+> [!NOTE]
+> Pracovní prostory Synapse, které mají [povolenou bránu firewall](/azure/synapse-analytics/security/synapse-workspace-ip-firewall), aktuálně nejsou podporovány.
 > [!IMPORTANT]
 > Nezapomeňte nastavit všechna **přiřazení rolí**, jak je popsáno.  
 
 **V Customer Insights**:
 
-* Máte roli **správce** v Customer Insights. Více informací o [oprávněních uživatele v Customer Insights](permissions.md#assign-roles-and-permissions).
+* Máte roli **správce** v Customer Insights. Více informací o [oprávněních uživatele v Customer Insights](permissions.md#add-users).
 
 **V Azure**:
 
 - Aktivní předplatné Azure.
 
-- Pokud používáte nový účet Azure Data Lake Storage Gen2, *instanční objekt pro Customer Insights* vyžaduje oprávnění **Přispěvatel dat objektů blob úložiště**. Další informace o [připojení k Azure Data Lake Storage s instančním objektem pro Customer Insights](connect-service-principal.md). Úložiště Data Lake Gen2 **musí mít** povolen [hierarchický obor názvů](/azure/storage/blobs/data-lake-storage-namespace).
+- Pokud používáte nový účet Azure Data Lake Storage Gen2, *instanční objekt pro Customer Insights*, což je "Dynamics 365 AI pro Customer Insights" vyžaduje oprávnění **Přispěvatel dat objektů blob úložiště**. Další informace o [připojení k Azure Data Lake Storage s instančním objektem pro Customer Insights](connect-service-principal.md). Úložiště Data Lake Gen2 **musí mít** povolen [hierarchický obor názvů](/azure/storage/blobs/data-lake-storage-namespace).
 
-- Ve skupině zdrojů, kde se nachází Azure Synapse workspace, musí mít *instanční objekt* a *uživatel s Customer Insights* musí mít přiřazeno alespoň oprávnění **Čtenář**. Další informace viz [Přiřazení rolí Azure pomocí webu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
+- Ve skupině zdrojů, kde se nachází Azure Synapse workspace, musí mít *instanční objekt* což je "Dynamics 365 AI pro Customer Insights", a *uživatel s Customer Insights* přiřazeno alespoň oprávnění **Čtenář**. Další informace viz [Přiřazení rolí Azure pomocí webu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 
 - *Uživatel* potřebuje oprávnění **Přispěvatel dat úložiště objektů blob** u účtu Azure Data Lake Storage Gen2, kde jsou umístěna data a propojena s pracovním prostorem Azure Synapse. Přečtěte si více o [používání portálu Azure pro přiřazení role Azure pro přístup k datům objektů blob a fronty](/azure/storage/common/storage-auth-aad-rbac-portal) a [oprávněních pro přispěvatele dat objektů blob úložiště](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Spravovaná identita pracovního prostoru Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* vyžaduje oprávnění **Přispěvatel dat úložiště objektů blob** u účtu Azure Data Lake Storage Gen2, kde jsou umístěna data a připojena k pracovnímu prostoru Azure Synapse. Přečtěte si více o [používání portálu Azure pro přiřazení role Azure pro přístup k datům objektů blob a fronty](/azure/storage/common/storage-auth-aad-rbac-portal) a [oprávněních pro přispěvatele dat objektů blob úložiště](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- V aplikaci Azure Synapse workspace musí mít *instanční objekt pro Customer Insights* přiřazenu roli **Správce Synapse**. Další informace viz [Jak nastavit řízení přístupu pro pracovní prostor Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- V aplikaci Azure Synapse workspace musí mít *instanční objekt pro Customer Insights*, což je "Dynamics 365 AI pro Customer Insights", přiřazenu roli **Správce Synapse**. Další informace viz [Jak nastavit řízení přístupu pro pracovní prostor Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Pokud vaše prostředí Customer Insights ukládá data ve vašem [vlastním Azure Data Lake Storage](own-data-lake-storage.md), uživatel, který nastavuje připojení k Azure Synapse Analytics, potřebuje alespoň integrovanou roli **Čtenář** v účtu Data Lake Storage. Další informace viz [Přiřazení rolí Azure pomocí webu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Připojení k databázím datových jezer v Azure Synapse Analytics
 
@@ -57,7 +61,7 @@ Další informace naleznete v tématech [Přehled Azure Synapse](/azure/synapse-
   
 1. Zadejte **Název** zdroje dat a volitelně **Popis**.
 
-1. Zvolte [dostupné připojení](connections.md) do Azure Synapse Analytics nebo vytvořte nové.
+1. Zvolte [dostupné připojení](connections.md) k Azure Synapse Analytics nebo [vytvořte nové](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse).
 
 1. Vyberte **Databáze** z pracovního prostoru připojeného ve vybraném připojení Azure Synapse Analytics a vyberte **Další**. V současné době podporujeme pouze databáze typu *Databáze jezera*.
 

@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142811"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245549"
 ---
 # <a name="how-to-create-a-new-environment"></a>Návod: Vytvoření nového prostředí
 
@@ -48,7 +48,7 @@ V kroku **Základní informace** zvolte, zda chcete vytvořit prostředí od za�
 
 Zadejte následující údaje:
 
-- **Název**: Název tohoto prostředí. Toto pole je již vyplněno, pokud kopírujete z existujícího prostředí, ale můžete jej změnit.
+- **Název**: Název tohoto prostředí. Toto pole je již vyplněno, pokud kopírujete z existujícího prostředí, ale můžete jej změnit. Pokud máte více než jedno pracovní prostředí, dejte každému srozumitelný zobrazovaný název.
 - **Vyberte svou firmu**: Vyberte primární cílovou skupinu pro nové prostředí. Můžete pracovat s jednotlivými spotřebiteli (B2C) nebo [obchodními účty](work-with-business-accounts.md) (B2B). Pokud vaše organizace obchoduje hlavně s jednotlivci, jako je maloobchodník nebo kavárna, vyberte si jednotlivé spotřebitele. V případě, že vaše hlavní cílová skupina jsou jiné společnosti, jako je výrobce automobilů nebo papírenská společnost, zvolte obchodní účty.
 - **Typ**: Vyberte, zda chcete vytvořit provozní nebo sandboxové prostředí. Sandboxová prostředí neumožňují plánovanou aktualizaci dat a jsou určena pro předimplementaci a testování. Prostředí sandboxu používají stejnou primární cílovou skupinu jako provozní prostředí, které je aktuálně vybráno.
 - **Oblast**: Oblast, ve které je služba nasazena a hostována. Chcete-li použít [vlastní účet Azure Data Lake Storage](own-data-lake-storage.md) nebo [se připojit k existující organizaci Microsoft Dataverse](customer-insights-dataverse.md), Customer Insights musí být ve stejné oblasti.

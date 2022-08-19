@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195650"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246100"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Příjem dat v reálném čase (náhled)
 
 Díky funkcím téměř v reálném čase můžete během několika sekund vidět nejnovější interakce, které vaši zákazníci provedli s vašimi produkty nebo službami.
 
-[Plánované aktualizace](system.md#schedule-tab) zahrnují velké množství záznamů a několik složitých operací. Nejprve jsou data stažena ze zdroje dat. Dále jsou data sjednocena a poté obohacena o další informace. Každé spuštění tohoto procesu může trvat minuty až hodiny.
+[Plánované aktualizace](schedule-refresh.md) zahrnují velké množství záznamů a několik složitých operací. Nejprve jsou data stažena ze zdroje dat. Dále jsou data sjednocena a poté obohacena o další informace. Každé spuštění tohoto procesu může trvat minuty až hodiny.
 
 Tato funkce v reálném čase poskytuje data okamžitě ke spotřebě, dokud následující naplánovaná aktualizace nevytáhne tato data ze zdroje dat.
 
@@ -85,7 +85,7 @@ Podrobnosti o tomto rozhraní API, včetně parametrů a odpovědí, najdete v s
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Využití v reálném čase pomocí telemetrie
 
-Získejte přehled o objemu požadavků na rozhraní API v reálném čase a informace o problémech, se kterými se systém může setkat. Můžete [přistupovat k telemetrii v reálném čase](system.md#api-usage-tab). 
+Získejte přehled o objemu požadavků na rozhraní API v reálném čase a informace o problémech, se kterými se systém může setkat. Můžete [přistupovat k telemetrii v reálném čase](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,19 +1,19 @@
 ---
 title: Rozšiřte profily zákazníků o demografické údaje z Experian (náhled)
 description: Obecné informace o rozšíření třetí strany Experian.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195928"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237988"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Rozšiřte profily zákazníků o demografické údaje z Experian (náhled)
 
@@ -41,13 +41,9 @@ Musíte být [správce](permissions.md#admin) v Customer Insights a mít ID uži
 
 1. Zadejte název připojení a platné ID uživatele, ID strany a číslo modelu účtu zabezpečeného přenosu Experian.
 
-1. Zkontrolujte a poskytněte svůj souhlas s [ochranou osobních údajů a dodržováním předpisů](#data-privacy-and-compliance) výběrem **souhlasím**.
+1. Zkontrolujte část [Ochrana osobních údajů a dodržování předpisů](connections.md#data-privacy-and-compliance) a vyberte **Souhlasím**.
 
 1. Zvolte **Ověřit** pro ověření konfigurace a poté vyberte **Uložit**.
-
-### <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
-
-Když povolíte Dynamics 365 Customer Insights přenášet data do Experian, povolíte tím přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft přenese takové údaje podle vašeho pokynu, ale vy jste zodpovědní za zajištění, že Experian bude splňovat veškeré vaše povinnosti v oblasti ochrany osobních údajů nebo zabezpečení. Další informace viz [Prohlášení Microsoftu o zásadách ochrany osobních údajů](https://go.microsoft.com/fwlink/?linkid=396732). Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
 
 ## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
 

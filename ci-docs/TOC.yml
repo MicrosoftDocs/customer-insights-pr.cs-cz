@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Správa
   items:
-    - name: Nastavení konfigurace systému
-      href: system.md
-    - name: Nakonfigurujte nastavení zabezpečení
-      href: security-overview.md
     - name: Přiřadit uživatelská oprávnění
       href: permissions.md
     - name: Přineste si vlastní trezor klíčů
       href: use-azure-key-vault.md
+    - name: Nakonfigurujte nastavení zabezpečení
+      href: security-overview.md
     - name: Export diagnostických protokolů
       href: diagnostics.md
-    - name: Přehled připojení
+    - name: Spravovat připojení
       href: connections.md
+    - name: Plánování aktualizace systému
+      href: schedule-refresh.md
+    - name: Zobrazení konfigurace systému
+      href: system.md
 - name: Rozhraní API
   items:
     - name: "Práce s\_API"

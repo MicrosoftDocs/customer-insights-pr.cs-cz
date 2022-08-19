@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196386"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259836"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Export dat do Azure Synapse Analytics (Preview)
 
@@ -24,7 +24,7 @@ Azure Synapse je analytická služba, která zrychluje čas na nahlédnutí nap�
 > [!NOTE]
 > Nezapomeňte nastavit všechna **přiřazení rolí**, jak je popsáno.
 
-- V Customer Insights musí mít váš uživatelský účet Azure Active Directory (AD) roli [Správce](permissions.md#assign-roles-and-permissions).
+- V Customer Insights musí mít váš uživatelský účet Azure Active Directory (AD) roli [Správce](permissions.md#add-users).
 
 V Azure:
 
@@ -39,6 +39,8 @@ V Azure:
 - *[Spravovaná identita aplikace Azure Synapse workspace](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* má oprávnění **Přispěvatel dat úložiště objektů blob** u účtu Azure Data Lake Storage Gen2, kde jsou umístěna data a připojena k aplikaci Azure Synapse workspace. Přečtěte si více o [používání portálu Azure pro přiřazení role Azure pro přístup k datům objektů blob a fronty](/azure/storage/common/storage-auth-aad-rbac-portal) a [oprávněních pro přispěvatele dat objektů blob úložiště](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - V aplikaci Azure Synapse workspace musí mít *instanční objekt pro Customer Insights* [přiřazenu roli](/azure/synapse-analytics/security/how-to-set-up-access-control) **Správce Synapse**.
+
+- Pokud vaše prostředí Customer Insights ukládá data ve vašem [vlastním Azure Data Lake Storage](own-data-lake-storage.md), uživatel, který nastavuje připojení k Azure Synapse Analytics, potřebuje alespoň integrovanou roli **Čtenář** v účtu Data Lake Storage. Další informace viz [Přiřazení rolí Azure pomocí webu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Nastavení propojení k Azure Synapse
 

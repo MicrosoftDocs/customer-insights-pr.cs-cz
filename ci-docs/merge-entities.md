@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139649"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213574"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Sjednocení zákaznických polí pro sjednocení dat
 
@@ -58,6 +58,9 @@ V tomto kroku procesu sjednocení vyberte a vylučte atributy, které chcete slo
 
 1. Určete, jak kombinovat nebo sloučit pole jednou ze tří možností:
     - **Důležitost**: Identifikuje hodnotu vítěze na základě pořadí důležitosti specifikovaného pro zúčastněná pole. Toto je výchozí možnost sloučení. Vyberte **Přesunout nahoru/dolů** a nastavte pořadí důležitosti.
+
+      > [!NOTE]
+      > Customer Insights používá první nenulovou hodnotu. Například dané entity A, B a C seřazené v tomto pořadí, pokud A.Name a B.Name jsou null, použije se hodnota z C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Možnost důležitosti v dialogovém okně sloučení polí.":::
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170812"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245365"
 ---
 # <a name="measures-overview"></a>Přehled měr
 
@@ -53,7 +53,7 @@ Výběrem vedle míry zobrazíte dostupné akce. Výběrem názvu míry zobrazí
 - Volbou **Upravit** změníte vlastnosti míry.
 - Volbou **Aktualizovat** do míry zahrnete nejnovější data.
 - **Přejmenujte** míru.
-- **Aktivujte** nebo **deaktivujte** míru. Neaktivní míry se neaktualizují během [plánované aktualizace](system.md#schedule-tab) a mají **Stav** uveden jako **Přeskočeno**, což označuje, že u nich neproběhl ani pokus o aktualizaci.
+- **Aktivujte** nebo **deaktivujte** míru. Neaktivní míry se neaktualizují během [plánované aktualizace](schedule-refresh.md) a mají **Stav** uveden jako **Přeskočeno**, což označuje, že u nich neproběhl ani pokus o aktualizaci.
 - Volbou **Značka** můžete [spravovat značky](work-with-tags-columns.md#manage-tags) pro míru.
 - **Odstraňte** míry.
 - **Sloupce** pro [přizpůsobení sloupců](work-with-tags-columns.md#customize-columns), které se zobrazí.
@@ -62,7 +62,7 @@ Výběrem vedle míry zobrazíte dostupné akce. Výběrem názvu míry zobrazí
 
 ## <a name="refresh-measures"></a>Aktualizace měr
 
-Míry lze aktualizovat podle automatického plánu nebo ručně na vyžádání. Chcete-li ručně obnovit jednu nebo více měr, vyberte ji a vyberte **Aktualizovat**. Na záložce [naplánovat automatické obnovení](system.md#schedule-tab) jděte na **Správce** > **Systém** > **Plán**.
+Míry lze aktualizovat podle automatického plánu nebo ručně na vyžádání. Chcete-li ručně obnovit jednu nebo více měr, vyberte ji a vyberte **Aktualizovat**. Na záložce [naplánovat automatické obnovení](schedule-refresh.md) jděte na **Správce** > **Systém** > **Plán**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

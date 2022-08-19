@@ -1,19 +1,19 @@
 ---
 title: Rozšíření profilů zákazníků daty identity z LiveRamp (Preview)
 description: Rozšiřte profily zákazníků daty LiveRamp.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196340"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237804"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Rozšíření profilů zákazníků daty identity z LiveRamp (Preview)
 
@@ -41,13 +41,9 @@ Musíte být [správce](permissions.md#admin) v Customer Insights aa mít aktivn
 
 1. Zadejte název připojení a platné ID klienta LiveRamp a tajný kód.
 
-1. Zkontrolujte a poskytněte svůj souhlas s [ochranou osobních údajů a dodržováním předpisů](#data-privacy-and-compliance) výběrem **souhlasím**.
+1. Zkontrolujte část [Ochrana osobních údajů a dodržování předpisů](connections.md#data-privacy-and-compliance) a vyberte **Souhlasím**.
 
 1. Zvolte **Ověřit** pro ověření konfigurace a poté vyberte **Uložit**.
-
-### <a name="data-privacy-and-compliance"></a>Ochrana osobních údajů a dodržování předpisů
-
-Když povolíte aplikaci Dynamics 365 Customer Insights přenos dat do služby LiveRamp, povolíte přenos dat mimo hranici dodržování předpisů pro Dynamics 365 Customer Insights, včetně potenciálně citlivých údajů, jako jsou osobní údaje. Společnost Microsoft taková data přenese na váš pokyn, ale vy jste odpovědní za zajištění toho, že LiveRamp splňuje veškeré vaše případné povinnosti týkající se ochrany soukromí nebo zabezpečení. Další informace najdete v [prohlášení o ochraně osobních údajů společnosti Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Tuto funkci rozšíření může kdykoli odebráním ukončit správce Dynamics 365 Customer Insights.
 
 ## <a name="configure-the-enrichment"></a>Konfigurace rozšíření
 
