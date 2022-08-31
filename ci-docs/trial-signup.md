@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: fd32a3e37f4bbf57a5bd05f888fde39d32c02a82
+ms.sourcegitcommit: e5649ca0b3000cee0ca7c9eac7142cbd5f7dd2ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080883"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "9305596"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Registrace bezplatného zkušebního předplatného Dynamics 365 Customer Insights
 
@@ -38,8 +38,8 @@ Vaše zkušební prostředí obsahuje stejné funkce jako placená verze. Níže
 - Vytvořte [segmenty](segments.md) k seskupení zákazníků a [měr](measures.md) ke kontrole KPI.
 - Nastavte [připojení](connections.md) a [exporty](export-destinations.md) ke zpracování dílčích sad dat v jiných aplikacích.
 
-## <a name="additional-resources"></a>Další materiály
+## <a name="additional-resources"></a>Další zdroje
 
-- [Prozkoumejte školení na Microsoft Learn](/learn/browse/?filter-products=dynamics-dynamics-cust-insights)
+- [Prozkoumejte studijní programy a moduly pro Customer Insights.](/learn/browse/?products=dynamics-cust-insights)
 - [Nejčastější dotazy ke zkušební verzi](trial-faq.md)
 - [Podrobnosti o produktu Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/)

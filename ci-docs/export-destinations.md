@@ -1,7 +1,7 @@
 ---
 title: Přehled exportů (Preview)
 description: Spravujte exporty ke sdílení dat.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245319"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304051"
 ---
 # <a name="exports-preview-overview"></a>Přehled exportů (Preview)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245319"
 
 Existují dva hlavní typy exportu:  
 
-- **Export dat**: export libovolného typu entity dostupného v Customer Insights. Entity, které vyberete pro export, se exportují se všemi datovými poli, metadaty, schématy a podrobnostmi mapování.
-- **Exporty segmentů**: export entit segmentů z Customer Insights. Segmenty představují seznam zákaznických profilů. Při konfiguraci exportu vyberete zahrnutá datová pole v závislosti na cílovém systému, do kterého exportujete data.
+- **Export dat** vám umožní exportovat jakýkoli typ entity dostupný v Customer Insights. Entity, které vyberete pro export, se exportují se všemi datovými poli, metadaty, schématy a podrobnostmi mapování.
+- **Exporty segmentů** vám umožní exportovat entity segmentů z Customer Insights. V případě jednotlivých spotřebitelů (B2C) představují segmenty seznam profilů zákazníků. V případě firem (B2B) [segmenty mohou představovat seznam účtů nebo kontaktů](segment-builder.md#create-a-new-segment-with-segment-builder). Při konfiguraci exportu vyberete zahrnutá datová pole v závislosti na cílovém systému, do kterého exportujete data.
 
 ### <a name="export-segments"></a>Export segmentů
 
@@ -38,14 +38,15 @@ Většina možností exportu podporuje oba typy prostředí. Export segmentů do
 **Export segmentů v prostředích pro jednotlivé spotřebitele (B2C)**  
 - Segmenty v kontextu prostředí pro jednotlivé zákazníky jsou postaveny na entitě *sjednocený profil zákazníka*. Exportovat lze každý segment, který splňuje požadavky cílových systémů (například e -mailová adresa).
 
-**Segmenty exportu prostředí pro obchodní účty (B2B)**  
-- Segmenty v kontextu prostředí pro obchodní účty jsou postaveny na entitě *účet*. Chcete -li exportovat segmenty účtu tak, jak jsou, musí cílový systém podporovat segmenty čistého účtu. To je případ [LinkedIn](export-linkedin-ads.md), když při definování exportu vyberete **společnost**.
-- Všechny ostatní cílové systémy vyžadují pole od kontaktní entity. Aby bylo zajištěno, že segmenty účtu mohou načítat data ze souvisejících kontaktů, definice vašeho segmentu potřebuje promítnout atributy entity kontaktu. Další informace o tom, jak [konfigurovat segmenty a atributy projektu](segment-builder.md).
+**Segmenty exportu v prostředí pro obchodní účty (B2B)**  
+- Segmenty v kontextu prostředí pro obchodní účty jsou postaveny na entitě *účet* nebo *kontakt*. Chcete -li exportovat segmenty účtu tak, jak jsou, musí cílový systém podporovat segmenty čistého účtu. To je případ [LinkedIn](export-linkedin-ads.md), když při definování exportu vyberete **společnost**.
+- Všechny ostatní cílové systémy vyžadují pole od kontaktní entity.
+- Se dvěma typy segmentů (kontakty a účty) Customer Insights automaticky identifikuje, který typ segmentů je vhodný pro export na základě cílového systému. Například u cílového systému zaměřeného na kontakty, jako je Mailchimp, vám Customer Insights umožňuje vybrat k exportu pouze segmenty kontaktů.
 
 **Limity exportu segmentů**  
 - Cílové systémy třetích stran mohou omezit počet zákaznických profilů, které můžete exportovat. 
 - U jednotlivých zákazníků uvidíte skutečný počet členů segmentu, když vyberete segment pro export. Pokud je segment příliš velký, zobrazí se upozornění. 
-- U obchodních účtů uvidíte počet účtů v segmentu; počet kontaktů, které mohou být promítány, se však nezobrazuje. V některých případech to může vést k tomu, že exportovaný segment skutečně obsahuje více profilů zákazníků, než cílový systém akceptuje. Pokud jsou překročena omezení cílového systému, export je přeskočen.
+- U firemních účtů uvidíte počet účtů nebo kontaktů v závislosti na segmentu. Pokud je segment příliš velký, zobrazí se upozornění. Překročení limitů výsledků cílových systémů přeskočí export.
 
 ## <a name="set-up-a-new-export"></a>Nastavení nového exportu
 
@@ -110,6 +111,20 @@ Chcete-li exportovat data bez čekání na plánované obnovení, přejděte na 
 
 - Chcete-li spustit všechny exporty, vyberte **Spustit vše** na panelu příkazů. Spuštěny budou pouze exporty, které mají aktivní plán. Chcete-li spustit export, který není aktivní, spusťte jediný export.
 - Chcete-li spustit jeden export, vyberte jej v seznamu a v panelu příkazů vyberte **Spustit**.
+
+## <a name="troubleshooting"></a>Řešení problému
+
+### <a name="segment-not-eligible-for-export"></a>Segment není způsobilý pro export
+
+**Problém** V prostředí obchodních účtů vaše exporty selžou s chybovou zprávou: „Následující segment není způsobilý pro toto místo určení exportu: {název segmentu}. Vyberte pouze segmenty typu ContactProfile a zkuste to znovu.“
+
+**Řešení** Prostředí Customer Insights pro obchodní účty byla aktualizována, aby kromě segmentů účtů podporovala i segmenty kontaktů. Kvůli této změně fungují exporty vyžadující kontaktní údaje pouze se segmenty založenými na kontaktech.
+
+1. [Vytvořte segment na základě kontaktů](segment-builder.md), který je stejný jako dříve použitý segment.
+
+1. Jakmile je segment kontaktů spuštěn, upravte příslušný export a vyberte tento nový segment.
+
+1. Volbou **Uložit** uložíte konfiguraci nebo volbou **Uložit a spustit** můžete tento export ihned otestovat.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

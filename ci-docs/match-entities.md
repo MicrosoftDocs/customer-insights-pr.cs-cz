@@ -2,7 +2,7 @@
 title: Podmínky shody pro sjednocení dat
 description: Spárováním entit můžete vytvořit sjednocené profily zákazníků.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139689"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304649"
 ---
 # <a name="match-conditions-for-data-unification"></a>Podmínky shody pro sjednocení dat
 
@@ -27,6 +27,8 @@ Tento krok sjednocení definuje pořadí párování a pravidla pro párování 
 
 > [!NOTE]
 > Jakmile vytvoříte podmínky shody a vyberete **Další**, nemůžete odstranit vybranou entitu nebo atribut. V případě potřeby vyberte **Zpět** ke kontrole vybraných entit a atributů předtím, než budete pokračovat.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Zahrnutí rozšířených entit (Preview)
 
@@ -43,16 +45,16 @@ Pokud jste obohatili entity na úrovni zdroje dat, abyste pomohli zlepšit výsl
 Každé párování sjednocuje dvě nebo více entit do jedné konsolidované entity. Zároveň uchovává jedinečné záznamy o zákaznících. Pořadí shody udává pořadí, ve kterém se systém pokusí záznamy spárovat.
 
 > [!IMPORTANT]
-> První entita v seznamu se nazývá primární entita. Primární entita slouží jako základ pro vaši sadu sjednocených profilů. K této entitě budou přidány další vybrané entity.
+> První entita je označována jako primární a slouží jako základ sjednocených profilů. K této entitě budou přidány další vybrané entity.
 >
 > Důležité poznámky:
 >
 > - Jako primární subjekt vyberte subjekt s nejúplnějšími a nejspolehlivějšími profilovými údaji o vašich zákaznících.
 > - Vyberte entitu, která ma několik atrubutů společných s jinými entitami (například jméno, telefonní číslo nebo e-mailová adresa), jakožto primární entitu.
 
-1. Na stránce **Odpovídající podmínky** pomocí šipek pro pohyb nahoru a dolů přesuňte entity v požadovaném pořadí nebo je přetáhněte. Například vyberte **Contacts:eCommerce** jako primární entitu a **CustomerLoyalty:Loyalty** jako druhou entitu.
+1. Na stránce **Odpovídající podmínky** pomocí šipek pro pohyb nahoru a dolů přesuňte entity v požadovaném pořadí nebo je přetáhněte. Například vyberte **eCommerceCustomers** jako primární entitu a **loyCustomers** jako druhou entitu.
 
-1. Pokud chcete mít každý záznam v entitě jako jedinečného zákazníka bez ohledu na to, zda je nalezena shoda, vyberte **Zahrnou všechny záznamy**. Všechny záznamy v této entitě, které se neshodují se záznamy v jiných entitách, jsou zahrnuty do jednotného profilu. Záznamy, které nemají shodu, se nazývají singletony.
+1. Pokud chcete mít každý záznam v entitě jako jedinečného zákazníka bez ohledu na to, zda je nalezena shoda, vyberte **Zahrnou všechny záznamy**. Všechny záznamy v této entitě, které se neshodují se záznamy v jiných entitách, jsou zahrnuty do sjednoceného profilu. Záznamy, které nemají shodu, se nazývají singletony.
   
 Primární entita *Contacts:eCommerce* je spárována s další entitou *CustomerLoyalty:Loyalty*. Pokud máte více než dvě entity, datová sada, která je výsledkem prvního kroku shody, se shoduje s následující entitou.
 
@@ -70,7 +72,7 @@ Upozornění vedle názvu entity znamená, že pro dvojici shody není definová
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Snímek podokna Přidat pravidlo":::
 
-   - **Vyberte entitu/pole (první řádek)**: Vyberte související entitu a atribut pro určení vlastnosti záznamu, která je pravděpodobně jedinečná pro zákazníka. Například telefonní číslo nebo e-mailová adresa. Vyvarujte se párování podle atributů typu aktivity. Například ID nákupu pravděpodobně nenajde shodu v jiných typech záznamů.
+   - **Vyberte entitu/pole (první řádek)**: Vyberte entitu a atribut, která je pravděpodobně jedinečný pro zákazníka. Například telefonní číslo nebo e-mailová adresa. Vyvarujte se párování podle atributů typu aktivity. Například ID nákupu pravděpodobně nenajde shodu v jiných typech záznamů.
 
    - **Vyberte entitu/pole (druhý řádek)**: Vyberte atribut, který souvisí s atributem entity zadané v prvním řádku.
 
@@ -116,7 +118,7 @@ Pravidla párování jsou sady podmínek. Pro párování entit podle podmínek 
 
 ### <a name="add-exceptions-to-a-rule"></a>Přidání výjimek do pravidla
 
-Ve většině případů párování entit vede k jedinečným zákaznickým profilům s konsolidovanými daty. Chcete-li dynamicky řešit vzácné případy falešně pozitivních a falešně negativních výsledků, můžete definovat výjimky pro pravidlo shody. Výjimky se uplatňují po zpracování pravidel shody a zabraňují spárování všech záznamů, které splňují kritéria výjimky.
+Ve většině případů párování entit vede k jedinečným zákaznickým profilům s konsolidovanými daty. Chcete-li řešit vzácné případy falešně pozitivních a falešně negativních výsledků, definujte výjimky pro pravidlo shody. Výjimky se uplatňují po zpracování pravidel shody a zabraňují spárování všech záznamů, které splňují kritéria výjimky.
 
 Pokud například vaše pravidlo shody kombinuje příjmení, město a datum narození, systém by identifikoval dvojčata se stejným příjmením, která žijí ve stejném městě, jako stejný profil. Můžete zadat výjimku, která nespáruje profily, pokud křestní jména v entitách, které kombinujete, nejsou stejná.
 
@@ -134,7 +136,7 @@ Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici
 |---------|---------|---------|
 |Vždy se shodovat     | Definuje hodnoty, které se vždy shodují.         |  Vždy se shodují *Mike* a *MikeR*.       |
 |Nikdy se neshodovat     | Definuje hodnoty, které se nikdy neshodují.        | Nikdy se neshodují *John* a *Jonathan*.        |
-|Vlastní obejití     | Definuje hodnoty, které by měl systém ve fázi shody vždy ignorovat. |  Ignorujte hodnoty *11111* a *Neznámá* během shody.        |
+|Obejít            | Definuje hodnoty, které by měl systém ve fázi shody vždy ignorovat. |  Ignorujte hodnoty *11111* a *Neznámá* během shody.        |
 |Mapování aliasů    | Definování hodnot, které by měl systém považovat za stejnou hodnotu.         | Považuje *Joe* za shodné s *Joseph*.        |
 
 1. Vyberte **Vlastní**.

@@ -1,9 +1,9 @@
 ---
-title: Aktivity zákazníka
-description: Definujte aktivity zákazníků a zobrazte je na časové ose v zákaznických profilech.
-ms.date: 07/22/2022
+title: Aktivity zákaznického nebo obchodního kontaktu
+description: Definujte aktivity zákaznického nebo obchodního kontaktu a zobrazte je na časové ose v zákaznických profilech.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188131"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304097"
 ---
-# <a name="customer-activities"></a>Aktivity zákazníka
+# <a name="customer-or-business-contact-activities"></a>Aktivity zákaznického nebo obchodního kontaktu
 
-Zákaznické aktivity jsou akce nebo události prováděné zákazníky. Například transakce, doba trvání podpory hovoru, recenze webů, nákupy nebo vrácení zboží. Tyto aktivity jsou obsaženy v jednom nebo více zdrojích dat. Pomocí Customers Insights konsolidujte své zákaznické aktivity z těchto [zdrojů dat](data-sources.md) a přidružte je k profilům zákazníků. Tyto aktivity se zobrazují chronologicky na časové ose v profilu zákazníka. Zahrňte časovou osu do aplikací Dynamics 365 s řešením [Doplněk zákaznické karty](customer-card-add-in.md).
+Aktivity zákazníka jsou akce nebo události prováděné zákazníky nebo obchodními kontakty. Například transakce, doba trvání podpory hovoru, recenze webů, nákupy nebo vrácení zboží. Tyto aktivity jsou obsaženy v jednom nebo více zdrojích dat. Pomocí Customers Insights konsolidujte své zákaznické aktivity z těchto [zdrojů dat](data-sources.md) a přidružte je k profilům zákazníků. Tyto aktivity se zobrazují chronologicky na časové ose v profilu zákazníka. Zahrňte časovou osu do aplikací Dynamics 365 s řešením [Doplněk zákaznické karty](customer-card-add-in.md).
 
-## <a name="define-an-activity"></a>Definování aktivity
+## <a name="define-a-customer-activity"></a>Definování aktivity zákazníka
 
 Entita musí mít alespoň jeden atribut typu **Datum**, aby byla součástí na časové osy zákazníka. Ovládací prvek **Přidat aktivitu** není povolen, pokud není taková entita nalezena.
 
@@ -38,9 +38,9 @@ Entita musí mít alespoň jeden atribut typu **Datum**, aby byla součástí na
 
 1. V kroku **Data aktivity** zadejte informace do následujících polí:
 
-   - **Název aktivity**: Název vaší aktivity.
-   - **Entita aktivity**: Entita, která obsahuje údaje o transakcích nebo aktivitách.
-   - **Primární klíč**: Pole, které jedinečně identifikuje záznam. Nemělo by obsahovat žádné duplicitní hodnoty, prázdné hodnoty nebo chybějící hodnoty.
+   - **Název aktivity**: Vyberte název své aktivity.
+   - **Entita aktivity**: Vyberte entitu, která obsahuje údaje o transakcích nebo aktivitách.
+   - **Primární klíč**: Vyberte pole, které jedinečně identifikuje záznam. Nemělo by obsahovat žádné duplicitní hodnoty, prázdné hodnoty nebo chybějící hodnoty.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Nastavte data aktivity s názvem, entitou a primárním klíčem.":::
 
@@ -48,9 +48,9 @@ Entita musí mít alespoň jeden atribut typu **Datum**, aby byla součástí na
 
 1. V kroku **Vztah** vyberte možnost **Přidat vztah** pro připojení dat aktivity k odpovídajícímu záznamu zákazníka. Tento krok vizualizuje spojení mezi entitami.  
 
-   - **Cizí klíč z entity**: Pole ve vaší entitě aktivity, které se použije k navázání vztahu s jinou entitou.
+   - **Cizí klíč**: Cizí pole ve vaší entitě aktivity, které se použije k navázání vztahu s jinou entitou.
    - **Název entity**: Odpovídající entita zdrojového zákazníka, se kterou bude vaše entita aktivity ve vztahu. Můžete ji přidružit pouze ke zdrojovým entitám zákazníků, které se používají v procesu sjednocení dat.
-   - **Název vztahu**: Název identifikující vztah mezi entitami. Pokud vztah mezi touto entitou aktivity a vybranou entitou zdrojového zákazníka již existuje, název vztahu je jen pro čtení.
+   - **Název vztahu**: Pokud již existuje vztah mezi touto entitou aktivity a vybranou zdrojovou entitou zákazníka, bude název vztahu v režimu jen pro čtení. Pokud takový vztah neexistuje, vytvoří se nový vztah se jménem, které uvedete v tomto poli.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definujte vztah entity.":::
 
@@ -90,7 +90,7 @@ Entita musí mít alespoň jeden atribut typu **Datum**, aby byla součástí na
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Správa existujících aktivit
+## <a name="manage-existing-customer-activities"></a>Správa existujících aktivit zákazníka
 
 Jděte na **Data** > **Aktivity** k zobrazení vašich uložených aktivit, jejich zdrojové entity, typu aktivity a zda jsou zahrnuty na časové ose zákazníka. Seznam aktivit můžete seřadit podle libovolného sloupce nebo pomocí vyhledávacího pole najít aktivitu, kterou chcete spravovat.
 
@@ -116,9 +116,43 @@ Vyberte aktivitu pro zobrazení dostupných akcí.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Pomocí panelu filtru nakonfigurujte podmínky filtru.":::
 
-1. Chcete-li odstranit filtry, vyberte **Vymazat filtry** nebo vyberte **Filtr** a zrušte zaškrtnutí políčka filtru.
-
 > [!NOTE]
 > Filtry aktivit se odstraní, když opustíte profil zákazníka. Musíte je použít při každém otevření v zákaznickém profilu.
+
+## <a name="define-a-contact-activity"></a>Definování aktivity kontaktu
+
+Pro obchodní účty (B2B) použijte enitu *ContactProfile* k zachycení aktivit kontaktů. Na časové ose aktivity pro obchodní vztah můžete vidět, který kontakt byl zodpovědný za jednotlivé aktivity. Většina kroků se řídí konfigurací mapování aktivity zákazníka.
+
+   > [!NOTE]
+   > Chcete-li definovat aktivitu na úrovni kontaktu, musí být vytvořena entita *ContactProfile* buď jako [sjednocený profil kontaktu](data-unification-contacts.md) nebo přes [sémantické mapování](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Pro každý záznam v datech aktivity musíte mít oba atributy **AccountID** a **ContactID**.
+  
+1. Přejděte na **Data** > **Aktivity**.
+
+1. Vyberte **Přidat aktivitu**.
+
+1. Pojmenujte aktivitu, vyberte zdrojovou entitu aktivity a vyberte primární klíč entity aktivity.
+
+1. V kroku **Vztahy** vytvořte nepřímý vztah mezi zdroji dat aktivity a obchodními vztahy prostřednictvím vašich kontaktních údajů jako zprostředkující entity. Další informace viz [přímé a nepřímé cesty vztahů](relationships.md#relationship-paths).
+   - Příklad vztahu pro aktivitu nazvanou *Nákupy*:
+      - **Zdrojová data aktivity pro nákupy** > **Kontaktní údaje** na atributu **ContactID**
+      - **Kontaktní údaje** > **Údaje o obchodním vztahu** na atributu **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Ukázkové nastavení vztahu.":::
+
+1. Po nastavení vztahů vyberte **Další** a dokončete konfiguraci mapování aktivit. Podrobné kroky k vytvoření aktivity viz [definování aktivity zákazníka](#define-a-customer-activity).
+
+1. Spusťte mapování aktivit.
+
+1. Vaše aktivity na úrovni kontaktu budou nyní viditelné na časové ose zákazníka.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Konečný výsledek po konfiguraci kontaktních aktivit":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filtrování časové osy aktivity na úrovni kontaktu
+
+Po konfiguraci mapování aktivity na úrovni kontaktu a jejím spuštění se aktualizuje časová osa aktivit vašich zákazníků. Obsahuje jejich ID nebo jména v závislosti na konfiguraci entity *ContactProfile* pro aktivity, které prováděli. Aktivity můžete filtrovat podle kontaktů na časové ose, abyste viděli konkrétní kontakty, které vás zajímají. Kromě toho můžete zobrazit všechny aktivity, které nejsou přiřazeny ke konkrétnímu kontaktu, výběrem možnosti **Aktivity, které nejsou mapovány na kontakt**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Možnosti filtrování dostupné pro aktivity na úrovni kontaktu.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

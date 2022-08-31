@@ -4,21 +4,21 @@ description: Přečtěte si o obchodních účtech jako o primární cílové sk
 ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.custom: intro-internal
 ms.author: wimohabb
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 9bf91671b744198b2f37391edc7abf58eca3c820
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: abb77a720ab737520a905b0c93b65573e669109f
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053105"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303908"
 ---
 # <a name="work-with-business-accounts"></a>Práce s obchodními účty
 
@@ -30,7 +30,7 @@ Správci mohou [vytvořit prostředí ve stávající organizaci](create-environ
 
 Pak můžete [přijímat data](data-sources.md) pro obchodní účty a související kontakty jako zdroje dat ze všech podporovaných zdrojů.
 
-Po sjednocení dat [určete hierarchie účtů](relationships.md#set-up-account-hierarchies) jako součást konfigurace vztahu. Můžete také [konfigurovat sémantická mapování](semantic-mappings.md) pro propojení entit kontaktu a účtu. 
+ [Sjednoťte](data-unification.md) data účtu následované kontaktními údaji za účelem propojení entit kontaktů a účtu.
 
 ## <a name="switch-between-primary-target-audience"></a>Přepínání mezi primární cílovou skupinou
 
@@ -43,11 +43,12 @@ Pokud vaše organizace spravuje prostředí pro jednotlivé zákazníky a obchod
 - [Aktivity](activities.md): Podpora účtů a souvisejících kontaktů k vytváření aktivit a jejich zobrazení na časové ose.
 - [Vztahy](relationships.md): Průvodce aktivitami pomáhá vytvářet vztahy mezi entitami, aby zobrazení účtu mohlo zobrazovat všechny aktivity z kontaktů. Kontakty lze zobrazit podrobněji, aby bylo možné zobrazit zobrazení kontaktů, a pro agregaci aktivit účtu lze použít hierarchie.
 - [Míry](measures.md): Podporuje opatření vytvořená z nástroje pro tvorbu měření jedním výpočtem. Volitelné nastavení umožňuje souhrn pro podúčty při vytváření měr.
-- [Segmenty](segments.md): Podporuje segmenty, které jsou vytvořeny od začátku pomocí nástroje pro tvorbu segmentů. Noví operátoři umožňují začlenění hierarchie účtů při vytváření segmentů.
+- [Segmenty](segments.md): Podporuje segmenty, které jsou vytvořeny od začátku pomocí nástroje pro tvorbu segmentů. Segmenty mohou být založeny na účtech nebo kontaktech.
 - [Příjem dat](data-sources.md): Všechny funkce v této oblasti jsou stejné pro firemní účty a individuální zákazníky.
-- [Sjednocení dat](data-unification.md): Všechny funkce v této oblasti jsou stejné pro firemní účty a individuální zákazníky.
+- Sjednocení dat B2-B je velmi podobné sjednocení dat B2C, ale zahrnuje další krok sjednocení kontaktů po sjednocení účtu. Viz [Obchodní účty (B2B)](data-unification.md).
 - [Obohacení](enrichment-hub.md): Některé typy obohacení jsou k dispozici pouze pro jednotlivé scénáře zákazníků, zatímco jiné jsou k dispozici výhradně pro firemní účty.
 - [Předpovědi a modely po vybalení](predictions-overview.md): Predikce úbytku transakcí obsahuje další kroky pro obchodní účty. Další předpovědi jsou k dispozici pouze pro jednotlivé zákazníky.
 - [Aktivace a export](export-destinations.md): Exporty jsou k dispozici pro firemní účty a individuální zákazníky. Některé exporty vyžadují zvláštní konfiguraci a kontaktní informace promítnuté v podkladových segmentech, aby byly platné pro firemní účty.
 - [Nastavení systému](system.md) a [správa uživatelů](permissions.md): Všechny funkce v této oblasti jsou stejné pro firemní účty a individuální zákazníky.
 
+[!INCLUDE [footer-include](includes/footer-banner.md)]

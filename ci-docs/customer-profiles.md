@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188085"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303775"
 ---
 # <a name="view-customer-profiles"></a>Zobrazení profilů zákazníků
 
@@ -78,7 +78,7 @@ Podrobnosti o zákazníkovi zahrnují následující:
 **Dlaždice profilu zákazníka** zobrazuje různé hodnoty ze sjednocené entity *Zákazník*. Pokud pole pro vybraný zákaznický profil nemá žádnou hodnotu, nezobrazí se kromě pole adresy. Dlaždice je strukturována do sekcí:
 
 - První část ukazuje předdefinovanou sadu polí a za ní všechna pole, která jsou součástí indexu vyhledávání a filtrování. Všechna pole související s adresou jsou sloučena do jednoho řádku, který ukazuje, pokud profil neobsahuje žádné informace o adrese.
-- **Kontakty na tohoto zákazníka** se zobrazují v prostředích pro obchodní účty. Každý kontakt je zobrazen se svými poli. Prázdná pole jsou skrytá.
+- **Kontakty na tohoto zákazníka** se zobrazují v prostředích pro obchodní účty (B2B). Každý kontakt je zobrazen se svými poli. Prázdná pole jsou skrytá.
 - **Další pole** zobrazují zbývající pole vybraného zákazníka kromě ID.
 - **ID** uvádí všechna ID pod odpovídajícím názvem entity. Pole jsou identifikována jako ID podle jejich sémantiky.
 

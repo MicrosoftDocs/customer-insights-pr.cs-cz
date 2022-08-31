@@ -1,7 +1,7 @@
 ---
 title: Přehled segmentů
 description: Vytvořte přehled segmentů a způsob jejich vytváření a správy.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246285"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304787"
 ---
 # <a name="segments-overview"></a>Přehled segmentů
 
 Segmenty umožňují seskupit zákazníky na základě demografických, transakčních nebo behaviorálních atributů. Segmenty můžete použít k cílení propagačních kampaní, prodejních aktivit a akcí podpory zákazníků k dosažení vašich obchodních cílů.
 
-Profily zákazníků, které odpovídají filtrům definice segmentu, se označují jako *členy* segmentu. Použijí se některé [servisní limity](/dynamics365/customer-insights/service-limits).
+Profily nebo kontakty zákazníků, které odpovídají filtrům definice segmentu, se označují jako *členy* segmentu. Použijí se některé [servisní limity](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-segment"></a>Vytvořit segment
 
@@ -41,13 +41,19 @@ Vyberte, jak vytvořit segment na základě vaší cílové skupiny.
 
 # <a name="business-accounts-b-to-b"></a>[Obchodní účty (B2B)](#tab/b2b)
 
-- Jednoduché nebo složité segmenty s nástrojem pro tvorbu segmentů: [Sestavte si vlastní](segment-builder.md)
+Segment účtů nebo segment kontaktů (Preview) pomocí nástroje pro tvorbu segmentů: [Sestavení vlastního řešení](segment-builder.md)
+
+> [!NOTE]
+> Většina cílů exportu vyžaduje kontaktní údaje pro marketingové účely. Vytvořte proto segmenty kontaktů, které chcete použít pro tyto exporty.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Správa existujících segmentů
 
-Jděte na stránku **Segmenty**, kde uvidíte vámi vytvořené segment s jejich stavem, počtu členů a časem poslední aktualizace dat. Seznam segmentů můžete seřadit podle libovolného sloupce nebo pomocí vyhledávacího pole najít segment, který chcete spravovat.
+Přejděte na stránku **Segmenty**, kde zobrazíte segmenty, které jste vytvořili, jejich stav a stav a čas poslední aktualizace dat. Seznam segmentů můžete seřadit podle libovolného sloupce nebo pomocí vyhledávacího pole najít segment, který chcete spravovat.
+
+> [!TIP]
+> V prostředí B2B sloupec **Typ cílové skupiny** udává, zda je segment založen na účtech nebo kontaktech.
 
 Výběrem segmentu zobrazíte dostupné akce.
 
@@ -82,7 +88,7 @@ Spodní část obsahuje seznam členů segmentu.
 > [!NOTE]
 > Pole, která se zobrazí v tomto seznamu, jsou založena na atributech entit segmentu.
 >
->Seznam je náhledem odpovídajících členů segmentu a zobrazuje prvních 100 záznamů segmentu, takže jej můžete rychle vyhodnotit a v případě potřeby zkontrolovat jeho definice. Chcete-li zobrazit všechny odpovídající záznamy, [exportujte segment](export-destinations.md).
+> Seznam je náhledem odpovídajících členů segmentu a zobrazuje prvních 100 záznamů segmentu, takže jej můžete rychle vyhodnotit a v případě potřeby zkontrolovat jeho definice. Chcete-li zobrazit všechny odpovídající záznamy, vyberte **Zobrazit další**, čímž otevřete stránku [**Entity**](entities.md), nebo [exportujte segment](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Aktualizovat segmenty
 

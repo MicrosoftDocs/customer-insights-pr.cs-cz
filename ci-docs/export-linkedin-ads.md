@@ -1,19 +1,19 @@
 ---
 title: Export segmentů do LinkedIn Ads (preview)
 description: Naučte se konfigurovat připojení a export do služby LinkedIn Ads.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196800"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304695"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Export segmentů do LinkedIn Ads (preview)
 
@@ -24,7 +24,7 @@ Exportujte segmenty sjednocených profilů zákazníků do reklam LinkedIn Ads a
 - [Účet LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) a odpovídající přihlašovací údaje správce.
 - [ID obchodního vztahu LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
 - [Nakonfigurované segmenty](segments.md) v Customer Insights.
-- Sjednocené profily zákazníků v exportovaných segmentech obsahují pole představující e-mailovou adresu.
+- Exportované segmenty potřebují alespoň jedno specifické pole podle toho, jestli na LinkedIn vyberete [cílení na kontakty](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) nebo [cílení na společnost](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). Možná pole jsou uvedena v kroku **Párování dat** při [konfiguraci exportu](#configure-an-export).
 
 ## <a name="known-limitations"></a>Známá omezení
 

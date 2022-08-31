@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Vytvoření nového prostředí'
+title: Vytvořit nové prostředí
 description: Kroky k vytvoření prostředí v Dynamics 365 Customer Insights.
-ms.date: 05/31/2022
+ms.date: 08/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,25 +12,25 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 0a45e2fd2bdb7b85883a536f8b42ee650e54db7e
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245549"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304235"
 ---
-# <a name="how-to-create-a-new-environment"></a>Návod: Vytvoření nového prostředí
+# <a name="create-a-new-environment"></a>Vytvořit nové prostředí
 
-Po [zakoupení licence předplatného pro Dynamics 365 Customer Insights](paid-license.md) globální správce klienta Microsoft 365 obdrží e-mail s výzvou k vytvoření prostředí. Začněte tak, že přejdete na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). V tomto scénáři můžete přejít přímo na [Krok 1: Poskytnutí základních informací](#step-1-provide-basic-information).
+Po [zakoupení licence předplatného pro Dynamics 365 Customer Insights](paid-license.md) globální správce klienta Microsoft 365 obdrží e-mail s výzvou k vytvoření prostředí. Začněte tak, že přejdete na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). V tomto scénáři začněte částí [Krok 1: Poskytnutí základních informací](#step-1-provide-basic-information).
 
-Po vytvoření prvního prostředí může globální správce klienta Microsoft 365 [přidat uživatele ze své organizace jako správce](permissions.md). V budoucnu mohou tito správci spravovat uživatele a prostředí. Pokud vaše organizace zakoupí více než jednu licenci Customer Insights, [požádejte náš tým podpory](https://go.microsoft.com/fwlink/?linkid=2079641) o zvýšení počtu dostupných prostředí. Další informace o kapacitě a přídavné kapacitě naleznete v [Průvodci licencí Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+Po vytvoření prvního prostředí může globální správce klienta Microsoft 365 [přidat uživatele ze své organizace jako správce](permissions.md). Tito správci pak mohou spravovat uživatele a prostředí. Pokud vaše organizace zakoupí více než jednu licenci Customer Insights, [požádejte náš tým podpory](https://go.microsoft.com/fwlink/?linkid=2079641) o zvýšení počtu dostupných prostředí. Další informace o kapacitě a přídavné kapacitě naleznete v [Průvodci licencí Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544). Jakmile budete mít možnost vytvářet další prostředí, přejděte do části [Spuštění procesu vytváření prostředí](#start-the-environment-creation-process).
 
 > [!TIP]
 > Pokud chcete službu vyzkoušet, získáte informace v části [Nastavení zkušebního prostředí](trial-signup.md).
 
 ## <a name="prerequisites"></a>Předpoklady
 
-Potřebujete [oprávnění správce](permissions.md) v Customer Insights k vytváření nebo správě prostředí.
+[Oprávnění správce](permissions.md) v Customer Insights
 
 ## <a name="start-the-environment-creation-process"></a>Spuštění procesu vytváření prostředí
 
@@ -38,47 +38,49 @@ Potřebujete [oprávnění správce](permissions.md) v Customer Insights k vytv�
   
    :::image type="content" source="media/environment-picker.png" alt-text="Vyberte výběr prostředí.":::
 
-1. Postupujte podle pokynů uvedených v následujících částech a poskytněte všechny požadované informace pro nové prostředí. Pokud jste prostředí nakonfigurovali dříve, můžete také [zkopírovat konfiguraci](#copy-the-environment-configuration).
+1. Postupujte podle pokynů uvedených v následujících částech a poskytněte všechny požadované informace pro nové prostředí.
 
 ## <a name="step-1-provide-basic-information"></a>Krok 1: Poskytnutí základních informací
 
-V kroku **Základní informace** zvolte, zda chcete vytvořit prostředí od začátku nebo [zkopírovat data z jiného prostředí](#copy-the-environment-configuration).
+1. Zvolte, zda chcete vytvořit prostředí od začátku nebo zkopírovat data z jiného prostředí. [Kopírování dat z jiného prostředí](#copy-the-environment-configuration) vyžaduje další kroky.
 
    :::image type="content" source="media/environment-settings-dialog.png" alt-text="Dialogové okno k vytvoření nového prostředí Customer Insights.":::
 
-Zadejte následující údaje:
+1. Zadejte následující údaje:
 
-- **Název**: Název tohoto prostředí. Toto pole je již vyplněno, pokud kopírujete z existujícího prostředí, ale můžete jej změnit. Pokud máte více než jedno pracovní prostředí, dejte každému srozumitelný zobrazovaný název.
-- **Vyberte svou firmu**: Vyberte primární cílovou skupinu pro nové prostředí. Můžete pracovat s jednotlivými spotřebiteli (B2C) nebo [obchodními účty](work-with-business-accounts.md) (B2B). Pokud vaše organizace obchoduje hlavně s jednotlivci, jako je maloobchodník nebo kavárna, vyberte si jednotlivé spotřebitele. V případě, že vaše hlavní cílová skupina jsou jiné společnosti, jako je výrobce automobilů nebo papírenská společnost, zvolte obchodní účty.
-- **Typ**: Vyberte, zda chcete vytvořit provozní nebo sandboxové prostředí. Sandboxová prostředí neumožňují plánovanou aktualizaci dat a jsou určena pro předimplementaci a testování. Prostředí sandboxu používají stejnou primární cílovou skupinu jako provozní prostředí, které je aktuálně vybráno.
-- **Oblast**: Oblast, ve které je služba nasazena a hostována. Chcete-li použít [vlastní účet Azure Data Lake Storage](own-data-lake-storage.md) nebo [se připojit k existující organizaci Microsoft Dataverse](customer-insights-dataverse.md), Customer Insights musí být ve stejné oblasti.
+   - **Název**: Název tohoto prostředí. Toto pole je již vyplněno, pokud kopírujete z existujícího prostředí, ale můžete jej změnit.
+   - **Vybrat oblast podnikání**: Primární cílová skupina pro nové prostředí: jednotliví spotřebitelé (B2C) nebo [obchodní účty (B2B)](work-with-business-accounts.md). Pokud vaše organizace obchoduje hlavně s jednotlivci, jako je maloobchodník nebo kavárna, vyberte si jednotlivé spotřebitele. Pokud jsou vaše hlavní cílová skupina jiné společnosti, jako je výrobce automobilů nebo papírenská společnost, zvolte obchodní účty.
+   - **Typ**: Typ prostředí: provozní nebo sandboxové. Sandboxová prostředí neumožňují plánovanou aktualizaci dat a jsou určena pro předimplementaci a testování. Prostředí sandboxu používají stejnou primární cílovou skupinu jako provozní prostředí, které je aktuálně vybráno.
+   - **Oblast**: Oblast, ve které je služba nasazena a hostována. Chcete-li použít [vlastní účet Azure Data Lake Storage](own-data-lake-storage.md) nebo [se připojit k existující organizaci Microsoft Dataverse](customer-insights-dataverse.md), Customer Insights musí být ve stejné oblasti.
+
+1. Vyberte **Další**.
 
 ## <a name="step-2-configure-data-storage"></a>Krok 2: Konfigurace úložiště dat
 
-V kroku **Úložiště dat** z přehledů cílové skupiny vyberte, kam chcete data Customer Insights uložit.
+1. Vyberte, kam chcete uložit data Customer Insights:
 
-Můžete si zvolit ze dvou možností:
+   - **Úložiště Customer Insights**: Úložiště dat je spravováno automaticky. Je to výchozí možnost a pokud neexistují specifické požadavky na ukládání dat ve vašem vlastním účtu úložiště, doporučujeme použít tuto možnost.
+   - **Azure Data Lake Storage**: Vlastní účet Azure Data Lake Storage k ukládání dat, abyste měli plnou kontrolu nad tím, kde jsou data uložena. Postupujte podle kroků v části [Použití vlastního účtu Azure Data Lake Storage](own-data-lake-storage.md).
 
-- **Úložiště Customer Insights**: Úložiště dat spravuje tým Customer Insights. Je to výchozí možnost a pokud neexistují specifické požadavky na ukládání dat ve vašem vlastním účtu úložiště, doporučujeme použít tuto možnost.
-- **Azure Data Lake Storage**: Zadejte vlastní účet Azure Data Lake Storage k ukládání dat, abyste měli plnou kontrolu nad tím, kde jsou data uložena. Více informací v části [Použití vlastního účtu Azure Data Lake Storage](own-data-lake-storage.md).
+   :::image type="content" source="media/data-storage-environment.png" alt-text="Zvolte preferovanou možnost ukládání dat.":::
 
-:::image type="content" source="media/data-storage-environment.png" alt-text="Zvolte preferovanou možnost ukládání dat.":::
+1. Vyberte **Další**.
 
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>Krok 3: Připojení k Microsoft Dataverse
 
-Krok **Microsoft Dataverse** vám umožní propojit Customer Insights s vaším prostředím Dataverse. Sdílejte data s Dataverse a používejte je v podnikových aplikacích založených na Dataverse, jako je Dynamics 365 Marketing nebo aplikace řízené modelem v Power Apps.
+Pokud máte prostředí Dataverse, připojte se ke Customer Insights. Sdílejte data s Dataverse a používejte je v podnikových aplikacích založených na Dataverse, jako je Dynamics 365 Marketing nebo aplikace řízené modelem v Power Apps.
 
-Pokud nemáte vlastní prostředí Dataverse, nechte toto pole prázdné a my vám ho vytvoříme.
+1. Postupujte podle kroků v části [Práce s daty Customer Insights v Microsoft Dataverse](customer-insights-dataverse.md).
 
-Více informací viz [Práce s daty Customer Insights v Microsoft Dataverse](customer-insights-dataverse.md).
+   :::image type="content" source="media/dataverse-provisioning.png" alt-text="sdílení dat s Microsoft Dataverse automaticky povolenémo pro nové prostředí sítě.":::
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="sdílení dat s Microsoft Dataverse automaticky povolenémo pro nové prostředí sítě.":::
+1. Vyberte **Další**.
 
-### <a name="step-4-finalize-the-settings"></a>Krok 4: Dokončení nastavení
+## <a name="step-4-finalize-the-settings"></a>Krok 4: Dokončení nastavení
 
-V kroku **Kontrola** projděte všechna zadaná nastavení. Když vše vypadá kompletně, vyberte **Vytvořit** pro nastavení prostředí.
+Zkontrolujte zadaná nastavení. Když vše vypadá kompletně, vyberte **Vytvořit** pro nastavení prostředí.
 
-Některá nastavení můžete změnit později. Další informace naleznete v tématu [Správa prostředí](manage-environments.md).
+Chcete-li později změnit některá nastavení, viz [Správa prostředí](manage-environments.md).
 
 ## <a name="work-with-your-new-environment"></a>Práce s novým prostředím
 
@@ -92,11 +94,9 @@ Přečtěte si následující články, které vám pomohou začít s konfigurac
 
 ## <a name="copy-the-environment-configuration"></a>Zkopírujte konfiguraci prostředí
 
-Jako správce můžete při vytváření nového prostředí zkopírovat konfiguraci z existujícího prostředí.
+Pokud jste se jako správce rozhodli zkopírovat konfiguraci z existujícího prostředí, vyberte jej ze seznamu všech dostupných prostředí ve vaší organizaci.
 
 :::image type="content" source="media/environment-settings-dialog.png" alt-text="Snímek obrazovky s možnostmi nastavení v nastavení prostředí.":::
-
-Uvidíte seznam všech dostupných prostředí z vaší organizace, ze kterých můžete kopírovat data.
 
 Následující nastavení konfigurace se zkopírují:
 
@@ -113,25 +113,25 @@ Následující nastavení konfigurace se zkopírují:
 - Prediktivní modely
 - Přiřazení rolí
 
-## <a name="set-up-a-copied-environment"></a>Nastavení kopírovaného prostředí
+### <a name="set-up-a-copied-environment"></a>Nastavení kopírovaného prostředí
 
-Když zkopírujete konfiguraci prostředí, musíte k potvrzení přihlašovacích údajů provést několik dalších kroků:
+Při kopírování konfigurace prostředí se zobrazí potvrzovací zpráva, když je vytvořeno zkopírované prostředí. Pomocí následujících kroků potvrdíte přihlašovací údaje.
 
-- Profily zákazníků. Nejprve ověřte a přijměte zdroje dat a spusťte sjednocení dat, abyste znovu vytvořili profily zákazníků.
-- Přihlašovací údaje ke zdroji dat. Musíte zadat přihlašovací údaje pro každý zdroj dat, abyste mohli ručně ověřit a obnovit zdroje dat.
-- Zdroje dat ze složky Common Data Model a Dataverse. Tyto zdroje dat musíte vytvořit ručně se stejným názvem jako ve zdrojovém prostředí.
-- Tajné kódy připojení, které se používají pro exporty a rozšíření. Musíte znovu ověřit připojení a poté znovu aktivovat rozšíření a exporty.
+1. Volbou **Přejít na zdroje dat** zobrazíte seznam zdrojů dat. Všechny zdroje zobrazují stav **Povinné přihlašovací údaje**.
 
-Po vytvoření zkopírovaného prostředí se zobrazí potvrzovací zpráva. Volbou **Přejít na zdroje dat** zobrazíte seznam zdrojů dat.
+   :::image type="content" source="media/data-sources-copied.png" alt-text="Seznam zdrojů dat, které byly zkopírovány a vyžadují ověření.":::
 
-Všechny zdroje dat zobrazí stav **Povinné přihlašovací údaje**. Upravte zdroje dat a zadejte přihlašovací údaje a aktualizujte je.
+1. Upravte zdroje dat a zadejte přihlašovací údaje a aktualizujte je. Zdroje dat ze složky Common Data Model a z Dataverse musí být vytvořeny ručně se stejným názvem jako ve zdrojovém prostředí.
 
-:::image type="content" source="media/data-sources-copied.png" alt-text="Seznam zdrojů dat, které byly zkopírovány a vyžadují ověření.":::
+1. Po aktualizaci zdrojů dat přejděte na **Data** > **Sjednotit**. Zde najdete nastavení ze zdrojového prostředí. Upravte je podle potřeby nebo volbou **Sjednotit** > **Sjednotit profily zákazníků a závislosti** zahajte proces sjednocení dat a vytvořte jednotnou entitu zákazníka.
 
-Po aktualizaci zdrojů dat přejděte na **Data** > **Sjednotit**. Zde najdete nastavení ze zdrojového prostředí. Upravte je podle potřeby nebo volbou **Spustit** zahajte proces sjednocení dat a vytvořte jednotnou entitu zákazníka.
+   > [!TIP]
+   > Pro účty a kontakty vyberte **Sjednotit účty** > **Sjednotit profily a závislosti**.
 
-Po dokončení sjednocení dat přejděte na **Míry** a **Segmenty**, které také potřebují aktualizovat.
+1. Po dokončení sjednocení dat přejděte na **Míry** a **Segmenty**, které potřebují aktualizovat.
 
-Než znovu aktivujete exporty a rozšíření, přejděte na **Správa** > **Připojení**, kde znovu ověřte připojení ve vašem novém prostředí.
+1. Přejděte na **Správa** > **Připojení**, kde znovu ověřte připojení ve vašem novém prostředí.
+
+1. Jděte na **Data** > **Rozšíření** a **Data** > **Exporty** k jejich opětovné aktivaci.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

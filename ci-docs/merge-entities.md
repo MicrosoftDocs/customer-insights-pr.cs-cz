@@ -2,7 +2,7 @@
 title: Sjednocení zákaznických polí pro sjednocení dat
 description: Sloučením entit můžete vytvořit sjednocené profily zákazníků.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213574"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304005"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Sjednocení zákaznických polí pro sjednocení dat
+# <a name="unify-customer-fields"></a>Sjednocení polí zákazníka
 
-V tomto kroku procesu sjednocení vyberte a vylučte atributy, které chcete sloučit v rámci entity sjednoceného profilu. Pokud například tři entity měly e-mailová data, můžete si ponechat všechna tři samostatná pole e-mailu nebo je sloučit do jednoho pole e-mailu pro sjednocený profil. Některé atributy jsou systémem automaticky kombinovány. Můžete vytvořit stabilní a jedinečná ID zákazníků a seskupovat související profily do clusteru.
+V tomto kroku procesu sjednocení vyberte a vylučte atributy, které chcete sloučit v rámci entity sjednoceného profilu. Pokud například tři entity měly e-mailová data, můžete si ponechat všechna tři samostatná pole e-mailu nebo je sloučit do jednoho pole e-mailu pro sjednocený profil. Některé atributy jsou systémem automaticky kombinovány. Můžete vytvořit stabilní a jedinečná ID zákazníků. Pro jednotlivé zákazníky můžete seskupit související profily do clusteru.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Stránka sloučení v procesu sjednocení dat zobrazující tabulku se sloučenými poli, která definují sjednocený profil zákazníka.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Stránka Sjednocení zákaznických polí v procesu sjednocení dat zobrazující tabulku se sloučenými poli, která definují sjednocený profil zákazníka.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Kontrola a aktualizace polí zákazníka
 
@@ -47,7 +47,7 @@ V tomto kroku procesu sjednocení vyberte a vylučte atributy, které chcete slo
 
 1. Volitelně [vygenerovat konfiguraci ID zákazníka](#configure-customer-id-generation).
 
-1. Volitelně [seskupte profily do domácností nebo clusterů](#group-profiles-into-households-or-clusters).
+1. Volitelně pro B2C [seskupte profily do domácností nebo clusterů](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Další krok: Zkontrolujte sjednocení](review-unification.md)
@@ -161,7 +161,7 @@ Konfigurace stabilního ID zákazníka vám umožní vyhnout se tomuto chování
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Seskupení profilů do domácností nebo clusterů
 
-Můžete definovat pravidla pro seskupení souvisejících profilů do clusteru. V současné době jsou k dispozici dva typy clusterů - clustery domácnosti a vlastní clustery. Systém automaticky vybere domácnost s předdefinovanými pravidly, pokud entita *Zákazník* obsahuje sémantická pole *Osoba. Příjmení* a *Umístění. Adresa*. Můžete také vytvořit cluster s vlastními pravidly a podmínkami, podobně jako [pravidla porovnání](match-entities.md#define-rules-for-match-pairs).
+Pro jednotlivé zákazníky můžete definovat pravidla pro seskupení souvisejících profilů do clusteru. V současné době jsou k dispozici dva typy clusterů - clustery domácnosti a vlastní clustery. Systém automaticky vybere domácnost s předdefinovanými pravidly, pokud entita *Zákazník* obsahuje sémantická pole *Osoba. Příjmení* a *Umístění. Adresa*. Můžete také vytvořit cluster s vlastními pravidly a podmínkami, podobně jako [pravidla porovnání](match-entities.md#define-rules-for-match-pairs).
 
 1. Vyberte **Pokročilé** > **Vytvořit cluster**.
 
