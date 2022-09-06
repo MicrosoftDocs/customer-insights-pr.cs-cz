@@ -1,27 +1,27 @@
 ---
 title: Příklady dotazů OData pro rozhraní API Customer Insights
 description: Běžně používané příklady pro Open Data Protocol (OData) k dotazování rozhraní API Customer Insights za účelem kontroly dat.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121554"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387194"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Příklady dotazů OData pro rozhraní API Customer Insights
 
 Open Data Protocol (OData) je protokol pro přístup k datům postavený na základních protokolech, jako je HTTP. Využívá běžně přijímané metodiky, jako je REST pro web. Existují různé druhy knihoven a nástrojů, které lze použít ke konzumaci služeb OData.
 
-Tento článek uvádí některé často požadované vzorové dotazy, které vám pomohou s vytvářením vlastních implementací založených na [Rozhraní API Customer Insights](apis.md).
+Chcete-li si pomoci při vytváření vlastních implementací založených na [rozhraních API Customer Insights](apis.md), projděte si některé často požadované příklady dotazů.
 
-Ukázky dotazů musíte upravit, aby fungovaly v cílových prostředích: 
+Ukázky dotazů upravte, aby fungovaly v cílových prostředích:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data`, kde {instanceId} je GUID prostředí Customer Insights, na které se chcete dotazovat. [Operace ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vám umožní najít {InstanceId}, k níž máte přístup.
 - {CID}: GUID sjednoceného záznamu zákazníka. Příklad: `ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ Ukázky dotazů musíte upravit, aby fungovaly v cílových prostředích:
 
 ## <a name="customer"></a>zákazníku
 
-Následující tabulka obsahuje sadu vzorových dotazů pro entitu *Zákazník*.
+Vzorové dotazy pro entitu *Customer*.
 
 |Typ dotazu |Příklad  | Poznámka:  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ Následující tabulka obsahuje sadu vzorových dotazů pro entitu *Zákazník*.
 
 ## <a name="unified-activity"></a>Sjednocená aktivita
 
-Následující tabulka obsahuje sadu vzorových dotazů pro entitu *UnifiedActivity*.
+Vzorové dotazy pro entitu *UnifiedActivity*.
 
 |Typ dotazu |Příklad  | Poznámka:  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Následující tabulka obsahuje sadu vzorových dotazů pro entitu *UnifiedActiv
 
 ## <a name="other-examples"></a>Další příklady
 
-Následující tabulka obsahuje sadu vzorových dotazů pro ostatní entity.
+Vzorové dotazy pro jiné entity.
 
 |Typ dotazu |Příklad  | Poznámka:  |
 |---------|---------|---------|

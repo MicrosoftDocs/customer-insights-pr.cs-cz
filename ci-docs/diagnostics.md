@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245917"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352793"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Export diagnostických protokolů (preview)
 
@@ -36,8 +36,8 @@ Customer Insights odesílá následující protokoly událostí:
 
 - Aktivní [předplatné Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Oprávnění [správce](permissions.md#admin) v Customer Insights.
+- Platný zdroj v Azure, který následuje za [požadavky na destinaci](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pro Azure Storage, centrum událostí Azure nebo Azure Log Analytics.
 - [Role Přispěvatel a Správce přístupu uživatelů](/azure/role-based-access-control/role-assignments-portal) v cílovém prostředku v Azure. Prostředkem může být účet Azure Data Lake Storage, centrum událostí Azure nebo pracovní prostor Azure Log Analytics. Toto oprávnění je nutné při konfiguraci diagnostických nastavení v Customer Insights, ale po úspěšném nastavení je lze změnit.
-- Splněny [požadavky na cíl](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pro Azure Storage, centrum událostí Azure nebo Azure Log Analytics.
 - Alespoň role **Čtenář** ve skupině prostředků, do které prostředek patří.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Nastavení diagnostiky pomocí Azure Monitor

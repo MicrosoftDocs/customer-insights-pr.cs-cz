@@ -1,19 +1,19 @@
 ---
 title: Novinky v řešení Dynamics 365 Customer Insights
 description: Informace o nových funkcích, vylepšeních a opravách chyb.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246003"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387274"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v řešení Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ Zavádíme aktualizace podle oblastí. Některé oblasti tedy budou disponovat f
 
 > [!TIP]
 > Pokud chcete zasílat žádosti o funkce a návrhy na produkty a hlasovat o nich, přejděte na [portál pro nápady k aplikaci Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>Aktualizace ze srpna 2022
+
+Aktualizace v srpnu 2022 zahrnují nové funkce, upgrady výkonu a opravy chyb.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Sjednocení kontaktů v prostředí B-to-B
+
+Prostředí B-to-B v Customer Insights nyní podporují vylepšené prostředí sjednocení dat.
+
+Nyní můžete kromě účtů sjednotit i kontakty, abyste získali úplný přehled o svých obchodních kontaktech. Sjednocené kontakty jsou spojeny se sjednocenými účty a jsou nyní uvedeny na zákaznických kartách. 
+
+Další informace viz [Vytvoření profilu sjednoceného kontaktu](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Vytváření a export segmentů na základě sjednocených kontaktů
+
+Díky novému sjednocení kontaktů můžete vytvářet segmenty kontaktů pomocí kritérií buď z kontaktů, účtů nebo obou. Tyto segmenty lze exportovat pro aktivaci v jiných službách.
+
+Další informace naleznete v tématu [Přehled exportů](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>Aktualizace z července 2022
 
