@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246100"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396053"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Příjem dat v reálném čase (náhled)
 
@@ -82,10 +82,5 @@ Funkce v reálném čase můžete využít vytvořením vlastního kanálu a př
 Aktivitu můžete zveřejnit ve formátu zdrojového systému nebo ve formátu UnifiedActivity. Formát získejte voláním rozhraní API /api/instances/{instanceId}/manage/entities/UnifiedActivity.
 
 Podrobnosti o tomto rozhraní API, včetně parametrů a odpovědí, najdete v sekci **EntityData** v části [Referenční informace o rozhraních API v Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Další informace naleznete v části [Práce s rozhraními API v Customer Insights](apis.md).
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>Využití v reálném čase pomocí telemetrie
-
-Získejte přehled o objemu požadavků na rozhraní API v reálném čase a informace o problémech, se kterými se systém může setkat. Můžete [přistupovat k telemetrii v reálném čase](system.md#view-api-usage). 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

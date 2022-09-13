@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081198"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411823"
 ---
 # <a name="predictions-overview"></a>Přehled predikcí
 
@@ -39,14 +39,11 @@ Nejjednodušší způsob, jak začít s předpovídáním dat, jsou předem defi
 
 > [!TIP]
 > Doporučujeme, abyste předpřipravené modely pravidelně aktualizovali o aktualizovaná data, abyste zajistili, že budou přesně informovat o vašem případu obchodního použití. Data se aktualizují ad-hoc, když systém ingestuje nové nebo aktualizované zdroje dat. Modely však v tomto případě pouze přehodnotí skóre a nadále budou používat stávající trénovací data.
-> 
+>
 > V prostředí konfigurace můžete nakonfigurovat **Plán aktualizací** nastavením plánu přeškolení modelu. Model se podle tohoto plánu přeškolí a přehodnotí skóre. Tento plán můžete kdykoli změnit.
-
 
 ## <a name="azure-machine-learning-integration"></a>Integrace Azure Machine Learning
 
 Pokud organizace již používá scénáře strojového učení založené na experimentech Azure Machine Learning, funkce vlastních modelů v Customer Insights pomáhá propojit jednotlivé tečky. Vytvořte pracovní postupy, které vám pomohou vybrat data, ze kterých chcete generovat přehledy, a namapovat výsledky na vaše sjednocené profily zákazníků. Další informace viz [Vlastní modely strojového učení](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>Predikce AI Builderu
-
-Někdy jsou datové sady neúplné a některé hodnoty chybí. Customer Insights může pomoci předpovědět chybějící hodnoty pro entitu a segmenty zákazníka. Další informace najdete v článku [Doplnění dílčích data pomocí predikcí](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

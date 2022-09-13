@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245779"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396038"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Připojení k datům v Azure Data Lake Storageu
 
@@ -39,6 +39,8 @@ Příjem dat do Dynamics 365 Customer Insights pomocí účtu Azure Data Lake St
   - Čtenář dat objektů blob úložiště
   - Vlastník dat objektů blob úložiště
   - Přispěvatel dat objektů blob úložiště
+
+- Uživatel, který nastavuje připojení zdroj dat, potřebuje pro účet úložiště nejméně oprávnění přispěvatel Storage Blob Data.
 
 - Data v úložišti Data Lake by se měla řídit standardem Common Data Model pro ukládání dat a mít společný manifest datového modelu, který bude reprezentovat schéma datových souborů (*.csv nebo *.parquet). Manifest musí obsahovat podrobnosti o entitách, jako jsou sloupce entit a datové typy a umístění datového souboru a typ souboru. Další informace viz [Manifest Common Data Model](/common-data-model/sdk/manifest). Pokud manifest není přítomen, uživatelé s oprávněním správce s přístupem vlastník dat objektu Storage Blob nebo přístup k datům objektu Storage Blob přispěvatel mohou definovat schéma při zpracování dat.
 
@@ -62,7 +64,7 @@ Příjem dat do Dynamics 365 Customer Insights pomocí účtu Azure Data Lake St
    > [!NOTE]
    > Potřebujete jednu z následujících rolí buď ke kontejneru na účtu úložiště a vytvoření zdroj dat:
    >
-   >  - Čtenář dat objektu blob úložiště stačí ke čtení z účtu úložiště a příjmu dat do Customer Insights. 
+   >  - Čtenář dat objektu blob úložiště stačí ke čtení z účtu úložiště a příjmu dat do Customer Insights.
    >  - Chcete-li soubory manifestu upravovat přímo v Customer Insights, jsou vyžadovány role přispěvatele nebo vlastníka dat objektů blob úložiště.  
   
 1. Vyberte název **Kontejneru**, který obsahuje data a schéma (soubor model.json nebo manifest.json), ze kterého chcete importovat data, a vyberte **Další**.

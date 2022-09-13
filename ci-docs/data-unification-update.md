@@ -1,7 +1,7 @@
 ---
 title: Aktualizace nastavení sjednocení zákazníků, účtů nebo kontaktů
 description: Aktualizujte duplicitní pravidla, pravidla shody nebo sjednocená pole v nastavení sjednocení zákazníků nebo účtů.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304327"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392463"
 ---
 # <a name="update-unification-settings"></a>Aktualizace nastavení sjednocení
 
@@ -38,7 +38,7 @@ Chcete-li zkontrolovat nebo změnit nastavení sjednocení po vytvoření sjedno
    > Dlaždice **Podmínky shody** se zobrazí pouze v případě, že bylo vybráno více entit.
 
 1. Zvolte, co chcete aktualizovat:
-   - [Zdrojová pole](#edit-source-fields) pro přidání entit nebo atributů nebo změnu typů atributů.
+   - [Zdrojová pole](#edit-source-fields) pro přidání atributů nebo entit nebo změnu typů atributů. Chcete-li odstranit atribut, viz [Odebrání sjednoceného pole](#remove-a-unified-field). Chcete-li odstranit entitu, viz [Odebrání sjednocené entity](#remove-a-unified-entity).
    - [Duplicitní záznamy](#manage-deduplication-rules) ke správě pravidel deduplikace nebo předvoleb sloučení.
    - [Odpovídající podmínky](#manage-match-rules) k aktualizaci pravidel shody ve dvou nebo více entitách.
    - [Sjednocená zákaznická pole](#manage-unified-fields) pro zkombinování nebo vyloučení polí. Související profily můžete také seskupit do clusterů.
@@ -53,8 +53,6 @@ Chcete-li zkontrolovat nebo změnit nastavení sjednocení po vytvoření sjedno
 
 ## <a name="edit-source-fields"></a>Upravit zdrojová pole
 
-Atribut nebo entitu nelze odstranit, pokud již byly sjednoceny.
-
 1. Vyberte **Upravit** v dlaždici **Zdrojová pole**.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Snímek obrazovky stránky Zdrojová pole zobrazující počet primárních klíčů, mapovaných a nenamapovaných polí":::
@@ -66,6 +64,80 @@ Atribut nebo entitu nelze odstranit, pokud již byly sjednoceny.
 1. Volitelně můžete změnit primární klíč entity, typy atributů a zapnout nebo vypnout **Inteligentní mapování**. Další informace viz [Výběr zdrojových polí](map-entities.md).
 
 1. Vyberte **Další** a proveďte změny v pravidlech deduplikace nebo vyberte **Uložit a zavřít** a vraťte se do pole [Aktualizovat nastavení sjednocení](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Odebrání sjednoceného pole
+
+Chcete-li odebrat pole, které bylo sjednoceno, musí být pole odstraněno ze všech závislostí, jako jsou segmenty, míry, rozšiřování nebo vztahy.
+
+1. Po odstranění všech závislostí pro pole přejděte na **Data** > **Sjednotit**.
+
+1. Vyberte **Upravit** v dlaždici **Sjednocená pole zákazníka**.
+
+1. Vyberte všechny výskyty pole a poté vyberte **Vyloučit**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Snímek obrazovky stránky Sjednocená pole zobrazující vybraná pole a tlačítko Vyloučit":::
+
+1. Zvolte **Hotovo** k potvrzení a pak vyberte **Uložit a zavřít**.
+
+   > [!TIP]
+   > Pokud se zobrazí zpráva „Nelze uložit sjednocení. Zadaný zdroj nelze upravit ani odstranit z důvodu navazujících závislostí,“ pak se pole stále používá v navazující závislosti.
+
+1. Pokud je pole použito v pravidle pro duplicitní záznamy nebo odpovídajících podmínkách, proveďte následující kroky. Jinak přejděte k dalšímu kroku.
+   1. Vyberte **Upravit** v dlaždici **Duplikovat záznamy**.
+   1. Odeberte pole ze všech pravidel, ve kterých se používá, pokud existují, a poté vyberte **Další**.
+   1. Na stránce **Odpovídající podmínky** odeberte pole ze všech pravidel, ve kterých se používá, pokud existují, a poté vyberte **Uložit a zavřít**.
+   1. Vyberte **Sjednotit** > **Sjednotit zákaznické profily a závislosti**. Než přejdete k dalšímu kroku, počkejte na dokončení sjednocení.
+
+1. Vyberte **Upravit** v dlaždici **Zdrojová pole**.
+
+1. Vyberte **Vybrat entity a pole** a zrušte zaškrtnutí políčka vedle každého výskytu pole.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Snímek obrazovky dialogového okna Vybrat entity a pole zobrazující zrušená zaškrtávací políčka":::
+
+1. Vyberte **Použít**.
+
+1. Zvolte **Uložit a zavřít**.
+
+1. Vyberte **Sjednotit** > **Sjednotit profily a závislostí zákazníků** pro aktualizaci sjednoceného profilu.
+
+### <a name="remove-a-unified-entity"></a>Odebrání sjednocené entity
+
+Chcete-li odebrat entity, která byla sjednocena, musí být entita odstraněna ze všech závislostí, jako jsou segmenty, míry, rozšiřování nebo vztahy.
+
+1. Po odstranění všech závislostí pro entitu přejděte na **Data** > **Sjednotit**.
+
+1. Vyberte **Upravit** v dlaždici **Sjednocená pole zákazníka**.
+
+1. Vyberte všechna pole pro entitu a poté vyberte **Vyloučit**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Snímek obrazovky stránky Sjednocená pole se všemi poli pro vybranou entitu a tlačítko Vyloučit":::
+
+1. Zvolte **Hotovo** k potvrzení a pak vyberte **Uložit a zavřít**.
+
+   > [!TIP]
+   > Pokud se zobrazí zpráva „Nelze uložit sjednocení. Zadaný zdroj nelze upravit ani odstranit z důvodu navazujících závislostí,“ pak se entita stále používá v navazující závislosti.
+
+1. Vyberte **Upravit** v dlaždici **Duplikovat záznamy**.
+
+1. Odeberte všechna pravidla z entity, pokud existují, a poté vyberte **Další**.
+
+1. Na stránce **Odpovídající podmínky** vyberte entitu a poté vyberte **Odstranit**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Snímek obrazovky s podmínkami shody s vybranou entitou a tlačítkem Odstranit":::
+
+1. Zvolte **Uložit a zavřít**.
+
+1. Vyberte **Upravit** v dlaždici **Zdrojová pole**.
+
+1. Vyberte **Vybrat entity a pole** a zrušte zaškrtnutí políčka vedle entity.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Snímek obrazovky dialogového okna Vybrat entity s nezaškrtnutým políčkem entity":::
+
+1. Vyberte **Použít**.
+
+1. Zvolte **Uložit a zavřít**.
+
+1. Vyberte **Sjednotit** > **Sjednotit profily a závislostí zákazníků** pro aktualizaci sjednoceného profilu.
 
 ## <a name="manage-deduplication-rules"></a>Správa pravidel odstranění duplicit
 

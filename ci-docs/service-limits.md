@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387148"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411732"
 ---
 # <a name="service-limits-in-customer-insights"></a>Limity služeb v Customer Insights
 
@@ -23,7 +23,7 @@ ms.locfileid: "9387148"
 
 | Plocha  | Limity  | Notes |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenty, míry a predikce | 300  | Celkový počet [segmentů](segments.md), [měr](measures.md) a [predíkcí](predictions.md) dohromady nesmí přesáhnout 300.  |
+| Segmenty, míry a predikce | 300  | Celkový počet [segmentů](segments.md), [měr](measures.md) a [predíkcí](predictions-overview.md) dohromady nesmí přesáhnout 300.  |
 | Relace | 20 úrovní hloubky vztahů v cestách entit. | Při vytváření [segmentů](segments.md) nebo [měření](measures.md) pomocí rozhraní Builderu mohou mít cesty entit až 20 skokových relací mezi počáteční entitou a cílovou entitou.  |
 
 ## <a name="fair-scheduling-of-jobs"></a>Spravedlivé plánování pracovních míst

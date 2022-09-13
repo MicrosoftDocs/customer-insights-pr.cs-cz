@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246239"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395993"
 ---
 # <a name="view-system-configuration"></a>Zobrazení konfigurace systému
 
@@ -38,12 +38,6 @@ Zobrazte podrobnosti o použití rozhraní API v reálném čase a podívejte se
    - **Volání rozhraní API** – graf, který vizualizuje agregovaný počet volání do rozhraní API ve vybraném časovém rámci.
    - **Přenos dat** – graf, který zobrazuje množství dat, která byla přenesena prostřednictvím rozhraní API ve vybraném časovém rámci.
    - **Operace** – tabulka s řádky pro každou dostupnou operaci rozhraní API a podrobnostmi o využití operací. Můžete vybrat název operace a přejít na [reference k rozhraním API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operace, které používají [příjem dat v reálném čase](real-time-data-ingestion.md), obsahují symbol dalekohledu pro zobrazení využití rozhraní API v reálném čase.
-
-   1. Výběrem dalekohledu otevřete podokno **použití rozhraní v reálném čase** obsahující podrobnosti o operaci.
-   1. **Vyberte časový rámec** k zobrazení.
-   1. Pomocí pole **Seskupit podle** vyberte, jak nejlépe prezentovat své interakce v reálném čase. Seskupte data podle **metody**, **kvalifikovaného názvu entity** (spotřebované entity), **Vytvořil(a)** (zdroj události), **Výsledek** (Úspěch nebo selhání) nebo **Kódy chyb**. Data jsou k dispozici jako graf historie a jako tabulka.
 
 ## <a name="view-system-information"></a>Zobrazení informací o systému
 

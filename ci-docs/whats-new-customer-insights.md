@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387274"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409349"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v řešení Dynamics 365 Customer Insights
 
@@ -41,6 +41,14 @@ Další informace viz [Vytvoření profilu sjednoceného kontaktu](data-unificat
 Díky novému sjednocení kontaktů můžete vytvářet segmenty kontaktů pomocí kritérií buď z kontaktů, účtů nebo obou. Tyto segmenty lze exportovat pro aktivaci v jiných službách.
 
 Další informace naleznete v tématu [Přehled exportů](export-destinations.md).
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Oblasti nasazení v souladu s Microsoft Dataverse
+
+Při vytváření nového prostředí Customer Insights můžete vybrat oblast, kde chcete službu nasadit a hostovat. Aktualizovali jsme výběr regionu, aby odpovídal Microsoft Dataverse a Power Platform.
+
+Nyní můžete snadno vybrat stejnou oblast, jako máte stávající prostředí Microsoft Dataverse nebo váš účet úložiště Azure Data Lake Storage (pokud zvolíte tuto možnost), v závislosti na dostupnosti Customer Insights v dané oblasti.
+
+Více informací viz [Vytvoření nového prostředí](create-environment.md) a [Dostupnost produktu podle geografické polohy](https://dynamics.microsoft.com/availability-reports/).
 
 ## <a name="july-2022-updates"></a>Aktualizace z července 2022
 

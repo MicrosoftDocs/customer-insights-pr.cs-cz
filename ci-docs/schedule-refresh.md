@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246334"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395948"
 ---
 # <a name="schedule-system-refresh"></a>Plánování aktualizace systému
 
@@ -36,7 +36,7 @@ Naplánujte automatické obnovení všech [přijatých zdrojů dat](data-sources
 
 1. Vyberte mezi aktualizacemi **Týdně** (výchozí) a **Denně**. Pokud chcete naplánovat týdenní aktualizace, vyberte jeden nebo více dní, ve kterých chcete aktualizaci spustit.
 
-1. Nastavte své **Časové pásmo**, pak použijte rozbalovací nabídku **Čas** pro nastavení času aktualizace. Pokud chcete naplánovat více aktualizací v jeden den, vyberte **Přidejte další čas**.
+1. Nastavte své **Časové pásmo**, pak použijte rozbalovací nabídku **Čas** pro nastavení času aktualizace. Pokud chcete naplánovat více aktualizací v jeden den, vyberte **Přidejte další čas**. Můžete přidat až čtyři obnovení.
 
 1. Výběrem možnosti **Uložit** se vaše změny uplatní.
 

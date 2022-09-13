@@ -1,7 +1,7 @@
 ---
 title: Práce s daty Customer Insights v Microsoft Dataverse
 description: Přečtěte si, jak propojit Customer Insights a Microsoft Dataverse a porozumějte výstupním entitám, které jsou exportovány do Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303821"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424301"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práce s daty Customer Insights v Microsoft Dataverse
 
@@ -136,6 +136,7 @@ Pokud se odebrání připojení nezdaří kvůli závislostem, musíte odstranit
 Některé výstupní entity ze Customer Insights jsou dostupné jako tabulky v Dataverse. V následujících částech je popsáno očekávané schéma těchto tabulek.
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,21 +146,46 @@ Některé výstupní entity ze Customer Insights jsou dostupné jako tabulky v D
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Tato tabulka obsahuje sjednocený profil zákazníka z Customer Insights. Schéma pro sjednocený zákaznický profil závisí na entitách a atributech použitých v procesu sjednocení dat. Schéma profilu zákazníka obvykle obsahuje podmnožinu atributů z [definice Common Data Model sloupce CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Tato tabulka obsahuje sjednocený profil zákazníka z Customer Insights. Schéma pro sjednocený zákaznický profil závisí na entitách a atributech použitých v procesu sjednocení dat. Schéma profilu zákazníka obvykle obsahuje podmnožinu atributů z [definice Common Data Model sloupce CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Pro scénář B2B obsahuje profil zákazníka sjednocené účty a schéma obvykle obsahuje podmnožinu atributů z [Definice účtu Common Data Model](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile obsahuje jednotné informace o kontaktu. Kontakty jsou [osoby, které jsou namapovány na účet](data-unification-contacts.md) ve scénáři B2B.
+
+| Column                       | Type                | Description     |
+| ---------------------------- | ------------------- | --------------- |
+|  BirthDate            | DateTime       |  Datum narození kontaktu               |
+|  City                 | Text |  Město adresy kontaktu               |
+|  ContactId            | Text |  ID profilu kontaktu               |
+|  ContactProfileId     | Jedinečný identifikátor   |  GUID pro kontakt               |
+|  CountryOrRegion      | Text |  Země/oblast adresy kontaktu               |
+|  CustomerId           | Text |  ID účtu, na který je kontakt namapován               |
+|  EntityName           | Text |  Entita, ze které data pocházejí                |
+|  FirstName            | Text |  Křestní jméno kontaktu               |
+|  Pohlaví               | Text |  Pohlaví kontaktu               |
+|  ID                   | Text |  Deterministický GUID založený na `Identifier`               |
+|  Identifikátor           | Text |  Interní ID profilu kontaktu: `ContactProfile|CustomerId|ContactId`               |
+|  Pracovní pozice             | Text |  Pozice kontaktu               |
+|  LastName             | Text |  Příjmení kontaktu               |
+|  PostalCode           | Text |  PSČ adresy kontaktu               |
+|  PrimaryEmail         | Text |  E-mailová adresa kontaktu               |
+|  PrimaryPhone         | Text |  Telefonní číslo kontaktu               |
+|  Kraj      | Text |  Stát nebo kraj adresy kontaktu               |
+|  StreetAddress        | Text |  Ulice adresy kontaktu               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 Tabulka AlternateKey obsahuje klíče entit, které se účastnily procesu sjednocení.
 
-|Column  |Typ  |Popis  |
+|Column  |Type  |Description  |
 |---------|---------|---------|
-|DataSourceName    |String         | Název zdroje dat. Příklad: `datasource5`        |
-|EntityName        | String        | Název entity v Customer Insights. Příklad: `contact1`        |
-|AlternateValue    |String         |Alternativní ID, které je namapováno na ID zákazníka. Příklad: `cntid_1078`         |
-|KeyRing           | Víceřádkový text        | Hodnota JSON  </br> Ukázka: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | String        | ID sjednoceného profilu zákazníka.         |
-|AlternateKeyId     | GUID         |  Deterministický GUID AlternateKey založený na msdynci_identifier       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Ukázka: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Text         | Název zdroje dat. Příklad: `datasource5`        |
+|EntityName        | Text        | Název entity v Customer Insights. Příklad: `contact1`        |
+|AlternateValue    |Text         |Alternativní ID, které je namapováno na ID zákazníka. Příklad: `cntid_1078`         |
+|KeyRing           | Text        | Hodnota JSON  </br> Ukázka: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | Text        | ID sjednoceného profilu zákazníka.         |
+|AlternateKeyId     | Jedinečný identifikátor        |  AlternateKey deterministický GUID založený na `Identifier`      |
+|Identifikátor |   Text      |   `DataSourceName|EntityName|AlternateValue`  </br> Ukázka: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ Tato tabulka obsahuje aktivity uživatelů, které jsou k dispozici v Customer I
 
 | Column            | Type        | Description                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | Řetězcové      | ID profilu zákazníka                                                                      |
-| ActivityId        | Řetězcové      | Interní ID aktivity zákazníka (primární klíč)                                       |
-| SourceEntityName  | String      | Název zdrojové entity                                                                |
-| SourceActivityId  | String      | Primární klíč ze zdrojové entity                                                       |
-| ActivityType      | String      | Typ sémantické aktivity nebo název vlastní aktivity                                        |
-| ActivityTimeStamp | DATETIME    | Časové razítko aktivity                                                                      |
-| Titulek             | Řetězcové      | Nadpis nebo název aktivity                                                               |
-| Description       | String      | Popis aktivity                                                                     |
-| Adresa URL               | String      | Odkaz na externí adresu URL specifickou pro aktivitu                                         |
-| SemanticData      | Řetězec JSON | Zahrnuje seznam párů hodnot klíče pro pole sémantického mapování specifická pro typ aktivity |
-| RangeIndex        | String      | Časové razítko Unix používané pro třídění časové osy aktivity a dotazů na rozsah platnosti |
-| mydynci_unifiedactivityid   | GUID | Interní ID aktivity zákazníka (ActivityId) |
+| CustomerId        | Text      | ID profilu zákazníka                                                                      |
+| ActivityId        | Text      | Interní ID aktivity zákazníka (primární klíč)                                       |
+| SourceEntityName  | Text      | Název zdrojové entity                                                                |
+| SourceActivityId  | Text      | Primární klíč ze zdrojové entity                                                       |
+| ActivityType      | Text      | Typ sémantické aktivity nebo název vlastní aktivity                                        |
+| ActivityTimeStamp | DateTime    | Časové razítko aktivity                                                                      |
+| Titulek             | Text      | Nadpis nebo název aktivity                                                               |
+| Description       | Text      | Popis aktivity                                                                     |
+| URL               | Text      | Odkaz na externí adresu URL specifickou pro aktivitu                                         |
+| SemanticData      | Text | Zahrnuje seznam párů hodnot klíče pro pole sémantického mapování specifická pro typ aktivity |
+| RangeIndex        | Text      | Časové razítko Unix používané pro třídění časové osy aktivity a dotazů na rozsah platnosti |
+| UnifiedActivityId   | Jedinečný identifikátor | Interní ID aktivity zákazníka (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Tato tabulka obsahuje výstupní data měr založených na atributech zákazníka.
 
-| Column             | Typ             | Popis                 |
+| Column             | Type             | Description                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | String           | ID profilu zákazníka        |
-| Míry           | Řetězec JSON      | Zahrnuje seznam párů hodnot klíče pro název a hodnoty měr pro daného zákazníka | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | ID profilu zákazníka |
-
+| CustomerId         | Text           | ID profilu zákazníka        |
+| Opatření           | Text      | Zahrnuje seznam párů hodnot klíče pro název a hodnoty měr pro daného zákazníka |
+| Identifikátor | Text           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Jedinečný identifikátor     | ID profilu zákazníka |
 
 ### <a name="enrichment"></a>Obohacení
 
 Tato tabulka obsahuje výstup z procesu obohacování.
 
-| Column               | Typ             |  Popis                                          |
+| Column               | Type             |  Description                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | String           | ID profilu zákazníka                                 |
-| EnrichmentProvider   | String           | Název poskytovatele pro obohacení                                  |
-| EnrichmentType       | String           | Typ obohacení                                      |
-| Hodnoty               | Řetězec JSON      | Seznam atributů vytvořených procesem obohacování |
-| msdynci_enrichmentid | GUID             | Deterministický GUID generovaný z msdynci_identifier |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Text           | ID profilu zákazníka                                 |
+| EnrichmentProvider   | Text           | Název poskytovatele pro obohacení                                  |
+| EnrichmentType       | Text           | Typ obohacení                                      |
+| Hodnoty               | Text      | Seznam atributů vytvořených procesem obohacování |
+| EnrichmentId | Jedinečný identifikátor            | Deterministický GUID generovaný z `Identifier` |
+| Identifikátor   | Text           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Predikce
 
@@ -211,12 +236,12 @@ Tato tabulka obsahuje výstup z prognóz modelu.
 
 | Column               | Type        | Description                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | Řetězcové      | ID profilu zákazníka                                  |
-| ModelProvider        | Řetězcové      | Název poskytovatele modelu                                      |
-| Model                | String      | Název modelu                                                |
-| Hodnoty               | Řetězec JSON | Seznam atributů vytvořených modelem |
-| msdynci_predictionid | GUID        | Deterministický GUID generovaný z msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Text      | ID profilu zákazníka                                  |
+| ModelProvider        | Text      | Název poskytovatele modelu                                      |
+| Model                | Text      | Název modelu                                                |
+| Hodnoty               | Text | Seznam atributů vytvořených modelem |
+| PredictionId | Jedinečný identifikátor       | Deterministický GUID generovaný z `Identifier` |
+| Identifikátor   | Text      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Členství v segmentu
 
@@ -224,12 +249,11 @@ Tato tabulka obsahuje informace o členství v segmentech profilů zákazníků.
 
 | Column        | Type | Description                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID profilu zákazníka        |
-| SegmentProvider      | String       | Aplikace, která publikuje segmenty.      |
-| SegmentMembershipType | Řetězcové       | Typ zákazníka pro záznam členství tohoto segmentu. Podporuje více typů, jako je zákazník, kontakt nebo obchodní vztah. Výchozí: Zákazník  |
-| Segmenty       | Řetězec JSON  | Seznam jedinečných segmentů, jichž je profil zákazníka členem      |
-| msdynci_identifier  | String   | Jedinečný identifikátor záznamu členství v segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | Identifikátor GUID      | Deterministický GUID generovaný z `msdynci_identifier`          |
-
+| CustomerId        | Text       | ID profilu zákazníka        |
+| SegmentProvider      | Text       | Aplikace, která publikuje segmenty.      |
+| SegmentMembershipType | Text       | Typ zákazníka pro záznam členství tohoto segmentu. Podporuje více typů, jako je zákazník, kontakt nebo obchodní vztah. Výchozí: Zákazník  |
+| Segments       | Text  | Seznam jedinečných segmentů, jichž je profil zákazníka členem      |
+| Identifikátor  | Text   | Jedinečný identifikátor záznamu členství v segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Jedinečný identifikátor      | Deterministický GUID generovaný z `Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
