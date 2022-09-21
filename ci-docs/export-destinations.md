@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304051"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460182"
 ---
 # <a name="exports-preview-overview"></a>Přehled exportů (Preview)
 
@@ -81,6 +81,11 @@ Výběrem exportu zobrazíte dostupné akce.
 ## <a name="schedule-and-run-exports"></a>Plánování a spuštění exportů
 
 Každý export, který konfigurujete, má plán aktualizace. Během aktualizace systém hledá nová nebo aktualizovaná data, která mají být zahrnuta do exportu. Ve výchozím nastavení jsou exporty spouštěny jako součást každé [plánované aktualizace systému](schedule-refresh.md). Plán aktualizace můžete upravit nebo jej vypnout, aby se exporty spouštěly ručně.
+
+> [!TIP]
+> Minimalizujte dobu zpracování exportů segmentů pomocí následujících osvědčených postupů:
+> - Distribuujte entity segmentů mezi více exportů.
+> - Vyhněte se plánování všech exportů najednou. Mezi naplánovaným časem každého exportu ponechejte 30 minut nebo jednu hodinu.
 
 Plány exportu závisí na stavu vašeho prostředí. Pokud probíhají aktualizace [závislostí](system.md#refresh-processes), když by měl začít plánovaný export, systém nejprve dokončí aktualizace a poté spustí export. Ve sloupci **Aktualizováno** vidíte, kdy byl export naposledy aktualizován.
 

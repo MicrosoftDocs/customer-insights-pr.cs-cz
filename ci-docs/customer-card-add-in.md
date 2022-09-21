@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194915"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473634"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Doplněk karty zákazníka pro aplikace Dynamics 365 (Preview)
 
@@ -32,7 +32,8 @@ Získejte kompletní přehled o svých zákaznících přímo v aplikacích Dyna
 - Aby byla vaše data Dynamics 365 mapována na profily zákazníků Customer Insights, doporučujeme je [přijímat z aplikace Dynamics 365 pomocí konektoru Microsoft Dataverse](connect-power-query.md). Pokud pro přijímání kontaktů (nebo obchodních vztahů) Dynamics 365 používáte jinou metodu, musíte nastavit pole `contactid` (nebo `accountid`) jako [primární klíč pro tento zdroj dat v rámci procesu sjednocení dat](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Všichni uživatelé Dynamics 365 doplňku Zákaznické karty musí být [přidáni jako uživatelé](permissions.md) v Customer Insights, aby viděli data.
 - [Konfigurované možnosti vyhledávání a filtrování](search-filter-index.md) v Customer Insights.
-- Každý ovládací prvek doplňku závisí na konkrétních datech v Customer Insights. Některá data a ovládací prvky jsou k dispozici pouze v prostředích konkrétních typů. Konfigurace doplňku vás bude informovat, pokud ovládací prvek není k dispozici kvůli vybranému typu prostředí. Další informace o [případech použití prostředí](work-with-business-accounts.md).
+- Některá data a ovládací prvky jsou k dispozici pouze v prostředích konkrétních typů. Konfigurace doplňku vás bude informovat, pokud ovládací prvek není k dispozici kvůli vybranému typu prostředí. Tato chyba se zobrazí v ovládacím prvku při jeho vykreslování. Další informace o [případech použití prostředí](work-with-business-accounts.md).
+- Každý ovládací prvek doplňku závisí na konkrétních datech v Customer Insights.
   - **Ovládací prvek měření**: Vyžaduje [nakonfigurované míry atributu zákazníka](measures.md).
   - **Ovládací prvek analytických nástrojů**: Vyžaduje data generovaná pomocí [predikcí nebo vlastních modelů](predictions-overview.md).
   - **Ovládací prvek podrobností zákazníka** zobrazuje všechna pole z profilu, která jsou k dispozici ve sjednoceném zákaznickém profilu.

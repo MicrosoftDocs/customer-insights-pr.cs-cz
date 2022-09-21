@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207037"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463257"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Připojení ke zdroji dat Power Query
 
@@ -63,7 +63,9 @@ Přidávání zdrojů dat na základě konektorů Power Query se obecně řídí
 Načítání dat může nějakou dobu trvat. Po úspěšné aktualizaci lze přijatá data zkontrolovat na stránce [**Entity**](entities.md).
 
 > [!CAUTION]
-> Zdroj dat na základě Power Query vytvoří [tok dat v Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Neměňte název datového toku v centru pro správu Power Platform, který se používá v Customer Insights. Přejmenování toku dat způsobuje problémy s odkazy mezi zdrojem dat Customer Insights a datovým tokem Dataverse.
+>
+> - Zdroj dat na základě Power Query vytvoří [tok dat v Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Neměňte název datového toku v centru pro správu Power Platform, který se používá v Customer Insights. Přejmenování toku dat způsobuje problémy s odkazy mezi zdrojem dat Customer Insights a datovým tokem Dataverse.
+> - Souběžná hodnocení pro zdroje dat Power Query v Customer Insights mají stejné [obnovovací limity jako datové toky v PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Pokud se aktualizace dat nezdaří, protože dosáhla limitu hodnocení, doporučujeme upravit plán aktualizace pro každý tok dat, abyste zajistili, že zdroje dat nebudou zpracovávány současně.
 
 ### <a name="available-power-query-data-sources"></a>Dostupné zdroje dat Power Query
 
@@ -77,7 +79,7 @@ Zpracování dat ze zdrojů dat místní je podporováno na základě datových 
 
 Zdroje dat, které jsou vytvořeny po přidružení prostředí Dataverse ke Customer Insights, standardně používají [datové toky Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Datové toky podporují místní připojení pomocí datové brány. Zdroje dat, které existovaly před přidružením prostředí Dataverse, můžete odebrat a znovu vytvořit [pomocí místní bran dat](/data-integration/gateway/service-gateway-app).
 
-Datové brány z existujícího prostředí Power BI nebo Power Apps budou viditelné a můžete je znovu použít v Customer Insights. Na stránce zdroje dat jsou zobrazeny odkazy, na které chcete přejít v prostředí Microsoft Power Platform, kde můžete prohlížet a konfigurovat místní datové brány.
+Datové brány z existujícího prostředí Power BI nebo Power Apps budou viditelné a můžete je znovu použít v Customer Insights, pokud jsou datová brána a prostředí Customer Insights ve stejné oblasti Azure. Na stránce zdroje dat jsou zobrazeny odkazy, na které chcete přejít v prostředí Microsoft Power Platform, kde můžete prohlížet a konfigurovat místní datové brány.
 
 > [!IMPORTANT]
 > Ujistěte se, že jsou vaše brány aktualizovány na nejnovější verzi. Můžete nainstalovat aktualizaci a překonfigurovat bránu přímo z výzvy zobrazené na obrazovce brány nebo [stáhnout nejnovější verzi](https://powerapps.microsoft.com/downloads/). Pokud nepoužíváte nejnovější verzi brány, aktualizace toku dat selže s chybovými zprávami, například **Klíčové slovo není podporováno: vlastnosti konfigurace. Název parametru: klíčové slovo**.
