@@ -7,21 +7,21 @@
 - name: Katalog výukových materiálů
   items:
     - name: Certifkace Microsoft Customer Data Platform Specialist
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Začínáme s Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Ingestace dat
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Vytvoření sjednoceného profilu zákazníka
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Práce s Customer Insights
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Rozšiřujte data a vytvářejte predikce
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Správa externích připojení
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Správa Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Bezplatná zkušební verze
   items:
     - name: Registrace bezplatného zkušebního předplatného
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Použití webových dat pro přizpůsobení
       href: unknown-to-known.md
+    - name: Správa profilů neznámých zákazníků
+      href: manage-unknown-profiles.md
 - name: Segments
   items:
     - name: Přehled segmentů
