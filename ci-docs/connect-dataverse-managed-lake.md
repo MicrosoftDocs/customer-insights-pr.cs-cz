@@ -1,7 +1,7 @@
 ---
 title: Připojte se k datům ve spravovaném datovém jezeru Microsoft Dataverse
 description: Importovat data ze spravovaného datového jezera Microsoft Dataverse.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206945"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609786"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Připojte se k datům ve spravovaném datovém jezeru Microsoft Dataverse
 
@@ -70,5 +70,93 @@ Chcete -li se připojit k jinému datovému jezeru Dataverse, [vytvořte nový z
 1. Klikněte na **Uložit** pro použití změny a návrat na stránku **Zdroje dat**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Běžné důvody chyb příjmu nebo poškozených dat
+
+Následující kontroly běží na přijatých datech, aby odhalily poškozené záznamy:
+
+- Hodnota pole se neshoduje s datovým typem jeho sloupce.
+- Pole obsahují znaky, které způsobují, že sloupce neodpovídají očekávanému schématu. Například: nesprávně formátované uvozovky, neuzavřené uvozovky nebo znaky nového řádku.
+- Pokud existují sloupce datetime/date/datetimeoffset, je třeba jejich formát zadat v modelu, pokud se neřídí standardním formátem ISO.
+
+### <a name="schema-or-data-type-mismatch"></a>Neshoda schématu nebo datového typu
+
+Pokud data neodpovídají schématu, jsou záznamy klasifikovány jako poškozené. Opravte zdrojová data nebo schéma a znovu je zpracujte.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Pole data a času v nesprávném formátu
+
+Pole data a času v entitě nejsou ve formátu ISO nebo en-US. Výchozí formát data a času v Customer Insights je formát en-US. Všechna pole data a času v entitě musí být ve stejném formátu. Customer Insights podporuje další formáty za předpokladu, že anotace nebo vlastnosti jsou vytvořeny na úrovni zdroje nebo entity v modelu nebo manifest.json. Příklad: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  V souboru manifest.json lze formát data a času zadat na úrovni entity nebo na úrovni atributu. Na úrovni entity použijte „exhibitsTraits“ v entitě v *.manifest.cdm.json k definování formátu data a času. Na úrovni atributu použijte „appliedTraits“ v atributu v entityname.cdm.json.
+
+**Manifest.json na úrovni entity**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json na úrovni atributu**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

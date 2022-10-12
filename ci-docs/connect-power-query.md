@@ -1,7 +1,7 @@
 ---
 title: Připojení ke zdroji dat Power Query (obsahuje video)
 description: Příjem dat přes konektor Power Query (obsahuje video).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463257"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609868"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Připojení ke zdroji dat Power Query
 
@@ -43,16 +43,17 @@ Přidávání zdrojů dat na základě konektorů Power Query se obecně řídí
 
 1. Vyberte **Transformovat data**.
 
-1. Dialogové okno **Power Query - Upravit dotazy** umožňuje zkontrolovat a upřesnit data. V levém podokně se zobrazí entity, které systémy identifikované ve vybraném zdroj dat.
+1. Zkontrolujte a upřesněte svá data na stránce **Power Query – Upravit dotazy**. V levém podokně se zobrazí entity, které systémy identifikované ve vybraném zdroj dat.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Dialog Upravit dotazy":::
 
-1. Data lze rovněž transformovat. Vyberte entitu, kterou chcete upravit nebo transformovat. Použijte možnosti v okně Power Query pro použití transformací. Každá transformace je uvedena v části **Použité kroky**. Power Query poskytuje řadu [předpřipravených možností transformace](/power-query/power-query-what-is-power-query#transformations).
+1. Transformujte data. Vyberte entitu, kterou chcete upravit nebo transformovat. Použijte možnosti v okně Power Query pro použití transformací. Každá transformace je uvedena v části **Použité kroky**. Power Query poskytuje řadu [předpřipravených možností transformace](/power-query/power-query-what-is-power-query#transformations).
 
-   Doporučujeme použít následující transformace:
-
-   - Pokud přijímáte data ze souboru CSV, první řádek často obsahuje záhlaví. Přejděte na **Transformovat** a vyberte **Použijte první řádek jako záhlaví**.
-   - Zajistěte, aby byl datový typ nastaven správně. Například pro datová pole vyberte typ dat.
+   > [!IMPORTANT]
+   > Doporučujeme použít následující transformace:
+   >
+   > - Pokud přijímáte data ze souboru CSV, první řádek často obsahuje záhlaví. Přejděte na **Transformovat** a vyberte **Použijte první řádek jako záhlaví**.
+   > - Zajistěte, aby byl datový typ nastaven správně a odpovídal datům. Například pro datová pole vyberte typ dat.
 
 1. Chcete-li přidat další entity do zdroje dat v dialogu **Upravit dotazy**, přejděte na **Domů** a vyberte **Získat data**. Opakujte kroky 5-10, dokud nepřidáte všechny entity pro toto zdroj dat. Pokud máte databázi, která obsahuje více datových sad, je každá datová sada vlastní entitou.
 
@@ -102,5 +103,51 @@ Datové brány z existujícího prostředí Power BI nebo Power Apps budou vidit
 1. Volbou **Uložit** použijete změny a návrat na stránku **Zdroje dat**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Běžné důvody chyb příjmu nebo poškozených dat
+
+### <a name="data-type-does-not-match-data"></a>Typ dat neodpovídá datům
+
+Nejběžnější neshoda typu dat nastane, když pole data není nastaveno na správný formát data.
+
+Data lze opravit u zdroje a znovu je zpracovat. Nebo opravte transformaci v rámci Customer Insights. Oprava transformace:
+
+1. Přejděte na **Data** > **Zdroje dat**.
+
+1. Vedle zdroje dat s poškozenými daty vyberte **Upravit**.
+
+1. Vyberte **Další**.
+
+1. Vyberte každý z dotazů a vyhledejte transformace použité v části „Použité kroky“, které jsou nesprávné, nebo sloupce data, které nebyly transformovány pomocí formátu data.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query – Úprava zobrazující nesprávný formát data":::
+
+1. Změňte typ dat tak, aby správně odpovídal datům.
+
+1. Vyberte **Uložit**. Zdroj dat je obnoven.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Odstraňování problémů s obnovením dat na základě PPDF Power Query
+
+Pokud jsou data zastaralá nebo se po obnovení zdroj dat zobrazí chyby, proveďte následující kroky:
+
+1. Přejděte na [Power Platform](https://make.powerapps.com).
+
+1. Vyberte **Prostředí** pro vaši instanci Customer Insights.
+
+1. Přejděte na **Datové toky**.
+
+1. Pro tok dat, který odpovídá zdroji dat v Customer Insights, vyberte svislé tři tečky(&vellip;) a poté vyberte **Zobrazit historii obnovení**.
+
+1. Pokud je **Stav** datového toku **Úspěch**, vlastnictví datového zdroje na základě Power Query se mohlo změnit:
+
+   1. Zkontrolujte plán obnovování z historie obnovování.
+   1. Nastavte plán nového vlastníka a uložte nastavení.
+
+1. Pokud je **Stav** datového toku **Nepodařilo se**:
+
+   1. Stáhněte si soubor historie obnovení.
+   1. Zkontrolujte stažený soubor a vyhledejte důvod selhání.
+   1. Pokud chybu nelze vyřešit, vyberte **?** pro otevření lístku podpory. Přidejte stažený soubor historie obnovení.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

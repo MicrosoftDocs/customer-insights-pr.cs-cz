@@ -1,7 +1,7 @@
 ---
 title: Přehled zdrojů dat
 description: Naučte se importovat nebo ingestovat data z různých zdrojů.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245641"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610044"
 ---
 # <a name="data-sources-overview"></a>Přehled zdrojů dat
 
@@ -65,7 +65,9 @@ Výběrem zdroje dat zobrazíte dostupné akce.
 
 ## <a name="refresh-data-sources"></a>Aktualizovat zdroje dat
 
-Zdroje dat lze aktualizovat podle automatického plánu nebo ručně na vyžádání. [On-premise zdroje dat](connect-power-query.md#add-data-from-on-premises-data-sources) se aktualizují podle vlastních plánů, které jsou nastaveny během příjmu dat. U připojených zdrojů dat přijímá zpracování dat nejnovější data dostupná z tohoto zdroje dat.
+Zdroje dat lze aktualizovat podle automatického plánu nebo ručně na vyžádání. [On-premise zdroje dat](connect-power-query.md#add-data-from-on-premises-data-sources) se aktualizují podle vlastních plánů, které jsou nastaveny během příjmu dat. Tipy pro odstraňování problémů viz [Odstraňování problémů s aktualizací zdroje dat na základě PPDF Power Query](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+U připojených zdrojů dat přijímá zpracování dat nejnovější data dostupná z tohoto zdroje dat.
 
 Jděte na **Admin** > **Systém** > [**Plán**](schedule-refresh.md) ke konfiguraci systémově naplánovaných aktualizací vašich zpracovaných datových zdrojů.
 
@@ -76,5 +78,37 @@ Chcete-li aktualizovat zdroj dat na vyžádání:
 1. Vyberte zdroj dat, který chcete aktualizovat, a vyberte **Aktualizovat**. Zdroj dat je nyní spuštěn pro ruční aktualizaci. Aktualizací zdroj dat aktualizujete schéma entity i data pro všechny entity uvedené ve zdroji dat.
 
 1. Výběrem stavu otevřete podokno **Podrobnosti o průběhu** a zobrazíte průběh. Chcete-li úlohu zrušit, vyberte **Zrušit úlohu** ve spodní části panelu.
+
+## <a name="corrupt-data-sources"></a>Poškozené zdroje dat
+
+Přijímaná data mohou mít poškozené záznamy, což může způsobit, že proces příjmu dat bude proveden s chybami nebo varováními.
+
+> [!NOTE]
+> Pokud příjem dat skončí s chybami, následné zpracování (jako je sjednocení nebo vytvoření aktivity), které využívá toto zdroj dat, bude přeskočeno. Pokud je příjem dokončen s varováními, následné zpracování pokračuje, ale některé záznamy nemusí být zahrnuty.
+
+Tyto chyby lze vidět v detailech úlohy.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Detail úkolu zobrazující chybu poškozených dat.":::
+
+Poškozené záznamy se zobrazují v systémově vytvořených entitách.
+
+### <a name="fix-corrupt-data"></a>Oprava poškozených dat
+
+1. Chcete-li zobrazit poškozená data přejděte na **Data** > **Subjekty** a vyhledejte poškozené entity v sekci **Systém**. Schéma pojmenování poškozených entit: „DataSourceName_EntityName_corrupt“.
+
+1. Vyberte poškozenou entitu a poté kartu **Data**.
+
+1. Identifikujte poškozená pole v záznamu a důvod.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Důvod poškození." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Data** > **Entity** zobrazují pouze část poškozených záznamů. Chcete-li zobrazit všechny poškozené záznamy, exportujte soubory do kontejneru v účtu úložiště pomocí [procesu exportu Customer Insights](export-destinations.md). Pokud jste použili svůj vlastní účet úložiště, můžete se také podívat do složky Customer Insights ve svém účtu úložiště.
+
+1. Opravte poškozená data. Například pro zdroje dat Azure Data Lake, [opravte data v Data Lake Storage nebo aktualizujte datové typy v souboru manifest/model.json](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Pro zdroje dat Power Query opravte data ve zdrojovém souboru a [opravte datový typ v kroku transformace](connect-power-query.md#data-type-does-not-match-data) na stránce **Power Query – Upravit dotazy**.
+
+Po dalším obnovení zdroje dat budou opravené záznamy přijaty do Customer Insights a předány do navazujících procesů.
+
+Sloupec „narozeniny“ má například datový typ nastavený jako „datum“. Záznam zákazníka má jeho narozeniny zadané jako '01/01/19777'. Systém označí tento záznam jako poškozený. Změňte narozeniny ve zdrojovém systému na „1977“. Po automatickém obnovení zdrojů dat má pole nyní platný formát a záznam bude odebrán z poškozené entity.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Používání vlastních modelů z Azure Machine Learning
           href: custom-models.md
+        - name: Vytvoření segmentů na základě predikcí
+          href: prediction-based-segment.md
     - name: Ukázkoví průvodci
       items:
         - name: Ukázkový průvodce pro predikci CLV
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Experimenty s Azure Machine Learning
           href: azure-machine-learning-experiments.md
-    - name: Správa predikcí
-      href: manage-predictions.md
-    - name: Vytvoření segmentů na základě predikcí
-      href: prediction-based-segment.md
 - name: Možnosti exportu
   items:
     - name: Exporty

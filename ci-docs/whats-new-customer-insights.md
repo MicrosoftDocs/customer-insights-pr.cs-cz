@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409349"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609584"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novinky v řešení Dynamics 365 Customer Insights
 
@@ -228,9 +228,9 @@ Více informací najdete v části [Změna vlastníka prostředí](manage-enviro
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Proces přípravy dat uvádí důvod poškození u poškozených záznamů
 
-Příprava dat nyní ukazuje důvod poškození pro všechna pole s poškozenými daty. Informace jsou poskytovány na úrovni jednotlivých záznamů pro snadnou identifikaci. 
+Příprava dat nyní ukazuje důvod poškození pro všechna pole s poškozenými daty. Informace jsou poskytovány na úrovni jednotlivých záznamů pro snadnou identifikaci.
 
-Další informace: [Poškozené zdroje dat](entities.md#corrupted-data-sources).
+Další informace: [Poškozené zdroje dat](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Konec fáze Preview pro funkce vykazování ve funkci přehledů zapojení
 

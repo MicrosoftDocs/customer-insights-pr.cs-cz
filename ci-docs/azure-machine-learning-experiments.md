@@ -1,19 +1,19 @@
 ---
 title: Použití modelů založených na Azure Machine Learning
 description: Použití modelů založených na Azure Machine Learning v Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9080860"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609817"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Použití modelů založených na Azure Machine Learning
 
@@ -35,7 +35,7 @@ Sjednocená data v Dynamics 365 Customer Insights jsou zdrojem pro vytváření 
 ## <a name="work-with-azure-machine-learning-designer"></a>Práce s návrhářem Azure Machine Learning
 
 Návrhář Azure Machine Learning poskytuje vizuální plátno, kde můžete přetahovat datové sady a moduly. Dávkový kanál vytvořený v návrháři lze integrovat do aplikace Customer Insights, pokud je odpovídajícím způsobem nakonfigurována. 
-   
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Práce s Azure Machine Learning SDK
 
 Datoví vědci a vývojáři AI používají [Azure Machine Learning SDK](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) k vytvoření pracovních postupů strojového učení. V současné době nelze modely vytrénované pomocí SDK integrovat přímo s Customer Insights. Pro integraci s Customer Insights je vyžadován dávkový odvozovací kanál, který tento model spotřebovává.
@@ -44,17 +44,16 @@ Datoví vědci a vývojáři AI používají [Azure Machine Learning SDK](/pytho
 
 ### <a name="dataset-configuration"></a>Konfigurace datové sady
 
-Musíte vytvořit datové sady pro použití dat entit z Customer Insights ve vašem dávkovém odvozovacím kanálu. Tyto datové sady je třeba zaregistrovat v pracovním prostoru. V současné době podporujeme pouze [tabulkové datové sady](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) ve formátu CSV. Datové sady, které odpovídají datům entity, je třeba parametrizovat jako parametr kanálu.
-   
-* Parametry datové sady v návrháři
-   
-     V návrháři otevřete **Výběr sloupců v datové sadě** a vyberte **Nastavit jako parametr kanálu**, kde zadáte název parametru.
+Vytváření datových sady pro použití dat entit z Customer Insights ve vašem dávkovém odvozovacím kanálu. Zaregistrujte tyto datové sady v pracovním prostoru. V současné době podporujeme pouze [tabulkové datové sady](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) ve formátu CSV. Parametrizujte datové sady, které odpovídají datům entity, jako parametr kanálu.
 
-     > [!div class="mx-imgBorder"]
-     > ![Parametrizace datové sady v návrháři.](media/intelligence-designer-dataset-parameters.png "Parametrizace datové sady v návrháři")
-   
-* Parametr datové sady v SDK (Python)
-   
+- Parametry datové sady v návrháři
+
+  V návrháři otevřete **Výběr sloupců v datové sadě** a vyberte **Nastavit jako parametr kanálu**, kde zadáte název parametru.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Parametrizace datové sady v návrháři.":::
+
+- Parametr datové sady v SDK (Python)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Musíte vytvořit datové sady pro použití dat entit z Customer Insights ve va
 
 ### <a name="batch-inference-pipeline"></a>Dávkový odvozovací kanál
   
-* V návrháři lze tréninkový kanál použít k vytvoření nebo aktualizaci odvozovacího kanálu. V současné době jsou podporovány pouze dávkové odvozovací kanály.
+- V návrháři tréninkový kanál použijte k vytvoření nebo aktualizaci odvozovacího kanálu. V současné době jsou podporovány pouze dávkové odvozovací kanály.
 
-* Pomocí sady SDK můžete publikovat kanál v koncovém bodě. V současné době se Customer Insights integruje s výchozím kanálem v koncovém bodu dávkového kanálu v pracovním prostoru Azure Machine Learning.
-   
+- Pomocí sady SDK publikujte kanál v koncovém bodě. V současné době se Customer Insights integruje s výchozím kanálem v koncovém bodu dávkového kanálu v pracovním prostoru Azure Machine Learning.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Musíte vytvořit datové sady pro použití dat entit z Customer Insights ve va
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Import dat kanálu do Customer Insights
 
-* Návrhář poskytuje [modul exportu dat](/azure/machine-learning/algorithm-module-reference/export-data), který umožňuje export výstupu kanálu do úložiště Azure. V současné době musí modul používat typ úložiště dat **Azure Blob Storage** a parametrizovat **Úložiště dat** a relativní **Cestu**. Customer Insights přepíše oba tyto parametry během provádění kanálu datovým úložištěm a cestou, která je pro produkt přístupná.
-   > [!div class="mx-imgBorder"]
-   > ![Konfigurace modulu exportu dat.](media/intelligence-designer-importdata.png "Konfigurace modulu exportu dat")
-   
-* Při psaní výstupu odvození pomocí kódu můžete výstup odeslat na cestu v rámci *registrovaného datového úložiště* v pracovním prostoru. Pokud jsou cesta a datové úložiště parametrizovány v kanálu, aplikace Customer Insights bude moci číst a importovat výstup odvození. V současné době je podporován jeden tabulkový výstup ve formátu CSV. Cesta musí zahrnovat adresář a název souboru.
+- Návrhář poskytuje [modul exportu dat](/azure/machine-learning/algorithm-module-reference/export-data), který umožňuje export výstupu kanálu do úložiště Azure. V současné době musí modul používat typ úložiště dat **Azure Blob Storage** a parametrizovat **Úložiště dat** a relativní **Cestu**. Customer Insights přepíše oba tyto parametry během provádění kanálu datovým úložištěm a cestou, která je pro produkt přístupná.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Konfigurace modulu exportu dat.":::
+
+- Při psaní výstupu odvození pomocí kódu můžete výstup odeslat na cestu v rámci *registrovaného datového úložiště* v pracovním prostoru. Pokud jsou cesta a datové úložiště parametrizovány v kanálu, aplikace Customer Insights bude moci číst a importovat výstup odvození. V současné době je podporován jeden tabulkový výstup ve formátu CSV. Cesta musí zahrnovat adresář a název souboru.
 
    ```python
    # In Pipeline setup script

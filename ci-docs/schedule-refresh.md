@@ -1,7 +1,7 @@
 ---
 title: Plánování aktualizace systému
 description: Naplánujte čas, kdy má být systém aktualizován
-ms.date: 08/09/2022
+ms.date: 09/27/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: 4aac02b570357d2086f7a9d7340b0e4837157a0b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9395948"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610320"
 ---
 # <a name="schedule-system-refresh"></a>Plánování aktualizace systému
 
 Naplánujte automatické obnovení všech [přijatých zdrojů dat](data-sources.md). Automatické aktualizace pomáhají zajistit, aby se aktualizace ze zdrojů dat projevily ve vašich sjednocených profilech zákazníků.
 
 > [!NOTE]
-> Vámi spravované zdroje dat Power Query se obnovují podle vlastních plánů. Chcete-li naplánovat aktualizaci těchto zdrojů dat Power Query, nakonfigurujte nastavení aktualizace na tomto konkrétním zdroji dat ze stránky **Zdroje dat**.
+> Vámi spravované zdroje dat Power Query se obnovují podle vlastních plánů. Chcete-li naplánovat aktualizaci těchto zdrojů dat Power Query, nakonfigurujte nastavení aktualizace na tomto konkrétním zdroji dat ze stránky **Zdroje dat**. Srovnejte načasování s upstreamovým plánem aktualizace dat tak, aby k aktualizacím nedocházelo najednou.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Nastavení aktualizace toku dat.":::
 
 ## <a name="set-system-refresh-schedule"></a>Nastavení plánu aktualizace systému

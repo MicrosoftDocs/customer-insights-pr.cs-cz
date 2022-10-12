@@ -1,7 +1,7 @@
 ---
 title: Připojení ke složce Common Data Model prostřednictvím účtu Azure Data Lake
 description: Práce s daty Common Data Model pomocí Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396038"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609934"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Připojení k datům v Azure Data Lake Storageu
 
@@ -43,6 +43,10 @@ Příjem dat do Dynamics 365 Customer Insights pomocí účtu Azure Data Lake St
 - Uživatel, který nastavuje připojení zdroj dat, potřebuje pro účet úložiště nejméně oprávnění přispěvatel Storage Blob Data.
 
 - Data v úložišti Data Lake by se měla řídit standardem Common Data Model pro ukládání dat a mít společný manifest datového modelu, který bude reprezentovat schéma datových souborů (*.csv nebo *.parquet). Manifest musí obsahovat podrobnosti o entitách, jako jsou sloupce entit a datové typy a umístění datového souboru a typ souboru. Další informace viz [Manifest Common Data Model](/common-data-model/sdk/manifest). Pokud manifest není přítomen, uživatelé s oprávněním správce s přístupem vlastník dat objektu Storage Blob nebo přístup k datům objektu Storage Blob přispěvatel mohou definovat schéma při zpracování dat.
+
+## <a name="recommendations"></a>Doporučení
+
+Pro optimální výkon doporučuje Customer Insights velikost oddílu 1 GB nebo méně a počet souborů oddílu ve složce nesmí překročit 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Připojení k Azure Data Lake Storage
 
@@ -199,5 +203,101 @@ Můžete aktualizovat volbu *Připojte se k účtu úložiště pomocí*. Více 
 1. Klikněte na **Uložit** pro použití změny a návrat na stránku **Zdroje dat**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Běžné důvody chyb příjmu nebo poškozených dat
+
+Mezi nejčastější důvody, proč může být záznam během příjmu dat považován za poškozený, patří:
+
+- Datové typy a hodnoty polí se mezi zdrojovým souborem a schématem neshodují
+- Počet sloupců ve zdrojovém souboru neodpovídá schématu
+- Pole obsahují znaky, které způsobují, že sloupce jsou posunuté vzhledem k očekávanému schématu. Například: nesprávně formátované uvozovky, neuzavřené uvozovky, znaky nového řádku nebo znaky tabulátoru.
+- Chybí soubory oddílu
+- Pokud existují sloupce datetime/date/datetimeoffset, je třeba jejich formát zadat ve schématu, pokud se neřídí standardním formátem.
+
+### <a name="schema-or-data-type-mismatch"></a>Neshoda schématu nebo datového typu
+
+Pokud data neodpovídají schématu, proces příjmu se dokončí s chybami. Opravte zdrojová data nebo schéma a znovu je zpracujte.
+
+### <a name="partition-files-are-missing"></a>Chybí soubory oddílu
+
+- Pokud bylo zpracování úspěšné bez poškozených záznamů, ale nevidíte žádná data, upravte soubor model.json nebo manifest.json a ujistěte se, že jsou zadány oddíly. Poté [aktualizujte zdroj dat](data-sources.md#refresh-data-sources).
+
+- Pokud dojde ke zpracování dat současně s obnovou zdrojů dat během automatické aktualizace plánu, mohou být soubory oddílů prázdné nebo nejsou k dispozici pro zpracování Customer Insights. Chcete-li sladit s upstreamovým plánem aktualizace, změňte [plán aktualizace systému](schedule-refresh.md) nebo plán aktualizace pro zdroj dat. Slaďte načasování tak, aby k aktualizacím nedocházelo najednou, a poskytuje nejnovější data ke zpracování v Customer Insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Pole data a času v nesprávném formátu
+
+Pole data a času v entitě nejsou ve formátu ISO 8601 nebo en-US. Výchozí formát data a času v Customer Insights je formát en-US. Všechna pole data a času v entitě musí být ve stejném formátu. Customer Insights podporuje další formáty za předpokladu, že anotace nebo vlastnosti jsou vytvořeny na úrovni zdroje nebo entity v modelu nebo manifest.json. Příklad: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  V souboru manifest.json lze formát data a času zadat na úrovni entity nebo na úrovni atributu. Na úrovni entity použijte „exhibitsTraits“ v entitě v *.manifest.cdm.json k definování formátu data a času. Na úrovni atributu použijte „appliedTraits“ v atributu v entityname.cdm.json.
+
+**Manifest.json na úrovni entity**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json na úrovni atributu**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
