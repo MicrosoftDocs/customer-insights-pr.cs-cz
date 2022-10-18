@@ -1,19 +1,19 @@
 ---
 title: Export segmentů do Braze (Preview)
 description: Zjistěte, jak nakonfigurovat připojení a export do Braze.
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195099"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655268"
 ---
 # <a name="export-segments-to-braze-preview"></a>Export segmentů do Braze (Preview)
 
@@ -23,6 +23,7 @@ Zjistěte, jak exportovat segmenty profilů Unified Customer Profile do Braze a 
 
 - [Účet Braze](https://www.braze.com/) a odpovídající přihlašovací údaje správce.
 - [Klíč rozhraní API služby Braze](https://www.braze.com/docs/api/basics/)
+- Váš [koncový bod Braze REST](https://www.braze.com/docs/api/basics/#api-definitions) 
 - [Nakonfigurované segmenty](segments.md) v Customer Insights.
 - Profily Unified Customer Profile v exportovaných segmentech obsahují pole představující e-mailovou adresu a ID zákazníka Braze.
 
@@ -30,6 +31,7 @@ Zjistěte, jak exportovat segmenty profilů Unified Customer Profile do Braze a 
 
 - Až 1 milion zákaznických profilů do Braze může trvat až 40 minut. Počet zákaznických profilů, které můžete exportovat do Braze, závisí na vaší smlouvě s Braze.
 - Pouze segmenty.
+- Azure Private Link není podporován pro export Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Nastavení připojení k Braze
 
@@ -62,6 +64,8 @@ Zjistěte, jak exportovat segmenty profilů Unified Customer Profile do Braze a 
 1. Vyberte **Přidat export**.
 
 1. V poli **Připojení pro export** vyberte připojení v sekci Braze. Pokud není k dispozici propojení , kontaktujte správce.
+
+1. Zadejte svůj koncový bod REST do pole **Název hostitele** v následujícím formátu: `rest.iad-03.braze.com`.
 
 1. Zadejte název exportu.
 
