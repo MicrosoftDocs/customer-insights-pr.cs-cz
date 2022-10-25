@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424301"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671243"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Práce s daty Customer Insights v Microsoft Dataverse
 
@@ -63,6 +63,9 @@ Krok **Microsoft Dataverse** vám umožní propojit Customer Insights s vaším 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Povolení sdílení dat s Dataverse z vlastního úložiště Azure Data Lake Storage (Preview)
 
 Ve [vlastním účtu Azure Data Lake Storage](own-data-lake-storage.md) ověřte, zda uživatel vytvářející prostředí Customer Insights má minimálně oprávnění **Čtenář dat objektu blob úložiště** v kontejneru `customerinsights` v účtu úložiště.
+
+> [!NOTE]
+> Sdílení dat je použitelné pouze v případě, že používáte vlastní účet Azure Data Lake Storage. Toto nastavení není dostupné, pokud prostředí Customer Insights používá výchozí úložiště Dataverse.
 
 ### <a name="limitations"></a>Omezení
 
