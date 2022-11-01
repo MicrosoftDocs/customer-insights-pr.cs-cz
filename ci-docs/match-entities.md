@@ -2,7 +2,7 @@
 title: Podmínky shody pro sjednocení dat
 description: Spárováním entit můžete vytvořit sjednocené profily zákazníků.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304649"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721513"
 ---
 # <a name="match-conditions-for-data-unification"></a>Podmínky shody pro sjednocení dat
 
@@ -130,12 +130,12 @@ Pokud například vaše pravidlo shody kombinuje příjmení, město a datum nar
 
 ### <a name="specify-custom-match-conditions"></a>Zadání vlastních podmínek párování
 
-Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici jsou čtyři možnosti:
+Zadejte podmínky, které přepíší výchozí logiku shody. K dispozici jsou čtyři možnosti:
 
 |Možnost  |Description |Příklad  |
 |---------|---------|---------|
-|Vždy se shodovat     | Definuje hodnoty, které se vždy shodují.         |  Vždy se shodují *Mike* a *MikeR*.       |
-|Nikdy se neshodovat     | Definuje hodnoty, které se nikdy neshodují.        | Nikdy se neshodují *John* a *Jonathan*.        |
+|Vždy se shodovat     | Definuje hodnoty primárních klíčů, které se vždy shodují.         |  Vždy porovná řádek s primárním klíčem *12345* s řádkem s primárním klíčem *54321*.       |
+|Nikdy se neshodovat     | Definuje hodnoty primárních klíčů, které se nikdy neshodují.        | Nikdy neporovná řádek s primárním klíčem *12345* s řádkem s primárním klíčem *54321*.        |
 |Obejít            | Definuje hodnoty, které by měl systém ve fázi shody vždy ignorovat. |  Ignorujte hodnoty *11111* a *Neznámá* během shody.        |
 |Mapování aliasů    | Definování hodnot, které by měl systém považovat za stejnou hodnotu.         | Považuje *Joe* za shodné s *Joseph*.        |
 
@@ -143,17 +143,18 @@ Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Vlastní tlačítko":::
 
-1. Vyberte **Vlastní typ** a vyberte **Stáhnout šablonu**. Pro každou možnost shody potřebujete samostatnou šablonu.
+1. Vyberte **Vlastní typ** a vyberte **Stáhnout šablonu**. Přejmenujte šablonu bez použití mezer. Pro každou možnost shody použijte samostatnou šablonu.
 
-1. Otevřete stažený soubor šablony a vyplňte podrobnosti. Šablona obsahuje pole pro určení entity a hodnoty primárního klíče entity, které mají být použity ve vlastní shodě. Například pokud chcete, aby se primární klíč *12345* z entity *Prodej* vždy shodoval s primárním klíčem *34567* z entity *Kontakt*, vyplňte šablonu:
-    - Entita 1: Prodej
-    - Klíč entity 1: 12345
-    - Entita 2: Kontakt
-    - Klíč entity 2: 34567
+1. Otevřete stažený soubor šablony a vyplňte podrobnosti. Šablona obsahuje pole pro určení entity a hodnoty primárního klíče entity, které mají být použity ve vlastní shodě. U názvů entit se rozlišují velká a malá písmena. Například pokud chcete, aby se primární klíč *12345* z entity *Prodej* vždy shodoval s primárním klíčem *34567* z entity *Kontakt*, vyplňte šablonu:
+   - Entita 1: Prodej
+   - Klíč entity 1: 12345
+   - Entita 2: Kontakt
+   - Klíč entity 2: 34567
 
    Stejný soubor šablony může určit vlastní záznamy shody z více entit.
 
-   Pokud chcete zadat vlastní párování pro odstranění duplicit v entitě, zadejte stejnou entitu jako Entita 1 a Entita 2 a nastavte různé hodnoty primárního klíče.
+   > [!NOTE]
+   > Pokud chcete zadat vlastní párování pro odstranění duplicit v entitě, zadejte stejnou entitu jako Entita 1 a Entita 2 a nastavte různé hodnoty primárního klíče. Chcete-li použít vlastní párování, musíte pro entitu definovat alespoň jedno pravidlo odstranění duplicit.
 
 1. Po přidání všech přepsání uložte soubor šablony.
 
@@ -169,6 +170,8 @@ Můžete zadat podmínky, které přepíší výchozí logiku shody. K dispozici
    - Pro **Obejití** nebo **Mapování aliasů** vyberte **Upravit** v existujícím pravidlu shody nebo vytvořte nové pravidlo. V rozevíracím seznamu Normalizace vyberte možnost **Vlastní obejití** nebo **Mapování aliasů** a vyberte **Hotovo**.
 
 1. Vyberte **Hotovo** na stránce **Vlastní** pro použití vlastní konfigurace shody.
+
+   Každý zpracovaný soubor šablony je vlastní zdroj dat. Pokud jsou objeveny záznamy, které vyžadují speciální ošetření ohledně shody, aktualizujte příslušný zdroj dat. Aktualizace bude použita během dalšího procesu sjednocení. Například identifikujete dvojčata s téměř stejným jménem žijící na stejné adrese, která byla sloučena jako jedna osoba. Aktualizací zdroje dat identifikujete dvojčata jako samostatné, jedinečné záznamy.
 
 > [!div class="nextstepaction"]
 > [Další krok: Sjednocení polí](merge-entities.md)
