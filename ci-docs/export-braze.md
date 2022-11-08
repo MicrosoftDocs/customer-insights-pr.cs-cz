@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655268"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725208"
 ---
 # <a name="export-segments-to-braze-preview"></a>Export segmentů do Braze (Preview)
 
@@ -29,6 +29,7 @@ Zjistěte, jak exportovat segmenty profilů Unified Customer Profile do Braze a 
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů do Braze může trvat až 40 minut. Počet zákaznických profilů, které můžete exportovat do Braze, závisí na vaší smlouvě s Braze.
 - Pouze segmenty.
 - Azure Private Link není podporován pro export Braze.

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e45ca5827afa29d97a746bd1a474c2346cc32d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 075e6758f2c6992a1185756f9beecf852fdd0a96
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196754"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724573"
 ---
 # <a name="export-segments-to-klaviyo-preview"></a>Export segmentů do Klaviyo (Preview)
 
@@ -29,6 +29,7 @@ Exportujte segmenty sjednocených profilů zákazníků do Klaviyo a použijte j
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů na export do služby Klaviyo, což může trvat až 20 minut. Počet zákaznických profilů, které můžete exportovat do služby Klaviyo, závisí na vaší smlouvě s Klaviyo.
 - Pouze segmenty.
 

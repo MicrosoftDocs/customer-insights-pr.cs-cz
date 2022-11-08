@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 178d2df8edf1abcec72664e19d73a88f2b97f12d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e62888a6d618fb1154890e607d8c23d3767d35f7
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195558"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725392"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Export segmentů do ActiveCampaign (náhled)
 
@@ -29,6 +29,7 @@ Exportujte segmenty sjednocených profilů zákazníků do ActiveCampaign a pou�
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů na export do služby ActiveCampaign, což může trvat až 90 minut. Počet zákaznických profilů, které můžete exportovat do ActiveCampaign, závisí na vaší smlouvě s ActiveCampaign.
 - Pouze segmenty.
 

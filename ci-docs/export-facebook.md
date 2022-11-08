@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195006"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724578"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Export segmentů do Facebook Ads Manager (preview)
 
@@ -25,11 +25,13 @@ Export segmentů sjednocených zákaznických profilů do Správce reklam Facebo
 
 - Potřebujete [reklamní účet Facebook](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), který zahrnuje [obchodní účet Facebook](https://business.facebook.com/).
 - Oprávnění správce v [reklamním účtu Facebook](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Vlastní Podmínky cílové skupiny musí přijmout uživatel, který nastavuje připojení v Customer Insights.
 
 ## <a name="known-limitations"></a>Známá omezení
 
 - Až 10 milion zákaznických profilů na export do správce reklam na Facebooku může trvat až 90 minut.
 - Pouze segmenty.
+- Integrace reklam Facebook nepodporuje uživatele s více než 25 reklamními účty.
 - Typ *Seznam zákazníků* Facebook pouze ve [vlastních cílových skupinách](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
   > [!NOTE]
   > V některých případech se v rozevíracím seznamu mohou zobrazit vlastní cílové skupiny různých typů. Pokud vyberete jiný typ než *seznam zákazníků*, export selže.

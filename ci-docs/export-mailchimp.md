@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 54aec10e24b6356e2e4317cf33e740a1a086a2dd
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d74672768afec94e899ff0aec8c118c2afcde368
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196846"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725024"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Export segmentů do služby Mailchimp (preview)
 
@@ -28,6 +28,7 @@ Exportujte segmenty sjednocených profilů zákazníků do služby Mailchimp a v
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů na jeden export do Mailchimp může trvat až tři hodiny. Počet zákaznických profilů, které můžete exportovat do Mailchimp, závisí na vaší smlouvě s Mailchimp.
 - Pouze segmenty.
 

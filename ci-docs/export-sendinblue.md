@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196938"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724886"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Export segmentů do Sendinblue (náhled)
 
@@ -29,6 +29,7 @@ Segmenty sjednocených profilů zákazníků exportujte pro účely generování
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů na export do služby Sendinblue, což může trvat až 90 minut. Počet zákaznických profilů, které můžete exportovat do služby Sendinblue, závisí na vaší smlouvě se službou Sendinblue.
 - Pouze segmenty.
 

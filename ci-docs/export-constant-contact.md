@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196478"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724493"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Export segmentů do služby Constant Contact (preview)
 
@@ -28,6 +28,7 @@ Exportujte segmenty sjednocených profilů zákazníků do služby Constant Cont
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů na jeden export do služby Constant Contact, což může trvat až jednu hodinu. Počet zákaznických profilů, které můžete exportovat do služby Constant Contact, závisí na vaší smlouvě se Constant Contact.
 - Pouze segmenty.
 

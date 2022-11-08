@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195328"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724781"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Export segmentů do Criteo (Preview)
 
@@ -27,6 +27,7 @@ Exportujte segmenty jednotných zákaznických profilů pro generování kampan�
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů na jeden export do služby Criteo, což může trvat až 30 minut. Počet zákaznických profilů, které můžete exportovat do služby Criteo, závisí na vaší smlouvě s Criteo.
 - Pouze segmenty.
 
@@ -65,8 +66,6 @@ Exportujte segmenty jednotných zákaznických profilů pro generování kampan�
 1. Zadejte název exportu.
 
 1. V části **Párování dat** v poli **E-mail** vyberte pole představující e-mailovou adresu zákazníka.
-
-1. Volitelně můžete exportovat **ID inzerenta** a **Název**
 
 1. Vyberte segmenty, které chcete exportovat.
 

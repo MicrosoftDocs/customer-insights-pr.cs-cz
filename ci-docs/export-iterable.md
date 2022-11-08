@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195421"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724474"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Export segmentů do Iterable (Preview)
 
@@ -28,6 +28,7 @@ Zjistěte, jak exportovat segmenty profilů Unified Customer Profile do Iterable
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů do služby Iterable, což může trvat až 30 minut. Počet zákaznických profilů, které můžete exportovat do služby Iterable, závisí na vaší smlouvě s Iterable.
 - Pouze segmenty.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ffc591c01a5a9434cde41f2da25fa930a515b8c1
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: df38e9e88a9c116252fba26983b5f3711b46f051
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199088"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725254"
 ---
 # <a name="export-segments-to-moengage-preview"></a>Export segmentů do MoEngage (Preview)
 
@@ -27,6 +27,7 @@ Exportujte segmenty sjednocených profilů zákazníků do služby MoEngage a po
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 100 000 zákaznických profilů na jeden export do MoEngage může trvat až 15 minut. Počet zákaznických profilů, které můžete exportovat do MoEngage, závisí na vaší smlouvě s MoEngage.
 - Pouze segmenty.
 

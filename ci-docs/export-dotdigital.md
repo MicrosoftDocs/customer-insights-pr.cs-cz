@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196064"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724978"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Export segmentů do služby DotDigital (preview)
 
@@ -28,6 +28,7 @@ Exportujte segmenty sjednocených profilů zákazníků do adresářů DotDigita
 
 ## <a name="known-limitations"></a>Známá omezení
 
+- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů na jeden export do DotDigital, což může kvůli omezením na straně poskytovatele trvat až tři hodiny. Počet zákaznických profilů, které můžete exportovat do DotDigital, závisí na vaší smlouvě s DotDigital.
 - Pouze segmenty.
 
