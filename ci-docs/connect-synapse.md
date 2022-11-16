@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
-ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
+ms.openlocfilehash: 675fd03c44a7a7a492b111895d79c2e77f93a5b5
+ms.sourcegitcommit: 4ba74816ebfa46412c64c40a61e1f31c4ccc40f2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "9259790"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "9738148"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Připojení datového zdroje dat Azure Synapse Analytics (Preview)
 
@@ -45,7 +45,7 @@ Další informace naleznete v tématech [Přehled Azure Synapse](/azure/synapse-
 
 - *[Spravovaná identita pracovního prostoru Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* vyžaduje oprávnění **Přispěvatel dat úložiště objektů blob** u účtu Azure Data Lake Storage Gen2, kde jsou umístěna data a připojena k pracovnímu prostoru Azure Synapse. Přečtěte si více o [používání portálu Azure pro přiřazení role Azure pro přístup k datům objektů blob a fronty](/azure/storage/common/storage-auth-aad-rbac-portal) a [oprávněních pro přispěvatele dat objektů blob úložiště](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- V aplikaci Azure Synapse workspace musí mít *instanční objekt pro Customer Insights*, což je "Dynamics 365 AI pro Customer Insights", přiřazenu roli **Správce Synapse**. Další informace viz [Jak nastavit řízení přístupu pro pracovní prostor Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- V aplikaci Azure Synapse workspace musí mít *instanční objekt pro Customer Insights*, což je "Dynamics 365 AI pro Customer Insights", přiřazenu roli **Správce Synapse**. **Uživatel** potřebuje alespoň roli **Přispěvatel Synapse** přiřazenou k pracovnímu prostoru. Další informace viz [Jak nastavit řízení přístupu pro pracovní prostor Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 - Pokud vaše prostředí Customer Insights ukládá data ve vašem [vlastním Azure Data Lake Storage](own-data-lake-storage.md), uživatel, který nastavuje připojení k Azure Synapse Analytics, potřebuje alespoň integrovanou roli **Čtenář** v účtu Data Lake Storage. Další informace viz [Přiřazení rolí Azure pomocí webu Azure Portal](/azure/role-based-access-control/role-assignments-portal).
 
