@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724781"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760018"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Export segmentů do Criteo (Preview)
 
@@ -27,7 +27,6 @@ Exportujte segmenty jednotných zákaznických profilů pro generování kampan�
 
 ## <a name="known-limitations"></a>Známá omezení
 
-- Privátní propojení v kombinaci s použitím vlastního úložiště (BYOS) není podporováno.
 - Až 1 milion zákaznických profilů na jeden export do služby Criteo, což může trvat až 30 minut. Počet zákaznických profilů, které můžete exportovat do služby Criteo, závisí na vaší smlouvě s Criteo.
 - Pouze segmenty.
 
